@@ -274,8 +274,37 @@ Includes commercial triggers for each phase.
 ### 11.7 Inter-Phase Dependencies & Sequencing Logic
 
 ### 11.8 Roadmap Flexibility & Adaptation Framework
+
+
+
 ## 12. Risks, Dependencies & Constraints
 SEO risks, content ingestion risks, production bottlenecks, dependency on PD sources, labour constraints, AI reliability, hosting cost risks.
+
+### 12.1 Risk Management Framework
+
+### 12.2 SEO & Discoverability Risks
+
+### 12.3 Content Ingestion & Quality Risks
+
+### 12.4 Production Bottlenecks & Capacity Constraints
+
+### 12.5 Public Domain & Licensing Dependencies
+
+### 12.6 Labour & Resource Constraints
+
+### 12.7 AI Reliability & Tooling Dependencies
+
+### 12.8 Hosting Cost & Infrastructure Risks
+
+### 12.9 Mitigation Strategies & Contingency Plans
+
+
+
+
+
+
+
+
 
 ## 13. Metrics, KPIs & Measurement Framework
 Defines success metrics:
