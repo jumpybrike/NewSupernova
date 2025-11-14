@@ -300,18 +300,31 @@ SEO risks, content ingestion risks, production bottlenecks, dependency on PD sou
 
 
 
-
-
-
-
-
-
 ## 13. Metrics, KPIs & Measurement Framework
 Defines success metrics:
 •⁠  ⁠Traffic → conversion → product sales → membership upgrades
 •⁠  ⁠LTV, churn, CAC (minimal), cost-to-produce
 •⁠  ⁠Product velocity and backlog burn-down
 •⁠  ⁠SEO health
+
+### 13.1 Measurement Philosophy & Success Definition
+
+### 13.2 Acquisition & Traffic Metrics
+
+### 13.3 Conversion Funnel Metrics (Free → Product → Membership)
+
+### 13.4 Revenue & Financial Metrics (LTV, Churn, CAC)
+
+### 13.5 Product Economics & Cost-to-Produce
+
+### 13.6 Product Velocity & Development Metrics
+
+### 13.7 SEO Health & Organic Performance
+
+### 13.8 Dashboard & Reporting Cadence
+
+### 13.9 Leading vs Lagging Indicators
+
 
 ## 14. Governance, Documentation & SAIS Alignment
 How the PRD is maintained, version-controlled, owned, and updated.
