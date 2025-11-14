@@ -141,6 +141,25 @@ Explicit functional requirements for each system component:
 •⁠  ⁠What features are deferred
 •⁠  ⁠What features are revenue-critical
 
+### 7.1 Requirements Framework & Prioritisation Methodology
+
+### 7.2 MVP Feature Set (Phase 1)
+
+### 7.3 Revenue-Critical Features
+
+### 7.4 Extended Features (Post-MVP)
+
+### 7.5 Deferred Features & Future Considerations
+
+### 7.6 Feature Dependencies & Sequencing
+
+### 7.7 Requirements Traceability Matrix
+
+
+
+
+
+
 ## 8. Non-Functional Requirements
 Performance, editorial quality, reliability, accessibility, SEO readiness, maintainability, cost discipline, and operational constraints.
 
