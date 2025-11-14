@@ -182,6 +182,7 @@ Performance, editorial quality, reliability, accessibility, SEO readiness, maint
 
 
 
+
 ## 9. Content & Data Requirements
 Rules for:
 •⁠  ⁠Metadata standards
@@ -190,6 +191,40 @@ Rules for:
 •⁠  ⁠Audio indexing
 •⁠  ⁠Corpus consistency
 All aligned to product creation and searchability.
+
+### 9.1 Content Governance Framework
+
+### 9.2 Metadata Standards & Schema
+
+### 9.3 Text Cleaning & OCR Correction Protocols
+
+### 9.4 Art Ingestion & Quality Thresholds
+
+### 9.5 Audio Indexing & Cataloguing Standards
+
+### 9.6 Corpus Consistency & Validation Rules
+
+### 9.7 Content-to-Product Mapping Requirements
+
+### 9.8 Search Indexing & Discoverability Requirements
+
+### 9.1 Content Governance Framework
+
+### 9.2 Metadata Standards & Schema
+
+### 9.3 Text Cleaning & OCR Correction Protocols
+
+### 9.4 Art Ingestion & Quality Thresholds
+
+### 9.5 Audio Indexing & Cataloguing Standards
+
+### 9.6 Corpus Consistency & Validation Rules
+
+### 9.7 Content-to-Product Mapping Requirements
+
+### 9.8 Search Indexing & Discoverability Requirements
+
+
 
 ## 10. User Experience Principles & Navigation Framework
 Defines:
