@@ -108,13 +108,6 @@ Includes pricing assumptions and contribution to ARR.
 
 
 
-
-
-
-
-
-
-
 ## 6. Core System Components (Aligned to Options 3, 2, 1, 4)
 Breakdown of all major components:
 •⁠  ⁠Product creation workflow
@@ -123,6 +116,24 @@ Breakdown of all major components:
 •⁠  ⁠Content ingestion pipeline
 •⁠  ⁠Future structured data / graph layer
 Explains relationship to revenue.
+
+### 6.1 System Architecture Overview
+
+### 6.2 Component 1: Product Creation Workflow (Option 3)
+
+### 6.3 Component 2: Membership & Account System (Option 2)
+
+### 6.4 Component 3: Discovery & Content Navigation Engine (Option 1)
+
+### 6.5 Component 4: Content Ingestion Pipeline
+
+### 6.6 Component 5: Structured Data & Graph Layer (Option 4)
+
+### 6.7 Component Integration & Data Flow
+
+### 6.8 Revenue Dependency Mapping
+
+
 
 ## 7. Functional Requirements (MVP → Extended)
 Explicit functional requirements for each system component:
