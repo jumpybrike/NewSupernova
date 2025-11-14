@@ -1,0 +1,110 @@
+# Three Optimal Research Directives for SF Supernova
+
+Given your priority is **revenue maximization** with a **hybrid monetization model** targeting a **niche audience**, here are the three research activities that will give you the most actionable intelligence:
+
+---
+
+## Research Directive #1: Competitive Traffic & Monetization Analysis
+
+**Objective**: Understand how similar sites actually make money and what traffic levels they achieve.
+
+**Research Questions**:
+- Which vintage/retro sci-fi sites exist and what's their traffic volume? (Use SimilarWeb, Ahrefs, or SEMrush)
+- What monetization methods are they using? (Ads visible? Affiliate links? Premium tiers? Merch?)
+- What content types drive their most traffic? (Reviews? Downloads? Galleries? Forums?)
+- What are their top-performing pages/content? (Via SEMrush or Ahrefs keyword analysis)
+- Which sites have failed or gone dormant, and why? (Wayback Machine research)
+- What's the realistic ad RPM (revenue per 1000 pageviews) for vintage sci-fi content?
+- What affiliate programs are most relevant? (Amazon Associates rates, Bookshop.org, other book sellers)
+
+**Sites to analyze**:
+- Project Gutenberg (traffic sources, user behavior)
+- Vintage sci-fi blogs with significant followings
+- Internet Archive's sci-fi sections (user patterns)
+- Goodreads sci-fi groups (community engagement)
+- Any sites selling vintage sci-fi merch or running premium tiers
+
+**Actionable Output**: 
+- Realistic revenue projections based on traffic benchmarks
+- Identification of content gaps/opportunities competitors aren't filling
+- Monetization model validation (or pivot recommendations)
+
+---
+
+## Research Directive #2: Audience Discovery & Intent Mapping
+
+**Objective**: Find where your audience already congregates and what they're actually searching for.
+
+**Research Questions**:
+- Where do vintage sci-fi fans gather online? (Reddit subs, Facebook groups, Discord servers, forums)
+- What questions are they asking? (Reddit threads, Quora, niche forums)
+- What are they searching for? (Google Keyword Planner, AnswerThePublic, Reddit search trends)
+- What content do they share/engage with most? (Social media analysis, Reddit upvotes)
+- What problems do they complain about? (Accessibility, discovery, quality, community needs)
+- What are they willing to pay for? (Existing products, Patreon supporters, Kickstarter backers for related projects)
+- Who are the influencers/tastemakers in this space? (YouTubers, podcasters, bloggers, subreddit mods)
+
+**Specific searches to conduct**:
+- Long-tail SEO opportunities: "best 1950s science fiction novels," "where to find old sci-fi radio shows," "vintage sci-fi book covers"
+- Reddit deep-dive: r/printSF, r/RetroFuturism, r/ClassicSciFi, r/OldSchoolCool, r/ObscureMedia
+- YouTube: What vintage sci-fi content gets views? Book reviews? Cover art showcases? Audio drama uploads?
+- Pinterest: What retro sci-fi imagery gets saved/shared?
+
+**Actionable Output**:
+- SEO content calendar targeting high-volume, low-competition keywords
+- Community partnership opportunities
+- Content format validation (do people want what you're planning to create?)
+- Email signup incentive ideas based on actual audience pain points
+
+---
+
+## Research Directive #3: Public Domain Content Audit & Competitive Advantage Analysis
+
+**Objective**: Map the full scope of copyright-free content available and identify your unique curation angle.
+
+**Research Questions**:
+- What pre-1928 sci-fi is actually available and WHERE? (Project Gutenberg, Internet Archive, LibriVox, Wikisource)
+- What's the quality/format of existing digitizations? (OCR errors? Audio quality? Missing works?)
+- What copyright-free content is NOT readily accessible but could be? (Obscure pulps, international works, audio dramas)
+- What's the overlap between "available" and "actually good/important"? (Quality vs. quantity)
+- What 1928-1980s content can you legally review/discuss without copyright issues?
+- What cover art is demonstrably public domain or usable?
+- What have competitors NOT digitized/curated that you could?
+
+**Specific inventories to create**:
+- Top 100 pre-1928 sci-fi works by cultural importance
+- Gap analysis: Important works NOT well-represented in existing archives
+- Audio drama inventory: What's available vs. what's wanted
+- Cover art goldmine: Public domain pulp covers that are visually stunning
+
+**Additional angle**:
+- Research international public domain variations (some countries have different copyright terms)
+- Investigate estates/publishers who've released works into Creative Commons
+
+**Actionable Output**:
+- Complete launch inventory: Exactly what content you can offer Day 1
+- Differentiation strategy: What makes your archive/curation uniquely valuable
+- Content roadmap: Prioritized list of materials to digitize/curate
+- Legal confidence: Clear boundaries on what you can/cannot offer
+
+---
+
+## Why These Three?
+
+**#1 (Competitive Analysis)** answers: *"Is this financially viable and how?"*
+
+**#2 (Audience Discovery)** answers: *"Who am I building for and what do they actually want?"*
+
+**#3 (Content Audit)** answers: *"What unique value can I actually deliver?"*
+
+Together, these three directives give you:
+- **Validation** of your business model
+- **Clarity** on your content strategy
+- **Confidence** in your competitive positioning
+- **Realistic expectations** for timeline and effort
+
+---
+
+**Each research directive should take 8-15 hours of focused work and produce a documented report with specific findings and recommendations.**
+
+Do these align with what you need, or should I adjust the focus of any directive?

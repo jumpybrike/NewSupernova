@@ -1,0 +1,101 @@
+# SF SUPERNOVA: Foundational Vision & Priorities Document
+
+## Primary Objective
+
+**The main aim of building this website is to make money. This is Priority #1 and takes precedence over all decisions.**
+
+Revenue will be generated through a multi-channel model:
+- **Advertising**: Display ads as primary revenue stream (requires high traffic volume)
+- **Affiliate partnerships**: Links to book retailers and related products
+- **Premium membership tier**: Ad-free experience, exclusive content, early access
+- **Merchandise**: Posters, prints of public domain cover art (future phase)
+
+Timeline: Revenue generation within a reasonable timeframe (to be defined by traffic and conversion metrics).
+
+---
+
+## Mission & Vision
+
+SF Supernova is dedicated to celebrating and preserving the golden age of science fiction—a period spanning from the 1930s through the 1980s when visionary authors, artists, and creators imagined futures that would shape our understanding of technology, society, and humanity itself. 
+
+We believe these works are more than historical artifacts—they're living testaments to human imagination, and their themes remain startlingly relevant today.
+
+SF Supernova celebrates the golden eras of science fiction, transporting enthusiasts and collectors through the imaginative worlds of pre-1980s sci-fi literature, film, radio, and beyond. We curate, review, and preserve the retro-futuristic dreams that shaped our vision of tomorrow, creating a vibrant community where nostalgia meets discovery, and where every visitor finds their next vintage treasure.
+
+We are a passion-driven vintage science fiction website built by an enthusiast for enthusiasts. We occupy the intersection of nostalgia, collecting, and cultural preservation, serving as both a gateway to vintage sci-fi treasures and a community hub for those who appreciate the genre's golden ages.
+
+**"Past Futures"** captures our unique position exploring retro-futurism: the visions of tomorrow imagined by yesterday's dreamers. This paradox sits at the heart of vintage sci-fi's enduring appeal.
+
+---
+
+## Site Personality
+
+SF Supernova is **50% Fan Hub, 50% Time Machine**:
+- **Fan Hub**: Community warmth, enthusiastic tone, gathering place for devotees and newcomers alike
+- **Time Machine**: Immersive nostalgia, atmospheric experience, transporting visitors into retro-futuristic worlds
+
+The site should be visually exciting and colorful with lots of covers and film posters from sci-fi books, magazines, and films.
+
+---
+
+## Content & Features
+
+Through in-depth reviews, curated galleries, and preserved audio dramas, we explore the works that defined the genre: from the pulp magazines that birthed modern sci-fi to the radio dramas that captivated millions, from the groundbreaking novels that challenged conventions to the films that brought impossible worlds to life.
+
+### Core Content Elements
+
+**Free Resources** (traffic generators and ad revenue drivers):
+- **Ebooks**: Public domain/copyright-free classic science fiction texts
+- **Audiobooks**: Public domain/copyright-free audio versions
+- **Radio dramas**: Vintage audio dramas (copyright-free)
+- **Cover art galleries**: Curated collections of retro sci-fi book and magazine covers
+- **Film poster galleries**: Vintage sci-fi movie posters
+- **Author biographies**: Profiles of key science fiction authors
+- **Book and film reviews**: Critical analysis and celebration
+- **Historical narrative**: Tell the story of science fiction from the very first stories up to the 1980s
+
+**Regular Content Schedule**:
+- **Weekly review**: Either authors, books, or films (rotating focus)
+- **Weekly newsletter**: AI-generated and distributed to registered members
+
+---
+
+## Founder's Passion Priorities
+
+The following represent the founder's core passions and aspirations for the site. These are considered highest priority as foundational to the site's character and authenticity. 
+
+**However**: If any of these conflict with Priority #1 (maximizing path to revenue in a reasonable timeframe), they can be flexed, postponed, or modified to serve the revenue objective.
+
+This includes but is not limited to:
+- The specific mix of free content types offered
+- The depth and breadth of the historical narrative
+- The frequency of content updates beyond weekly commitments
+- The visual presentation priorities
+- The scope of archive materials
+
+The principle: **Passion informs direction, but revenue viability determines execution.**
+
+---
+
+## Domain & Branding
+
+- **Domain name**: sfsupernova.com
+- **Brand positioning**: Where the golden age of science fiction lives, breathes, and brings people together
+- **Target audience**: Fans of all ages—lifelong devotees and curious newcomers discovering vintage sci-fi
+
+---
+
+## Success Framework
+
+This venture succeeds when:
+1. It generates meaningful revenue through the multi-channel model
+2. It builds an engaged community of vintage sci-fi enthusiasts  
+3. It preserves and makes accessible copyright-free golden age materials
+4. It serves as the recognized destination for curated retro sci-fi content
+5. It balances founder passion with commercial sustainability
+
+When priorities conflict, decisions should favor the path that best serves objective #1 while maintaining the authentic enthusiasm that differentiates SF Supernova from purely commercial content farms.
+
+---
+
+**This document serves as the strategic foundation for all planning, content creation, design, and business decisions related to SF Supernova.**
