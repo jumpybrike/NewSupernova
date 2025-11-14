@@ -78,11 +78,6 @@ Details the customer segments (Newcomers, Enthusiasts, Collectors, Audio Fans), 
 
 
 
-
-
-
-
-
 ## 5. Revenue Architecture & Monetisation Model
 Defines all revenue streams:
 •⁠  ⁠Digital products
@@ -91,6 +86,34 @@ Defines all revenue streams:
 •⁠  ⁠Art/merch
 •⁠  ⁠Future premium tools and dashboards
 Includes pricing assumptions and contribution to ARR.
+
+### 5.1 Revenue Model Overview & Principles
+
+### 5.2 Revenue Stream 1: Digital Products
+
+### 5.3 Revenue Stream 2: Membership Tiers
+
+### 5.4 Revenue Stream 3: Affiliate Commissions
+
+### 5.5 Revenue Stream 4: Art & Merchandise
+
+### 5.6 Revenue Stream 5: Future Premium Tools & Dashboards
+
+### 5.7 Pricing Strategy & Assumptions
+
+### 5.8 ARR Projections & Revenue Mix
+
+### 5.9 Unit Economics & Contribution Margins
+
+
+
+
+
+
+
+
+
+
 
 ## 6. Core System Components (Aligned to Options 3, 2, 1, 4)
 Breakdown of all major components:
