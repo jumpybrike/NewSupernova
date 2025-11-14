@@ -233,6 +233,29 @@ Defines:
 •⁠  ⁠Search and discovery patterns
 •⁠  ⁠Conversion pathways (free → product → membership)
 
+
+### 10.1 UX Design Philosophy & Core Principles
+
+### 10.2 Reading Flow & Content Consumption Patterns
+
+### 10.3 Browsing Structure & Information Architecture
+
+### 10.4 Search & Discovery Patterns
+
+### 10.5 Conversion Pathways (Free → Product → Membership)
+
+### 10.6 Navigation Hierarchy & Wayfinding
+
+### 10.7 Responsive & Cross-Device Considerations
+
+### 10.8 Onboarding & First-Time User Experience
+
+
+
+
+
+
+
 ## 11. Release Phasing & Roadmap (Options 3 & 2 → 4 & 1 → 5)
 Translates the board-approved sequence into concrete releases:
 •⁠  ⁠Phase 1: Option 3 + Option 2
