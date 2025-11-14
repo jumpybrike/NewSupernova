@@ -56,11 +56,32 @@ Also defines out-of-scope elements for PRD v1.
 
 
 
-
-
-
 ## 4. Target Users, Segments & Jobs-To-Be-Done
 Details the customer segments (Newcomers, Enthusiasts, Collectors, Audio Fans), their JTBD, willingness-to-pay, and conversion potential.
+
+### 4.1 User Segmentation Framework
+
+### 4.2 Segment 1: Newcomers
+
+### 4.3 Segment 2: Enthusiasts
+
+### 4.4 Segment 3: Collectors
+
+### 4.5 Segment 4: Audio Fans
+
+### 4.6 Jobs-To-Be-Done by Segment
+
+### 4.7 Willingness-To-Pay & Conversion Potential
+
+### 4.8 User Journey & Progression Pathways
+
+
+
+
+
+
+
+
 
 ## 5. Revenue Architecture & Monetisation Model
 Defines all revenue streams:
