@@ -31,9 +31,6 @@ Describes the long-term identity of the platform, the competitive gap it fills, 
 
 
 
-
-
-
 ## 3. Product Scope & Pillars
 Outlines the four product pillars:
 •⁠  ⁠Discovery Engine (free layer)
@@ -41,6 +38,26 @@ Outlines the four product pillars:
 •⁠  ⁠Membership System (Option 2)
 •⁠  ⁠Structured Data & Future Tools (Option 4)
 Also defines out-of-scope elements for PRD v1.
+
+
+### 3.1 Overview of Product Architecture
+
+### 3.2 Pillar 1: Discovery Engine (Free Layer)
+
+### 3.3 Pillar 2: Digital Product Engine (Option 3)
+
+### 3.4 Pillar 3: Membership System (Option 2)
+
+### 3.5 Pillar 4: Structured Data & Future Tools (Option 4)
+
+### 3.6 In-Scope Elements for PRD v1
+
+### 3.7 Out-of-Scope & Deferred Elements
+
+
+
+
+
 
 ## 4. Target Users, Segments & Jobs-To-Be-Done
 Details the customer segments (Newcomers, Enthusiasts, Collectors, Audio Fans), their JTBD, willingness-to-pay, and conversion potential.
