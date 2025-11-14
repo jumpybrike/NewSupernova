@@ -3,6 +3,16 @@
 ## 1. Strategic Purpose & Commercial Rationale
 Defines why SF Supernova exists as a business, the revenue-first motivations, and the link to the board-approved strategy.
 
+### 1.1 Business Mission & Market Opportunity
+
+### 1.2 Revenue-First Mandate
+
+### 1.3 Board-Approved Strategy & Investment Thesis
+
+### 1.4 Commercial Objectives & Success Criteria
+
+### 1.5 Strategic Fit & Portfolio Context
+
 ## 2. Product Vision & Positioning
 Describes the long-term identity of the platform, the competitive gap it fills, and the differentiators that justify monetisation.
 
