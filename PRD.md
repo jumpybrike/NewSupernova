@@ -13,8 +13,26 @@ Defines why SF Supernova exists as a business, the revenue-first motivations, an
 
 ### 1.5 Strategic Fit & Portfolio Context
 
+
+
 ## 2. Product Vision & Positioning
 Describes the long-term identity of the platform, the competitive gap it fills, and the differentiators that justify monetisation.
+
+### 2.1 Long-Term Product Vision
+
+### 2.2 Competitive Landscape & Market Gap
+
+### 2.3 Core Differentiators & Value Proposition
+
+### 2.4 Positioning Statement & Brand Identity
+
+### 2.5 Monetisation Justification & Pricing Philosophy
+
+
+
+
+
+
 
 ## 3. Product Scope & Pillars
 Outlines the four product pillars:
