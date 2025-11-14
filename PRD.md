@@ -252,10 +252,6 @@ Defines:
 
 
 
-
-
-
-
 ## 11. Release Phasing & Roadmap (Options 3 & 2 → 4 & 1 → 5)
 Translates the board-approved sequence into concrete releases:
 •⁠  ⁠Phase 1: Option 3 + Option 2
@@ -263,6 +259,21 @@ Translates the board-approved sequence into concrete releases:
 •⁠  ⁠Phase 3: Option 5 expansion
 Includes commercial triggers for each phase.
 
+### 11.1 Phasing Strategy & Rationale
+
+### 11.2 Phase 1: Digital Products & Membership (Options 3 & 2)
+
+### 11.3 Phase 2: Structured Data & Discovery Enhancement (Options 4 & 1)
+
+### 11.4 Phase 3: Expansion & Advanced Features (Option 5)
+
+### 11.5 Commercial Triggers & Go/No-Go Criteria
+
+### 11.6 Release Timeline & Milestones
+
+### 11.7 Inter-Phase Dependencies & Sequencing Logic
+
+### 11.8 Roadmap Flexibility & Adaptation Framework
 ## 12. Risks, Dependencies & Constraints
 SEO risks, content ingestion risks, production bottlenecks, dependency on PD sources, labour constraints, AI reliability, hosting cost risks.
 
