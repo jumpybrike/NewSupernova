@@ -196,8 +196,190 @@ While the option sequence is approved, the board recognizes market feedback may 
 - If discovery limitations materially harm conversion, advance Option 1 implementation
 
 The strategy is directionally locked but executionally flexible, prioritizing commercial outcomes over rigid adherence to sequence.
+
 ### 1.4 Commercial Objectives & Success Criteria
 
+**Primary Commercial Objective**
+
+Achieve sustainable profitability within 18 months, defined as consistent monthly revenue exceeding $3,000 with positive cash flow and demonstrated path to $5,000+ MRR by month 24. This objective prioritizes business viability over growth-at-all-costs, establishing SF Supernova as a sustainable income-generating asset rather than a speculative venture requiring continuous capital infusion.
+
+**Revenue Targets by Phase**
+
+**Phase 1 (Months 0-6): Revenue Ignition**
+- **Month 3 Target**: First $500 in cumulative revenue (validation of willingness-to-pay)
+- **Month 6 Target**: $800-1,500 MRR (digital products + membership combined)
+- **Success Metric**: 100+ paying customers acquired across all revenue streams
+
+**Phase 2 (Months 7-12): Revenue Acceleration**
+- **Month 9 Target**: $2,000-3,000 MRR (proving scalability beyond early adopters)
+- **Month 12 Target**: $3,500-5,000 MRR (approaching sustainability threshold)
+- **Success Metric**: 300+ active customers with <10% monthly churn
+
+**Phase 3 (Months 13-18): Revenue Maturation**
+- **Month 15 Target**: $4,500-6,500 MRR (consistent profitability)
+- **Month 18 Target**: $6,000-8,000 MRR (clear path to full-time viability)
+- **Success Metric**: 500+ active customers, multiple revenue streams contributing >15% each
+
+**Revenue Mix Objectives**
+
+Diversified revenue protects against single-channel dependency and platform risk:
+
+**Target Revenue Mix (Month 18):**
+- Digital Products: 30-40% (ebooks, audio collections, enhanced editions)
+- Membership Tiers: 35-45% (recurring subscriptions, community access)
+- Affiliate Commissions: 10-20% (book sales, related products)
+- Art/Merchandise: 5-10% (prints, posters, physical goods)
+- Premium Tools (future): 0-5% (Phase 3+ dashboards, analytics)
+
+**No single revenue stream should exceed 50% of total revenue by month 18**, ensuring resilience against algorithm changes, platform policy shifts, or market disruptions.
+
+**Unit Economics Targets**
+
+Sustainable growth requires positive unit economics at the customer level:
+
+**Customer Acquisition Cost (CAC):**
+- Target: <$5 per customer (primarily organic/SEO, minimal paid acquisition)
+- Maximum acceptable: $15 per customer (only if LTV supports 3:1 ratio)
+- Strategy: Organic content marketing, SEO, community building, word-of-mouth
+
+**Lifetime Value (LTV):**
+- Digital Product Buyers: $25-45 average (single or multiple purchase behavior)
+- Membership (Monthly): $120-180 (assumes 6-12 month average retention)
+- Membership (Annual): $180-240 (assumes 2-3 year average retention with renewals)
+- Blended LTV Target: $60+ across all customer types
+
+**LTV:CAC Ratio Target: >8:1** (exceptional for content businesses, achievable through organic acquisition)
+
+**Traffic & Engagement Objectives**
+
+Revenue derives from traffic quality and conversion efficiency, not raw volume:
+
+**Traffic Targets:**
+- Month 6: 15,000-30,000 monthly pageviews
+- Month 12: 50,000-80,000 monthly pageviews
+- Month 18: 100,000-150,000 monthly pageviews
+
+**Conversion Targets:**
+- Visitor → Email Subscriber: 3-5%
+- Email Subscriber → First Purchase: 8-12%
+- First Purchase → Repeat Customer: 25-35%
+- Free User → Member: 1-2% (direct conversion)
+- Product Buyer → Member Upgrade: 15-25%
+
+**Engagement Quality Metrics:**
+- Average Session Duration: >3 minutes (indicates genuine interest vs. bounces)
+- Pages per Session: >2.5 (exploring beyond entry page)
+- Return Visitor Rate: >30% (building habit and loyalty)
+- Email Open Rate: >35% (list quality and content relevance)
+- Email Click-Through Rate: >8% (driving action, not passive reading)
+
+**Content Production Efficiency**
+
+Sustainable operations require balancing content velocity with cost discipline:
+
+**Production Targets:**
+- Articles Published: 5-10 per week (260-520 annually)
+- Average Cost-to-Produce: <$15 per article (including AI tools, editing time, hosting)
+- Revenue per Article (12-month trailing): >$50 (SEO value, affiliate conversions, traffic contribution)
+- Content ROI: >3:1 (revenue generated per dollar invested in production)
+
+**Digital Product Targets:**
+- New Products Released: 2-4 per month minimum (maintaining catalog freshness)
+- Average Production Cost: <$100 per product (OCR correction, editing, formatting, cover design)
+- Average Product Revenue (first 90 days): >$300 (justifying production investment)
+- Product Catalog Size: 50+ SKUs by month 12, 100+ by month 18
+
+**Operational Efficiency Targets**
+
+Profitability requires cost discipline across all operational dimensions:
+
+**Infrastructure Costs:**
+- Hosting & CDN: <$100/month (scalable cloud architecture)
+- AI & Production Tools: <$200/month (Claude API, design tools, OCR services)
+- Payment Processing: <3% of revenue (Stripe/PayPal standard rates)
+- Email Marketing: <$50/month (Mailchimp/ConvertKit at current scale)
+- **Total Fixed Costs Target: <$500/month by month 12**
+
+**Labor Economics:**
+- Founder Time Investment: 15-25 hours/week (sustainable alongside other projects)
+- Revenue per Hour Target: >$50/hour by month 12, >$100/hour by month 18
+- Contractor/Freelance: <15% of revenue (audio narration, specialized design)
+
+**Success Validation Milestones**
+
+Clear binary indicators determine whether SF Supernova is achieving its commercial mandate:
+
+**Month 3 Validation:**
+- ✓ First paying customer acquired
+- ✓ Product catalog >10 SKUs
+- ✓ Email list >100 subscribers
+- ✓ Organic traffic >5,000 monthly pageviews
+
+**Month 6 Go/No-Go:**
+- ✓ 100+ paying customers (cumulative)
+- ✓ $800+ MRR
+- ✓ Positive contribution margin
+- ✓ Organic traffic >15,000 monthly pageviews
+- ✗ **Failure to achieve = strategic reassessment required**
+
+**Month 12 Sustainability Check:**
+- ✓ $3,000+ MRR
+- ✓ 300+ active customers
+- ✓ <10% monthly churn
+- ✓ Multiple revenue streams >15% each
+- ✓ LTV:CAC ratio >5:1
+- ✗ **Failure to achieve = potential pivot or wind-down**
+
+**Month 18 Viability Confirmation:**
+- ✓ $6,000+ MRR
+- ✓ 500+ active customers
+- ✓ Positive cash flow (revenue > all costs)
+- ✓ Proven acquisition channels scaling
+- ✓ Product-market fit validated across segments
+- ✗ **Failure to achieve = re-evaluate fundamental business model**
+
+**Strategic vs. Vanity Metrics**
+
+SF Supernova explicitly rejects vanity metrics that do not correlate with commercial success:
+
+**We do NOT optimize for:**
+- Social media followers (unless converting to email/customers)
+- Pageviews without conversion intent
+- Email list size without engagement/monetization
+- Content volume without revenue contribution
+- Awards, recognition, or industry accolades
+
+**We DO optimize for:**
+- Revenue per customer
+- Customer lifetime value
+- Conversion rates across funnel
+- Repeat purchase behavior
+- Organic traffic with commercial intent
+- Cost efficiency and profitability
+
+**Accountability & Reporting Cadence**
+
+Commercial objectives require disciplined measurement and transparent accountability:
+
+- **Weekly**: Traffic, conversion, revenue dashboards reviewed
+- **Monthly**: Full P&L, customer cohort analysis, funnel performance assessment
+- **Quarterly**: Strategic review against phase objectives, go/no-go decision evaluation
+- **Board Review**: Formal performance assessment at 6, 12, 18-month milestones
+
+All metrics tracked in centralized dashboard, automated where possible, with clear owner accountability for each KPI.
+
+**Failure Modes & Exit Criteria**
+
+Honest commercial management requires defining failure explicitly:
+
+**Terminate/Pivot if:**
+- Revenue <$1,500 MRR by month 12 (insufficient market demand)
+- LTV:CAC ratio <2:1 by month 12 (unsustainable economics)
+- Unable to achieve organic traffic growth (SEO strategy failure)
+- Churn >15% monthly (product-market fit failure)
+- Founder burnout or time investment >40 hours/week sustained (lifestyle unsustainability)
+
+The revenue-first mandate demands intellectual honesty: SF Supernova must prove commercial viability or be wound down in favor of opportunities with superior risk-adjusted returns.
 ### 1.5 Strategic Fit & Portfolio Context
 
 
