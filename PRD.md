@@ -96,8 +96,106 @@ The revenue-first mandate does not require hiding commercial intent. SF Supernov
 
 We pursue revenue transparently, delivering genuine value at every tier rather than extracting value through dark patterns or deceptive tactics. Sustainable business and community trust are compatible when value exchange is honest and equitable.
 
+
 ### 1.3 Board-Approved Strategy & Investment Thesis
 
+**Strategic Framework**
+
+The board has approved a phased development strategy structured around five discrete options, sequenced to prioritize immediate revenue generation while building toward sustainable competitive advantage. This approach balances commercial urgency with technical feasibility, validating revenue streams before expanding infrastructure.
+
+**Approved Option Sequence**
+
+The board-approved roadmap follows this priority order:
+
+**Phase 1 (Months 0-6): Revenue Foundation**
+- **Option 3 - Digital Product Engine**: Direct monetization through curated ebooks, enhanced editions, and audio collections
+- **Option 2 - Membership System**: Recurring revenue through tiered subscriptions offering exclusive content, ad-free experience, and community access
+
+**Phase 2 (Months 6-12): Discovery & Engagement**
+- **Option 4 - Structured Data & Graph Layer**: Enhanced metadata, relationship mapping, and intelligent recommendations
+- **Option 1 - Discovery & Navigation Engine**: Improved content browsing, search functionality, and user pathways
+
+**Phase 3 (Months 12-18): Market Expansion**
+- **Option 5 - Advanced Features & Premium Tools**: Analytics dashboards, collection management, and power-user functionality
+
+**Investment Thesis**
+
+The board's approval rests on four core investment principles:
+
+**1. Revenue Before Infrastructure**
+
+Traditional product development invests heavily in discovery and user experience before monetization. SF Supernova inverts this:
+
+- **Immediate monetization validates market demand**: If users won't pay for curated products and membership, enhanced discovery won't save the business
+- **Revenue funds infrastructure development**: Phase 1 earnings directly finance Phase 2 capabilities
+- **Early cash flow reduces risk**: Positive unit economics established in months 1-6, not year 2-3
+
+This sequencing means the platform may launch with "good enough" discovery tools while offering premium products—deliberately prioritizing commercial validation over feature completeness.
+
+**2. Asset-Light, High-Margin Model**
+
+The public domain content strategy enables exceptional unit economics:
+
+- **Zero content acquisition costs**: Pre-1928 works are legally free; 1928-1963 works require only renewal verification
+- **AI-amplified production**: Content enhancement (OCR correction, audio production, editorial curation) achieves 5-10x efficiency vs. traditional methods
+- **Digital distribution**: No inventory, fulfillment, or physical logistics costs
+- **Scalable infrastructure**: Cloud hosting scales with revenue; marginal cost per user approaches zero
+
+**Projected Contribution Margins:**
+- Digital products: 85-92% (after payment processing, hosting, minimal production costs)
+- Membership tiers: 88-94% (after platform fees, hosting)
+- Affiliate commissions: 95-98% (pure margin on third-party sales)
+- Art/Merchandise: 60-75% (print-on-demand models)
+
+**3. Defensible Moat Through Execution, Not Exclusivity**
+
+Since content itself cannot be monopolized (it's public domain), competitive advantage derives from:
+
+- **Curation Expertise**: Editorial judgment and contextual knowledge that algorithms cannot replicate
+- **Production Quality**: Professional-grade enhancement that volunteer efforts structurally cannot match
+- **Data Network Effects**: Structured metadata, user behavior insights, and recommendation intelligence improve with scale
+- **Community Lock-In**: Membership communities, user-generated content, and social features create switching costs
+
+Competitors can access the same raw content but cannot easily replicate the value-added layer we build atop it.
+
+**4. Capital Efficiency & Bootstrapped Growth**
+
+The approved strategy requires minimal external capital:
+
+- **Self-funded Phase 1**: Founder resources sufficient for initial product launch and membership system
+- **Revenue-funded Phase 2**: Phase 1 cash flow finances discovery infrastructure
+- **Optionality for acceleration**: If Phase 1 exceeds projections, external capital could compress timeline; if underperforms, bootstrap continues at sustainable pace
+
+This approach preserves founder equity while validating product-market fit before significant capital deployment.
+
+**Commercial Success Criteria**
+
+The board has established clear go/no-go triggers for phase progression:
+
+**Phase 1 → Phase 2 Trigger:**
+- Minimum 100 paying customers (products or membership) within 6 months
+- Positive contribution margin (revenue > direct costs)
+- Demonstrated organic traffic growth (10K+ monthly visitors)
+
+**Phase 2 → Phase 3 Trigger:**
+- $3,000+ monthly recurring revenue (MRR)
+- 500+ email subscribers
+- Proven conversion funnel (traffic → email → customer at >2% composite rate)
+
+**Pivot/Terminate Criteria:**
+- Failure to achieve 50 paying customers by month 9 signals fundamental product-market fit failure
+- Negative unit economics after 12 months indicates unsustainable cost structure
+- Inability to generate organic traffic suggests SEO/content strategy failure
+
+**Strategic Flexibility**
+
+While the option sequence is approved, the board recognizes market feedback may necessitate tactical adjustments:
+
+- If membership significantly outperforms digital products, accelerate community features
+- If affiliate revenue exceeds projections, expand content targeting commercial-intent searches
+- If discovery limitations materially harm conversion, advance Option 1 implementation
+
+The strategy is directionally locked but executionally flexible, prioritizing commercial outcomes over rigid adherence to sequence.
 ### 1.4 Commercial Objectives & Success Criteria
 
 ### 1.5 Strategic Fit & Portfolio Context
