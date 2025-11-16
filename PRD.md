@@ -5,7 +5,96 @@ Defines why SF Supernova exists as a business, the revenue-first motivations, an
 
 ### 1.1 Business Mission & Market Opportunity
 
+**Mission Statement**
+
+SF Supernova exists to transform the vast, chaotic landscape of public domain science fiction into a premium destination that serves both passionate enthusiasts and curious newcomers. We curate, enhance, and monetize the golden age of science fiction (1930s-1980s)—not by hoarding content, but by adding the value that archives cannot: expert curation, editorial quality, community, and structured pathways to discovery.
+
+**The Market Problem**
+
+While over 77,000 public domain science fiction texts exist across Project Gutenberg, Internet Archive, and scattered repositories, the market suffers from a quality paradox: abundance without accessibility. The existing landscape is characterized by:
+
+- **Poor Quality Execution**: 10-30% OCR error rates rendering classic works nearly unreadable
+- **Zero Curation**: Algorithmic dumps with no editorial guidance or context
+- **Fragmented Discovery**: Content scattered across multiple archives with inconsistent metadata
+- **Amateur Production Values**: LibriVox audiobooks rely on volunteer narration; visual galleries lack professional presentation
+- **Missing Context**: No narrative connecting individual works to the broader evolution of the genre
+- **Underserved Niches**: Female Golden Age authors, New Wave introductions, international translations, and obscure pulp masterpieces remain systematically under-digitized
+
+**Market Opportunity**
+
+The vintage science fiction audience represents a substantial, undermonetized segment:
+
+- **Primary Audience**: 500K-2M active vintage sci-fi enthusiasts globally (English-speaking markets)
+- **Search Volume**: 100K+ monthly searches for classic sci-fi titles, authors, and discovery queries
+- **Demonstrated WTP**: Successful Patreon creators ($3-15/month tiers), thriving vintage book markets, premium audiobook subscriptions
+- **TAM Validation**: Reddit communities (r/printSF: 180K members, r/RetroFuturism: 850K members), active Discord servers, robust YouTube channels covering vintage content
+
+**Why Now?**
+
+Three market catalysts converge to create exceptional timing:
+
+1. **AI-Enabled Production**: Modern tooling enables correction of OCR errors, enhancement of digitization quality, and accelerated content production at 5-10x traditional rates
+2. **Public Domain Expansion**: The 2019-2025 copyright cliff releases thousands of 1920s works annually, with 1928-1963 works entering based on renewal verification
+3. **Discovery Gap**: Major platforms (Project Gutenberg, Internet Archive) have abandoned curation in favor of preservation, leaving the market desperate for expert guidance
+
+**Our Competitive Moat**
+
+Where existing players compete on volume and preservation, SF Supernova competes on:
+
+- **Expert Curation**: Selective, contextualized presentation over algorithmic dumps
+- **Production Quality**: Professional-grade text correction, audio production, visual presentation
+- **Discovery Architecture**: Structured pathways connecting isolated works into coherent journeys
+- **Revenue-Justified Investment**: Commercial model enabling sustainable quality improvements that volunteer archives cannot match
+
+The content is free. Great curation, enhanced quality, and guided discovery are priceless—and monetizable.
+
 ### 1.2 Revenue-First Mandate
+
+**Commercial Imperative**
+
+SF Supernova is designed as a **revenue-generating business from inception**, not a passion project seeking eventual monetization. This revenue-first mandate is non-negotiable and drives every product, feature, and content decision. The platform exists to generate sustainable income while serving the vintage science fiction community—these objectives are complementary, not competing.
+
+**Strategic Rationale for Revenue Priority**
+
+Quality curation, enhanced production, and sustained operations require financial resources that volunteer efforts and archive models cannot provide. Revenue generation enables:
+
+- **Sustainable Quality**: Professional OCR correction, audio production, editorial standards, and visual presentation require paid labor and tooling
+- **Content Velocity**: AI-assisted production workflows, hosting infrastructure, and content management systems demand ongoing investment
+- **Competitive Differentiation**: The ability to outpace free archives requires resources they structurally cannot access
+- **Platform Evolution**: Development of discovery tools, membership systems, digital product engines, and structured data layers requires capital
+
+Unlike public archives constrained by volunteer capacity and institutional inertia, SF Supernova's commercial model creates the sustainable infrastructure to deliver what the market demonstrably wants but cannot currently access.
+
+**Revenue as Product Validation**
+
+Revenue serves as the ultimate market signal. If users will not pay (directly or indirectly through attention/data), the product has failed to create sufficient value above free alternatives. Our revenue-first approach forces discipline:
+
+- **Features must justify their existence commercially**: Does this drive traffic, conversions, retention, or referrals?
+- **Content must attract or convert**: Does this piece support acquisition, engagement, or monetization?
+- **User experience must facilitate revenue pathways**: Does this flow naturally guide free users toward paid value?
+
+**Non-Negotiable Financial Principles**
+
+1. **Every feature must have a revenue hypothesis**: How does this contribute to acquisition, conversion, retention, or economics?
+2. **Content production must scale profitably**: Cost-to-produce must remain sustainable against revenue per piece
+3. **Monetization cannot be deferred**: Revenue streams activate in Phase 1, not "eventually"
+4. **Traffic without monetization is vanity**: Pageviews matter only insofar as they convert to revenue
+5. **Free content serves commercial purpose**: Discovery layer exists to drive paid conversion, not as end unto itself
+
+**Implications for Product Development**
+
+This mandate directly shapes the product roadmap:
+
+- **Phase 1 prioritizes Options 3 & 2**: Digital Product Engine and Membership System launch before enhanced discovery (Options 4 & 1) because they generate revenue immediately
+- **Content selection favors commercial potential**: SEO-driven content calendar targets high-intent, convertible searches over pure passion projects
+- **User experience optimizes conversion funnels**: Free → Product → Membership pathways are architected from day one, not retrofitted
+- **Feature requests evaluated on ROI**: Community desires matter only when aligned with revenue contribution
+
+**Transparency and Authenticity**
+
+The revenue-first mandate does not require hiding commercial intent. SF Supernova's audience—collectors, enthusiasts, and serious fans—understands that quality curation and production require resources. Our positioning celebrates this: *"The content is free; great curation is worth paying for."*
+
+We pursue revenue transparently, delivering genuine value at every tier rather than extracting value through dark patterns or deceptive tactics. Sustainable business and community trust are compatible when value exchange is honest and equitable.
 
 ### 1.3 Board-Approved Strategy & Investment Thesis
 
