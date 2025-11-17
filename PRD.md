@@ -4171,7 +4171,7 @@ The Membership System transforms SF Supernova from project to platform, from tra
 
 Recurring revenue is predictable revenue. Predictable revenue enables investment, growth, and long-term sustainability. Membership is how SF Supernova becomes a lasting institution, not just a successful launch.
 
-### ### 3.5 Pillar 4: Structured Data & Future Tools (Option 4)
+### 3.5 Pillar 4: Structured Data & Future Tools (Option 4)
 
 **Purpose & Strategic Role**
 
@@ -4816,8 +4816,501 @@ Pillar 4 is SF Supernova's long-term moat. While content (Pillar 1) can be copie
 This is the pillar that transforms SF Supernova from "good product business" to "indispensable platform." It's the foundation for everything we'll build in years 2-5 and beyond.
 
 Data is infrastructure. Infrastructure compounds. Compounding creates moats.
+
+
 ### 3.6 In-Scope Elements for PRD v1
 
+**Scope Definition Philosophy**
+
+PRD v1 defines the **Minimum Viable Platform (MVP)** required to validate SF Supernova's core business hypothesis: users will pay for expertly curated, professionally enhanced vintage science fiction delivered through an integrated discovery and commerce platform. This scope prioritizes **revenue validation over feature completeness**, establishing foundations that can scale while deferring sophisticated capabilities until market demand justifies investment.
+
+**Scope Boundaries:**
+- **Timeframe:** Months 0-6 (Phase 1)
+- **Budget:** $2,000-3,000 initial investment, $300-500/month operating costs
+- **Effort:** 15-25 hours/week founder time, minimal outsourcing
+- **Goal:** 100+ paying customers, $800+ MRR, validated product-market fit
+
+**Guiding Principles:**
+
+1. **Revenue-Critical First:** Features directly enabling monetization take priority over nice-to-haves
+2. **Manual Before Automated:** Accept manual processes in Phase 1; automate in Phase 2 if volume justifies
+3. **Good Enough UX:** Functional and professional, not pixel-perfect or highly polished
+4. **Platform Over Custom:** Leverage existing platforms (WordPress, Shopify, Stripe) over custom builds
+5. **Content Over Features:** Publishing articles and products matters more than sophisticated discovery tools
+6. **Proven Before Built:** Test assumptions with minimal implementation before heavy investment
+
+---
+
+**In-Scope: Pillar 1 (Discovery Engine)**
+
+**Website & Content Platform:**
+
+✅ **Core Infrastructure:**
+- Public-facing website with custom domain (sfsupernova.com)
+- CMS platform operational (WordPress or Ghost)
+- Responsive design (mobile, tablet, desktop)
+- SSL/HTTPS security enabled
+- Basic SEO optimization (meta tags, sitemap, schema markup)
+- Analytics integration (Google Analytics or Plausible)
+
+✅ **Editorial Content:**
+- 50-100 foundational articles published
+  - 25-30 author profiles (essential Golden Age + New Wave authors)
+  - 20-25 work reviews (seminal novels and collections)
+  - 10-15 curated lists ("50 Essential Works," "Hidden Gems," "Time Travel Classics")
+  - 5-10 guides ("How to Start Reading Vintage Sci-Fi," "Understanding Golden Age Context")
+- Publishing cadence: 5-10 articles/week maintained
+- Editorial voice and quality standards established
+- Article templates and style guide documented
+
+✅ **Navigation & Browse:**
+- Homepage with clear value proposition and navigation
+- Author directory (alphabetical listing with links to profiles)
+- Work catalog (browsable by author, era, format)
+- Basic search functionality (keyword search across content)
+- Article categories (Authors, Reviews, Lists, Guides)
+- Archive pages (by date, category)
+- Related content recommendations (manual, template-based)
+
+✅ **Email Capture:**
+- Newsletter signup forms (homepage, article end, exit intent)
+- Lead magnet (downloadable guide or checklist)
+- Email platform integrated (Mailchimp, ConvertKit, or Buttondown)
+- Welcome email sequence (5 emails over 14 days)
+- Weekly newsletter template and sending schedule
+
+✅ **Community Features (Basic):**
+- Comments enabled on articles (Disqus or native)
+- User account creation (for commenting, optional newsletter signup)
+- Basic moderation tools
+- Comment policy and guidelines visible
+
+**Content Standards:**
+- 1,000-3,000 words per article (varies by type)
+- Professional tone, accessible language, authentic voice
+- SEO-optimized (target keywords, meta descriptions, headers)
+- Proofread and fact-checked before publishing
+- Proper citations and sources when appropriate
+
+**Technical Standards:**
+- Page load time <3 seconds on 4G
+- Mobile-friendly (responsive design, readable text)
+- Accessible (alt text for images, semantic HTML)
+- Secure (HTTPS, no mixed content)
+- Reliable (99%+ uptime)
+
+---
+
+**In-Scope: Pillar 2 (Digital Product Engine)**
+
+**E-Commerce Platform:**
+
+✅ **Infrastructure:**
+- E-commerce platform operational (Gumroad, WooCommerce, or Shopify)
+- Payment processing configured (Stripe and/or PayPal)
+- SSL/HTTPS for checkout security
+- Automated digital delivery system
+- Customer account system (purchase history, re-downloads)
+- Order confirmation emails
+
+✅ **Product Catalog (Phase 1 Target):**
+- **15-20 ebook titles** (individual works and small collections)
+  - Focus: High-demand authors (Asimov, Clarke, Heinlein, Dick, Bradbury)
+  - Mix of novels and short story collections
+  - Multiple formats: EPUB, MOBI, PDF
+  - Pricing: $2-5 per title
+- **5-8 audiobook titles** (shorter works prioritized for budget)
+  - Focus: 3-6 hour audiobooks initially
+  - Professional narration (outsourced)
+  - MP3 format with chapter markers
+  - Pricing: $8-12 per title
+- **2-3 curated bundles**
+  - Author collections (e.g., "Asimov's Robot Stories")
+  - Thematic bundles (e.g., "Golden Age Time Travel")
+  - Bundle discount: 20-25% vs. individual purchase
+
+✅ **Product Pages:**
+- Product title, subtitle, author
+- Cover image (high-resolution)
+- Detailed description (300-500 words)
+- Format and file details
+- Price and "Add to Cart" button
+- Sample preview (first chapter or excerpt)
+- Related product recommendations (3-5 items)
+
+✅ **Checkout Flow:**
+- Shopping cart with itemized pricing
+- Guest checkout option (no forced account)
+- Payment form (Stripe/PayPal)
+- Order confirmation page
+- Immediate email with download links
+
+✅ **Customer Support:**
+- Support email address (support@sfsupernova.com)
+- FAQ page (common questions about downloads, formats, refunds)
+- 14-day refund policy clearly stated
+- Response time target: <24 hours (business days)
+
+**Production Pipeline:**
+
+✅ **Ebook Creation Workflow:**
+- Source text acquisition (Project Gutenberg, Internet Archive)
+- OCR correction (AI-assisted + manual proofreading)
+- Formatting and typography (Calibre or Atticus)
+- Cover design (Canva or freelancer)
+- Editorial content (author bio, introduction)
+- Multi-format export (EPUB, MOBI, PDF)
+- Quality assurance testing
+- Time per title: 6-12 hours
+
+✅ **Audiobook Production Workflow:**
+- Script preparation
+- Narrator hiring (Fiverr, Upwork, or ACX)
+- Direction and feedback
+- Audio editing and mastering (outsourced or Audacity)
+- Metadata and chapter markers
+- Quality assurance listening
+- Cost per title: $200-400
+- Time per title: 8-15 hours (founder oversight + narrator time)
+
+**Quality Standards:**
+- Ebook text accuracy: 99%+ (spot-check 10+ pages)
+- Audio quality: Professional-grade, clear, balanced
+- Cover design: Period-appropriate, high-resolution
+- File sizes: Optimized (<5MB ebooks, reasonable audio)
+- Testing: Verified on multiple devices before release
+
+---
+
+**In-Scope: Pillar 3 (Membership System)**
+
+**Subscription Platform:**
+
+✅ **Infrastructure:**
+- Subscription billing platform operational (Memberful, MemberPress, or Stripe Billing)
+- Three-tier membership structure configured
+- Payment processing (recurring billing)
+- Access control (content restriction by tier)
+- Self-service account management (upgrade, cancel, payment updates)
+- Subscription confirmation and renewal emails
+
+✅ **Membership Tiers:**
+- **Free Tier:** Defined features (all Discovery Engine content, ads present)
+- **Explorer ($4.99/month or $49/year):** Ad-free, 20% discount, early access, member badge
+- **Enthusiast ($8.99/month or $89/year):** 2 free audiobooks/month, 30% discount, member content access, community features
+- **Collector ($14.99/month or $149/year):** 4 free audiobooks/month, 40% discount, enhanced editions, advanced features
+
+✅ **Membership Features (Phase 1 Implementation):**
+
+**Explorer Tier:**
+- Ad-free reading experience (ad blocks removed for logged-in members)
+- 20% discount code applied automatically at checkout
+- Member badge displayed on profile and comments
+- Early access to new products (48-hour exclusive window)
+- Member-only newsletter (monthly minimum)
+
+**Enthusiast Tier (All Explorer PLUS):**
+- Audiobook credit system:
+  - 2 credits allocated monthly (1st of each month)
+  - Credits valid for current month only (no rollover in Phase 1)
+  - Curated selection page (20-30 titles available for credit redemption)
+  - One-click redemption and instant download
+- 30% discount on all purchases
+- Access to member-only content section (10-20 exclusive articles in Phase 1)
+- Basic member dashboard (credit balance, benefits overview, download history)
+
+**Collector Tier (All Enthusiast PLUS):**
+- 4 audiobook credits monthly (any titles from catalog)
+- 40% discount on all purchases
+- Enhanced edition access (premium versions included in membership)
+- Priority support (flagged for faster response)
+- Founder recognition (mentioned in member spotlights, credits)
+
+✅ **Member Dashboard (Basic):**
+- Membership status and tier
+- Credit balance and renewal date
+- Download history (purchased products)
+- Account settings (payment method, email, password)
+- Upgrade/downgrade options
+- Cancellation option (self-service)
+
+✅ **Member Content (Phase 1 Minimum):**
+- 10-20 exclusive articles (essays, deep dives, behind-the-scenes)
+- Member-only section clearly marked
+- Access control enforced (login required)
+- Content published 1-2 times per week minimum
+
+✅ **Email Communications:**
+
+**Onboarding Sequence (new members):**
+1. Welcome email (immediate): Overview of benefits, how to get started
+2. Getting the most from your membership (Day 2): Tips and features
+3. First audiobook selection guide (Day 3, Enthusiast/Collector)
+4. Community introduction (Day 5): How to engage
+5. Feedback request (Day 14): How's it going? Questions?
+
+**Ongoing Communications:**
+- Monthly member newsletter (exclusive content highlights, community news)
+- Credit renewal notification (1st of month for Enthusiast/Collector)
+- Product launch announcements (with member discount highlighted)
+- Renewal reminders (for annual members, 30 days before)
+
+**Community Features (Phase 1 Basic):**
+
+✅ **Comments/Discussions:**
+- Member-only comment areas on some content
+- Higher comment privileges (less moderation friction)
+- Member badge displayed in comments
+
+✅ **Reading Lists (Public/Private):**
+- Members can create personal reading lists
+- Option to make lists public (shareable)
+- Lists appear in user profile
+
+**Acceptable Phase 1 Limitations:**
+- No dedicated member forum yet (Phase 2)
+- No advanced analytics or stats (Phase 2)
+- No collection management tools (Phase 3, Collector feature)
+- No API access (Phase 3)
+- Basic credit system (no rollover, no swapping)
+- Manual handling of some member requests
+
+---
+
+**In-Scope: Pillar 4 (Structured Data) - Foundation Only**
+
+**Phase 1 Structured Data Scope:**
+
+✅ **Basic Metadata Schema:**
+- Database schema defined for core entities:
+  - Works (title, author, date, format, description)
+  - Authors (name, bio, dates, major works)
+  - Categories (era, theme, genre)
+- Fields populated for catalog items (ebooks and audiobooks)
+- Basic relationships (author-to-works, work-to-series)
+
+✅ **Manual Curation (Minimal):**
+- Author biographies include basic influence notes
+- Work descriptions include themes and context
+- Tagging system for themes (10-15 core tags)
+- Manual related content linking
+
+**Phase 1 Explicitly Out of Scope:**
+- No comprehensive metadata for non-product works
+- No relationship graphs or influence mapping
+- No advanced discovery algorithms
+- No AI-powered recommendations (rule-based only)
+- No visual relationship visualization
+- No public API
+- No advanced tools
+
+**Rationale:** Pillar 4 requires significant ongoing effort that doesn't directly drive Phase 1 revenue. Minimal foundation in Phase 1; major investment begins in Phase 2 after revenue validation.
+
+---
+
+**In-Scope: Supporting Systems & Operations**
+
+**Business & Legal Infrastructure:**
+
+✅ **Business Setup:**
+- Business entity registered (LLC or sole proprietorship)
+- Business bank account opened
+- Accounting system (QuickBooks Self-Employed or Wave)
+- Basic bookkeeping (track revenue, expenses, taxes)
+
+✅ **Legal & Compliance:**
+- Terms of Service published
+- Privacy Policy published (GDPR-compliant)
+- Refund Policy published
+- Copyright documentation for public domain works maintained
+- DMCA agent designated (if required)
+- Tax collection configured (via Stripe/platform)
+
+✅ **Brand & Design:**
+- Logo and basic brand identity
+- Color palette and typography guidelines
+- Social media accounts created (Twitter, Facebook, Instagram - optional)
+- Email signature and templates
+- Basic brand guidelines document
+
+**Analytics & Measurement:**
+
+✅ **Traffic Analytics:**
+- Google Analytics or Plausible installed
+- Goals configured (newsletter signup, product purchase, member signup)
+- Traffic sources tracked
+- Content performance monitored
+
+✅ **Revenue Analytics:**
+- Dashboard tracking:
+  - Daily/weekly/monthly revenue
+  - Product sales by title
+  - Member count by tier
+  - MRR (Monthly Recurring Revenue)
+  - Churn rate
+- Accessible via platform admin (Shopify, Memberful) or custom spreadsheet
+
+✅ **Content Analytics:**
+- Most-viewed articles
+- Traffic by content type
+- Search queries (Search Console)
+- Newsletter performance (open rate, CTR)
+
+**Customer Relationship Management:**
+
+✅ **Email Database:**
+- Centralized subscriber list (via Mailchimp/ConvertKit)
+- Segmentation:
+  - Newsletter subscribers (non-members)
+  - Free account users
+  - Product buyers
+  - Members (by tier)
+- Tag system for tracking source, interests, behavior
+
+✅ **Customer Support:**
+- Support email monitored daily
+- Ticket tracking (email or simple Zendesk alternative)
+- Response templates for common issues
+- Refund processing workflow
+
+**Social Media & Promotion (Minimal):**
+
+✅ **Basic Presence:**
+- Social accounts created and branded
+- Post schedule: 2-3x per week minimum
+- Content types: Article links, cover art, quotes, member spotlights
+- Engagement monitoring (replies, DMs)
+
+**Rationale:** Establish presence without significant time drain. Phase 1 focuses on owned channels (email, website) over social.
+
+---
+
+**In-Scope: Founder Time & Effort Allocation**
+
+**Phase 1 Time Budget (15-25 hours/week):**
+
+**Content Creation (40-50% - 6-12 hours/week):**
+- Article research, writing, editing: 5-10 articles/week
+- Product creation (ebooks, audiobooks): 2-4 products/month
+- Editorial planning and calendar management
+
+**Product Operations (20-30% - 3-7 hours/week):**
+- Audiobook production management (narrator coordination)
+- Quality assurance (testing products before release)
+- Upload and product page creation
+- Bundle configuration and pricing
+
+**Marketing & Community (15-25% - 2-6 hours/week):**
+- Newsletter writing and sending (weekly)
+- Social media posting (2-3x/week)
+- Email list management and segmentation
+- Community moderation (comments, member discussions)
+
+**Customer Support (5-10% - 1-2 hours/week):**
+- Responding to emails (support, sales, general)
+- Handling refunds and technical issues
+- Member onboarding assistance
+
+**Analytics & Optimization (5-10% - 1-2 hours/week):**
+- Reviewing metrics and dashboards
+- A/B testing (email subject lines, pricing, CTAs)
+- Identifying opportunities and issues
+
+**Administrative (5-10% - 1-2 hours/week):**
+- Bookkeeping and financial tracking
+- Platform maintenance
+- Strategic planning and decision-making
+
+**Outsourcing Budget (Phase 1):**
+- Audiobook narration: $200-400/title (1-2 titles/month = $200-800/month)
+- Occasional freelance design: $50-150/month
+- Total outsourcing: $250-950/month
+
+---
+
+**Success Criteria for In-Scope Elements:**
+
+**By Month 3 (Early Validation):**
+- ✅ 30-50 articles published
+- ✅ 10+ products available (mix of ebooks and audiobooks)
+- ✅ 100+ email subscribers
+- ✅ First paying customers acquired (products or membership)
+- ✅ 5,000+ monthly pageviews
+
+**By Month 6 (Phase 1 Completion):**
+- ✅ 50-100 articles published
+- ✅ 20-30 products available
+- ✅ 300+ email subscribers
+- ✅ 100+ paying customers (cumulative)
+- ✅ 50-85 active members across tiers
+- ✅ $800-1,500 MRR
+- ✅ 15,000-30,000 monthly pageviews
+- ✅ Positive contribution margin (revenue > direct costs)
+
+**Quality Gates (Must Maintain Throughout Phase 1):**
+- ✅ Article quality standards met (proofreading, research, SEO)
+- ✅ Product quality standards met (OCR accuracy, audio quality, design)
+- ✅ Customer satisfaction >4.5/5 (inferred from reviews, feedback, refund rate <5%)
+- ✅ Support response time <24 hours
+- ✅ Site uptime >99%
+- ✅ Email delivery reliability >95%
+
+---
+
+**Rationale for Scope Decisions:**
+
+**Why This Scope (And Not More):**
+
+1. **Revenue Validation Priority:** Every in-scope element contributes directly to validating monetization (content drives traffic → products/membership convert traffic → revenue validates model)
+
+2. **Founder Capacity Constraint:** 15-25 hours/week is realistic for solo founder with other commitments; more scope = quality degradation or burnout
+
+3. **Capital Efficiency:** $2,000-3,000 initial investment is bootstrappable; avoiding expensive custom development or large platform fees
+
+4. **Speed to Market:** Leveraging existing platforms (WordPress, Shopify, Memberful) enables 60-90 day launch vs. 6+ months custom build
+
+5. **Learning & Iteration:** Phase 1 scope reveals what users actually want vs. what founder assumes; better to learn fast with MVP than over-invest in unvalidated features
+
+6. **Sustainable Operations:** This scope is maintainable long-term; more ambitious scope creates operational debt requiring team expansion before revenue supports it
+
+**Why These Features First:**
+- Content (Pillar 1): Required for traffic acquisition (organic search)
+- Products (Pillar 2): Validates core monetization hypothesis immediately
+- Membership (Pillar 3): Tests recurring revenue model, higher LTV
+- Data (Pillar 4 minimal): Foundation only; major investment deferred until revenue validated
+
+**Trade-offs Accepted in Phase 1:**
+- Manual processes (acceptable if time-consuming but not blocking)
+- Basic UX (functional but not delightful)
+- Limited features (core value delivered, nice-to-haves deferred)
+- Small catalog (depth over breadth initially)
+- Minimal automation (human-in-loop acceptable at low volume)
+
+**These trade-offs reverse in Phase 2 when revenue funds investment in efficiency, polish, and advanced features.**
+
+---
+
+**Summary: In-Scope for PRD v1**
+
+**Core Deliverables:**
+1. ✅ Public website with 50-100 articles
+2. ✅ 20-30 digital products (ebooks + audiobooks)
+3. ✅ E-commerce system with checkout and delivery
+4. ✅ Three-tier membership system with benefits
+5. ✅ Email capture and newsletter system
+6. ✅ Basic community features (comments, accounts)
+7. ✅ Analytics and measurement infrastructure
+8. ✅ Customer support and operations
+
+**Success Definition:**
+- 100+ paying customers by Month 6
+- $800-1,500 MRR by Month 6
+- Positive unit economics (contribution margin >0)
+- Clear path to Phase 2 expansion
+
+**This scope is ambitious but achievable** for a dedicated solo founder working 15-25 hours/week over 6 months. It validates core business model without over-investing in unproven features. Success enables Phase 2; failure informs pivot or wind-down decision.
+
+PRD v1 is not "final product"—it's **Minimum Viable Platform proving monetization works**. Everything else builds from there.
 ### 3.7 Out-of-Scope & Deferred Elements
 
 
