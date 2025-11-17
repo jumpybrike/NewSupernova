@@ -2783,8 +2783,664 @@ The Discovery Engine succeeds when it achieves three outcomes:
 The Discovery Engine is not just marketing—it's the foundation of trust, acquisition, and sustainable growth. We must invest sufficiently to make it excellent while maintaining laser focus on revenue pillars (2 & 3) that fund its existence.
 
 Free content attracts; paid products sustain. Discovery Engine enables both.
+
 ### 3.3 Pillar 2: Digital Product Engine (Option 3)
 
+**Purpose & Strategic Role**
+
+The Digital Product Engine is SF Supernova's primary revenue generator in Phase 1, responsible for creating, packaging, pricing, and delivering enhanced digital products (ebooks, audiobooks, collections) that monetize our curation and production expertise. This pillar validates our core hypothesis: users will pay for professionally enhanced versions of public domain content when quality, presentation, and curation justify the price.
+
+**Strategic Functions:**
+
+1. **Immediate Revenue Generation:** Direct sales with instant payment and delivery
+2. **Value Proposition Proof:** Demonstrates quality difference justifying payment vs. free archives
+3. **Product-Market Fit Validation:** Tests willingness-to-pay across formats and price points
+4. **Customer Acquisition:** First purchase creates relationship, enabling upsell to membership
+5. **Margin Generation:** High contribution margins (85-92%) fund platform development and operations
+
+**Core Principle:** Every product must deliver value obviously superior to free alternatives, with production quality and curation justifying its price point. We compete on enhancement, not access.
+
+---
+
+**Component 1: Product Creation Workflow**
+
+**Product Types & Formats:**
+
+**Enhanced Ebooks (Primary Product):**
+
+**Standard Enhanced Edition:**
+- Professionally OCR-corrected text (99%+ accuracy vs. 70-90% in archives)
+- Beautiful typography and formatting
+- Period-appropriate cover art (public domain illustrations)
+- Table of contents with hyperlinked chapters
+- Author biography and historical context
+- Brief editorial introduction (300-500 words)
+- Multiple formats: EPUB, MOBI (Kindle), PDF
+- Pricing: $2-5 depending on length and significance
+
+**Premium Enhanced Edition:**
+- Everything in Standard Edition PLUS:
+- Scholarly annotations and footnotes
+- Comparative textual notes (variant editions)
+- Extended critical essay (1,500-2,500 words)
+- Bibliography and recommended reading
+- Discussion questions for reading groups
+- Timeline of author's life and work
+- Cultural context and influence mapping
+- Pricing: $5-8 (premium $2-3 over standard)
+
+**Curated Collections:**
+- Thematic or author-based anthologies (5-15 works)
+- Original editorial introduction contextualizing selection
+- Individual work introductions
+- Reading order recommendations
+- Unified design aesthetic across collection
+- Bundle pricing (20-30% discount vs. individual purchases)
+- Pricing: $8-20 depending on collection size
+
+**Example Products:**
+
+*"The Foundation Trilogy" by Isaac Asimov* (Standard Edition)
+- Three novels in single ebook: Foundation, Foundation and Empire, Second Foundation
+- Professional formatting with unified TOC
+- Author biography and series context
+- Cover art featuring classic 1950s pulp aesthetic
+- Price: $4.99 (vs. $1.99 each separately = $5.97, slight discount incentive)
+
+*"The Forgotten Masterpieces Collection: 10 Essential Works You've Never Heard Of"*
+- Curated anthology of overlooked classics
+- 2,000-word editorial essay on why these works matter
+- Individual introductions for each work (200-300 words each)
+- Authors include Leigh Brackett, C.L. Moore, Theodore Sturgeon, Cordwainer Smith
+- Price: $12.99 (significant value vs. $3-4 per work individually)
+
+**Professional Audiobooks:**
+
+**Standard Audiobook:**
+- Professional voice actor narration
+- High-quality audio production (clean, balanced, mastered)
+- Chapter markers and metadata
+- Accompanying PDF with cover art and chapter list
+- MP3 format (high bitrate, compatible with all players)
+- Length-based pricing: $8-15 (3-8 hours), $15-20 (8-15 hours)
+
+**Enhanced Audiobook:**
+- Everything in Standard PLUS:
+- Multiple narrator voices for dialogue (when budget allows)
+- Subtle sound design and period music (radio drama style)
+- Extended intro/outro with context
+- Accompanying enhanced ebook included
+- Pricing: Premium $3-5 over standard audiobook
+
+**Radio Drama Restorations:**
+- Historical sci-fi radio broadcasts (1930s-1950s)
+- Audio restoration and cleanup
+- Episode metadata and show notes
+- Historical context about original broadcasts
+- Single episodes ($2-3) or complete series bundles ($10-20)
+
+**Product Bundles:**
+
+**Format Bundles:**
+- "Complete Package": Ebook + Audiobook together
+- Discount: 25% off vs. separate purchase
+- Example: Ebook ($3.99) + Audiobook ($11.99) = $15.98 separately, bundle $11.99
+
+**Author Bundles:**
+- Complete works of single author
+- "The Complete Philip K. Dick Short Stories" (50+ stories)
+- Significant discount (40-50% off individual purchase)
+- Pricing: $25-50 depending on volume
+
+**Thematic Mega-Bundles:**
+- "The Essential Golden Age Library" (50 works)
+- "Time Travel Through the Decades" (20 time travel novels, 1930s-1980s)
+- Premium pricing but exceptional value: $75-150
+
+---
+
+**Production Pipeline & Quality Standards:**
+
+**Stage 1: Source Material Acquisition**
+
+**Sources:**
+- Project Gutenberg (text files, minimal formatting)
+- Internet Archive (scanned PDFs requiring OCR)
+- HathiTrust and other academic archives
+- Direct scanning of physical books (when necessary)
+
+**Selection Criteria:**
+- Cultural/historical significance to genre
+- Quality of writing (editorial judgment)
+- Reader demand (search volume, requests)
+- Public domain legal certainty (pre-1928 prioritized)
+- SEO opportunity (high-value keywords)
+
+**Stage 2: Text Processing & Enhancement**
+
+**OCR Correction (for scanned sources):**
+- Initial OCR via Adobe Acrobat, ABBYY FineReader, or similar
+- AI-assisted error detection and correction (Claude API)
+- Manual proofreading pass (founder or hired editor)
+- Verification against physical edition when available
+- Target: 99.5%+ accuracy
+
+**Formatting & Typography:**
+- Conversion to clean HTML/Markdown
+- Proper paragraph breaks, chapter divisions
+- Consistent typography (em dashes, ellipses, quotation marks)
+- Removal of archive watermarks and extraneous text
+- Scene breaks and section dividers formatted properly
+
+**Stage 3: Design & Production**
+
+**Cover Design:**
+- Public domain pulp art as primary source
+- Period-appropriate typography and layout
+- Series branding for collections
+- Multiple sizes for different platforms
+- Tools: Canva, Adobe Creative Suite, or freelance designer
+- Cost: $20-50 per cover (in-house) or $50-150 (freelance)
+
+**Ebook Formatting:**
+- EPUB 3.0 standard (maximum compatibility)
+- Embedded fonts and styling
+- Hyperlinked table of contents
+- Metadata (title, author, publisher, description, keywords)
+- Testing across devices (Kindle, Kobo, Apple Books, web readers)
+- Tools: Calibre, Vellum, Atticus, or custom scripts
+
+**Audiobook Production:**
+- Script preparation (removing archive artifacts, noting pronunciations)
+- Narrator selection and direction
+- Studio recording or remote recording (depending on budget/narrator)
+- Audio editing and mastering
+- Quality control listening pass
+- Cost: $200-400 per finished hour (professional narrator + production)
+
+**Stage 4: Editorial Content Creation**
+
+**Author Biographies:**
+- Research from biographical sources, contemporary reviews, critical studies
+- 500-1,000 words covering life, major works, significance
+- Written in accessible but authoritative tone
+- Time investment: 2-4 hours per biography
+
+**Work Introductions:**
+- 300-500 words (standard edition) or 1,500-2,500 words (premium edition)
+- Historical context, publication history, critical reception
+- Modern reader guidance (what to expect, dated elements)
+- Thematic analysis and influence tracing
+- Time investment: 1-2 hours (standard), 4-6 hours (premium)
+
+**Stage 5: Quality Assurance**
+
+**QA Checklist:**
+- ✅ Text accuracy verified (spot-check 10+ random pages)
+- ✅ Formatting consistent across all chapters
+- ✅ TOC hyperlinks functional
+- ✅ Metadata complete and accurate
+- ✅ Cover art displays properly in all formats
+- ✅ File sizes optimized (< 5MB for ebooks, reasonable for audio)
+- ✅ Legal compliance verified (public domain status confirmed)
+- ✅ Editorial content proofread and fact-checked
+- ✅ Test delivery on multiple devices/platforms
+
+**Stage 6: Publishing & Distribution**
+
+**Upload to Sales Platform:**
+- Shopify, WooCommerce, Gumroad, or custom e-commerce
+- Product page creation with description, previews, pricing
+- Categorization and tagging for discoverability
+- Related product recommendations configured
+
+**Digital Delivery Setup:**
+- Secure download links (expiring tokens)
+- Email delivery of files
+- Account-based download history (users can re-download)
+- DRM considerations (likely DRM-free for user goodwill)
+
+**Announcement & Promotion:**
+- Newsletter announcement to email list
+- Blog post featuring the work and context
+- Social media posts (with cover art)
+- SEO optimization (product page targets relevant keywords)
+
+---
+
+**Production Velocity & Capacity**
+
+**Phase 1 Targets (Months 0-6):**
+
+**Ebooks:**
+- 2-4 new ebook titles per month (12-24 in Phase 1)
+- Focus on highest-demand authors and works
+- Mix of individual titles and small collections
+- Production time per title: 6-12 hours (founder time)
+
+**Audiobooks:**
+- 1-2 new audiobook titles per month (6-12 in Phase 1)
+- Prioritize shorter works initially (3-6 hours)
+- Outsource narration to professional freelancers
+- Production time per title: 8-15 hours (founder + narrator)
+
+**Total Phase 1 Catalog:**
+- 20+ ebook titles
+- 8+ audiobook titles
+- 3-5 curated collections/bundles
+- Sufficient variety to validate demand and identify bestsellers
+
+**Phase 2 Targets (Months 6-12):**
+
+- 3-5 ebooks per month (18-30 additional titles)
+- 2-3 audiobooks per month (12-18 additional titles)
+- 5-10 new bundle/collection offerings
+- Expansion into premium enhanced editions
+- Introduction of radio drama restorations
+
+**Cumulative Phase 2 Catalog:**
+- 50+ ebook titles
+- 25+ audiobook titles
+- 15+ collections and bundles
+
+**Phase 3 Targets (Months 12-18):**
+
+- 5-8 ebooks per month (30-48 additional titles)
+- 3-4 audiobooks per month (18-24 additional titles)
+- Automated production workflows reducing per-title time
+- Potential outsourcing of some production tasks
+
+**Mature Catalog (Month 18):**
+- 100+ ebook titles
+- 50+ audiobook titles
+- 25+ curated collections
+- Comprehensive coverage of essential authors and works
+
+---
+
+**Component 2: E-Commerce Platform & Infrastructure**
+
+**Platform Selection Criteria:**
+
+**Must-Have Features:**
+- Digital product delivery and secure downloads
+- Multiple file format support (EPUB, MOBI, PDF, MP3)
+- Cart and checkout with multiple payment options
+- Discount codes and promotional pricing
+- Bundle/package product support
+- Customer accounts with download history
+- Sales analytics and reporting
+- Integration with website/CMS
+
+**Candidate Platforms:**
+
+**Shopify:**
+- **Pros:** Robust, scalable, excellent UX, app ecosystem
+- **Cons:** Monthly fees ($29-79), transaction fees (unless Shopify Payments), digital product apps required
+- **Best For:** Professional, scalable long-term solution
+
+**WooCommerce (WordPress):**
+- **Pros:** Free core plugin, flexible, integrates with WordPress site, low cost
+- **Cons:** Requires more technical setup, security and maintenance responsibility, potential plugin conflicts
+- **Best For:** Bootstrap budget, technical comfort with WordPress
+
+**Gumroad:**
+- **Pros:** Simple setup, built for digital products, handles all payment/delivery, low upfront cost
+- **Cons:** 10% transaction fee (vs. 2-3% elsewhere), less customization, not fully integrated with site
+- **Best For:** Quick launch, minimal technical overhead
+
+**SendOwl / Payhip:**
+- **Pros:** Digital-product-focused, reasonable pricing, embeddable checkout
+- **Cons:** Less well-known, potential limitations at scale
+- **Best For:** Middle ground between Gumroad and WooCommerce
+
+**Likely Choice:** 
+- **Phase 1:** Gumroad or WooCommerce (low cost, fast launch)
+- **Phase 2+:** Migrate to Shopify if revenue justifies ($3K+ monthly product sales)
+
+**Payment Processing:**
+
+**Payment Methods:**
+- Credit/debit cards (Stripe or PayPal)
+- PayPal account payments
+- Apple Pay / Google Pay (mobile optimization)
+- International payment support (multi-currency if possible)
+
+**Pricing:**
+- Stripe: 2.9% + $0.30 per transaction
+- PayPal: 2.9% + $0.30 per transaction (3.49% + fixed fee internationally)
+- Shopify Payments: 2.7-2.9% (no additional transaction fee)
+
+**Target:** Keep payment processing fees to <3.5% of revenue through platform optimization
+
+**Security & Compliance:**
+- SSL/HTTPS for all transactions (mandatory)
+- PCI compliance (handled by Stripe/PayPal)
+- GDPR compliance for EU customers (privacy policy, data handling)
+- Tax calculation and collection (automated via platform or TaxJar)
+
+---
+
+**Component 3: Product Catalog & Discovery**
+
+**Product Pages:**
+
+**Essential Elements:**
+- Product title and subtitle
+- Cover image (large, high-resolution)
+- Author name and linked biography
+- Detailed description (300-500 words)
+  - What the work is about (spoiler-free synopsis)
+  - Why it matters (historical significance, influence)
+  - Who will enjoy it (reader recommendations)
+- Format and file details (EPUB, MOBI, PDF; file sizes)
+- Price and "Add to Cart" CTA
+- Sample preview (first chapter or excerpt)
+- Related products (cross-sell)
+- Customer reviews and ratings
+- FAQ (common questions about format, downloads, etc.)
+
+**Product Organization:**
+
+**Browse by Category:**
+- Format (Ebooks, Audiobooks, Collections, Bundles)
+- Era/Decade (1920s through 1980s)
+- Author (alphabetical directory)
+- Theme (Time Travel, Space Opera, Dystopia, etc.)
+- Price Range (Under $5, $5-10, $10-20, $20+)
+- Best Sellers, New Releases, Staff Picks
+
+**Search & Filtering:**
+- Text search across product titles, authors, descriptions
+- Filter by format, price, author, era, theme
+- Sort by price, popularity, release date, title
+
+**Product Recommendations:**
+- "Customers who bought this also bought..."
+- "If you liked X, try Y" (editorial recommendations)
+- "Complete your collection" (suggesting other works by same author)
+- Format upsells ("Own the audiobook too" on ebook pages)
+
+---
+
+**Component 4: Pricing Strategy & Optimization**
+
+**Pricing Research & Competitive Positioning:**
+
+**Market Benchmarks:**
+- Project Gutenberg: Free (but low quality)
+- Penguin Classics: $12-18 per ebook
+- Audible audiobooks: $15-40
+- Kindle Unlimited: "Free" with subscription ($9.99/month)
+
+**SF Supernova Positioning:**
+- **Premium over archives** (we charge for enhanced quality)
+- **Discount vs. traditional publishers** (30-50% less than Penguin)
+- **Value vs. Audible** (comparable quality, better pricing for vintage focus)
+
+**Psychological Price Points:**
+
+**Ebooks:**
+- $2.99: Entry-level impulse buy
+- $3.99-4.99: Standard pricing sweet spot
+- $5.99-7.99: Premium enhanced editions
+- $9.99+: Large collections only
+
+**Audiobooks:**
+- $7.99-9.99: Short works (<4 hours)
+- $11.99-14.99: Standard novels (4-8 hours)
+- $16.99-19.99: Long novels (8-15 hours)
+- $24.99+: Multi-volume sets, epic works
+
+**Bundles:**
+- 20-30% discount vs. individual purchase
+- Tiered bundles (3-pack, 5-pack, 10-pack) with increasing discounts
+- "Complete Author" bundles at 40-50% discount
+
+**Dynamic Pricing Strategies:**
+
+**Launch Pricing:**
+- New releases: 20% off first week (drive early adoption, reviews)
+- Announced in newsletter and social media
+
+**Seasonal Promotions:**
+- Holiday bundles (December)
+- Summer reading sales (June-July)
+- Back-to-school (September)
+- 2-3 major sales per year maximum (preserve value perception)
+
+**Member Discounts:**
+- Explorer tier: 20% off all products
+- Enthusiast tier: 30% off all products
+- Collector tier: 40% off all products
+- Discounts applied automatically at checkout for logged-in members
+
+**Cart Abandonment Recovery:**
+- Email sent 24 hours after abandoned cart
+- 10% one-time discount code offered
+- Valid for 7 days
+
+**Price Testing:**
+- A/B test price points on new releases ($2.99 vs. $3.99 vs. $4.99)
+- Track conversion rate by price
+- Optimize toward maximum revenue (price × conversion), not maximum conversion
+- Adjust pricing based on data after first 3-6 months
+
+---
+
+**Component 5: Marketing & Product Launch**
+
+**Pre-Launch Strategy:**
+
+**Content Marketing:**
+- Editorial article about the work/author published 1-2 weeks before product launch
+- Builds SEO value and educates potential buyers
+- Includes "Coming Soon" product teaser
+
+**Email List Teasing:**
+- "Next month we're releasing..." announcement
+- Builds anticipation and reminds subscribers to watch for launch
+
+**Social Media Preview:**
+- Cover art reveals
+- Behind-the-scenes production content
+- Narrator introduction (for audiobooks)
+
+**Launch Day Strategy:**
+
+**Announcement Email:**
+- Sent to full email list
+- Compelling subject line ("Finally: [Title] in Professional Quality")
+- Product description, why it matters, special launch discount
+- Clear CTA to product page
+
+**Blog Post:**
+- Detailed article featuring the work
+- Editorial perspective on why we chose to produce it
+- Historical context and reader guidance
+- Embedded product purchase link
+
+**Social Media Campaign:**
+- Facebook, Twitter, Instagram, Reddit posts
+- Cover art + key quotes + purchase link
+- Community engagement (Q&A, discussions)
+
+**Paid Promotion (Phase 2+):**
+- Targeted Facebook/Instagram ads to vintage sci-fi enthusiasts
+- Google Shopping ads for product searches
+- Amazon ads (if listing on Amazon for discoverability)
+- Budget: 5-10% of projected product revenue
+
+**Post-Launch Optimization:**
+
+**Customer Review Solicitation:**
+- Email sent 7 days after purchase requesting review
+- Incentive: Entry into quarterly drawing for free bundle
+- Reviews displayed on product page and used in marketing
+
+**Performance Analysis:**
+- Track sales velocity, conversion rate, traffic sources
+- Identify top-performing products (double down on similar titles)
+- Identify underperformers (improve marketing or discontinue)
+
+**Ongoing Promotion:**
+- Feature in weekly newsletter
+- Include in "New Releases" and "Staff Picks" collections
+- Cross-promote in related product pages
+- Mention in relevant editorial articles
+
+---
+
+**Component 6: Customer Experience & Support**
+
+**Purchase & Delivery Experience:**
+
+**Checkout Process:**
+- Simple, 1-2 page checkout (minimize friction)
+- Guest checkout option (no forced account creation)
+- Order summary with itemized pricing
+- Discount code field (if applicable)
+- Payment information (secure, Stripe/PayPal)
+- Immediate confirmation page after purchase
+
+**Delivery:**
+- Instant email with download links (expiring tokens for security)
+- Download page with all purchased files and formats
+- Account-based access (users can re-download anytime from account dashboard)
+- Instructions for transferring to devices (Kindle, etc.)
+
+**Post-Purchase:**
+- Welcome email with tips for enjoying the product
+- Request for review (after 7 days)
+- Recommendation email (suggest related products after 14 days)
+
+**Customer Support:**
+
+**Common Support Issues:**
+- Download problems (file not received, link expired)
+- Format compatibility (file won't open on device)
+- Refund requests (dissatisfaction, accidental purchase)
+- Account access issues (password reset, missing purchases)
+
+**Support Channels:**
+- Email support: support@sfsupernova.com (primary)
+- Help center / FAQ page (self-service)
+- Live chat (Phase 2+, if volume justifies)
+- Response time target: <24 hours (business days)
+
+**Refund Policy:**
+- 14-day money-back guarantee, no questions asked
+- Simple refund process (email request, processed within 2 business days)
+- Policy clearly stated on website and checkout
+- Rationale: Build trust, reduce purchase anxiety, minimize disputes
+
+**Customer Satisfaction Metrics:**
+- Net Promoter Score (NPS): Target >50
+- Customer Satisfaction (CSAT): Target >4.5/5
+- Refund rate: Target <3% of sales
+- Support ticket resolution time: Target <24 hours
+
+---
+
+**Success Metrics for Digital Product Engine:**
+
+**Revenue Metrics:**
+- Monthly product revenue (target: $800+ by month 6, $2,000+ by month 12)
+- Average order value (AOV) (target: $8-12)
+- Products sold per month (target: 100+ by month 6, 300+ by month 12)
+- Revenue per product (track to identify bestsellers)
+
+**Conversion Metrics:**
+- Product page conversion rate (target: 2-4%)
+- Cart abandonment rate (target: <60%)
+- Email-to-purchase conversion rate (target: 5-8% for launch emails)
+
+**Catalog Metrics:**
+- Total SKUs available (target: 20+ by month 6, 50+ by month 12)
+- Products released per month (target: 3-6 ebooks, 1-3 audiobooks)
+- Catalog turnover (% of catalog generating 80% of revenue)
+
+**Customer Metrics:**
+- Unique buyers (target: 100+ by month 6, 300+ by month 12)
+- Repeat purchase rate (target: 25-35%)
+- Time to second purchase (track cohorts)
+- Customer lifetime value (LTV) (target: $25-45 for product buyers)
+
+**Production Efficiency Metrics:**
+- Cost to produce per ebook (target: <$15)
+- Cost to produce per audiobook (target: <$400)
+- Time to produce per product (track to optimize workflow)
+- Contribution margin (target: 85-92%)
+
+---
+
+**Phase 1 MVP (Months 0-6) - Digital Product Engine:**
+
+**Must-Have Features:**
+- ✅ E-commerce platform operational (Gumroad or WooCommerce)
+- ✅ 15-20 ebook products available
+- ✅ 5-8 audiobook products available
+- ✅ 2-3 curated collections/bundles
+- ✅ Payment processing functional (Stripe or PayPal)
+- ✅ Automated digital delivery working reliably
+- ✅ Product pages with descriptions, previews, CTAs
+- ✅ Basic cart and checkout flow
+- ✅ Customer account system (download history)
+- ✅ Email confirmation and delivery system
+
+**Acceptable Limitations:**
+- Manual product creation workflow (no automation)
+- Simple product pages (minimal upsell/cross-sell features)
+- Basic analytics (revenue, sales count only)
+- Limited bundle options (few pre-made collections)
+- No advanced pricing (discounts, coupons, dynamic pricing)
+
+**Phase 2 Enhancements (Months 6-12):**
+
+- ✅ 50+ ebook products, 25+ audiobooks
+- ✅ Automated product creation pipelines
+- ✅ Advanced bundle builder (custom collections)
+- ✅ Discount codes and promotional pricing
+- ✅ Product recommendation engine
+- ✅ Customer reviews and ratings system
+- ✅ Cart upsell and cross-sell features
+- ✅ Abandoned cart recovery automation
+- ✅ Enhanced analytics (conversion funnels, customer cohorts)
+
+**Phase 3 Maturity (Months 12-18):**
+
+- ✅ 100+ ebooks, 50+ audiobooks
+- ✅ Premium enhanced editions across key titles
+- ✅ Dynamic pricing and A/B testing
+- ✅ Subscription box model (monthly curated bundles for members)
+- ✅ Personalized product recommendations based on purchase history
+- ✅ Gift purchases and gift cards
+- ✅ Wholesale/institutional licensing (libraries, universities)
+- ✅ API access for third-party integrations
+
+---
+
+**Digital Product Engine Success Criteria:**
+
+The Digital Product Engine succeeds when it achieves:
+
+1. **Revenue Validation:** $800+ MRR by month 6, $2,000+ by month 12 (proving monetization model)
+2. **Quality Validation:** <3% refund rate, >4.5/5 customer satisfaction (proving value delivery)
+3. **Efficiency Validation:** 85%+ contribution margin, <15 hours per product (proving sustainability)
+4. **Conversion Validation:** 2-4% product page conversion (proving market demand)
+5. **Catalog Validation:** 50+ products by month 12 with diversified sales (proving scalability)
+
+**Critical Success Factors:**
+
+- **Production Quality:** Every product obviously superior to free alternatives
+- **Pricing Discipline:** Fair pricing that sustains operations while delivering value
+- **Catalog Breadth:** Sufficient variety to serve different tastes and budgets
+- **Marketing Integration:** Discovery content funnels effectively to products
+- **Customer Trust:** Transparent value proposition, generous refund policy, excellent support
+
+The Digital Product Engine is not just e-commerce—it's the proof that our curation and enhancement create monetizable value. If users won't pay for products, membership (Pillar 3) won't work either. This pillar must succeed first.
+
+Products validate the model. Membership scales the revenue.
 ### 3.4 Pillar 3: Membership System (Option 2)
 
 ### 3.5 Pillar 4: Structured Data & Future Tools (Option 4)
