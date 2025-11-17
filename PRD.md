@@ -2314,8 +2314,475 @@ The four-pillar design provides resilience:
 **Strategic Flexibility:**
 - Can accelerate or decelerate individual pillars based on performance
 - Can pivot focus between discovery vs. prod
+
+
 ### 3.2 Pillar 1: Discovery Engine (Free Layer)
 
+**Purpose & Strategic Role**
+
+The Discovery Engine serves as SF Supernova's front door—the free, publicly accessible layer that attracts organic traffic, demonstrates value, builds trust, and funnels users toward paid conversion. Unlike traditional freemium models where free tiers are deliberately crippled to force upgrades, our Discovery Engine delivers genuine standalone value while naturally revealing opportunities for premium experiences.
+
+**Strategic Functions:**
+
+1. **Acquisition Engine:** SEO-optimized content capturing search traffic from users seeking vintage sci-fi information
+2. **Trust Builder:** Professional quality free content proves we deliver on promises before asking for payment
+3. **Education Layer:** Editorial guidance helping users understand why vintage sci-fi matters and what to explore
+4. **Conversion Funnel:** Natural pathways from browsing → engagement → email capture → purchase consideration
+5. **Community Gateway:** Public discussions and user-generated content building social proof and network effects
+
+**Core Principle:** The Discovery Engine must be valuable enough to satisfy casual users completely while being compelling enough to convert engaged users to paid tiers. This balance—generous but not exhaustive—defines the free/paid boundary.
+
+---
+
+**Component 1: Content Publishing & Editorial System**
+
+**Primary Content Types:**
+
+**Author Profiles & Biographies:**
+- Comprehensive profiles of 200+ essential vintage sci-fi authors
+- Historical context, biographical details, major works, influence on genre
+- Writing style analysis, thematic focus, recommended starting points
+- Timeline of publication, career evolution, contemporary reception
+- Modern critical reassessment and ongoing relevance
+
+*Example:* "Theodore Sturgeon: The Forgotten Master of Humanist Science Fiction"
+- 2,500-3,500 words covering life, work, major themes, why he matters today
+- Links to available works (free texts + our enhanced products)
+- Related authors and influenced works
+- SEO targeting: "Theodore Sturgeon biography," "who is Theodore Sturgeon," "best Theodore Sturgeon stories"
+
+**Work Reviews & Critical Essays:**
+- In-depth reviews of essential novels, short stories, and collections
+- Both canonical classics (Wells, Asimov, Clarke) and overlooked gems (Sturgeon, Brackett, Tiptree)
+- Honest assessment: what's aged well, what's dated, who will enjoy it
+- Historical context, thematic analysis, influence tracing
+- Modern reader guidance (content warnings, stylistic expectations)
+
+*Example:* "Alfred Bester's 'The Stars My Destination': Noir Science Fiction's Breakout Masterpiece"
+- 1,500-2,500 word deep dive into plot, themes, legacy
+- Comparison to contemporary works and modern descendants
+- Reader recommendations ("if you loved X, you'll appreciate Y")
+- SEO targeting: "The Stars My Destination review," "best Alfred Bester books," "science fiction noir"
+
+**Thematic Collections & Curated Lists:**
+- "The 50 Essential Golden Age Science Fiction Works"
+- "Forgotten Female Authors of Vintage Sci-Fi"
+- "Time Travel Through the Decades: 1930s-1980s Evolution"
+- "First Contact Stories: From Wells to Le Guin"
+- "Dystopias Before 1984: Early Visions of Dark Futures"
+
+*Purpose:* Reduce choice paralysis, provide entry points, demonstrate curation expertise
+*SEO Value:* Target high-volume list queries ("best 1950s sci-fi," "classic science fiction books")
+
+**Era & Movement Guides:**
+- "The Pulp Era (1926-1945): Birth of Modern Science Fiction"
+- "The Golden Age (1938-1946): Campbell and the Revolution"
+- "The New Wave (1960s-1970s): Literary Experimentation"
+- "Cold War Science Fiction: Paranoia, Optimism, and the Atomic Age"
+
+*Purpose:* Educate users on genre evolution, provide historical context, create browsing pathways
+*SEO Value:* Educational queries ("what is golden age science fiction," "new wave sci-fi explained")
+
+**How-To Guides & Reader Resources:**
+- "How to Start Reading Vintage Science Fiction: A Beginner's Guide"
+- "Understanding Dated Elements in Classic Sci-Fi: A Modern Reader's Primer"
+- "Building Your Vintage Sci-Fi Collection: What to Read and When"
+- "Public Domain Science Fiction: Where to Find It and How to Enjoy It"
+
+*Purpose:* Serve informational queries, position SF Supernova as helpful authority
+*SEO Value:* Question-based searches ("how to start reading classic sci-fi," "where to find public domain books")
+
+**Publishing Cadence:**
+
+**Phase 1 (Months 0-6):**
+- 5-10 articles per week (260-520 annually)
+- Mix: 40% author profiles, 30% work reviews, 20% thematic lists, 10% guides
+- Priority: Essential authors and most-searched works first
+
+**Phase 2 (Months 6-12):**
+- Maintain 5-10 articles per week
+- Shift mix: 30% authors, 30% reviews, 25% lists, 15% guides/resources
+- Deeper cuts into overlooked authors and obscure masterpieces
+
+**Phase 3 (Months 12-18):**
+- 7-12 articles per week (sustained content velocity)
+- Balanced mix with increased focus on specialized niches
+- User-requested content based on search data and community feedback
+
+---
+
+**Component 2: Search & Browse Infrastructure**
+
+**Search Functionality:**
+
+**Phase 1 (MVP Search):**
+- Basic text search across all content (articles, authors, works)
+- Simple relevance ranking
+- Search suggestions/autocomplete for common queries
+- Filtering by content type (articles vs. products vs. authors)
+
+*Technical Implementation:* Native WordPress/platform search or basic Algolia integration
+
+**Phase 2 (Enhanced Search):**
+- Full-text search including work descriptions and excerpts
+- Advanced filtering (by era, theme, author, length, format)
+- Faceted search (combine multiple filters)
+- "Did you mean..." spelling correction
+- Related searches and query refinement suggestions
+
+*Technical Implementation:* Elasticsearch or advanced Algolia with custom ranking
+
+**Phase 3 (Intelligent Search):**
+- Semantic search understanding intent ("stories like Foundation")
+- Natural language queries ("time travel novels from the 1950s")
+- Personalized results based on user history and preferences
+- Visual search results with cover art and rich snippets
+
+*Technical Implementation:* AI-enhanced search with vector embeddings
+
+**Browse & Navigation:**
+
+**Primary Browse Dimensions:**
+
+**By Era/Decade:**
+- 1920s, 1930s, 1940s, 1950s, 1960s, 1970s, 1980s
+- Historical context and defining characteristics for each decade
+- Top works and authors from each era
+
+**By Theme:**
+- Time Travel, Space Opera, First Contact, Dystopia, Utopia
+- Robots & AI, Cybernetics, Telepathy & PSI Powers
+- Planetary Romance, Hard Science Fiction, Social SF
+- 30+ thematic categories with descriptions and examples
+
+**By Author:**
+- Alphabetical author directory (200+ authors at maturity)
+- Author cards with photo, dates, brief bio, key works
+- Filterable by gender, nationality, era, style
+
+**By Format:**
+- Novels, Short Story Collections, Novellas, Radio Dramas
+- Available formats (ebook, audiobook, both)
+- Free vs. paid options clearly distinguished
+
+**By Influence & Relationships:**
+- "Authors influenced by H.G. Wells"
+- "Works inspired by Frankenstein"
+- "Cyberpunk's Golden Age Ancestors"
+- Visualized relationship maps (Phase 3, dependent on Pillar 4)
+
+**Navigation UX Principles:**
+- Maximum 3 clicks from homepage to any work or article
+- Breadcrumb trails showing user location in taxonomy
+- Related content recommendations on every page
+- "Explore Similar" features on all author/work pages
+- Serendipity features ("Random Essential Work," "Hidden Gem of the Week")
+
+---
+
+**Component 3: Content Presentation & Reading Experience**
+
+**Article/Editorial Content Presentation:**
+
+**Design Standards:**
+- Clean, readable typography (16-18px body text, 1.5-1.6 line height)
+- Generous whitespace and margins
+- Highlighted pull quotes and key insights
+- Related content cards (continue exploring)
+- Author byline and publish date
+- Social sharing buttons (strategic placement, not intrusive)
+- Reading time estimate
+- Table of contents for long articles (>2,000 words)
+
+**Multimedia Integration:**
+- Period cover art and imagery throughout
+- Author photographs and historical images
+- Audio samples (first chapter of audiobooks, radio drama clips)
+- Embedded video (interviews, documentaries, book talks)
+
+**Mobile Optimization:**
+- Responsive design across all devices
+- Fast loading (target <2 seconds on 4G)
+- Readable text without zooming
+- Touch-friendly navigation
+- Progressive web app features (offline reading, home screen install)
+
+**Web Reader for Free Texts:**
+
+While we don't provide complete free ebook downloads, we offer web-based reading of select works:
+
+**Free Web Reading Features:**
+- Clean, distraction-free reading interface
+- Adjustable font size and background color
+- Progress tracking and bookmarking
+- Chapter navigation
+- Night mode / dark theme
+- Print-friendly version
+
+**Strategic Limitations (Driving Paid Conversion):**
+- Free reading includes occasional ads (removed for members)
+- No offline download (ebooks/audiobooks require purchase)
+- Limited to select works (comprehensive catalog requires purchase)
+- Basic reading experience (enhanced editions have annotations, no ads, better formatting)
+
+---
+
+**Component 4: Email Capture & Newsletter System**
+
+**Email List Building Strategy:**
+
+**Primary Capture Points:**
+
+**Content Upgrades:**
+- "Download this article as PDF" (requires email)
+- "Get our 50 Essential Works checklist" (gated resource)
+- "Receive monthly reading recommendations" (newsletter signup)
+
+**Exit Intent Popups:**
+- Triggered when user attempts to leave site
+- Offer: "Get our starter guide to vintage sci-fi free"
+- Frequency capped (once per user per 30 days)
+
+**Inline Article CTAs:**
+- Mid-article and end-of-article signup prompts
+- Contextually relevant (e.g., "Want more Asimov recommendations? Join our newsletter")
+
+**Comment/Community Participation:**
+- Account creation (email required) to comment or contribute
+- Optional newsletter opt-in during account creation
+
+**Target Capture Rate:** 3-5% of visitors convert to email subscribers
+
+**Newsletter Cadence & Content:**
+
+**Weekly Newsletter (Primary):**
+- Sent every Sunday, 10am local time
+- Content mix:
+  - New article highlights (2-3 links)
+  - Curated recommendation (1 work with context)
+  - Community spotlight (member review or discussion)
+  - New product announcements (1-2 per month)
+  - Exclusive content (newsletter-only insights)
+- Length: 600-800 words
+- Tone: Conversational, personal, valuable
+
+**Monthly Deep Dive (Secondary):**
+- First of each month
+- Long-form thematic essay (1,500-2,000 words)
+- Deep exploration of specific author, era, or theme
+- Exclusive to subscribers (not published on site)
+- Premium content demonstrating membership value
+
+**Triggered Sequences:**
+
+**New Subscriber Welcome Series (5 emails over 14 days):**
+1. Welcome + starter guide to the site
+2. Top 10 essential works to begin with
+3. How to navigate our content and find what you'll love
+4. Introducing our products and membership (soft sell)
+5. Community invitation and exclusive member benefits
+
+**Abandoned Cart Recovery (for product viewers):**
+1. Reminder email 24 hours after cart abandonment
+2. 10% discount offer 48 hours later (one-time use)
+3. Final reminder 7 days later with testimonials
+
+**Re-engagement Campaign (for inactive subscribers):**
+1. "We miss you" email after 60 days inactivity
+2. "Here's what you've missed" highlights email
+3. Preference update or unsubscribe option
+
+**Email List Segmentation:**
+
+**By Engagement Level:**
+- Active (opened in last 30 days)
+- Moderate (opened 30-90 days ago)
+- Dormant (>90 days since open)
+
+**By Interest (inferred from clicks):**
+- Golden Age enthusiasts
+- New Wave fans
+- Audiobook listeners
+- Product buyers
+- Community participants
+
+**By Customer Status:**
+- Never purchased
+- One-time buyers
+- Members (by tier)
+
+**Segmented Content Delivery:**
+- Audiobook fans receive audio-focused recommendations
+- Product buyers receive new release notifications
+- Non-buyers receive value content + occasional soft sells
+- Members receive exclusive content and community highlights
+
+---
+
+**Component 5: Community Features (Free Tier)**
+
+**Public-Facing Community Elements:**
+
+**Comments on Articles:**
+- Disqus, WordPress native, or custom comment system
+- Moderation required (manual or semi-automated)
+- User accounts required to comment (email verification)
+- Upvoting/helpful marking for quality contributions
+- Author/staff responses highlighting engagement
+
+**User Reviews & Ratings:**
+- Registered users can rate works (5-star system)
+- Written reviews (100-1,000 words)
+- "Helpful" voting on reviews
+- Aggregated ratings visible on work pages
+- Featured reviews highlighted in editorial content
+
+**Public Reading Lists:**
+- Users can create and share curated lists
+- "My Top 10 Time Travel Novels"
+- "New Wave Starter Pack"
+- Lists appear in search results and author pages
+- Social sharing and embedding enabled
+
+**Discussion Threads (Phase 2):**
+- Community forum or discussion board
+- Topic-based threads (works, authors, themes)
+- Free tier access with optional member-only areas
+- Moderation and community guidelines enforcement
+
+**Member Spotlights:**
+- Feature active community members in newsletter
+- Highlight excellent reviews or insightful comments
+- Recognition badges and reputation systems (Phase 3)
+
+**Community Guidelines:**
+- Respectful discussion of works and opinions
+- No spam, self-promotion, or off-topic content
+- Honest engagement with dated/problematic elements in vintage works
+- Welcoming to newcomers and diverse perspectives
+
+---
+
+**Component 6: Conversion Pathways (Free → Paid)**
+
+**Strategic Placement of Paid Offers:**
+
+**Contextual Product Recommendations:**
+- Article about Asimov includes links to our enhanced Asimov ebooks
+- "Enjoyed this article? Read the full work in our professional edition"
+- Product cards with clear CTAs ("Get Audiobook," "Buy Enhanced Edition")
+
+**Membership Teasers:**
+- "Members get 30% off all products + ad-free reading"
+- "Join 500+ enthusiasts in our member community"
+- Soft CTAs throughout free experience
+
+**Email Funnel:**
+- Welcome series includes product introductions
+- Weekly newsletter features new releases and member benefits
+- Strategic promotional campaigns (holidays, milestones)
+
+**Comparison Tables:**
+- "Free vs. Member Experience" charts
+- Transparent feature lists showing tier benefits
+- Honest framing: "Free is great; membership is better if..."
+
+**Trial Offers (Phase 2):**
+- "Try membership free for 7 days"
+- "Get your first audiobook for $1"
+- Low-risk entry points reducing conversion friction
+
+**Success Metrics for Discovery Engine:**
+
+**Acquisition Metrics:**
+- Organic search traffic growth (target: 15% monthly in Phase 1)
+- Direct traffic (brand awareness)
+- Referral traffic (word-of-mouth and backlinks)
+- Social traffic (shares and mentions)
+
+**Engagement Metrics:**
+- Pages per session (target: >2.5)
+- Average session duration (target: >3 minutes)
+- Bounce rate (target: <60%)
+- Return visitor rate (target: >30%)
+
+**Conversion Metrics:**
+- Email capture rate (target: 3-5% of visitors)
+- Free-to-paid conversion (target: 1-2% of visitors, 8-12% of email subscribers)
+- Time to conversion (track cohorts)
+- Conversion path analysis (which content drives sales)
+
+**Content Performance Metrics:**
+- Article traffic and engagement by type
+- Top-performing content (traffic, time, conversions)
+- Search rankings for target keywords
+- Backlinks and domain authority growth
+
+---
+
+**Phase 1 MVP (Months 0-6) - Discovery Engine:**
+
+**Must-Have Features:**
+- ✅ Basic WordPress or Ghost site with custom theme
+- ✅ 50-100 core articles published (authors, reviews, lists)
+- ✅ Simple search and browse functionality
+- ✅ Email capture forms and welcome sequence
+- ✅ Product integration (links to Pillar 2 e-commerce)
+- ✅ Comments or basic community features
+- ✅ Mobile-responsive design
+- ✅ SEO optimization (meta tags, schema markup, sitemap)
+
+**Acceptable Limitations:**
+- Basic search (no advanced filtering)
+- Manual content recommendations (no AI/algorithm)
+- Simple taxonomy (limited browse dimensions)
+- Minimal community features (comments only)
+- No personalization or user accounts beyond email
+
+**Phase 2 Enhancements (Months 6-12):**
+
+- ✅ 200-300 total articles (comprehensive coverage of essential authors/works)
+- ✅ Enhanced search with filtering and facets
+- ✅ Expanded browse taxonomy (themes, influences, relationships)
+- ✅ User accounts with reading lists and preferences
+- ✅ Discussion forums or community board
+- ✅ Automated recommendation widgets
+- ✅ Personalized homepage for logged-in users
+- ✅ Advanced email segmentation and automation
+
+**Phase 3 Maturity (Months 12-18):**
+
+- ✅ 400-500+ articles (deep coverage including obscure authors)
+- ✅ AI-enhanced search and discovery
+- ✅ Rich recommendation engine (Pillar 4 integration)
+- ✅ Visual relationship mapping
+- ✅ Community reputation and gamification
+- ✅ User-generated content curation
+- ✅ Advanced personalization across all features
+- ✅ API access for power users
+
+---
+
+**Discovery Engine Success Criteria**
+
+The Discovery Engine succeeds when it achieves three outcomes:
+
+1. **Acquisition Success:** Drives consistent organic traffic growth (10-15% monthly) through SEO-optimized content
+2. **Engagement Success:** Keeps users exploring (>2.5 pages per session, >30% return rate)
+3. **Conversion Success:** Funnels users to paid tiers (3-5% email capture, 1-2% direct conversion to purchase/membership)
+
+**Critical Success Factors:**
+
+- **Content Quality:** Every article demonstrates expertise and passion
+- **Editorial Voice:** Authentic, knowledgeable, welcoming
+- **Navigation Clarity:** Users find what they seek within 3 clicks
+- **Performance:** Fast loading, mobile-optimized, reliable
+- **Value Demonstration:** Free tier proves we deliver on promises
+- **Conversion Balance:** Generous free value with clear paid upgrade paths
+
+The Discovery Engine is not just marketing—it's the foundation of trust, acquisition, and sustainable growth. We must invest sufficiently to make it excellent while maintaining laser focus on revenue pillars (2 & 3) that fund its existence.
+
+Free content attracts; paid products sustain. Discovery Engine enables both.
 ### 3.3 Pillar 2: Digital Product Engine (Option 3)
 
 ### 3.4 Pillar 3: Membership System (Option 2)
