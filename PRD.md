@@ -2113,7 +2113,207 @@ Also defines out-of-scope elements for PRD v1.
 
 
 ### 3.1 Overview of Product Architecture
+**Pillar Interdependencies**
 
+While each pillar serves independent functions, they create compounding value through integration:
+
+**Discovery → Products:**
+- Editorial content surfaces specific works, driving product interest
+- Search and browse features lead users to purchase pages
+- Content recommendations increase cross-sell and upsell
+- SEO traffic acquisition funnels into product conversion
+
+**Discovery → Membership:**
+- Engaged free users convert to paid tiers for enhanced experience
+- Community features visible in free tier entice membership upgrades
+- Content quality demonstrates value justifying recurring payment
+- Email capture via free content feeds membership funnel
+
+**Products → Membership:**
+- Product purchasers receive membership upgrade prompts
+- Member discounts create incentive to subscribe vs. one-time purchase
+- Product quality builds trust enabling membership conversion
+- Purchase history informs personalized membership benefits
+
+**Membership → Discovery:**
+- Member-exclusive content drives engagement and retention
+- Community contributions enhance discovery quality for all users
+- Member feedback informs editorial priorities and curation
+- Personalization features improve discovery relevance
+
+**Structured Data → All Pillars:**
+- Enhanced metadata improves search and browse (Discovery)
+- Relationship mapping enables intelligent product bundling (Products)
+- Advanced tools justify premium membership tiers (Membership)
+- Data quality compounds over time, becoming competitive moat
+
+**Phase-Based Development Strategy**
+
+The four pillars deploy across three phases, prioritizing revenue validation before infrastructure investment:
+
+**Phase 1 (Months 0-6): Revenue Foundation**
+- **Focus:** Pillars 2 & 3 (Products + Membership)
+- **Rationale:** Validate core monetization before investing in discovery/data infrastructure
+- **Investment:** 70% effort on revenue systems, 30% on basic discovery
+- **Success Criteria:** 100+ paying customers, $800+ MRR
+
+**Phase 2 (Months 6-12): Discovery Enhancement**
+- **Focus:** Pillars 4 & 1 (Structured Data + Discovery refinement)
+- **Rationale:** Revenue validated; now invest in features improving conversion and engagement
+- **Investment:** 50% discovery/data, 30% product expansion, 20% membership features
+- **Success Criteria:** 300+ customers, $3,000+ MRR, improved conversion rates
+
+**Phase 3 (Months 12-18): Integration & Optimization**
+- **Focus:** All pillars working in concert, advanced features
+- **Rationale:** Mature platform with all core systems operational
+- **Investment:** Balanced across all pillars, optimizing interconnections
+- **Success Criteria:** 500+ customers, $6,000+ MRR, sustainable profitability
+
+**Technical Architecture Overview**
+
+Each pillar maps to distinct technical components while sharing common infrastructure:
+
+**Shared Foundation:**
+- **CMS/Platform:** WordPress, Ghost, or custom (decision pending technical audit)
+- **Hosting:** Scalable cloud infrastructure (AWS, Netlify, or similar)
+- **CDN:** Global content delivery for media files
+- **Database:** PostgreSQL or MySQL for relational data
+- **Authentication:** User accounts, SSO, session management
+- **Analytics:** Traffic, conversion, user behavior tracking
+
+**Pillar 1 (Discovery) Components:**
+- Content management and publishing system
+- Search engine (Algolia, Elasticsearch, or native)
+- Navigation and taxonomy systems
+- Editorial workflow and approval
+- Public-facing website and blog
+
+**Pillar 2 (Products) Components:**
+- Digital product catalog and inventory
+- E-commerce platform (WooCommerce, Shopify, Gumroad, or custom)
+- Payment processing (Stripe, PayPal)
+- Digital file delivery and DRM (if applicable)
+- Product creation and formatting pipelines
+
+**Pillar 3 (Membership) Components:**
+- Subscription management (Stripe Billing, MemberPress, custom)
+- Tiered access control and feature gating
+- Member-only content areas
+- Community features (forums, comments, user profiles)
+- Email automation and nurture sequences
+
+**Pillar 4 (Data) Components:**
+- Metadata database and schema
+- Relationship graph (Neo4j or similar if needed)
+- Recommendation engine (collaborative filtering + editorial)
+- API layer for data access
+- Admin tools for data curation and maintenance
+
+**Build vs. Buy Decisions**
+
+For each pillar, we evaluate whether to build custom or leverage existing platforms:
+
+**Principles Guiding Build/Buy:**
+1. **Buy for commodity functionality:** Payment processing, email delivery, hosting
+2. **Build for competitive differentiation:** Curation workflows, editorial systems, unique UX
+3. **Start with platforms, customize as needed:** WordPress + plugins → custom features over time
+4. **Avoid lock-in where possible:** Export-friendly formats, standard APIs, owned data
+5. **Prioritize speed to market:** Launch with imperfect platform, improve iteratively
+
+**Likely Decisions:**
+- **Pillar 1:** WordPress or Ghost (buy) + custom theme/features (build)
+- **Pillar 2:** Shopify or WooCommerce (buy) + custom product workflows (build)
+- **Pillar 3:** MemberPress or Stripe Billing (buy) + custom member features (build)
+- **Pillar 4:** PostgreSQL + custom schema (build), potentially Neo4j later (buy)
+
+**Data Flow & User Journeys**
+
+Understanding how users and data move through the architecture:
+
+**New User Journey:**
+1. Discover site via SEO/social → **Pillar 1 (Discovery)**
+2. Browse free content, read articles → **Pillar 1**
+3. Find work of interest, view product page → **Pillar 2 (Products)**
+4. Purchase ebook or audiobook → **Pillar 2**
+5. Receive upsell offer for membership → **Pillar 3 (Membership)**
+6. Subscribe for discounts and benefits → **Pillar 3**
+7. Use enhanced discovery features → **Pillars 1 & 4 (Data)**
+
+**Data Flow:**
+1. User behavior tracked across pillars (pageviews, searches, purchases)
+2. **Pillar 4** aggregates behavioral data + explicit preferences
+3. Metadata enrichment improves **Pillar 1** discovery
+4. Recommendation engine informs **Pillar 2** product suggestions
+5. Engagement metrics optimize **Pillar 3** membership features
+6. Continuous feedback loop improving all systems
+
+**Scalability Considerations**
+
+The architecture must support growth from launch (1K monthly visitors) to maturity (500K+ monthly):
+
+**Phase 1 Scale (1K-30K monthly visitors):**
+- Static or lightly dynamic pages sufficient
+- Shared hosting or basic cloud infrastructure
+- Manual or semi-automated product creation
+- Simple member access control
+
+**Phase 2 Scale (30K-150K monthly visitors):**
+- CDN required for media delivery
+- Caching layers for performance
+- Automated product creation pipelines
+- Sophisticated access control and personalization
+
+**Phase 3 Scale (150K-500K+ monthly visitors):**
+- Distributed architecture with load balancing
+- Advanced caching and edge computing
+- API-first design for flexibility
+- Data warehouse for analytics
+- Potential microservices for specific functions
+
+**Cost Structure by Pillar**
+
+Estimated monthly operational costs at different scales:
+
+**Phase 1 (Months 0-6):**
+- Pillar 1 (Discovery): $50-100 (hosting, CDN, search)
+- Pillar 2 (Products): $50-100 (e-commerce platform, payment processing %)
+- Pillar 3 (Membership): $30-50 (subscription management, email)
+- Pillar 4 (Data): $20-30 (database, minimal tooling)
+- **Total: $150-280/month**
+
+**Phase 2 (Months 6-12):**
+- Pillar 1: $100-200 (increased traffic, enhanced search)
+- Pillar 2: $100-150 (higher transaction volume)
+- Pillar 3: $50-100 (larger email list, more members)
+- Pillar 4: $50-100 (expanded database, potential graph DB)
+- **Total: $300-550/month**
+
+**Phase 3 (Months 12-18):**
+- Pillar 1: $200-400 (significant traffic, advanced features)
+- Pillar 2: $150-250 (mature product catalog, high volume)
+- Pillar 3: $100-200 (established membership base)
+- Pillar 4: $100-200 (comprehensive data layer, API usage)
+- **Total: $550-1,050/month**
+
+These costs remain well within revenue projections, ensuring profitability at scale.
+
+**Risk Mitigation Through Architecture**
+
+The four-pillar design provides resilience:
+
+**Revenue Diversification:**
+- If product sales underperform, membership compensates (and vice versa)
+- If one revenue stream faces platform risk (payment processor issues), others continue
+- Multiple conversion points reduce dependency on single funnel
+
+**Technical Resilience:**
+- Pillar failures isolated (product system down doesn't break discovery)
+- Gradual degradation possible (disable advanced features if data layer fails)
+- Incremental improvement possible (enhance one pillar without touching others)
+
+**Strategic Flexibility:**
+- Can accelerate or decelerate individual pillars based on performance
+- Can pivot focus between discovery vs. prod
 ### 3.2 Pillar 1: Discovery Engine (Free Layer)
 
 ### 3.3 Pillar 2: Digital Product Engine (Option 3)
