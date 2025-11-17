@@ -5311,8 +5311,550 @@ PRD v1 defines the **Minimum Viable Platform (MVP)** required to validate SF Sup
 **This scope is ambitious but achievable** for a dedicated solo founder working 15-25 hours/week over 6 months. It validates core business model without over-investing in unproven features. Success enables Phase 2; failure informs pivot or wind-down decision.
 
 PRD v1 is not "final product"—it's **Minimum Viable Platform proving monetization works**. Everything else builds from there.
+
+
 ### 3.7 Out-of-Scope & Deferred Elements
 
+**Scope Management Philosophy**
+
+Defining what is **explicitly out of scope** for PRD v1 is as critical as defining what's in scope. This section prevents scope creep, manages expectations, and provides a roadmap for future development. These elements are not rejected—they're **strategically deferred** until revenue, user feedback, or operational capacity justifies investment.
+
+**Categorization:**
+- **Phase 2 Deferrals (Months 6-12):** Features requiring validated revenue before investment
+- **Phase 3 Deferrals (Months 12-18):** Advanced features requiring mature platform and member base
+- **Future Considerations (Years 2+):** Strategic opportunities dependent on success and market evolution
+- **Explicit Rejections:** Ideas that don't align with mission or business model
+
+---
+
+**Out of Scope: Pillar 1 (Discovery Engine)**
+
+**Phase 2 Deferrals:**
+
+❌ **Advanced Search Features:**
+- Faceted search with multiple simultaneous filters
+- Natural language query processing ("time travel stories with female protagonists")
+- Semantic search understanding intent vs. keywords
+- Saved searches and search alerts
+- Visual search or image-based discovery
+
+*Rationale:* Basic keyword search sufficient for Phase 1 catalog size (50-100 articles, 20-30 products). Advanced search requires investment in Elasticsearch/Algolia and becomes valuable only with larger content corpus.
+
+*Trigger for Inclusion:* 500+ articles or 100+ products where basic search becomes inadequate
+
+❌ **AI-Powered Content Recommendations:**
+- Personalized homepage feeds based on behavior
+- "For You" content sections
+- Email recommendations tailored to individual reading history
+- Collaborative filtering ("users like you also read...")
+
+*Rationale:* Requires user behavior data (100+ users with reading history), AI infrastructure, and ongoing training. Phase 1 focuses on editorial curation.
+
+*Trigger for Inclusion:* 500+ registered users with sufficient behavioral data
+
+❌ **Video Content:**
+- Video essays about authors or works
+- Book review videos
+- Video interviews with scholars or contemporary authors
+- YouTube channel strategy
+
+*Rationale:* Video production is time-intensive (5-10x article effort), requires additional skills/equipment, and competes with core text/audio focus. Written content drives SEO better in Phase 1.
+
+*Trigger for Inclusion:* Hire dedicated video producer OR revenue exceeds $5K MRR justifying outsourcing
+
+❌ **Podcasting:**
+- Weekly or monthly podcast discussing vintage sci-fi
+- Author deep-dive episodes
+- Community interviews and discussions
+
+*Rationale:* Podcast production requires 3-5 hours per episode, separate platform management, and audio editing skills. Competes with audiobook production priority.
+
+*Trigger for Inclusion:* Strong member demand + revenue supporting dedicated podcast producer
+
+❌ **Interactive Features:**
+- Quizzes ("What Golden Age author are you?")
+- Interactive timelines (explore genre evolution)
+- Gamification (badges for reading milestones)
+- Reading challenges (monthly community goals)
+
+*Rationale:* Engaging but not revenue-critical. Development time better spent on content and products.
+
+*Trigger for Inclusion:* Community engagement plateau requiring new activation tactics
+
+❌ **Localization/Translation:**
+- Multi-language support (Spanish, French, etc.)
+- Translated content (articles in multiple languages)
+- International author profiles
+
+*Rationale:* English-speaking market sufficient for Phase 1. Translation requires native speakers, additional complexity, fragmented SEO.
+
+*Trigger for Inclusion:* Significant international traffic (>20%) requesting non-English content
+
+**Phase 3 Deferrals:**
+
+❌ **Mobile Apps (iOS/Android):**
+- Native mobile reading apps
+- Offline content access via apps
+- Push notifications
+- App Store/Play Store presence
+
+*Rationale:* Responsive web design serves mobile users adequately. Native app development requires $10K-30K investment plus ongoing maintenance. ROI unclear without proven user demand.
+
+*Trigger for Inclusion:* Member surveys showing strong app demand + revenue exceeding $10K MRR
+
+❌ **Advanced Content Management:**
+- Multi-author CMS with editorial workflow
+- Content scheduling and automation
+- A/B testing infrastructure for content
+- Automated SEO optimization
+
+*Rationale:* Solo founder doesn't need complex editorial workflows. Manual processes sufficient at Phase 1 volume.
+
+*Trigger for Inclusion:* Hiring content team (writers, editors) requiring workflow management
+
+❌ **User-Generated Content Platform:**
+- Member-submitted articles or reviews (beyond comments)
+- Community wiki for vintage sci-fi
+- User-created reading guides or syllabi
+- Peer review and editorial voting systems
+
+*Rationale:* Moderation burden, quality control challenges, and liability concerns. Focus on founder-created content in Phase 1.
+
+*Trigger for Inclusion:* Strong community with trusted power users + capacity for moderation
+
+---
+
+**Out of Scope: Pillar 2 (Digital Product Engine)**
+
+**Phase 2 Deferrals:**
+
+❌ **Physical Products:**
+- Print-on-demand paperbacks
+- Hardcover special editions
+- Physical box sets or collector's editions
+- Illustrated coffee table books
+
+*Rationale:* Physical fulfillment adds complexity (inventory, shipping, returns, international logistics). Digital-only keeps operations simple and margins high.
+
+*Trigger for Inclusion:* Member demand + partnership with print-on-demand service (Lulu, IngramSpark) minimizing operational burden
+
+❌ **Original Audio Drama Productions:**
+- Multi-voice audio dramas (full cast recordings)
+- Original scripts based on public domain works
+- Soundscapes and immersive audio experiences
+
+*Rationale:* Production costs 5-10x standard audiobooks ($1,500-3,000+ per title). Niche appeal uncertain. Radio drama restorations (lower cost) come first.
+
+*Trigger for Inclusion:* Audiobook revenue exceeding $2K/month + successful radio drama restoration tests
+
+❌ **Enhanced Multimedia Editions:**
+- Interactive ebooks with embedded video/audio
+- Annotated editions with inline scholar commentary
+- AR/VR experiences for classic works
+
+*Rationale:* Bleeding-edge format with limited platform support, high production cost, uncertain demand. Standard enhanced editions sufficient.
+
+*Trigger for Inclusion:* Platform maturity + specific high-value project justifying investment
+
+❌ **Exclusive Original Content:**
+- Commissioned original fiction in vintage sci-fi style
+- New introductions from contemporary authors
+- Original scholarly essays (beyond founder's work)
+
+*Rationale:* Commissioning content requires budget ($500-2,000+ per piece), editorial relationships, and rights management. Public domain focus keeps costs zero.
+
+*Trigger for Inclusion:* Revenue exceeding $5K MRR + strategic partnerships with authors/scholars
+
+❌ **Audiobook Subscription Box Model:**
+- Monthly curated audiobook boxes (3-5 titles themed)
+- Surprise selections based on taste profile
+- Limited edition releases in boxes
+
+*Rationale:* Overlaps with Enthusiast membership (which includes audiobook credits). Adds operational complexity without clear differentiation.
+
+*Trigger for Inclusion:* Member feedback showing demand for curated surprise model vs. self-selection
+
+**Phase 3 Deferrals:**
+
+❌ **Wholesale/Retail Partnerships:**
+- Distribution via Amazon Kindle Store
+- Audible marketplace presence
+- Barnes & Noble, Kobo, etc. listings
+
+*Rationale:* Third-party platforms take 30-70% revenue cut, dilute brand, and reduce customer data access. Direct sales prioritized.
+
+*Trigger for Inclusion:* Revenue plateaus + distribution as customer acquisition channel becomes strategic
+
+❌ **DRM-Free vs. DRM Strategy:**
+- Currently assuming DRM-free (user goodwill)
+- DRM implementation if piracy becomes issue
+
+*Rationale:* DRM-free aligns with community values and reduces friction. Monitor piracy; implement DRM only if significant revenue loss.
+
+*Trigger for Inclusion:* Evidence of material piracy impact (>5% suspected unauthorized distribution)
+
+❌ **Gift Cards & Corporate Sales:**
+- Gift card purchase system
+- Bulk licensing for companies/libraries
+- Educational institution packages
+
+*Rationale:* Adds payment complexity, corporate sales process, and B2B relationship management. Focus on individual consumers first.
+
+*Trigger for Inclusion:* Inbound requests from institutions + capacity for B2B sales process
+
+---
+
+**Out of Scope: Pillar 3 (Membership System)**
+
+**Phase 2 Deferrals:**
+
+❌ **Dedicated Member Forum/Community Platform:**
+- Full-featured discussion forum (Discourse, custom)
+- Topic threads, sub-forums, moderation tools
+- Member profiles with reputation systems
+- Private messaging between members
+
+*Rationale:* Forum setup and moderation require significant time. Comments sufficient for Phase 1 community interaction. Forums thrive with 100+ active members (not yet achieved).
+
+*Trigger for Inclusion:* 150+ members actively commenting, requesting deeper community space
+
+❌ **Member Events & Programming:**
+- Virtual reading groups (Zoom/Discord sessions)
+- Live AMAs with founder or guests
+- Watch parties or listening parties
+- Annual member conference or meetup
+
+*Rationale:* Synchronous events require scheduling, platform management, and significant founder time commitment. Asynchronous content prioritized.
+
+*Trigger for Inclusion:* 300+ members + capacity for event coordination (possibly hire community manager)
+
+❌ **Member Marketplace/Exchange:**
+- Members selling/trading physical books
+- Member-to-member product gifting
+- Community classifieds or swap meet
+
+*Rationale:* Liability concerns, moderation burden, payment processing complexity. Not core to mission.
+
+*Trigger for Inclusion:* Strong member demand + legal/platform clarity on facilitating transactions
+
+❌ **Family/Group Plans:**
+- Multi-seat memberships (2-5 users under one account)
+- Family discount pricing
+- Shared audiobook credits
+
+*Rationale:* Adds pricing and access control complexity. Individual memberships prioritized.
+
+*Trigger for Inclusion:* Frequent requests from users + technical feasibility in platform
+
+❌ **Lifetime Memberships:**
+- One-time payment for permanent access
+- Tiered lifetime options (Bronze/Silver/Gold)
+
+*Rationale:* Lifetime memberships provide upfront cash but eliminate recurring revenue and create long-term liability. Subscription model preferred for predictable MRR.
+
+*Trigger for Inclusion:* Cash flow needs + actuarial analysis showing favorable economics
+
+**Phase 3 Deferrals:**
+
+❌ **Tiered Benefits Customization:**
+- "Build your own tier" (choose benefits à la carte)
+- Personalized membership packages
+- Dynamic pricing based on usage
+
+*Rationale:* Adds complexity to pricing, access control, and user understanding. Fixed tiers simpler to communicate and manage.
+
+*Trigger for Inclusion:* Sophisticated user base + technical infrastructure supporting customization
+
+❌ **Member-Only Physical Perks:**
+- Annual member yearbook (printed)
+- Exclusive member merchandise (T-shirts, mugs)
+- Signed limited editions for Collector tier
+- Physical badges or membership cards
+
+*Rationale:* Physical fulfillment adds operational complexity. Digital-first approach in early phases.
+
+*Trigger for Inclusion:* Collector tier exceeding 50 members + member demand for tangible recognition
+
+❌ **Member Investment/Equity:**
+- Members as investors (crowdfunding equity)
+- Cooperative ownership model
+- Profit-sharing or dividend programs
+
+*Rationale:* Legal complexity, regulatory compliance, and governance challenges. Standard membership model sufficient.
+
+*Trigger for Inclusion:* Strategic decision to transition business model (unlikely)
+
+---
+
+**Out of Scope: Pillar 4 (Structured Data & Future Tools)**
+
+**Phase 2 Deferrals (Partial - begins in Phase 2 but limited scope):**
+
+❌ **Comprehensive Metadata for Non-Products:**
+- Full metadata for works not available as products
+- Cataloging every public domain sci-fi work ever published
+- Comprehensive bibliographies for all authors
+
+*Rationale:* Metadata effort focuses on monetizable products in Phase 1. Expanding to entire corpus requires massive curation time (years of work). Focus on quality over comprehensiveness.
+
+*Trigger for Inclusion:* Phase 2 investment after revenue validation; ongoing multi-year project
+
+❌ **Visual Relationship Graphs:**
+- Interactive influence maps (who influenced whom)
+- Thematic network visualizations
+- Author family trees
+- Timeline animations showing genre evolution
+
+*Rationale:* Requires data visualization development, underlying relationship data (Phase 2 curation), and advanced UI/UX. Text-based relationships sufficient initially.
+
+*Trigger for Inclusion:* Month 9-12, after relationship data curation complete
+
+**Phase 3 Deferrals:**
+
+❌ **Public API (External Access):**
+- RESTful API for developers
+- API documentation and developer portal
+- Rate limiting and authentication
+- Webhooks for data updates
+
+*Rationale:* API development requires engineering effort, documentation, and support. No revenue opportunity until sufficient data value accumulated.
+
+*Trigger for Inclusion:* Month 15-18, after comprehensive metadata (1,000+ works) justifies API product
+
+❌ **Advanced Research Tools:**
+- Text analysis (word frequency, theme extraction)
+- Citation network analysis
+- Comparative literature tools
+- N-gram viewers or linguistic analysis
+
+*Rationale:* Niche academic use cases. Build for general audience first; specialist tools later if demand emerges.
+
+*Trigger for Inclusion:* Partnership with academic institution or strong researcher demand
+
+❌ **Machine Learning / AI Features:**
+- Automated theme tagging (ML classification)
+- Style similarity detection (NLP analysis)
+- Predictive recommendations (deep learning)
+- Automated work summaries (generative AI)
+
+*Rationale:* AI/ML infrastructure requires engineering expertise, training data, and computational costs. Manual curation and rule-based systems sufficient in Phase 1-2.
+
+*Trigger for Inclusion:* Scale necessitates automation (5,000+ works) + budget for ML engineering
+
+**Future Considerations (Years 2-3+):**
+
+❌ **Institutional Research Platform:**
+- Academic licensing for universities
+- Integration with library systems
+- Scholar collaboration tools
+- Citation and bibliography management
+
+*Rationale:* B2B institutional sales require different sales process, legal agreements, and support model. Focus on individual consumers first.
+
+*Trigger for Inclusion:* Year 2+, after establishing authority and comprehensive data
+
+❌ **White-Label / Technology Licensing:**
+- License SF Supernova's recommendation engine to other platforms
+- White-label curation tools for other archives
+- SaaS version of metadata infrastructure
+
+*Rationale:* Technology licensing requires mature, proven systems and enterprise sales capability. Distant future opportunity.
+
+*Trigger for Inclusion:* Years 3-5, if technology becomes valuable beyond SF Supernova
+
+❌ **Blockchain / NFT / Web3 Integration:**
+- NFT editions of classic works
+- Blockchain-based provenance for digital editions
+- Cryptocurrency payment options
+- Decentralized archive on IPFS
+
+*Rationale:* Speculative technology with uncertain long-term viability and questionable user demand in target demographic. Avoid hype-driven features.
+
+*Trigger for Inclusion:* Only if clear, compelling use case emerges and user base demands it (unlikely)
+
+---
+
+**Out of Scope: Adjacent Business Models**
+
+**Explicitly Rejected (Do Not Align with Mission/Model):**
+
+❌ **Advertising-First Revenue Model:**
+- Banner ads, pop-ups, interstitials
+- Affiliate link spam
+- Sponsored content disguised as editorial
+- Maximum ad density approach
+
+*Rationale:* Degrades user experience, conflicts with membership value (ad-free), and aligns incentives toward traffic volume over quality. SF Supernova is ad-supported but not ad-first.
+
+*Decision:* Ads present in free tier only; never compromise editorial integrity for ad revenue
+
+❌ **User Data Monetization:**
+- Selling email lists to third parties
+- User tracking and behavior data sales
+- Targeted advertising based on invasive tracking
+
+*Rationale:* Violates user trust, privacy concerns, and misaligned with community values. Revenue from value delivery, not data extraction.
+
+*Decision:* Permanent rejection. Never monetize user data.
+
+❌ **Pay-Per-Article Paywalls:**
+- Metered paywall (5 free articles/month, then pay)
+- Hard paywall (all content requires payment)
+- Micropayments per article ($0.50-1.00 per read)
+
+*Rationale:* Discovery Engine must be free and generous to drive traffic and trust. Membership and products monetize, not content access.
+
+*Decision:* Editorial content remains free (with ads for non-members); only member-exclusive content and products gated
+
+❌ **Cryptocurrency / Speculative Investment:**
+- SF Supernova token or coin
+- NFT drops or collectibles
+- DAO governance structure
+- "Invest in vintage sci-fi" pitch
+
+*Rationale:* Misaligned with mission (cultural preservation, not speculation), regulatory uncertainty, and community skepticism toward crypto in this demographic.
+
+*Decision:* Traditional business model only; no crypto integration
+
+❌ **Venture Capital Funding:**
+- Seeking VC investment for rapid scale
+- Growth-at-all-costs mentality
+- Exit strategy focused on acquisition
+
+*Rationale:* VC funding pressures toward hypergrowth incompatible with sustainable, quality-focused community business. Bootstrap philosophy prioritized.
+
+*Decision:* Self-funded, organic growth; potential for profitability-focused angel investment if needed, but not venture scale
+
+---
+
+**Out of Scope: Operational & Organizational**
+
+**Phase 2 Deferrals:**
+
+❌ **Hiring Team Members:**
+- Content writers or editors
+- Audiobook producers or narrators (in-house)
+- Customer support specialist
+- Marketing coordinator
+
+*Rationale:* Founder capacity sufficient for Phase 1. Hiring requires $3K-5K+ MRR to support salaries/contractors sustainably.
+
+*Trigger for Inclusion:* Revenue exceeding $5K MRR + specific bottlenecks (e.g., audiobook production, support volume)
+
+❌ **Office Space / Facilities:**
+- Physical office or co-working space
+- Recording studio for audiobooks
+- Team collaboration spaces
+
+*Rationale:* Remote/home operations sufficient. Physical space adds fixed costs without clear benefit.
+
+*Trigger for Inclusion:* Team growth (3+ people) or audio production volume justifying studio
+
+❌ **Advanced Marketing:**
+- Paid advertising campaigns (Facebook, Google Ads)
+- PR agency or marketing consultants
+- Conference attendance and sponsorships
+- Influencer partnerships and campaigns
+
+*Rationale:* Organic SEO and content marketing prioritized in Phase 1 (zero CAC). Paid acquisition only when organic channels plateau and LTV justifies CAC.
+
+*Trigger for Inclusion:* Organic growth slows + proven LTV:CAC economics on test campaigns
+
+**Phase 3 Deferrals:**
+
+❌ **Formal Advisory Board:**
+- Industry advisors (publishing, tech, sci-fi experts)
+- Regular advisory meetings
+- Equity or compensation for advisors
+
+*Rationale:* Solo founder phase doesn't require formal governance. Informal mentorship sufficient.
+
+*Trigger for Inclusion:* Considering fundraising, major partnerships, or team expansion requiring outside perspective
+
+❌ **Separate Corporate Entities:**
+- Holding company structure
+- International subsidiaries for tax optimization
+- Trademark holding entities
+
+*Rationale:* Single-entity simplicity preferred at small scale. Complex structures add legal and accounting costs.
+
+*Trigger for Inclusion:* Revenue exceeding $250K annually or international expansion requiring local entities
+
+---
+
+**Decision Framework for Scope Additions**
+
+**When Considering Adding Deferred Features, Evaluate:**
+
+1. **Revenue Impact:** Does this feature directly drive revenue or retention?
+2. **User Demand:** Are users explicitly requesting this (not just founder's idea)?
+3. **Resource Cost:** Does current revenue support development and ongoing maintenance?
+4. **Strategic Fit:** Does this align with long-term vision and competitive positioning?
+5. **Opportunity Cost:** What are we NOT doing if we build this?
+
+**Approval Criteria for Scope Addition:**
+- ✅ Clear user demand (surveys, requests, or behavioral evidence)
+- ✅ Positive ROI forecast (revenue or retention increase > development cost)
+- ✅ Founder capacity or budget to execute without sacrificing core operations
+- ✅ Aligns with mission and doesn't compromise quality or values
+
+**Rejection Criteria (Even if Requested):**
+- ❌ Misaligned with mission (ads-first, data exploitation, speculative hype)
+- ❌ Unsustainable operationally (requires team but revenue can't support)
+- ❌ Premature (need earlier phase foundations first)
+- ❌ Distracts from revenue-critical work
+
+---
+
+**Living Document: Scope Evolution**
+
+This Out-of-Scope section is **dynamic, not static**. As SF Supernova evolves:
+
+**Quarterly Reviews:**
+- Assess deferred features for potential promotion to roadmap
+- Retire features that no longer align with strategy
+- Add new feature requests to appropriate deferral category
+
+**User Feedback Integration:**
+- Track feature requests from members and users
+- Prioritize based on frequency, revenue potential, and strategic fit
+- Communicate roadmap transparently (what's coming, what's not, why)
+
+**Market & Technology Evolution:**
+- Monitor changes in competitive landscape (new features becoming table stakes?)
+- Evaluate new technologies enabling previously impractical features
+- Adapt scope based on market trends and user expectations
+
+**Revenue-Gated Milestones:**
+- $3K MRR → Enable Phase 2 feature development (community forum, advanced search)
+- $6K MRR → Consider first hire (support specialist or content producer)
+- $10K MRR → Enable Phase 3 features (API, advanced tools, physical products)
+- $20K+ MRR → Strategic expansion (team, marketing, major new initiatives)
+
+---
+
+**Summary: Why This Discipline Matters**
+
+Defining out-of-scope elements prevents:
+
+1. **Scope Creep:** Feature proliferation that delays launch or dilutes focus
+2. **Resource Drain:** Investing in unvalidated features before revenue supports investment
+3. **Founder Burnout:** Attempting too much simultaneously with limited capacity
+4. **Complexity Debt:** Technical and operational complexity before organization can manage it
+5. **Distraction:** "Shiny object syndrome" pulling attention from revenue-critical work
+
+By explicitly deferring features, SF Supernova maintains:
+
+- **Focus:** Revenue-generating core systems receive appropriate attention
+- **Agility:** Can adapt strategy based on user feedback without sunk costs in wrong features
+- **Sustainability:** Operations remain manageable within founder capacity and budget
+- **Optionality:** Future opportunities preserved without premature commitment
+
+**Out-of-scope doesn't mean "never"—it means "not now."** Every feature deferred today can be revisited when revenue, user demand, or operational capacity justifies investment.
+
+The discipline to say "no" or "not yet" is as important as the vision to say "yes" to the right opportunities. PRD v1 succeeds by doing fewer things excellently, not more things adequately.
+
+**Scope discipline is strategic discipline. Strategic discipline enables sustainable growth.**
 
 
 ## 4. Target Users, Segments & Jobs-To-Be-Done
