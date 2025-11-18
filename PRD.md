@@ -10732,8 +10732,416 @@ Defines all revenue streams:
 •⁠  ⁠Future premium tools and dashboards
 Includes pricing assumptions and contribution to ARR.
 
+
 ### 5.1 Revenue Model Overview & Principles
 
+**Revenue Philosophy**
+
+SF Supernova's revenue model is designed around a core principle: **diversified monetization of curated value**. We don't charge for access to public domain content—we monetize the curation, enhancement, production quality, and integrated experience that transforms raw archives into a premium platform. This philosophy enables sustainable business operations while respecting the public domain's free availability.
+
+**Strategic Revenue Objectives**
+
+1. **Predictability:** Build recurring revenue (MRR) as foundation (target: 60-70% of total revenue)
+2. **Diversification:** Multiple revenue streams prevent single-point-of-failure risk
+3. **Scalability:** Revenue grows faster than costs as platform matures
+4. **Sustainability:** Profitable unit economics enable long-term operations without external capital dependency
+5. **Mission Alignment:** Revenue generation supports quality curation and preservation, not exploitation
+
+---
+
+**Multi-Stream Revenue Architecture**
+
+SF Supernova generates revenue through five complementary streams, each serving different user needs and lifecycle stages:
+
+**Primary Revenue Streams (Phase 1 Launch):**
+
+**Stream 1: Digital Products (Transactional)**
+- Ebooks (enhanced, OCR-corrected, professionally formatted)
+- Audiobooks (professional narration, high production quality)
+- Collections and bundles (curated thematic compilations)
+- **Target Contribution:** 30-40% of total revenue
+- **Characteristics:** One-time transactions, immediate cash flow, scalable with catalog growth
+
+**Stream 2: Membership Tiers (Recurring)**
+- Explorer ($4.99/month): Ad-free, discounts, early access
+- Enthusiast ($8.99/month): Audiobook credits, member content, community
+- Collector ($14.99/month): Maximum benefits, advanced tools, VIP treatment
+- **Target Contribution:** 35-45% of total revenue
+- **Characteristics:** Predictable MRR, high-margin, retention-driven
+
+**Stream 3: Affiliate Commissions (Passive)**
+- Amazon Associates (physical books, related products)
+- Bookshop.org (independent bookstore support)
+- Related product recommendations (vintage sci-fi merchandise, media)
+- **Target Contribution:** 10-20% of total revenue
+- **Characteristics:** Zero marginal cost, traffic-leveraging, passive income
+
+**Secondary Revenue Streams (Phase 2-3 Development):**
+
+**Stream 4: Art & Merchandise (Phase 2)**
+- Digital art downloads (public domain cover art, high-resolution)
+- Print-on-demand posters and prints (vintage cover art)
+- Apparel and physical merchandise (branded, vintage aesthetic)
+- **Target Contribution:** 5-10% of total revenue
+- **Characteristics:** Higher margin, brand extension, collector appeal
+
+**Stream 5: Premium Tools & Dashboards (Phase 3+)**
+- API access (data export, integration, research tools)
+- Institutional licensing (universities, libraries, researchers)
+- Advanced analytics and collection tools (power users)
+- **Target Contribution:** 5-15% of total revenue (future potential)
+- **Characteristics:** Premium pricing, B2B opportunities, data monetization
+
+---
+
+**Revenue Model Principles**
+
+**Principle 1: Free-to-Premium Funnel**
+
+**Free Tier (Discovery Layer):**
+- All editorial content (articles, reviews, author profiles)
+- Web-based reading (OCR-corrected texts with ads)
+- Basic search and browse functionality
+- Community participation (comments, reading lists)
+
+**Purpose:**
+- Traffic acquisition (SEO, organic discovery)
+- Trust building (demonstrate expertise and quality)
+- Email capture (newsletter signups, lead magnets)
+- Conversion funnel top (free → paid progression)
+
+**Paid Tier (Monetized Value):**
+- Premium formats (downloadable ebooks, professional audiobooks)
+- Enhanced editions (annotations, context, scholarly features)
+- Ad-free experience (Explorer+ memberships)
+- Exclusive content (member-only articles, deep dives)
+- Advanced tools (collection management, analytics)
+
+**Purpose:**
+- Revenue generation (direct monetization)
+- Value delivery (enhanced experience justifies payment)
+- Retention (ongoing value sustains subscriptions)
+
+**Conversion Pathway:**
+```
+Free Content → Email Signup → First Purchase → Repeat Purchase → Membership → Loyalty
+```
+
+---
+
+**Principle 2: Hybrid Transactional + Subscription Model**
+
+**Why Both?**
+
+**Transactional (Products) Advantages:**
+- Lower barrier to entry (no subscription commitment)
+- Immediate revenue (cash flow from day one)
+- Format flexibility (users choose what they want)
+- Scalable with catalog (more products = more revenue potential)
+
+**Subscription (Membership) Advantages:**
+- Predictable recurring revenue (MRR enables planning)
+- Higher lifetime value (recurring payments > one-time)
+- Retention focus (ongoing value delivery)
+- Cash flow stability (reduces revenue volatility)
+
+**Complementary Relationship:**
+- Products introduce users to platform (low-risk entry)
+- Positive product experiences build trust for membership
+- Membership provides ongoing value (credits, discounts, content)
+- Members become highest-value customers (products + subscription)
+
+**Revenue Mix Evolution:**
+
+**Phase 1 (Months 0-6):** 70% products, 30% membership (building trust, early conversions)
+**Phase 2 (Months 6-12):** 50% products, 50% membership (membership penetration growing)
+**Phase 3 (Months 12-18):** 40% products, 60% membership (mature model, recurring revenue dominant)
+
+---
+
+**Principle 3: Tiered Value Ladder**
+
+**Progressive Value Delivery:**
+
+**Entry Tier (Free/Low Cost):**
+- Free content and basic features
+- $2-5 starter products (impulse purchases)
+- $4.99 Explorer membership (ad-free seekers)
+
+**Core Tier (Moderate Spend):**
+- $8-20 digital products and bundles
+- $8.99 Enthusiast membership (core audience)
+- Regular purchases with member discounts
+
+**Premium Tier (High Spend):**
+- $30-150 comprehensive collections
+- $14.99 Collector membership (power users)
+- Extensive catalog ownership
+
+**VIP Tier (Extreme Spend):**
+- $200-500 mega-bundles
+- Annual Collector membership ($149/year)
+- Institutional licensing and premium tools (future)
+
+**Strategic Implications:**
+- Users naturally progress up value ladder over time
+- Each tier serves different willingness-to-pay levels
+- Revenue per user increases with engagement and tenure
+- No forced upselling—progression is natural and value-driven
+
+---
+
+**Principle 4: Zero Marginal Cost Leverage**
+
+**Digital Product Economics:**
+
+**Fixed Costs (One-Time Investment):**
+- Content production: $10-15 per ebook (OCR correction, formatting)
+- Audiobook production: $200-400 per title (narration, editing)
+- Editorial content: $50-100 per article (research, writing)
+- Platform development: $2,000-5,000 initial setup
+
+**Marginal Costs (Per User/Transaction):**
+- Digital delivery: ~$0.01 per download (hosting, CDN)
+- Payment processing: 2.9% + $0.30 per transaction
+- Customer support: <$0.50 per customer (amortized)
+- **Total marginal cost: <5% of revenue**
+
+**Implications:**
+- High contribution margins (85-95% after marginal costs)
+- Scalability: Revenue grows linearly, costs grow logarithmically
+- Profitability at modest scale (breakeven <100 customers)
+- Reinvestment capacity (profits fund catalog expansion)
+
+---
+
+**Principle 5: Segment-Specific Monetization**
+
+**Different segments require different revenue strategies:**
+
+**Newcomers (Low ARPU, High Volume):**
+- Primary: Low-cost products ($2-5 starters)
+- Secondary: Explorer membership ($4.99/month)
+- Monetization: Volume-based, acquisition-focused
+- **Target ARPU:** $3-5/month
+
+**Enthusiasts (Moderate ARPU, Core Volume):**
+- Primary: Enthusiast membership ($8.99/month)
+- Secondary: Regular product purchases ($10-20/month)
+- Monetization: Subscription-focused with product upsells
+- **Target ARPU:** $12-20/month
+
+**Collectors (High ARPU, Low Volume):**
+- Primary: Collector membership ($14.99/month)
+- Secondary: Extensive product purchases ($30-100/month)
+- Monetization: Premium subscription + high-value bundles
+- **Target ARPU:** $40-80/month
+
+**Audio Fans (Moderate-High ARPU, Format-Specific):**
+- Primary: Enthusiast/Collector membership (audiobook credits)
+- Secondary: Additional audiobook purchases
+- Monetization: Subscription-driven (credits), format-focused
+- **Target ARPU:** $15-30/month
+
+**ARPU = Average Revenue Per User**
+
+---
+
+**Principle 6: Customer Lifetime Value Optimization**
+
+**LTV-Focused Metrics:**
+
+**Short-Term Metrics (Vanity):**
+- Monthly revenue (volatile, not predictive)
+- Traffic volume (doesn't equal revenue)
+- Product count (catalog size ≠ sales)
+
+**Long-Term Metrics (Strategic):**
+- Customer Lifetime Value (LTV): $100-1,000+ depending on segment
+- LTV:CAC ratio (target: >8:1 through organic acquisition)
+- Retention rate (monthly churn <8%)
+- Member tenure (average 12-48+ months by tier)
+
+**LTV Optimization Strategies:**
+- Increase purchase frequency (more products, regular releases)
+- Increase average order value (bundles, collections, upgrades)
+- Extend customer tenure (retention focus, continuous value)
+- Facilitate tier progression (Newcomer → Enthusiast → Collector)
+
+**Revenue Model Implication:**
+- Focus on retention and progression, not just acquisition
+- Membership model naturally extends LTV through recurring revenue
+- Product quality and curation drive long-term satisfaction and loyalty
+
+---
+
+**Principle 7: Transparent Value Exchange**
+
+**Ethical Monetization Standards:**
+
+**What We Charge For (Justified):**
+- Professional production quality (OCR correction, audio narration)
+- Expert curation (time-saving guidance, quality filtering)
+- Enhanced features (annotations, context, analysis)
+- Convenience (formats, delivery, organization)
+- Ongoing value (member content, community, tools)
+
+**What We Don't Charge For (Free):**
+- Basic access to editorial content (articles, reviews)
+- Community participation (comments, discussions)
+- Discovery and browsing (search, navigation)
+- Educational content (guides, historical context)
+
+**Transparent Positioning:**
+- "The content is public domain; we charge for enhancement and curation"
+- Clear free vs. paid distinctions (no bait-and-switch)
+- Honest value propositions (realistic benefit claims)
+- No dark patterns (forced subscriptions, hidden fees, manipulative tactics)
+
+**User Perception Goal:**
+- Users feel they're getting fair value for money spent
+- Payment supports quality they couldn't get elsewhere
+- Revenue enables sustainability of mission-aligned platform
+
+---
+
+**Revenue Model Architecture Diagram**
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    FREE DISCOVERY LAYER                      │
+│          (Editorial Content, Basic Features, Ads)            │
+│                   Drives Traffic & Trust                     │
+└─────────────────────────────────────────────────────────────┘
+                              ↓
+                    EMAIL CAPTURE (3-5%)
+                              ↓
+┌─────────────────────────────────────────────────────────────┐
+│                   TRANSACTIONAL REVENUE                      │
+│                                                               │
+│  Digital Products              Affiliate Commissions         │
+│  • Ebooks ($2-50)             • Amazon (4-8%)                │
+│  • Audiobooks ($8-20)         • Bookshop (10%)               │
+│  • Bundles ($15-150)          • Related products             │
+│                                                               │
+│  Target: 30-40% revenue       Target: 10-20% revenue        │
+└─────────────────────────────────────────────────────────────┘
+                              ↓
+                MEMBERSHIP CONVERSION (30-50%)
+                              ↓
+┌─────────────────────────────────────────────────────────────┐
+│                    RECURRING REVENUE (MRR)                   │
+│                                                               │
+│  Membership Tiers                                            │
+│  • Explorer ($4.99/mo)        15-20% of members             │
+│  • Enthusiast ($8.99/mo)      50-60% of members             │
+│  • Collector ($14.99/mo)      20-30% of members             │
+│                                                               │
+│  Target: 35-45% revenue (60-70% at maturity)               │
+└─────────────────────────────────────────────────────────────┘
+                              ↓
+                  ONGOING ENGAGEMENT & RETENTION
+                              ↓
+┌─────────────────────────────────────────────────────────────┐
+│                 FUTURE REVENUE EXPANSION                     │
+│                                                               │
+│  • Art & Merchandise (5-10%)                                │
+│  • Premium Tools & API (5-15%)                              │
+│  • Institutional Licensing (future)                         │
+│                                                               │
+│  Target: 10-25% revenue (Phase 2-3)                        │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+**Revenue Model Success Metrics**
+
+**Phase 1 (Months 0-6) Validation:**
+- ✅ First paying customer acquired (any stream)
+- ✅ $800-1,500 MRR achieved (combined streams)
+- ✅ 100+ paying customers (products + members)
+- ✅ Positive unit economics (contribution margin >0)
+
+**Phase 2 (Months 6-12) Growth:**
+- ✅ $2,500-3,500 MRR (scaling revenue)
+- ✅ 300+ customers (expanding base)
+- ✅ Membership ≥40% of revenue mix (recurring revenue growing)
+- ✅ Multiple streams contributing (diversification working)
+
+**Phase 3 (Months 12-18) Maturity:**
+- ✅ $5,000-8,000 MRR (sustainable profitability)
+- ✅ 500+ customers (critical mass)
+- ✅ Membership ≥50% of revenue (recurring dominant)
+- ✅ LTV:CAC >8:1 (efficient acquisition/retention)
+- ✅ Churn <8% monthly (strong retention)
+
+---
+
+**Risk Management Through Diversification**
+
+**Single-Stream Risks:**
+
+**If only products:** Revenue volatility, no predictability, constant pressure to sell
+**If only membership:** Slow initial growth, high churn risk, limited entry points
+**If only affiliates:** Platform dependency, commission changes, no direct customer relationship
+
+**Diversified Model Benefits:**
+
+**Revenue Stability:**
+- Membership provides predictable base
+- Products provide growth opportunities
+- Affiliates provide passive supplement
+
+**Customer Lifecycle Coverage:**
+- Products attract new users (low commitment)
+- Membership converts engaged users (recurring value)
+- Affiliates monetize traffic not converting directly
+
+**Risk Mitigation:**
+- Platform risk (Stripe issues → still have other streams)
+- Market risk (audiobook demand drops → still have ebooks and membership)
+- Competitive risk (new entrant → diversified value hard to replicate)
+
+---
+
+**Strategic Revenue Priorities**
+
+**Phase 1 Focus (Months 0-6):**
+1. **Primary:** Digital product sales (immediate revenue validation)
+2. **Secondary:** Enthusiast membership conversions (MRR foundation)
+3. **Tertiary:** Affiliate setup (passive revenue infrastructure)
+4. **Deferred:** Art/merch, premium tools (validate core first)
+
+**Phase 2 Focus (Months 6-12):**
+1. **Primary:** Membership growth (scale recurring revenue)
+2. **Secondary:** Product catalog expansion (more SKUs, more revenue)
+3. **Tertiary:** Affiliate optimization (improve conversion, expand partners)
+4. **New:** Art/merch pilot (test demand, minimal investment)
+
+**Phase 3 Focus (Months 12-18):**
+1. **Primary:** Retention and expansion (maximize LTV)
+2. **Secondary:** Tier progression (Enthusiast → Collector upgrades)
+3. **Tertiary:** Premium tools beta (Collector tier features, API access)
+4. **New:** Institutional licensing exploration (B2B opportunities)
+
+---
+
+**Summary: Revenue Model as Strategic Foundation**
+
+SF Supernova's revenue architecture is designed for:
+
+**Sustainability:** Multiple streams, high margins, recurring revenue base
+**Scalability:** Zero marginal cost digital products, membership leverage
+**Alignment:** Monetizes value creation (curation, quality, experience), not access
+**Flexibility:** Can adjust mix based on market feedback and segment performance
+**Growth:** Clear expansion pathways (more products, more members, new streams)
+
+**Core Philosophy:**
+*"We charge for what we add, not for what's free. We build a sustainable business by delivering exceptional value—curation, quality, community, and convenience—that users can't get elsewhere."*
+
+This revenue model enables SF Supernova to achieve profitability at modest scale ($3-5K MRR), fund ongoing quality improvements, and build toward a sustainable long-term business serving the vintage science fiction community.
+
+**Revenue is not extraction—it's the fuel that enables mission fulfillment.**
 ### 5.2 Revenue Stream 1: Digital Products
 
 ### 5.3 Revenue Stream 2: Membership Tiers
