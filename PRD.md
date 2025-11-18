@@ -11142,8 +11142,612 @@ SF Supernova's revenue architecture is designed for:
 This revenue model enables SF Supernova to achieve profitability at modest scale ($3-5K MRR), fund ongoing quality improvements, and build toward a sustainable long-term business serving the vintage science fiction community.
 
 **Revenue is not extraction—it's the fuel that enables mission fulfillment.**
+
 ### 5.2 Revenue Stream 1: Digital Products
 
+**Strategic Overview**
+
+Digital products represent SF Supernova's primary transactional revenue stream, converting curated public domain content into premium, professionally-produced formats users are willing to pay for. This stream serves as the **primary entry point** for new customers (low commitment, immediate value) and **ongoing revenue source** for existing customers (catalog expansion, format preferences, collection building).
+
+**Revenue Characteristics:**
+- **Type:** One-time transactional (per-product purchase)
+- **Margin:** 85-95% contribution margin (after payment processing, delivery costs)
+- **Scalability:** Linear with catalog size (more products = more revenue potential)
+- **Target Contribution:** 30-40% of total revenue (Phase 1-2), stabilizing at 25-35% (Phase 3+)
+
+---
+
+**Digital Product Categories**
+
+**Category 1: Ebooks (Enhanced Public Domain)**
+
+**Product Description:**
+
+SF Supernova ebooks transform raw public domain texts into premium reading experiences through:
+- **OCR Correction:** Professional proofreading, 99%+ accuracy (vs. 70-90% in free archives)
+- **Professional Formatting:** Clean typography, proper paragraph breaks, chapter navigation
+- **Enhanced Metadata:** Complete bibliographic information, publication history, series context
+- **Editorial Framing:** Introductions providing historical and literary context
+- **Multiple Formats:** EPUB (standard), MOBI (Kindle), PDF (archival)
+
+**Not Just Files—Enhanced Experiences:**
+- Responsive design (readable on any device)
+- Linked table of contents (easy navigation)
+- Embedded cover art (period-appropriate, high-resolution)
+- Author bio and bibliography (comprehensive context)
+
+**Product Types & Pricing:**
+
+**Individual Ebooks (Standard Edition):**
+- **Short Stories/Novellas** (<50K words): $1.99-2.99
+- **Standard Novels** (50K-100K words): $2.99-3.99
+- **Long Novels** (100K+ words): $3.99-4.99
+
+**Individual Ebooks (Enhanced Edition):**
+- **With Scholarly Introduction:** +$1.99 (historical context, significance)
+- **With Annotations:** +$2.99 (footnotes explaining dated references, cultural context)
+- **Premium Scholarly Edition:** +$3.99-4.99 (extensive notes, critical essays, textual variants)
+
+**Example Products:**
+- *The Stars My Destination* (standard): $3.99
+- *The Stars My Destination* (enhanced): $6.99 (introduction by scholar, annotations explaining cultural references)
+- *The Demolished Man* (standard): $3.99
+- *The Demolished Man* (premium scholarly): $8.99 (critical essay, textual variants, publication history)
+
+**Ebook Collections & Bundles:**
+
+**Small Bundles (3-5 works):**
+- **Starter Bundles:** $5.99-7.99 (30-35% discount vs. individual)
+  - "Start Here: Golden Age Essentials" (5 beginner-friendly works)
+  - "Time Travel Classics Sampler" (4 stories spanning 1930s-1970s)
+- **Thematic Introductions:** $6.99-8.99
+  - "New Wave Pioneers" (5 experimental works)
+  - "Women of the Golden Age" (5 works by female authors)
+
+**Medium Collections (8-12 works):**
+- **Author Samplers:** $12.99-16.99 (35-40% discount)
+  - "Heinlein's Best: Early Career" (10 stories)
+  - "The Essential C.L. Moore" (8 novellas and stories)
+- **Thematic Deep Dives:** $14.99-18.99
+  - "Evolution of AI: 1940s-1970s" (12 works tracing theme)
+  - "First Contact Stories Through the Decades" (10 works)
+
+**Complete Author Works (15-30 works):**
+- **Comprehensive Collections:** $24.99-39.99 (40-50% discount)
+  - "Complete Cordwainer Smith" (all novels, stories, essays)
+  - "Complete Philip K. Dick Short Stories" (20+ stories)
+  - "The Bester Collection" (all novels and major stories)
+
+**Era Collections (50-100+ works):**
+- **Decade Surveys:** $49.99-79.99 (50-60% discount)
+  - "The Golden Age: 1940s Essentials" (60 works)
+  - "The New Wave: 1960s Revolution" (75 works)
+- **Comprehensive Libraries:** $99.99-149.99 (60-70% discount)
+  - "The Complete Hugo Winners 1953-1979" (80+ works)
+  - "Pulp Era Masters" (100+ works from 1920s-1940s)
+
+**Ultimate Collections (200-500 works):**
+- **Mega-Libraries:** $199.99-399.99 (70-75% discount)
+  - "The Ultimate Vintage Sci-Fi Library" (300 essential works spanning 1920s-1979)
+  - "The Completist Collection" (500+ works, every major author and movement)
+
+**Target Mix:**
+- 40% individual ebooks (entry point, impulse purchases)
+- 30% small-medium bundles (progression from individuals)
+- 20% complete author works (enthusiasts, collectors)
+- 10% mega-collections (collectors, completionists)
+
+---
+
+**Category 2: Audiobooks (Professional Production)**
+
+**Product Description:**
+
+SF Supernova audiobooks deliver professional audio experiences that dramatically exceed free alternatives:
+- **Professional Narration:** Experienced voice actors, not amateur volunteers
+- **Studio Production:** Clean recording, professional editing, mastering
+- **Appropriate Casting:** Narrator voice/style matches work tone and era
+- **Chapter Markers:** Easy navigation, progress tracking
+- **Production Quality:** 128-192kbps MP3, industry-standard audio engineering
+
+**Quality Differentiator:**
+- LibriVox = amateur volunteers, inconsistent quality, often unlistenable
+- SF Supernova = professional narrators, Audible-quality production, consistently excellent
+
+**Production Economics:**
+- **Cost per audiobook:** $200-400 (narration @ $100-200 PFH for 2-4 hour finished audio + editing/mastering)
+- **Breakeven:** 15-30 sales at $10-15 pricing
+- **ROI timeline:** 3-6 months for popular titles, 12-18 months for deep cuts
+
+**Product Types & Pricing:**
+
+**Individual Audiobooks (Length-Based Pricing):**
+- **Short (2-4 hours):** $6.99-8.99
+  - Novellas, short story collections
+  - Example: *"Who Goes There?"* by John W. Campbell (3 hours) = $7.99
+- **Standard (4-8 hours):** $9.99-12.99
+  - Most novels
+  - Example: *The Stars My Destination* by Alfred Bester (7 hours) = $11.99
+- **Long (8-12 hours):** $12.99-15.99
+  - Epic novels, multi-part works
+  - Example: *The Moon is a Harsh Mistress* by Heinlein (10 hours) = $14.99
+- **Epic (12-20+ hours):** $15.99-24.99
+  - Series, omnibus editions
+  - Example: *Foundation Trilogy* by Asimov (18 hours) = $19.99
+
+**Audiobook Collections:**
+
+**Complete Author (5-10 audiobooks):**
+- **Pricing:** $59.99-89.99 (30-40% discount vs. individual)
+- **Examples:**
+  - "Complete Heinlein Early Novels" (6 audiobooks, 45 hours total) = $79.99
+  - "The Essential Clarke" (8 audiobooks, 52 hours) = $89.99
+
+**Thematic Collections (8-12 audiobooks):**
+- **Pricing:** $69.99-99.99 (35-45% discount)
+- **Examples:**
+  - "Time Travel Audiobook Collection" (10 works, 60 hours) = $89.99
+  - "Golden Age Classics in Audio" (12 works, 70 hours) = $99.99
+
+**Era Collections (15-20 audiobooks):**
+- **Pricing:** $129.99-179.99 (50-60% discount)
+- **Examples:**
+  - "The 1950s Golden Age Audio Library" (20 audiobooks, 120 hours) = $159.99
+  - "New Wave Audio Collection" (15 audiobooks, 95 hours) = $149.99
+
+**Format Bundles (Ebook + Audiobook):**
+
+**Multi-Format Ownership:**
+- Many users want BOTH ebook (reference, annotation) AND audiobook (listening convenience)
+- Bundle pricing incentivizes dual ownership
+
+**Pricing Strategy:**
+- Ebook: $3.99
+- Audiobook: $11.99
+- **Bundle:** $12.99 (19% discount, encourages multi-format purchase)
+
+**Example Bundles:**
+- *The Stars My Destination* (ebook + audiobook): $12.99 (vs. $15.98 separate)
+- *Foundation* (ebook + audiobook): $14.99 (vs. $18.98 separate)
+
+**Target Mix:**
+- 60% individual audiobooks (primary audio product)
+- 25% format bundles (ebook + audio for popular titles)
+- 10% complete author audio collections (audio enthusiasts, collectors)
+- 5% thematic audio collections (deep-dive listeners)
+
+---
+
+**Category 3: Specialty Editions (Premium Products)**
+
+**Radio Drama Restorations:**
+
+**Product Description:**
+- Historical radio broadcasts from 1940s-1970s (X Minus One, Dimension X, etc.)
+- Professionally restored audio (noise reduction, remastering)
+- Enhanced with historical context and episode guides
+- Collectible packages (complete series, curated selections)
+
+**Pricing:**
+- Single episode restoration: $2.99-3.99
+- Season collection (10-15 episodes): $24.99-34.99
+- Complete series restoration: $79.99-149.99
+
+**Example Products:**
+- "X Minus One: The Complete Series" (124 episodes restored) = $99.99
+- "Dimension X: Essential Episodes" (25 best episodes) = $29.99
+
+**Production Status:** Phase 2 (months 9-12), pending rights clearance and restoration partnerships
+
+---
+
+**Illustrated/Annotated Editions:**
+
+**Product Description:**
+- Ebooks with period cover art galleries (10-20 images per work)
+- Extensive scholarly annotations (explaining cultural references, scientific concepts)
+- Critical essays and reception history
+- Publication timeline and variant text notes
+
+**Pricing:**
+- Illustrated edition: $8.99-12.99 (individual works)
+- Annotated scholarly edition: $12.99-18.99 (comprehensive analysis)
+- Complete illustrated author works: $49.99-79.99 (collector's editions)
+
+**Example Products:**
+- *Do Androids Dream of Electric Sheep?* (illustrated, annotated): $14.99
+  - 15 cover art examples from various editions
+  - 80+ annotations explaining 1960s cultural context
+  - Critical essay on Dick's themes and influence
+  - Textual variants between magazine and book versions
+
+**Production Status:** Phase 2-3 (months 12-18), requires image rights clearance and scholarly partnerships
+
+---
+
+**Thematic Anthologies (Curated by SF Supernova):**
+
+**Product Description:**
+- Original SF Supernova compilations (not pre-existing anthologies)
+- Curated around specific themes with editorial introductions
+- Works selected from across decades/authors for coherence
+- Enhanced with contextual essays explaining selections
+
+**Example Anthologies:**
+- "Time Travel: Evolution of a Theme" (12 stories, 1930s-1970s, with thematic analysis)
+- "First Contact: Humanity Meets the Universe" (15 stories across 40 years)
+- "The Robots Among Us: AI Anxiety 1940-1979" (10 stories + critical essay)
+
+**Pricing:**
+- Thematic anthology (10-15 works): $14.99-19.99
+- Premium annotated anthology: $24.99-29.99
+
+**Production Status:** Phase 2 (months 9-15), dependent on editorial capacity
+
+---
+
+**Digital Product Revenue Modeling**
+
+**Phase 1 (Months 0-6) Catalog:**
+
+**Launch Catalog (Minimal Viable Product):**
+- **20 individual ebooks** (mix of famous and overlooked): $60-80 potential revenue per customer buying all
+- **3-5 starter bundles**: $18-40 potential revenue
+- **5-8 professional audiobooks**: $40-100 potential revenue
+- **2-3 complete author ebook collections**: $50-120 potential revenue
+
+**Total Launch SKUs:** 30-36 products
+
+**Revenue Assumptions:**
+- Average first purchase: $4 (Newcomers buying starter bundle or single ebook)
+- Average repeat purchase: $12 (Enthusiasts buying audiobook or larger bundle)
+- Average Collector purchase: $45 (complete collections, multiple bundles)
+
+**Expected Revenue (100 customers):**
+- 60 Newcomers × $4 = $240
+- 30 Enthusiasts × $12 × 2 purchases = $720
+- 10 Collectors × $45 × 3 purchases = $1,350
+- **Total Month 6:** ~$2,310 from digital products (one-time, not MRR)
+
+---
+
+**Phase 2 (Months 6-12) Catalog Expansion:**
+
+**Expanded Catalog:**
+- **50 individual ebooks** (doubling selection)
+- **15-20 audiobooks** (establishing audio catalog depth)
+- **8-10 starter/thematic bundles**
+- **5-8 complete author collections**
+- **2-3 era collections** (Golden Age, New Wave)
+
+**Total SKUs:** 80-90 products
+
+**Revenue Assumptions:**
+- Customer base: 300 (tripled from Phase 1)
+- Average purchases per customer: 2.5 over 6 months
+- Average order value: $14 (shifting toward bundles and audio)
+
+**Expected Revenue (Months 6-12):**
+- 300 customers × 2.5 purchases × $14 = $10,500 over 6 months
+- **Monthly average:** $1,750/month from digital products
+
+---
+
+**Phase 3 (Months 12-18) Mature Catalog:**
+
+**Comprehensive Catalog:**
+- **100+ individual ebooks**
+- **35-40 audiobooks** (comprehensive audio coverage)
+- **15-20 bundles** (diverse entry points and collections)
+- **10-15 complete author works**
+- **5-8 era/thematic mega-collections**
+
+**Total SKUs:** 165-183 products
+
+**Revenue Assumptions:**
+- Customer base: 500 (mature audience)
+- Average purchases per customer: 3-4 over 6 months
+- Average order value: $18 (more bundles, audio, premium products)
+
+**Expected Revenue (Months 12-18):**
+- 500 customers × 3.5 purchases × $18 = $31,500 over 6 months
+- **Monthly average:** $5,250/month from digital products
+
+---
+
+**Catalog Development Strategy**
+
+**Production Prioritization (Phase 1):**
+
+**Ebook Priority Tiers:**
+
+**Tier 1: Foundational Classics (Must-Haves)**
+- Works every "best of" list includes
+- Maximum recognition, proven demand
+- Examples: *Foundation*, *The Stars My Destination*, *The Left Hand of Darkness*
+- Production: First 10-15 ebooks
+
+**Tier 2: Hidden Gems (Differentiation)**
+- Overlooked masterpieces SF Supernova champions
+- Strong quality, low mainstream awareness
+- Examples: Cordwainer Smith stories, C.L. Moore novellas, Olaf Stapledon works
+- Production: Next 10-15 ebooks
+
+**Tier 3: Thematic Essentials (Curation Value)**
+- Works that anchor thematic collections
+- Fill gaps in time travel, AI, first contact categories
+- Production: Ongoing based on collection needs
+
+**Audiobook Priority (Phase 1):**
+
+**Selection Criteria:**
+- Works without existing quality audiobook versions (LibriVox doesn't count)
+- High demand based on search volume and community requests
+- Reasonable length (prefer 4-8 hours initially for cost control)
+- Strong narrative voice (works that benefit from audio performance)
+
+**First 5-8 Audiobooks:**
+1. *The Stars My Destination* (Bester) – Famous, no quality audio version
+2. *The Demolished Man* (Bester) – Companion to above
+3. *Who Goes There?* (Campbell) – Short, iconic, perfect audio story
+4. *Slan* (van Vogt) – Cult classic, underserved in audio
+5. *The Humanoids* (Williamson) – Hidden gem, audio-friendly narrative
+6. *More Than Human* (Sturgeon) – Influential, no quality audio
+7. *A Canticle for Leibowitz* (Miller) – Literary, audio enhances experience
+8. *The Moon is a Harsh Mistress* (Heinlein) – Popular, existing versions poor quality
+
+**Audiobook Expansion (Phase 2-3):**
+- 2-4 new audiobooks per month
+- Mix famous works (demand) and hidden gems (curation value)
+- Complete author audio collections (Heinlein, Clarke, Asimov audio libraries)
+
+---
+
+**Production Workflow & Economics**
+
+**Ebook Production:**
+
+**Standard Edition Workflow:**
+1. Source text acquisition (Project Gutenberg, Internet Archive)
+2. OCR correction and proofreading ($10-15, 2-4 hours)
+3. Professional formatting (EPUB/MOBI/PDF) ($5-10, 1-2 hours)
+4. Metadata and cover art assembly ($3-5, 1 hour)
+5. Quality assurance check ($2-5, 30 minutes)
+
+**Total per ebook:** $20-35 and 5-8 hours
+**Economies of scale:** Improves to $15-25 and 3-5 hours with process refinement
+
+**Enhanced Edition Additional Work:**
+- Scholarly introduction: $50-100 (outsourced to scholar or 4-6 hours internal)
+- Annotations: $100-200 (research-intensive, 8-12 hours)
+- Premium scholarly edition: $150-300 (extensive work, 12-20 hours)
+
+**Audiobook Production:**
+
+**Standard Production Workflow:**
+1. Narrator sourcing and audition ($0-50, platforms like ACX, Voices.com)
+2. Narration ($100-200 per finished hour, typically 2-4 finished hours = $200-800)
+3. Audio editing and cleanup ($50-100, 2-4 hours)
+4. Mastering and quality check ($20-50, 1-2 hours)
+5. Chapter markers and metadata ($10-20, 1 hour)
+
+**Total per audiobook (standard novel, 6-8 hours):** $300-500
+**Economies of scale:** Narrator relationships, bulk contracts → $200-350
+
+**Production Capacity Planning:**
+
+**Phase 1 (Solo Founder):**
+- 2-3 ebooks per week (standard editions)
+- 1 audiobook per month (outsourced narration)
+- 1 enhanced edition per month (if time allows)
+
+**Phase 2 (Founder + Contractor Support):**
+- 5-8 ebooks per week (contractor handles OCR, founder does QA)
+- 2-3 audiobooks per month (multiple narrators in rotation)
+- 2-3 enhanced editions per month (contractor research support)
+
+**Phase 3 (Small Team):**
+- 10-15 ebooks per week (dedicated production assistant)
+- 3-5 audiobooks per month (established narrator roster)
+- 4-6 enhanced editions per month (part-time scholarly editor)
+
+---
+
+**Pricing Strategy & Optimization**
+
+**Pricing Philosophy:**
+
+**Not Competing on Price with Free Archives:**
+- Project Gutenberg = free but terrible quality
+- SF Supernova = premium pricing justified by quality gap
+- Positioning: "Worth paying for professional quality"
+
+**Competitive with Commercial Publishers:**
+- Vintage Penguin ebooks: $7.99-12.99
+- Audible audiobooks: $14.95-29.95 (or 1 credit)
+- SF Supernova undercuts slightly while emphasizing breadth
+
+**Bundle Discounts Drive Volume:**
+- Individual works: $3-5 (small purchases, high friction)
+- Bundles: $15-30 (larger transactions, better value perception)
+- Mega-collections: $100-300 (high-value customers, best margin %)
+
+**Pricing Experiments (Phase 2):**
+
+**Test 1: Ebook Pricing Tiers**
+- Control: $2.99 for standard novels
+- Variant A: $3.99 (33% increase)
+- Variant B: $1.99 (33% decrease)
+- **Hypothesis:** $3.99 reduces conversion <20%, net revenue increases
+
+**Test 2: Bundle Discount Levels**
+- Control: 30% discount on bundles
+- Variant A: 40% discount (more aggressive)
+- Variant B: 25% discount (less aggressive)
+- **Hypothesis:** 40% discount increases bundle uptake enough to offset margin reduction
+
+**Test 3: Format Bundle Pricing**
+- Control: Ebook $3.99 + Audiobook $11.99 = Bundle $12.99 (19% discount)
+- Variant A: Bundle $14.99 (6% discount, less aggressive)
+- Variant B: Bundle $9.99 (38% discount, very aggressive)
+- **Hypothesis:** Sweet spot between $11.99-13.99 maximizes revenue
+
+---
+
+**Revenue Projections by Product Category**
+
+**Ebook Revenue (Phase 1-3):**
+
+| Time Period | SKUs | Avg Price | Sales/Month | Monthly Revenue | % of Product Revenue |
+|-------------|------|-----------|-------------|-----------------|---------------------|
+| Months 0-6 | 20 | $3.50 | 40 | $140 | 20% |
+| Months 6-12 | 50 | $4.00 | 120 | $480 | 27% |
+| Months 12-18 | 100 | $4.50 | 280 | $1,260 | 24% |
+
+**Audiobook Revenue (Phase 1-3):**
+
+| Time Period | SKUs | Avg Price | Sales/Month | Monthly Revenue | % of Product Revenue |
+|-------------|------|-----------|-------------|-----------------|---------------------|
+| Months 0-6 | 8 | $11.00 | 30 | $330 | 47% |
+| Months 6-12 | 20 | $12.00 | 70 | $840 | 48% |
+| Months 12-18 | 40 | $13.00 | 200 | $2,600 | 50% |
+
+**Bundle/Collection Revenue (Phase 1-3):**
+
+| Time Period | SKUs | Avg Price | Sales/Month | Monthly Revenue | % of Product Revenue |
+|-------------|------|-----------|-------------|-----------------|---------------------|
+| Months 0-6 | 5 | $18.00 | 13 | $234 | 33% |
+| Months 6-12 | 15 | $22.00 | 20 | $440 | 25% |
+| Months 12-18 | 25 | $28.00 | 48 | $1,344 | 26% |
+
+**Total Digital Product Revenue Projections:**
+
+| Phase | Monthly Revenue | Annual Run Rate |
+|-------|----------------|-----------------|
+| Phase 1 (Month 6) | $704 | $8,448 |
+| Phase 2 (Month 12) | $1,760 | $21,120 |
+| Phase 3 (Month 18) | $5,204 | $62,448 |
+
+**Note:** These are product-only revenues, not including membership revenue covered in 5.3
+
+---
+
+**Success Metrics & KPIs**
+
+**Product Performance Metrics:**
+
+**Catalog Metrics:**
+- SKU count (breadth of offering)
+- Products per category (balance across types)
+- New products released per month (production velocity)
+
+**Sales Metrics:**
+- Units sold per product (popularity, demand validation)
+- Revenue per SKU (pricing effectiveness)
+- Best-sellers list (top 10% products driving 40-50% of revenue)
+- Long-tail performance (catalog depth enabling niche sales)
+
+**Customer Behavior:**
+- Average products purchased per customer (engagement depth)
+- Repeat purchase rate (returning buyers)
+- Bundle uptake % (% of purchases that are bundles vs. individuals)
+- Format preference (ebook vs. audiobook vs. both)
+
+**Production Efficiency:**
+- Cost per ebook produced (improving with scale)
+- Cost per audiobook produced (narrator relationships, efficiency)
+- Time to market (acquisition → published)
+- Quality scores (customer ratings, refund rates)
+
+**Target Benchmarks (Phase 3):**
+- Average 4.6+ star rating across catalog
+- <3% refund rate (quality satisfaction)
+- 40%+ bundle uptake (value perception working)
+- 2.5+ products per customer (average customer purchases multiple items)
+
+---
+
+**Strategic Advantages of Digital Products**
+
+**Competitive Moats:**
+
+**1. Quality Gap vs. Free Archives:**
+- Project Gutenberg/Internet Archive = 70-90% OCR accuracy, terrible formatting
+- SF Supernova = 99%+ accuracy, beautiful design, professional production
+- Gap is obvious to users, justifies premium pricing
+
+**2. Curation Value:**
+- Archives = 10,000+ works, no guidance, overwhelming
+- SF Supernova = Expert selection, thematic organization, quality filtering
+- Time-saving and confidence-building for users
+
+**3. Professional Audio:**
+- LibriVox = amateur narration, inconsistent, often unlistenable
+- Audible = focuses on modern bestsellers, limited vintage coverage
+- SF Supernova = Professional audio + vintage specialization = unique niche
+
+**4. Enhanced Editions:**
+- Public domain texts elsewhere = no context, minimal metadata
+- SF Supernova = Historical framing, scholarly annotations, deep context
+- Enables appreciation and understanding beyond raw text
+
+**5. Format Convenience:**
+- Archives = clunky interfaces, inconsistent formats, poor mobile experience
+- SF Supernova = Beautiful, responsive, multi-format, seamless delivery
+- User experience gap justifies payment
+
+---
+
+**Risk Mitigation**
+
+**Production Risks:**
+
+**Risk: Audiobook production costs don't recoup**
+- Mitigation: Start with high-demand titles, 15-30 unit breakeven achievable
+- Mitigation: Use membership credits as guaranteed consumption
+
+**Risk: Catalog expansion outpaces sales growth**
+- Mitigation: Data-driven production (produce what sells)
+- Mitigation: Phase production (validate demand before scaling)
+
+**Risk: Quality issues damage reputation**
+- Mitigation: Multi-stage QA process (proofreading, testing, review)
+- Mitigation: Generous refund policy (recover from mistakes)
+
+**Market Risks:**
+
+**Risk: Users prefer free archives despite quality gap**
+- Mitigation: Samples demonstrate quality difference
+- Mitigation: Pricing stays accessible ($2-5 entry point)
+- Mitigation: Bundles provide exceptional value (low per-work cost)
+
+**Risk: Commercial publishers expand vintage offerings**
+- Mitigation: Breadth advantage (they cherry-pick, we're comprehensive)
+- Mitigation: Speed advantage (we can produce faster, they have rights/bureaucracy)
+- Mitigation: Specialization (vintage focus vs. their general catalog)
+
+---
+
+**Summary: Digital Products as Revenue Foundation**
+
+**Strategic Role:**
+- Primary entry point for new customers (transactional, low commitment)
+- Ongoing revenue from existing customers (catalog expansion, format preferences)
+- Foundation for membership value (credits enable consumption)
+- Differentiation from free alternatives (quality justifies premium)
+
+**Target Contribution:**
+- Phase 1: 70% of revenue (building trust, validating market)
+- Phase 2: 50% of revenue (membership growing, balanced mix)
+- Phase 3: 30-40% of revenue (recurring revenue dominant, products supplementary)
+
+**Success Criteria:**
+- Profitable unit economics (85-95% margin after processing/delivery)
+- Scalable production (2-5 new products weekly in Phase 3)
+- Customer satisfaction (>4.5 rating, <3% refunds)
+- Repeat purchases (50%+ customers buy multiple products)
+
+**Digital products aren't just revenue—they're the tangible manifestation of SF Supernova's value proposition. Every ebook, audiobook, and collection proves we deliver on our promise: making vintage science fiction accessible, enjoyable, and worth paying for.**
 ### 5.3 Revenue Stream 2: Membership Tiers
 
 ### 5.4 Revenue Stream 3: Affiliate Commissions
