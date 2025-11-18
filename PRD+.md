@@ -16469,7 +16469,7 @@ Month 36 Revenue Mix:
 **The goal: Build predictable, recurring revenue foundation (ARR) while scaling one-time revenue streams (products, merch, affiliates) to create a diversified, sustainable, highly profitable business generating $400K+ ARR and $1M+ total revenue by Month 36.**
 
 **ARR is the heartbeat of SF Supernova—the predictable, growing, recurring revenue that enables confident investment, sustainable operations, and long-term platform building.**
-### 5.9 Unit Economics & Contribution Margins
+s
 ### 5.9 Unit Economics & Contribution Margins
 
 **Strategic Overview**
