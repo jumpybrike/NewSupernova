@@ -17935,7 +17935,911 @@ Content is a **compounding asset** that increases in value over time, unlike pai
 
 **The goal: Build content so valuable, comprehensive, and authoritative that SF Supernova becomes the undisputed #1 destination for anyone interested in vintage science fiction—and content is the engine that makes this vision reality.**
 ### 6.2 Component 1: Product Creation Workflow (Option 3)
+### 6.2 Content Pillars & Topic Architecture
 
+**Strategic Overview**
+
+Content pillars are the **thematic foundations** that organize SF Supernova's content strategy, ensuring comprehensive coverage, efficient production, and strategic SEO advantage. Rather than publishing random articles on whatever seems interesting, content pillars create a structured framework that guides topic selection, ensures balance across themes, and builds topical authority in Google's eyes.
+
+**Core Principle:** *"Master comprehensive coverage of defined territory rather than scattered presence across unlimited topics."*
+
+A well-designed pillar architecture creates **topical authority**—Google's algorithm recognizes SF Supernova as the definitive source for specific themes, boosting rankings across all related content. This concentrated authority is more valuable than diffuse coverage across many topics.
+
+---
+
+**What Are Content Pillars?**
+
+**Content Pillar Definition:**
+- **Pillar = Major thematic category** that organizes related content
+- Each pillar represents a core area of expertise and user interest
+- Pillars are broad enough to support 50-200+ individual articles
+- Pillars are focused enough to build topical authority (not too broad)
+
+**Pillar Structure:**
+```
+Content Pillar (Top Level)
+├── Sub-Pillar 1 (Category)
+│   ├── Topic Cluster 1 (Related Articles)
+│   ├── Topic Cluster 2
+│   └── Topic Cluster 3
+├── Sub-Pillar 2
+│   ├── Topic Cluster 1
+│   └── Topic Cluster 2
+└── Sub-Pillar 3
+    ├── Topic Cluster 1
+    └── Topic Cluster 2
+```
+
+**Example:**
+```
+Pillar: Authors & Creators
+├── Sub-Pillar: Golden Age Authors
+│   ├── Cluster: Isaac Asimov (biography, bibliography, analysis, reading order)
+│   ├── Cluster: Arthur C. Clarke
+│   └── Cluster: Robert Heinlein
+├── Sub-Pillar: New Wave Authors
+│   ├── Cluster: Philip K. Dick
+│   └── Cluster: Ursula K. Le Guin
+└── Sub-Pillar: Pulp Magazine Authors
+    ├── Cluster: E.E. "Doc" Smith
+    └── Cluster: Edmond Hamilton
+```
+
+---
+
+**Why Content Pillars Matter**
+
+**1. Topical Authority (SEO Benefit)**
+
+Google's algorithm evaluates whether a site is an authority on a topic by analyzing:
+- **Breadth:** Do you cover the topic comprehensively? (many related articles)
+- **Depth:** Do you go deep on subtopics? (detailed, thorough content)
+- **Interconnection:** Do articles link together logically? (internal linking structure)
+- **Consistency:** Do you consistently publish on this topic? (ongoing expertise)
+
+**With Content Pillars:**
+- SF Supernova publishes 20-30 articles on "Golden Age Authors"
+- Articles interlink (Asimov article links to Clarke, Heinlein, Foundation reading order, etc.)
+- Google recognizes topical authority: "SF Supernova is expert on Golden Age Authors"
+- **Result:** All articles in cluster rank better (halo effect from topical authority)
+
+**Without Content Pillars:**
+- Random articles on disconnected topics
+- No signal of concentrated expertise
+- Google treats each article independently
+- **Result:** Harder to rank, less authority, more effort for less result
+
+---
+
+**2. Efficient Content Production**
+
+Content pillars enable **systematic, efficient production** rather than starting from scratch for every article.
+
+**Systematic Production:**
+- Decide to focus on "Golden Age Authors" this quarter
+- Research all major authors once (batch research)
+- Develop templates (author biography structure, bibliography format, analysis framework)
+- Write 15-20 related articles efficiently (shared research, consistent structure)
+- **Result:** 3-4 weeks to complete author pillar vs. 8-12 weeks for scattered articles
+
+**Knowledge Leverage:**
+- Deep dive into one area builds expertise (Asimov research informs Clarke, Heinlein articles)
+- Context accumulates (understanding Golden Age context helps all author articles)
+- Sources reused (same reference books, archives, academic papers)
+- **Result:** Better quality articles produced faster
+
+---
+
+**3. Comprehensive User Journey**
+
+Content pillars ensure **complete coverage** of user needs within each theme, guiding users from discovery to deep engagement.
+
+**User Journey Example (Golden Age Authors Pillar):**
+
+**Discovery (Entry Point):**
+- User searches "best golden age science fiction authors"
+- Lands on "Complete Guide to Golden Age Sci-Fi Authors" (pillar page)
+- Overview of 20+ major authors with brief intros
+
+**Exploration (Depth):**
+- User clicks on Asimov (interested in learning more)
+- Reads "Complete Isaac Asimov Biography and Analysis"
+- Discovers Foundation series, becomes interested
+
+**Deep Engagement (Commitment):**
+- User clicks "Foundation Series Reading Order Guide"
+- Reads comprehensive guide (chronological vs. publication order, what to skip, modern relevance)
+- Signs up for email (lead magnet: "Asimov Starter Pack Reading Guide")
+
+**Conversion (Purchase):**
+- Email sequence recommends Asimov ebook bundle
+- User purchases, becomes customer
+- Eventually converts to Enthusiast membership (wants more audiobooks)
+
+**Pillar Effect:** One pillar guides user from casual interest → deep engagement → customer conversion
+
+---
+
+**4. Product-Content Alignment**
+
+Content pillars align directly with product catalog, creating natural recommendation pathways.
+
+**Content-Product Mapping:**
+
+| Content Pillar | Product Catalog |
+|----------------|-----------------|
+| Authors & Creators → Individual author bibliographies | Author collections (Asimov complete works, Clarke audiobooks) |
+| Themes & Concepts → Thematic analysis articles | Thematic bundles (Time Travel collection, AI Anxiety bundle) |
+| Eras & Movements → Historical context articles | Era collections (Golden Age essentials, New Wave deep cuts) |
+| Reading Guides & Lists → Curated recommendations | Featured bundles (Beginner's Guide collection, Top 50 Classics) |
+
+**Natural Recommendations:**
+- Article: "Complete Philip K. Dick Bibliography"
+- Product: Dick Complete Collection (20 novels, 100+ short stories)
+- **Result:** Content educates, product delivers (seamless user experience)
+
+---
+
+**SF Supernova's 7 Content Pillars**
+
+**Pillar 1: Authors & Creators**
+
+**Scope:** Comprehensive coverage of vintage sci-fi authors—biographies, bibliographies, analysis, reading orders, historical context.
+
+**Why This Pillar:**
+- High search volume (users search author names constantly)
+- Clear user intent (research specific author, find reading order, discover works)
+- Direct product alignment (author-specific collections, audiobooks)
+- Competitive advantage (most sites have thin author coverage, SF Supernova goes deep)
+
+**Sub-Pillars:**
+
+**1A. Golden Age Authors (1940s-1950s):**
+- Isaac Asimov (Foundation, Robot series, bibliography, reading order)
+- Arthur C. Clarke (2001, Rama series, complete works)
+- Robert Heinlein (Stranger in a Strange Land, juveniles, late period controversy)
+- Ray Bradbury (Martian Chronicles, Fahrenheit 451, short stories)
+- A.E. van Vogt (Null-A, weapon shops, space opera)
+- Theodore Sturgeon (More Than Human, short story mastery)
+- Clifford D. Simak (Way Station, pastoral sci-fi)
+- Poul Anderson (Technic History, Time Patrol, hard SF)
+- Frederik Pohl (Gateway, collaboration with Kornbluth)
+- Lester del Rey (early career, later editorial work)
+
+**1B. New Wave Authors (1960s-1970s):**
+- Philip K. Dick (Do Androids Dream, Ubik, Man in the High Castle, paranoia and reality)
+- Ursula K. Le Guin (Left Hand of Darkness, Dispossessed, anthropological SF)
+- J.G. Ballard (Crash, High Rise, experimental inner space)
+- Harlan Ellison (Dangerous Visions, short story innovation)
+- Samuel R. Delany (Dhalgren, Babel-17, literary SF)
+- Roger Zelazny (Lord of Light, Chronicles of Amber, poetic prose)
+- Brian Aldiss (Non-Stop, Hothouse, British New Wave)
+- Michael Moorcock (Eternal Champion, Jerry Cornelius, genre boundary-pushing)
+
+**1C. Pulp Magazine Authors (1920s-1940s):**
+- E.E. "Doc" Smith (Lensman series, space opera foundations)
+- Edmond Hamilton (Captain Future, cosmic scope)
+- Jack Williamson (Humanoids, Legion of Space, long career)
+- Murray Leinster (Med Ship stories, parallel worlds)
+- Leigh Brackett (planetary romance, noir SF)
+- C.L. Moore (Northwest Smith, Jirel of Joiry, lyrical prose)
+- Stanley G. Weinbaum (Martian Odyssey, alien perspectives)
+- John W. Campbell (editor and author, Astounding influence)
+
+**1D. Women Authors & Overlooked Voices:**
+- Octavia Butler (Kindred, Parable series, Afrofuturism pioneer)
+- Joanna Russ (Female Man, feminist SF)
+- James Tiptree Jr. / Alice Sheldon (Houston, Houston, Do You Read?, gender exploration)
+- Andre Norton (Witch World, juveniles, prolific career)
+- Judith Merril (editor and author, SF as literature)
+- C.J. Cherryh (Alliance-Union, Foreigner series, anthropological depth)
+- Marion Zimmer Bradley (Darkover, feminist themes, controversial legacy)
+- Anne McCaffrey (Dragonriders of Pern, telepathy and dragons)
+
+**Content Types per Author:**
+
+**Tier 1 Authors (Asimov, Clarke, Heinlein, Dick, Le Guin):**
+- Complete biography (5,000-8,000 words)
+- Complete bibliography (exhaustive works list with publication history)
+- Reading order guide (recommended sequences, what to skip)
+- Thematic analysis (major themes, evolution over career)
+- Series guides (Foundation, Robot, Earthsea, etc. in-depth)
+- "Best of" lists (Top 10 works, essential short stories)
+- Comparisons (Asimov vs. Clarke, Dick's best novels ranked)
+- Modern relevance (re-reading in 2025, what holds up)
+- **Total: 12-15 articles per Tier 1 author**
+
+**Tier 2 Authors (Bradbury, Sturgeon, Ballard, Delany, etc.):**
+- Biography and overview (3,000-5,000 words)
+- Complete bibliography
+- Reading guide (where to start, essential works)
+- Thematic analysis (focused on major themes)
+- **Total: 5-8 articles per Tier 2 author**
+
+**Tier 3 Authors (Lesser-known but significant):**
+- Biography and bibliography (2,000-3,000 words)
+- "Best of" overview (essential works, why they matter)
+- **Total: 2-3 articles per Tier 3 author**
+
+**Estimated Content Volume:**
+- 20 Tier 1 authors × 12 articles = 240 articles
+- 30 Tier 2 authors × 6 articles = 180 articles
+- 50 Tier 3 authors × 2 articles = 100 articles
+- **Total: 520+ articles in Authors & Creators pillar alone**
+
+**SEO Opportunity:**
+- Author names = high search volume (10K-100K monthly searches for major authors)
+- Low competition for comprehensive, quality content (most sites have basic Wikipedia-level info)
+- Long-tail opportunity (thousands of specific queries: "Asimov reading order," "best PKD novels," "Clarke short stories")
+
+---
+
+**Pillar 2: Themes & Concepts**
+
+**Scope:** Deep dives into recurring themes, concepts, and ideas in vintage science fiction—analyzing how themes evolved, comparing different authors' approaches, connecting to cultural context.
+
+**Why This Pillar:**
+- Intellectual depth (attracts serious enthusiasts and scholars)
+- High engagement (thought-provoking content generates discussion, shares)
+- SEO opportunity (thematic queries: "time travel stories," "AI in science fiction")
+- Premium tool setup (thematic analysis feeds Research Pro features)
+
+**Sub-Pillars:**
+
+**2A. Classic Sci-Fi Themes:**
+- **Time Travel:** Paradoxes, causality, time loops, changing history, temporal mechanics
+- **Artificial Intelligence:** AI anxiety, robot rights, singularity, human-AI relations
+- **Space Exploration:** First contact, generation ships, colony worlds, cosmic perspective
+- **Dystopia & Utopia:** Social control, surveillance states, ideal societies, utopian experiments
+- **Alien Encounters:** First contact protocols, xenophobia vs. tolerance, alien perspectives
+- **Post-Apocalypse:** Nuclear war, collapse, rebuilding, survival, human nature
+- **Telepathy & Psi Powers:** Mental abilities, evolution, human potential, hive minds
+- **Alternate History:** What-if scenarios, parallel worlds, divergent timelines
+- **Cybernetics & Transhumanism:** Enhancement, identity, human-machine boundaries
+- **Social SF:** Gender, race, class, politics through speculative lens
+
+**2B. Scientific Concepts:**
+- **Faster-Than-Light Travel:** Hyperspace, warp drives, jumps, time dilation
+- **Generation Ships:** Multi-generational journeys, social systems, closed ecosystems
+- **Terraforming:** Planetary engineering, ecological transformation, colonization ethics
+- **Cryogenics & Suspended Animation:** Cold sleep, time jumps, future shock
+- **Cloning & Genetics:** Identity, genetic engineering, designer humans
+- **Parallel Universes:** Many-worlds theory, alternate realities, quantum mechanics
+
+**2C. Cultural & Historical Context:**
+- **Cold War Anxieties:** Nuclear fear, mutually assured destruction, surveillance, conformity
+- **Space Race Influence:** Moon landing, national prestige, technological optimism
+- **Environmental Concerns (1960s-70s):** Overpopulation, pollution, ecological collapse
+- **Social Movements:** Civil rights, feminism, counterculture in SF
+- **Technological Optimism vs. Pessimism:** Progress narratives, technological skepticism
+
+**Content Types per Theme:**
+
+**Comprehensive Theme Guides:**
+- "Complete Guide to Time Travel in Vintage Sci-Fi" (5,000-8,000 words)
+  - History of time travel in SF (H.G. Wells to 1970s)
+  - Major works and approaches (Heinlein, Asimov, Anderson, Silverberg)
+  - Paradox types (grandfather, bootstrap, predestination)
+  - Evolution of time travel tropes
+  - Recommended reading list (20-30 essential time travel stories)
+
+**Comparative Analysis:**
+- "AI Anxiety: How 1950s vs. 1970s Sci-Fi Imagined Artificial Intelligence"
+  - 1950s: Robots as servants, threat of uprising (Asimov's Three Laws, cautious optimism)
+  - 1960s-70s: AI as alien intelligence, incomprehensible motivations (Dick, Ellison)
+  - Cultural context: automation anxiety, computer revolution
+  - Modern relevance: what vintage SF got right/wrong about AI
+
+**Author Approaches:**
+- "Five Authors, Five Approaches to First Contact" (Asimov, Clarke, Lem, Le Guin, Dick)
+  - Compare and contrast how different authors imagined alien encounters
+  - Reveals each author's philosophy and concerns
+
+**Evolution Articles:**
+- "The Evolution of Dystopia: From Brave New World to Brave New Wave"
+  - Trace how dystopian themes evolved across decades
+  - 1930s-40s: Totalitarian fears (Orwell, Huxley foundation)
+  - 1950s: Conformity and corporate control (Pohl, Kornbluth)
+  - 1960s-70s: Inner space, psychological control (Ballard, Brunner)
+
+**Reading Lists:**
+- "25 Essential Time Travel Stories from the Golden Age"
+- "The Definitive AI Anxiety Reading List"
+- Curated, annotated, with context
+
+**Estimated Content Volume:**
+- 20 major themes × 5-8 articles each = 100-160 articles
+- 10 scientific concepts × 3-5 articles each = 30-50 articles
+- 10 cultural contexts × 3-5 articles each = 30-50 articles
+- **Total: 160-260 articles in Themes & Concepts pillar**
+
+**SEO Opportunity:**
+- Thematic searches (moderate-high volume: 1K-20K monthly)
+- Academic interest (students, researchers search thematic topics)
+- Long-tail variations (hundreds of specific queries)
+
+---
+
+**Pillar 3: Eras & Movements**
+
+**Scope:** Historical context and comprehensive coverage of distinct periods and movements in vintage science fiction—understanding when, why, and how SF evolved.
+
+**Why This Pillar:**
+- Historical education (users want context to understand works in their time)
+- SEO opportunity (era-specific searches: "golden age sci-fi," "new wave science fiction")
+- Curator positioning (SF Supernova as historian and guide)
+- Product alignment (era-specific collections and bundles)
+
+**Sub-Pillars:**
+
+**3A. Golden Age (1938-1950s):**
+- **Overview:** John W. Campbell's Astounding, hard SF emergence, pulp refinement
+- **Key Authors:** Asimov, Clarke, Heinlein, Sturgeon, van Vogt, del Rey
+- **Defining Works:** Foundation, Childhood's End, Starship Troopers, More Than Human
+- **Themes:** Scientific optimism, space exploration, technology as salvation, rationalism
+- **Cultural Context:** Post-war optimism, atomic age, early Cold War, science as hero
+- **Legacy:** Established SF as serious literature, created genre conventions
+
+**3B. Pulp Era (1920s-1940s):**
+- **Overview:** Amazing Stories, early pulp magazines, space opera foundations
+- **Key Authors:** E.E. Smith, Edmond Hamilton, Jack Williamson, Leigh Brackett
+- **Defining Works:** Lensman series, Captain Future, Legion of Space
+- **Themes:** Adventure, cosmic scope, good vs. evil, planetary romance
+- **Cultural Context:** Depression-era escapism, serialized storytelling, adventure fiction roots
+- **Legacy:** Created space opera conventions, influenced Star Wars generation
+
+**3C. New Wave (1960s-1970s):**
+- **Overview:** New Worlds magazine (Moorcock), experimental forms, literary ambitions
+- **Key Authors:** Dick, Ballard, Delany, Ellison, Le Guin, Zelazny
+- **Defining Works:** Dangerous Visions, Stand on Zanzibar, Dhalgren, Ubik
+- **Themes:** Inner space, social SF, stylistic experimentation, psychological focus
+- **Cultural Context:** Counterculture, Vietnam War, civil rights, environmental movement, questioning authority
+- **Legacy:** Expanded SF's literary range, influenced cyberpunk and modern SF
+
+**3D. Transition Periods:**
+- **Pre-Golden Age (1900s-1930s):** Wells, Verne, Burroughs, early pulps
+- **Between Golden Age and New Wave (Late 1950s-Early 1960s):** Bridge authors, social SF emergence
+
+**Content Types per Era:**
+
+**Comprehensive Era Guides:**
+- "Complete Guide to Golden Age Science Fiction (1938-1960)" (8,000-12,000 words)
+  - Historical context (why this era, what defined it)
+  - Key authors and works (20-30 essential authors, 50+ essential works)
+  - Major themes and innovations
+  - Reading roadmap (where to start, essential works, deep cuts)
+  - Legacy and influence (how Golden Age shaped modern SF)
+
+**Era Comparisons:**
+- "Golden Age vs. New Wave: Two Philosophies of Science Fiction"
+  - Compare aesthetics, themes, approaches
+  - Why the shift happened (cultural changes, generational rebellion)
+  - Strengths and limitations of each
+
+**Decade Snapshots:**
+- "Science Fiction in the 1950s: A Decade-by-Decade Look"
+  - Major publications each year
+  - Cultural events influencing SF
+  - Evolution of themes and approaches
+  - Recommendations from each year
+
+**Movement Deep Dives:**
+- "The New Wave Revolution: How 1960s Sci-Fi Broke All the Rules"
+  - Origins (British New Wave, Moorcock's New Worlds)
+  - Controversies (Dangerous Visions, experimental prose)
+  - Backlash and legacy
+
+**Historical Context:**
+- "How the Cold War Shaped 1950s Science Fiction"
+- "The Space Race and Science Fiction: From Dream to Reality"
+- "Vietnam, Watergate, and the Dystopian Turn"
+
+**Estimated Content Volume:**
+- 5 major eras/movements × 10-15 articles each = 50-75 articles
+- 6 decade snapshots × 5-8 articles each = 30-48 articles
+- 10 historical context pieces = 10 articles
+- **Total: 90-133 articles in Eras & Movements pillar**
+
+**SEO Opportunity:**
+- Era searches (moderate volume: 2K-15K monthly for "golden age sci-fi")
+- Academic/educational searches (students researching movements)
+- Nostalgia searches (users wanting to revisit era of their youth)
+
+---
+
+**Pillar 4: Works & Series**
+
+**Scope:** In-depth analysis of specific novels, short stories, series, and collections—plot summaries, thematic analysis, historical context, critical reception, reading guides.
+
+**Why This Pillar:**
+- High search volume (specific work titles searched constantly)
+- Clear intent (users researching before reading or seeking understanding after)
+- Product alignment (direct connection to specific products in catalog)
+- Spoiler-friendly space (detailed analysis for serious readers)
+
+**Sub-Pillars:**
+
+**4A. Major Series:**
+- **Foundation Series (Asimov):** Reading order, analysis of each book, themes, controversies
+- **Robot Series (Asimov):** Three Laws evolution, major stories, connections to Foundation
+- **Rama Series (Clarke):** Each novel analysis, collaboration with Gentry Lee
+- **Dune (Herbert):** Original trilogy focus, themes, ecology and politics
+- **Earthsea (Le Guin):** Complete series guide, feminist readings, evolution
+- **Philip K. Dick's VALIS Trilogy:** Gnosticism, madness, reality breakdowns
+- **Lensman Series (Smith):** Space opera origins, scope and influence
+- **Time Patrol (Anderson):** Time travel mechanics, historical settings
+
+**4B. Standalone Classics:**
+- **The Left Hand of Darkness (Le Guin):** Gender exploration, Gethen worldbuilding, anthropological SF
+- **Childhood's End (Clarke):** Transcendence, the Overlords, endings and beginnings
+- **Stranger in a Strange Land (Heinlein):** Counterculture icon, controversies, Mars and Earth
+- **Do Androids Dream of Electric Sheep? (Dick):** Empathy and humanity, Blade Runner comparison
+- **The Stars My Destination (Bester):** Revenge narrative, jaunting, synesthesia, literary ambition
+- **More Than Human (Sturgeon):** Gestalt consciousness, evolution, humanity definition
+- **Solaris (Lem):** Failed communication, unknowable alien, science's limits
+- **The Dispossessed (Le Guin):** Anarchism, Anarres and Urras, ambiguous utopia
+
+**4C. Short Story Collections & Anthologies:**
+- **Dangerous Visions (Ellison, ed.):** Revolutionary anthology, stories that broke boundaries
+- **The Martian Chronicles (Bradbury):** Linked stories, Mars as metaphor, poetic prose
+- **I, Robot (Asimov):** Three Laws stories, robot psychology, fix-up novel
+- **Nightfall and Other Stories (Asimov):** Essential Asimov short fiction
+- **The Best of Philip K. Dick:** Essential short stories, paranoia and reality
+
+**Content Types per Work/Series:**
+
+**Series Guides:**
+- "Complete Foundation Series Reading Order: Publication vs. Chronological"
+  - Debate: Original trilogy only vs. expanded universe
+  - Book-by-book breakdown with spoiler-free summaries
+  - What to skip (diminishing returns in later books)
+  - Modern relevance and re-readability
+
+**Work Analysis:**
+- "The Left Hand of Darkness: A Complete Analysis and Guide" (4,000-6,000 words)
+  - Plot summary (spoiler-tagged sections)
+  - Thematic analysis (gender, sexuality, political systems, exile)
+  - Historical context (1969 publication, feminist SF emergence)
+  - Critical reception (Hugo/Nebula winner, legacy)
+  - Le Guin's intentions (essays and interviews)
+  - Modern reading (what holds up, what's dated)
+  - Discussion questions (for book clubs, classes)
+
+**Comparison Articles:**
+- "Blade Runner vs. Do Androids Dream: How the Film Changed the Story"
+- "Foundation on Apple TV+: What the Adaptation Gets Right and Wrong"
+- "Asimov's Robot Stories: Ranking the Essential Tales"
+
+**Character Studies:**
+- "Hari Seldon: The Prophet of Psychohistory"
+- "Genly Ai and Estraven: Friendship Across Gender"
+- "Deckard's Evolution: From Book to Screen"
+
+**Thematic Deep Dives:**
+- "Empathy in Philip K. Dick: From Androids to VALIS"
+- "Ursula K. Le Guin's Anarchism: Across Earthsea and Anarres"
+- "The Three Laws of Robotics: Evolution and Contradictions"
+
+**Estimated Content Volume:**
+- 30 major series × 8-12 articles each = 240-360 articles
+- 50 standalone classics × 4-6 articles each = 200-300 articles
+- 20 short story collections × 3-5 articles each = 60-100 articles
+- **Total: 500-760 articles in Works & Series pillar**
+
+**SEO Opportunity:**
+- High search volume (work titles: 5K-50K+ monthly for major works)
+- Long-tail variations (character names, plot questions, reading order queries)
+- Evergreen content (works remain relevant indefinitely)
+
+---
+
+**Pillar 5: Reading Guides & Lists**
+
+**Scope:** Curated recommendations, ranked lists, beginner guides, and reading roadmaps—helping users navigate the vast vintage SF landscape and discover what to read next.
+
+**Why This Pillar:**
+- High engagement (lists are shareable, generate discussion, drive debate)
+- Clear conversion path (lists directly recommend products available in catalog)
+- SEO opportunity (list queries: "best sci-fi novels," "where to start with Asimov")
+- Newcomer-friendly (accessible entry point for those overwhelmed by catalog)
+
+**Sub-Pillars:**
+
+**5A. Best-Of Lists:**
+- "Top 100 Vintage Science Fiction Novels (1900-1980)"
+- "50 Essential Golden Age Short Stories"
+- "25 Best New Wave Science Fiction Works"
+- "Top 20 Underrated Vintage Sci-Fi Gems"
+- "10 Best First Contact Novels"
+- "15 Essential Feminist Science Fiction Works"
+- "Best Vintage Sci-Fi by Decade (1920s-1970s)"
+
+**5B. Beginner Guides:**
+- "Where to Start with Vintage Science Fiction: A Beginner's Guide"
+- "How to Start Reading Isaac Asimov (Without Getting Overwhelmed)"
+- "Philip K. Dick for Beginners: 5 Essential Novels"
+- "Golden Age Science Fiction Starter Pack: 10 Essential Works"
+- "New Wave Science Fiction for Newcomers"
+
+**5C. Reading Orders & Sequences:**
+- "Foundation Series Reading Order: The Definitive Guide"
+- "Isaac Asimov's Robot Stories: Complete Reading Order"
+- "Arthur C. Clarke's Space Odyssey: How to Read the Series"
+- "Robert Heinlein's Future History: Chronological Order"
+- "Philip K. Dick's VALIS Trilogy: Should You Read It in Order?"
+
+**5D. Thematic Reading Lists:**
+- "The Ultimate Time Travel Reading List (30 Essential Stories)"
+- "AI Anxiety: 20 Classic Robot and Computer Stories"
+- "Post-Apocalyptic Vintage Sci-Fi: 25 Survival Stories"
+- "First Contact Done Right: 15 Essential Alien Encounter Stories"
+- "Dystopian Classics: From 1984 to Stand on Zanzibar"
+
+**5E. Comparative & Ranked Lists:**
+- "Every Asimov Novel, Ranked from Worst to Best"
+- "Philip K. Dick's Top 10 Novels: The Definitive Ranking"
+- "Golden Age vs. New Wave: Which Era Is Better?"
+- "The 10 Most Influential Vintage Sci-Fi Works (And Why They Matter)"
+
+**Content Types:**
+
+**Comprehensive Rankings:**
+- Numbered list (1-100) with brief description of each work
+- Selection criteria (how we chose these works)
+- Honesty about subjectivity (ranked lists are opinion, not fact)
+- Link to each work in catalog (natural product recommendations)
+
+**Beginner Guides:**
+- Explain why vintage SF matters (context for newcomers)
+- Common barriers (dated language, old science, social attitudes) and how to approach
+- Recommended entry points (3-5 accessible works to start)
+- Progression (where to go after starter works)
+
+**Reading Orders:**
+- Debate all options (publication order, chronological, skip-around)
+- Recommend specific order with rationale
+- Flag optional or skippable works (honesty about diminishing returns)
+- Visual timeline or flowchart (easy to follow)
+
+**Estimated Content Volume:**
+- 30 best-of lists × 2-3 variations = 60-90 articles
+- 20 beginner guides (authors, movements, themes) = 20 articles
+- 25 reading order guides (series, authors) = 25 articles
+- 40 thematic reading lists = 40 articles
+- 30 comparative/ranked lists = 30 articles
+- **Total: 175-205 articles in Reading Guides & Lists pillar**
+
+**SEO Opportunity:**
+- Very high search volume (list queries extremely popular: 10K-100K+ monthly)
+- High CTR (users love lists, click through readily)
+- High shareability (lists generate Reddit, forum, social media discussion)
+
+---
+
+**Pillar 6: Craft & Criticism**
+
+**Scope:** Meta-analysis of science fiction as literature and art form—examining writing craft, critical theory, SF's place in literature, influence and legacy.
+
+**Why This Pillar:**
+- Intellectual depth (attracts scholars, writers, serious enthusiasts)
+- Differentiation (most sites don't do literary criticism, SF Supernova does)
+- Authority building (demonstrates expertise beyond plot summaries)
+- Writer audience (aspiring SF writers seek craft insights)
+
+**Sub-Pillars:**
+
+**6A. Writing Craft Analysis:**
+- "How Ursula K. Le Guin Built Worlds: Anthropological SF Craft"
+- "Philip K. Dick's Unreliable Narrators: Craft of Paranoia"
+- "Alfred Bester's Literary Techniques in The Stars My Destination"
+- "Isaac Asimov's Dialogue: Making Info-Dumps Readable"
+- "Leigh Brackett's Noir SF: Combining Genres Seamlessly"
+
+**6B. Literary Criticism:**
+- "Science Fiction as Literature: Defending Genre's Literary Merit"
+- "The New Wave as Literary Movement: SF Grows Up"
+- "Feminist Readings of Golden Age Science Fiction"
+- "Postcolonial Perspectives on Vintage SF"
+- "Psychoanalytic Readings of Philip K. Dick"
+
+**6C. Influence & Legacy:**
+- "How Foundation Influenced Dune, Star Wars, and Modern SF"
+- "Philip K. Dick's Influence on Cyberpunk and Beyond"
+- "The Golden Age's Lasting Influence on Hard SF"
+- "Ursula K. Le Guin's Legacy: How She Changed Science Fiction"
+- "Vintage SF's Influence on Modern Cinema (Blade Runner, The Matrix, Arrival)"
+
+**6D. SF Theory & History:**
+- "What Is Science Fiction? Defining the Genre"
+- "Hard SF vs. Soft SF: A False Dichotomy?"
+- "The Pulp Origins of Science Fiction Tropes"
+- "Science Fiction and the Scientific Method"
+- "Utopia and Dystopia: SF's Political Imagination"
+
+**Content Types:**
+
+**Craft Essays:**
+- Analyze specific technique or approach
+- Provide examples from texts
+- Explain why it works (or doesn't)
+- Lessons for modern writers
+
+**Critical Analysis:**
+- Apply literary theory to SF works
+- Original arguments and perspectives
+- Engage with existing scholarship
+- Academic rigor, accessible prose
+
+**Legacy Articles:**
+- Trace influence from vintage work to modern works
+- Show concrete examples of borrowing, homage, inspiration
+- Assess ongoing relevance
+
+**Estimated Content Volume:**
+- 40 craft analysis articles = 40 articles
+- 30 literary criticism pieces = 30 articles
+- 25 influence/legacy articles = 25 articles
+- 20 theory/history essays = 20 articles
+- **Total: 115 articles in Craft & Criticism pillar**
+
+**SEO Opportunity:**
+- Lower search volume (niche academic/writer queries)
+- But: High engagement, long time-on-page, attracts quality backlinks (academic sites, literary blogs)
+- Positions SF Supernova as serious intellectual authority (not just fan site)
+
+---
+
+**Pillar 7: Community & Culture**
+
+**Scope:** The world around vintage science fiction—fandom history, conventions, awards, adaptations, collecting, and community culture.
+
+**Why This Pillar:**
+- Community building (positions SF Supernova as part of larger community)
+- Cultural context (helps users understand SF beyond just the texts)
+- Beginner-friendly (accessible entry point for those curious about fandom)
+- Evergreen with timely supplements (fandom history evergreen, new adaptations timely)
+
+**Sub-Pillars:**
+
+**7A. Fandom History:**
+- "The History of Science Fiction Fandom (1920s-1980s)"
+- "Worldcon: 80+ Years of SF's Premier Convention"
+- "The Hugo Awards: History and Controversies"
+- "Fanzines and Early SF Community Building"
+- "The Role of Science Fiction Clubs and Societies"
+
+**7B. Awards & Recognition:**
+- "Complete Hugo Award Winners (1953-1980): A Guide"
+- "Nebula Award Winners: Recognizing SF Excellence"
+- "Controversial Hugo/Nebula Snubs: What Should Have Won?"
+- "Retro Hugos: Recognizing Pre-1953 Excellence"
+
+**7C. Adaptations & Media:**
+- "Vintage Sci-Fi Film Adaptations: Hits and Misses"
+- "Foundation on Apple TV+: A Critical Analysis"
+- "Blade Runner vs. Do Androids Dream: Adaptation Study"
+- "Failed Adaptations: Why Some SF Doesn't Translate to Screen"
+- "The Best Vintage SF Films (That Aren't Based on Books)"
+
+**7D. Collecting & Preservation:**
+- "Collecting Vintage Science Fiction: A Beginner's Guide"
+- "First Edition Hunting: What to Look For"
+- "Pulp Magazine Collecting: Prices, Rarity, and Condition"
+- "Digital Preservation: The Role of Archive.org and Others"
+- "Most Valuable Vintage SF Books (And Why)"
+
+**Content Types:**
+
+**Historical Overviews:**
+- Comprehensive history with dates, key figures, events
+- Photos and visuals (magazine covers, convention photos, artifacts)
+- Interviews or quotes from participants (when possible)
+
+**Awards Coverage:**
+- Year-by-year winner lists
+- Analysis of winners (why they won, lasting impact)
+- Controversies and snubs (Hugo drama, etc.)
+
+**Adaptation Reviews:**
+- Compare source material to adaptation
+- Assess fidelity and creative changes
+- Recommend: read first, or watch first?
+
+**Collecting Guides:**
+- Practical advice (where to buy, what to pay, condition grading)
+- Market trends (prices, availability)
+- Preservation tips (care and storage)
+
+**Estimated Content Volume:**
+- 25 fandom history articles = 25 articles
+- 20 awards coverage articles = 20 articles
+- 30 adaptation articles = 30 articles
+- 20 collecting guides = 20 articles
+- **Total: 95 articles in Community & Culture pillar**
+
+**SEO Opportunity:**
+- Moderate search volume (niche but passionate audience)
+- High engagement (fans love this content, share widely)
+- Community building (attracts collectors, convention-goers, fans)
+
+---
+
+**Content Pillar Summary Table**
+
+| Pillar | Sub-Pillars | Est. Articles | Primary Audience | SEO Priority | Product Alignment |
+|--------|-------------|---------------|------------------|--------------|-------------------|
+| **1. Authors & Creators** | Golden Age, New Wave, Pulp, Women/Overlooked | 520+ | All segments | Very High | Author collections |
+| **2. Themes & Concepts** | Classic themes, Scientific concepts, Cultural context | 160-260 | Enthusiasts, Scholars | High | Thematic bundles |
+| **3. Eras & Movements** | Golden Age, Pulp, New Wave, Transitions | 90-133 | Enthusiasts, Students | High | Era collections |
+| **4. Works & Series** | Series, Standalone, Short stories | 500-760 | All segments | Very High | Individual products |
+| **5. Reading Guides & Lists** | Best-of, Beginners, Reading orders, Thematic | 175-205 | Newcomers, Explorers | Very High | All products |
+| **6. Craft & Criticism** | Writing craft, Literary criticism, Influence, Theory | 115 | Writers, Scholars | Medium | Books, membership |
+| **7. Community & Culture** | Fandom, Awards, Adaptations, Collecting | 95 | Collectors, Fans | Medium | Physical products, merch |
+| **TOTAL** | **23 Sub-Pillars** | **1,655-2,088** | **All segments** | **Blended** | **All products** |
+
+---
+
+**Pillar Prioritization & Phasing**
+
+**Phase 1 (Months 0-6): Foundation Pillars**
+
+**Priority 1: Authors & Creators (60% of content effort)**
+- Focus: Tier 1 authors (Asimov, Clarke, Heinlein, Dick, Le Guin)
+- Goal: 30-40 author articles published
+- Rationale: Highest search volume, clearest product alignment, establishes authority
+
+**Priority 2: Reading Guides & Lists (25% of content effort)**
+- Focus: Beginner guides, starter lists, "Best of Golden Age"
+- Goal: 15-20 guides/lists published
+- Rationale: Newcomer-friendly, high shareability, quick wins for SEO
+
+**Priority 3: Works & Series (15% of content effort)**
+- Focus: Foundation, Robot stories, major standalones (Left Hand, Childhood's End)
+- Goal: 10-15 work analyses published
+- Rationale: High search volume for specific titles, product-aligned
+
+**Phase 1 Output:** 55-75 articles establishing foundational authority
+
+---
+
+**Phase 2 (Months 6-12): Expansion & Depth**
+
+**Priority 1: Authors & Creators (40% of content effort)**
+- Expand to Tier 2 authors (Bradbury, Sturgeon, Ballard, Delany, etc.)
+- Deeper coverage of Tier 1 authors (series guides, thematic analysis)
+- Goal: 40-50 additional author articles
+
+**Priority 2: Themes & Concepts (25% of content effort)**
+- Build thematic authority (time travel, AI, dystopia guides)
+- Goal: 20-25 thematic articles
+
+**Priority 3: Works & Series (20% of content effort)**
+- Expand series coverage, add more standalones
+- Goal: 20-25 work analyses
+
+**Priority 4: Eras & Movements (15% of content effort)**
+- Golden Age and New Wave comprehensive guides
+- Goal: 15-20 era articles
+
+**Phase 2 Output:** 95-120 articles, bringing total to 150-195 articles
+
+---
+
+**Phase 3 (Months 12-18): Comprehensive Coverage**
+
+**Balanced Coverage Across All Pillars:**
+- Authors & Creators: 30% (expand Tier 2, add Tier 3 authors)
+- Themes & Concepts: 20% (complete major themes)
+- Works & Series: 20% (deep catalog coverage)
+- Reading Guides & Lists: 15% (thematic lists, advanced guides)
+- Eras & Movements: 10% (complete era coverage)
+- Craft & Criticism: 3% (begin literary analysis)
+- Community & Culture: 2% (fandom, adaptations)
+
+**Phase 3 Output:** 100-120 articles, bringing total to 250-315 articles
+
+---
+
+**Mature State (Months 18-24+): Maintenance & Optimization**
+
+**Content Production:**
+- 2-3 new articles per week (ongoing expansion)
+- 1-2 major updates per week (refresh existing content)
+- Focus shifts from quantity to quality and optimization
+
+**Pillar Distribution (Ongoing):**
+- Authors & Creators: 25%
+- Themes & Concepts: 20%
+- Works & Series: 20%
+- Reading Guides & Lists: 15%
+- Eras & Movements: 10%
+- Craft & Criticism: 5%
+- Community & Culture: 5%
+
+---
+
+**Content Architecture: Topic Clusters & Internal Linking**
+
+**Hub-and-Spoke Model:**
+
+Each content pillar has **hub pages** (comprehensive pillar pages) that link to **spoke articles** (detailed deep dives).
+
+**Example: Authors & Creators Pillar**
+
+**Hub Page:** "Complete Guide to Vintage Science Fiction Authors"
+- Overview of 50+ major authors
+- Organized by era (Pulp, Golden Age, New Wave)
+- Brief intro to each author (2-3 sentences)
+- Links to detailed author pages
+
+**Spoke Articles (Tier 1: Isaac Asimov):**
+- Hub: "Isaac Asimov: Complete Biography and Guide" (5,000 words)
+- Spokes:
+  - "Complete Isaac Asimov Bibliography"
+  - "Foundation Series Reading Order"
+  - "Isaac Asimov's Robot Stories: Complete Guide"
+  - "Asimov's Best Short Stories: Top 25 Ranked"
+  - "Understanding Asimov's Three Laws of Robotics"
+  - "Asimov vs. Clarke: Comparing Golden Age Giants"
+  - "Re-Reading Asimov in 2025: What Holds Up?"
+
+**Internal Linking:**
+- Hub page links to all spokes
+- Spokes link back to hub
+- Spokes link to related spokes (Foundation article links to Robot article)
+- Spokes link across pillars (Asimov biography links to "Golden Age Overview" in Eras pillar)
+
+**SEO Benefit:**
+- Topic clusters signal authority (Google sees comprehensive coverage)
+- Internal linking passes ranking power (link equity flows through cluster)
+- All articles in cluster benefit (halo effect from hub page authority)
+
+---
+
+**Content Production Efficiency**
+
+**Batch Research & Production:**
+- Instead of random article production, focus on one pillar/sub-pillar at a time
+- Example: "Asimov Month"
+  - Week 1: Research (read biographies, bibliographies, criticism, re-read key works)
+  - Week 2-3: Write 8-10 Asimov articles (shared research, templates, efficient)
+  - Week 4: Publish, optimize, interlink
+- **Result:** 8-10 related articles in 4 weeks vs. 8 weeks for scattered articles
+
+**Templates & Frameworks:**
+- Author biography template (consistent structure across all authors)
+- Reading order guide template (visual flowchart, pros/cons sections)
+- Work analysis template (plot, themes, context, legacy)
+- **Result:** Faster writing, consistent quality, efficient production
+
+---
+
+**Summary: Content Pillars as Strategic Framework**
+
+**Why Content Pillars Matter:**
+- **Topical Authority:** Concentrated expertise beats scattered coverage (SEO advantage)
+- **Production Efficiency:** Systematic production faster and better quality (resource optimization)
+- **Comprehensive Coverage:** Ensures no gaps, balanced content across user needs (user experience)
+- **Product Alignment:** Direct connection between content and catalog (conversion optimization)
+
+**7 Content Pillars:**
+1. **Authors & Creators** (520+ articles, highest priority)
+2. **Themes & Concepts** (160-260 articles, intellectual depth)
+3. **Eras & Movements** (90-133 articles, historical context)
+4. **Works & Series** (500-760 articles, highest search volume)
+5. **Reading Guides & Lists** (175-205 articles, high shareability)
+6. **Craft & Criticism** (115 articles, authority building)
+7. **Community & Culture** (95 articles, community engagement)
+
+**Total Content Opportunity:** 1,655-2,088 articles (multi-year content roadmap)
+
+**Phased Rollout:**
+- Phase 1: Foundation (55-75 articles, Authors + Lists focus)
+- Phase 2: Expansion (95-120 articles, add Themes and Eras)
+- Phase 3: Comprehensive (100-120 articles, all pillars)
+- Mature: Maintenance + optimization (2-3 new + 1-2 updated per week)
+
+**The content pillar framework transforms content strategy from reactive (what should we write today?) to systematic (comprehensive coverage executed efficiently). Pillars create SEO moats, production efficiency, and complete user journeys—turning content from marketing tactic into sustainable competitive advantage.**
 ### 6.3 Component 2: Membership & Account System (Option 2)
 
 ### 6.4 Component 3: Discovery & Content Navigation Engine (Option 1)
