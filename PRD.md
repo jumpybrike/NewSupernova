@@ -17277,8 +17277,663 @@ Breakdown of all major components:
 •⁠  ⁠Future structured data / graph layer
 Explains relationship to revenue.
 
-### 6.1 System Architecture Overview
+### 6.1 Content Strategy Overview & Principles
 
+**Strategic Overview**
+
+Content is the **engine of SF Supernova's growth**, serving as the primary customer acquisition channel, brand-building mechanism, and value delivery system. In an organic-first business model with no paid advertising budget, content performs multiple critical functions simultaneously: it attracts visitors through SEO, educates and engages the audience, establishes authority and trust, and converts readers into customers and members.
+
+**Core Principle:** *"Create content so valuable that users would pay for it—then give it away to build audience, authority, and trust."*
+
+SF Supernova's content strategy is not a marketing afterthought—it's the **foundational growth mechanism** that makes everything else possible. Without exceptional content, there's no traffic, no audience, no customers, no revenue, and no business.
+
+---
+
+**Content's Strategic Role**
+
+**1. Customer Acquisition Engine (Primary Function)**
+
+Content is SF Supernova's primary customer acquisition channel, replacing the role paid advertising plays in traditional startups.
+
+**How Content Acquires Customers:**
+
+**Step 1: Discovery (SEO Traffic)**
+- User searches Google: "best golden age science fiction novels"
+- SF Supernova article ranks #1-3 organically
+- User clicks, lands on comprehensive guide
+- **Outcome:** 5,000-10,000 organic visits/month from one high-ranking article
+
+**Step 2: Engagement (Value Delivery)**
+- User reads article, finds it exceptionally helpful
+- Discovers SF Supernova offers curated products, audiobooks, tools
+- Browses additional articles, explores catalog
+- **Outcome:** Average 3-5 page views per session, 4-6 minutes on site
+
+**Step 3: Conversion (Email → Purchase → Membership)**
+- User signs up for newsletter (lead magnet, starter guide)
+- Receives welcome sequence with product recommendations
+- Makes first purchase (ebook bundle, audiobook)
+- Converts to membership within 6-12 months
+- **Outcome:** 12-15% of email subscribers become paying customers
+
+**Content ROI:**
+- One well-ranking article can generate 50,000-100,000 visits over its lifetime
+- At 3.5% email capture rate: 1,750-3,500 email subscribers from one article
+- At 12% purchase conversion: 210-420 paying customers from one article
+- **One article can generate $3,000-10,000+ in lifetime customer value**
+
+**Investment vs. Return:**
+- Cost to produce one article: $150-300 (10-20 hours founder time)
+- Lifetime customer value generated: $3,000-10,000+
+- **ROI: 10-30x return on content investment**
+
+---
+
+**2. Brand Authority & Trust Building**
+
+Content establishes SF Supernova as the **definitive authority** on vintage science fiction, building trust that converts casual visitors into loyal customers.
+
+**Authority Signals Content Creates:**
+
+**Expertise Demonstration:**
+- Comprehensive author bibliographies (complete works, publication history, context)
+- Deep thematic analysis (exploring complex ideas in vintage sci-fi)
+- Historical context (cultural, technological, political influences on works)
+- Critical perspective (intelligent analysis, not just plot summaries)
+
+**Credibility Indicators:**
+- Original research (not just regurgitating Wikipedia)
+- Citations and references (linking to primary sources, academic work)
+- Nuanced perspective (acknowledging complexity, avoiding simplistic takes)
+- Consistent quality (every article maintains high standards)
+
+**Trust Building:**
+- Transparent recommendations (honest about what's great, what's dated)
+- No hidden agendas (affiliate links disclosed, editorial independence maintained)
+- User-first orientation (helpful content, not just sales pitches)
+- Consistent voice and values (mission-driven, community-focused)
+
+**Trust → Conversion:**
+- Users trust SF Supernova's curation (more likely to purchase recommended products)
+- Users trust membership value proposition (content quality proves platform quality)
+- Users trust product quality (ebooks, audiobooks will be professionally done)
+- **Trust reduces friction at every conversion point**
+
+---
+
+**3. SEO Moat & Competitive Advantage**
+
+Content creates a **defensible competitive moat** that compounds over time and becomes increasingly difficult for competitors to replicate.
+
+**How Content Builds Moat:**
+
+**Content Library Scale:**
+- 100-200 articles by Month 12
+- 300-500 articles by Month 24
+- Each article ranks for 10-50 keywords
+- **Total ranking keywords: 3,000-25,000**
+
+**Domain Authority Accumulation:**
+- Each high-quality article earns backlinks
+- Backlinks increase domain authority (DA)
+- Higher DA improves rankings for all content
+- **Virtuous cycle: content → backlinks → authority → better rankings → more traffic → more content**
+
+**First-Mover Advantage:**
+- Ranking #1 for key terms early creates lasting advantage
+- Users click #1 result disproportionately (33% CTR vs. 15% for #2)
+- Dislodging #1 result requires significantly better content + time
+- **Early content leadership compounds into sustained advantage**
+
+**Network Effects:**
+- Internal linking between articles (improves SEO, increases page views)
+- Users discover more content (longer sessions, more engagement)
+- More engagement signals value to Google (improves rankings)
+- **Content network becomes more valuable as it grows**
+
+**Time Advantage:**
+- SEO rewards content age (older, established content ranks better)
+- Competitors starting later face uphill battle (need to be significantly better)
+- Content library represents 1,000-2,000+ hours of work (hard to replicate)
+- **Time invested in content creates widening competitive gap**
+
+---
+
+**4. Product Market Fit Validation & Customer Research**
+
+Content serves as **continuous customer research**, revealing what users care about, search for, and engage with.
+
+**Content as Research Tool:**
+
+**Search Intent Validation:**
+- Which topics generate most search traffic? (users searching for this = demand)
+- Which keywords convert best? (commercial intent indicators)
+- What questions do users ask? (inform product development)
+
+**Engagement Signals:**
+- Which articles have highest time-on-page? (deep user interest)
+- Which articles generate most email signups? (lead magnet effectiveness)
+- Which articles drive most product purchases? (conversion power)
+
+**User Feedback Loop:**
+- Comments reveal user knowledge level, interests, objections
+- Questions highlight gaps in content or product offerings
+- Testimonials validate value proposition
+
+**Product Development Insights:**
+- Popular articles → product opportunities (e.g., "Best Time Travel Stories" → time travel bundle)
+- Underserved topics → content gaps (create content, then products)
+- User questions → premium tool features (e.g., "How do I track what I've read?" → collection management)
+
+**Example:**
+- "Complete Asimov Reading Order" article gets 50K visits/year
+- Signals strong demand for Asimov works
+- Informs product priority: create comprehensive Asimov audiobook collection
+- Result: High-converting product because demand pre-validated
+
+---
+
+**5. Community Building & Engagement**
+
+Content creates the foundation for **community formation**, giving users something to discuss, debate, and bond over.
+
+**Content as Community Catalyst:**
+
+**Shared Knowledge Base:**
+- Articles provide common reference points
+- Users cite SF Supernova articles in discussions
+- Community develops shared vocabulary and understanding
+
+**Discussion Prompts:**
+- Controversial takes spark debate (e.g., "Are Heinlein's Later Works Worth Reading?")
+- Rankings invite disagreement (e.g., "Top 50 Golden Age Novels")
+- Open questions encourage participation (e.g., "What Makes Great Vintage Sci-Fi?")
+
+**Expert Contributions:**
+- Deep-dive articles attract serious enthusiasts
+- Enthusiasts comment, share insights, correct errors
+- Best contributors become community leaders, advocates
+
+**Social Sharing:**
+- Users share exceptional articles on Reddit, forums, social media
+- Sharing creates brand awareness and drives traffic
+- Shared content becomes conversation starter in communities
+
+---
+
+**6. Long-Term Asset Accumulation**
+
+Content is a **compounding asset** that increases in value over time, unlike paid advertising which stops working the moment you stop paying.
+
+**Content as Permanent Asset:**
+
+**Paid Advertising (Traditional Model):**
+- Spend $10,000 → Generate 100 customers → Stop spending → Traffic stops
+- No residual value (money gone, customers acquired, but no ongoing benefit)
+- Linear relationship: 2x spend = 2x customers (no leverage)
+
+**Content Marketing (SF Supernova Model):**
+- Spend $10,000 on content (50-100 articles) → Generate 100 customers in Year 1
+- Content keeps ranking → Generates 300 customers in Year 2, 500 in Year 3, etc.
+- **Compounding returns: same content generates increasing value over time**
+
+**Content Appreciation:**
+- Well-maintained content gains authority over time (SEO age factor)
+- Content library grows, internal linking improves (network effects)
+- Brand reputation compounds (more mentions, more backlinks)
+- **Assets become more valuable, not less, over time**
+
+**Optionality:**
+- Content can be repurposed (blog → book → course → video)
+- Content attracts partnership opportunities (media mentions, collaborations)
+- Content creates business development leads (institutional licensing interest)
+- **Strategic options multiply as content library grows**
+
+---
+
+**Content Strategy Principles**
+
+**Principle 1: Quality Over Quantity (Always)**
+
+**The Temptation:**
+- Publish 10 mediocre articles per week to maximize volume
+- Hit keyword targets without depth
+- Prioritize speed over substance
+
+**Why This Fails:**
+- Google rewards quality, not just quantity (thin content doesn't rank)
+- Users bounce from mediocre content (high bounce rate hurts SEO)
+- Brand reputation suffers (known for mediocrity, not excellence)
+- No competitive moat (anyone can produce mediocre content fast)
+
+**SF Supernova Approach:**
+- Publish 2-4 exceptional articles per week (depth, research, originality)
+- Every article is something we're proud of (no "good enough" content)
+- Comprehensive coverage (3,000-5,000+ words for major topics)
+- Original research and perspective (not just rehashed information)
+
+**Quality Indicators:**
+- Would we pay for this content? (subscriber-worthy quality)
+- Is this the best resource on this topic? (definitive guide ambition)
+- Does this reflect our expertise? (authority demonstration)
+- Would we want our brand associated with this? (reputation alignment)
+
+**Result:** Fewer articles, but each one ranks well, attracts links, builds authority, and drives meaningful traffic.
+
+---
+
+**Principle 2: User Intent First, SEO Second**
+
+**The Temptation:**
+- Write to keyword targets, not user needs
+- Stuff keywords unnaturally
+- Prioritize ranking over helpfulness
+
+**Why This Fails:**
+- Google's algorithm detects and penalizes keyword manipulation
+- Users don't engage with content that doesn't actually help them
+- High bounce rates signal low quality to search engines
+- Brand reputation damaged (known for SEO spam, not helpfulness)
+
+**SF Supernova Approach:**
+- Understand what users actually want when they search
+- Write content that comprehensively answers their questions
+- Use keywords naturally (they'll appear organically in helpful content)
+- Prioritize user satisfaction over mechanical SEO optimization
+
+**User Intent Examples:**
+
+**Query: "best vintage science fiction novels"**
+- **What User Wants:** Curated recommendations with context (why each is great, who it's for)
+- **Not:** Keyword-stuffed list with no substance
+- **SF Supernova Delivers:** Comprehensive guide, organized by subgenre, with historical context and modern perspective
+
+**Query: "Foundation series reading order"**
+- **What User Wants:** Clear, actionable reading order (chronological vs. publication) with reasoning
+- **Not:** Vague overview or confusing information
+- **SF Supernova Delivers:** Definitive guide with visual timeline, pros/cons of each approach, recommendations
+
+**User Intent → SEO Success:**
+- Content that satisfies user intent gets shared, linked, and engaged with
+- Google's algorithm detects positive engagement signals (time on page, low bounce rate)
+- Engagement signals boost rankings more than keyword density ever could
+- **Helpfulness is the best SEO strategy**
+
+---
+
+**Principle 3: Evergreen Focus with Timely Supplements**
+
+**Evergreen Content (80% Focus):**
+- Content that remains relevant and valuable indefinitely
+- Examples: "Complete Philip K. Dick Bibliography," "Guide to Time Travel Stories," "Understanding Dystopian Sci-Fi"
+- Advantages: Compounds over years, consistent traffic, low maintenance
+
+**Timely Content (20% Supplement):**
+- Content responding to current events, trends, or moments
+- Examples: "New PKD Adaptation: How It Compares to the Original," "Sci-Fi Books for 2024 Elections Anxiety"
+- Advantages: Captures spikes in interest, shows platform is active, builds community engagement
+
+**Strategic Balance:**
+- **Evergreen content is the foundation** (consistent traffic, long-term value)
+- **Timely content is the amplifier** (traffic spikes, shareability, relevance)
+- Never sacrifice evergreen content production for timely content
+- Timely content should connect back to evergreen content (internal linking)
+
+**Example:**
+- Evergreen: "Complete Guide to Asimov's Foundation Series" (published Month 3)
+- Generates steady 2,000-3,000 visits/month indefinitely
+- Timely: "Apple's Foundation Series: What the Adaptation Gets Right (and Wrong)" (published when show launches)
+- Generates 15,000 visits in first month, then trails off
+- Timely article links to evergreen guide (drives ongoing traffic to evergreen asset)
+- **Result:** Timely content amplifies evergreen foundation without replacing it
+
+---
+
+**Principle 4: Educational, Not Promotional**
+
+**The Temptation:**
+- Turn every article into product pitch
+- Interrupt content with aggressive CTAs
+- Prioritize conversion over value delivery
+
+**Why This Fails:**
+- Users flee promotional content (bounce rate skyrockets)
+- Google penalizes thin, promotional content
+- Brand reputation: known as salesy, not helpful
+- Paradox: aggressive promotion reduces conversions (trust destroyed)
+
+**SF Supernova Approach:**
+- Content is genuinely helpful, educational, and valuable
+- Products mentioned only when naturally relevant
+- No hard sells, no aggressive CTAs mid-content
+- Trust that value delivery leads to conversions (and it does)
+
+**Educational Content Framework:**
+
+**Primary Value: Teach, Explain, Guide**
+- "Here's everything you need to know about [topic]"
+- Comprehensive, actionable, immediately useful
+- No gates, no paywalls on core content (trust builder)
+
+**Secondary: Suggest Relevant Products (Softly)**
+- End of article: "If you enjoyed this analysis, check out our curated Asimov collection"
+- Sidebar: "Explore our audiobook collection"
+- No interruption of reading experience
+
+**Conversion Through Trust:**
+- User appreciates educational value (builds trust)
+- User explores site, discovers products (organic discovery)
+- User converts because they trust curation (not because they were pushed)
+- **Trust-based conversion rates higher than aggressive promotion**
+
+---
+
+**Principle 5: Original Research & Perspective**
+
+**The Problem with Generic Content:**
+- Most content online is rehashed from other sources
+- Wikipedia summaries rewritten in different words
+- "Top 10" lists with no original thought
+- Users can find this information anywhere (no competitive advantage)
+
+**SF Supernova Differentiation:**
+- Original research (reading primary sources, not secondary summaries)
+- Unique perspective (founder's expertise, modern lens on vintage works)
+- Comprehensive coverage (go deeper than anyone else)
+- Surprising insights (things users won't find elsewhere)
+
+**Original Research Examples:**
+
+**"The Evolution of AI Anxiety in 1950s-1970s Sci-Fi"**
+- Read 100+ vintage sci-fi works featuring AI
+- Analyze themes, patterns, historical context
+- Create original thesis: how Cold War anxieties shaped AI portrayal
+- **Result:** Shareable, linkable, unique—no one else has done this work
+
+**"Complete Bibliography of Women Writers in Golden Age Sci-Fi"**
+- Compile comprehensive list (not available anywhere else)
+- Research each author's works, publication history, pseudonyms
+- Highlight overlooked contributions
+- **Result:** Becomes definitive reference, attracts backlinks from academics and fans
+
+**Unique Perspective Examples:**
+
+**"Re-Reading Heinlein in 2025: What Holds Up and What Doesn't"**
+- Honest, nuanced take (not hagiography or dismissal)
+- Acknowledge dated elements without condemning entire body of work
+- Provide modern lens (what contemporary readers should know)
+- **Result:** Sparks discussion, positions SF Supernova as thoughtful, balanced authority
+
+**Competitive Advantage:**
+- Original work can't be easily replicated (requires time, expertise, effort)
+- Unique perspective attracts audience (people seek out SF Supernova's take)
+- Shareable and linkable (others reference our original research)
+- **Original content creates moat that generic content can't**
+
+---
+
+**Principle 6: Content Network Effects**
+
+**Isolated Articles (Weak):**
+- Each article stands alone
+- No connections between topics
+- User reads one article, then leaves
+- **Result:** High bounce rate, low page views per session, limited SEO benefit
+
+**Interconnected Content Network (Strong):**
+- Articles link to related articles (internal linking)
+- Users discover more content (reading journey)
+- Longer sessions, more page views (engagement signals)
+- SEO benefit: link equity flows through site, all content ranks better
+- **Result:** Users stay longer, engage deeper, convert more, SEO improves**
+
+**Internal Linking Strategy:**
+
+**Contextual Links (In-Article):**
+- Link to related topics naturally mentioned in article
+- Example: Article on Asimov mentions Clarke → link to Clarke biography
+- User clicks, reads Clarke article, discovers more
+- **Pattern: one article → three articles → explore catalog → purchase**
+
+**Hub-and-Spoke Model:**
+- Hub: Comprehensive guide (e.g., "Complete Guide to Golden Age Sci-Fi")
+- Spokes: Detailed articles on specific topics (individual authors, themes, subgenres)
+- Hub links to all spokes, spokes link back to hub
+- **Result: Content cluster that dominates search for related terms**
+
+**Related Content Modules:**
+- End of article: "You might also enjoy..."
+- Algorithmically selected or manually curated
+- Encourages continued exploration
+- **Goal: 3+ articles per session (demonstrates engagement)**
+
+**SEO Benefit:**
+- Internal links pass "link equity" (ranking power)
+- Well-linked content ranks better than isolated content
+- Content clusters signal topical authority to Google
+- **Network effect: whole content library becomes more powerful than sum of parts**
+
+---
+
+**Principle 7: Continuous Optimization & Improvement**
+
+**Content Isn't "Done" After Publishing:**
+- Google rewards freshness and updates
+- User needs evolve over time
+- New information becomes available
+- Competitors publish competing content
+
+**Content Maintenance Strategy:**
+
+**Performance Monitoring:**
+- Track traffic to each article (Google Analytics)
+- Monitor rankings for target keywords (SEO tools)
+- Identify underperforming content (published but not ranking)
+- Identify declining content (was ranking, now dropping)
+
+**Update Cycles:**
+
+**Quarterly Review (High-Priority Content):**
+- Top 20% of traffic-generating articles
+- Refresh statistics, examples, recommendations
+- Add new sections (expand and improve)
+- Update for current context (new adaptations, recent relevance)
+
+**Annual Review (All Content):**
+- Review entire content library
+- Identify outdated information (correct, update)
+- Merge overlapping or thin articles (consolidate)
+- Retire or redirect very low-performing content
+
+**Optimization Tactics:**
+
+**Improve Rankings (For Close-but-Not-Ranking Content):**
+- Expand thin sections (go deeper on subtopics)
+- Add multimedia (images, charts, tables)
+- Improve internal linking (link from high-authority pages)
+- Strengthen meta descriptions and titles (improve CTR)
+
+**Maintain Rankings (For Currently-Ranking Content):**
+- Regular freshness updates (Google loves updated content)
+- Defend against new competitors (monitor and out-compete)
+- Add new sections as topic evolves
+
+**Convert Better (For High-Traffic Content):**
+- A/B test CTAs (email signup prompts, product recommendations)
+- Improve user experience (formatting, readability, load times)
+- Add relevant product suggestions (natural, not forced)
+
+**Continuous Improvement Mindset:**
+- Content is living asset, not static publication
+- Small improvements compound over time
+- Well-maintained content library outperforms neglected library by 2-5x
+- **Investment in optimization yields high ROI (improve existing assets vs. always creating new)**
+
+---
+
+**Content Success Metrics & KPIs**
+
+**Acquisition Metrics:**
+- Organic search traffic (monthly visitors from Google)
+- Traffic growth rate (month-over-month, year-over-year)
+- Keyword rankings (# of keywords in top 3, top 10, top 50)
+- Domain authority (Moz DA, Ahrefs DR)
+
+**Engagement Metrics:**
+- Average time on page (target: 3-5 minutes for long-form)
+- Bounce rate (target: <60% for content pages)
+- Pages per session (target: 3-5 pages)
+- Scroll depth (target: 50%+ read full article)
+
+**Conversion Metrics:**
+- Email capture rate (target: 3.5-5% of visitors)
+- Content-to-product conversion (target: 5-8% of article readers explore products)
+- Content-to-membership conversion (target: 2-4% of article readers ultimately become members)
+
+**Content Quality Metrics:**
+- Backlinks per article (target: 3-10 backlinks over article lifetime)
+- Social shares (Reddit, Twitter/X, forums)
+- Comments and engagement (discussion quality and volume)
+- Direct traffic (users returning directly to SF Supernova, bookmarking)
+
+**SEO Performance Metrics:**
+- Featured snippets (# of queries where SF Supernova appears in position 0)
+- "People also ask" appearances (brand visibility in Google's SERP features)
+- Average ranking position for target keywords
+- Ranking velocity (how quickly new content ranks)
+
+**Target Benchmarks (Month 12):**
+- ✅ 100+ published articles
+- ✅ 25,000+ monthly organic visitors
+- ✅ 1,500+ keywords ranking in top 50
+- ✅ 100+ keywords ranking in top 10
+- ✅ Domain Authority 30+ (from DA 0-10 at launch)
+- ✅ 3.5%+ email capture rate
+- ✅ 4+ minutes average time on page
+
+**Target Benchmarks (Month 24):**
+- ✅ 250+ published articles
+- ✅ 100,000+ monthly organic visitors
+- ✅ 5,000+ keywords ranking in top 50
+- ✅ 500+ keywords ranking in top 10
+- ✅ Domain Authority 40+
+- ✅ 4%+ email capture rate
+- ✅ 4.5+ minutes average time on page
+
+---
+
+**Content Investment & Resource Allocation**
+
+**Founder Time Allocation:**
+
+**Phase 1 (Months 0-6):**
+- Content: 50-60% of time (200+ hours/month)
+- Product/platform: 30-35%
+- Business operations: 10-15%
+- **Rationale:** Content is the bottleneck—no content = no traffic = no business
+
+**Phase 2 (Months 6-12):**
+- Content: 40-50% (150-180 hours/month)
+- Product/platform: 35-40%
+- Business operations: 15-20%
+- **Rationale:** Content library compounding, can reduce new production, focus on product expansion
+
+**Phase 3 (Months 12-18):**
+- Content: 30-40% (120-150 hours/month)
+- Product/platform: 40-45%
+- Business operations: 20-25%
+- **Rationale:** Mature content library generates consistent traffic, maintenance mode, shift to product/premium tools
+
+**Mature State (Months 18+):**
+- Content: 20-30% (80-120 hours/month)
+- Product/platform: 40-50%
+- Business operations/team: 30%
+- **Rationale:** Established content moat, ongoing optimization, more time for business scaling
+
+---
+
+**Outsourcing & Leverage:**
+
+**What Founder Must Do:**
+- Core editorial direction (topic selection, perspective, voice)
+- Original research (reading primary sources, developing unique insights)
+- High-leverage content (flagship pieces, comprehensive guides)
+- Quality control (final edit, brand alignment)
+
+**What Can Be Outsourced (Phase 2+):**
+- Research assistance (fact-checking, bibliography compilation)
+- First drafts (contractor writes from outline, founder edits heavily)
+- Editing and proofreading (polish and grammar)
+- Formatting and publishing (WordPress upload, image selection)
+- Content refresh (updating existing articles with new information)
+
+**Outsourcing Budget:**
+- Phase 1: $500-1,000/month (editing, proofreading only)
+- Phase 2: $1,500-2,500/month (research assistance, first drafts for some content)
+- Phase 3: $3,000-5,000/month (more contractor-written content, founder focuses on high-leverage work)
+
+**Leverage Strategy:**
+- Founder writes 1 flagship article/week (comprehensive, original research)
+- Contractors write 2-3 supporting articles/week (from founder outlines, founder edits)
+- **Result: 3-4 articles/week published, founder focuses on highest-value work**
+
+---
+
+**Content Risk Management**
+
+**Risk 1: Google Algorithm Changes**
+- **Threat:** Algorithm update penalizes SF Supernova content style
+- **Mitigation:** Follow white-hat SEO, focus on quality and helpfulness (aligns with Google's long-term goals)
+- **Contingency:** Diversify traffic sources (email list, direct traffic, social, partnerships)
+
+**Risk 2: AI-Generated Content Flooding Market**
+- **Threat:** Competitors use AI to produce 10x more content, diluting SEO advantage
+- **Mitigation:** Emphasize original research and unique perspective (AI can't replicate expertise and original thought)
+- **Differentiation:** Quality and authority moat (AI content is generic, SF Supernova content is definitive)
+
+**Risk 3: Founder Bandwidth Constraints**
+- **Threat:** Founder burnout, can't maintain content production pace
+- **Mitigation:** Outsource tactically, build content library that compounds, accept slower growth if necessary
+- **Contingency:** Prioritize highest-ROI content (fewer, better articles vs. high volume)
+
+**Risk 4: Competitor Content Superiority**
+- **Threat:** Well-funded competitor produces better content, outranks SF Supernova
+- **Mitigation:** First-mover advantage, continuous improvement, focus on niche depth (be unbeatable in vintage sci-fi, don't compete broadly)
+- **Moat:** Content library scale (100-500 articles) hard to replicate even with funding
+
+---
+
+**Summary: Content as Strategic Foundation**
+
+**Why Content Strategy is Critical:**
+- **Only acquisition channel** (no paid ads, no sales team—content or nothing)
+- **Compounding asset** (content from Month 3 still generates traffic in Year 5)
+- **Competitive moat** (content library and domain authority hard to replicate)
+- **Low CAC** (organic content = $60-80 CAC vs. $200-500 for paid acquisition)
+- **Trust builder** (quality content proves platform quality, drives conversions)
+
+**Content Strategy Principles Recap:**
+1. **Quality over quantity** (fewer exceptional articles > many mediocre articles)
+2. **User intent first** (helpfulness beats mechanical SEO optimization)
+3. **Evergreen focus** (80% timeless content, 20% timely supplements)
+4. **Educational, not promotional** (trust-based conversion > aggressive sales)
+5. **Original research** (unique perspective creates defensible advantage)
+6. **Network effects** (interconnected content more powerful than isolated articles)
+7. **Continuous optimization** (maintain and improve existing assets, not just create new)
+
+**Content Investment:**
+- Phase 1: 50-60% founder time (content bottleneck, highest-leverage activity)
+- Phase 2-3: 30-50% founder time (library compounding, maintenance mode)
+- Outsourcing: $500-5,000/month (leverage founder time, scale production)
+
+**Expected Outcomes:**
+- Month 12: 100+ articles, 25K+ visitors/month, 1,500+ ranking keywords
+- Month 24: 250+ articles, 100K+ visitors/month, 5,000+ ranking keywords
+- Mature: Content moat established, consistent traffic, sustainable acquisition engine
+
+**Content strategy isn't just about creating articles—it's about building a compounding asset that attracts customers, establishes authority, and creates a defensible competitive advantage. Every article is a permanent investment in SF Supernova's growth engine, generating returns for years to come.**
+
+**The goal: Build content so valuable, comprehensive, and authoritative that SF Supernova becomes the undisputed #1 destination for anyone interested in vintage science fiction—and content is the engine that makes this vision reality.**
 ### 6.2 Component 1: Product Creation Workflow (Option 3)
 
 ### 6.3 Component 2: Membership & Account System (Option 2)
