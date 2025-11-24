@@ -29139,8 +29139,774 @@ SF Supernova Reliability Report - [Month]
 5. **Invest in Quality:** Managed hosting ($25-35/month) vs. cheap shared hosting ($5/month)—reliability worth the premium
 
 **Reliability is invisible when it works, catastrophic when it fails. Users notice downtime far more than uptime. The goal: achieve 99.9% uptime so consistently that users never think about reliability—they simply trust SF Supernova will be there when they need it. Reliability is the foundation of trust, and trust is the foundation of revenue.**
+
+
 ### 8.4 Accessibility & Inclusive Design Requirements
 
+**Strategic Overview**
+
+Accessibility and inclusive design ensure **SF Supernova is usable by everyone**, regardless of disability, assistive technology, device, or personal circumstances. While functional requirements define what features exist and non-functional requirements define how well they perform, accessibility requirements define **who can use them**. An inaccessible site excludes potential customers, violates legal requirements, damages SEO, and contradicts values of inclusivity.
+
+**Core Principle:** *"Accessibility is not a feature—it's a fundamental requirement. Exclude 15% of the population (people with disabilities) and you exclude 15% of potential revenue. Accessibility is both ethical imperative and business necessity."*
+
+For SF Supernova, accessibility is critical because:
+1. **Legal compliance:** ADA (Americans with Disabilities Act), WCAG (Web Content Accessibility Guidelines) increasingly enforced—non-compliance risks lawsuits
+2. **Market size:** 15% of global population has some form of disability (1+ billion people)—accessible design expands addressable market
+3. **SEO benefit:** Many accessibility best practices overlap with SEO (alt text, semantic HTML, clear structure)—accessible sites rank better
+4. **Aging audience:** Vintage sci-fi enthusiasts skew older (40-70+)—vision, hearing, motor impairments more common—accessible design serves core audience
+5. **Universal benefit:** Accessibility improvements help everyone (captions help in noisy environments, keyboard navigation helps power users, clear contrast helps in bright sunlight)
+
+---
+
+**Accessibility Philosophy: Design for All, Not Design for Average**
+
+**The "Curb Cut Effect":**
+
+Curb cuts (ramps at sidewalk corners) were mandated for wheelchair users, but they benefit:
+- Parents with strollers
+- Delivery workers with carts
+- Travelers with luggage
+- Cyclists
+- Everyone navigating uneven terrain
+
+**Web Accessibility is the Same:**
+- Alt text (for screen readers) helps Google understand images (SEO benefit)
+- Captions (for deaf users) help users in noisy environments, non-native speakers, silent video viewing
+- Keyboard navigation (for motor-impaired users) helps power users (keyboard shortcuts faster than mouse)
+- High contrast (for vision-impaired users) helps everyone reading in bright sunlight
+
+**SF Supernova's Approach:**
+- **Not:** Build for "typical" user, add accessibility as afterthought
+- **Instead:** Build accessibility into design from start—default to inclusive patterns
+
+---
+
+**Accessibility Standards: WCAG 2.1 Level AA Compliance**
+
+**Web Content Accessibility Guidelines (WCAG):**
+
+**Three Conformance Levels:**
+- **Level A:** Minimum accessibility (basic, but insufficient)
+- **Level AA:** Recommended standard (legal requirement in many jurisdictions, achievable for most sites)
+- **Level AAA:** Highest accessibility (difficult to achieve for all content, not universally required)
+
+**SF Supernova Target: WCAG 2.1 Level AA Compliance**
+- **Why AA:** Industry standard, legal compliance, achievable without excessive cost
+- **Why not AAA:** Overly restrictive (e.g., AAA requires captions AND sign language for videos—SF Supernova likely doesn't produce video, but if we did, captions sufficient)
+- **Rationale:** AA provides excellent accessibility for vast majority of users without unrealistic constraints
+
+---
+
+**WCAG 2.1 Four Principles (POUR):**
+
+**1. Perceivable:** Information and UI components must be presentable to users in ways they can perceive
+- Users must be able to perceive content (see, hear, or feel via assistive technology)
+- Examples: Alt text for images, captions for videos, sufficient color contrast
+
+**2. Operable:** UI components and navigation must be operable
+- Users must be able to operate interface (keyboard, mouse, voice, touch, assistive devices)
+- Examples: Keyboard-accessible navigation, sufficient time to read content, no seizure-inducing flashing
+
+**3. Understandable:** Information and operation of UI must be understandable
+- Users must be able to understand content and how to use interface
+- Examples: Clear language, predictable navigation, error messages that explain how to fix
+
+**4. Robust:** Content must be robust enough to be interpreted reliably by wide variety of user agents (browsers, assistive technology)
+- Users must be able to access content as technologies advance
+- Examples: Valid HTML, compatibility with screen readers, works across browsers
+
+---
+
+**Accessibility Requirements by Category**
+
+**Category 1: Visual Accessibility (Vision Impairments)**
+
+**Problem:** Users with blindness, low vision, color blindness can't access visual-only information.
+
+**Solutions:**
+
+**1.1 Alt Text for All Images (WCAG 1.1.1 - Level A)**
+
+**Requirement:** Every image must have descriptive alt text.
+
+**Implementation:**
+- **Article featured images:** Describe image meaningfully
+  - ❌ Bad: `alt="image"`
+  - ❌ Bad: `alt="foundation-cover.jpg"`
+  - ✅ Good: `alt="Foundation by Isaac Asimov book cover, showing galactic spiral against black space"`
+  
+- **Product images (book covers):**
+  - ✅ `alt="Foundation ebook cover by Isaac Asimov"`
+  
+- **Inline article images:**
+  - ✅ `alt="Isaac Asimov portrait, 1965, smiling in suit and tie"`
+  
+- **Decorative images (no informational value):**
+  - ✅ Use empty alt: `alt=""` (tells screen readers to skip image)
+
+**Quality Check:**
+- Read alt text without seeing image—does it convey necessary information?
+- Keep concise (125 characters or less—screen readers truncate longer)
+- Don't start with "Image of..." (screen readers announce it's an image)
+
+**Enforcement:**
+- Pre-publish checklist: Every image has alt text (no exceptions)
+- Quarterly audit: Random sample of 50 images, verify alt text quality
+
+---
+
+**1.2 Sufficient Color Contrast (WCAG 1.4.3 - Level AA)**
+
+**Requirement:** Text must have sufficient contrast against background for readability.
+
+**Contrast Ratios (WCAG AA):**
+- **Normal text:** 4.5:1 minimum contrast ratio
+- **Large text (18pt+ or 14pt+ bold):** 3:1 minimum contrast ratio
+- **UI components (buttons, form borders):** 3:1 minimum contrast ratio
+
+**SF Supernova Implementation:**
+- **Body text:** Dark gray (#333333) on white (#FFFFFF) = 12.6:1 ratio (exceeds 4.5:1 requirement)
+- **Links:** Blue (#0066cc) on white = 6.3:1 ratio (exceeds 4.5:1 requirement)
+- **Buttons:** White text (#ffffff) on dark blue (#003366) = 12.6:1 ratio (excellent)
+- **Avoid:** Light gray text on white background (common design mistake—poor contrast)
+
+**Testing Tools:**
+- **WebAIM Contrast Checker:** https://webaim.org/resources/contrastchecker/ (free, instant)
+- **Browser DevTools:** Chrome, Firefox have built-in contrast checkers
+- **Quarterly audit:** Check top 20 pages with contrast checker (ensure no regressions)
+
+---
+
+**1.3 Resizable Text (WCAG 1.4.4 - Level AA)**
+
+**Requirement:** Users must be able to resize text up to 200% without loss of content or functionality.
+
+**Implementation:**
+- **Use relative units:** Font sizes in `em` or `rem` units (not `px` pixels)
+  - Example: `font-size: 1.125rem` (18px default, scales with user preference)
+- **Responsive design:** Layout adapts when text enlarged (no horizontal scrolling, no overlapping text)
+- **Test:** Browser zoom to 200% (Ctrl/Cmd + +), verify text readable, layout intact
+
+**Enforcement:**
+- Monthly test: Zoom to 200% on 5 key pages (homepage, article, product, checkout)
+- Fix any layout breaks (overlapping text, cut-off content)
+
+---
+
+**1.4 Non-Text Content Alternatives (WCAG 1.1.1 - Level A)**
+
+**Requirement:** Provide text alternatives for non-text content (images, videos, audio).
+
+**SF Supernova Content Types:**
+- **Images:** Alt text (covered in 1.1)
+- **Videos (if added Phase 3+):** Captions and transcripts required
+- **Audio (audiobooks):** Transcripts not required (audio IS the product—providing transcript would obviate product)
+- **Charts/infographics:** Detailed alt text OR text equivalent in article body
+
+**Example: Chart Accessibility**
+
+**Scenario:** Article includes chart showing "Vintage Sci-Fi Publication Timeline 1920-1980"
+
+**Option 1: Detailed Alt Text**
+```html
+<img src="timeline-chart.png" 
+     alt="Timeline chart showing vintage science fiction publication trends from 1920-1980. 
+          Pulp era peaks in 1930s with 50+ magazines, declines in 1940s. 
+          Golden Age peaks in 1950s with major works by Asimov, Clarke, Heinlein. 
+          New Wave emerges in 1960s with experimental works by Dick, Ballard, Le Guin.">
+```
+
+**Option 2: Text Equivalent in Article**
+- Describe chart data in article text (preceding or following chart)
+- Alt text can be brief: `alt="Vintage sci-fi publication timeline chart, 1920-1980 (data described in text)"`
+
+**Enforcement:** Any chart, infographic, or data visualization must have detailed alt text OR text equivalent in article.
+
+---
+
+**1.5 Color Not Sole Means of Conveying Information (WCAG 1.4.1 - Level A)**
+
+**Requirement:** Don't rely on color alone to convey information (color-blind users can't distinguish).
+
+**Examples of Violations:**
+- ❌ "Click the green button to proceed, red button to cancel" (color-blind users can't distinguish green/red)
+- ❌ Links only distinguished by color (blue text, no underline)—color-blind users don't see difference
+
+**SF Supernova Implementation:**
+- **Links:** Underlined or bold (not just blue color)
+- **Buttons:** Text labels ("Add to Cart," "Subscribe") not just color-coded
+- **Error messages:** Icon + text ("⚠️ Error: Invalid email address") not just red text
+- **Success messages:** Icon + text ("✓ Success: Product added to cart") not just green text
+
+**Testing:**
+- **Colorblind simulation:** Use Chrome ColorBlindly extension (simulate various types of color blindness)
+- **Grayscale test:** View site in grayscale (removes color)—is information still clear?
+
+---
+
+**Category 2: Auditory Accessibility (Hearing Impairments)**
+
+**Problem:** Users who are deaf or hard of hearing can't access audio-only content.
+
+**Solutions:**
+
+**2.1 Captions for Audio/Video (WCAG 1.2.2 - Level A)**
+
+**Requirement:** Provide captions for all prerecorded audio and video content.
+
+**SF Supernova Audio/Video Content:**
+- **Currently:** No video content (MVP)
+- **Phase 3+:** If video added (author interviews, book discussions), captions required
+- **Audiobooks:** Transcripts not required (audio IS the product)
+
+**Implementation (If Video Added):**
+- **Captions:** Synchronized text displaying spoken dialogue and relevant sounds
+- **Auto-generated (YouTube, Vimeo):** Acceptable starting point, but must be edited for accuracy (auto-captions have 20-30% error rate)
+- **Manual captions:** Preferred (hire captioning service—Rev.com $1.25/minute)
+
+**Enforcement:** No video published without accurate captions (100% rule, no exceptions).
+
+---
+
+**2.2 Audio Control (WCAG 1.4.2 - Level A)**
+
+**Requirement:** If audio plays automatically >3 seconds, user must be able to pause, stop, or control volume.
+
+**SF Supernova Implementation:**
+- **No auto-play audio/video:** Audio/video only plays when user clicks (never auto-play)
+- **Rationale:** Auto-play is annoying for all users, especially problematic for screen reader users (audio conflicts with screen reader speech)
+
+**Enforcement:** No auto-play audio/video anywhere on site (zero tolerance).
+
+---
+
+**Category 3: Motor/Physical Accessibility (Motor Impairments)**
+
+**Problem:** Users with limited mobility, tremors, paralysis, or using assistive devices (keyboard only, mouth stick, eye tracking) can't use mouse-only interfaces.
+
+**Solutions:**
+
+**3.1 Keyboard Accessibility (WCAG 2.1.1 - Level A)**
+
+**Requirement:** All functionality available via keyboard (no mouse required).
+
+**Implementation:**
+
+**Keyboard Navigation Basics:**
+- **Tab:** Move focus to next interactive element (links, buttons, form fields)
+- **Shift+Tab:** Move focus to previous element
+- **Enter/Space:** Activate buttons, links
+- **Arrow keys:** Navigate within menus, select dropdowns
+
+**SF Supernova Requirements:**
+- **All links, buttons, form fields keyboard-accessible:** Can reach and activate with Tab + Enter
+- **Skip links:** "Skip to main content" link at top (invisible until keyboard-focused) allows skipping navigation (important for screen reader users navigating with keyboard)
+- **Logical tab order:** Tab order follows visual reading order (left-to-right, top-to-bottom)
+- **Focus visible:** Currently focused element has visible outline (browser default or custom styling)
+  - ❌ Don't remove focus outlines: `outline: none` (common CSS mistake—breaks keyboard navigation)
+  - ✅ Style focus states: `a:focus { outline: 2px solid blue; }`
+
+**Testing:**
+- **Monthly keyboard test:** Navigate entire site using only keyboard (Tab, Enter, Shift+Tab)
+  - Homepage → article → product page → add to cart → checkout → complete purchase (all keyboard-only)
+- **Check:** Can you reach every link, button, form field? Is tab order logical? Is focus visible?
+
+**Enforcement:** Any interactive element not keyboard-accessible is a blocking bug (must fix before shipping feature).
+
+---
+
+**3.2 Focus Order (WCAG 2.4.3 - Level A)**
+
+**Requirement:** Keyboard focus order must be logical and intuitive.
+
+**SF Supernova Implementation:**
+- **Reading order:** Tab order follows left-to-right, top-to-bottom (matches visual layout)
+- **No focus traps:** Users can Tab into and out of all components (don't trap keyboard focus in modal/popup)
+- **Skip navigation:** "Skip to main content" link allows bypassing repeated navigation (screen reader users don't want to tab through 20 navigation links on every page)
+
+**Testing:**
+- Tab through page without looking at screen—does focus order make sense?
+- Try to reach main content—do you have to tab through entire navigation first? (If yes, add skip link)
+
+---
+
+**3.3 Target Size (WCAG 2.5.5 - Level AAA, but good practice)**
+
+**Requirement (AAA, aspirational):** Interactive targets (links, buttons) at least 44x44 pixels (touch-friendly size).
+
+**SF Supernova Implementation (AA-level pragmatic):**
+- **Buttons:** 48px height minimum (comfortable tap target)
+- **Links in body text:** Default size acceptable (don't need to be 44x44)
+- **Touch-critical elements (mobile):** "Add to Cart," "Subscribe," "Checkout" buttons—large, easy to tap (48-60px height)
+
+**Rationale:** 44x44px AAA target size difficult to achieve for all links (especially inline text links), but large buttons/key CTAs meet this for critical interactions.
+
+---
+
+**3.4 Motion and Animation (WCAG 2.3.1 - Level A)**
+
+**Requirement:** No content flashes more than 3 times per second (seizure risk).
+
+**SF Supernova Implementation:**
+- **No flashing content:** Avoid animated GIFs, videos with rapid flashing
+- **No auto-playing animations:** Animations only on user interaction (hover, click)
+- **Reduced motion preference:** Respect `prefers-reduced-motion` CSS media query (disable animations for users who request it)
+
+**CSS Example:**
+```css
+/* Normal animation */
+.fade-in {
+  animation: fadeIn 0.5s;
+}
+
+/* Disable for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    animation: none;
+  }
+}
+```
+
+**Enforcement:** No animations without respecting `prefers-reduced-motion` (easy to implement, huge benefit for motion-sensitive users).
+
+---
+
+**Category 4: Cognitive Accessibility (Cognitive Impairments)**
+
+**Problem:** Users with cognitive disabilities (dyslexia, ADHD, memory issues, learning disabilities) struggle with complex, inconsistent, or unclear interfaces.
+
+**Solutions:**
+
+**4.1 Clear Language (WCAG 3.1.5 - Level AAA, but best practice)**
+
+**Requirement:** Use clear, simple language when possible (avoid jargon, complex sentences).
+
+**SF Supernova Implementation:**
+- **Reading level:** Target Grade 8-10 (Hemingway Editor)—readable by general audience without dumbing down
+- **Define jargon:** First use of niche terms (e.g., "New Wave," "fix-up novel"), briefly explain
+- **Short paragraphs:** 2-5 sentences per paragraph (web readability)
+- **Clear headings:** Descriptive H2s/H3s (users can skim, find what they need)
+
+**Note:** Vintage sci-fi articles may include specialized vocabulary (that's part of the value)—balance: explain terms without over-simplifying.
+
+---
+
+**4.2 Consistent Navigation (WCAG 3.2.3 - Level AA)**
+
+**Requirement:** Navigation mechanisms repeated on multiple pages appear in same location and order.
+
+**SF Supernova Implementation:**
+- **Header navigation:** Same menu, same order on every page (Articles, Shop, Membership, About)
+- **Footer links:** Same links, same order on every page
+- **No surprises:** Navigation doesn't change unexpectedly between pages
+
+**Why it matters:** Cognitive load reduced when navigation predictable—users don't have to re-learn interface on every page.
+
+---
+
+**4.3 Error Identification and Recovery (WCAG 3.3.1, 3.3.3 - Level A, AA)**
+
+**Requirement:** Errors must be clearly identified and users given suggestions to fix.
+
+**SF Supernova Implementation:**
+
+**Form Errors (Checkout, Email Signup):**
+- **Identify:** Highlight error fields (red border, error icon)
+- **Explain:** Clear error message ("Email address is required" not just "Error")
+- **Suggest:** How to fix ("Enter valid email format: name@example.com")
+- **Preserve data:** Don't clear form on error (user can fix mistake without re-entering everything)
+
+**Example: Email Signup Error**
+
+❌ **Bad:**
+```
+Error
+[Empty form, all fields cleared]
+```
+
+✅ **Good:**
+```
+⚠️ Please fix the following errors:
+- Email address is required. Enter your email (e.g., name@example.com)
+
+[Form preserves any data user entered, error field highlighted in red]
+```
+
+**Payment Errors (Stripe Checkout):**
+- Stripe provides clear error messages ("Your card was declined")
+- Display Stripe errors verbatim (don't hide or rephrase)
+- Suggest alternatives if card declined ("Try a different card or payment method")
+
+---
+
+**4.4 Focus Not Trapped (WCAG 2.1.2 - Level A)**
+
+**Requirement:** Keyboard focus can move away from component using standard keyboard interface.
+
+**SF Supernova Implementation:**
+- **Modals/popups:** Can be closed with Esc key or Tab to "Close" button
+- **No focus traps:** Users aren't stuck in a component (can Tab out)
+
+**Common violation:** Modal popup where keyboard focus trapped (can't Tab to close button, can't Esc to close)—frustrating for keyboard users.
+
+---
+
+**Category 5: Screen Reader Accessibility**
+
+**Problem:** Screen readers (assistive technology for blind users) convert visual information to speech—poorly structured HTML is unintelligible.
+
+**Solutions:**
+
+**5.1 Semantic HTML (WCAG 4.1.2 - Level A)**
+
+**Requirement:** Use HTML elements according to their semantic meaning.
+
+**SF Supernova Implementation:**
+
+**Semantic Structure:**
+```html
+<!-- ✅ Good: Semantic HTML -->
+<header>
+  <nav>
+    <ul>
+      <li><a href="/articles">Articles</a></li>
+      <li><a href="/shop">Shop</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <article>
+    <h1>Foundation Series Reading Order</h1>
+    <p>Content...</p>
+  </article>
+</main>
+
+<footer>
+  <p>© 2025 SF Supernova</p>
+</footer>
+```
+```html
+<!-- ❌ Bad: Non-semantic (divs for everything) -->
+<div class="header">
+  <div class="nav">
+    <div><a href="/articles">Articles</a></div>
+    <div><a href="/shop">Shop</a></div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="article">
+    <div class="title">Foundation Series Reading Order</div>
+    <div>Content...</div>
+  </div>
+</div>
+```
+
+**Why it matters:** Screen readers use semantic HTML to provide context ("navigation landmark," "main content," "heading level 1")—non-semantic HTML gives no context.
+
+---
+
+**5.2 ARIA Labels (When Semantic HTML Insufficient)**
+
+**ARIA (Accessible Rich Internet Applications):** Attributes that provide additional context for screen readers.
+
+**Use ARIA When:**
+- Semantic HTML doesn't fully convey meaning
+- Custom components (e.g., custom dropdown, accordion)
+
+**Don't Overuse ARIA:**
+- **Rule 1:** Use semantic HTML first (only add ARIA if semantic HTML insufficient)
+- **Rule 2:** Don't use ARIA to "fix" non-semantic HTML (fix the HTML instead)
+
+**SF Supernova ARIA Examples:**
+
+**Search Button (Icon Only):**
+```html
+<!-- Icon-only button needs ARIA label -->
+<button aria-label="Search">
+  <svg><!-- magnifying glass icon --></svg>
+</button>
+```
+
+**Loading State:**
+```html
+<!-- Indicate loading to screen readers -->
+<button aria-busy="true">Loading...</button>
+```
+
+**Expandable Section (Accordion):**
+```html
+<button aria-expanded="false" aria-controls="section1">
+  Show More
+</button>
+<div id="section1" hidden>
+  Additional content...
+</div>
+```
+
+---
+
+**5.3 Heading Structure (WCAG 2.4.6 - Level AA)**
+
+**Requirement:** Headings describe topic or purpose, hierarchical (H1 → H2 → H3, no skipping levels).
+
+**SF Supernova Implementation:**
+- **One H1 per page:** Page title (e.g., article title, product name)
+- **H2 for major sections:** Main sections of article
+- **H3 for subsections:** Details under H2 sections
+- **No skipping:** Don't skip from H1 to H3 (screen readers use heading hierarchy to navigate)
+
+**Example: Proper Heading Hierarchy**
+```html
+<h1>Foundation Series Reading Order: Complete Guide</h1> <!-- Page title -->
+  <h2>Publication Order</h2> <!-- Major section -->
+    <h3>Pros and Cons</h3> <!-- Subsection -->
+    <h3>Recommended for Beginners</h3> <!-- Subsection -->
+  <h2>Chronological Order</h2> <!-- Major section -->
+    <h3>Pros and Cons</h3> <!-- Subsection -->
+  <h2>My Recommendation</h2> <!-- Major section -->
+```
+
+**Why it matters:** Screen reader users navigate by headings (keyboard shortcut to jump between headings)—proper hierarchy makes navigation efficient.
+
+---
+
+**5.4 Descriptive Links (WCAG 2.4.4 - Level A)**
+
+**Requirement:** Link text describes destination (not generic "click here").
+
+**SF Supernova Implementation:**
+
+❌ **Bad (Non-descriptive):**
+```html
+To learn more about Asimov, <a href="/asimov">click here</a>.
+```
+
+✅ **Good (Descriptive):**
+```html
+<a href="/asimov">Read our complete Isaac Asimov biography and guide</a>.
+```
+
+**Why it matters:** Screen readers can list all links on page—descriptive link text makes this list useful ("Isaac Asimov biography" vs. "click here, click here, click here").
+
+---
+
+**Accessibility Testing & Tools**
+
+**Automated Testing Tools (Catch ~30-40% of Issues):**
+
+**1. WAVE (Web Accessibility Evaluation Tool)**
+- **URL:** https://wave.webaim.org
+- **Use:** Enter URL, get instant accessibility report
+- **Identifies:** Missing alt text, low contrast, heading hierarchy issues, ARIA errors
+- **Limitation:** Can't detect all issues (e.g., can't verify alt text is meaningful)
+
+**2. axe DevTools (Browser Extension)**
+- **Install:** Chrome, Firefox extension
+- **Use:** Run on any page, get detailed accessibility report
+- **Identifies:** WCAG violations (A, AA, AAA levels), best practice violations
+
+**3. Lighthouse (Chrome DevTools)**
+- **Built-in:** Chrome DevTools → Lighthouse tab → Accessibility audit
+- **Score:** 0-100 accessibility score, specific issues to fix
+- **Run monthly:** Top 20 pages, target 90+ score
+
+**Manual Testing (Catch Remaining 60-70% of Issues):**
+
+**1. Keyboard Navigation Test (Weekly)**
+- Navigate site using only keyboard (Tab, Enter, Shift+Tab, Esc)
+- Check: Can you reach all interactive elements? Is focus visible? Is tab order logical?
+
+**2. Screen Reader Test (Monthly)**
+- **Tool:** NVDA (Windows, free), JAWS (Windows, paid), VoiceOver (Mac, built-in)
+- **Test:** Navigate homepage, article, product page, checkout with screen reader
+- **Check:** Is content understandable? Are images described? Are headings navigable?
+
+**3. Zoom Test (Monthly)**
+- Zoom to 200% (Ctrl/Cmd + +)
+- Check: Is text readable? Does layout stay intact? No horizontal scrolling?
+
+**4. Color Contrast Test (Quarterly)**
+- Use WebAIM Contrast Checker on all text/background combinations
+- Check: All text meets 4.5:1 contrast ratio (normal text) or 3:1 (large text)
+
+**5. Real User Testing (Annually or Phase 3+)**
+- Recruit users with disabilities (blind, low vision, motor impairments) to test site
+- Observe: What frustrations do they encounter? What works well?
+- Fix: Prioritize issues discovered by real users
+
+---
+
+**Accessibility Metrics & Reporting**
+
+**Key Accessibility Metrics:**
+
+| Metric | Target | Measurement | Frequency |
+|--------|--------|-------------|-----------|
+| **Lighthouse Accessibility Score** | 90+ | Chrome DevTools Lighthouse | Monthly (top 20 pages) |
+| **WAVE Errors** | 0 critical errors | WAVE tool | Quarterly (full site audit) |
+| **Keyboard Accessibility** | 100% (all interactive elements reachable) | Manual keyboard test | Weekly (key pages) |
+| **Alt Text Coverage** | 100% (all images have alt text) | Manual audit | Quarterly (50-image sample) |
+| **Color Contrast Compliance** | 100% (all text meets WCAG AA) | Contrast checker | Quarterly (all color combos) |
+| **WCAG 2.1 Level AA Conformance** | 100% conformance | Comprehensive audit | Annually |
+
+**Quarterly Accessibility Report (Internal):**
+```
+SF Supernova Accessibility Report - Q[X]
+
+**Lighthouse Scores (Top 20 Pages):**
+- Average: 92/100 (target: 90+) ✅
+- Lowest: 87/100 (Article: "PKD Biography" - needs heading hierarchy fix)
+- Highest: 98/100 (Homepage)
+
+**WAVE Audit (Full Site):**
+- Critical Errors: 2 (missing alt text on 2 images—fixed [date])
+- Warnings: 8 (low contrast on footer links—fixed [date])
+- Features: 127 (positive accessibility features detected)
+
+**Manual Keyboard Test:**
+- All pages keyboard-accessible ✅
+- Skip link added to all pages ✅
+- Focus styles improved on buttons ✅
+
+**Issues Identified & Fixed:**
+1. Missing alt text on 2 product images (fixed [date])
+2. Low contrast on footer links (increased contrast, fixed [date])
+3. Heading hierarchy skip on "PKD Biography" article (H1 → H3, fixed to H1 → H2 → H3)
+
+**Accessibility Roadmap (Next Quarter):**
+- Conduct screen reader testing (NVDA) on 10 key pages
+- Add ARIA labels to icon-only buttons
+- Review and improve error messages (checkout forms)
+
+**Overall Status:** ✅ Good (WCAG AA compliant, minor issues resolved quickly)
+```
+
+---
+
+**Accessibility Investment & Costs**
+
+**Cost to Implement Accessibility:**
+
+**Phase 1 (MVP - Build Accessible from Start):**
+- **Time:** +10-15% development time (semantic HTML, alt text, keyboard accessibility)
+- **Cost:** $0 additional (design choices, no additional tools)
+- **Rationale:** Building accessible from start is cheaper than retrofitting later
+
+**Phase 2 (Accessibility Audit & Improvements):**
+- **Audit:** Hire accessibility consultant ($1,500-3,000 for comprehensive audit)
+- **Fixes:** 20-40 hours to address issues found in audit
+- **Cost:** $1,500-5,000 total
+- **Timing:** Month 9-12 (after MVP launched, before scaling)
+
+**Ongoing (Maintenance):**
+- **Testing:** 2-4 hours/month (automated + manual tests)
+- **Fixes:** 5-10 hours/quarter (address issues as discovered)
+- **Cost:** $0 (founder time) or $500-1,000/year (if outsourced)
+
+**Total Accessibility Investment:**
+- Year 1: $1,500-5,000 (audit + fixes)
+- Ongoing: $500-1,000/year (maintenance)
+
+**ROI of Accessibility:**
+- **Market expansion:** 15% of population has disabilities—accessible site reaches them
+- **SEO benefit:** Accessible sites rank better (alt text, semantic HTML, fast load times)
+- **Legal protection:** WCAG compliance reduces lawsuit risk (ADA lawsuits increasingly common)
+- **Universal benefit:** Accessibility improvements help all users (clear contrast, keyboard navigation, error messages)
+
+---
+
+**Accessibility Compliance & Legal Risk**
+
+**Legal Context:**
+
+**ADA (Americans with Disabilities Act):**
+- Requires "places of public accommodation" to be accessible (including websites—DOJ guidance)
+- E-commerce sites increasingly sued for inaccessibility (Domino's Pizza case, Target case)
+- **Risk:** Non-compliant sites face lawsuits ($10K-100K+ settlements)
+
+**Section 508 (Federal Websites):**
+- Requires U.S. federal government websites to be accessible (WCAG 2.0 AA)
+- SF Supernova not federal site (not directly applicable), but sets standard
+
+**EU Web Accessibility Directive:**
+- Requires public sector websites/apps in EU to meet WCAG 2.1 AA
+- Private sector not mandated (yet), but trend toward mandatory accessibility
+
+**SF Supernova Risk Mitigation:**
+- **WCAG 2.1 AA compliance:** Industry standard, legally defensible
+- **Documentation:** Maintain accessibility statement ("We strive to meet WCAG 2.1 AA standards, contact us if you encounter barriers")
+- **Responsiveness:** Address user-reported accessibility issues promptly (good faith effort)
+
+---
+
+**Accessibility Statement (Publish on Site)**
+
+**Example: SF Supernova Accessibility Statement**
+```
+Accessibility Statement
+
+SF Supernova is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.
+
+**Conformance Status**
+SF Supernova strives to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA. These guidelines explain how to make web content more accessible for people with disabilities.
+
+**Measures to Support Accessibility**
+SF Supernova takes the following measures to ensure accessibility:
+- Include accessibility as part of our design and development process
+- Provide continual accessibility training for our staff
+- Use semantic HTML markup
+- Provide text alternatives for images
+- Ensure sufficient color contrast
+- Support keyboard navigation
+
+**Feedback**
+We welcome your feedback on the accessibility of SF Supernova. Please contact us if you encounter accessibility barriers:
+- Email: accessibility@sfsupernova.com
+- Response time: We aim to respond within 3 business days
+
+**Date:** [Last Updated Date]
+```
+
+**Legal Benefit:** Demonstrates good faith effort to be accessible (reduces liability in potential lawsuit).
+
+---
+
+**Accessibility Standards Summary**
+
+| Standard | Requirement | Target | Enforcement |
+|----------|------------|--------|-------------|
+| **Alt Text** | All images have descriptive alt text | 100% coverage | Pre-publish checklist |
+| **Color Contrast** | Text meets 4.5:1 ratio (normal), 3:1 (large) | 100% compliance | Quarterly audit |
+| **Keyboard Accessibility** | All interactive elements keyboard-accessible | 100% operable | Weekly manual test |
+| **Semantic HTML** | Proper HTML5 elements (header, nav, main, footer) | 100% compliance | Code review |
+| **Heading Hierarchy** | H1 → H2 → H3 (no skipping) | 100% compliance | Pre-publish checklist |
+| **Descriptive Links** | Link text describes destination | 100% compliance | Editorial standards |
+| **Error Messages** | Clear, helpful, actionable | 100% compliance | UX review |
+| **WCAG 2.1 AA** | Overall conformance | 90%+ pages compliant | Annual audit |
+
+---
+
+**Summary: Accessibility as Competitive Advantage**
+
+**Why Accessibility Matters:**
+
+- **Moral Imperative:** Exclude people with disabilities = discriminatory, wrong
+- **Legal Requirement:** WCAG compliance increasingly mandated (ADA lawsuits, EU directive)
+- **Business Opportunity:** 15% of population has disabilities—accessible design expands market
+- **SEO Benefit:** Accessible sites rank better (Google rewards alt text, semantic HTML, performance)
+- **Universal Benefit:** Accessibility helps everyone (clear language, keyboard shortcuts, high contrast)
+
+**Accessibility Principles:**
+
+1. **Build Accessible from Start:** Cheaper than retrofitting (10-15% extra time upfront vs. 50-100% retrofit cost)
+2. **WCAG 2.1 AA Target:** Industry standard, legally defensible, achievable
+3. **Test Regularly:** Automated tools + manual testing (keyboard, screen reader, zoom)
+4. **Respond to Feedback:** Address user-reported issues promptly (demonstrate good faith)
+5. **Document Commitment:** Publish accessibility statement (transparency, legal protection)
+
+**Accessibility is not a "nice-to-have" checkbox—it's a fundamental requirement for professional, ethical, legally compliant web platform. SF Supernova's audience (vintage sci-fi enthusiasts, skewing older) particularly benefits from accessible design. Building accessible from start ensures SF Supernova serves all users, ranks well in Google, and avoids legal risk. The goal: WCAG 2.1 AA compliance, achieved through semantic HTML, thoughtful design choices, and regular testing—creating a platform truly usable by everyone.**
 ### 8.5 SEO Readiness & Discoverability Standards
 
 ### 8.6 Maintainability & Technical Debt Management
