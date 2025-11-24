@@ -26111,7 +26111,140 @@ Each category detailed below with specific features, requirements, and expected 
 - Create lead magnet for each major content pillar/topic:
   - **Authors:** "Complete Asim
 ### 7.4 Extended Features (Post-MVP)
+### 7.4 Extended Features (Post-MVP)
 
+**Strategic Overview**
+
+Extended features are capabilities that **enhance user experience, deepen engagement, and create competitive differentiation** but are not essential for MVP launch or immediate revenue optimization. These features are built in Phase 3+ (Months 12-24+) after the core platform is validated, revenue streams are flowing, and the business has resources to invest in sophistication beyond essentials.
+
+**Core Principle:** *"Build extended features only after core business validated, revenue sustainable, and user demand proven. Extended features create delight and differentiation, but foundation must be solid first."*
+
+Extended features differ from MVP and revenue-critical features in their **strategic purpose**: they're about **platform maturity, competitive moat-building, and long-term user retention** rather than immediate validation or revenue optimization. They represent the "polish and sophistication that transforms good platform into great platform."
+
+---
+
+**Extended Features Philosophy**
+
+**When to Build Extended Features:**
+
+**✅ Build Extended Features When:**
+1. **Core business validated:** MVP proven, product-market fit achieved, revenue growing
+2. **Revenue sustainable:** Monthly revenue >$10K, profitability achieved or path clear
+3. **User demand validated:** Multiple users explicitly request feature, or behavior data suggests need
+4. **Resources available:** Founder bandwidth or budget for contractors (not sacrificing core operations)
+5. **Competitive pressure:** Competitors launching similar features, creating disadvantage
+
+**❌ Don't Build Extended Features When:**
+1. **Core business struggling:** Revenue <$5K/month, user engagement low, churn high (fix fundamentals first)
+2. **Limited resources:** Solo founder at capacity with content creation and core platform maintenance
+3. **Unvalidated demand:** No user requests, no data suggesting users want this
+4. **Higher priorities exist:** Revenue-critical features still unbuilt, or optimization opportunities unexploited
+5. **"Nice to have" reasoning:** Building because "it would be cool" or "competitors have it" without strategic justification
+
+**Extended Features Investment Framework:**
+
+**For each extended feature, ask:**
+1. **User Value Question:** "Do users explicitly want this, or is it a 'build it and they will come' assumption?"
+2. **Business Impact Question:** "Will this measurably improve retention, engagement, or differentiation?"
+3. **Resource Question:** "Can we afford to build and maintain this without compromising core operations?"
+4. **Timing Question:** "Is now the right time, or should we wait until platform more mature?"
+
+**If answer to any question is "no" or "uncertain," defer feature to later phase or indefinitely.**
+
+---
+
+**Extended Features Categories**
+
+**Category 1: User Accounts & Personalization**
+- User profiles, reading history, collection tracking
+- Personalized recommendations based on behavior
+- Reading goals and progress tracking
+
+**Category 2: Community & Social Features**
+- User reviews and ratings
+- Discussion forums or comment system
+- User-generated reading lists
+- Social sharing and activity feeds
+
+**Category 3: Advanced Discovery & Navigation**
+- Advanced search with filters and facets
+- Interactive recommendation engine
+- Curated pathways and reading journeys
+- Visual content browsers (timelines, relationship maps)
+
+**Category 4: Engagement & Gamification**
+- Reading challenges and achievements
+- Badges and progress tracking
+- Leaderboards and community competitions
+- Streaks and habit formation mechanics
+
+**Category 5: Mobile & Multi-Platform**
+- Native mobile apps (iOS, Android)
+- Progressive Web App (PWA)
+- Offline reading capabilities
+- Cross-device sync
+
+**Category 6: API & Developer Ecosystem**
+- Public API for third-party developers
+- Developer documentation and sandbox
+- App directory and integrations
+- Data export and portability
+
+---
+
+**Category 1: User Accounts & Personalization**
+
+**Purpose:** Enable personalized experiences, track user behavior, and provide value that deepens over time through understanding individual user preferences and reading patterns.
+
+---
+
+**Feature 1.1: User Accounts & Profiles**
+
+**Description:** Allow users to create accounts with profiles, enabling personalized features, reading history, and saved preferences.
+
+**Functional Requirements:**
+
+**Account Creation:**
+- Sign up via email + password
+- Social login (optional): Google, Twitter/X (simplify signup, reduce friction)
+- Email verification (send confirmation link, verify email valid)
+- Terms of Service and Privacy Policy acceptance (checkbox required)
+
+**User Profile:**
+- **Basic Information:**
+  - Username or display name
+  - Email address (private, not displayed publicly)
+  - Profile photo (optional, avatar upload or Gravatar integration)
+  - Bio (optional, 200 character limit)
+  - Location (optional, city/country)
+  - Favorite authors/works (optional, freeform text or tags)
+  
+- **Reading Preferences:**
+  - Preferred formats (ebooks, audiobooks, physical)
+  - Favorite genres/themes (time travel, AI, space opera, dystopia)
+  - Reading pace (casual, moderate, voracious)
+  - Content preferences (academic deep-dives vs. practical guides)
+
+**Profile Privacy Settings:**
+- Profile visibility (public, private, members-only)
+- Reading activity visibility (show/hide what I'm reading, what I've read)
+- Collection visibility (show/hide my collection)
+
+**Account Management:**
+- Update profile information
+- Change password
+- Change email address
+- Delete account (GDPR compliance, full data deletion)
+
+**User Dashboard:**
+- URL: `/my-account/` or `/dashboard/`
+- Overview: Reading stats (books read, pages read, reading streak)
+- Recent activity (recently viewed articles, products, purchases)
+- Quick links: My Collection, Reading History, Account Settings, Membership (if subscribed)
+
+**Why Extended Feature (Not MVP):**
+- **MVP rationale:** Guest checkout and email-based membership sufficient for launch (accounts add complexity without immediate revenue impact)
+- **Phase 3 rationale:** Once user base established (1,
 ### 7.5 Deferred Features & Future Considerations
 
 ### 7.6 Feature Dependencies & Sequencing
