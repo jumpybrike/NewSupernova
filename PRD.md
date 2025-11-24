@@ -24925,7 +24925,1117 @@ Answer this question honestly, repeatedly. Features that don't make the cut aren
 
 **The goal: Build the right things, in the right order, at the right time. Focus beats perfection. Launch beats planning. Revenue beats features. Requirements prioritization is strategic discipline that transforms vision into reality.**
 ### 7.2 MVP Feature Set (Phase 1)
+### 7.2 MVP Feature Set (Phase 1)
 
+**Strategic Overview**
+
+The MVP (Minimum Viable Product) is the foundational version of SF Supernova that launches to users—the smallest set of features that delivers core value (discovery, curation, quality content), enables revenue validation (product sales, memberships), and supports iteration (analytics, user feedback). This section defines exactly what features exist in Phase 1 (Months 0-6), specifying functional requirements, acceptance criteria, and success metrics for each component.
+
+**Core Principle:** *"Build the minimum that works, ship it fast, learn from real users, iterate based on data."*
+
+The MVP balances three competing forces: **speed to launch** (3-6 months), **quality of experience** (professional, trustworthy), and **business model validation** (revenue within 6-12 months). Every feature included is justified by one or more of these objectives; everything else is deferred to Phase 2+.
+
+---
+
+**MVP Success Criteria**
+
+**Before detailing features, define what "success" means for MVP:**
+
+**Primary Success Metrics (Must Achieve by Month 6):**
+
+1. **Content Published:** 50-75 high-quality articles live on site
+2. **Organic Traffic:** 5,000+ monthly visitors (SEO working)
+3. **Email List:** 200-400 subscribers (audience building)
+4. **Product Revenue:** $500-1,000/month (product-market fit signal)
+5. **Membership Revenue:** $500-1,000 MRR (recurring revenue validated)
+6. **User Engagement:** 4+ minutes avg time on page, <60% bounce rate (content resonating)
+
+**Secondary Success Metrics (Nice to Have):**
+
+7. **Conversion Rates:** 3.5%+ email capture, 12%+ email→purchase (90 days)
+8. **SEO Rankings:** 50+ keywords in top 50, 10+ in top 10
+9. **Backlinks:** 10-20 referring domains (authority building)
+10. **Customer Feedback:** 5+ positive testimonials or reviews
+
+**Failure Criteria (Pivot or Abandon Signals):**
+
+- **Traffic <1,000/month after 6 months:** SEO not working, content not resonating
+- **Revenue <$300/month after 6 months:** No product-market fit, monetization failing
+- **Email capture <1%:** No audience building, conversion funnel broken
+- **Bounce rate >75%:** Content quality issues, user expectations mismatched
+
+**MVP Goal:** Validate core hypotheses (users will engage with content, purchase products, subscribe to memberships) with minimum investment. If validation succeeds, invest in Phase 2 expansion. If validation fails, pivot or shut down before burning significant resources.
+
+---
+
+**MVP Architecture: The Five Core Pillars**
+
+**The MVP comprises five interconnected pillars:**
+
+1. **Content & Discovery Pillar:** Articles, guides, lists (core value delivery)
+2. **Commerce Pillar:** Product catalog, checkout, payment, digital delivery (transactional revenue)
+3. **Membership Pillar:** Subscription tiers, benefits, management (recurring revenue)
+4. **Email & Engagement Pillar:** Newsletter, lead capture, nurture (audience building)
+5. **Foundation & Infrastructure Pillar:** Hosting, analytics, SEO, security (technical foundation)
+
+Each pillar has specific functional requirements detailed below.
+
+---
+
+**Pillar 1: Content & Discovery**
+
+**Purpose:** Deliver core value (discovery, curation, education) through high-quality written content optimized for SEO and user engagement.
+
+---
+
+**Feature 1.1: Content Management System (WordPress)**
+
+**Description:** WordPress-based CMS for publishing and managing articles, guides, and lists.
+
+**Functional Requirements:**
+
+**Content Types:**
+- **Articles/Guides:** Long-form content (2,000-5,000 words)
+  - Title, body content (rich text editor), featured image, meta description, SEO title
+  - Author byline (founder name), publication date, last updated date
+  - Categories (content pillars: Authors & Creators, Themes, Eras, Works, Reading Guides, etc.)
+  - Tags (specific topics: Isaac Asimov, Foundation, time travel, dystopia, etc.)
+  
+**Formatting Capabilities:**
+- Headings (H2, H3, H4 for structure)
+- Paragraphs, lists (bulleted, numbered), block quotes
+- Bold, italics, links (internal, external)
+- Images (inline images, captions, alt text for accessibility/SEO)
+- Tables (for data, comparisons)
+- Embedded media (optional: YouTube videos if relevant)
+
+**WordPress Configuration:**
+- Custom post type: "Articles" (default post type)
+- Custom taxonomies: Categories (pillars), Tags (topics)
+- Permalink structure: `/article-slug/` (SEO-friendly URLs)
+- Media library: Image uploads, compression, alt text
+- Editor: Gutenberg (WordPress block editor) or Classic Editor (preference)
+
+**Acceptance Criteria:**
+- ✅ Founder can create, edit, publish, unpublish articles via WordPress admin
+- ✅ Articles display correctly on frontend (desktop, tablet, mobile)
+- ✅ Images load quickly (<3 seconds), alt text present
+- ✅ Internal links functional (link to other articles, product pages)
+- ✅ Categories and tags display on article pages, enable filtering/navigation
+- ✅ SEO fields present (meta title, meta description, focus keyword via Yoast/Rank Math)
+
+**Success Metrics:**
+- 50-75 articles published by Month 6
+- Average article length: 2,500-4,000 words
+- Publishing frequency: 2-4 articles per week (sustained pace)
+
+---
+
+**Feature 1.2: Homepage & Navigation**
+
+**Description:** Clean, professional homepage showcasing featured content and clear navigation to key sections.
+
+**Functional Requirements:**
+
+**Homepage Elements:**
+- **Hero Section:**
+  - Site tagline/value proposition: "Your guide to vintage science fiction: curated classics, hidden gems, and expert recommendations"
+  - Featured article (hero image, title, excerpt, "Read More" CTA)
+  
+- **Recent Articles Section:**
+  - Display 6-10 most recent articles (grid layout, 2-3 columns)
+  - Each article: thumbnail image, title, excerpt (100-150 chars), publication date, category
+  - "View All Articles" link to archive page
+  
+- **Featured Products/Collections Section (optional MVP):**
+  - Showcase 3-4 featured products or collections (e.g., Foundation Collection, Asimov Audiobooks)
+  - Product image, title, price, "Shop Now" CTA
+  
+- **Email Signup Widget:**
+  - Prominent placement (above fold or mid-page)
+  - Headline: "Join Our Weekly Newsletter"
+  - Subheading: "Curated vintage sci-fi recommendations, new articles, and exclusive offers"
+  - Email input field, "Subscribe" button
+
+**Navigation Menu (Header):**
+- Logo/site name (links to homepage)
+- Primary navigation:
+  - Articles (dropdown: by category/pillar)
+  - Shop (link to product catalog)
+  - Membership (link to membership page)
+  - About (about SF Supernova, founder bio, mission)
+  - Search (icon, opens search overlay)
+
+**Footer:**
+- Quick links: Articles, Shop, Membership, About, Contact
+- Social media icons (optional: Twitter, Reddit if active)
+- Newsletter signup (redundant placement)
+- Copyright, privacy policy, terms of service links
+
+**Acceptance Criteria:**
+- ✅ Homepage loads quickly (<3 seconds on desktop, <5 seconds on mobile)
+- ✅ Navigation menu functional on all devices (responsive, mobile hamburger menu)
+- ✅ Featured articles display correctly (images load, links work)
+- ✅ Email signup form functional (submits to Mailchimp/ConvertKit)
+- ✅ All navigation links work (no broken links)
+- ✅ Mobile-friendly (responsive design, readable text, tappable buttons)
+
+**Success Metrics:**
+- Homepage bounce rate: <50% (users engage beyond homepage)
+- Navigation usage: >40% of users click primary nav (Articles, Shop, etc.)
+- Email signup conversion (homepage widget): 1-2% of visitors
+
+---
+
+**Feature 1.3: Article Pages (Content Display)**
+
+**Description:** Individual article pages optimized for readability, engagement, and conversion.
+
+**Functional Requirements:**
+
+**Article Layout:**
+- **Title** (H1, 40-60 characters, keyword-optimized)
+- **Featured Image** (1200x630px recommended, visually appealing, relevant)
+- **Author & Date:** "By [Founder Name] | Published [Date] | Updated [Date]"
+- **Body Content:**
+  - Easy-to-read typography (18-20px font size, 1.6-1.8 line height, max 700px content width)
+  - Structured with headings (H2, H3 for scanability)
+  - Inline images (break up text, illustrate points)
+  - Block quotes (for emphasis, quotes from authors/works)
+  - Tables (for comparisons, lists)
+  
+- **Internal Links:**
+  - Contextual links to related articles (3-5 per article)
+  - "Related Articles" module at end (3-5 recommendations, auto-generated by category/tags)
+  
+- **Email Capture CTA:**
+  - Inline mid-article (after 40-50% of content): "Want more recommendations? Join our weekly newsletter" [Email input, Subscribe button]
+  - End-of-article (after conclusion): Lead magnet offer if relevant (e.g., "Download the Foundation Reading Order Checklist (PDF)")
+  
+- **Product Recommendations (optional MVP, soft integration):**
+  - End-of-article mention if relevant: "Explore our [Topic] Collection" [Link to product category]
+  - Sidebar widget (optional): "Featured Products" (3-4 relevant products)
+
+**SEO Elements:**
+- Meta title (60 chars, keyword-optimized)
+- Meta description (155 chars, compelling, keyword-included)
+- Schema.org markup (Article schema: headline, author, datePublished, image)
+- Open Graph tags (for social media sharing: og:title, og:description, og:image)
+- Breadcrumbs (Home > Category > Article Title)
+
+**Engagement Elements:**
+- Estimated reading time (displayed near title: "10 min read")
+- Table of Contents (for long articles >3,000 words, jump links to H2 sections)
+- Social share buttons (optional MVP: Twitter, Reddit, Email—if bandwidth allows)
+
+**Acceptance Criteria:**
+- ✅ Article displays correctly on all devices (responsive typography, images scale)
+- ✅ Reading experience professional (clean, distraction-free, readable fonts/spacing)
+- ✅ Internal links functional (link to related articles, product pages)
+- ✅ Email capture form functional (submits to email platform)
+- ✅ SEO elements present (meta tags, schema markup, Open Graph)
+- ✅ Load time <3 seconds (desktop), <5 seconds (mobile)
+- ✅ No broken images or links (QA before publish)
+
+**Success Metrics:**
+- Average time on page: 4+ minutes (users reading deeply)
+- Bounce rate: <60% (users engaging beyond single article)
+- Email capture rate (article CTAs): 4-8% (higher than site-wide average)
+- Pages per session: 2.5+ (users explore related articles)
+
+---
+
+**Feature 1.4: Content Archive & Browsing**
+
+**Description:** Allow users to browse all content by category, tag, or chronologically.
+
+**Functional Requirements:**
+
+**Articles Archive Page:**
+- URL: `/articles/` or `/blog/`
+- Display all articles (paginated, 20-30 per page)
+- Each article listing: thumbnail, title, excerpt (150 words), publication date, category
+- Sort options (optional MVP): Recent, Popular, Alphabetical
+- Filter by category (sidebar or top filter bar): Authors & Creators, Themes, Eras, Works, Reading Guides, etc.
+
+**Category Pages:**
+- URL: `/category/[category-name]/` (e.g., `/category/authors-creators/`)
+- Display all articles in that category
+- Category description at top (1-2 sentences explaining category)
+- Same layout as archive (thumbnail, title, excerpt, date)
+
+**Tag Pages:**
+- URL: `/tag/[tag-name]/` (e.g., `/tag/isaac-asimov/`)
+- Display all articles tagged with that tag
+- Useful for topic-specific browsing (e.g., all Asimov content, all time travel content)
+
+**Search Functionality:**
+- Basic WordPress search (search bar in header, search overlay)
+- Search results page: display matching articles (title, excerpt, relevance)
+- Advanced search/filters: DEFERRED to Phase 2-3 (not MVP)
+
+**Acceptance Criteria:**
+- ✅ Archive page displays all published articles (paginated)
+- ✅ Category and tag pages functional (filter content correctly)
+- ✅ Search returns relevant results (matches article titles, content)
+- ✅ Pagination works (load more articles without breaking)
+- ✅ Mobile-friendly (responsive layout, easy browsing on phone)
+
+**Success Metrics:**
+- Archive/category page views: 15-20% of total page views (users browse beyond single articles)
+- Search usage: 5-10% of users use search (indicates engaged users looking for specific topics)
+
+---
+
+**Pillar 2: Commerce (Product Catalog & Checkout)**
+
+**Purpose:** Enable transactional revenue through digital product sales (ebooks, audiobooks, bundles).
+
+---
+
+**Feature 2.1: Product Catalog (WooCommerce)**
+
+**Description:** E-commerce functionality for browsing, viewing, and purchasing digital products.
+
+**Functional Requirements:**
+
+**Product Types:**
+- **Simple Products:** Individual ebooks, audiobooks (single file download)
+- **Bundles/Collections:** Multiple works packaged together (e.g., Foundation Complete Collection = 7 books)
+- **Variable Products (optional MVP):** Different formats of same work (ebook + audiobook bundle) — DEFER if complex
+
+**Product Information (Per Product):**
+- **Title:** Work title (e.g., "Foundation by Isaac Asimov")
+- **Description:** Plot summary, themes, historical context (200-500 words)
+- **Short Description:** 1-2 sentences (displays in catalog listings)
+- **Price:** Fixed price (e.g., $3.99, $12.99, $29.99)
+- **Product Image:** Cover art (600x900px minimum, high quality)
+- **Product Category:** Ebooks, Audiobooks, Bundles, Collections
+- **Tags:** Author name, series, theme, era (for filtering/search)
+- **File(s) for Download:** PDF (ebook), MP3 or M4B (audiobook)
+- **File Size:** Display file size (e.g., "PDF, 2.5 MB" or "Audiobook, 450 MB")
+- **Format Information:** "DRM-free PDF" or "MP3 audiobook, professionally narrated"
+
+**Product Catalog Page:**
+- URL: `/shop/`
+- Display all products (grid layout, 3-4 columns on desktop, 1-2 on mobile)
+- Each product listing: cover image, title, author, price, "Add to Cart" button
+- Filter/sort options (WooCommerce default):
+  - Filter by category (Ebooks, Audiobooks, Bundles)
+  - Sort by: Default, Price (low to high, high to low), Popularity, Latest
+- Pagination (20-30 products per page)
+
+**Product Detail Page:**
+- URL: `/product/[product-slug]/` (e.g., `/product/foundation-asimov-ebook/`)
+- Product image (gallery if multiple covers/formats)
+- Title, author, price
+- Full description (plot, themes, why worth reading)
+- Format and file information
+- "Add to Cart" button (prominent, clear)
+- Related products (3-5 similar works, e.g., other Asimov works, Foundation series)
+- Reviews/ratings: DEFERRED to Phase 2-3 (not MVP)
+
+**WooCommerce Configuration:**
+- Digital products only (no physical shipping)
+- Automatic file delivery via email after purchase
+- Guest checkout enabled (users don't need accounts to purchase)
+- Currency: USD (expand to other currencies Phase 2+ if international demand)
+- Tax settings: Apply sales tax if required by jurisdiction (consult accountant/Stripe)
+
+**Acceptance Criteria:**
+- ✅ Users can browse product catalog (desktop, mobile)
+- ✅ Users can view product details (description, price, format)
+- ✅ Users can add products to cart
+- ✅ Cart displays correctly (items, quantities, subtotal)
+- ✅ Product images load quickly, high quality
+- ✅ Filters and sort work correctly
+- ✅ Mobile-friendly (easy to browse, add to cart on phone)
+
+**Success Metrics:**
+- Product page views: 10-15% of site traffic (users exploring catalog)
+- Add-to-cart rate: 5-10% of product page viewers
+- Cart abandonment rate: <70% (industry average ~69%, aim to beat)
+
+---
+
+**Feature 2.2: Shopping Cart & Checkout**
+
+**Description:** Secure checkout process for purchasing digital products.
+
+**Functional Requirements:**
+
+**Shopping Cart:**
+- Cart icon in header (displays item count: "Cart (3)")
+- Cart page: `/cart/`
+  - Display all items in cart (product name, price, quantity, subtotal)
+  - Update quantity (increase/decrease, remove item)
+  - Display cart total (subtotal, tax if applicable, total)
+  - "Proceed to Checkout" button (prominent, clear)
+  - "Continue Shopping" link (return to catalog)
+  
+**Checkout Page:**
+- URL: `/checkout/`
+- **Billing Information:**
+  - First Name, Last Name
+  - Email Address (required, for digital delivery and order confirmation)
+  - Country (for tax calculation if needed)
+  - Optional: Phone number (for support purposes)
+  
+- **Payment Method:**
+  - Credit/debit card via Stripe
+  - Display accepted cards (Visa, Mastercard, Amex, Discover)
+  - Secure payment badge (SSL, Stripe branding for trust)
+  
+- **Order Summary:**
+  - List of items purchasing (product name, price, quantity)
+  - Subtotal, tax (if applicable), total
+  
+- **Place Order Button:**
+  - Prominent, clear CTA
+  - Disabled during processing (prevent double-charging)
+  - Display "Processing..." state while payment processes
+
+**Payment Processing:**
+- Stripe integration (Stripe Checkout or WooCommerce Stripe Payment Gateway plugin)
+- PCI-compliant (Stripe handles card data, SF Supernova never sees card numbers)
+- Support major credit/debit cards
+- 3D Secure support (for European/international customers requiring authentication)
+- PayPal: OPTIONAL MVP (defer if setup complex; Stripe sufficient for Phase 1)
+
+**Order Confirmation:**
+- Immediately after successful payment:
+  - Display order confirmation page: "Thank you! Your order is complete."
+  - Order number, order details (items purchased), total paid
+  - "Download your files" links (immediate access to digital products)
+  
+- Order confirmation email (automated, sent immediately):
+  - Subject: "Your SF Supernova Order #[order-number] is Ready!"
+  - Body: Thank you message, order details, download links (valid for 30 days or unlimited downloads)
+  - Support contact info (if issues with downloads)
+
+**Digital Product Delivery:**
+- WooCommerce automatic file delivery (download links generated after payment)
+- Download links valid for 30 days (or unlimited downloads—founder decision)
+- Files hosted securely (obfuscated URLs to prevent unauthorized sharing)
+- Download tracking (optional MVP: track how many times files downloaded)
+
+**Guest Checkout:**
+- Users can purchase without creating account (reduce friction)
+- Email address is "account" (users receive download links via email)
+- Order lookup via email (optional Phase 2: "Enter your email to view past orders")
+
+**Acceptance Criteria:**
+- ✅ Users can add items to cart, view cart, update quantities
+- ✅ Users can proceed to checkout, enter billing info
+- ✅ Stripe payment processes successfully (test with Stripe test cards)
+- ✅ Users receive order confirmation page and email immediately after payment
+- ✅ Download links work (users can download purchased files)
+- ✅ Mobile-friendly (easy to checkout on phone, readable forms, tappable buttons)
+- ✅ Secure (SSL certificate, HTTPS, PCI-compliant via Stripe)
+- ✅ Error handling (display clear messages if payment fails, out of stock, etc.)
+
+**Success Metrics:**
+- Checkout completion rate: >30% (users who reach checkout complete purchase)
+- Payment success rate: >95% (successful payments vs. failed attempts)
+- Time to checkout: <5 minutes (from adding to cart to order confirmation)
+- Download success rate: >98% (users successfully download files)
+
+---
+
+**Feature 2.3: Order Management (Backend)**
+
+**Description:** Admin functionality to view, manage, and fulfill orders.
+
+**Functional Requirements:**
+
+**WooCommerce Admin Dashboard:**
+- View all orders (list view: order number, customer name, email, total, status, date)
+- Order statuses: Pending, Processing, Completed, Failed, Refunded
+- Filter orders by status, date range, customer
+- Search orders by order number, customer email
+
+**Individual Order View:**
+- Order details: items purchased, quantities, prices, total
+- Customer details: name, email, billing country
+- Payment details: payment method, transaction ID (Stripe)
+- Order notes: Add internal notes (e.g., "Customer requested refund, issued via Stripe")
+- Order actions: Mark as complete, refund (via Stripe), resend download links
+
+**Refund Process:**
+- Refund via WooCommerce admin (integrates with Stripe)
+- Full refund or partial refund (if only refunding some items)
+- Automated refund notification email to customer
+
+**Acceptance Criteria:**
+- ✅ Founder can view all orders in WooCommerce admin
+- ✅ Founder can process refunds if needed (via Stripe integration)
+- ✅ Founder can resend download links if customer reports issues
+- ✅ Order data exports (CSV) for accounting/tax purposes
+
+**Success Metrics:**
+- Refund rate: <3% (indicates product quality, clear expectations)
+- Support tickets related to orders: <5% of orders (smooth fulfillment process)
+
+---
+
+**Pillar 3: Membership System (Recurring Revenue)**
+
+**Purpose:** Enable recurring revenue through tiered membership subscriptions.
+
+---
+
+**Feature 3.1: Membership Tiers & Benefits**
+
+**Description:** Three-tier membership structure (Explorer, Enthusiast, Collector) with defined benefits.
+
+**Functional Requirements:**
+
+**Membership Tier Definitions:**
+
+**Tier 1: Explorer ($4.99/month or $49/year)**
+- Ad-free experience (no ads on site—note: MVP may not have ads anyway, but promise future ad-free)
+- 20% discount on all products (applied automatically at checkout)
+- Early access to new content (1 week before public)
+- Member badge (displayed on profile if user accounts implemented Phase 2+)
+- Enhanced newsletter (member-only content, bonus recommendations)
+
+**Tier 2: Enthusiast ($8.99/month or $89/year)**
+- Everything in Explorer, plus:
+- 2 audiobook credits per month (redeemable for any audiobook in catalog)
+- 30% discount on all products (better than Explorer)
+- Exclusive member content (bonus essays, deep-dive analyses, audio commentary)
+- Full community access (forums, if implemented Phase 3+)
+- Priority support (24-hour email response time)
+- Early access to new content (2 weeks before public)
+
+**Tier 3: Collector ($14.99/month or $149/year)**
+- Everything in Enthusiast, plus:
+- 4 audiobook credits per month (heavy audio listener benefit)
+- 40% discount on all products (maximum discount tier)
+- Complete enhanced edition access (all premium editions included)
+- Advanced collection tools (Phase 3+ feature: dashboard, gap analysis)
+- VIP treatment (direct founder access, roadmap influence, early beta access to new features)
+- Premium support (12-hour email response time)
+- Early access to new content (4 weeks before public)
+
+**Membership Page:**
+- URL: `/membership/`
+- Display all three tiers side-by-side (comparison table format)
+- Each tier: name, price (monthly/annual toggle), benefits list
+- "Choose Plan" button for each tier (links to signup/checkout)
+- FAQ section: Common questions (Can I cancel anytime? Do credits roll over? What's included in exclusive content?)
+- Testimonials (Phase 2+, once members exist): Display 2-3 member testimonials
+
+**Acceptance Criteria:**
+- ✅ Membership page displays all tiers clearly (desktop, mobile)
+- ✅ Benefits listed accurately for each tier
+- ✅ Pricing toggle (monthly/annual) functional, displays correct pricing
+- ✅ "Choose Plan" buttons link correctly to signup flow
+- ✅ FAQ answers common questions (reduces support burden)
+
+**Success Metrics:**
+- Membership page views: 8-12% of site traffic (users considering membership)
+- Membership conversion rate: 2-4% of page viewers sign up
+- Tier distribution: Explorer 15-20%, Enthusiast 50-60%, Collector 20-30% (Enthusiast as workhorse tier)
+
+---
+
+**Feature 3.2: Membership Signup & Subscription Management**
+
+**Description:** Allow users to sign up for memberships, manage subscriptions, and cancel if needed.
+
+**Functional Requirements:**
+
+**Membership Signup Flow:**
+
+**Option 1: WooCommerce Subscriptions Plugin**
+- Treat memberships as subscription products in WooCommerce
+- Monthly/annual subscription options (recurring billing via Stripe)
+- Checkout process similar to product purchase (enter email, payment info)
+- After signup: Confirmation email, member welcome email (automated sequence)
+
+**Option 2: MemberPress or Paid Memberships Pro Plugin**
+- Dedicated membership plugin (alternative to WooCommerce Subscriptions)
+- Membership signup forms (custom, optimized for subscriptions)
+- Stripe integration for recurring billing
+- Member account creation (email + password)
+
+**Founder Recommendation:** WooCommerce Subscriptions (unified platform, one less plugin, simpler management). Evaluate MemberPress if WooCommerce Subscriptions too complex.
+
+**Membership Signup Page:**
+- After clicking "Choose Plan" on membership page, redirect to signup:
+  - Selected tier displayed (name, price, benefits reminder)
+  - Email address input
+  - Payment information (Stripe)
+  - "Subscribe Now" button
+  
+**Subscription Billing:**
+- Recurring billing via Stripe (automatic charge monthly/annually)
+- Renewal reminder emails (3 days before renewal: "Your membership renews on [date]")
+- Failed payment handling: Email notification, retry billing (Stripe smart retry), cancel after 3 failed attempts
+
+**Subscription Management (Member Portal):**
+- URL: `/my-account/` or `/membership-portal/`
+- Display current membership tier, renewal date, payment method
+- Options:
+  - Update payment method (change credit card)
+  - Upgrade tier (Explorer → Enthusiast, Enthusiast → Collector)
+  - Downgrade tier (Collector → Enthusiast, etc.)—allow but discourage
+  - Pause membership (optional MVP: allow 1-3 month pause)
+  - Cancel membership (clear, one-click cancel—no dark patterns)
+  
+**Cancellation Flow:**
+- User clicks "Cancel Membership"
+- Confirmation prompt: "Are you sure? You'll lose [benefits]. [Cancel] [Keep Membership]"
+- If confirmed: Immediate cancellation or end-of-period cancellation (founder decision—recommend end-of-period, maintain access through paid period)
+- Cancellation confirmation email: "Your membership will end on [date]. We're sorry to see you go. Rejoin anytime!"
+- Feedback request (optional): "Why are you canceling?" [dropdown: Too expensive, Not using enough, Found alternative, Other] (data for retention improvements)
+
+**Acceptance Criteria:**
+- ✅ Users can sign up for any membership tier (monthly or annual)
+- ✅ Stripe recurring billing set up correctly (test with Stripe test mode)
+- ✅ Users receive confirmation email immediately after signup
+- ✅ Users can access member portal, view subscription details
+- ✅ Users can update payment method, upgrade/downgrade, cancel
+- ✅ Cancellation process clear, ethical (no dark patterns, easy to cancel)
+- ✅ Renewal reminders sent automatically (reduce involuntary churn from expired cards)
+
+**Success Metrics:**
+- Signup completion rate: >60% (users who start signup complete it)
+- Renewal success rate: >90% (successful automatic renewals)
+- Voluntary churn rate: <8% monthly (cancellations)
+- Involuntary churn rate: <2% monthly (failed payments leading to cancellation)
+
+---
+
+**Feature 3.3: Member Benefits Delivery**
+
+**Description:** Deliver promised benefits to members (discounts, credits, exclusive content, early access).
+
+**Functional Requirements:**
+
+**Benefit 1: Automatic Discounts**
+- Apply discount at checkout based on membership tier
+- Explorer: 20% off, Enthusiast: 30% off, Collector: 40% off
+- Discount applied to all products (ebooks, audiobooks, bundles)
+- Display discount in cart: "Member Discount (30%): -$9.00"
+- Implementation: WooCommerce dynamic pricing plugin or custom code (assign user role based on tier, apply discount rule)
+
+**Benefit 2: Audiobook Credits**
+- Enthusiast: 2 credits/month, Collector: 4 credits/month
+- Credits refresh on membership anniversary (e.g., if joined on 15th, credits refresh on 15th each month)
+- Redeem credits at checkout: Option to "Use 1 Credit" instead of paying price
+- Credit balance displayed in member portal: "You have 3 credits available"
+- Implementation: Custom code or WooCommerce Points and Rewards plugin (treat credits as points, redeemable for audiobooks)
+
+**Benefit 3: Exclusive Member Content**
+- Create category: "Member-Only" (access restricted to members)
+- Member-only articles: Deep-dive essays, bonus analyses, audio commentary (written content)
+- Frequency: 1-2 per month (sustainable for founder)
+- Implementation: Content restriction plugin (MemberPress, Restrict Content Pro) or custom code (check user membership status before displaying content)
+
+**Benefit 4: Early Access to Content**
+- Publish new articles 1-4 weeks early for members (depending on tier)
+- After early access period, make public
+- Implementation: Scheduled publishing + content restriction (publish for members first, then switch to public after period)
+- Note: May add complexity—evaluate if essential for MVP or defer to Phase 2
+
+**Benefit 5: Enhanced Newsletter**
+- Send separate newsletter to members (or same newsletter with member-only section)
+- Member content: Bonus recommendations, behind-the-scenes updates, exclusive offers
+- Frequency: Same as general newsletter (weekly) but with additional content for members
+- Implementation: Segment email list in Mailchimp/ConvertKit (tag members, send targeted content)
+
+**Acceptance Criteria:**
+- ✅ Members automatically receive discounts at checkout (verified by test purchases)
+- ✅ Members receive audiobook credits monthly (verified in member portal)
+- ✅ Members can access exclusive content (non-members cannot)
+- ✅ Members receive enhanced newsletter (correct content, correct segmentation)
+- ✅ Early access works (members see content before public—if implemented in MVP)
+
+**Success Metrics:**
+- Discount usage rate: >70% of members use discount (indicates shopping behavior)
+- Credit redemption rate: >80% of credits redeemed monthly (indicates value perception)
+- Exclusive content views: >50% of members view exclusive content monthly (indicates engagement)
+- Member newsletter open rate: >40% (higher than general list due to exclusivity)
+
+---
+
+**Pillar 4: Email & Engagement**
+
+**Purpose:** Build email list, nurture subscribers, convert to customers and members.
+
+---
+
+**Feature 4.1: Email Capture (Lead Magnets & Opt-In Forms)**
+
+**Description:** Convert site visitors into email subscribers through strategic opt-in forms and lead magnets.
+
+**Functional Requirements:**
+
+**Email Opt-In Forms:**
+
+**Form 1: Inline Article Opt-In (Mid-Article)**
+- Placement: After 40-50% of article content (user has read enough to be engaged)
+- Headline: "Want More Vintage Sci-Fi Recommendations?"
+- Subheadline: "Join our weekly newsletter for curated classics, hidden gems, and reading guides."
+- Email input field, "Subscribe" button
+- Privacy note: "We respect your privacy. Unsubscribe anytime."
+- Integration: Mailchimp or ConvertKit form embed
+
+**Form 2: End-of-Article Opt-In (With Lead Magnet)**
+- Placement: At end of article (after conclusion, before comments/related articles)
+- Offer lead magnet if relevant to article topic
+- Example: Article on "Foundation Series Reading Order" → Lead magnet: "Download the Foundation Reading Order Checklist (PDF)"
+- Headline: "Get Your Free Foundation Reading Checklist"
+- Subheadline: "Sign up for our newsletter and download your free visual timeline and reading checklist (PDF)"
+- Email input, "Download Now" button
+- After submission: Thank you message + immediate download link (or email with download link)
+
+**Form 3: Sidebar Widget (Site-Wide)**
+- Placement: Sidebar on all articles, homepage
+- Headline: "Join 1,000+ Vintage Sci-Fi Fans" (update number as list grows)
+- Subheadline: "Weekly recommendations, reading guides, and exclusive offers"
+- Email input, "Subscribe" button
+
+**Form 4: Exit-Intent Popup (Optional MVP)**
+- Trigger: When user moves cursor toward browser close/back button (exit intent)
+- Headline: "Before You Go... Get Our Free Vintage Sci-Fi Starter Guide"
+- Offer: Downloadable PDF guide (e.g., "Top 20 Vintage Sci-Fi Books for Beginners")
+- Email input, "Download Free Guide" button
+- Dismissible (X button to close)
+- Note: Evaluate user experience—popups can be annoying; test if conversion uplift justifies potential annoyance
+
+**Lead Magnets (Downloadable Resources):**
+
+**MVP Lead Magnets (Create 2-4 Initially):**
+1. **"Vintage Sci-Fi Starter Pack: 20 Essential Books"** (PDF, 10-15 pages)
+   - Curated list with brief descriptions, why each is essential, reading order notes
+   
+2. **"Foundation Series Reading Order Checklist"** (PDF, 2-4 pages)
+   - Visual timeline, publication vs. chronological order, what to skip
+   
+3. **"Time Travel Stories Reading List"** (PDF, 5-10 pages)
+   - 30 essential time travel stories, organized by theme (paradoxes, alternate history, time loops)
+   
+4. **"The Complete Asimov Guide"** (PDF, 15-20 pages)
+   - Biography, complete bibliography, reading recommendations, series breakdowns
+
+**Lead Magnet Delivery:**
+- Automated email immediately after signup: "Here's your free guide!"
+- Email includes download link (hosted on SF Supernova site or Mailchimp file storage)
+- Optionally: Display download link on thank-you page (immediately after form submission)
+
+**Email Platform Integration:**
+- Mailchimp or ConvertKit API integration
+- Forms submit to email list (automatically tag based on lead magnet downloaded: "foundation-guide," "starter-pack," etc.)
+- Tags enable segmentation (send targeted content based on interests)
+
+**Acceptance Criteria:**
+- ✅ Email opt-in forms display correctly on all pages (desktop, mobile)
+- ✅ Forms functional (submit email to Mailchimp/ConvertKit)
+- ✅ Lead magnets downloadable (links work, PDFs formatted well)
+- ✅ Confirmation emails sent automatically (welcome email + lead magnet delivery)
+- ✅ Thank-you pages display after submission (clear confirmation, next steps)
+- ✅ Mobile-friendly (forms easy to complete on phone)
+
+**Success Metrics:**
+- Email capture rate (site-wide): 3.5-5% (visitors who submit email)
+- Lead magnet conversion rate: 8-12% (article readers who download lead magnet)
+- Opt-in form performance comparison: Which forms convert best? (optimize highest performers)
+
+---
+
+**Feature 4.2: Email Newsletter (Weekly Roundup)**
+
+**Description:** Send weekly email newsletter to subscribers with new content, recommendations, and product highlights.
+
+**Functional Requirements:**
+
+**Newsletter Frequency:**
+- Weekly (every Friday)
+- Consistent send day/time (e.g., Friday 10am EST)
+
+**Newsletter Content:**
+
+**Standard Structure:**
+
+1. **Subject Line:**
+   - Format: "This Week in Vintage Sci-Fi: [Topic/Hook]"
+   - Examples: "Foundation, Time Travel, and Hidden Gems," "New Asimov Guide + Top 10 Golden Age Novels"
+   - A/B test subject lines (if email platform supports) to optimize open rates
+   
+2. **Header:**
+   - SF Supernova logo, tagline
+   - "Week of [Date]" or "[Month] Newsletter"
+   
+3. **Body Content:**
+   
+   **Section 1: New Articles (2-4 articles)**
+   - For each article: Thumbnail image, title, 2-3 sentence description, "Read More" CTA button
+   - Example:
+     > **"Foundation Series Reading Order: The Complete Guide"**
+     > Confused about how to read Asimov's Foundation? We break down publication vs. chronological order, what to skip, and our recommendations for first-time readers and completionists.
+     > [Read the Guide →]
+   
+   **Section 2: Featured Product or Collection (1 product)**
+   - Product image, title, brief description, price
+   - Special offer if applicable (e.g., "New This Week" or "Member Exclusive: 30% Off")
+   - "Shop Now" CTA button
+   - Example:
+     > **"Foundation Complete Collection (Ebook Bundle)"**
+     > All 7 Foundation novels, professionally formatted, DRM-free. Save 40% vs. buying individually.
+     > **$29.99** (Regular $50) [Shop Now →]
+   
+   **Section 3: Membership Highlight (Optional, Rotate)**
+   - Promote membership benefits
+   - Example: "Did you know? Enthusiast members get 2 audiobook credits per month + 30% off everything. Upgrade today!" [Learn More →]
+   
+   **Section 4: Engagement Prompt (Optional)**
+   - Ask question, encourage reply
+   - Example: "What vintage sci-fi are you reading right now? Hit reply and let us know—we love hearing from you!"
+   
+4. **Footer:**
+   - Social media links (Twitter, Reddit if active)
+   - Unsubscribe link (required by law—CAN-SPAM, GDPR)
+   - Contact info: "Questions? Reply to this email or contact us at hello@sfsupernova.com"
+   - Mailing address (required by CAN-SPAM)
+
+**Newsletter Creation Workflow:**
+- Draft in Mailchimp/ConvertKit email builder (drag-and-drop or HTML)
+- Preview on desktop and mobile (ensure formatting correct)
+- Send test email (to founder's personal email, check all links work)
+- Schedule send (Friday 10am EST) or send immediately
+
+**Welcome Email Sequence (Automated):**
+- Triggered when user subscribes
+- Email 1 (Immediate): Welcome + lead magnet download
+  - Subject: "Welcome to SF Supernova! Here's Your Free Guide"
+  - Body: Thank you, here's your guide, here's what to expect (weekly newsletter, exclusive offers)
+- Email 2 (Day 3): "Top 5 Articles to Get Started"
+  - Links to 5 best/most popular articles (Foundation guide, Best Golden Age list, Asimov biography, Time Travel guide, Beginner's Guide)
+- Email 3 (Day 7): "Explore Our Catalog"
+  - Introduce product catalog, highlight featured collection, offer first-purchase discount code (optional: 10% off first order)
+- Email 4+ (Ongoing): Weekly newsletter (automated schedule)
+
+**Acceptance Criteria:**
+- ✅ Newsletter sent weekly on schedule (Friday 10am)
+- ✅ Newsletter displays correctly on desktop and mobile email clients (Gmail, Outlook, Apple Mail)
+- ✅ All links functional (article links, product links, CTAs)
+- ✅ Images load correctly (alt text present for accessibility)
+- ✅ Unsubscribe link present and functional
+- ✅ Welcome sequence automated (triggers on signup, sends emails on schedule)
+
+**Success Metrics:**
+- Open rate: 35-45% (industry average for content newsletters ~20-25%, aim higher)
+- Click-through rate: 8-15% (subscribers who click article or product links)
+- Unsubscribe rate: <0.5% per email (low churn)
+- Email → Purchase conversion: 12-15% within 90 days (subscribers who purchase after receiving emails)
+
+---
+
+**Pillar 5: Foundation & Infrastructure**
+
+**Purpose:** Technical foundation enabling all other features—hosting, security, analytics, SEO.
+
+---
+
+**Feature 5.1: Web Hosting & Performance**
+
+**Description:** Fast, reliable hosting ensuring site loads quickly and handles traffic.
+
+**Functional Requirements:**
+
+**Hosting Provider:**
+- **Recommended:** Managed WordPress hosting (WP Engine, Kinsta, Flywheel, SiteGround)
+- **Why:** Optimized for WordPress, automatic backups, security, performance
+- **Tier:** Starter plan ($25-35/month) sufficient for MVP traffic (5,000-10,000 visitors/month)
+
+**Performance Requirements:**
+- **Page Load Time:**
+  - Desktop: <3 seconds
+  - Mobile: <5 seconds
+  - Goal: 90+ PageSpeed Insights score (Google's performance metric)
+  
+**Performance Optimization:**
+- Caching plugin (WP Rocket, W3 Total Cache, or host-provided caching)
+- Image optimization (compress images before upload, use WebP format)
+- CDN (Content Delivery Network): Cloudflare free tier (caches static files, speeds up global load times)
+- Minify CSS/JS (reduce file sizes, faster downloads)
+- Lazy loading images (load images as user scrolls, not all at once)
+
+**Uptime:**
+- Target: 99.9% uptime (less than 1 hour downtime per month)
+- Host monitoring (WP Engine/Kinsta provide uptime monitoring)
+- Founder monitoring: Use UptimeRobot (free) to alert if site goes down
+
+**Acceptance Criteria:**
+- ✅ Site loads in <3 seconds on desktop, <5 seconds on mobile (test with PageSpeed Insights, GTmetrix)
+- ✅ Site accessible 99.9%+ of the time (monitor with UptimeRobot)
+- ✅ Images optimized (<200KB per image)
+- ✅ Caching enabled (verify with caching plugin)
+- ✅ CDN configured (Cloudflare or host-provided CDN)
+
+**Success Metrics:**
+- Average page load time: <3 seconds
+- PageSpeed Insights score: 90+ (desktop), 70+ (mobile—mobile often harder to optimize)
+- Uptime: >99.9%
+
+---
+
+**Feature 5.2: Security & SSL**
+
+**Description:** Secure site with SSL certificate, protecting user data and building trust.
+
+**Functional Requirements:**
+
+**SSL Certificate:**
+- HTTPS enabled (SSL certificate installed)
+- Free SSL via Let's Encrypt (included with most managed WordPress hosts)
+- All traffic redirected to HTTPS (HTTP → HTTPS automatic redirect)
+
+**Security Best Practices:**
+- Strong admin password (use password manager, 20+ character random password)
+- Limit login attempts (plugin: Limit Login Attempts Reloaded—prevents brute force attacks)
+- Two-factor authentication (2FA) on admin account (plugin: Two Factor Authentication)
+- Regular backups (daily backups via hosting provider or plugin: UpdraftPlus)
+- Firewall (Cloudflare provides basic firewall, or use Wordfence plugin)
+- Hide WordPress version (security through obscurity—don't advertise WordPress version)
+
+**PCI Compliance (for Payment Processing):**
+- Stripe handles all credit card data (SF Supernova never stores card numbers)
+- SAQ A compliance (Self-Assessment Questionnaire for Stripe integration—minimal requirements)
+- No direct PCI requirements on SF Supernova side (Stripe is PCI Level 1 compliant)
+
+**Data Privacy (GDPR, CCPA Compliance):**
+- Privacy Policy page (URL: `/privacy-policy/`)
+  - Disclose data collection (email addresses, purchase data, analytics cookies)
+  - Disclose data usage (email marketing, order fulfillment, analytics)
+  - User rights (request data deletion, unsubscribe from emails)
+- Cookie consent banner (optional MVP if limited tracking—required if using extensive cookies/tracking)
+- Terms of Service page (URL: `/terms-of-service/`)
+  - Define acceptable use, refund policy, digital product license terms
+
+**Acceptance Criteria:**
+- ✅ SSL certificate installed, HTTPS enabled site-wide
+- ✅ Security plugins configured (limit login attempts, 2FA, firewall)
+- ✅ Daily backups enabled (verify backups work—test restore process)
+- ✅ Privacy Policy and Terms of Service published, linked in footer
+- ✅ No security vulnerabilities (run security scan: Wordfence or Sucuri)
+
+**Success Metrics:**
+- Zero security breaches (no hacks, data leaks, or downtime due to security)
+- Backup success rate: 100% (all scheduled backups complete successfully)
+
+---
+
+**Feature 5.3: Analytics & Tracking**
+
+**Description:** Track user behavior, traffic sources, conversions for data-driven decision making.
+
+**Functional Requirements:**
+
+**Google Analytics (GA4):**
+- Install Google Analytics 4 (GA4) tracking code site-wide
+- Track page views, sessions, users, bounce rate, average session duration
+- Set up Goals/Events:
+  - Email signup (track conversions when user submits email form)
+  - Product purchase (track transactions, revenue, products purchased)
+  - Membership signup (track subscription conversions)
+  - Article engagement (scroll depth, time on page)
+  
+**Google Search Console:**
+- Verify site ownership with Google Search Console
+- Submit XML sitemap (automatically generated by Yoast SEO or Rank Math)
+- Monitor search performance: impressions, clicks, average position, CTR
+- Identify indexing issues (pages not indexed, crawl errors)
+- Track keyword rankings (which keywords driving traffic)
+
+**Conversion Tracking:**
+- Track full funnel: Visitor → Email Signup → Product Purchase → Membership
+- Attribute revenue to traffic sources (which channels drive most revenue: organic, email, social, etc.)
+- Use UTM parameters for campaign tracking (e.g., email links tagged with utm_source=newsletter)
+
+**Heatmaps/Session Recording (Optional MVP):**
+- Hotjar or Crazy Egg (optional, defer to Phase 2 if budget tight)
+- Visual heatmaps (where users click, scroll, move mouse)
+- Session recordings (watch anonymized user sessions—identify UX issues)
+- Cost: $0-30/month (Hotjar free tier sufficient for MVP)
+
+**Acceptance Criteria:**
+- ✅ Google Analytics installed, tracking page views and users
+- ✅ Goals/Events configured (email signup, purchase, membership tracked)
+- ✅ Google Search Console verified, sitemap submitted
+- ✅ Traffic sources tracked (organic, direct, referral, email, social)
+- ✅ Revenue attribution functional (can see which sources drive sales)
+
+**Success Metrics:**
+- 100% traffic tracked (no gaps in analytics data)
+- Conversion tracking accuracy: >95% (verify test purchases/signups appear in analytics)
+- Data actionable (can answer: What's our most popular article? Which traffic source converts best? What's our email capture rate?)
+
+---
+
+**Feature 5.4: SEO Foundation**
+
+**Description:** Technical SEO infrastructure enabling content to rank in Google search results.
+
+**Functional Requirements:**
+
+**SEO Plugin:**
+- Install Yoast SEO or Rank Math (free versions sufficient for MVP)
+- Configure plugin:
+  - Set homepage title and meta description
+  - Enable XML sitemap generation
+  - Set default social media Open Graph settings
+  - Configure breadcrumbs (navigation aid + SEO benefit)
+
+**On-Page SEO Elements (Per Article):**
+- Meta title (60 characters, keyword-optimized)
+- Meta description (155 characters, compelling, keyword-included)
+- Focus keyword (target keyword for article, plugin checks optimization)
+- URL slug (short, keyword-rich, readable—e.g., `/foundation-reading-order/`)
+- Heading structure (H1 title, H2 major sections, H3 subsections)
+- Image alt text (descriptive, includes keywords naturally)
+- Internal links (3-5 contextual links to related articles per article)
+
+**Schema.org Markup:**
+- Article schema (JSON-LD format, defines article metadata for Google)
+- Organization schema (defines SF Supernova as entity—name, logo, social profiles)
+- Breadcrumb schema (navigation path for Google)
+- Product schema (for product pages—title, price, availability, reviews if added Phase 2)
+
+**XML Sitemap:**
+- Auto-generated by Yoast/Rank Math
+- Submitted to Google Search Console
+- Updated automatically when new content published
+
+**Robots.txt:**
+- Configure to allow search engines to crawl important pages (articles, products, membership)
+- Disallow crawling of admin, cart, checkout, user account pages (no SEO value, avoid indexing)
+
+**Site Structure (SEO-Friendly):**
+- Logical URL structure: `sfsupernova.com/[post-name]` or `sfsupernova.com/category/[category]/[post-name]`
+- Internal linking strategy: Link from high-authority pages (homepage, popular articles) to new content
+- Breadcrumbs: Home > Category > Article (helps users navigate, helps Google understand hierarchy)
+
+**Acceptance Criteria:**
+- ✅ SEO plugin installed, configured correctly
+- ✅ Every article has optimized meta title, description, focus keyword
+- ✅ XML sitemap generated, submitted to Google Search Console
+- ✅ Schema markup present on articles, homepage, product pages
+- ✅ No major SEO issues (check with Yoast/Rank Math analysis, Google Search Console)
+
+**Success Metrics:**
+- Articles indexed by Google: >90% within 1 week of publishing
+- SEO score (Yoast/Rank Math): Green light on 80%+ of articles (indicates good optimization)
+- Keyword rankings: 50+ keywords in top 50 by Month 6
+
+---
+
+**MVP Feature Summary Table**
+
+| Feature Category | Feature | Priority Tier | Effort (Hours) | Dependencies | Success Metric |
+|------------------|---------|---------------|----------------|--------------|----------------|
+| **Content & Discovery** | WordPress CMS | Tier 1 (MVP) | 10 | Hosting | 50-75 articles published |
+| | Homepage & Navigation | Tier 1 (MVP) | 15 | WordPress | <3s load time, <50% bounce |
+| | Article Pages | Tier 1 (MVP) | 20 | WordPress | 4+ min time on page |
+| | Archive & Browsing | Tier 1 (MVP) | 10 | WordPress | 15-20% archive views |
+| **Commerce** | Product Catalog (WooCommerce) | Tier 1 (MVP) | 25 | Hosting, WordPress | 20-30 SKUs, 5-10% add-to-cart |
+| | Shopping Cart & Checkout | Tier 1 (MVP) | 30 | WooCommerce, Stripe | >30% checkout completion |
+| | Order Management | Tier 1 (MVP) | 5 | WooCommerce | <3% refund rate |
+| **Membership** | Membership Tiers & Benefits | Tier 1 (MVP) | 15 | WordPress | 2-4% membership conversion |
+| | Signup & Subscription Management | Tier 1 (MVP) | 30 | WooCommerce Subscriptions, Stripe | >60% signup completion |
+| | Member Benefits Delivery | Tier 1 (MVP) | 25 | WooCommerce | 70%+ discount usage |
+| **Email & Engagement** | Email Capture (Opt-In Forms) | Tier 1 (MVP) | 15 | Mailchimp/ConvertKit | 3.5-5% email capture rate |
+| | Email Newsletter | Tier 1 (MVP) | 20 | Mailchimp/ConvertKit | 35-45% open rate |
+| **Foundation & Infrastructure** | Web Hosting & Performance | Tier 1 (MVP) | 10 | Hosting provider | <3s load time, 99.9% uptime |
+| | Security & SSL | Tier 1 (MVP) | 5 | Hosting | Zero breaches, HTTPS enabled |
+| | Analytics & Tracking | Tier 1 (MVP) | 8 | Google Analytics, Search Console | 100% traffic tracked |
+| | SEO Foundation | Tier 1 (MVP) | 12 | Yoast/Rank Math | 90%+ articles indexed |
+| **TOTAL MVP** | | | **~255 hours** | | **All metrics above** |
+
+**MVP Timeline Estimate:**
+- **Founder Time Investment:** 255 hours over 3-6 months
+- **Weekly Commitment:** 15-20 hours/week on platform development (remainder on content creation)
+- **Launch Target:** Month 3-6 (depending on founder availability and pace)
+
+---
+
+**MVP Launch Checklist**
+
+**Pre-Launch (Final QA Before Public Announcement):**
+
+**Content Readiness:**
+- ✅ 50+ articles published, proofread, images optimized
+- ✅ Homepage featuring best content (top 6-10 articles visible)
+- ✅ Categories and tags organized logically
+- ✅ Internal links present (no orphan pages)
+
+**Commerce Readiness:**
+- ✅ 20-30 products in catalog (ebooks, audiobooks, bundles)
+- ✅ Product descriptions complete, cover images high quality
+- ✅ Checkout tested (end-to-end purchase flow works, digital delivery functional)
+- ✅ Stripe live mode enabled (test mode → live mode switch)
+- ✅ Tax settings configured (if applicable)
+
+**Membership Readiness:**
+- ✅ Membership page complete (3 tiers, benefits, pricing, FAQ)
+- ✅ Subscription signups tested (end-to-end signup, billing, cancellation works)
+- ✅ Member benefits functional (discounts apply, credits work, exclusive content accessible)
+
+**Email Readiness:**
+- ✅ Email opt-in forms on all articles, homepage, sidebar
+- ✅ Lead magnets created (2-4 PDFs ready for download)
+- ✅ Welcome email sequence configured (automated, tested)
+- ✅ First newsletter drafted (ready to send Week 1)
+
+**Technical Readiness:**
+- ✅ SSL enabled, HTTPS site-wide
+- ✅ Google Analytics tracking (verified data flowing)
+- ✅ Google Search Console verified, sitemap submitted
+- ✅ Site performance optimized (<3s load time)
+- ✅ Security plugins configured (backups, 2FA, firewall)
+- ✅ Privacy Policy and Terms of Service published
+
+**Launch Day:**
+- ✅ Announce on social media (Twitter, Reddit r/printSF)
+- ✅ Send launch email to personal network (friends, advisors, early supporters)
+- ✅ Submit to relevant directories (optional: Product Hunt if appropriate)
+- ✅ Monitor analytics closely (first 24-48 hours, identify any issues)
+
+**Post-Launch (Week 1-4):**
+- ✅ Publish content consistently (2-4 articles/week)
+- ✅ Send weekly newsletter
+- ✅ Monitor user feedback (emails, comments, Reddit responses)
+- ✅ Fix bugs/issues as discovered (prioritize blocking issues)
+- ✅ Gather testimonials (reach out to first customers/members for feedback)
+
+---
+
+**Summary: MVP Feature Set as Foundation**
+
+**Why These Features?**
+
+**Included in MVP because:**
+- ✅ Deliver core value (discovery via content, quality products, curated experience)
+- ✅ Enable revenue (product sales, membership subscriptions)
+- ✅ Buildable by solo founder (3-6 months, 255 hours platform development + content creation)
+- ✅ Validate hypotheses (users read, buy, subscribe)
+
+**Not Included in MVP (Deferred to Phase 2-3) because:**
+- ❌ Not essential to core value delivery (user accounts, social features, advanced recommendations)
+- ❌ Not essential to revenue validation (merchandise, premium tools, mobile apps)
+- ❌ Too complex/time-intensive for MVP (API, gamification, community features)
+- ❌ Unproven demand (build after validation, not before)
+
+**MVP Philosophy:**
+- Ship fast (3-6 months launch target)
+- Ship functional (quality MVP, not half-built)
+- Validate core assumptions (content, products, memberships work)
+- Iterate based on data (user feedback, analytics, revenue)
+
+**The goal: Launch minimum viable product that delivers core value, generates revenue, and enables learning—then iterate rapidly based on real user behavior and business performance. MVP is the foundation; Phase 2-3 features are the expansion built on proven foundation.**
 ### 7.3 Revenue-Critical Features
 
 ### 7.4 Extended Features (Post-MVP)
