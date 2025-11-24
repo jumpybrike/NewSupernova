@@ -24286,7 +24286,644 @@ Explicit functional requirements for each system component:
 •⁠  ⁠What features are revenue-critical
 
 ### 7.1 Requirements Framework & Prioritisation Methodology
+## 7. Functional Requirements (MVP → Extended)
 
+### 7.1 Requirements Framework & Prioritisation Methodology
+
+**Strategic Overview**
+
+Functional requirements define *what the system must do*—the specific features, capabilities, and behaviors that SF Supernova must deliver to users. In a resource-constrained startup (solo founder, limited budget, organic-first model), requirements prioritization is the difference between focused execution and scattered failure. Not all features are equally important; some are essential for MVP launch, others are revenue-critical, and many should be deferred until product-market fit is proven.
+
+**Core Principle:** *"Ship the minimum viable product that delivers core value, then iterate based on user feedback and revenue impact. Perfection is the enemy of launch."*
+
+This section establishes the **framework for requirements prioritization**—a systematic methodology for deciding what to build now, what to build later, and what never to build. It transforms the overwhelming universe of possible features into a focused, sequenced roadmap aligned with business goals, user needs, and resource constraints.
+
+---
+
+**The Requirements Challenge**
+
+**The Temptation: Build Everything**
+
+When planning a platform, it's tempting to envision the complete, mature product with all bells and whistles:
+- Rich user profiles with social features
+- Advanced recommendation algorithms
+- Mobile apps (iOS, Android)
+- API ecosystem
+- Community forums
+- Reading challenge gamification
+- AI-powered personalization
+- Virtual book clubs
+- Live events and author interviews
+- Merchandise marketplace
+- Audiobook production studio
+- Publishing imprint for new vintage-style works
+
+**The Problem:** Building all these features would take:
+- **Time:** 3-5 years of development (full team)
+- **Cost:** $500K-2M (salaries, tools, infrastructure)
+- **Risk:** Product might not resonate with market (wasted investment)
+
+**The Reality: Resource Constraints**
+
+SF Supernova has:
+- **Solo founder** (limited hours, must focus)
+- **Bootstrap budget** (<$50K initial capital, organic growth model)
+- **Unproven market** (hypothesis, not validated demand)
+- **Urgency to revenue** (need cash flow within 6-12 months)
+
+**The Solution: Ruthless Prioritization**
+
+Focus on the **minimum viable product (MVP)** that:
+1. **Delivers core value** to target users (discovery, curation, quality content)
+2. **Validates business model** (users will pay for products/memberships)
+3. **Can be built quickly** (3-6 months to launch)
+4. **Enables revenue** (product sales, membership subscriptions)
+5. **Supports iteration** (learn from users, improve continuously)
+
+---
+
+**Requirements Prioritization Framework**
+
+**Three-Tier Classification System:**
+
+Every feature falls into one of three tiers:
+
+**Tier 1: MVP (Must-Have for Launch)**
+- Features absolutely required for platform to deliver core value
+- Without these, platform doesn't work or doesn't provide minimum viable value
+- Build first, launch with these only
+- Timeframe: Phase 1 (Months 0-6)
+
+**Tier 2: Revenue-Critical (Post-MVP, Pre-Scale)**
+- Features required to maximize revenue and retention
+- Not essential for launch, but essential for scaling
+- Build immediately after MVP validation
+- Timeframe: Phase 2 (Months 6-12)
+
+**Tier 3: Extended/Deferred (Nice-to-Have, Optional)**
+- Features that enhance experience but aren't essential
+- Can be built later (or never) without jeopardizing business
+- Build only if revenue justifies investment and user demand validated
+- Timeframe: Phase 3+ (Months 12-24+) or deferred indefinitely
+
+---
+
+**Prioritization Criteria: The MoSCoW Method (Adapted)**
+
+**MoSCoW = Must Have, Should Have, Could Have, Won't Have**
+
+For each potential feature, evaluate across four dimensions:
+
+**Dimension 1: User Value (Must It Deliver Core Value?)**
+- **Must Have:** Feature directly delivers on core value proposition (discovery, curation, quality)
+  - Example: Content library with articles and guides
+- **Should Have:** Feature enhances core value but isn't strictly required
+  - Example: Personalized recommendations based on reading history
+- **Could Have:** Feature adds convenience or delight but marginal value
+  - Example: Reading challenge badges and gamification
+- **Won't Have (Yet):** Feature interesting but not aligned with current strategy
+  - Example: Virtual book club video chat integration
+
+**Dimension 2: Business Impact (Does It Drive Revenue or Retention?)**
+- **Must Have:** Feature essential to revenue model (product catalog, checkout, membership signup)
+- **Should Have:** Feature significantly improves conversion or retention (email capture, newsletter)
+- **Could Have:** Feature moderately improves monetization (affiliate links, merchandise)
+- **Won't Have (Yet):** Feature has unclear or minimal business impact (social features, forums)
+
+**Dimension 3: Feasibility (Can It Be Built with Available Resources?)**
+- **Must Have:** Feature buildable by founder in reasonable time (<40 hours)
+- **Should Have:** Feature buildable with modest contractor help (<$2,000)
+- **Could Have:** Feature requires significant investment (>$5,000 or >100 hours)
+- **Won't Have (Yet):** Feature requires capabilities SF Supernova doesn't have (mobile dev, AI/ML, etc.)
+
+**Dimension 4: Risk (What Happens If We Don't Build It?)**
+- **Must Have:** Without this feature, platform can't deliver core value or generate revenue (business fails)
+- **Should Have:** Without this feature, growth significantly constrained (business grows slowly)
+- **Could Have:** Without this feature, experience somewhat diminished (business unaffected)
+- **Won't Have (Yet):** Without this feature, no one notices (no impact)
+
+---
+
+**Scoring Methodology**
+
+**Quantitative Scoring (1-5 Scale for Each Dimension):**
+
+| Dimension | Weight | Score Range | Interpretation |
+|-----------|--------|-------------|----------------|
+| **User Value** | 30% | 1 (marginal) to 5 (essential) | How much does this deliver on core promise? |
+| **Business Impact** | 35% | 1 (minimal) to 5 (critical) | How much does this drive revenue/retention? |
+| **Feasibility** | 20% | 1 (very hard) to 5 (very easy) | How buildable is this with current resources? |
+| **Risk** | 15% | 1 (safe to skip) to 5 (must have) | What happens if we don't build? |
+
+**Weighted Score Calculation:**
+```
+Priority Score = (User Value × 0.30) + (Business Impact × 0.35) + (Feasibility × 0.20) + (Risk × 0.15)
+
+Priority Score Range: 1.0 (lowest priority) to 5.0 (highest priority)
+```
+
+**Tier Assignment Based on Score:**
+
+- **Score 4.0-5.0:** Tier 1 (MVP - Must Build Now)
+- **Score 3.0-3.9:** Tier 2 (Revenue-Critical - Build Phase 2)
+- **Score 2.0-2.9:** Tier 3 (Extended - Build Phase 3 or defer)
+- **Score 1.0-1.9:** Tier 4 (Deferred - Don't build unless strategy changes)
+
+---
+
+**Example: Scoring a Feature**
+
+**Feature: Email Newsletter Subscription (Lead Capture)**
+
+**User Value: 3/5**
+- Moderately valuable (users can read content without subscribing)
+- Enhances experience (weekly recommendations, updates)
+- Not essential to core value proposition (discovery happens via content)
+
+**Business Impact: 5/5**
+- Critical to revenue model (email → nurture → conversion)
+- Owned audience (not dependent on platform algorithms)
+- Foundation for customer acquisition funnel
+
+**Feasibility: 5/5**
+- Very easy to build (Mailchimp integration, WordPress plugin)
+- 5-10 hours founder time
+- Minimal cost ($0-50/month Mailchimp)
+
+**Risk: 4/5**
+- High risk if not built (no email list = no owned audience)
+- Limits conversion pathway (traffic leaks, can't nurture)
+- Not absolutely essential to launch (could add post-MVP)
+
+**Weighted Score:**
+```
+(3 × 0.30) + (5 × 0.35) + (5 × 0.20) + (4 × 0.15)
+= 0.90 + 1.75 + 1.00 + 0.60
+= 4.25
+```
+
+**Tier Assignment:** Tier 1 (MVP) - Must Build Now
+
+**Rationale:** Despite moderate user value, business impact and feasibility are so high that email capture is MVP-critical. Low cost, high revenue impact = obvious inclusion.
+
+---
+
+**Example: Scoring Another Feature**
+
+**Feature: Mobile Apps (iOS & Android)**
+
+**User Value: 4/5**
+- High convenience (read on-the-go, offline access)
+- Mobile-first user behavior (50%+ traffic from mobile)
+- Enhances experience significantly
+
+**Business Impact: 2/5**
+- Marginal revenue impact (mobile web works fine for discovery/purchase)
+- App Store fees (15-30% on in-app purchases)
+- Doesn't solve unsolved problem (mobile web responsive)
+
+**Feasibility: 1/5**
+- Very difficult (requires mobile development expertise founder doesn't have)
+- Expensive ($20-50K for quality apps, both platforms)
+- Time-intensive (3-6 months development + ongoing maintenance)
+
+**Risk: 2/5**
+- Low risk if not built (mobile web adequate for MVP)
+- Users access via mobile browsers (no blocking issue)
+- Could revisit in Phase 4+ if demand validated
+
+**Weighted Score:**
+```
+(4 × 0.30) + (2 × 0.35) + (1 × 0.20) + (2 × 0.15)
+= 1.20 + 0.70 + 0.20 + 0.30
+= 2.40
+```
+
+**Tier Assignment:** Tier 3 (Extended/Deferred) - Don't Build Now
+
+**Rationale:** High user value but terrible feasibility and unclear business impact. Defer until resources justify investment (Phase 4+) or validate that mobile app drives significantly more revenue than mobile web.
+
+---
+
+**Prioritization Decision Tree**
+
+**Step-by-Step Feature Evaluation:**
+```
+Is this feature essential to deliver core value?
+    ├─ YES → Is it feasible to build in MVP timeline?
+    │         ├─ YES → Tier 1 (MVP)
+    │         └─ NO → Can we simplify to make it feasible?
+    │                   ├─ YES → Build simplified version (Tier 1)
+    │                   └─ NO → Defer to Tier 2 or 3
+    └─ NO → Does it significantly drive revenue or retention?
+              ├─ YES → Is it feasible to build in Phase 2?
+              │         ├─ YES → Tier 2 (Revenue-Critical)
+              │         └─ NO → Tier 3 (Extended/Deferred)
+              └─ NO → Does strong user demand exist?
+                        ├─ YES → Tier 3 (Build if resources permit)
+                        └─ NO → Tier 4 (Deferred indefinitely)
+```
+
+**Key Decision Points:**
+
+**1. Core Value Alignment**
+- If feature doesn't directly deliver on core promise (discovery, curation, quality content), it's not MVP
+- Exception: Revenue-critical infrastructure (payment processing, email capture)
+
+**2. Revenue Impact**
+- Features that drive revenue or retention get priority even if not "core value"
+- Business model must work; prioritize monetization features
+
+**3. Feasibility Constraints**
+- Solo founder with limited time = build only what's buildable in 3-6 months
+- No perfectionism; ship functional, not beautiful
+
+**4. User Demand Validation**
+- Don't build features "because they're cool" or "competitors have them"
+- Build features users explicitly request or behavior data suggests need
+
+---
+
+**The MVP Philosophy: Minimum Viable, Maximum Learning**
+
+**What MVP Means:**
+
+**MVP is NOT:**
+- ❌ Half-built, buggy, embarrassing product (don't ship broken)
+- ❌ Missing obvious essential features (don't ship incomplete)
+- ❌ Ugly or unprofessional (quality matters for trust)
+
+**MVP IS:**
+- ✅ Minimum feature set that delivers core value (focused, functional)
+- ✅ High quality in what it does (polish the essentials)
+- ✅ Launchable and usable by real users (real validation)
+- ✅ Foundation for iteration (learn, improve, expand)
+
+**SF Supernova MVP Definition:**
+
+"A curated content platform with high-quality articles, guides, and lists about vintage science fiction, enabling discovery and education, with a product catalog offering ebooks and audiobooks for purchase, and membership subscriptions for enhanced access—all delivered through a fast, professional, mobile-responsive website."
+
+**What's Included in MVP:**
+- Content library (50-75 articles at launch)
+- Product catalog (20-30 SKUs: ebooks, audiobooks, small bundles)
+- E-commerce functionality (purchase products, checkout, digital delivery)
+- Membership system (3 tiers, subscription management)
+- Email capture and newsletter (list building, nurture)
+- SEO optimization (content ranks, drives organic traffic)
+
+**What's NOT Included in MVP:**
+- User accounts/profiles (users can purchase as guest, membership via email)
+- Social features (forums, comments, user reviews)
+- Advanced recommendations (algorithmic, personalized)
+- Mobile apps (mobile web is sufficient)
+- Merchandise (art, apparel—Phase 2)
+- Premium tools (collection management, research tools—Phase 3-4)
+- Community features (book clubs, reading challenges—Phase 3+)
+
+**MVP Goal:** Validate that users will:
+1. Read content (traffic, engagement)
+2. Buy products (revenue validation)
+3. Subscribe to membership (recurring revenue validation)
+
+If these three hypotheses validate, invest in expansion. If not, pivot or abandon.
+
+---
+
+**Prioritization Anti-Patterns (What NOT to Do)**
+
+**Anti-Pattern 1: Feature Bloat**
+- **Mistake:** Adding every feature that sounds interesting or "competitors have"
+- **Result:** MVP never ships, or ships late, complex, buggy
+- **Solution:** Ruthlessly cut features; if in doubt, defer to Phase 2
+
+**Anti-Pattern 2: Perfectionism Paralysis**
+- **Mistake:** Endlessly polishing MVP, never launching because "not ready"
+- **Result:** Opportunity cost (months lost without user feedback or revenue)
+- **Solution:** Set launch deadline (Month 3-6), ship imperfect but functional product
+
+**Anti-Pattern 3: Building for Imagined Future Users**
+- **Mistake:** Building features "we'll need when we have 100K users"
+- **Result:** Over-engineering for problems that don't exist yet
+- **Solution:** Build for today's reality (0-1K users), scale later if needed
+
+**Anti-Pattern 4: Copying Competitors Blindly**
+- **Mistake:** "Goodreads has reviews, so we need reviews"
+- **Result:** Feature parity with incumbents (no differentiation), resource drain
+- **Solution:** Build only features aligned with SF Supernova's unique value proposition
+
+**Anti-Pattern 5: Ignoring Revenue Requirements**
+- **Mistake:** Focusing on "cool features" that don't drive business model
+- **Result:** Lots of users, no revenue, business fails
+- **Solution:** Prioritize revenue-critical features (product catalog, checkout, membership)
+
+---
+
+**The Ruthless Cutting Exercise**
+
+**Technique: "What Can We Remove Without Breaking Core Value?"**
+
+Start with full feature list, aggressively cut until only essentials remain.
+
+**Example: Original Feature List (Pre-Cutting):**
+
+1. Content library (articles, guides)
+2. Product catalog (ebooks, audiobooks, bundles)
+3. E-commerce (checkout, payment processing, digital delivery)
+4. Membership system (3 tiers, subscription management)
+5. User accounts (profiles, reading history, collections)
+6. Email capture (newsletter signup, lead magnets)
+7. Social features (comments, reviews, ratings, forums)
+8. Recommendations (algorithmic, personalized)
+9. Mobile apps (iOS, Android)
+10. Advanced search (filters, facets, full-text search)
+11. Merchandise shop (art prints, apparel, POD)
+12. Premium tools (collection management, research tools)
+13. Community features (book clubs, reading challenges)
+14. API (for developers, third-party integrations)
+15. Gamification (badges, achievements, leaderboards)
+
+**Cutting Exercise (Question Each Feature):**
+
+**User Accounts:**
+- **Question:** Can users buy products and subscribe without accounts?
+- **Answer:** Yes (guest checkout, membership via email link—no account needed initially)
+- **Decision:** ❌ CUT from MVP (Tier 2 or 3, add later if users request)
+
+**Social Features (Comments, Reviews, Forums):**
+- **Question:** Is social engagement essential to core value (discovery, curation)?
+- **Answer:** No (content provides curation; social is enhancement, not essential)
+- **Decision:** ❌ CUT from MVP (Tier 3, add if community engagement validated)
+
+**Algorithmic Recommendations:**
+- **Question:** Can manual curation (in articles) deliver discovery value without algorithms?
+- **Answer:** Yes (articles recommend works, provide reading lists—algorithm enhances but not required)
+- **Decision:** ❌ CUT from MVP (Tier 3, add when catalog large enough to justify investment)
+
+**Mobile Apps:**
+- **Question:** Does mobile web provide acceptable experience?
+- **Answer:** Yes (responsive design sufficient for reading content, browsing, purchasing)
+- **Decision:** ❌ CUT from MVP (Tier 4, defer indefinitely unless compelling need)
+
+**Advanced Search/Filtering:**
+- **Question:** Can users discover content via browse, categories, internal links without advanced search?
+- **Answer:** Yes for MVP (basic WordPress search sufficient; advanced filters nice-to-have)
+- **Decision:** ❌ CUT from MVP (Tier 2, add when catalog >100 works and users request)
+
+**Merchandise Shop:**
+- **Question:** Is physical merchandise essential to revenue model at launch?
+- **Answer:** No (digital products provide revenue; merch is brand extension for Phase 2)
+- **Decision:** ❌ CUT from MVP (Tier 2, launch Month 9-12)
+
+**Premium Tools:**
+- **Question:** Do users need collection management at launch (before they have collections)?
+- **Answer:** No (build once users have substantial collections to manage)
+- **Decision:** ❌ CUT from MVP (Tier 3, Phase 3-4 after user base established)
+
+**Community Features:**
+- **Question:** Is community building essential before platform has users?
+- **Answer:** No (build community features once community exists)
+- **Decision:** ❌ CUT from MVP (Tier 3, add if organic community forms)
+
+**API:**
+- **Question:** Are developers waiting to build on SF Supernova API?
+- **Answer:** No (no developer ecosystem yet; API is future opportunity)
+- **Decision:** ❌ CUT from MVP (Tier 4, Phase 4+ if developer interest validated)
+
+**Gamification:**
+- **Question:** Does gamification drive core value or is it engagement enhancement?
+- **Answer:** Enhancement only (nice-to-have, not essential to discovery/curation)
+- **Decision:** ❌ CUT from MVP (Tier 3 or 4, add only if user engagement data suggests need)
+
+---
+
+**Post-Cutting MVP Feature List (Essentials Only):**
+
+1. ✅ Content library (articles, guides, lists)
+2. ✅ Product catalog (ebooks, audiobooks, bundles)
+3. ✅ E-commerce (checkout, payment, digital delivery)
+4. ✅ Membership system (3 tiers, subscription management)
+5. ✅ Email capture (newsletter signup, lead magnets)
+6. ✅ Basic search (WordPress built-in search)
+
+**Total: 6 Core Features** (down from 15)
+
+**Result:** MVP is buildable in 3-6 months by solo founder, delivers core value, enables revenue validation.
+
+---
+
+**Feature Sequencing Strategy**
+
+**Phase-Based Feature Rollout:**
+
+**Phase 1 (Months 0-6): MVP Launch**
+- Content library (50-75 articles)
+- Product catalog (20-30 SKUs)
+- E-commerce functionality
+- Membership system (3 tiers)
+- Email capture
+- **Goal:** Launch, validate core hypothesis (users read, buy, subscribe)
+
+**Phase 2 (Months 6-12): Revenue Optimization**
+- Merchandise shop (art, apparel)
+- Advanced search/filtering (if user feedback suggests need)
+- Affiliate optimization (better integration, more programs)
+- Content expansion (100-200 articles, 80-100 SKUs)
+- **Goal:** Maximize revenue per user, improve conversion rates
+
+**Phase 3 (Months 12-18): Engagement & Retention**
+- User accounts (if users request or data suggests need)
+- Premium tools (Collection Pro, if demand validated)
+- Advanced recommendations (if catalog size justifies)
+- Community features (if organic community forms)
+- **Goal:** Increase retention, reduce churn, deepen engagement
+
+**Phase 4+ (Months 18-24+): Scaling & Differentiation**
+- Research tools (academic features)
+- API (if developer ecosystem interest)
+- Institutional licensing (if B2B validated)
+- International expansion (if domestic market saturated)
+- **Goal:** Scale revenue, expand market, build moat
+
+---
+
+**Requirements Prioritization Summary**
+
+**Key Principles:**
+
+1. **MVP First, Always:** Launch minimum viable product, iterate based on feedback
+2. **Revenue Before Delight:** Prioritize features that drive business model over "cool" features
+3. **Feasibility Constraints:** Build only what's buildable with current resources
+4. **User Demand Validation:** Don't build features users don't want or won't use
+5. **Ruthless Cutting:** When in doubt, cut it; can always add later, hard to remove
+6. **Sequenced Rollout:** Phased feature releases based on validation and resources
+
+**Prioritization Framework:**
+
+- **Tier 1 (MVP):** Must-have for core value and revenue validation (Score 4.0-5.0)
+- **Tier 2 (Revenue-Critical):** Essential for scaling revenue post-MVP (Score 3.0-3.9)
+- **Tier 3 (Extended):** Nice-to-have, build if resources and demand justify (Score 2.0-2.9)
+- **Tier 4 (Deferred):** Don't build unless strategy changes (Score 1.0-1.9)
+
+**Decision Criteria:**
+
+- **User Value** (30% weight): Does it deliver core value?
+- **Business Impact** (35% weight): Does it drive revenue/retention?
+- **Feasibility** (20% weight): Can we build it?
+- **Risk** (15% weight): What happens if we don't build it?
+
+**The Ruthless Question:**
+
+*"If we only had time to build one more feature before launch, what would it be?"*
+
+Answer this question honestly, repeatedly. Features that don't make the cut aren't worth building yet.
+
+---
+
+**Requirements Documentation Standards**
+
+**For Each Feature, Document:**
+
+**1. Feature Name & Description**
+- Clear, concise name
+- 1-2 sentence description (what it does)
+
+**2. User Story**
+- "As a [user type], I want [feature] so that [benefit]"
+- Example: "As a vintage sci-fi enthusiast, I want to browse curated reading lists so that I can discover new books to read"
+
+**3. Acceptance Criteria**
+- What must be true for feature to be "done"?
+- Specific, testable conditions
+- Example: "User can view list of 50+ works, filter by decade, click to view details"
+
+**4. Priority Tier**
+- Tier 1 (MVP), Tier 2 (Revenue-Critical), Tier 3 (Extended), Tier 4 (Deferred)
+
+**5. Priority Score**
+- Calculated score (1.0-5.0) based on framework
+
+**6. Dependencies**
+- What other features must exist before this can be built?
+- Example: "Membership system depends on payment processing"
+
+**7. Effort Estimate**
+- Time to build (hours)
+- Cost (if contractor needed)
+
+**8. Success Metrics**
+- How will we measure if feature is successful?
+- Example: "Email capture rate >3.5%, open rate >35%"
+
+---
+
+**Sample Feature Documentation**
+
+**Feature: Email Newsletter Subscription**
+
+**Description:** Allow users to subscribe to weekly email newsletter with vintage sci-fi recommendations, new content, and product highlights.
+
+**User Story:** "As a vintage sci-fi enthusiast, I want to subscribe to a weekly newsletter so that I receive curated recommendations and updates without having to visit the site daily."
+
+**Acceptance Criteria:**
+- Email signup form present on every article (inline CTA, end-of-article)
+- Sidebar widget with newsletter signup
+- Lead magnet download available (PDF guide in exchange for email)
+- Integration with Mailchimp (or ConvertKit)
+- Welcome email sent immediately upon signup
+- Weekly newsletter sent every Friday (automated or manual)
+- Unsubscribe link present in every email
+- Signup tracked in Google Analytics (goal completion)
+
+**Priority Tier:** Tier 1 (MVP)
+
+**Priority Score:** 4.25
+- User Value: 3/5
+- Business Impact: 5/5
+- Feasibility: 5/5
+- Risk: 4/5
+
+**Dependencies:**
+- WordPress site live (content published)
+- Mailchimp account (or ConvertKit)
+
+**Effort Estimate:**
+- Setup: 5 hours (Mailchimp integration, form creation)
+- Welcome sequence: 3 hours (write 3-5 welcome emails)
+- Newsletter template: 2 hours (design email template)
+- **Total: 10 hours**
+
+**Success Metrics:**
+- Email capture rate: >3.5% (site visitors who subscribe)
+- Open rate: >35% (subscribers who open newsletter)
+- Click-through rate: >8% (subscribers who click links)
+- Unsubscribe rate: <0.5% per email
+- Email → Purchase conversion: >12% within 90 days
+
+---
+
+**Prioritization Governance**
+
+**Who Decides Priorities?**
+
+**Phase 1-2 (Solo Founder):**
+- Founder decides all priorities (centralized, fast decisions)
+- Informed by framework (systematic, not arbitrary)
+- Validate with advisors/mentors (external perspectives)
+
+**Phase 3+ (Team Input):**
+- Founder final decision, but team proposes features
+- Data analysts provide usage data (what users actually do)
+- Customer feedback incorporated (what users request)
+- Quarterly planning cycles (review priorities, adjust roadmap)
+
+**How Often to Reprioritize?**
+
+**Quarterly Reviews (Every 3 Months):**
+- Review what was built (did it work? meet goals?)
+- Review what was deferred (should we revisit? still defer?)
+- Update priorities based on learnings (user feedback, revenue data, competitive changes)
+- Adjust roadmap for next quarter
+
+**Ad-Hoc (When Needed):**
+- Major user feedback (many users requesting same feature)
+- Competitive threat (competitor launches feature we need to match)
+- Revenue opportunity (feature that could significantly boost revenue)
+
+**Never:**
+- Don't constantly reprioritize based on every piece of feedback
+- Don't chase shiny objects (stay focused on roadmap)
+- Don't over-react to single user requests (look for patterns, not anecdotes)
+
+---
+
+**Summary: Requirements Framework as Strategic Discipline**
+
+**Why Requirements Prioritization Matters:**
+
+- **Focus:** Limited resources demand focused execution (can't build everything)
+- **Speed:** MVP ships faster when features ruthlessly cut (launch in months, not years)
+- **Validation:** Learn what users actually want (not what we think they want)
+- **Revenue:** Prioritize features that drive business model (content → products → memberships)
+- **Sustainability:** Avoid burnout by not overcommitting (realistic scope)
+
+**Prioritization Framework:**
+1. Score features (User Value, Business Impact, Feasibility, Risk)
+2. Assign tiers (MVP, Revenue-Critical, Extended, Deferred)
+3. Sequence rollout (Phase 1 → 2 → 3 → 4)
+4. Review quarterly (adjust based on learnings)
+
+**The MVP Mindset:**
+- Ship minimum viable product (functional, not perfect)
+- Validate core hypotheses (users read, buy, subscribe)
+- Iterate based on data (improve, expand, optimize)
+
+**The Ruthless Cutting Discipline:**
+- Cut features that don't deliver core value
+- Cut features that don't drive revenue
+- Cut features that aren't feasible
+- When in doubt, cut (can always add later)
+
+**The goal: Build the right things, in the right order, at the right time. Focus beats perfection. Launch beats planning. Revenue beats features. Requirements prioritization is strategic discipline that transforms vision into reality.**
 ### 7.2 MVP Feature Set (Phase 1)
 
 ### 7.3 Revenue-Critical Features
