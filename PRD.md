@@ -27779,7 +27779,406 @@ Performance, editorial quality, reliability, accessibility, SEO readiness, maint
 
 
 ### 8.1 Performance & Scalability Standards
+## 8. Non-Functional Requirements
 
+**Strategic Overview**
+
+Non-functional requirements (NFRs) define **how well the system performs**—not what features it has, but the quality attributes that determine user experience, operational sustainability, and long-term viability. While functional requirements answer "What does SF Supernova do?" (e.g., "users can purchase products"), non-functional requirements answer "How well does it do it?" (e.g., "checkout completes in <3 seconds, 99.9% uptime, mobile-responsive").
+
+**Core Principle:** *"Features attract users; performance, quality, and reliability retain them. Non-functional requirements are non-negotiable—they define the difference between professional platform and amateur hobby project."*
+
+For SF Supernova, NFRs are particularly critical because:
+1. **Trust-building:** Users must trust platform with payment info, personal data, and time investment
+2. **SEO dependency:** Google rewards fast, mobile-friendly, accessible sites (poor performance = poor rankings = no traffic)
+3. **Resource constraints:** Solo founder can't afford extensive rework; must build quality from start
+4. **Content-first business:** Editorial quality directly impacts brand authority and user trust
+
+---
+
+### 8.1 Performance & Scalability Standards
+
+**Strategic Overview**
+
+Performance standards define how fast and responsive SF Supernova must be to deliver acceptable user experience. Poor performance costs conversions (users abandon slow sites), SEO rankings (Google penalizes slow sites), and revenue (every 100ms delay = 1% conversion loss). Scalability standards ensure platform can handle growth without requiring expensive rewrites or migrations.
+
+**Core Principle:** *"Fast sites convert better, rank higher, and cost less to run. Performance is a feature, not an optimization task."*
+
+---
+
+**Performance Philosophy: Fast by Default**
+
+**Why Performance Matters:**
+
+**Impact on Conversion:**
+- 100ms delay = 1% conversion drop (Amazon research)
+- 3-second load time = 32% bounce rate increase (Google)
+- 5-second load time = 90% bounce rate increase
+- **SF Supernova implication:** Every second of load time costs customers and revenue
+
+**Impact on SEO:**
+- Page speed is Google ranking factor (Core Web Vitals)
+- Slow sites rank lower → less organic traffic → less revenue
+- Mobile speed especially critical (mobile-first indexing)
+- **SF Supernova implication:** Performance directly drives traffic, which drives revenue
+
+**Impact on User Satisfaction:**
+- 53% mobile users abandon sites taking >3 seconds to load
+- Fast sites feel professional, trustworthy, polished
+- Slow sites feel amateurish, frustrating, broken
+- **SF Supernova implication:** Performance = brand perception
+
+---
+
+**Performance Standards: Specific Targets**
+
+**Page Load Time (Primary Metric):**
+
+**Desktop Performance:**
+- **Target:** <3 seconds (Time to Interactive)
+- **Acceptable:** 3-5 seconds
+- **Unacceptable:** >5 seconds
+- **Measurement:** Google PageSpeed Insights, GTmetrix, WebPageTest
+
+**Mobile Performance:**
+- **Target:** <5 seconds (Time to Interactive)
+- **Acceptable:** 5-7 seconds  
+- **Unacceptable:** >7 seconds
+- **Measurement:** Google PageSpeed Insights (mobile), Lighthouse mobile audit
+
+**Critical User Flows (Must Be Fast):**
+
+| Flow | Desktop Target | Mobile Target | Business Impact |
+|------|---------------|---------------|-----------------|
+| Homepage load | <2 seconds | <4 seconds | First impression, bounce rate |
+| Article page load | <3 seconds | <5 seconds | Core value delivery, SEO rankings |
+| Product page load | <3 seconds | <5 seconds | Purchase intent, conversion |
+| Checkout page load | <2 seconds | <4 seconds | Revenue capture, cart abandonment |
+| Search results | <1 second | <2 seconds | Discovery, user satisfaction |
+
+**Rationale for Targets:**
+- Desktop: Users expect near-instant performance (desktop typically faster connections)
+- Mobile: More forgiving (users understand mobile constraints), but still critical (60%+ traffic mobile)
+- Checkout: Must be fastest (any delay = revenue loss, cart abandonment)
+
+---
+
+**Core Web Vitals (Google's Performance Metrics):**
+
+Google's Core Web Vitals are ranking factors—must meet targets for SEO.
+
+**Largest Contentful Paint (LCP) - Loading Performance:**
+- **Target:** <2.5 seconds
+- **Acceptable:** 2.5-4.0 seconds
+- **Poor:** >4.0 seconds
+- **What it measures:** Time until largest content element (image, text block) loads
+- **SF Supernova focus:** Featured images on articles/products, hero sections
+
+**First Input Delay (FID) - Interactivity:**
+- **Target:** <100ms
+- **Acceptable:** 100-300ms
+- **Poor:** >300ms
+- **What it measures:** Time from user interaction (click, tap) to browser response
+- **SF Supernova focus:** Button clicks (Add to Cart, Subscribe, navigation), form interactions
+
+**Cumulative Layout Shift (CLS) - Visual Stability:**
+- **Target:** <0.1
+- **Acceptable:** 0.1-0.25
+- **Poor:** >0.25
+- **What it measures:** Unexpected layout shifts (content moving while loading)
+- **SF Supernova focus:** Images without dimensions (cause shifts), ads (not applicable for SF Supernova), lazy-loaded content
+
+**Achievement Strategy:**
+- **Monitor:** Weekly Core Web Vitals checks (Google Search Console)
+- **Optimize:** Prioritize fixes for pages with poor scores (especially high-traffic pages)
+- **Target:** 75%+ of page views meet "Good" threshold for all three metrics
+
+---
+
+**Performance Optimization Tactics**
+
+**Tactic 1: Image Optimization (Biggest Performance Win)**
+
+**Problem:** Large images are #1 cause of slow page loads (images often 50-70% of page weight).
+
+**Solutions:**
+- **Compression:** Compress all images before upload (TinyPNG, Squoosh—target <200KB per image)
+- **Modern formats:** Use WebP format (30% smaller than JPEG, widely supported)
+- **Responsive images:** Serve appropriate sizes for device (don't send 2000px image to mobile user viewing 400px)
+- **Lazy loading:** Load images as user scrolls (not all at once)—WordPress native lazy loading or plugin
+- **Dimensions specified:** Always set width/height attributes (prevents layout shift)
+
+**Target:**
+- Article featured images: <300KB (after compression)
+- Inline article images: <200KB
+- Product images: <250KB
+- Homepage hero images: <400KB (larger acceptable for impact)
+
+---
+
+**Tactic 2: Caching (Serve Pages Faster)**
+
+**Problem:** WordPress dynamically generates pages on every request (database queries, PHP processing—slow).
+
+**Solutions:**
+- **Page caching:** Cache full HTML pages (serve pre-built pages instead of generating on-the-fly)
+  - **Plugin:** WP Rocket ($49/year, best caching plugin) or W3 Total Cache (free, more complex)
+  - **Host-level:** WP Engine, Kinsta provide server-level caching (even better performance)
+- **Browser caching:** Tell browsers to store static files (CSS, JS, images) locally (reduce repeat requests)
+- **Object caching:** Cache database query results (Redis, Memcached—advanced, Phase 2-3)
+
+**Target:**
+- 90%+ requests served from cache (not dynamically generated)
+- Cache hit rate visible in plugin dashboard (monitor weekly)
+
+---
+
+**Tactic 3: Content Delivery Network (CDN)**
+
+**Problem:** Users far from server experience slow loads (data travels physically across internet).
+
+**Solution:**
+- **CDN:** Distribute static files (images, CSS, JS) across global network of servers (users download from nearest server)
+- **Provider:** Cloudflare (free tier sufficient for MVP), Cloudflare Pro ($20/month for Phase 2+)
+- **Setup:** 1-2 hours (DNS configuration, Cloudflare account)
+
+**Target:**
+- 50%+ reduction in load time for international visitors (vs. single-server hosting)
+- 90%+ cache hit rate on CDN
+
+---
+
+**Tactic 4: Minify & Combine Assets**
+
+**Problem:** Many small CSS/JS files = many HTTP requests = slow (each request has overhead).
+
+**Solutions:**
+- **Minify:** Remove whitespace, comments from CSS/JS (smaller file sizes)
+- **Combine:** Merge multiple CSS files into one, multiple JS files into one (fewer requests)
+- **Plugin:** WP Rocket (automatic minification + combination) or Autoptimize (free)
+
+**Target:**
+- <5 CSS files (ideally 1 combined file)
+- <5 JS files (ideally 1-2 combined files)
+- 30-50% reduction in file sizes after minification
+
+---
+
+**Tactic 5: Database Optimization**
+
+**Problem:** WordPress database accumulates cruft (revisions, spam, transients—bloat slows queries).
+
+**Solutions:**
+- **Regular cleanup:** Monthly database optimization (delete revisions, spam, transients)
+- **Plugin:** WP-Optimize (free, automatic cleanup) or manual via phpMyAdmin
+- **Limit revisions:** Set maximum post revisions (e.g., 5 instead of unlimited)
+
+**Target:**
+- Database queries <500ms (measure with Query Monitor plugin)
+- Database size <1GB (Phase 1), <5GB (Phase 2-3)
+
+---
+
+**Tactic 6: Reduce Plugin Bloat**
+
+**Problem:** Every plugin adds code, database queries, HTTP requests (slow).
+
+**Solution:**
+- **Minimize plugins:** Aim for <20 active plugins (MVP), <30 (Phase 2-3)
+- **Audit quarterly:** Deactivate/delete unused plugins
+- **Choose lightweight:** Select performance-conscious plugins (avoid bloated "all-in-one" plugins)
+
+**Target:**
+- <20 active plugins (MVP)
+- <30 active plugins (Phase 2-3)
+- Each plugin justified by value delivered
+
+---
+
+**Tactic 7: Host on Quality Infrastructure**
+
+**Problem:** Cheap shared hosting = slow, unreliable performance.
+
+**Solution:**
+- **Managed WordPress hosting:** WP Engine, Kinsta, Flywheel, SiteGround (optimized for WordPress)
+- **Tier:** Starter plan ($25-35/month) sufficient for Phase 1-2 (10K-50K visitors/month)
+- **Upgrade:** Scale hosting as traffic grows (don't over-buy initially, but don't under-provision either)
+
+**Target:**
+- 99.9%+ uptime (host-guaranteed)
+- <500ms server response time (TTFB - Time to First Byte)
+
+---
+
+**Scalability Standards**
+
+**Scalability = Ability to Handle Growth Without Major Rework**
+
+**Traffic Growth Projections:**
+
+| Phase | Timeframe | Monthly Visitors | Concurrent Users (peak) | Infrastructure Needs |
+|-------|-----------|-----------------|------------------------|---------------------|
+| **Phase 1 (MVP)** | Months 0-6 | 1K-5K | 10-50 | Shared/starter managed hosting |
+| **Phase 2** | Months 6-12 | 5K-25K | 50-200 | Mid-tier managed hosting, CDN |
+| **Phase 3** | Months 12-18 | 25K-75K | 200-500 | High-tier managed hosting, advanced caching |
+| **Phase 4** | Months 18-24+ | 75K-150K+ | 500-1,000+ | Enterprise hosting or custom infrastructure |
+
+**Scalability Approach: Vertical Before Horizontal**
+
+**Vertical Scaling (Easier, Cheaper Initially):**
+- Upgrade hosting plan (more CPU, RAM, storage within same provider)
+- Optimize existing infrastructure (caching, CDN, image optimization)
+- **Cost:** $25/month (starter) → $50/month (mid-tier) → $100-200/month (high-tier)
+- **Handles:** 1K → 150K visitors/month (95%+ of SF Supernova's needs Phase 1-3)
+
+**Horizontal Scaling (Advanced, Expensive):**
+- Multiple servers (load balancing, database replication, microservices)
+- Cloud infrastructure (AWS, Google Cloud)
+- **Cost:** $500-2,000+/month
+- **When:** Only if traffic >200K visitors/month AND vertical scaling exhausted
+- **Decision:** Phase 4+ (18-24 months), if SF Supernova reaches scale justifying complexity
+
+**Recommendation:** Vertical scaling sufficient through Phase 3 (first 18-24 months). Revisit horizontal scaling only if sustained traffic >150K/month.
+
+---
+
+**Database Scalability:**
+
+**Phase 1-2 (MySQL on Managed Host):**
+- Standard WordPress MySQL database
+- Sufficient for <100K visitors/month, <100K posts/products
+- Optimizations: Indexing, query optimization, regular cleanup
+
+**Phase 3 (MySQL + Caching Layer):**
+- Add Redis or Memcached (object caching—cache database query results)
+- Reduces database load 50-70%
+- **Cost:** $0 (included with many managed hosts) or $10-30/month (standalone Redis)
+
+**Phase 4+ (Database Replication, Sharding):**
+- Read replicas (separate database for reads vs. writes—distribute load)
+- Sharding (split database across multiple servers—extreme scale)
+- **When:** Only if database queries become bottleneck (>1,000 queries/second sustained)
+- **Decision:** Unlikely needed unless SF Supernova reaches 500K+ visitors/month
+
+---
+
+**Content Delivery Scalability (Media Files):**
+
+**Phase 1-2 (Host-Based Storage):**
+- Store images, PDFs, audiobooks on WordPress host
+- Sufficient for <10GB media storage
+- CDN (Cloudflare) accelerates delivery globally
+
+**Phase 3 (Cloud Storage):**
+- Migrate media to AWS S3, Cloudflare R2, or DigitalOcean Spaces
+- Cheaper storage ($0.02-0.03/GB vs. $1-2/GB on managed host)
+- Unlimited scalability (grow to terabytes if needed)
+- **Cost:** $5-20/month (50-500GB storage)
+- **When:** Media storage >50GB OR hosting costs escalating due to storage
+
+**Phase 4+ (Advanced CDN):**
+- Cloudflare Pro/Business (advanced image optimization, video streaming)
+- Dedicated CDN (Fastly, KeyCDN) if Cloudflare insufficient
+- **Cost:** $20-200/month
+- **When:** Traffic >100K visitors/month, global audience, video content
+
+---
+
+**Performance Monitoring & Alerting**
+
+**Tools:**
+
+**Free (Essential):**
+- **Google PageSpeed Insights:** Weekly checks (desktop + mobile scores)
+- **GTmetrix:** Monthly detailed analysis (waterfall charts, optimization recommendations)
+- **Google Search Console:** Core Web Vitals monitoring (Google's data on real user performance)
+- **WordPress Query Monitor Plugin:** Identify slow database queries, plugin performance issues
+
+**Paid (Phase 2+):**
+- **Pingdom ($10-15/month):** Real-time uptime monitoring, performance alerts
+- **New Relic ($0-99/month):** Application performance monitoring (deep insights, if needed Phase 3+)
+
+**Monitoring Cadence:**
+- **Daily:** Automated uptime checks (Pingdom or UptimeRobot free)
+- **Weekly:** PageSpeed Insights on top 10 pages (homepage, top articles, product pages)
+- **Monthly:** Comprehensive performance audit (GTmetrix, Query Monitor)
+- **Quarterly:** Infrastructure review (hosting plan appropriate? CDN working? Database optimized?)
+
+**Performance Alerts:**
+- **Critical:** Site down (>5 min downtime—immediate alert via email/SMS)
+- **Warning:** Page load >5 seconds (investigate within 24 hours)
+- **Info:** Core Web Vitals drop from "Good" to "Needs Improvement" (investigate within 1 week)
+
+---
+
+**Performance Budget (Prevent Regression)**
+
+**Concept:** Set maximum page weight and load time budgets; don't exceed without justification.
+
+**SF Supernova Performance Budget:**
+
+| Page Type | Max Page Weight | Max Requests | Max Load Time (Desktop) | Max Load Time (Mobile) |
+|-----------|----------------|--------------|------------------------|----------------------|
+| **Homepage** | 1.5 MB | 50 | 2.5 seconds | 4.5 seconds |
+| **Article Page** | 1 MB | 40 | 3 seconds | 5 seconds |
+| **Product Page** | 1.2 MB | 45 | 3 seconds | 5 seconds |
+| **Catalog Page** | 2 MB | 60 | 3.5 seconds | 6 seconds |
+| **Checkout Page** | 800 KB | 35 | 2 seconds | 4 seconds |
+
+**Enforcement:**
+- Quarterly audits: Check top 20 pages against budget
+- If exceeded: Identify cause (new images? plugin bloat? scripts?), optimize to meet budget
+- Exception process: If exceeding budget necessary (e.g., critical feature), document justification and accept tradeoff
+
+---
+
+**Performance Standards Summary**
+
+| Metric | Target | Acceptable | Unacceptable | Measurement Frequency |
+|--------|--------|-----------|--------------|---------------------|
+| **Desktop Load Time** | <3 sec | 3-5 sec | >5 sec | Weekly (top 10 pages) |
+| **Mobile Load Time** | <5 sec | 5-7 sec | >7 sec | Weekly (top 10 pages) |
+| **LCP (Largest Contentful Paint)** | <2.5 sec | 2.5-4 sec | >4 sec | Weekly (Search Console) |
+| **FID (First Input Delay)** | <100ms | 100-300ms | >300ms | Weekly (Search Console) |
+| **CLS (Cumulative Layout Shift)** | <0.1 | 0.1-0.25 | >0.25 | Weekly (Search Console) |
+| **PageSpeed Insights Score** | 90+ (desktop), 70+ (mobile) | 70-90 (desktop), 50-70 (mobile) | <70 (desktop), <50 (mobile) | Weekly |
+| **Uptime** | 99.9%+ | 99.5-99.9% | <99.5% | Continuous (Pingdom) |
+| **Server Response Time (TTFB)** | <500ms | 500-1,000ms | >1,000ms | Monthly (GTmetrix) |
+
+---
+
+**Scalability Milestones & Infrastructure Upgrades**
+
+| Traffic Milestone | Infrastructure Action | Estimated Cost | Timing |
+|-------------------|----------------------|----------------|--------|
+| **5K visitors/month** | Baseline: Starter managed hosting + Cloudflare free CDN | $25-35/month | Month 3-6 (MVP) |
+| **25K visitors/month** | Upgrade to mid-tier hosting, enable advanced caching (WP Rocket) | $50-70/month | Month 9-12 (Phase 2) |
+| **75K visitors/month** | Upgrade to high-tier hosting, Cloudflare Pro CDN, Redis caching | $100-150/month | Month 15-18 (Phase 3) |
+| **150K visitors/month** | Migrate media to cloud storage (S3/R2), consider dedicated hosting or custom infrastructure | $200-300/month | Month 21-24+ (Phase 4) |
+| **300K+ visitors/month** | Enterprise hosting or cloud infrastructure (AWS/GCP), horizontal scaling | $500-1,000+/month | Phase 5+ (Month 30+) |
+
+**Key Insight:** Infrastructure costs scale sub-linearly with traffic (traffic 6x increases costs ~3x). Economies of scale work in SF Supernova's favor as platform grows.
+
+---
+
+**Summary: Performance as Competitive Advantage**
+
+**Why Performance Standards Matter:**
+
+- **Conversion Impact:** Fast sites convert 2-3x better than slow sites (directly impacts revenue)
+- **SEO Impact:** Google rewards fast sites with higher rankings (directly impacts traffic)
+- **User Trust:** Fast sites feel professional, trustworthy (directly impacts brand perception)
+- **Cost Efficiency:** Optimized sites cost less to run (lower hosting costs per visitor)
+
+**Performance Principles:**
+
+1. **Fast by Default:** Performance is not an afterthought—build fast from start
+2. **Monitor Continuously:** Weekly checks prevent performance regression
+3. **Optimize Incrementally:** Small improvements compound (10% faster every quarter = 40% faster annually)
+4. **Scale Proactively:** Upgrade infrastructure before hitting limits (don't wait for site to crash)
+
+**Performance = Core Value Delivery:** SF Supernova's value is content and curation. If content doesn't load quickly, value isn't delivered. Performance isn't optional—it's existential.
+
+**The goal: Deliver consistently fast, responsive experience across all devices and connection speeds. Performance standards ensure SF Supernova meets user expectations, ranks well in Google, and scales sustainably as traffic grows.**
 ### 8.2 Editorial Quality & Content Standards
 
 ### 8.3 Reliability & Availability Targets
