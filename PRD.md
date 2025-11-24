@@ -27390,8 +27390,310 @@ DURATION: 26 weeks (6 months) if working 15-20 hours/week on platform
 - Review dependencies quarterly (adjust sequence based on learnings, resource changes, user feedback)
 
 **The goal: Build features in logical order that respects dependencies, validates assumptions incrementally, and delivers value continuously. Sequencing transforms feature wish-list into executable roadmap. Dependencies ensure features built on solid foundation. Together, they enable strategic, efficient, sustainable platform development.**
+
 ### 7.7 Requirements Traceability Matrix
 
+**Strategic Overview**
+
+A Requirements Traceability Matrix (RTM) is a **systematic documentation tool that maps every feature requirement to its business objective, user need, success metric, and implementation status**. It creates complete visibility into what's being built, why it's being built, and whether it's delivering intended value. For a solo founder managing dozens of features across multiple phases, the RTM transforms overwhelming complexity into manageable, trackable progress.
+
+**Core Principle:** *"Every feature must justify its existence. If it's not traceable to a business goal or user need, question whether it should be built at all."*
+
+The RTM serves three critical functions:
+
+1. **Accountability:** Ensures every feature built serves documented purpose (prevents feature creep, scope drift)
+2. **Traceability:** Links requirements → design → implementation → testing → metrics (complete lifecycle visibility)
+3. **Decision-Making:** When prioritizing or cutting features, RTM shows which features are most critical to business goals
+
+---
+
+**RTM Structure & Components**
+
+**Core RTM Fields:**
+
+1. **Requirement ID:** Unique identifier (e.g., MVP-001, RC-015, EXT-042)
+2. **Feature Name:** Clear, concise name
+3. **Feature Category:** MVP / Revenue-Critical / Extended / Deferred
+4. **Priority:** High / Medium / Low (within category)
+5. **Business Objective:** Which business goal does this serve? (revenue, engagement, retention, etc.)
+6. **User Need:** What user problem does this solve? (user story format)
+7. **Success Metric:** How will we measure if this feature succeeds?
+8. **Dependencies:** What must exist before this can be built?
+9. **Phase:** Phase 1 (MVP) / Phase 2 / Phase 3 / Phase 4+
+10. **Effort Estimate:** Hours to build
+11. **Status:** Not Started / In Progress / Complete / Blocked / Deferred
+12. **Owner:** Who's responsible? (Founder / Contractor / TBD)
+13. **Target Completion:** Target month/quarter
+14. **Actual Completion:** Actual completion date (if complete)
+15. **Notes:** Additional context, blockers, decisions made
+
+---
+
+**Requirements Traceability Matrix: SF Supernova**
+
+**Phase 1: MVP Requirements (Months 0-6)**
+
+| Req ID | Feature Name | Priority | Business Objective | User Need | Success Metric | Dependencies | Effort (hrs) | Status | Target | Owner |
+|--------|--------------|----------|-------------------|-----------|----------------|--------------|--------------|--------|--------|-------|
+| **MVP-001** | WordPress CMS | High | Platform foundation | "As founder, I need content management system to publish articles efficiently" | 50+ articles published | Hosting | 10 | Complete | M1 | Founder |
+| **MVP-002** | Content Library (50-75 articles) | High | Traffic acquisition (SEO) | "As user, I want quality articles to discover vintage sci-fi" | 5K+ monthly visitors by M6 | MVP-001 | 200 | In Progress | M1-6 | Founder |
+| **MVP-003** | Homepage & Navigation | High | User experience | "As user, I want clear navigation to find content easily" | <50% bounce rate | MVP-001, MVP-002 | 15 | Complete | M2 | Founder |
+| **MVP-004** | Product Catalog (20-30 SKUs) | High | Revenue (digital products) | "As user, I want to purchase ebooks/audiobooks" | 20-30 products listed | MVP-001, WooCommerce | 25 | Complete | M3 | Founder |
+| **MVP-005** | Checkout & Payment (Stripe) | High | Revenue capture | "As user, I want secure checkout to purchase products" | >30% checkout completion | MVP-004 | 30 | Complete | M3 | Founder |
+| **MVP-006** | Digital Delivery System | High | Fulfillment | "As customer, I want instant access to purchased files" | >98% successful downloads | MVP-005 | 10 | Complete | M3 | Founder |
+| **MVP-007** | Membership System (3 tiers) | High | Recurring revenue | "As user, I want membership for ongoing access and benefits" | $500+ MRR by M6 | MVP-005 | 30 | Complete | M4 | Founder |
+| **MVP-008** | Member Benefits Delivery | High | Member value | "As member, I want discounts and credits as promised" | 70%+ discount usage rate | MVP-007, MVP-004 | 25 | Complete | M4 | Founder |
+| **MVP-009** | Email Opt-In Forms | High | List building | "As founder, I need to capture emails for nurturing" | 3.5%+ email capture rate | Mailchimp | 15 | Complete | M4 | Founder |
+| **MVP-010** | Lead Magnets (2-4 PDFs) | High | Email conversion | "As user, I want valuable free guides in exchange for email" | 8-12% lead magnet conversion | MVP-009 | 20 | Complete | M4 | Founder |
+| **MVP-011** | Email Newsletter (Weekly) | High | Email nurture | "As subscriber, I want weekly recommendations and updates" | 35%+ open rate, 8%+ CTR | MVP-009 | 20 | Complete | M5 | Founder |
+| **MVP-012** | Welcome Email Sequence | High | Subscriber onboarding | "As new subscriber, I want onboarding emails guiding me" | 45%+ open rate (welcome emails) | MVP-009 | 10 | Complete | M5 | Founder |
+| **MVP-013** | SEO Foundation (Yoast/Rank Math) | High | Organic discoverability | "As founder, I need articles to rank in Google" | 90%+ articles indexed, 50+ keywords top 50 | MVP-001, MVP-002 | 12 | Complete | M5 | Founder |
+| **MVP-014** | Google Analytics & Search Console | High | Performance tracking | "As founder, I need to measure traffic, conversion, behavior" | 100% traffic tracked, goals configured | MVP-001 | 8 | Complete | M5 | Founder |
+| **MVP-015** | SSL Certificate & Security | High | Trust and security | "As user, I need secure site (HTTPS) to trust with payment info" | HTTPS enabled, zero security breaches | Hosting | 5 | Complete | M1 | Founder |
+| **MVP-016** | Privacy Policy & Terms | High | Legal compliance | "As user, I need to understand how my data is used" | Pages published, GDPR/CCPA compliant | MVP-001 | 4 | Complete | M5 | Founder |
+| **MVP-017** | Mobile Responsive Design | High | Mobile user experience | "As mobile user, I want site readable and functional on phone" | <60% mobile bounce rate | MVP-003 | 10 | Complete | M2 | Founder |
+
+**Total MVP Effort:** ~459 hours (platform development) + ~200 hours (content creation) = **~659 hours total**  
+**MVP Status:** 15/17 Complete (88%), 1 In Progress, 1 Not Started (as of current example)
+
+---
+
+**Phase 2: Revenue-Critical Requirements (Months 6-12)**
+
+| Req ID | Feature Name | Priority | Business Objective | User Need | Success Metric | Dependencies | Effort (hrs) | Status | Target | Owner |
+|--------|--------------|----------|-------------------|-----------|----------------|--------------|--------------|--------|--------|-------|
+| **RC-001** | Topic-Specific Lead Magnets (8-12) | High | Email capture optimization | "As user interested in [topic], I want relevant guide" | 12-18% topic lead magnet conversion | MVP-009, MVP-002 | 40 | Not Started | M7-8 | Founder |
+| **RC-002** | Exit-Intent Popups | High | Email capture optimization | "As founder, I need to capture leaving visitors" | +2% capture rate improvement | MVP-009 | 8 | Not Started | M7 | Founder |
+| **RC-003** | Abandoned Cart Recovery Emails | High | Revenue recovery | "As founder, I need to recover lost sales from cart abandonment" | 10-15% cart recovery rate | MVP-005 | 15 | Not Started | M7-8 | Founder |
+| **RC-004** | Product Upsells at Checkout | High | AOV increase | "As customer, I want recommendations for related products" | +15% AOV increase | MVP-005, MVP-004 | 12 | Not Started | M8 | Founder |
+| **RC-005** | One-Click Post-Purchase Upsell | High | AOV increase | "As customer, I want easy way to add complementary product after purchase" | 10-15% upsell acceptance rate | MVP-005 | 10 | Not Started | M8 | Founder |
+| **RC-006** | Bundle Builder UI | Medium | AOV increase | "As customer, I want to create custom bundles with discount" | 5-8% customers use bundle builder | MVP-004 | 25 | Not Started | M9 | Contractor |
+| **RC-007** | Merchandise Shop (POD) | High | Revenue diversification | "As fan, I want branded merchandise (art prints, apparel)" | $500+ monthly merch revenue by M12 | MVP-004 | 20 | Not Started | M9 | Founder |
+| **RC-008** | Gift Guide Content (Seasonal) | High | Seasonal revenue spike | "As gift giver, I want curated gift recommendations" | 2-3x Nov-Dec revenue vs. avg month | MVP-002, RC-007 | 15 | Not Started | M10 (Q4) | Founder |
+| **RC-009** | Advanced Email Segmentation | High | Email conversion | "As founder, I need targeted emails based on user interests" | +3% email→purchase conversion | MVP-011, subscriber tags | 18 | Not Started | M9-10 | Founder |
+| **RC-010** | Behavioral Email Triggers | Medium | Engagement | "As founder, I need automated emails based on user behavior" | +5% email engagement | RC-009 | 15 | Not Started | M10 | Founder |
+| **RC-011** | First Purchase Discount Code | Medium | First-time buyer conversion | "As new visitor, I want incentive to make first purchase" | +2-3% first purchase conversion | MVP-005 | 5 | Not Started | M8 | Founder |
+| **RC-012** | Referral Program (Refer-a-Friend) | Medium | Viral growth | "As customer, I want to refer friends and get reward" | 5-10% customers refer friends | MVP-005 | 30 | Not Started | M11-12 | Contractor |
+| **RC-013** | Affiliate Link Optimization | Medium | Affiliate revenue growth | "As founder, I need better affiliate integration (Bookshop, Audible)" | 2x affiliate clicks, 50% revenue increase | MVP-002 | 12 | Not Started | M10 | Founder |
+| **RC-014** | Membership Upgrade Prompts | High | ARPU increase | "As Explorer member, I want to see value of upgrading to Enthusiast" | 15-20% members upgrade tier within 6 months | MVP-007 | 10 | Not Started | M11 | Founder |
+| **RC-015** | Member-Only Content (Exclusive) | High | Member value & retention | "As member, I want exclusive content not available to public" | <6% voluntary churn rate | MVP-007, MVP-002 | 15 | Not Started | M10-12 | Founder |
+
+**Total Phase 2 Effort:** ~250 hours  
+**Phase 2 Status:** 0/15 Started (MVP must complete first)
+
+---
+
+**Phase 3: Extended Requirements (Months 12-24)**
+
+| Req ID | Feature Name | Priority | Business Objective | User Need | Success Metric | Dependencies | Effort (hrs) | Status | Target | Owner |
+|--------|--------------|----------|-------------------|-----------|----------------|--------------|--------------|--------|--------|-------|
+| **EXT-001** | User Accounts & Profiles | High | Personalization foundation | "As user, I want account to track my reading and preferences" | 40-50% users create accounts | MVP-005, MVP-007 | 40 | Not Started | M12-14 | Contractor |
+| **EXT-002** | Reading History Tracking | High | User value & retention | "As user, I want to track what I've read and am reading" | 60-70% account holders use feature | EXT-001 | 30 | Not Started | M14-15 | Contractor |
+| **EXT-003** | Collection Management ("My Library") | High | User value & retention | "As user, I want to manage my vintage sci-fi collection digitally" | 50-60% account holders build collections | EXT-001, EXT-002 | 35 | Not Started | M15-16 | Contractor |
+| **EXT-004** | Gap Analysis (Collection Pro) | Medium | Premium tool revenue | "As collector, I want to identify missing works in my collection" | $1K+ monthly Collection Pro revenue | EXT-003 | 40 | Not Started | M17-18 | Contractor |
+| **EXT-005** | Reading Goal Tracking | Medium | Engagement | "As user, I want to set and track annual reading goals" | 30-40% account holders set goals | EXT-002 | 20 | Not Started | M16-17 | Contractor |
+| **EXT-006** | Rule-Based Recommendations | Medium | Discovery & engagement | "As user, I want personalized recommendations based on my interests" | 15-20% click-through on recommendations | EXT-001, EXT-002 | 35 | Not Started | M18-20 | Contractor |
+| **EXT-007** | Advanced Search & Filters | Medium | Discovery optimization | "As user, I want to filter catalog by decade, theme, author, format" | 8-12% users use advanced search | MVP-004, structured data | 30 | Not Started | M16-18 | Contractor |
+| **EXT-008** | WordPress Comments (Moderated) | Low | Community engagement | "As user, I want to discuss articles with other readers" | 5-10% articles have comments | MVP-002 | 8 | Not Started | M20-22 | Founder |
+| **EXT-009** | User Reviews & Ratings (Curated) | Low | Social proof | "As user, I want to read other readers' opinions on works" | 3-5% users submit reviews | EXT-001 | 25 | Not Started | M22-24 | Founder |
+| **EXT-010** | Member Dashboard | Medium | Member experience | "As member, I want central dashboard for benefits, stats, activity" | 70%+ members visit dashboard monthly | EXT-001, MVP-007 | 30 | Not Started | M14-16 | Contractor |
+
+**Total Phase 3 Effort:** ~293 hours  
+**Phase 3 Status:** 0/10 Started (Phase 2 validation required first)
+
+---
+
+**Deferred Requirements (Phase 4+, Conditional)**
+
+| Req ID | Feature Name | Priority | Business Objective | Revisit Condition | Effort (hrs) | Status | Target | Owner |
+|--------|--------------|----------|-------------------|------------------|--------------|--------|--------|-------|
+| **DEF-001** | Native Mobile Apps (iOS/Android) | Low | Mobile experience optimization | 50+ user requests OR revenue >$40K/mo | 400-800 | Deferred | M30+ | External Dev |
+| **DEF-002** | Discussion Forums | Low | Community building | 20+ user requests OR hire community manager | 30 + 10-20/wk | Deferred | M24+ | TBD |
+| **DEF-003** | Institutional Licensing (B2B) | Low | Revenue diversification | 3-5 institution inquiries OR B2C plateau | 60 | Deferred | M24-36 | Founder |
+| **DEF-004** | Podcast Production | Low | Audience expansion | 20+ user requests OR founder passion | 3-6/episode | Deferred | M18-24 | TBD |
+| **DEF-005** | Video Content (YouTube) | Low | Audience diversification | 30+ user requests OR hire video producer | 8-15/video | Deferred | M24+ | External |
+| **DEF-006** | AI Personalization Engine | Low | Advanced recommendations | User base >1K + ML expertise acquired | 120-200 | Deferred | M30+ | External |
+| **DEF-007** | Original Fiction Publishing | Low | Brand differentiation | Strategic pivot validated + capital available | 60-120/work | Deferred | M36+ | TBD |
+| **DEF-008** | Public API & Developer Platform | Low | Ecosystem building | Developer interest validated + stable platform | 80-120 | Deferred | M36+ | Contractor |
+| **DEF-009** | Progressive Web App (PWA) | Low | Mobile experience (pre-native apps) | Mobile usage >60% + user feedback | 60-80 | Deferred | M24-30 | Contractor |
+| **DEF-010** | Corporate Gifting Program | Low | B2B revenue | 2-3 company inquiries + Q4 approaching | 25 | Deferred | M18-24 | Founder |
+
+**Total Deferred:** 10 features (revisit quarterly)
+
+---
+
+**RTM Dashboard Metrics**
+
+**Overall Completion Status:**
+
+| Phase | Total Features | Complete | In Progress | Not Started | Blocked | Deferred | Completion % |
+|-------|---------------|----------|-------------|-------------|---------|----------|--------------|
+| **Phase 1 (MVP)** | 17 | 15 | 1 | 1 | 0 | 0 | **88%** |
+| **Phase 2 (Revenue-Critical)** | 15 | 0 | 0 | 15 | 0 | 0 | **0%** (awaiting MVP) |
+| **Phase 3 (Extended)** | 10 | 0 | 0 | 10 | 0 | 0 | **0%** (awaiting Phase 2) |
+| **Phase 4+ (Deferred)** | 10 | 0 | 0 | 0 | 0 | 10 | **N/A** (deferred) |
+| **TOTAL** | **52** | **15** | **1** | **26** | **0** | **10** | **29% overall** |
+
+---
+
+**Requirements by Business Objective**
+
+| Business Objective | # Features | Examples | Total Effort (hrs) |
+|--------------------|-----------|----------|-------------------|
+| **Revenue (Direct)** | 15 | Product catalog, checkout, membership, upsells, merch | 275 |
+| **Revenue (Indirect - Traffic)** | 8 | Content library, SEO, email capture, lead magnets | 295 |
+| **Engagement & Retention** | 12 | User accounts, reading history, collections, recommendations | 280 |
+| **Technical Foundation** | 6 | WordPress, hosting, security, analytics, SSL | 49 |
+| **User Experience** | 5 | Navigation, mobile responsive, search, dashboard | 85 |
+| **Community** | 3 | Comments, reviews, forums | 33 |
+| **Future Optionality** | 10 | Deferred features (mobile apps, API, etc.) | 960-1,380 |
+
+**Insight:** 44% of features (23/52) directly drive revenue; these are correctly prioritized in Phases 1-2.
+
+---
+
+**Requirements by User Segment**
+
+| User Segment | # Features Serving | Key Features | Priority |
+|--------------|-------------------|--------------|----------|
+| **All Users** | 25 | Content, navigation, product catalog, checkout, SEO | MVP (High) |
+| **Email Subscribers** | 8 | Lead magnets, newsletter, welcome sequence, segmentation | MVP + Phase 2 (High) |
+| **Customers** | 10 | Checkout, digital delivery, upsells, abandoned cart recovery | MVP + Phase 2 (High) |
+| **Members** | 12 | Membership system, benefits, member-only content, dashboard | MVP + Phase 2-3 (High) |
+| **Power Users** | 8 | User accounts, reading history, collections, premium tools | Phase 3 (Medium) |
+| **Community Contributors** | 3 | Comments, reviews, user-generated lists | Phase 3-4 (Low) |
+
+**Insight:** MVP and Phase 2 correctly prioritize features serving broadest user base (all users, subscribers, customers, members).
+
+---
+
+**RTM Usage: How to Maintain**
+
+**Weekly Review (15 minutes):**
+- Update status of active features (Complete features when shipped)
+- Add new requirements if discovered (user requests, competitive analysis)
+- Flag blockers (if feature can't progress, document why)
+
+**Monthly Review (1 hour):**
+- Review Phase 1-2 progress (are we on track for target completion dates?)
+- Adjust priorities if needed (user feedback, revenue data changes priorities)
+- Plan next month's focus (which 2-3 features to build next)
+
+**Quarterly Review (2-3 hours):**
+- Comprehensive RTM review (all phases, all requirements)
+- Promote features if conditions met (e.g., deferred feature becomes revenue-critical)
+- Retire/merge features if no longer relevant
+- Update effort estimates based on learnings (initial estimates vs. actual)
+- Adjust roadmap for next quarter
+
+**Annual Review (4-6 hours):**
+- Strategic RTM overhaul (align with business strategy evolution)
+- Archive completed phases (Phase 1 complete → archive, focus on Phase 2-3)
+- Add new phases if business scaling (Phase 5, Phase 6 for long-term)
+- Document lessons learned (what took longer than expected? what was easier?)
+
+---
+
+**RTM Benefits: Why This Matters**
+
+**Benefit 1: Focus & Clarity**
+- Solo founder knows exactly what to build next (no decision paralysis)
+- Clear priorities within each phase (build high-priority features first)
+- Justification for every feature (business objective + user need documented)
+
+**Benefit 2: Accountability & Tracking**
+- Progress visible (29% complete overall, 88% MVP complete)
+- Blockers identified early (if feature stuck, escalate or pivot)
+- Success metrics defined upfront (know when feature succeeds or fails)
+
+**Benefit 3: Communication & Alignment**
+- External stakeholders (advisors, investors) see clear roadmap
+- Contractors know what they're building and why (context in RTM)
+- Users can be shown roadmap (transparency builds trust)
+
+**Benefit 4: Flexibility & Adaptation**
+- Easy to reprioritize (change priority field, adjust target dates)
+- Easy to add/remove features (RTM is living document, not static)
+- Easy to pivot (if strategy changes, RTM reflects new priorities)
+
+**Benefit 5: Learning & Improvement**
+- Compare estimated vs. actual effort (improve future estimates)
+- Track success metrics (did feature deliver expected value?)
+- Document decisions (why was feature deferred? revisit conditions met?)
+
+---
+
+**RTM Tools & Formats**
+
+**Option 1: Spreadsheet (Google Sheets, Excel)**
+- **Pros:** Simple, flexible, no learning curve, free
+- **Cons:** No automation, manual updates, limited visualization
+- **Best for:** Solo founder, Phase 1-2 (simple tracking)
+
+**Option 2: Project Management Tool (Notion, Airtable)**
+- **Pros:** Structured database, filters/views, linked records, automation
+- **Cons:** Learning curve, $0-20/month cost
+- **Best for:** Phase 2-3, when complexity increases
+
+**Option 3: Dedicated Requirements Tool (Jira, ClickUp)**
+- **Pros:** Purpose-built for requirements tracking, workflows, reporting
+- **Cons:** Overkill for solo founder, expensive, steep learning curve
+- **Best for:** Phase 4+, if team grows (not recommended for solo founder)
+
+**Recommendation for SF Supernova:**
+- **Phase 1-2:** Google Sheets (simple, free, sufficient)
+- **Phase 3:** Migrate to Airtable or Notion (database structure helpful as features scale)
+- **Phase 4+:** Re-evaluate if team grows
+
+---
+
+**Summary: RTM as Strategic Compass**
+
+**Why Requirements Traceability Matters:**
+
+- **Prevents Feature Creep:** Every feature justified by business objective + user need (no "wouldn't it be cool if..." features)
+- **Enables Prioritization:** Clear priorities (High/Medium/Low) within phases, focus limited resources on highest-value work
+- **Tracks Progress:** Visible completion status (15/52 complete, 29% overall), celebrate wins, identify delays
+- **Supports Decisions:** When cutting features (resource constraints), RTM shows which are least critical
+- **Facilitates Learning:** Compare estimates vs. actuals, measure success metrics, document what worked/didn't
+
+**RTM Principles:**
+
+1. **Every Feature Traceable:** If feature can't be traced to business goal + user need, question whether it should exist
+2. **Living Document:** RTM updated weekly/monthly/quarterly, not static artifact gathering dust
+3. **Success Metrics Defined:** Every feature has measurable success criteria (know when it worked)
+4. **Dependencies Documented:** Understand what blocks what (inform sequencing decisions)
+5. **Completion Celebrated:** Update status immediately when features ship (maintain momentum, morale)
+
+**The RTM is the single source of truth for what's being built, why, and when. It transforms vision (PRD) into execution (roadmap). It's the bridge between strategy (what should we build?) and tactics (what are we building this week?). For a solo founder managing complex platform across multiple phases, the RTM is indispensable—clarity in complexity, focus in chaos, progress in ambiguity.**
+
+---
+
+**Section 7 Complete: Functional Requirements Summary**
+
+**What We've Covered:**
+
+- **7.1 Requirements Framework:** Prioritization methodology (MoSCoW, scoring, MVP philosophy)
+- **7.2 MVP Feature Set:** 17 core features enabling launch (content, commerce, membership, email, foundation)
+- **7.3 Revenue-Critical Features:** 15 post-MVP features maximizing revenue (conversion optimization, revenue expansion, retention)
+- **7.4 Extended Features:** Phase 3+ features enhancing experience (user accounts, personalization, community, discovery)
+- **7.5 Deferred Features:** 10+ features explicitly postponed (mobile apps, B2B, video, AI, API, forums)
+- **7.6 Dependencies & Sequencing:** Logical build order, dependency types, phased roadmap, critical path analysis
+- **7.7 Requirements Traceability Matrix:** 52 features mapped to objectives, metrics, dependencies, status
+
+**Key Outcomes:**
+
+✅ **Clear Roadmap:** Phase 1 (MVP, 6 months) → Phase 2 (Revenue optimization, 6 months) → Phase 3 (Engagement, 12 months) → Phase 4+ (Scale & differentiation)
+
+✅ **Focus & Prioritization:** 17 MVP features (must-build) vs. 35 later-phase features (defer until validated)
+
+✅ **Executable Plan:** 659 hours MVP effort (feasible for solo founder in 6 months at 20-25 hrs/week)
+
+✅ **Measurable Success:** Every feature has success metric (know when it works)
+
+✅ **Strategic Discipline:** Defer good ideas that aren't right-time ideas (mobile apps, AI, B2B until conditions met)
+
+**The goal: Build the right features, in the right order, at the right time—focused on MVP launch, revenue validation, then sophisticated expansion. Requirements framework ensures disciplined execution, not scattered chaos. RTM provides visibility and accountability. Together, they transform SF Supernova vision into buildable, launchable, scalable reality.**
 
 
 ## 8. Non-Functional Requirements
