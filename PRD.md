@@ -24285,8 +24285,86 @@ Explicit functional requirements for each system component:
 •⁠  ⁠What features are deferred
 •⁠  ⁠What features are revenue-critical
 
+
 ### 7.1 Requirements Framework & Prioritisation Methodology
-## 7. Functional Requirements (MVP → Extended)
+
+**Strategic Overview**
+
+Functional requirements define *what the system must do*—the specific features, capabilities, and behaviors that SF Supernova must deliver to users. In a resource-constrained startup (solo founder, limited budget, organic-first model), requirements prioritization is the difference between focused execution and scattered failure. Not all features are equally important; some are essential for MVP launch, others are revenue-critical, and many should be deferred until product-market fit is proven.
+
+**Core Principle:** *"Ship the minimum viable product that delivers core value, then iterate based on user feedback and revenue impact. Perfection is the enemy of launch."*
+
+This section establishes the **framework for requirements prioritization**—a systematic methodology for deciding what to build now, what to build later, and what never to build. It transforms the overwhelming universe of possible features into a focused, sequenced roadmap aligned with business goals, user needs, and resource constraints.
+
+---
+
+**The Requirements Challenge**
+
+**The Temptation: Build Everything**
+
+When planning a platform, it's tempting to envision the complete, mature product with all bells and whistles:
+- Rich user profiles with social features
+- Advanced recommendation algorithms
+- Mobile apps (iOS, Android)
+- API ecosystem
+- Community forums
+- Reading challenge gamification
+- AI-powered personalization
+- Virtual book clubs
+- Live events and author interviews
+- Merchandise marketplace
+- Audiobook production studio
+- Publishing imprint for new vintage-style works
+
+**The Problem:** Building all these features would take:
+- **Time:** 3-5 years of development (full team)
+- **Cost:** $500K-2M (salaries, tools, infrastructure)
+- **Risk:** Product might not resonate with market (wasted investment)
+
+**The Reality: Resource Constraints**
+
+SF Supernova has:
+- **Solo founder** (limited hours, must focus)
+- **Bootstrap budget** (<$50K initial capital, organic growth model)
+- **Unproven market** (hypothesis, not validated demand)
+- **Urgency to revenue** (need cash flow within 6-12 months)
+
+**The Solution: Ruthless Prioritization**
+
+Focus on the **minimum viable product (MVP)** that:
+1. **Delivers core value** to target users (discovery, curation, quality content)
+2. **Validates business model** (users will pay for products/memberships)
+3. **Can be built quickly** (3-6 months to launch)
+4. **Enables revenue** (product sales, membership subscriptions)
+5. **Supports iteration** (learn from users, improve continuously)
+
+---
+
+**Requirements Prioritization Framework**
+
+**Three-Tier Classification System:**
+
+Every feature falls into one of three tiers:
+
+**Tier 1: MVP (Must-Have for Launch)**
+- Features absolutely required for platform to deliver core value
+- Without these, platform doesn't work or doesn't provide minimum viable value
+- Build first, launch with these only
+- Timeframe: Phase 1 (Months 0-6)
+
+**Tier 2: Revenue-Critical (Post-MVP, Pre-Scale)**
+- Features required to maximize revenue and retention
+- Not essential for launch, but essential for scaling
+- Build immediately after MVP validation
+- Timeframe: Phase 2 (Months 6-12)
+
+**Tier 3: Extended/Deferred (Nice-to-Have, Optional)**
+- Features that enhance experience but aren't essential
+- Can be built later (or never) without jeopardizing business
+- Build only if revenue justifies investment and user demand validated
+- Timeframe: Phase 3+ (Months 12-24+) or deferred indefinitely
+
+---
 
 ### 7.1 Requirements Framework & Prioritisation Methodology
 
