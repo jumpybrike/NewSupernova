@@ -27779,7 +27779,6 @@ Performance, editorial quality, reliability, accessibility, SEO readiness, maint
 
 
 ### 8.1 Performance & Scalability Standards
-## 8. Non-Functional Requirements
 
 **Strategic Overview**
 
@@ -27795,7 +27794,7 @@ For SF Supernova, NFRs are particularly critical because:
 
 ---
 
-### 8.1 Performance & Scalability Standards
+
 
 **Strategic Overview**
 
