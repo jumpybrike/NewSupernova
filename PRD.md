@@ -24924,7 +24924,7 @@ Answer this question honestly, repeatedly. Features that don't make the cut aren
 - When in doubt, cut (can always add later)
 
 **The goal: Build the right things, in the right order, at the right time. Focus beats perfection. Launch beats planning. Revenue beats features. Requirements prioritization is strategic discipline that transforms vision into reality.**
-### 7.2 MVP Feature Set (Phase 1)
+
 ### 7.2 MVP Feature Set (Phase 1)
 
 **Strategic Overview**
@@ -26036,8 +26036,80 @@ Each pillar has specific functional requirements detailed below.
 - Iterate based on data (user feedback, analytics, revenue)
 
 **The goal: Launch minimum viable product that delivers core value, generates revenue, and enables learning—then iterate rapidly based on real user behavior and business performance. MVP is the foundation; Phase 2-3 features are the expansion built on proven foundation.**
+
 ### 7.3 Revenue-Critical Features
 
+**Strategic Overview**
+
+Revenue-critical features are capabilities that, while not strictly necessary for MVP launch, are **essential for maximizing revenue, improving conversion rates, and scaling the business** beyond initial validation. These features bridge the gap between "functional platform" (MVP) and "revenue-optimized platform" (mature business). They should be built immediately after MVP validation (Phase 2, Months 6-12) because they directly impact the business model's ability to generate sustainable, growing revenue.
+
+**Core Principle:** *"Build for validation first (MVP), then build for revenue optimization (revenue-critical features). Every feature in this tier must demonstrably increase revenue or reduce churn."*
+
+Revenue-critical features differ from MVP features in that the platform can launch without them (users can still discover content, purchase products, subscribe to memberships), but **revenue potential is significantly constrained** without them. They represent the "next 20% of features that drive 80% of revenue growth."
+
+---
+
+**Revenue-Critical Features Framework**
+
+**Classification Criteria:**
+
+A feature is "revenue-critical" if it meets **two or more** of the following criteria:
+
+1. **Conversion Optimization:** Directly improves conversion rates (visitor → email, email → purchase, purchase → membership)
+2. **Revenue Expansion:** Enables new revenue streams or significantly increases ARPU (average revenue per user)
+3. **Retention & Churn Reduction:** Measurably reduces churn or increases customer lifetime value (LTV)
+4. **Competitive Necessity:** Competitors have this feature, and absence creates competitive disadvantage
+5. **User Request Validation:** Multiple users explicitly request feature (demand validated, not hypothetical)
+
+**Investment Justification:**
+
+Each revenue-critical feature must demonstrate **clear ROI**:
+- **Investment:** Time (founder hours) + cost (contractors, tools, hosting)
+- **Expected Return:** Revenue increase (new sales, higher conversion, reduced churn)
+- **Payback Period:** How quickly does feature pay for itself? (Target: <6 months)
+
+**Prioritization within Revenue-Critical Tier:**
+
+Even within revenue-critical features, prioritize based on:
+1. **Highest ROI first** (biggest revenue impact relative to effort)
+2. **Quick wins first** (features buildable in 10-20 hours with immediate impact)
+3. **Dependencies respected** (some features require others to be built first)
+
+---
+
+**Revenue-Critical Feature Categories**
+
+**Category 1: Conversion Optimization (Increase % of Users Who Convert)**
+
+**Category 2: Revenue Expansion (New Streams or Higher ARPU)**
+
+**Category 3: Retention & Engagement (Reduce Churn, Increase LTV)**
+
+**Category 4: Operational Efficiency (Scale Revenue Without Proportional Cost Increase)**
+
+Each category detailed below with specific features, requirements, and expected ROI.
+
+---
+
+**Category 1: Conversion Optimization**
+
+**Purpose:** Improve conversion rates at every stage of the funnel (traffic → email → purchase → membership), maximizing revenue from existing traffic without needing more visitors.
+
+---
+
+**Feature 1.1: Advanced Email Lead Magnets (Targeted by Topic)**
+
+**Description:** Create 8-12 topic-specific lead magnets (vs. MVP's 2-4) aligned with high-traffic content, enabling higher email capture rates through hyper-relevant offers.
+
+**Problem in MVP:**
+- MVP has 2-4 generic lead magnets ("Vintage Sci-Fi Starter Pack," "Foundation Guide")
+- Not all article topics have relevant lead magnet
+- Generic lead magnets convert at 8-12% (good but improvable)
+- Missed opportunity: topic-specific lead magnets convert at 12-18% (50% higher)
+
+**Solution:**
+- Create lead magnet for each major content pillar/topic:
+  - **Authors:** "Complete Asim
 ### 7.4 Extended Features (Post-MVP)
 
 ### 7.5 Deferred Features & Future Considerations
