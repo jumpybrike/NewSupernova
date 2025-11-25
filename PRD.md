@@ -32157,24 +32157,7 @@ Operational and support requirements define how SF Supernova maintains day-to-da
 
 ---
 
-## Section 8 Complete: Non-Functional Requirements
 
-We've now completed **Section 8: Non-Functional Requirements** with all eight subsections:
-
-- ✅ **8.1** Performance & Scalability Standards
-- ✅ **8.2** Editorial Quality & Content Standards  
-- ✅ **8.3** Reliability & Availability Targets
-- ✅ **8.4** Accessibility & Inclusive Design Requirements
-- ✅ **8.5** SEO Readiness & Discoverability Standards
-- ✅ **8.6** Maintainability & Technical Debt Management
-- ✅ **8.7** Cost Discipline & Infrastructure Constraints
-- ✅ **8.8** Operational & Support Requirements
-
-**Section 8 Status: COMPLETE** ✅
-
-This section comprehensively covers all the "how well" requirements that define SF Supernova's quality attributes, operational standards, and long-term sustainability. These non-functional requirements are as critical as the functional requirements—they determine whether the platform is merely functional or truly professional, scalable, and sustainable.
-
-Ready to move on to Section 9 when you are!
 
 
 
@@ -32191,36 +32174,1342 @@ Rules for:
 All aligned to product creation and searchability.
 
 ### 9.1 Content Governance Framework
+## 9. User Experience & Interface Standards
+Defines interaction patterns, navigation, responsive design, onboarding flows, and UX principles that make SF Supernova intuitive and delightful.
 
-### 9.2 Metadata Standards & Schema
+### 9.1 Core UX Principles & Design Philosophy
 
-### 9.3 Text Cleaning & OCR Correction Protocols
+**Strategic Overview**
 
-### 9.4 Art Ingestion & Quality Thresholds
+User experience (UX) standards define how SF Supernova feels to use—the ease of navigation, clarity of information, delight in interactions, and overall satisfaction with the platform. For a content-driven platform competing against free alternatives (project Gutenberg, Internet Archive), superior UX is a core differentiator and monetization justification. Users pay for curation, but they stay for experience.
 
-### 9.5 Audio Indexing & Cataloguing Standards
+**Core Principle:** *"Every interaction should feel effortless, every page should answer 'why am I here?', every click should feel purposeful. UX is not decoration—it's the interface between user intent and platform value."*
 
-### 9.6 Corpus Consistency & Validation Rules
+**Why UX Matters for SF Supernova:**
 
-### 9.7 Content-to-Product Mapping Requirements
+1. **Conversion Driver:** Poor UX kills conversions (users abandon checkout, don't discover products)
+2. **Differentiation:** Free alternatives have poor UX (cluttered, outdated, confusing)—we win on experience
+3. **Trust Signal:** Professional, polished UX signals credibility (users trust platform with payment info)
+4. **Retention:** Delightful UX drives repeat visits, word-of-mouth, loyalty
+5. **Accessibility:** Good UX is accessible UX (inclusive design = larger addressable market)
 
-### 9.8 Search Indexing & Discoverability Requirements
+**UX Failure Modes to Avoid:**
 
-### 9.1 Content Governance Framework
+- **Mystery Meat Navigation:** Users can't find what they need (poor information architecture)
+- **Cognitive Overload:** Too many choices, overwhelming pages, unclear hierarchy
+- **Friction-Heavy Flows:** Checkout requires account creation, download requires 5 clicks
+- **Inconsistent Patterns:** Every page works differently (users must relearn each time)
+- **Mobile Afterthought:** Desktop-first design that's unusable on mobile (60%+ traffic)
+- **Slow/Janky Performance:** Beautiful design that loads slowly or stutters (performance is UX)
 
-### 9.2 Metadata Standards & Schema
+---
 
-### 9.3 Text Cleaning & OCR Correction Protocols
+**Foundational UX Principles**
 
-### 9.4 Art Ingestion & Quality Thresholds
+**1. Clarity Over Cleverness**
 
-### 9.5 Audio Indexing & Cataloguing Standards
+| Bad UX | Good UX |
+|--------|---------|
+| "Embark on your journey" (vague CTA) | "Browse Science Fiction" (clear action) |
+| Hidden navigation in hamburger menu | Primary navigation always visible |
+| Cryptic error: "Error 402" | Clear error: "Card declined. Please try another card." |
+| "Explore our curated collection" (marketing speak) | "150+ Golden Age Sci-Fi Stories" (specific value) |
 
-### 9.6 Corpus Consistency & Validation Rules
+**Principle:** Users should never wonder "what does this do?" or "what happens if I click this?" Clear language, obvious actions, predictable outcomes.
 
-### 9.7 Content-to-Product Mapping Requirements
+---
 
-### 9.8 Search Indexing & Discoverability Requirements
+**2. Progressive Disclosure (Don't Overwhelm)**
+
+**Concept:** Show users what they need when they need it, hide complexity until relevant.
+
+**Examples:**
+
+- **Homepage:** Simple hero ("Discover vintage sci-fi") + 3 entry points (Browse, Popular, Membership)
+  - *Not*: 10 categories, 20 filters, featured products, latest posts, newsletter signup all at once
+  
+- **Product Page:** Cover, title, author, price, "Add to Cart"
+  - *Details below fold*: Synopsis, author bio, historical context (for interested users)
+  
+- **Checkout:** Step 1 (email), Step 2 (payment), Step 3 (confirmation)
+  - *Not*: 20-field form all at once
+
+**Principle:** Simple surface, complex depth. Users progress from simple → detailed as interest/commitment increases.
+
+---
+
+**3. Consistency (Don't Make Users Relearn)**
+
+**Consistent Patterns Across Platform:**
+
+| Element | Consistent Pattern |
+|---------|-------------------|
+| **Primary CTA** | Always same color (e.g., orange), same position (right-aligned), same size |
+| **Navigation** | Same menu structure on every page (users learn once, use everywhere) |
+| **Card Layout** | Product cards always show: cover, title, author, price (same order) |
+| **Buttons** | Primary (filled), Secondary (outline), Tertiary (text-only)—consistent hierarchy |
+| **Spacing** | 8px grid system (all margins/padding multiples of 8) |
+
+**Principle:** Users should feel "at home" on every page. Familiarity breeds confidence, confidence drives conversions.
+
+---
+
+**4. Feedback (Acknowledge Every Action)**
+
+**User Action → System Response:**
+
+| User Action | System Feedback |
+|-------------|-----------------|
+| Click "Add to Cart" | Button changes to "Added ✓" + cart badge updates |
+| Submit checkout form | Loading spinner + "Processing payment..." |
+| Download product | Progress bar + "Downloaded!" confirmation |
+| Click link | Link color changes (visited state) |
+| Hover button | Button color changes (hover state) |
+
+**Principle:** Never leave users wondering "did that work?" Immediate, clear feedback for every interaction.
+
+---
+
+**5. Forgiveness (Let Users Undo Mistakes)**
+
+**Forgiving UX Patterns:**
+
+- **Cart:** Easy to remove items, adjust quantities (before checkout)
+- **Checkout:** Back button works, can edit shipping/payment before confirming
+- **Account Settings:** Changes preview before saving, clear "Cancel" option
+- **Filters:** Easy to reset filters ("Clear all"), see active filters
+- **Forms:** Inline validation (show errors immediately, not after submit)
+
+**Principle:** Users make mistakes. Forgiving UX prevents frustration, reduces support burden ("I accidentally ordered wrong product").
+
+---
+
+**6. Performance as UX**
+
+**Performance Standards (Repeated from Section 8.1 for UX Context):**
+
+| Metric | Target | User Perception |
+|--------|--------|-----------------|
+| **Page Load (<2s)** | <2s LCP | "Instant" (user doesn't notice wait) |
+| **Page Load (2-4s)** | 2-4s LCP | "Fast enough" (acceptable, not delightful) |
+| **Page Load (>4s)** | >4s LCP | "Slow" (frustration, likely abandon) |
+| **Interaction (<100ms)** | <100ms FID | "Responsive" (feels snappy) |
+| **Interaction (>300ms)** | >300ms FID | "Laggy" (frustrating, feels broken) |
+
+**Principle:** Slow = bad UX. No amount of visual polish compensates for slow load times. Prioritize performance in every design decision.
+
+---
+
+**7. Mobile-First (60%+ Users on Mobile)**
+
+**Mobile-First Design Process:**
+
+1. **Design for mobile first** (smallest screen, most constraints)
+2. **Progressively enhance for tablet** (more space, add features)
+3. **Progressively enhance for desktop** (most space, richest experience)
+
+**Mobile UX Priorities:**
+
+- **Thumb-Friendly Touch Targets:** Buttons ≥44px × 44px (easy to tap without mis-tapping)
+- **Readable Text:** ≥16px font size (no zooming required)
+- **Vertical Scrolling:** Long vertical pages > horizontal scrolling (natural mobile behavior)
+- **Minimal Typing:** Use native inputs (date picker, number pad), avoid long forms
+- **Fast Load Times:** Mobile users often on slower connections (optimize aggressively)
+
+**Principle:** Mobile is not "scaled-down desktop"—it's a different context (on-the-go, smaller screen, touch input). Design for mobile constraints, then enhance for desktop luxury.
+
+---
+
+### 9.2 Information Architecture & Navigation
+
+**Strategic Overview**
+
+Information architecture (IA) defines how content is organized, labeled, and accessed on SF Supernova. Good IA makes finding content effortless; bad IA leaves users lost, frustrated, and unlikely to convert. For a platform with 100-500 products across multiple genres, authors, eras, and formats, IA is critical to discoverability and user satisfaction.
+
+**Core Principle:** *"Users should find what they want in ≤3 clicks. If users can't find it, it might as well not exist."*
+
+---
+
+**Site Structure (Information Hierarchy)**
+
+**Top-Level Navigation (Persistent Header):**
+```
+[Logo]  Browse  Membership  Blog  About  [Search]  [Cart]  [Account/Login]
+```
+
+**Navigation Menu Breakdown:**
+
+| Menu Item | Dropdown/Submenu | Destination |
+|-----------|------------------|-------------|
+| **Browse** | • By Genre (Golden Age, New Wave, Cyberpunk, etc.)<br>• By Author (A-Z directory)<br>• By Format (ePub, Audio, Bundles)<br>• Popular This Month<br>• New Arrivals | Category/filter pages |
+| **Membership** | • Benefits<br>• Pricing<br>• FAQs | Membership landing page |
+| **Blog** | (No submenu) | Blog index page |
+| **About** | • Our Mission<br>• Editorial Team<br>• Contact | Static informational pages |
+| **Search** | (Opens search modal) | Search results page |
+| **Cart** | (Badge with item count) | Cart page |
+| **Account** | • Dashboard<br>• Order History<br>• Downloads<br>• Settings<br>• Logout | User account pages |
+
+---
+
+**Footer Navigation (Secondary Links):**
+```
+[Logo]
+
+Browse                Help                  Company
+- Science Fiction     • FAQs               • About Us
+- Fantasy             • Support            • Editorial Team
+- Horror              • Refund Policy      • Contact
+- [More Genres]       • Privacy Policy     • Blog
+                      • Terms of Service   
+
+Newsletter Signup: [Email Input] [Subscribe]
+
+Social: [Twitter] [Instagram] [Goodreads]
+
+© 2025 SF Supernova. All rights reserved.
+```
+
+---
+
+**URL Structure (SEO + UX)**
+
+**URL Design Principles:**
+
+- **Semantic:** URLs describe content (not random IDs)
+- **Hierarchical:** Structure reflects IA (`/browse/golden-age`, `/author/asimov`)
+- **Readable:** Lowercase, hyphens (not underscores), no special characters
+- **Short:** Avoid deep nesting (max 3-4 levels)
+
+**Example URL Structure:**
+
+| Page Type | URL Pattern | Example |
+|-----------|-------------|---------|
+| **Homepage** | `/` | `sfsupernova.com/` |
+| **Browse (Genre)** | `/browse/[genre-slug]` | `sfsupernova.com/browse/golden-age` |
+| **Browse (Author)** | `/author/[author-slug]` | `sfsupernova.com/author/isaac-asimov` |
+| **Product Page** | `/product/[product-slug]` | `sfsupernova.com/product/foundation-asimov` |
+| **Membership** | `/membership` | `sfsupernova.com/membership` |
+| **Blog Post** | `/blog/[post-slug]` | `sfsupernova.com/blog/golden-age-guide` |
+| **Cart** | `/cart` | `sfsupernova.com/cart` |
+| **Checkout** | `/checkout` | `sfsupernova.com/checkout` |
+| **Account** | `/account/[section]` | `sfsupernova.com/account/downloads` |
+
+---
+
+**Breadcrumb Navigation**
+
+**Purpose:** Show users where they are in site hierarchy, enable easy backtracking.
+
+**Pattern:** Home > Browse > Golden Age > Foundation by Isaac Asimov
+
+**Implementation:**
+
+- Appears below header on all pages except homepage
+- Links are clickable (users can jump back to any level)
+- Current page is not a link (e.g., "Foundation by Isaac Asimov" in plain text)
+- Schema.org BreadcrumbList markup (SEO benefit)
+
+**Example:**
+```
+Home > Browse > Golden Age > Foundation by Isaac Asimov
+[Each level is a clickable link except the last]
+```
+
+---
+
+**Search Functionality**
+
+**Phase 1 (MVP) Search:**
+
+- **Basic Keyword Search:** Match against title, author, genre, description
+- **Search Bar Position:** Persistent in header (always accessible)
+- **Search Results Page:** List of matching products (cover, title, author, price)
+- **No Results Handling:** "No results for '[query]'. Try: [suggested categories]"
+
+**Phase 2 (Growth) Search Enhancements:**
+
+- **Autocomplete:** Suggest products/authors as user types
+- **Filters:** Refine by genre, format, price, publication era
+- **Sort Options:** Relevance, popularity, price (low-high, high-low), newest
+
+**Phase 3 (Discovery Engine) Search:**
+
+- **Faceted Search:** Multiple filters simultaneously (genre + author + format + era)
+- **Semantic Search:** Understand intent ("robot invasion stories 1950s")
+- **Personalization:** Results influenced by user history, preferences
+
+---
+
+**Filtering & Sorting (Browse Pages)**
+
+**Browse Page Layout:**
+```
+[Breadcrumbs: Home > Browse > Golden Age]
+
+Golden Age Science Fiction (127 products)
+
+[Filters Sidebar]           [Product Grid]
+Genre                       [Product Card] [Product Card] [Product Card]
+☑ Golden Age (127)          [Product Card] [Product Card] [Product Card]
+☐ Pulp Era (43)            [Product Card] [Product Card] [Product Card]
+☐ New Wave (89)            [...more products...]
+
+Format                      [Pagination: 1 2 3 ... 10]
+☐ ePub (98)
+☐ Audio (56)
+☐ Bundle (12)
+
+Price
+☐ Under £3 (45)
+☐ £3-5 (67)
+☐ Over £5 (15)
+
+[Clear All Filters]
+```
+
+**Filter Best Practices:**
+
+- **Show Counts:** Display number of results per filter (e.g., "Golden Age (127)")
+- **Multi-Select:** Allow multiple filters simultaneously (e.g., "ePub + Audio")
+- **Clear Active Filters:** Show active filters prominently, easy to remove
+- **Update Results Instantly:** No need to click "Apply" (filter in real-time)
+- **Mobile Filters:** Collapse filters into drawer/modal on mobile (save screen space)
+
+**Sort Options:**
+
+- **Relevance (Default):** Best match for query/filters
+- **Popularity:** Most purchased/downloaded
+- **Price: Low to High**
+- **Price: High to Low**
+- **Newest Arrivals**
+- **Title: A-Z**
+
+---
+
+**Pagination vs. Infinite Scroll**
+
+**Recommendation: Pagination (Not Infinite Scroll)**
+
+**Rationale:**
+
+- **SEO-Friendly:** Search engines can crawl paginated content easily (infinite scroll requires JS)
+- **User Control:** Users can bookmark specific pages, jump to page 5 directly
+- **Performance:** Load only one page at a time (faster, less memory usage)
+- **Accessibility:** Screen readers handle pagination better than infinite scroll
+
+**Pagination Pattern:**
+```
+[← Previous]  1  2  3  4  5  ...  20  [Next →]
+```
+
+- Show 5-7 page numbers + first/last + prev/next
+- Current page highlighted (not clickable)
+- "..." indicates skipped pages
+
+---
+
+**Mobile Navigation (Responsive Patterns)**
+
+**Mobile Header:**
+```
+[☰ Menu]  [Logo]  [🔍 Search]  [🛒 Cart (2)]
+```
+
+**Mobile Menu (Hamburger Drawer):**
+```
+☰ Menu                              [✕ Close]
+
+Browse
+  > By Genre
+  > By Author
+  > By Format
+  > Popular This Month
+  > New Arrivals
+
+Membership
+
+Blog
+
+About
+  > Our Mission
+  > Editorial Team
+  > Contact
+
+[Login/Account]
+```
+
+**Mobile Navigation Best Practices:**
+
+- **Hamburger Menu:** Slide-out drawer (standard mobile pattern, users understand)
+- **Full-Screen Search:** Tapping search icon opens full-screen search modal
+- **Sticky Header:** Header scrolls away, reappears when scrolling up (maximize content space)
+- **Bottom Nav (Optional):** Fixed bottom bar with most-used actions (Home, Browse, Cart, Account)
+
+---
+
+### 9.3 Page Layouts & Component Patterns
+
+**Strategic Overview**
+
+Page layouts and component patterns define the visual structure and reusable UI elements across SF Supernova. Consistent layouts reduce cognitive load (users learn once, apply everywhere), speed up development (reusable components), and ensure visual cohesion. This section defines templates for key page types and standard components used throughout the platform.
+
+---
+
+**Layout Grid System**
+
+**Grid Specifications:**
+
+- **Desktop:** 12-column grid, 1200px max width, 24px gutters
+- **Tablet:** 8-column grid, 768px max width, 16px gutters
+- **Mobile:** 4-column grid, 100% width, 16px gutters
+
+**Spacing System (8px Grid):**
+
+All margins, padding, and spacing use multiples of 8px:
+
+- **Extra Small:** 8px
+- **Small:** 16px
+- **Medium:** 24px
+- **Large:** 32px
+- **Extra Large:** 48px
+- **XXL:** 64px
+
+**Rationale:** Consistent spacing creates visual rhythm, makes design feel cohesive and professional.
+
+---
+
+**Key Page Templates**
+
+**1. Homepage Template**
+
+**Layout Structure:**
+```
+[Header: Logo, Nav, Search, Cart, Account]
+
+[Hero Section]
+  - Large heading: "Discover Vintage Science Fiction"
+  - Subheading: "Curated stories from the Golden Age"
+  - CTA: "Browse Collection"
+  - Background: Subtle retro sci-fi imagery
+
+[Featured Products (3 cards)]
+  - Curated picks from editorial team
+  - Cover image, title, author, price, "View Details"
+
+[Genre Browse (Grid of 6 genre cards)]
+  - Golden Age, New Wave, Cyberpunk, Space Opera, etc.
+  - Each card: icon, genre name, product count, "Explore"
+
+[Membership CTA (Banner)]
+  - "Get 15% off + exclusive content with membership"
+  - "Learn More" button
+
+[Recent Blog Posts (3 cards)]
+  - Author guides, genre primers, editorial essays
+  - Cover image, title, excerpt, "Read More"
+
+[Footer: Links, Newsletter Signup, Social]
+```
+
+**Key UX Decisions:**
+
+- **Single Primary CTA:** "Browse Collection" (don't overwhelm with choices)
+- **Visual Hierarchy:** Hero → Featured → Genres → Membership → Blog
+- **Scrolling Encouraged:** Long vertical page (mobile-friendly)
+- **No Carousel:** Carouses have poor engagement (static featured products better)
+
+---
+
+**2. Product Page Template**
+
+**Layout Structure (Desktop):**
+```
+[Breadcrumbs: Home > Browse > Golden Age > Foundation]
+
+[Left Column: Product Image]        [Right Column: Product Details]
+- Cover image (large, zoomable)     - Title: "Foundation"
+                                    - Author: "Isaac Asimov"
+                                    - Price: £2.99 (or £2.54 for members)
+                                    - Format: ePub, Audio
+                                    - [Add to Cart] (primary CTA)
+                                    - [Add to Wishlist] (secondary)
+                                    
+                                    - Short Description (2-3 sentences)
+                                    - [See Full Details ↓]
+
+[Full-Width: Tabs]
+- Tab 1: Synopsis (full plot summary)
+- Tab 2: About the Author (bio, other works)
+- Tab 3: Historical Context (when written, significance)
+- Tab 4: Reviews (user reviews, if available)
+
+[Full-Width: Related Products]
+- "You might also like..." (4 product cards)
+- Similar genre, same author, curator picks
+```
+
+**Mobile Layout (Stacked):**
+
+- Cover image (full width)
+- Title, author, price, CTA
+- Short description
+- Tabs (swipeable)
+- Related products (horizontal scroll)
+
+**Key UX Decisions:**
+
+- **Above-Fold CTA:** "Add to Cart" visible immediately (no scrolling required)
+- **Progressive Disclosure:** Synopsis/bio hidden in tabs (interested users can dig deeper)
+- **Clear Pricing:** Show member discount prominently (incentivize membership)
+- **Related Products:** Cross-sell opportunities (increase avg order value)
+
+---
+
+**3. Browse/Category Page Template**
+
+**Layout Structure:**
+```
+[Breadcrumbs: Home > Browse > Golden Age]
+
+Golden Age Science Fiction (127 products)
+
+[Filters (Sidebar - Desktop)]   [Products (Grid - 3 cols Desktop, 2 cols Tablet, 1 col Mobile)]
+[As described in 9.2]            [Product Card] [Product Card] [Product Card]
+                                 [Product Card] [Product Card] [Product Card]
+                                 [...12 cards per page...]
+                                 
+                                 [Pagination: 1 2 3 ... 11]
+```
+
+**Product Card Component:**
+```
+[Cover Image]
+Title (truncated to 2 lines)
+Author
+£2.99 (or £2.54 for members)
+[Add to Cart]
+```
+
+**Key UX Decisions:**
+
+- **Grid Layout:** 3 columns desktop (optimal density), 1 column mobile (readability)
+- **Scannable Cards:** Cover, title, author, price—all info at a glance
+- **Quick Add to Cart:** Users can add without visiting product page (reduce friction)
+- **Pagination:** 12 products per page (not overwhelming, not too sparse)
+
+---
+
+**4. Cart Page Template**
+
+**Layout Structure:**
+```
+Your Cart (3 items)
+
+[Cart Items (List)]
+[Cover] Foundation by Isaac Asimov          £2.99    [Remove]
+[Cover] Robots Have No Tails by H. Kuttner  £2.99    [Remove]
+[Cover] The Illustrated Man by Ray Bradbury £3.99    [Remove]
+
+[Subtotal]
+Subtotal:      £9.97
+Membership:    -£1.50 (15% discount)
+Total:         £8.47
+
+[Continue Shopping] [Proceed to Checkout]
+```
+
+**Key UX Decisions:**
+
+- **Clear Item List:** Cover, title, author, price (easy to review)
+- **Easy Removal:** One click to remove item (no confirmation modal for cart)
+- **Show Savings:** Highlight membership discount (reinforce value)
+- **Dual CTAs:** "Continue Shopping" (secondary) vs. "Proceed to Checkout" (primary)
+
+---
+
+**5. Checkout Page Template**
+
+**Layout Structure (Single Page Checkout):**
+```
+Checkout
+
+[Step Indicator: 1. Contact → 2. Payment → 3. Confirmation]
+
+Step 1: Contact Information
+Email: [_______________] (required for order confirmation)
+☐ Keep me updated on new releases
+
+Step 2: Payment Information
+Card Number: [________________]
+Expiry: [__/__]  CVC: [___]
+Name on Card: [_______________]
+
+[Order Summary (Sticky Sidebar on Desktop)]
+3 items
+Subtotal: £9.97
+Discount: -£1.50
+Total: £8.47
+
+[Complete Purchase] (Stripe payment button)
+
+🔒 Secure checkout powered by Stripe
+```
+
+**Key UX Decisions:**
+
+- **Single-Page Checkout:** No multi-step confusion (all fields on one page)
+- **Minimal Fields:** Email + payment (no address required for digital products)
+- **Trust Signals:** "Secure checkout" + Stripe logo (reduce payment anxiety)
+- **Order Summary Visible:** Sticky sidebar (users always see what they're buying)
+- **No Account Required:** Guest checkout (reduce friction)
+
+---
+
+**6. Account Dashboard Template**
+
+**Layout Structure:**
+```
+[Account Sidebar]            [Main Content Area]
+Dashboard                    Welcome back, [Name]!
+Order History                
+Downloads                    Recent Orders
+Membership                   [Order #1234] - £8.47 - Nov 24, 2025 [View]
+Settings                     [Order #1233] - £2.99 - Nov 20, 2025 [View]
+Logout                       [See All Orders]
+
+                             Quick Access
+                             [My Downloads] [Manage Membership] [Update Payment]
+```
+
+**Account Pages:**
+
+- **Dashboard:** Overview, recent orders, quick links
+- **Order History:** List of all orders, receipts, re-download links
+- **Downloads:** All purchased products (organized by format)
+- **Membership:** Current plan, billing, cancellation
+- **Settings:** Email, password, preferences, delete account
+
+**Key UX Decisions:**
+
+- **Sidebar Nav:** Persistent on desktop (easy navigation between account sections)
+- **Mobile:** Sidebar becomes top tabs or dropdown (adapt to small screen)
+- **Quick Actions:** "Download All" button (bulk download for users with many products)
+- **Self-Service:** Manage membership, update payment method (no support emails required)
+
+---
+
+**Component Library (Reusable UI Elements)**
+
+**1. Buttons**
+
+| Button Type | Style | Use Case | Example |
+|-------------|-------|----------|---------|
+| **Primary** | Filled, orange, white text | Main CTA (Add to Cart, Checkout) | `[Add to Cart]` |
+| **Secondary** | Outline, orange border, orange text | Secondary action (Continue Shopping) | `[Continue Shopping]` |
+| **Tertiary** | Text only, orange, no border | Minor action (Cancel, Back) | `[Cancel]` |
+| **Disabled** | Gray, no interaction | Unavailable action | `[Sold Out]` (grayed out) |
+
+**Button Sizes:**
+
+- **Large:** 48px height (primary CTAs on mobile)
+- **Medium:** 40px height (default desktop buttons)
+- **Small:** 32px height (inline actions, table rows)
+
+---
+
+**2. Product Card**
+
+**Standard Product Card:**
+```
+┌─────────────────┐
+│                 │
+│  [Cover Image]  │
+│                 │
+├─────────────────┤
+│ Title (2 lines) │
+│ Author          │
+│ £2.99           │
+│ [Add to Cart]   │
+└─────────────────┘
+```
+
+**Hover State (Desktop):**
+
+- Cover image: slight zoom effect
+- Border: orange highlight
+- "Add to Cart" button: filled (from outline)
+
+**Variants:**
+
+- **Compact Card:** Smaller cover, no CTA (used in related products)
+- **List Card:** Horizontal layout (cover left, details right) for mobile
+- **Featured Card:** Larger, includes short description + "View Details" button
+
+---
+
+**3. Forms**
+
+**Form Field Pattern:**
+```
+Label *
+[Input Field]
+Helper text (e.g., "We'll never share your email")
+```
+
+**Validation:**
+
+- **Inline Validation:** Show errors immediately as user types/leaves field
+- **Error State:** Red border, red error message below field
+- **Success State:** Green checkmark icon (optional, for critical fields)
+
+**Example:**
+```
+Email Address *
+[user@example.com___________] ✓
+(Green checkmark = valid format)
+
+Email Address *
+[invalid-email______________]
+⚠ Please enter a valid email address
+(Red border + error message = invalid)
+```
+
+---
+
+**4. Modals/Dialogs**
+
+**Modal Pattern:**
+```
+[Semi-transparent overlay]
+
+┌───────────────────────────────┐
+│  Confirm Action           [✕] │
+├───────────────────────────────┤
+│                               │
+│  Are you sure you want to     │
+│  remove "Foundation" from     │
+│  your cart?                   │
+│                               │
+│  [Cancel]    [Remove Item]    │
+│                               │
+└───────────────────────────────┘
+```
+
+**Modal Best Practices:**
+
+- **Purpose:** Confirm destructive actions (remove, delete, cancel)
+- **Escape Routes:** [✕] close button + [Cancel] button + click outside modal
+- **Focus Trap:** Keyboard focus trapped in modal (tab cycles through modal elements)
+- **Mobile:** Full-screen modal on mobile (slide up from bottom)
+
+---
+
+**5. Loading States**
+
+**Loading Patterns:**
+
+| Context | Loading Pattern | Example |
+|---------|----------------|---------|
+| **Page Load** | Skeleton screen (content outline) | Gray placeholder boxes where content will appear |
+| **Button Action** | Spinner + text change | "Add to Cart" → "Adding..." (spinner icon) |
+| **Image Load** | Blurred placeholder → sharp image | Low-res preview while high-res loads |
+| **Infinite Scroll** | Spinner at bottom | More products loading... |
+
+**Skeleton Screen Example (Product Card):**
+```
+┌─────────────────┐
+│  ▒▒▒▒▒▒▒▒▒▒▒    │  (Gray animated pulse)
+│  ▒▒▒▒▒▒▒▒▒▒▒    │
+│  ▒▒▒▒▒▒▒▒▒▒▒    │
+├─────────────────┤
+│ ▒▒▒▒▒▒▒         │
+│ ▒▒▒▒▒           │
+│ ▒▒▒             │
+└─────────────────┘
+```
+
+**Rationale:** Skeleton screens feel faster than spinners (user sees structure immediately).
+
+---
+
+### 9.4 Responsive Design & Mobile Experience
+
+**Strategic Overview**
+
+Responsive design ensures SF Supernova works seamlessly across all devices (desktop, tablet, mobile, e-readers). With 60%+ traffic expected on mobile, mobile experience is not an afterthought—it's the primary design target. This section defines breakpoints, responsive patterns, and mobile-specific optimizations.
+
+**Core Principle:** *"Design for the smallest screen first, then enhance for larger screens. Mobile users should get a first-class experience, not a compromised desktop version."*
+
+---
+
+**Responsive Breakpoints**
+
+| Breakpoint | Device | Viewport Width | Design Approach |
+|------------|--------|----------------|-----------------|
+| **Mobile** | Phones | 320px - 767px | Base design (mobile-first) |
+| **Tablet** | Tablets, small laptops | 768px - 1023px | 2-column layouts, larger touch targets |
+| **Desktop** | Laptops, desktops | 1024px - 1439px | 3-column layouts, sidebars, hover states |
+| **Large Desktop** | Large monitors | 1440px+ | Max-width container (1200px), increased whitespace |
+
+**CSS Media Queries:**
+```css
+/* Mobile-first base styles */
+.container {
+  padding: 16px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .container {
+    padding: 24px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .container {
+    padding: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+```
+
+---
+
+**Mobile-Specific Optimizations**
+
+**1. Touch Targets**
+
+- **Minimum Size:** 44px × 44px (Apple HIG standard, finger-friendly)
+- **Spacing:** 8px between adjacent touch targets (prevent mis-taps)
+- **Buttons:** Full-width on mobile (easy to tap, clear hierarchy)
+
+**2. Typography**
+
+- **Body Text:** 16px minimum (readable without zooming)
+- **Headings:** 24-32px (clear hierarchy)
+- **Line Height:** 1.5-1.6 (comfortable reading)
+- **Line Length:** 50-75 characters per line (optimal readability)
+
+**3. Images**
+
+- **Responsive Images:** Serve appropriately-sized images per device
+  - Mobile: 640px width (2x for retina = 1280px)
+  - Tablet: 1024px width
+  - Desktop: 1920px width
+- **Lazy Loading:** Load images as user scrolls (faster initial page load)
+- **Alt Text:** Always provide (accessibility + SEO)
+
+**4. Navigation**
+
+- **Hamburger Menu:** Standard mobile pattern (slide-out drawer)
+- **Sticky Header:** Scrolls away, reappears on scroll up (maximize content space)
+- **Bottom Navigation (Optional):** Fixed bottom bar (Home, Browse, Cart, Account) for thumb-friendly access
+
+**5. Forms**
+
+- **Input Types:** Use HTML5 input types (triggers correct mobile keyboard)
+  - `<input type="email">` → email keyboard (@, .com)
+  - `<input type="tel">` → number pad
+  - `<input type="number">` → numeric keyboard
+- **Autocomplete:** Enable autocomplete attributes (browser suggests saved info)
+- **Minimize Typing:** Use dropdowns, checkboxes where possible
+
+---
+
+**Responsive Layout Patterns**
+
+**1. Stacking (Mobile → Desktop)**
+
+**Mobile:** Single-column stack (vertical scroll)
+```
+[Image]
+[Title]
+[Description]
+[CTA]
+```
+
+**Desktop:** Multi-column grid (horizontal scan)
+```
+[Image] [Title]
+        [Description]
+        [CTA]
+```
+
+---
+
+**2. Priority (Hide Less Important Content on Mobile)**
+
+**Mobile:** Show only essential content
+```
+[Title]
+[Price]
+[Add to Cart]
+(Synopsis hidden—user can tap "See Details")
+```
+
+**Desktop:** Show full content
+```
+[Title]
+[Price]
+[Synopsis (full)]
+[Add to Cart]
+```
+
+---
+
+**3. Reflow (Adapt Layout to Screen Size)**
+
+**Mobile:** Filters in drawer (tap "Filters" button to open)
+```
+[Filters] (button)
+[Product 1]
+[Product 2]
+[Product 3]
+```
+
+**Desktop:** Filters in sidebar (always visible)
+```
+[Filters Sidebar] | [Products Grid]
+                  | [Product 1] [Product 2] [Product 3]
+```
+
+---
+
+**Performance on Mobile (Critical)**
+
+**Why Performance Matters More on Mobile:**
+
+- **Slower Connections:** 3G/4G often slower than desktop WiFi
+- **Limited Data Plans:** Users pay for data (large pages = expensive)
+- **Lower-Powered Devices:** Budget phones struggle with heavy JS/images
+
+**Mobile Performance Optimizations:**
+
+1. **Compress Images:** WebP format (30-50% smaller than JPEG, good quality)
+2. **Lazy Load:** Load images/videos only when in viewport
+3. **Minimize JS:** Less JS = faster load, less battery drain
+4. **Reduce Requests:** Combine CSS/JS files, use SVG for icons (not separate images)
+5. **Cache Aggressively:** Cache static assets (fonts, CSS, JS) for repeat visits
+
+**Target Mobile Performance:**
+
+- **LCP (Largest Contentful Paint):** <2.5s on 4G
+- **FID (First Input Delay):** <100ms
+- **CLS (Cumulative Layout Shift):** <0.1 (no jarring layout shifts)
+
+---
+
+**Testing on Real Devices**
+
+**Device Testing Matrix (Phase 1):**
+
+| Device | OS | Browser | Priority |
+|--------|-----|---------|----------|
+| iPhone 12/13/14 | iOS 16+ | Safari | High (most common) |
+| Samsung Galaxy S21+ | Android 12+ | Chrome | High |
+| iPad Air | iOS 16+ | Safari | Medium |
+| Google Pixel 6+ | Android 12+ | Chrome | Medium |
+| Budget Android (e.g., Moto G) | Android 11+ | Chrome | Low (but important for accessibility) |
+
+**Testing Checklist:**
+
+- [ ] All pages load in <3s on 4G
+- [ ] All buttons/links tappable (no mis-taps)
+- [ ] Text readable without zooming
+- [ ] Forms functional (correct keyboards appear)
+- [ ] Checkout flow works end-to-end
+- [ ] Images load, no broken links
+
+**Testing Tools:**
+
+- **BrowserStack:** Test on real devices remotely (£39/month)
+- **Chrome DevTools:** Device emulation (free, built-in)
+- **Real Devices:** Borrow friends' phones, test in-person (ideal)
+
+---
+
+### 9.5 Onboarding & First-Time User Experience
+
+**Strategic Overview**
+
+Onboarding is the first impression new users have of SF Supernova. A smooth, delightful onboarding experience converts visitors into customers; a confusing, friction-filled onboarding drives users away forever. This section defines how we welcome new users, guide them to value, and reduce abandonment.
+
+**Core Principle:** *"Time to first value should be <60 seconds. Show users what SF Supernova offers immediately, let them experience it before asking for commitment."*
+
+---
+
+**First Visit Journey (New User Flow)**
+
+**Step 1: Homepage Arrival (0-10 seconds)**
+
+**User Sees:**
+
+- Clear value proposition: "Discover Curated Vintage Science Fiction"
+- Visual appeal: Retro-futuristic design, high-quality cover images
+- Immediate entry points: "Browse Collection" CTA, featured products visible
+
+**Goal:** Answer "What is this?" and "Is this for me?" instantly.
+
+---
+
+**Step 2: Browse Without Commitment (10-60 seconds)**
+
+**User Can:**
+
+- Browse products freely (no account required)
+- Click into product pages (full details visible)
+- Add products to cart (no login required yet)
+
+**Goal:** Let users explore value before asking for anything (email, payment, account).
+
+---
+
+**Step 3: Discover Value (1-5 minutes)**
+
+**User Might:**
+
+- Read product descriptions (high-quality curation evident)
+- View author bios, historical context (editorial depth)
+- Compare products (discovery engine, filters)
+- Read blog posts (expertise, authority)
+
+**Goal:** Build trust, demonstrate value proposition (curation, expertise, quality).
+
+---
+
+**Step 4: Decision to Purchase (5-15 minutes)**
+
+**User Adds to Cart → Proceeds to Checkout:**
+
+- **Checkout asks for email** (first time user provides info)
+- **Why email first?** Enables order confirmation, download delivery, abandoned cart recovery
+- **No account creation required** (guest checkout reduces friction)
+
+**Goal:** Minimize friction to first purchase (account creation optional, not required).
+
+---
+
+**Step 5: Post-Purchase (Immediate)**
+
+**User Receives:**
+
+1. **Order Confirmation Email** (immediate, within 30 seconds)
+   - Order summary, total paid
+   - Download links (instant access)
+   - Receipt/invoice (PDF attachment)
+
+2. **Welcome Email** (1 hour later, optional)
+   - "Thanks for your first purchase!"
+   - Invite to create account (save order history, easier re-downloads)
+   - Membership pitch (15% off future purchases)
+
+**Goal:** Delight user immediately (instant delivery), invite deeper engagement (account, membership).
+
+---
+
+**Account Creation (Optional but Encouraged)**
+
+**When to Prompt Account Creation:**
+
+- **After First Purchase:** "Save your order history? Create a free account"
+- **Before Second Purchase:** "Welcome back! Create account to track orders easily"
+- **Never:** Forced account creation before purchase (kills conversion)
+
+**Account Creation Flow:**
+```
+Create Your Account
+
+Email: user@example.com (pre-filled from checkout)
+Password: [__________]
+☐ Keep me updated on new releases
+
+[Create Account]
+
+Already have an account? [Sign In]
+```
+
+**Benefits Highlighted:**
+
+- "Track order history"
+- "Easy re-downloads"
+- "Save payment methods"
+- "Exclusive member perks"
+
+---
+
+**Abandoned Cart Recovery**
+
+**Scenario:** User adds products to cart but leaves without purchasing.
+
+**Recovery Email (Sent 24 hours later):**
+```
+Subject: You left something behind...
+
+Hi [Name],
+
+You added these items to your cart but didn't complete checkout:
+
+- Foundation by Isaac Asimov - £2.99
+- Robots Have No Tails by Henry Kuttner - £2.99
+
+Still interested? Complete your purchase now:
+[Complete Purchase] (link to cart)
+
+Questions? Reply to this email—we're here to help!
+
+— SF Supernova Team
+```
+
+**Follow-Up (72 hours later, if still abandoned):**
+```
+Subject: Exclusive: 10% off your cart
+
+Hi [Name],
+
+We'd love to have you as a customer. Here's a special offer:
+
+Get 10% off your cart for the next 48 hours.
+Use code: WELCOME10
+
+[Complete Purchase] (link to cart with code applied)
+
+— SF Supernova Team
+```
+
+**Rationale:** Gentle nudge + incentive recovers 10-20% of abandoned carts (meaningful revenue).
+
+---
+
+**Membership Onboarding (Converting Free → Paid Users)**
+
+**Membership Pitch Placement:**
+
+1. **Homepage Banner:** "Get 15% off + exclusive content with membership"
+2. **Product Pages:** "Members save £X on this product" (contextual value)
+3. **Cart Page:** "Join membership and save £X on this order"
+4. **Checkout:** "Upgrade to membership and save immediately"
+5. **Post-Purchase Email:** "You could have saved £X with membership"
+
+**Membership Landing Page:**
+```
+SF Supernova Membership
+
+Benefits:
+- 15% off all products
+- Early access to new releases
+- Exclusive editorial content
+- Priority support
+
+Pricing:
+£9.99/month or £99/year (2 months free)
+
+[Join Now]
+
+FAQs:
+- Can I cancel anytime? Yes, no commitments.
+- Do I get discount on past purchases? No, only future.
+- What exclusive content? Members-only blog posts, author interviews, reading guides.
+```
+
+**Key UX Decisions:**
+
+- **Clear ROI:** "After 3 purchases, membership pays for itself"
+- **No Long-Term Commitment:** Monthly cancellable (reduces risk)
+- **Visual Comparison:** Free vs. Member pricing side-by-side
+
+---
+
+**Empty States (Guiding Users When Content is Missing)**
+
+**Empty Cart:**
+```
+Your cart is empty
+
+Ready to discover vintage sci-fi?
+[Browse Collection]
+```
+
+**No Search Results:**
+```
+No results for "asimov robots"
+
+Try:
+- Check your spelling
+- Use fewer keywords
+- Browse by author: [Isaac Asimov]
+```
+
+**No Order History (New Account):**
+```
+No orders yet
+
+Discover curated science fiction and start your collection.
+[Browse Collection]
+```
+
+**Rationale:** Empty states are opportunities to guide users toward value (not dead ends).
+
+---
+
+**Tooltips & Contextual Help**
+
+**When to Use Tooltips:**
+
+- **Unfamiliar Terms:** Hover "?" icon for definition (e.g., "What's ePub?")
+- **Feature Explanations:** "Why join membership?" → tooltip explains benefits
+- **Form Help:** "Why do we need this?" next to email field
+
+**Tooltip Pattern:**
+```
+[?] (Hover or tap)
+
+Popover appears:
+┌──────────────────────────────┐
+│ ePub is a digital book       │
+│ format compatible with most  │
+│ e-readers (Kindle, Apple     │
+│ Books, Kobo).                │
+└──────────────────────────────┘
+```
+
+**Best Practices:**
+
+- **Concise:** 1-2 sentences max
+- **Contextual:** Appears near related element
+- **Dismissible:** Click outside or tap [✕] to close
+
+---
+
+### 9.6 Accessibility & Inclusive Design (UX Perspective)
+
+**Strategic Overview**
+
+(This overlaps with Section 8.4 but focuses on UX implementation rather than technical compliance.)
+
+Accessible design ensures SF Supernova is usable by people with disabilities (visual, motor, cognitive, auditory). Beyond legal/moral imperatives, accessible design benefits all users (e.g., high contrast helps users in bright sunlight, keyboard navigation helps power users). This section defines UX patterns that make SF Supernova inclusive.
+
+**Core Principle:** *"Accessible design is not special accommodation—it's good design for everyone."*
+
+---
+
+**Keyboard Navigation**
+
+**All Interactive Elements Must Be Keyboard-Accessible:**
+
+- **Tab:** Move to next interactive element (links, buttons, form fields)
+- **Shift+Tab:** Move to previous element
+- **Enter/Space:** Activate buttons, links
+- **Arrow Keys:** Navigate dropdowns, radio buttons
+- **Escape:** Close modals, dismiss popovers
+
+**Focus Indicators:**
+
+- **Visible Focus Ring:** Clear outline around focused element (orange, 2px)
+- **Never Remove:** `outline: none` is accessibility sin (users need to see focus)
+- **Focus Order:** Tab order follows visual order (top → bottom, left → right)
+
+---
+
+**Screen Reader Support**
+
+**Semantic HTML:**
+```html
+<!-- Good: Semantic HTML -->
+<header>
+  <nav>
+    <ul>
+      <li><a href="/browse">Browse</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Bad: Div soup -->
+<div class="header">
+  <div class="nav">
+    <div class="link">Browse</div>
+  </div>
+</div>
+```
+
+**ARIA Labels (When Needed):**
+```html
+<!-- Icon button needs aria-label -->
+<button aria-label="Close modal">
+  <svg>...</svg>
+</button>
+
+<!-- Link text is clear, no aria-label needed -->
+<a href="/browse">Browse Collection</a>
+```
+
+**Alt Text (Images):**
+```html
+<!-- Product cover -->
+<img src="foundation.jpg" alt="Cover of Foundation by Isaac Asimov showing futuristic cityscape">
+
+<!-- Decorative image (no alt needed) -->
+<img src="background-pattern.jpg" alt="">
+```
+
+---
+
+**Color Contrast**
+
+**WCAG AA Standards:**
+
+- **Normal Text:** 4.5:1 contrast ratio
+- **Large Text (18px+):** 3:1 contrast ratio
+- **UI Components:** 3:1 contrast (buttons, form borders)
+
+**Testing:**
+
+- Use contrast checker (WebAIM, Chrome DevTools)
+- Test with grayscale filter (ensure UI works without color)
+
+---
+
+**Error Handling (Accessible)**
+
+**Form Error Pattern:**
+```html
+<label for="email">Email Address *</label>
+<input 
+  type="email" 
+  id="email" 
+  aria-describedby="email-error"
+  aria-invalid="true"
+>
+<span id="email-error" role="alert">
+  Please enter a valid email address
+</span>
+```
+
+**Key Elements:**
+
+- `aria-invalid="true"` (tells screen reader field has error)
+- `aria-describedby` (links error message to field)
+- `role="alert"` (announces error to screen reader)
+
+---
+
+**Summary: UX Principles Recap**
+
+1. **Clarity Over Cleverness:** Obvious beats clever every time
+2. **Progressive Disclosure:** Simple surface, complex depth
+3. **Consistency:** Learn once, use everywhere
+4. **Feedback:** Acknowledge every action
+5. **Forgiveness:** Let users undo mistakes
+6. **Performance:** Fast is a feature
+7. **Mobile-First:** 60%+ users on mobile, design for them
+8. **Accessibility:** Inclusive design benefits everyone
+
+**Excellent UX is not decoration or "nice-to-have"—it's the interface between user intent and business value. Every friction point costs conversions, every confusion costs trust, every slow page costs revenue. SF Supernova's UX must be effortless, delightful, and accessible—this is how we justify premium pricing over free alternatives and build a loyal, growing user base.**
+
+---
+
+
 
 
 
@@ -32248,6 +33537,1288 @@ Defines:
 
 ### 10.8 Onboarding & First-Time User Experience
 
+
+## 10. Data Model & Content Structure
+Defines the database schema, content types, metadata standards, and relationships that power SF Supernova's content architecture.
+
+### 10.1 Core Data Entities & Relationships
+
+**Strategic Overview**
+
+The data model defines how information is structured, stored, and related within SF Supernova's database. A well-designed data model enables efficient queries, supports future features, maintains data integrity, and scales gracefully. For a content-driven platform with complex relationships (products, authors, genres, users, orders, memberships), the data model is foundational architecture—mistakes here compound exponentially as the platform grows.
+
+**Core Principle:** *"Design data model for flexibility and extensivity. Assume requirements will evolve. Optimize for correctness first, performance second (premature optimization is the root of all evil)."*
+
+**Why Data Model Matters for SF Supernova:**
+
+1. **Content Relationships:** Products link to authors, genres, series, formats (complex many-to-many relationships)
+2. **Discovery Engine:** Filtering, searching, recommendations depend on rich metadata
+3. **Business Logic:** Pricing (membership discounts), inventory (digital = infinite), order fulfillment
+4. **Reporting:** Revenue analytics, popular products, user behavior—all query the data model
+5. **Future Features:** Adding audio products, bundles, user reviews requires extensible schema
+
+**Data Model Failure Modes to Avoid:**
+
+- **Rigid Schema:** Can't add new product types (audio, bundles) without major refactoring
+- **Data Duplication:** Author info stored in product table (update nightmare, inconsistency risk)
+- **Missing Relationships:** Can't answer "show me all books by Asimov in Golden Age genre"
+- **Poor Normalization:** Denormalized data everywhere (fast reads, nightmare writes/consistency)
+- **No Audit Trail:** Can't answer "who changed this price?" or "when was this order placed?"
+
+---
+
+**Entity-Relationship Overview**
+
+**Core Entities:**
+
+1. **Users** (customers, members, admins)
+2. **Products** (digital products: ePubs, audio files, bundles)
+3. **Authors** (writers, creators)
+4. **Genres** (Golden Age, New Wave, Cyberpunk, etc.)
+5. **Series** (Foundation series, Robot series, etc.)
+6. **Formats** (ePub, Audio, PDF, etc.)
+7. **Orders** (purchase transactions)
+8. **Order Items** (line items within orders)
+9. **Memberships** (subscription tiers)
+10. **Downloads** (delivery/access logs)
+11. **Content** (blog posts, editorial content)
+12. **Reviews** (user reviews, Phase 2+)
+
+**High-Level Relationships:**
+```
+Users ─── Orders ─── Order Items ─── Products
+  │                                      │
+  └─── Memberships                       ├─── Authors (many-to-many)
+  └─── Downloads                         ├─── Genres (many-to-many)
+  └─── Reviews                           ├─── Series (many-to-one)
+                                         └─── Formats (many-to-many)
+
+Content ─── Authors (many-to-many, for blog posts about authors)
+```
+
+---
+
+**Entity Definitions (Detailed)**
+
+**1. Users Table**
+
+**Purpose:** Store customer/member accounts, authentication, preferences.
+
+| Field | Type | Constraints | Description |
+|-------|------|-------------|-------------|
+| `id` | UUID | Primary Key | Unique user identifier |
+| `email` | VARCHAR(255) | UNIQUE, NOT NULL | User email (login credential) |
+| `password_hash` | VARCHAR(255) | NOT NULL | Hashed password (bcrypt/argon2) |
+| `first_name` | VARCHAR(100) | NULL | Optional (not required for guest checkout) |
+| `last_name` | VARCHAR(100) | NULL | Optional |
+| `email_verified` | BOOLEAN | DEFAULT FALSE | Email verification status |
+| `email_verified_at` | TIMESTAMP | NULL | When email was verified |
+| `membership_tier` | ENUM | 'free', 'basic', 'premium' | Current membership level |
+| `membership_expires_at` | TIMESTAMP | NULL | Membership expiration (NULL = lifetime or free) |
+| `stripe_customer_id` | VARCHAR(255) | NULL | Stripe customer ID (for payments) |
+| `preferences` | JSONB | NULL | User preferences (newsletter, notifications, etc.) |
+| `created_at` | TIMESTAMP | DEFAULT NOW() | Account creation timestamp |
+| `updated_at` | TIMESTAMP | DEFAULT NOW() | Last update timestamp |
+| `deleted_at` | TIMESTAMP | NULL | Soft delete (GDPR compliance) |
+
+**Indexes:**
+
+- `email` (unique, for login lookups)
+- `stripe_customer_id` (for payment processing)
+- `membership_tier, membership_expires_at` (for membership queries)
+
+**Notes:**
+
+- **Soft Delete:** `deleted_at` allows account deletion without losing order history (GDPR right to be forgotten while maintaining financial records)
+- **JSONB Preferences:** Flexible schema for user preferences (avoid adding columns for every new preference)
+- **No Address Fields:** Digital products don't require shipping address (keep minimal)
+
+---
+
+**2. Products Table**
+
+**Purpose:** Store digital products (ePubs, audio, bundles).
+
+| Field | Type | Constraints | Description |
+|-------|------|-------------|-------------|
+| `id` | UUID | Primary Key | Unique product identifier |
+| `title` | VARCHAR(500) | NOT NULL | Product title |
+| `slug` | VARCHAR(500) | UNIQUE, NOT NULL | URL-friendly slug (e.g., "foundation-asimov") |
+| `type` | ENUM | 'ebook', 'audio', 'bundle' | Product type |
+| `description_short` | TEXT | NULL | 2-3 sentence summary (product cards) |
+| `description_long` | TEXT | NULL | Full synopsis (product page) |
+| `price_gbp` | DECIMAL(10,2) | NOT NULL | Base price in GBP (e.g., 2.99) |
+| `membership_discount_pct` | DECIMAL(5,2) | DEFAULT 15.00 | Membership discount % (15% default) |
+| `cover_image_url` | VARCHAR(500) | NULL | URL to cover image (Cloudflare R2) |
+| `file_url` | VARCHAR(500) | NULL | URL to product file (signed URL, Cloudflare R2) |
+| `file_size_bytes` | BIGINT | NULL | File size in bytes |
+| `word_count` | INT | NULL | Word count (for ebooks) |
+| `duration_minutes` | INT | NULL | Duration in minutes (for audio) |
+| `publication_year` | INT | NULL | Original publication year |
+| `isbn` | VARCHAR(20) | NULL | ISBN (if applicable) |
+| `series_id` | UUID | Foreign Key → Series | Series this product belongs to (NULL if standalone) |
+| `series_order` | INT | NULL | Order in series (1, 2, 3...) |
+| `status` | ENUM | 'draft', 'published', 'archived' | Publication status |
+| `published_at` | TIMESTAMP | NULL | When product was published |
+| `featured` | BOOLEAN | DEFAULT FALSE | Featured on homepage |
+| `popularity_score` | INT | DEFAULT 0 | Calculated popularity (orders, views, etc.) |
+| `metadata` | JSONB | NULL | Additional flexible metadata |
+| `created_at` | TIMESTAMP | DEFAULT NOW() | Creation timestamp |
+| `updated_at` | TIMESTAMP | DEFAULT NOW() | Last update timestamp |
+| `deleted_at` | TIMESTAMP | NULL | Soft delete |
+
+**Indexes:**
+
+- `slug` (unique, for URL lookups)
+- `type` (filter by product type)
+- `status, published_at` (published products query)
+- `series_id, series_order` (series browsing)
+- `featured` (homepage featured products)
+- `popularity_score DESC` (popular products ranking)
+
+**Notes:**
+
+- **Flexible Product Types:** 'ebook', 'audio', 'bundle' in single table (avoids table proliferation)
+- **Soft Delete:** Preserves order history even if product archived
+- **JSONB Metadata:** Extensible for future fields (narrator for audio, file formats, etc.)
+- **Popularity Score:** Calculated field (updated via cron job based on orders, views, ratings)
+
+---
+
+**3. Authors Table**
+
+**Purpose:** Store author/creator information.
+
+| Field | Type | Constraints | Description |
+|-------|------|-------------|-------------|
+| `id` | UUID | Primary Key | Unique author identifier |
+| `name` | VARCHAR(255) | NOT NULL | Author name (e.g., "Isaac Asimov") |
+| `slug` | VARCHAR(255) | UNIQUE, NOT NULL | URL-friendly slug (e.g., "isaac-asimov") |
+| `bio` | TEXT | NULL | Author biography |
+| `birth_year` | INT | NULL | Year of birth |
+| `death_year` | INT | NULL | Year of death (NULL if alive) |
+| `nationality` | VARCHAR(100) | NULL | Nationality/origin |
+| `photo_url` | VARCHAR(500) | NULL | Author photo URL |
+| `wikipedia_url` | VARCHAR(500) | NULL | Wikipedia link (authoritative source) |
+| `isfdb_url` | VARCHAR(500) | NULL | ISFDB link (sci-fi database) |
+| `created_at` | TIMESTAMP | DEFAULT NOW() | Creation timestamp |
+| `updated_at` | TIMESTAMP | DEFAULT NOW() | Last update timestamp |
+
+**Indexes:**
+
+- `slug` (unique, for URL lookups)
+- `name` (for search/autocomplete)
+
+**Notes:**
+
+- **Minimal Fields:** Core info only (avoid bloat)
+- **External Links:** Wikipedia, ISFDB for authoritative data (don't duplicate)
+
+---
+
+**4. Genres Table**
+
+**Purpose:** Store genre categories (Golden Age, New Wave, etc.).
+
+| Field | Type | Constraints | Description |
+|-------|------|-------------|-------------|
+| `id` | UUID | Primary Key | Unique genre identifier |
+| `name` | VARCHAR(100) | UNIQUE, NOT NULL | Genre name (e.g., "Golden Age") |
+| `slug` | VARCHAR(100) | UNIQUE, NOT NULL | URL-friendly slug (e.g., "golden-age") |
+| `description` | TEXT | NULL | Genre description/definition |
+| `sort_order` | INT | DEFAULT 0 | Display order (for navigation) |
+| `created_at` | TIMESTAMP | DEFAULT NOW() | Creation timestamp |
+| `updated_at` | TIMESTAMP | DEFAULT NOW() | Last update timestamp |
+
+**Indexes:**
+
+- `slug` (unique, for URL lookups)
+- `sort_order` (for ordered navigation display)
+
+**Notes:**
+
+- **Curated List:** Not user-generated (editorial control)
+- **Sort Order:** Manual curation of navigation display order
+
+---
+
+**5. Series Table**
+
+**Purpose:** Store book series (Foundation, Robot, etc.).
+
+| Field | Type | Constraints | Description |
+|-------|------|-------------|-------------|
+| `id` | UUID | Primary Key | Unique series identifier |
+| `name` | VARCHAR(255) | NOT NULL | Series name (e.g., "Foundation Series") |
+| `slug` | VARCHAR(255) | UNIQUE, NOT NULL | URL-friendly slug |
+| `description` | TEXT | NULL | Series overview |
+| `created_at` | TIMESTAMP | DEFAULT NOW() | Creation timestamp |
+| `updated_at` | TIMESTAMP | DEFAULT NOW() | Last update timestamp |
+
+**Indexes:**
+
+- `slug` (unique, for URL lookups)
+
+---
+
+**6. Formats Table**
+
+**Purpose:** Store file formats (ePub, PDF, Audio, etc.).
+
+| Field | Type | Constraints | Description |
+|-------|------|-------------|-------------|
+| `id` | UUID | Primary Key | Unique format identifier |
+| `name` | VARCHAR(50) | UNIQUE, NOT NULL | Format name (e.g., "ePub", "MP3") |
+| `extension` | VARCHAR(10) | NOT NULL | File extension (e.g., ".epub", ".mp3") |
+| `mime_type` | VARCHAR(100) | NOT NULL | MIME type (e.g., "application/epub+zip") |
+| `created_at` | TIMESTAMP | DEFAULT NOW() | Creation timestamp |
+
+**Indexes:**
+
+- `name` (unique, for lookups)
+
+**Notes:**
+
+- **Reference Table:** Small, rarely changes (ePub, PDF, MP3, etc.)
+
+---
+
+**7. Orders Table**
+
+**Purpose:** Store purchase transactions.
+
+| Field | Type | Constraints | Description |
+|-------|------|-------------|-------------|
+| `id` | UUID | Primary Key | Unique order identifier |
+| `order_number` | VARCHAR(50) | UNIQUE, NOT NULL | Human-readable order number (e.g., "SF-2025-001234") |
+| `user_id` | UUID | Foreign Key → Users | Customer who placed order |
+| `email` | VARCHAR(255) | NOT NULL | Email (redundant, for guest checkouts) |
+| `subtotal_gbp` | DECIMAL(10,2) | NOT NULL | Subtotal before discounts |
+| `discount_gbp` | DECIMAL(10,2) | DEFAULT 0.00 | Discount amount (membership, promos) |
+| `total_gbp` | DECIMAL(10,2) | NOT NULL | Final total paid |
+| `currency` | VARCHAR(3) | DEFAULT 'GBP' | Currency code (ISO 4217) |
+| `payment_method` | VARCHAR(50) | NULL | Payment method (e.g., "card", "paypal") |
+| `payment_status` | ENUM | 'pending', 'paid', 'failed', 'refunded' | Payment status |
+| `stripe_payment_intent_id` | VARCHAR(255) | NULL | Stripe payment intent ID |
+| `stripe_charge_id` | VARCHAR(255) | NULL | Stripe charge ID |
+| `refund_amount_gbp` | DECIMAL(10,2) | DEFAULT 0.00 | Refund amount (if refunded) |
+| `refunded_at` | TIMESTAMP | NULL | Refund timestamp |
+| `ip_address` | VARCHAR(45) | NULL | Customer IP (fraud prevention) |
+| `user_agent` | TEXT | NULL | Browser user agent |
+| `created_at` | TIMESTAMP | DEFAULT NOW() | Order creation timestamp |
+| `updated_at` | TIMESTAMP | DEFAULT NOW() | Last update timestamp |
+
+**Indexes:**
+
+- `order_number` (unique, for customer lookups)
+- `user_id` (for user order history)
+- `email` (for guest order lookups)
+- `payment_status` (for admin queries)
+- `created_at DESC` (for recent orders sorting)
+
+**Notes:**
+
+- **Order Number:** Human-readable format (customer reference)
+- **Email Redundant:** Stored even if `user_id` exists (guest checkout support)
+- **Stripe IDs:** Critical for reconciliation, refunds, disputes
+
+---
+
+**8. Order Items Table**
+
+**Purpose:** Store line items within orders (many-to-many: orders ↔ products).
+
+| Field | Type | Constraints | Description |
+|-------|------|-------------|-------------|
+| `id` | UUID | Primary Key | Unique order item identifier |
+| `order_id` | UUID | Foreign Key → Orders | Parent order |
+| `product_id` | UUID | Foreign Key → Products | Product purchased |
+| `product_title` | VARCHAR(500) | NOT NULL | Product title (snapshot at purchase) |
+| `product_type` | VARCHAR(50) | NOT NULL | Product type (snapshot) |
+| `price_gbp` | DECIMAL(10,2) | NOT NULL | Price paid (snapshot, may differ from current) |
+| `quantity` | INT | DEFAULT 1 | Quantity purchased (usually 1 for digital) |
+| `created_at` | TIMESTAMP | DEFAULT NOW() | Creation timestamp |
+
+**Indexes:**
+
+- `order_id` (for order details query)
+- `product_id` (for product sales analytics)
+
+**Notes:**
+
+- **Snapshot Fields:** Store `product_title`, `product_type`, `price_gbp` at time of purchase (historical accuracy if product changes)
+- **Quantity:** Usually 1 for digital products, but supports bundles/multiple copies
+
+---
+
+**9. Memberships Table**
+
+**Purpose:** Store membership subscriptions (Stripe subscriptions).
+
+| Field | Type | Constraints | Description |
+|-------|------|-------------|-------------|
+| `id` | UUID | Primary Key | Unique membership identifier |
+| `user_id` | UUID | Foreign Key → Users | Member user |
+| `tier` | ENUM | 'basic', 'premium' | Membership tier |
+| `status` | ENUM | 'active', 'cancelled', 'expired', 'past_due' | Subscription status |
+| `price_gbp` | DECIMAL(10,2) | NOT NULL | Subscription price (£9.99/month, £99/year) |
+| `billing_period` | ENUM | 'monthly', 'yearly' | Billing frequency |
+| `stripe_subscription_id` | VARCHAR(255) | UNIQUE, NOT NULL | Stripe subscription ID |
+| `stripe_customer_id` | VARCHAR(255) | NOT NULL | Stripe customer ID |
+| `current_period_start` | TIMESTAMP | NOT NULL | Current billing period start |
+| `current_period_end` | TIMESTAMP | NOT NULL | Current billing period end |
+| `cancel_at_period_end` | BOOLEAN | DEFAULT FALSE | Will cancel at end of period |
+| `cancelled_at` | TIMESTAMP | NULL | Cancellation timestamp |
+| `created_at` | TIMESTAMP | DEFAULT NOW() | Subscription start timestamp |
+| `updated_at` | TIMESTAMP | DEFAULT NOW() | Last update timestamp |
+
+**Indexes:**
+
+- `user_id` (for user membership lookup)
+- `stripe_subscription_id` (unique, for Stripe webhooks)
+- `status` (for active memberships query)
+- `current_period_end` (for expiration checks)
+
+**Notes:**
+
+- **Stripe-Driven:** Membership state synced via Stripe webhooks
+- **Cancel at Period End:** Allow users to cancel but retain access until end of paid period
+
+---
+
+**10. Downloads Table**
+
+**Purpose:** Track product download events (delivery logs, analytics).
+
+| Field | Type | Constraints | Description |
+|-------|------|-------------|-------------|
+| `id` | UUID | Primary Key | Unique download identifier |
+| `user_id` | UUID | Foreign Key → Users, NULL | User who downloaded (NULL if guest) |
+| `order_id` | UUID | Foreign Key → Orders | Order that granted access |
+| `product_id` | UUID | Foreign Key → Products | Product downloaded |
+| `format` | VARCHAR(50) | NOT NULL | Format downloaded (e.g., "ePub", "MP3") |
+| `ip_address` | VARCHAR(45) | NULL | Download IP (analytics, fraud detection) |
+| `user_agent` | TEXT | NULL | Browser/device (analytics) |
+| `created_at` | TIMESTAMP | DEFAULT NOW() | Download timestamp |
+
+**Indexes:**
+
+- `user_id` (for user download history)
+- `order_id` (for order fulfillment tracking)
+- `product_id` (for product analytics)
+- `created_at DESC` (for recent downloads)
+
+**Notes:**
+
+- **No Update/Delete:** Append-only log (audit trail)
+- **Analytics:** Track download patterns (most popular formats, devices, etc.)
+
+---
+
+**11. Content Table**
+
+**Purpose:** Store blog posts, editorial content, guides.
+
+| Field | Type | Constraints | Description |
+|-------|------|-------------|-------------|
+| `id` | UUID | Primary Key | Unique content identifier |
+| `type` | ENUM | 'blog_post', 'author_guide', 'genre_primer' | Content type |
+| `title` | VARCHAR(500) | NOT NULL | Content title |
+| `slug` | VARCHAR(500) | UNIQUE, NOT NULL | URL-friendly slug |
+| `excerpt` | TEXT | NULL | Short excerpt (for listing pages) |
+| `body` | TEXT | NOT NULL | Full content (Markdown or HTML) |
+| `cover_image_url` | VARCHAR(500) | NULL | Header image URL |
+| `author_id` | UUID | Foreign Key → Users, NULL | Author (editorial team member) |
+| `status` | ENUM | 'draft', 'published', 'archived' | Publication status |
+| `published_at` | TIMESTAMP | NULL | Publication timestamp |
+| `view_count` | INT | DEFAULT 0 | View count (analytics) |
+| `created_at` | TIMESTAMP | DEFAULT NOW() | Creation timestamp |
+| `updated_at` | TIMESTAMP | DEFAULT NOW() | Last update timestamp |
+
+**Indexes:**
+
+- `slug` (unique, for URL lookups)
+- `status, published_at DESC` (for published content query)
+- `type` (for filtering by content type)
+
+**Notes:**
+
+- **Flexible Types:** Blog posts, guides, primers in single table
+- **View Count:** Track popularity (updated via app logic or triggers)
+
+---
+
+**12. Reviews Table** (Phase 2+)
+
+**Purpose:** Store user reviews/ratings (future feature).
+
+| Field | Type | Constraints | Description |
+|-------|------|-------------|-------------|
+| `id` | UUID | Primary Key | Unique review identifier |
+| `user_id` | UUID | Foreign Key → Users | Reviewer |
+| `product_id` | UUID | Foreign Key → Products | Product reviewed |
+| `rating` | INT | CHECK (1-5), NOT NULL | Star rating (1-5) |
+| `title` | VARCHAR(255) | NULL | Review title |
+| `body` | TEXT | NULL | Review text |
+| `status` | ENUM | 'pending', 'approved', 'rejected' | Moderation status |
+| `helpful_count` | INT | DEFAULT 0 | "Helpful" votes (user voting) |
+| `created_at` | TIMESTAMP | DEFAULT NOW() | Review timestamp |
+| `updated_at` | TIMESTAMP | DEFAULT NOW() | Last update timestamp |
+
+**Indexes:**
+
+- `product_id, status` (for displaying approved reviews)
+- `user_id` (for user review history)
+
+**Notes:**
+
+- **Moderation:** Reviews require approval (prevent spam, abuse)
+- **Verified Purchase:** Future enhancement—only allow reviews from verified buyers
+
+---
+
+**Junction Tables (Many-to-Many Relationships)**
+
+**Product_Authors (Products ↔ Authors)**
+
+| Field | Type | Constraints | Description |
+|-------|------|-------------|-------------|
+| `product_id` | UUID | Foreign Key → Products | Product |
+| `author_id` | UUID | Foreign Key → Authors | Author |
+| `role` | VARCHAR(50) | DEFAULT 'author' | Role (author, editor, narrator for audio) |
+| `created_at` | TIMESTAMP | DEFAULT NOW() | Creation timestamp |
+
+**Primary Key:** Composite (`product_id`, `author_id`, `role`)
+
+**Notes:**
+
+- **Many-to-Many:** A product can have multiple authors; an author can have multiple products
+- **Role Field:** Distinguish author vs. narrator (for audio products)
+
+---
+
+**Product_Genres (Products ↔ Genres)**
+
+| Field | Type | Constraints | Description |
+|-------|------|-------------|-------------|
+| `product_id` | UUID | Foreign Key → Products | Product |
+| `genre_id` | UUID | Foreign Key → Genres | Genre |
+| `created_at` | TIMESTAMP | DEFAULT NOW() | Creation timestamp |
+
+**Primary Key:** Composite (`product_id`, `genre_id`)
+
+**Notes:**
+
+- **Many-to-Many:** A product can belong to multiple genres (e.g., "Golden Age" + "Space Opera")
+
+---
+
+**Product_Formats (Products ↔ Formats)**
+
+| Field | Type | Constraints | Description |
+|-------|------|-------------|-------------|
+| `product_id` | UUID | Foreign Key → Products | Product |
+| `format_id` | UUID | Foreign Key → Formats | Format |
+| `file_url` | VARCHAR(500) | NOT NULL | URL to file (Cloudflare R2 signed URL) |
+| `file_size_bytes` | BIGINT | NULL | File size |
+| `created_at` | TIMESTAMP | DEFAULT NOW() | Creation timestamp |
+
+**Primary Key:** Composite (`product_id`, `format_id`)
+
+**Notes:**
+
+- **Many-to-Many:** A product can be available in multiple formats (ePub + PDF + Audio)
+- **File URL per Format:** Each format has its own file URL
+
+---
+
+**Content_Authors (Content ↔ Authors)** (for "Related Authors" in blog posts)
+
+| Field | Type | Constraints | Description |
+|-------|------|-------------|-------------|
+| `content_id` | UUID | Foreign Key → Content | Content piece |
+| `author_id` | UUID | Foreign Key → Authors | Author mentioned/featured |
+| `created_at` | TIMESTAMP | DEFAULT NOW() | Creation timestamp |
+
+**Primary Key:** Composite (`content_id`, `author_id`)
+
+**Notes:**
+
+- **Use Case:** Blog post "Guide to Isaac Asimov" links to Asimov author page
+
+---
+
+### 10.2 Metadata Standards & Taxonomy
+
+**Strategic Overview**
+
+Metadata standards define how content is categorized, tagged, and described within SF Supernova. Rich, consistent metadata enables powerful discovery (filtering, search, recommendations), SEO optimization, and editorial consistency. For a curated platform, metadata is not an afterthought—it's the foundation of the editorial value proposition.
+
+**Core Principle:** *"Metadata is not busywork—it's the connective tissue that makes content discoverable. Invest in metadata early; it's exponentially harder to add retrospectively."*
+
+---
+
+**Product Metadata Standards**
+
+**Required Fields (Cannot Publish Without):**
+
+- **Title:** Full, accurate title (as published)
+- **Author(s):** At least one author (can be multiple)
+- **Genre(s):** At least one genre (can be multiple)
+- **Price:** Base price in GBP
+- **Format(s):** At least one format (ePub, Audio, etc.)
+- **Cover Image:** High-quality cover (min 800×1200px)
+- **Short Description:** 2-3 sentence summary (150-200 characters)
+- **Long Description:** Full synopsis (300-500 words)
+
+**Recommended Fields (Strongly Encouraged):**
+
+- **Series:** If part of a series
+- **Series Order:** Book number in series
+- **Publication Year:** Original publication year
+- **Word Count:** For ebooks (helps users gauge length)
+- **Duration:** For audio (hours:minutes)
+- **ISBN:** If applicable (helps with external linking)
+- **Historical Context:** 1-2 paragraphs on when/why written
+
+**Optional Fields (Nice-to-Have):**
+
+- **Awards:** Hugo, Nebula, etc.
+- **Themes:** Robots, time travel, space exploration, etc.
+- **Tone:** Optimistic, dystopian, satirical, etc.
+- **Reading Level:** YA, adult, advanced
+- **Content Warnings:** Violence, adult themes, etc. (Phase 2+)
+
+---
+
+**Genre Taxonomy (Curated Hierarchy)**
+
+**Primary Genres (Top-Level Navigation):**
+
+1. **Golden Age (1938-1950s)**
+   - Focus: Technological optimism, space exploration, "sense of wonder"
+   - Examples: Asimov, Heinlein, Clarke
+   
+2. **Pulp Era (1920s-1940s)**
+   - Focus: Action-adventure, planetary romance, "two-fisted tales"
+   - Examples: Burroughs, E.E. Smith, Edmond Hamilton
+   
+3. **New Wave (1960s-1970s)**
+   - Focus: Literary experimentation, social commentary, inner space
+   - Examples: Le Guin, Ballard, Delany
+   
+4. **Cyberpunk (1980s-1990s)**
+   - Focus: High tech, low life, dystopian futures, AI
+   - Examples: Gibson, Sterling, Stephenson
+   
+5. **Space Opera**
+   - Focus: Large-scale adventure, interstellar conflict, epic scope
+   - Examples: Banks, Hamilton, Reynolds
+   
+6. **Hard Science Fiction**
+   - Focus: Scientific accuracy, technical detail, plausibility
+   - Examples: Niven, Forward, Egan
+
+**Secondary Tags (Sub-Genre/Themes):**
+
+- Robots & AI
+- Time Travel
+- First Contact
+- Dystopia/Utopia
+- Post-Apocalyptic
+- Military SF
+- Social SF
+- Alien Civilizations
+- Generation Ships
+- Parallel Universes
+
+**Tagging Rules:**
+
+- **Primary Genre:** Every product must have 1-2 primary genres (Golden Age, New Wave, etc.)
+- **Secondary Tags:** Optional, 0-5 tags (themes, sub-genres)
+- **No Tag Spam:** Tags must be meaningful (don't tag everything "robots" just because robots appear)
+
+---
+
+**Author Metadata Standards**
+
+**Required Fields:**
+
+- **Name:** Full name (as published, e.g., "Isaac Asimov" not "I. Asimov")
+- **Bio:** 200-500 word biography (key facts, writing style, influence)
+
+**Recommended Fields:**
+
+- **Birth/Death Year:** If known
+- **Nationality:** Country of origin
+- **Photo:** Professional photo (if available, public domain preferred)
+- **External Links:** Wikipedia, ISFDB (authoritative sources)
+
+**Optional Fields:**
+
+- **Pen Names:** If author used pseudonyms
+- **Awards:** Major awards won (Hugo, Nebula, etc.)
+- **Notable Works:** 3-5 most famous works (helps users recognize)
+
+---
+
+**Content Metadata Standards (Blog Posts, Guides)**
+
+**Required Fields:**
+
+- **Title:** Clear, descriptive (not clickbait)
+- **Type:** Blog post, author guide, genre primer, etc.
+- **Excerpt:** 1-2 sentence summary (for social sharing, SEO)
+- **Body:** Full content (Markdown preferred for editability)
+- **Author:** Editorial team member who wrote it
+
+**Recommended Fields:**
+
+- **Cover Image:** Header image (1200×630px for social sharing)
+- **Related Authors:** If about specific author(s)
+- **Related Products:** If promoting specific products
+- **Tags:** Topics covered (e.g., "Golden Age", "Asimov", "Robots")
+
+**SEO Metadata:**
+
+- **Meta Title:** 50-60 characters (title + "| SF Supernova")
+- **Meta Description:** 150-160 characters (compelling summary)
+- **Canonical URL:** Self-referencing canonical tag
+- **Schema Markup:** Article schema (author, publishDate, image)
+
+---
+
+**Image Metadata Standards**
+
+**Cover Images (Products):**
+
+- **Format:** JPEG or WebP (WebP preferred, smaller file size)
+- **Dimensions:** Minimum 800×1200px (2:3 aspect ratio)
+- **File Size:** <500KB (optimize for web)
+- **Naming:** Descriptive (e.g., "foundation-asimov-cover.jpg" not "IMG_1234.jpg")
+- **Alt Text:** Descriptive (e.g., "Cover of Foundation by Isaac Asimov showing futuristic cityscape")
+
+**Author Photos:**
+
+- **Format:** JPEG or WebP
+- **Dimensions:** Minimum 400×400px (square aspect ratio)
+- **File Size:** <200KB
+- **Naming:** `author-slug-photo.jpg` (e.g., "isaac-asimov-photo.jpg")
+- **Alt Text:** "Photo of [Author Name]"
+
+**Blog Post Images:**
+
+- **Format:** JPEG or WebP
+- **Dimensions:** 1200×630px (optimized for social sharing)
+- **File Size:** <300KB
+- **Naming:** Descriptive (e.g., "golden-age-guide-header.jpg")
+- **Alt Text:** Descriptive of image content
+
+---
+
+**URL/Slug Standards**
+
+**Rules:**
+
+- **Lowercase:** All slugs lowercase (no camelCase or TitleCase)
+- **Hyphens:** Use hyphens to separate words (not underscores)
+- **Descriptive:** Slug describes content (not random IDs)
+- **Concise:** Keep short (3-6 words ideal)
+- **Permanent:** Once published, slugs should not change (breaks links, SEO)
+
+**Examples:**
+
+- Product: `foundation-asimov` (title-author pattern)
+- Author: `isaac-asimov` (full-name pattern)
+- Genre: `golden-age` (genre-name pattern)
+- Blog Post: `guide-to-asimov` (descriptive pattern)
+
+**Reserved Slugs (Avoid Conflicts):**
+
+- `admin`, `api`, `cart`, `checkout`, `account`, `login`, `signup`, `about`, `contact`, etc.
+
+---
+
+**Date/Time Standards**
+
+**Timestamp Fields:**
+
+- **Format:** ISO 8601 (YYYY-MM-DDTHH:MM:SSZ)
+- **Timezone:** UTC (store all times in UTC, convert to user timezone in UI)
+- **Precision:** Second-level precision (no milliseconds unless needed)
+
+**Display Formats:**
+
+- **Full Date:** "24 November 2025" (UK format)
+- **Short Date:** "24 Nov 2025"
+- **Relative:** "2 hours ago", "3 days ago" (for recent items)
+
+---
+
+**Price Standards**
+
+**Currency:**
+
+- **Primary:** GBP (British Pound)
+- **Future:** Support USD, EUR (currency conversion, Phase 3+)
+
+**Pricing Rules:**
+
+- **Minimum Price:** £1.99 (avoid £1.00 due to high Stripe fees %age)
+- **Price Points:** Use psychological pricing (£2.99, £4.99, £9.99)
+- **Membership Discount:** 15% off for members (applied automatically at checkout)
+
+**Display Format:**
+
+- **With Currency Symbol:** £2.99 (symbol before amount, no space)
+- **Membership Price:** Show both prices—£2.99 (or £2.54 for members)
+
+---
+
+### 10.3 Product Classification & Bundling Strategy
+
+**Strategic Overview**
+
+Product classification defines how products are grouped, organized, and sold. Bundling strategy determines how products are combined into packages (e.g., "Foundation Trilogy Bundle"). Effective classification enables discovery; effective bundling increases average order value and simplifies purchasing decisions.
+
+**Core Principle:** *"Bundle for customer convenience and value perception. Single products are for browsers; bundles are for buyers."*
+
+---
+
+**Product Types**
+
+**1. Single Products (Standalone)**
+
+- **Definition:** One work (book, audiobook) sold individually
+- **Examples:** Foundation (ePub), Robots Have No Tails (Audio)
+- **Pricing:** £2.99-£4.99 typical range
+- **Use Case:** Users want specific title
+
+**2. Multi-Format Products (Same Work, Multiple Formats)**
+
+- **Definition:** Same work available in multiple formats (ePub, Audio, PDF)
+- **Implementation:** One product entry, multiple format options at checkout
+- **Pricing:** Same price regardless of format (simplifies decision)
+- **Use Case:** Users prefer specific format (Kindle vs. Audio)
+
+**3. Bundles (Multiple Works Packaged)**
+
+- **Definition:** Multiple related works sold as package
+- **Examples:**
+  - **Series Bundle:** Foundation Trilogy (3 books)
+  - **Author Bundle:** Best of Asimov (5 books)
+  - **Genre Bundle:** Golden Age Classics (10 books)
+- **Pricing:** 15-25% discount vs. buying individually (incentivize bundle)
+- **Use Case:** Users want entire series, explore author, or bulk purchase
+
+**4. Collections (Curated Theme Bundles)**
+
+- **Definition:** Editorially curated multi-author bundles around theme
+- **Examples:**
+  - **Robot Stories Collection:** 10 stories by various authors
+  - **First Contact Anthology:** 15 stories
+  - **Women in Sci-Fi Collection:** 12 works by female authors
+- **Pricing:** Premium pricing (£15-25) for curated value
+- **Use Case:** Users exploring theme, want expert curation
+
+---
+
+**Bundling Strategy**
+
+**Why Bundle?**
+
+1. **Increase AOV (Average Order Value):** Users spend £15 on bundle vs. £3 on single
+2. **Simplify Discovery:** "I want Foundation series" → one click, not 3 separate purchases
+3. **Perceived Value:** 25% off bundle feels like deal (even if margin similar)
+4. **Reduce Decision Fatigue:** Bundle pre-selects "what goes together"
+5. **Editorial Showcase:** Curated bundles demonstrate expertise
+
+**Bundle Pricing Formula:**
+```
+Bundle Price = (Sum of Individual Prices) × (1 - Discount %)
+
+Example:
+Foundation Trilogy:
+- Foundation: £2.99
+- Foundation and Empire: £2.99
+- Second Foundation: £2.99
+- Total: £8.97
+
+Bundle Discount: 20%
+Bundle Price: £8.97 × 0.80 = £7.18 (round to £7.99 for psychological pricing)
+
+Savings: £8.97 - £7.99 = £0.98 (11% effective discount after rounding)
+```
+
+**Bundle Discount Tiers:**
+
+| Bundle Size | Discount | Rationale |
+|-------------|----------|-----------|
+| **2-3 items** | 10-15% | Small savings, encourage trying |
+| **4-6 items** | 15-20% | Meaningful savings, series/author bundles |
+| **7-10 items** | 20-25% | Substantial savings, curated collections |
+| **10+ items** | 25-30% | Maximum savings, comprehensive collections |
+
+---
+
+**Bundle Types (Detailed)**
+
+**1. Series Bundles**
+
+- **Definition:** Complete series by single author
+- **Examples:**
+  - Foundation Series (Asimov, 7 books)
+  - Robot Series (Asimov, 4 books)
+  - Hyperion Cantos (Simmons, 4 books)
+- **Discount:** 15-20% (incentivize buying complete series)
+- **Marketing Angle:** "Read the complete saga"
+
+**2. Author Bundles**
+
+- **Definition:** Multiple works by single author (not necessarily series)
+- **Examples:**
+  - Best of Isaac Asimov (5 standalone novels)
+  - Philip K. Dick Essentials (6 novels)
+- **Discount:** 15-20%
+- **Marketing Angle:** "Explore [Author]'s best works"
+
+**3. Genre Bundles**
+
+- **Definition:** Multiple works within genre by various authors
+- **Examples:**
+  - Golden Age Classics (10 books, various authors)
+  - Cyberpunk Essentials (8 books)
+- **Discount:** 20-25% (higher curation value)
+- **Marketing Angle:** "Essential [Genre] reading list"
+
+**4. Theme Bundles**
+
+- **Definition:** Works united by theme (not genre)
+- **Examples:**
+  - Robot Stories (various authors, robot theme)
+  - Time Travel Anthology (10 stories)
+  - First Contact Collection (8 novels)
+- **Discount:** 20-25%
+- **Marketing Angle:** "If you love [theme], you'll love these"
+
+**5. Starter Packs (Onboarding Bundles)**
+
+- **Definition:** Curated introduction to platform/genre for new users
+- **Examples:**
+  - New to Vintage Sci-Fi? Start Here (5 accessible classics)
+  - Golden Age Starter Pack (3 foundational works)
+- **Discount:** 25-30% (aggressive to convert new users)
+- **Marketing Angle:** "Perfect for newcomers"
+
+---
+
+**Dynamic Bundling (Phase 3+ Future Feature)**
+
+**Concept:** User-created bundles ("Build Your Own Bundle")
+
+**Implementation:**
+
+- User selects 3+ products → automatic 15% discount applied
+- Encourages bulk purchasing without pre-defined bundles
+- Requires cart logic to detect qualifying items and apply discount
+
+**Use Case:** Power users who want specific combination not available as pre-made bundle
+
+---
+
+**Bundle Presentation (UX)**
+
+**Product Card (Bundle):**
+```
+┌─────────────────────────┐
+│ [Composite Cover Image] │ (Show 3-4 covers overlapped)
+├─────────────────────────┤
+│ Foundation Trilogy      │
+│ by Isaac Asimov         │
+│ 3 Books | ePub          │
+│ £7.99 (save £0.98)     │
+│ [Add to Cart]           │
+└─────────────────────────┘
+```
+
+**Bundle Product Page:**
+```
+Foundation Trilogy Bundle
+
+by Isaac Asimov
+3 Books | ePub Format
+
+£7.99 (regular £8.97—save £0.98)
+[Add to Cart]
+
+This bundle includes:
+1. Foundation (£2.99)
+2. Foundation and Empire (£2.99)
+3. Second Foundation (£2.99)
+
+[Full descriptions of each book...]
+```
+
+---
+
+### 10.4 User Data & Privacy Considerations
+
+**Strategic Overview**
+
+User data standards define what personal information SF Supernova collects, how it's stored, how it's used, and how users control it. Privacy considerations ensure GDPR compliance, build user trust, and mitigate security risks. For a platform handling payment information and user accounts, data privacy is legal requirement and competitive differentiator.
+
+**Core Principle:** *"Collect only what's necessary, protect what you collect, delete when requested. Privacy is not cost—it's trust."*
+
+---
+
+**Data Collection Principles**
+
+**1. Data Minimization (Collect Only What's Needed)**
+
+**What We Collect:**
+
+- **Required for Service:**
+  - Email (order confirmation, account login, download delivery)
+  - Payment info (processed by Stripe, not stored by us)
+  - Order history (financial records, refunds, support)
+  - Download logs (delivery confirmation, re-download access)
+
+**What We Don't Collect:**
+
+- **Not Required:**
+  - Full name (optional, not required for digital products)
+  - Address (no shipping for digital products)
+  - Phone number (email sufficient for support)
+  - Social Security / National Insurance (no need)
+  - Demographic data (age, gender, race—not our business)
+
+**Rationale:** Every field collected is liability (security risk, GDPR compliance burden). Collect minimum to provide service.
+
+---
+
+**2. Purpose Limitation (Use Data Only for Stated Purpose)**
+
+**Acceptable Uses:**
+
+- **Order Fulfillment:** Send download links, receipts
+- **Customer Support:** Respond to support emails, resolve issues
+- **Fraud Prevention:** Track unusual activity (multiple failed payments from same IP)
+- **Product Improvement:** Aggregate analytics (popular products, conversion rates)
+- **Marketing (Opt-In Only):** Newsletter about new products (requires explicit consent)
+
+**Prohibited Uses:**
+
+- **Selling Data:** Never sell user data to third parties
+- **Profiling/Targeting:** No ad tracking, behavioral profiling
+- **Sharing Without Consent:** No sharing with partners/affiliates without explicit consent
+
+---
+
+**3. Transparency (Tell Users What We Do)**
+
+**Privacy Policy Requirements:**
+
+- **What Data We Collect:** Email, order history, download logs, payment info (via Stripe)
+- **Why We Collect It:** Order fulfillment, customer support, fraud prevention
+- **How We Use It:** Send downloads, respond to support, improve service
+- **Who We Share With:** Stripe (payment processing), SendGrid (email delivery)—necessary service providers only
+- **How Long We Keep It:** Order history (7 years, tax law), download logs (2 years), accounts (until deleted)
+- **User Rights:** Access, correction, deletion, export (GDPR rights)
+
+**Privacy Policy Location:**
+
+- Footer link (every page)
+- Checkout (link before payment)
+- Account signup (checkbox: "I agree to Privacy Policy")
+
+---
+
+**4. User Control (Let Users Manage Their Data)**
+
+**User Rights (GDPR):**
+
+1. **Right to Access:** Download all personal data (JSON export)
+2. **Right to Correction:** Update email, preferences in account settings
+3. **Right to Deletion:** Delete account + personal data (with exceptions below)
+4. **Right to Portability:** Export data in machine-readable format (JSON)
+5. **Right to Withdraw Consent:** Unsubscribe from newsletter, marketing emails
+
+**Deletion Exceptions (Legal Requirements):**
+
+- **Financial Records:** Must retain order history for 7 years (UK tax law)
+- **Deletion Process:** Delete account → personal info (name, email) anonymized → order history retained as "Deleted User #12345" (satisfies GDPR + tax law)
+
+**Implementation:**
+
+- **Account Settings Page:**
+  - Update email, password
+  - Manage newsletter subscription
+  - Export data (download JSON)
+  - Delete account (with confirmation modal)
+
+---
+
+**Security Standards**
+
+**Password Security:**
+
+- **Hashing:** bcrypt or Argon2 (never store plaintext passwords)
+- **Minimum Strength:** 8 characters, no complexity requirements (length > complexity for security)
+- **Breach Detection:** Check against HaveIBeenPwned API (warn users if password leaked)
+- **Password Reset:** Email magic link (time-limited, single-use)
+
+**Payment Security:**
+
+- **PCI Compliance:** Use Stripe (PCI DSS Level 1 certified)—never handle raw card data
+- **Tokenization:** Store Stripe customer ID + payment method ID (not card numbers)
+- **3D Secure:** Support SCA (Strong Customer Authentication) for EU cards
+
+**Session Security:**
+
+- **Session Tokens:** Secure, HTTP-only cookies (not localStorage)
+- **Session Expiry:** 30-day expiry (remember me) or 24-hour (default)
+- **HTTPS Only:** All traffic over HTTPS (no HTTP)
+- **CSRF Protection:** Use CSRF tokens for state-changing requests
+
+**Data at Rest:**
+
+- **Database Encryption:** Encrypt database backups (AES-256)
+- **File Encryption:** Encrypt user-uploaded files (if any, Phase 2+)
+- **Secrets Management:** Use environment variables, not hardcoded keys
+
+**Data in Transit:**
+
+- **TLS 1.2+:** All connections use modern TLS
+- **HSTS:** HTTP Strict Transport Security header (force HTTPS)
+
+---
+
+**GDPR Compliance Checklist**
+
+- [ ] Privacy Policy published and accessible
+- [ ] Cookie consent banner (if using non-essential cookies)
+- [ ] User can access their data (account dashboard, export)
+- [ ] User can correct their data (account settings)
+- [ ] User can delete their data (account deletion with anonymization)
+- [ ] User can export their data (JSON download)
+- [ ] Data breach notification plan (notify users within 72 hours)
+- [ ] Data Processing Agreements with third parties (Stripe, SendGrid)
+- [ ] Lawful basis for processing documented (consent, contract, legitimate interest)
+
+---
+
+**Third-Party Data Sharing**
+
+**Service Providers (Necessary for Operation):**
+
+| Provider | Data Shared | Purpose | DPA Required |
+|----------|-------------|---------|--------------|
+| **Stripe** | Email, payment info | Payment processing | Yes (Stripe provides) |
+| **SendGrid** | Email | Transactional emails (order confirmations) | Yes |
+| **Cloudflare** | IP, request data | CDN, DDoS protection | Yes |
+| **Sentry** | Error logs (may include user ID) | Error tracking | Yes |
+
+**Marketing/Analytics (Optional, Opt-In):**
+
+| Provider | Data Shared | Purpose | User Control |
+|----------|-------------|---------|--------------|
+| **Google Analytics** | Anonymized IP, page views | Traffic analytics | Cookie consent required |
+| **Newsletter Provider** | Email (if opted-in) | Marketing emails | Opt-in checkbox, unsubscribe link |
+
+**Prohibited Sharing:**
+
+- **Ad Networks:** No Facebook Pixel, Google Ads tracking (privacy-invasive)
+- **Data Brokers:** No selling user data
+- **Affiliate Networks:** No sharing email lists
+
+---
+
+**Data Retention Policy**
+
+| Data Type | Retention Period | Rationale |
+|-----------|------------------|-----------|
+| **Order History** | 7 years | UK tax law (HMRC requirement) |
+| **Download Logs** | 2 years | Support, fraud prevention |
+| **User Accounts** | Until deleted by user | User-controlled |
+| **Deleted Accounts** | Personal data anonymized, orders retained | GDPR + tax law compliance |
+| **Email Logs (SendGrid)** | 30 days | Delivery verification |
+| **Error Logs (Sentry)** | 90 days | Debugging, then auto-delete |
+| **Backups** | 90 days (daily), 2 years (monthly) | Disaster recovery |
+
+---
+
+**Data Breach Response Plan**
+
+**If Breach Detected:**
+
+1. **Contain (0-1 hour):** Isolate affected systems, stop further exposure
+2. **Assess (1-4 hours):** Determine what data accessed, how many users affected
+3. **Notify Authorities (24-72 hours):** Report to ICO (UK) if >500 users or sensitive data
+4. **Notify Users (72 hours):** Email affected users with details, recommended actions
+5. **Remediate (1 week):** Fix vulnerability, improve security
+6. **Post-Mortem (2 weeks):** Document incident, update security practices
+
+**Notification Template:**
+```
+Subject: Important Security Notice
+
+We're writing to inform you of a security incident affecting your SF Supernova account.
+
+What happened: [Brief description]
+What data was affected: [Email, order history, etc.]
+What we're doing: [Steps taken to secure systems]
+What you should do: [Change password, monitor accounts, etc.]
+
+We take your privacy seriously and deeply regret this incident. 
+Questions? Reply to this email or contact support@sfsupernova.com.
+
+— SF Supernova Team
+```
+
+---
+
+### 10.5 Data Migration & Import Strategy
+
+**Strategic Overview**
+
+(This section is less critical for Phase 1 since building from scratch, but important for understanding how to populate initial content and plan for future data needs.)
+
+Data migration strategy defines how content is imported into SF Supernova from external sources (public domain repositories, ISFDB, etc.) and how data can be exported for backups, analytics, or user requests.
+
+**Core Principle:** *"Automate data import where possible, validate rigorously, maintain audit trail. Never trust external data—clean and verify."*
+
+---
+
+**Initial Content Import (Phase 1)**
+
+**Source: Public Domain Repositories**
+
+- **Project Gutenberg:** Public domain ebooks (ePub, plain text)
+- **Internet Archive:** Public domain works, some audio
+- **ISFDB (Internet Speculative Fiction Database):** Metadata (author, publication year, series info)
+
+**Import Process:**
+
+1. **Source Selection:** Identify high-value public domain works (Golden Age classics)
+2. **Download Files:** Scrape or API (where available)
+3. **Metadata Extraction:** Parse ISFDB, Gutenberg catalogs for author, title, year
+4. **File Conversion:** Convert to standard formats (ePub, ensure DRM-free)
+5. **Quality Check:** Manual review (cover image, formatting, metadata accuracy)
+6. **Database Insert:** Populate Products, Authors, Genres tables
+7. **File Upload:** Upload to Cloudflare R2, generate signed URLs
+
+**Validation Rules:**
+
+- **Title:** Non-empty, <500 characters
+- **Author:** Must exist in Authors table (create if new)
+- **Genre:** At least one genre assigned
+- **File:** Valid ePub/PDF (validate with ebook validator)
+- **Cover Image:** High-quality (min 800×1200px)
+
+---
+
+**Ongoing Content Addition**
+
+**Manual Entry (Phase 1-2):**
+
+- **Admin Panel:** Web-based form for adding products
+  - Upload cover image
+  - Enter title, author, description
+  - Select genres, formats
+  - Upload product file(s)
+  - Set price, membership discount
+  - Publish immediately or save as draft
+
+**Bulk Import (Phase 2+):**
+
+- **CSV Import:** Upload CSV with product metadata
+  - Template: `title, author, genre, price, file_url, cover_url`
+  - Validation: Check required fields, file accessibility
+  - Preview: Show 10 rows, confirm before import
+  - Error Handling: Report rows with errors, allow correction
+
+---
+
+**Data Export (User Requests, Backups)**
+
+**User Data Export (GDPR Right to Portability):**
+
+**Format:** JSON (machine-readable)
+
+**Contents:**
+```json
+{
+  "user": {
+    "email": "user@example.com",
+    "created_at": "2025-01-15T10:30:00Z",
+    "membership_tier": "premium"
+  },
+  "orders": [
+    {
+      "order_number": "SF-2025-001234",
+      "date": "2025-11-24T14:22:00Z",
+      "total": 8.47,
+      "items": [
+        {"title": "Foundation", "price": 2.99},
+        {"title": "Robots Have No Tails", "price": 2.99}
+      ]
+    }
+  ],
+  "downloads": [
+    {
+      "product": "Foundation",
+      "format": "ePub",
+      "date": "2025-11-24T14:25:00Z"
+    }
+  ]
+}
+```
+
+**Delivery:** Download link (one-time use, expires in 24 hours)
+
+---
+
+**Database Backup & Restore**
+
+**Backup Strategy (Repeated from 8.7 for completeness):**
+
+- **Daily:** Full database dump (pg_dump) to Cloudflare R2
+- **Retention:** 7 daily, 4 weekly, 12 monthly
+- **Encryption:** AES-256 encrypted backups
+- **Testing:** Monthly restore test (verify backup integrity)
+
+**Restore Process:**
+
+1. **Identify Backup:** Select appropriate backup (date/time)
+2. **Download:** Retrieve from R2
+3. **Decrypt:** Decrypt backup file
+4. **Restore:** `pg_restore` to database
+5. **Verify:** Check data integrity, run test queries
+6. **Notify:** If production restore, notify users of potential data loss window
+
+---
+
+**Summary: Data Model as Foundation**
+
+**Why Data Model Matters:**
+
+- **Enables Discovery:** Rich metadata powers search, filters, recommendations
+- **Supports Scalability:** Normalized schema scales to 10,000+ products without slowdown
+- **Ensures Integrity:** Foreign keys, constraints prevent invalid data
+- **Facilitates Analytics:** Well-structured data enables revenue reports, popular products analysis
+- **Protects Privacy:** Minimal data collection, clear retention policies, user control
+
+**Data Model Principles:**
+
+1. **Normalize for Correctness:** Avoid data duplication (authors, genres in separate tables)
+2. **Denormalize for Performance:** Cache computed fields (popularity_score) when beneficial
+3. **Flexible Metadata:** JSONB fields for extensibility (avoid adding columns constantly)
+4. **Audit Trail:** created_at, updated_at, deleted_at on all tables (track changes)
+5. **Privacy by Design:** Collect minimum, support deletion, encrypt sensitive data
+
+**The data model is SF Supernova's architectural foundation. A well-designed schema enables rapid feature development, supports rich discovery experiences, scales gracefully, and protects user privacy. Mistakes in the data model compound over time—fixing them requires expensive migrations, risks data loss, and slows development. Invest in getting the data model right from Phase 1, and SF Supernova will scale smoothly through Phase 2, 3, and beyond.**
+
+---
 
 
 ## 11. Release Phasing & Roadmap (Options 3 & 2 → 4 & 1 → 5)
