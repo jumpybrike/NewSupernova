@@ -30271,8 +30271,589 @@ Every piece of content must pass this checklist before publication:
 5. **Monitor & Iterate:** Track metrics, identify issues, fix quickly (SEO is ongoing, not one-time)
 
 **SEO is not a marketing tactic—it's the foundation of SF Supernova's acquisition strategy. Without it, even the best content remains invisible. With it, organic search becomes a predictable, scalable, zero-marginal-cost growth engine. The goal: build every page, every template, every editorial workflow with SEO readiness from the start—not bolted on later. Search visibility is not optional; it's survival.**
+
+
 ### 8.6 Maintainability & Technical Debt Management
 
+**Strategic Overview**
+
+Maintainability standards define how easily SF Supernova can be updated, debugged, extended, and evolved over time. Technical debt refers to the future cost incurred by choosing quick/expedient solutions today instead of better approaches that take longer. For a solo-founder platform with limited development resources, maintainability is existential—unmaintainable code becomes a prison, consuming all development capacity on bug fixes and leaving no time for feature development or revenue growth.
+
+**Core Principle:** *"Code is written once but read/modified hundreds of times. Optimize for future maintenance, not initial speed. Technical debt compounds like financial debt—small shortcuts today become massive liabilities tomorrow."*
+
+**Why Maintainability Matters for SF Supernova:**
+
+1. **Solo Founder Reality:** No development team to bail you out when things break
+2. **Long-Term Platform:** Building for 5-10+ year lifespan (not MVP-and-pivot)
+3. **Feature Velocity:** Clean code enables fast iteration; messy code slows everything
+4. **Onboarding Future Help:** Well-documented, clean code makes hiring contractors/employees feasible
+5. **Cost Control:** Technical debt = expensive rewrites, downtime, missed opportunities
+
+**Maintainability Failure Modes to Avoid:**
+
+- **"Works on My Machine" Syndrome:** No documentation, tribal knowledge, single-person dependency
+- **Spaghetti Code:** Tangled logic, unclear dependencies, impossible to debug
+- **Copy-Paste Programming:** Duplicated code that must be updated in 10 places when something changes
+- **Magic Numbers/Strings:** Hard-coded values scattered throughout codebase (no single source of truth)
+- **No Testing:** Every change risks breaking something unrelated (regression hell)
+- **Dependency Rot:** Outdated libraries with security vulnerabilities, breaking changes
+- **Database Chaos:** No migrations, manual schema changes, data inconsistencies
+
+---
+
+**Code Quality Standards**
+
+**Core Principles:**
+
+| Principle | Implementation | Rationale |
+|-----------|----------------|-----------|
+| **DRY (Don't Repeat Yourself)** | Extract reusable functions/components | Single source of truth; update once, fix everywhere |
+| **KISS (Keep It Simple, Stupid)** | Simplest solution that works | Complex code = bug-prone, hard to understand |
+| **YAGNI (You Aren't Gonna Need It)** | Build only what's required now | Avoid over-engineering, wasted effort |
+| **Separation of Concerns** | Business logic ≠ presentation ≠ data access | Easier to test, modify, replace components |
+| **Single Responsibility Principle** | Each function/class does one thing well | Clear purpose, easier to debug |
+| **Clear Naming Conventions** | Variables/functions named for clarity | Code self-documents; reduces need for comments |
+| **Fail Fast** | Validate inputs, throw errors early | Bugs caught near source, not cascading failures |
+
+**Code Style & Formatting:**
+
+- **Linting:** Automated code style enforcement (ESLint for JS, Black for Python, etc.)
+- **Consistent Formatting:** Use auto-formatters (Prettier, Black) to eliminate style debates
+- **Meaningful Variable Names:** `user_subscription_expiry_date` > `d` or `exp`
+- **Function Length:** Aim for <50 lines per function (if longer, likely doing too much)
+- **File Length:** Aim for <500 lines per file (if longer, consider splitting)
+- **Comments:** Explain *why*, not *what* (code should be self-explanatory; comments explain rationale)
+
+**Example of Good vs. Bad Code:**
+
+**❌ Bad (Unmaintainable):**
+```python
+def process(u, p):
+    if u.t == 1:
+        return p * 0.9
+    elif u.t == 2:
+        return p * 0.85
+    else:
+        return p
+```
+*Issues: Unclear variable names, magic numbers, no comments, what is "t"?*
+
+**✅ Good (Maintainable):**
+```python
+def calculate_discounted_price(user, base_price):
+    """
+    Calculate price after applying user's membership discount.
+    
+    Args:
+        user: User object with membership_tier attribute
+        base_price: Original product price in GBP
+        
+    Returns:
+        Final price after discount (float)
+    """
+    MEMBERSHIP_DISCOUNTS = {
+        'basic': 0.10,      # 10% discount
+        'premium': 0.15,    # 15% discount
+        'free': 0.00        # No discount
+    }
+    
+    discount = MEMBERSHIP_DISCOUNTS.get(user.membership_tier, 0.00)
+    return base_price * (1 - discount)
+```
+*Better: Clear names, documented, constants defined, easy to modify.*
+
+---
+
+**Documentation Standards**
+
+**Required Documentation Types:**
+
+| Document Type | Purpose | Update Frequency | Audience |
+|---------------|---------|------------------|----------|
+| **README.md** | Project overview, setup instructions, quick start | Every major release | Developers (future you, contractors) |
+| **API Documentation** | Endpoint specs, parameters, responses, examples | Every API change | Frontend devs, integrators |
+| **Database Schema Docs** | Table structures, relationships, indexes, constraints | Every migration | Backend devs, DBAs |
+| **Deployment Guide** | How to deploy, environment variables, dependencies | Quarterly or when changed | DevOps (future you) |
+| **Architecture Decision Records (ADRs)** | Why specific technical choices were made | Per major decision | Future developers (context for choices) |
+| **Code Comments** | Inline explanations for complex logic | As needed during development | Developers reading code |
+| **User Guides** | How to use features (admin, editorial) | Per feature release | Non-technical users |
+
+**Documentation Quality Standards:**
+
+- **Up-to-Date:** Outdated docs worse than no docs (causes confusion, wasted time)
+- **Concise:** No walls of text; use examples, diagrams, bullet points
+- **Searchable:** Use clear headings, table of contents, searchable format (Markdown, not PDFs)
+- **Living Documents:** Update as code changes (not one-time write-and-forget)
+- **Code Examples:** Show, don't just tell (concrete examples > abstract descriptions)
+
+**README.md Minimum Contents:**
+```markdown
+# SF Supernova Platform
+
+## Overview
+[One-paragraph description of what this project does]
+
+## Tech Stack
+- Frontend: [Framework, version]
+- Backend: [Framework, version]
+- Database: [Type, version]
+- Hosting: [Provider, services used]
+
+## Local Development Setup
+1. Clone repo: `git clone ...`
+2. Install dependencies: `npm install` / `pip install -r requirements.txt`
+3. Set environment variables: [list critical vars]
+4. Run migrations: [command]
+5. Start dev server: [command]
+6. Access at: http://localhost:3000
+
+## Project Structure
+```
+/src
+  /components  # Reusable UI components
+  /pages       # Page-level components
+  /api         # Backend API routes
+  /lib         # Utility functions
+```
+
+## Key Commands
+- Run tests: `npm test`
+- Build for production: `npm run build`
+- Deploy: `npm run deploy`
+
+## Environment Variables
+- `DATABASE_URL`: Postgres connection string
+- `STRIPE_SECRET_KEY`: Stripe API key
+- [etc.]
+
+## Architecture Decisions
+See `/docs/adr/` for architecture decision records.
+
+## Contributing
+[If applicable; for solo project, note "Solo project; contributions not accepted"]
+```
+
+---
+
+**Testing Strategy**
+
+**Testing Philosophy:**
+
+*"Untested code is broken code—you just don't know it yet."*
+
+For a solo founder, comprehensive testing feels like overhead slowing development. In reality, testing *accelerates* development by catching bugs early (cheap to fix) instead of in production (expensive, embarrassing). Tests also serve as documentation, showing how code is supposed to work.
+
+**Testing Pyramid (Priority Order):**
+
+1. **Unit Tests (70% of tests):** Test individual functions/components in isolation
+   - *Fast, cheap to write, catch logic errors*
+   - Example: Test `calculate_discounted_price()` with various inputs
+   
+2. **Integration Tests (20% of tests):** Test multiple components working together
+   - *Moderate speed, catch interaction bugs*
+   - Example: Test checkout flow (cart → payment → order confirmation)
+   
+3. **End-to-End Tests (10% of tests):** Test full user workflows in browser
+   - *Slow, expensive, but catch real-world issues*
+   - Example: Automate "user browses product → adds to cart → checks out" flow
+
+**Testing Standards by Phase:**
+
+| Phase | Testing Requirement | Coverage Target | Tooling |
+|-------|---------------------|-----------------|---------|
+| **Phase 1 (MVP)** | Unit tests for critical business logic (payment, discounts) | 50%+ code coverage | Jest, Pytest |
+| **Phase 2 (Growth)** | Integration tests for key workflows (checkout, membership) | 60%+ coverage | Cypress, Playwright |
+| **Phase 3 (Scale)** | End-to-end tests for critical user paths | 70%+ coverage | Playwright, Selenium |
+
+**Critical Paths Requiring Tests (Phase 1):**
+
+- ✅ Payment processing (Stripe integration)
+- ✅ Discount calculation (membership tiers)
+- ✅ User authentication (login, signup, password reset)
+- ✅ File delivery (digital product downloads)
+- ✅ Email notifications (order confirmation, delivery)
+
+**Testing Workflow:**
+
+1. **Test Before Deploy:** Run full test suite before every production deployment
+2. **CI/CD Integration:** Automated testing on every code commit (GitHub Actions, GitLab CI)
+3. **Fail Fast:** Block deployment if tests fail (prevent broken code reaching production)
+4. **Monitor Coverage:** Track code coverage over time (aim for increasing, not decreasing)
+
+**Testing Tools:**
+
+- **JavaScript:** Jest (unit), Cypress/Playwright (E2E)
+- **Python:** Pytest (unit/integration), Selenium (E2E)
+- **API Testing:** Postman, Insomnia (manual), SuperTest (automated)
+- **Performance Testing:** Lighthouse CI, WebPageTest (automated performance checks)
+
+---
+
+**Version Control & Branching Strategy**
+
+**Git Workflow:**
+
+- **Main Branch (`main`):** Production-ready code; always deployable
+- **Development Branch (`dev`):** Integration branch for features
+- **Feature Branches (`feature/xyz`):** Individual feature development
+- **Hotfix Branches (`hotfix/xyz`):** Emergency production fixes
+
+**Commit Standards:**
+
+- **Conventional Commits Format:** `type(scope): description`
+  - Types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
+  - Example: `feat(checkout): add discount code field`
+- **Descriptive Messages:** Explain *what* and *why*, not just *how*
+- **Atomic Commits:** Each commit = one logical change (easier to revert, review)
+- **Commit Frequently:** Small, incremental commits (not giant "end of day" commits)
+
+**Code Review (Even for Solo Projects):**
+
+- **Self-Review Before Merge:** Review your own pull request before merging to `main`
+- **Checklist:** Does it work? Is it tested? Is it documented? Is it clean?
+- **Future Contractors:** If hiring help later, clean Git history makes onboarding easier
+
+---
+
+**Dependency Management**
+
+**Dependency Philosophy:**
+
+*"Every dependency is a liability—a potential security vulnerability, breaking change, or maintenance burden. Choose dependencies deliberately; minimize total count."*
+
+**Dependency Selection Criteria:**
+
+| Criterion | Weight | Questions to Ask |
+|-----------|--------|------------------|
+| **Actively Maintained** | Critical | Last update <6 months? Active GitHub issues/PRs? |
+| **Community Size** | High | 1000+ GitHub stars? Active forums/Discord? |
+| **Documentation Quality** | High | Clear docs, examples, migration guides? |
+| **License Compatibility** | Critical | MIT/Apache 2.0 (permissive)? GPL (restrictive, avoid)? |
+| **Bundle Size** | Medium | Does it bloat frontend bundle? (check bundlephobia.com) |
+| **Security Track Record** | High | CVEs in past? Rapid patching? |
+| **Alternatives** | Medium | Can we build this in 1-2 days instead? |
+
+**Dependency Hygiene:**
+
+- **Lock Files:** Always commit `package-lock.json`, `Pipfile.lock` (ensures reproducible builds)
+- **Audit Regularly:** Run `npm audit` / `pip-audit` monthly (check for vulnerabilities)
+- **Update Proactively:** Update dependencies quarterly (not "only when forced by breaking changes")
+- **Semantic Versioning:** Use `^` for minor updates, avoid wildcards (`*`)
+- **Remove Unused:** Quarterly audit to remove unused dependencies (reduces attack surface)
+
+**Dependency Update Strategy:**
+
+| Update Type | Frequency | Risk | Testing Required |
+|-------------|-----------|------|------------------|
+| **Patch (1.2.3 → 1.2.4)** | Monthly | Low | Smoke tests |
+| **Minor (1.2.3 → 1.3.0)** | Quarterly | Medium | Integration tests |
+| **Major (1.2.3 → 2.0.0)** | Annually or as needed | High | Full test suite |
+
+---
+
+**Database Migrations & Schema Management**
+
+**Migration Philosophy:**
+
+*"Never manually alter production database. All schema changes must be versioned, tested, reversible migrations."*
+
+**Migration Standards:**
+
+- **Automated Migrations:** Use ORM migration tools (Alembic, Prisma Migrate, Django migrations)
+- **Version Controlled:** Migrations stored in Git (just like code)
+- **Sequential Numbering:** `001_initial_schema.sql`, `002_add_membership_tiers.sql`
+- **Idempotent:** Migrations can be run multiple times safely (use `IF NOT EXISTS` checks)
+- **Reversible:** Every migration has a `down` version (rollback capability)
+- **Tested Locally:** Test migrations on local copy of production data before deploying
+
+**Migration Workflow:**
+
+1. **Develop Migration Locally:** Create migration file, test against local DB
+2. **Peer Review (or Self-Review):** Ensure migration is safe (no data loss, performance impact)
+3. **Backup Production DB:** Always backup before running migrations
+4. **Run Migration:** Apply to production with monitoring
+5. **Verify:** Check that data integrity maintained, no errors
+6. **Document:** Update schema docs to reflect changes
+
+**Dangerous Migration Patterns (Avoid):**
+
+- ❌ **Renaming Columns in One Step:** Can break running app instances during deploy
+  - ✅ **Better:** Add new column → backfill data → update code → remove old column (multi-step)
+- ❌ **Dropping Columns Immediately:** Data loss if migration needs rollback
+  - ✅ **Better:** Mark deprecated → stop using in code → drop later (after verification)
+- ❌ **Large Data Migrations During Peak Hours:** Can lock tables, slow site
+  - ✅ **Better:** Run during low-traffic windows, use batching
+
+---
+
+**Technical Debt Tracking & Management**
+
+**What is Technical Debt?**
+
+Technical debt is the implied cost of future rework caused by choosing quick/easy solutions today instead of better approaches. Like financial debt, technical debt has "interest payments"—ongoing maintenance burden, slower feature development, increased bug risk.
+
+**Types of Technical Debt:**
+
+| Type | Example | When Acceptable |
+|------|---------|-----------------|
+| **Deliberate Debt** | "Let's hardcode this now, refactor later" | MVP/deadline pressure; plan to fix |
+| **Accidental Debt** | "Didn't know about X pattern when I wrote this" | Learning curve; fix during refactors |
+| **Bit Rot** | "This worked fine 2 years ago but ecosystem changed" | Inevitable; address during updates |
+| **Reckless Debt** | "Fuck it, ship it, we'll fix it if it breaks" | NEVER acceptable |
+
+**Technical Debt Management Strategy:**
+
+**1. Track Debt Explicitly:**
+- Use `TODO` comments with ticket IDs: `// TODO(#123): Refactor this into reusable component`
+- Maintain backlog of tech debt tasks (separate from feature backlog)
+- Tag debt by severity: `P0` (blocking), `P1` (important), `P2` (nice-to-have)
+
+**2. Allocate Debt Repayment Time:**
+- **20% Rule:** Spend ~20% of development time on tech debt (1 day/week)
+- **Refactor Before Features:** If touching area with debt, fix debt first
+- **Quarterly Debt Sprints:** Dedicate 1 sprint per quarter to debt repayment
+
+**3. Prevent Debt Accumulation:**
+- **Code Reviews:** Catch bad patterns before merge
+- **Refactor Continuously:** "Leave code cleaner than you found it"
+- **Resist Pressure:** Push back on "just ship it" when debt cost is high
+
+**Technical Debt Decision Matrix:**
+
+| Situation | Accept Debt? | Rationale |
+|-----------|--------------|-----------|
+| **Pre-Launch MVP** | Yes (within limits) | Speed to market > perfect code; plan to refactor |
+| **Critical Bug Fix** | Yes (if contained) | User experience > code quality; fix properly later |
+| **New Feature (Non-Critical)** | No | No excuse for bad code on non-urgent features |
+| **Code Already Messy** | No | Don't add debt to already-indebted areas |
+
+**Warning Signs of Excessive Technical Debt:**
+
+- 🚨 Bug fix takes 2+ days due to code complexity
+- 🚨 New features take 2x longer than estimated
+- 🚨 Fear of touching certain parts of codebase ("here be dragons")
+- 🚨 Increasing number of production incidents
+- 🚨 Developer burnout, frustration, morale issues
+
+**If Warning Signs Appear:** Stop feature development, dedicate sprint to debt repayment. Technical debt, like financial debt, can spiral into bankruptcy (unmaintainable codebase, platform rewrite required).
+
+---
+
+**Monitoring & Observability**
+
+**Observability Philosophy:**
+
+*"You can't fix what you can't see. Monitoring isn't overhead—it's essential for maintainability."*
+
+**Required Monitoring (Phase 1):**
+
+| Metric | Tool | Alert Threshold | Purpose |
+|--------|------|-----------------|---------|
+| **Uptime** | UptimeRobot, Pingdom | <99% monthly | Detect outages immediately |
+| **Error Rate** | Sentry, Rollbar | >1% requests | Catch bugs in production |
+| **Response Time** | New Relic, DataDog | >2s average | Performance degradation |
+| **Database Performance** | Built-in DB tools | Slow queries >1s | Optimize queries |
+| **Disk Space** | Server monitoring | >80% full | Prevent storage outages |
+| **SSL Certificate Expiry** | SSL monitoring | <30 days to expiry | Avoid HTTPS errors |
+
+**Logging Standards:**
+
+- **Structured Logging:** JSON format (easier to parse, search)
+- **Log Levels:** DEBUG, INFO, WARN, ERROR, CRITICAL (use appropriately)
+- **Contextual Info:** Include user ID, request ID, timestamp, relevant data
+- **Sensitive Data:** Never log passwords, API keys, payment details
+- **Log Rotation:** Prevent logs from filling disk (auto-delete after 30-90 days)
+- **Centralized Logging:** Aggregate logs from all services (ELK stack, CloudWatch, Papertrail)
+
+**Example: Good Logging Practice:**
+```python
+import logging
+
+logger = logging.getLogger(__name__)
+
+def process_payment(user_id, amount, payment_method_id):
+    logger.info(
+        "Processing payment",
+        extra={
+            "user_id": user_id,
+            "amount": amount,
+            "currency": "GBP",
+            "payment_method_id": payment_method_id[-4:]  # Last 4 digits only
+        }
+    )
+    
+    try:
+        result = stripe.charge(...)
+        logger.info("Payment successful", extra={"charge_id": result.id})
+        return result
+    except stripe.CardError as e:
+        logger.error(
+            "Payment failed",
+            extra={
+                "user_id": user_id,
+                "error_code": e.code,
+                "error_message": e.user_message
+            }
+        )
+        raise
+```
+
+**Error Tracking (Sentry):**
+
+- **Automatic Reporting:** Uncaught exceptions automatically sent to Sentry
+- **Stack Traces:** Full stack trace + context (user, browser, request data)
+- **Breadcrumbs:** Actions leading up to error (user clicked X → loaded page Y → error)
+- **Alerting:** Slack/email notifications for new errors or spikes
+- **Release Tracking:** Tie errors to specific code deployments (identify bad releases)
+
+---
+
+**Deployment & Rollback Strategy**
+
+**Deployment Philosophy:**
+
+*"Deploy frequently, deploy safely. Small, incremental deployments reduce risk and enable fast rollback."*
+
+**Deployment Standards:**
+
+| Requirement | Implementation | Rationale |
+|-------------|----------------|-----------|
+| **Automated Deployment** | CI/CD pipeline (GitHub Actions, GitLab CI) | Eliminate human error, ensure consistency |
+| **Environment Parity** | Dev, Staging, Production as similar as possible | "Works on my machine" → "Works everywhere" |
+| **Blue-Green Deployment** | Run old/new versions simultaneously, switch traffic | Zero-downtime deploys, instant rollback |
+| **Database Migrations First** | Run migrations before deploying new code | Prevent code expecting schema changes before they exist |
+| **Health Checks** | Post-deployment smoke tests | Verify site functional after deploy |
+| **Rollback Plan** | One-click rollback to previous version | Fix bad deploys in <5 minutes |
+
+**Pre-Deployment Checklist:**
+
+- [ ] All tests pass locally
+- [ ] Code reviewed (or self-reviewed)
+- [ ] Database migrations tested (if applicable)
+- [ ] Environment variables updated (if needed)
+- [ ] Staging deployment successful
+- [ ] Monitoring/alerting enabled
+- [ ] Rollback plan documented
+
+**Post-Deployment Checklist:**
+
+- [ ] Health check endpoint returns 200
+- [ ] Critical user flows tested (checkout, login, product view)
+- [ ] Error rate < baseline (check Sentry)
+- [ ] Response times < baseline (check monitoring)
+- [ ] No spike in support requests
+
+**Rollback Triggers:**
+
+- 🚨 Error rate spikes >5% above baseline
+- 🚨 Critical feature broken (payment, login, file delivery)
+- 🚨 Performance degradation >50% slower response times
+- 🚨 Security vulnerability introduced
+
+**If Rollback Needed:**
+
+1. Revert to previous deployment (one-click rollback)
+2. Notify team/stakeholders (if applicable)
+3. Investigate root cause in development environment
+4. Fix issue, re-test thoroughly
+5. Re-deploy with fix
+
+---
+
+**Maintainability Checklist (Quarterly Review)**
+
+Every 3 months, review these maintainability metrics:
+
+**Code Quality:**
+- [ ] Run linter—zero warnings/errors
+- [ ] Code coverage >target threshold (50%/60%/70% by phase)
+- [ ] No critical code smells (duplicated code, long functions, complex logic)
+- [ ] Technical debt backlog < 20 items (or plan to reduce)
+
+**Documentation:**
+- [ ] README.md up-to-date
+- [ ] API docs match actual endpoints
+- [ ] Database schema docs reflect current state
+- [ ] Deployment guide accurate
+
+**Dependencies:**
+- [ ] Run security audit (`npm audit`, `pip-audit`)
+- [ ] No critical vulnerabilities
+- [ ] Major dependencies updated to latest stable
+- [ ] Remove unused dependencies
+
+**Testing:**
+- [ ] All tests pass
+- [ ] No flaky tests (tests that randomly fail)
+- [ ] Critical paths have test coverage
+- [ ] E2E tests cover key user workflows
+
+**Monitoring:**
+- [ ] Uptime >99%
+- [ ] Error rate <1%
+- [ ] No unresolved critical alerts
+- [ ] Logs rotating properly (disk not filling)
+
+**Performance:**
+- [ ] Core Web Vitals score "Good" (80%+ pages)
+- [ ] No slow queries (>1s) in database
+- [ ] CDN cache hit rate >80%
+- [ ] Image optimization applied
+
+**If Any Check Fails:** Create ticket, prioritize fix, address before next quarter.
+
+---
+
+**Maintainability Roadmap by Phase**
+
+**Phase 1 (PRD v1—MVP Launch):**
+
+- ✅ Basic code quality standards (linting, formatting)
+- ✅ README.md with setup instructions
+- ✅ Unit tests for critical business logic (50%+ coverage)
+- ✅ Version control with clear branching strategy
+- ✅ Automated deployment pipeline (CI/CD)
+- ✅ Error tracking (Sentry)
+- ✅ Uptime monitoring
+
+**Phase 2 (Growth):**
+
+- ✅ Integration tests for key workflows (60%+ coverage)
+- ✅ API documentation (Swagger/OpenAPI)
+- ✅ Database migration process documented
+- ✅ Quarterly dependency audits
+- ✅ Tech debt tracking system
+
+**Phase 3 (Scale):**
+
+- ✅ E2E tests for critical paths (70%+ coverage)
+- ✅ Architecture Decision Records (ADRs)
+- ✅ Performance monitoring (New Relic, DataDog)
+- ✅ Centralized logging (ELK stack)
+- ✅ On-call rotation documentation (if team grows)
+
+---
+
+**Summary: Maintainability as Long-Term Survival**
+
+**Why Maintainability Matters:**
+
+- **Solo Founder Constraint:** No team to bail you out—must maintain cleanly or drown
+- **Compounding Returns:** Clean code → faster features → more revenue
+- **Compounding Costs:** Technical debt → slower development → opportunity cost
+- **Onboarding Friction:** Messy code makes hiring help nearly impossible
+- **Burnout Prevention:** Fighting unmaintainable code is demoralizing and exhausting
+
+**Maintainability Principles:**
+
+1. **Write Code for Future You:** 6-month-from-now you will not remember why you did this—make it obvious
+2. **Document Ruthlessly:** If it's not documented, it doesn't exist (future you will thank current you)
+3. **Test Thoroughly:** Untested code is broken code (you just haven't discovered the bug yet)
+4. **Refactor Continuously:** Leave code cleaner than you found it (small, ongoing improvements)
+5. **Track Debt Explicitly:** Acknowledge shortcuts, plan repayment, avoid reckless accumulation
+6. **Monitor Everything:** Can't fix what can't see (observability prevents surprises)
+
+**Maintainability is not "gold-plating" or "perfectionism"—it's pragmatic self-interest. Clean, documented, tested code is faster to modify, easier to debug, and cheaper to operate. Messy code compounds into a death spiral: harder to change → slower features → miss opportunities → lose revenue → can't afford to fix → cycle repeats. SF Supernova's long-term success depends on building maintainably from the start—not because it's "nice to have," but because it's the only sustainable path forward for a solo founder building a platform intended to last 5-10+ years.**
 ### 8.7 Cost Discipline & Infrastructure Constraints
 
 ### 8.8 Operational & Support Requirements
