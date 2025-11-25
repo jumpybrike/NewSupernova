@@ -31528,8 +31528,653 @@ Every 3 months, audit infrastructure for cost-saving opportunities:
 5. **Scale Sublinearly:** Cost per customer must decrease as you grow (this is how margins improve)
 
 **Cost discipline is not "being cheap"—it's being *resourceful*. Bootstrapped founders who master cost efficiency build sustainable, profitable businesses that don't need external funding and can weather downturns. SF Supernova's constraint (£150/month max in Phase 1) is a feature, not a bug—it forces us to build lean, optimize aggressively, and prioritize ruthlessly. Every pound saved on infrastructure is a pound reinvested in content, product, or runway. That's how we win.**
+
 ### 8.8 Operational & Support Requirements
 
+**Strategic Overview**
+
+Operational and support requirements define how SF Supernova maintains day-to-day operations, responds to user issues, handles incidents, and ensures platform stability without requiring a dedicated operations team. For a solo-founder platform, operational efficiency is existential—every hour spent firefighting is an hour not spent building features, creating content, or driving revenue. Operational requirements must balance user needs (fast support, minimal downtime) with founder constraints (limited time, no 24/7 availability).
+
+**Core Principle:** *"Automate everything that can be automated. Document everything that can't. Design for self-service first, human support second. Operational burden must scale sublinearly with user growth—10x users should not mean 10x support time."*
+
+**Why Operations Matter for SF Supernova:**
+
+1. **Solo Founder Constraint:** No ops team, no customer support team, no DevOps team—just you
+2. **Trust-Dependent Business:** Users paying for content expect reliable delivery, responsive support
+3. **Time Opportunity Cost:** Every support email = time not spent creating content or improving product
+4. **Scalability Bottleneck:** Manual operations don't scale (will hit wall at 1,000-10,000 users)
+5. **Reputation Risk:** Slow support, frequent downtime, lost files damage brand irreparably
+
+**Operational Failure Modes to Avoid:**
+
+- **Email Support Hell:** 50+ support emails/day consuming all founder time
+- **Manual Fulfillment:** Manually sending download links, processing refunds, checking orders
+- **Undocumented Processes:** "How do I deploy?" or "How do I restore backup?" not written down
+- **No Incident Response Plan:** Site down, panic, no idea what to do, users angry
+- **Alert Fatigue:** 100 alerts/day, all ignored (boy who cried wolf syndrome)
+- **No Self-Service:** Users must email for every question (FAQ, password reset, download link)
+
+---
+
+**Core Operational Standards**
+
+**Operational Philosophy:**
+
+| Principle | Implementation | Rationale |
+|-----------|----------------|-----------|
+| **Automate First** | Automate repetitive tasks (order fulfillment, backups, deployments) | Scales infinitely, zero marginal cost |
+| **Self-Service Default** | Comprehensive FAQs, user dashboards, password reset flows | Reduces support burden 80%+ |
+| **Document Everything** | Runbooks for common tasks (deploy, backup restore, incident response) | Bus factor = 1 (you); docs are backup brain |
+| **Monitor Proactively** | Alerts for critical issues (downtime, errors, payment failures) | Fix problems before users report them |
+| **Support as Last Resort** | Users contact support only when self-service fails | Keeps support volume manageable |
+| **Graceful Degradation** | Non-critical features can fail without breaking core experience | Prioritize payment/delivery over nice-to-haves |
+
+---
+
+**Support Strategy: Self-Service First**
+
+**Support Tier Hierarchy (Prioritized by Cost Efficiency):**
+
+| Tier | Description | User Effort | Founder Effort | Resolution Time | Coverage Target |
+|------|-------------|-------------|----------------|-----------------|-----------------|
+| **Tier 0: Prevent Issues** | Good UX, clear messaging, error prevention | N/A | High upfront | N/A | 50% of potential issues |
+| **Tier 1: Self-Service** | FAQ, Help Center, user dashboard, password reset | Low | Medium upfront | Instant | 80% of remaining issues |
+| **Tier 2: Automated Support** | Chatbot, automated email responses, status page | Low | Low upfront | Instant | 10% of remaining issues |
+| **Tier 3: Async Human Support** | Email support (24-48hr response) | Medium | High ongoing | 1-2 days | 10% of remaining issues |
+| **Tier 4: Sync Human Support** | Live chat, phone (expensive, not offered) | Low | Very high | Instant | 0% (not offered Phase 1-2) |
+
+**Goal: 90% of user issues resolved via Tiers 0-2 (no human involvement). Only 10% reach Tier 3 (email support).**
+
+---
+
+**Tier 0: Preventing Issues (Design for Zero Support)**
+
+**Prevention Strategies:**
+
+| Issue Type | Prevention Strategy | Implementation |
+|------------|---------------------|----------------|
+| **"Where's my download link?"** | Send immediate email with link after purchase | Automated via Stripe webhook |
+| **"I forgot my password"** | Prominent "Forgot Password" link on login page | Self-service password reset flow |
+| **"How do I cancel subscription?"** | Clear "Cancel Membership" button in account settings | Self-service cancellation (no dark patterns) |
+| **"Product doesn't work"** | Pre-purchase format info (ePub for Kindle/Apple Books, etc.) | Set expectations, reduce buyer's remorse |
+| **"I was charged twice"** | Idempotency keys prevent duplicate charges | Stripe idempotency implementation |
+| **"Site is down"** | Uptime monitoring + auto-scaling | Proactive infrastructure monitoring |
+| **"Can't find X product"** | Good search, clear navigation, filters | Discovery Engine (Phase 3) |
+
+**UX Patterns that Prevent Support:**
+
+- ✅ **Confirmation Emails:** Immediately send order confirmation (users know purchase succeeded)
+- ✅ **Progress Indicators:** Show "Processing payment..." (users know something is happening)
+- ✅ **Error Messages that Explain:** "Card declined (insufficient funds)" > "Error 402"
+- ✅ **Inline Help:** Tooltips, contextual hints (explain features where users encounter them)
+- ✅ **Undo/Edit Options:** Let users fix mistakes (change email, edit order) without support
+- ✅ **Status Pages:** Public status page (status.sfsupernova.com) shows if site/payment/email down
+
+**Legal Benefit:** Clear, proactive communication reduces refund requests and chargebacks (users know what to expect, feel informed).
+
+---
+
+**Tier 1: Self-Service Help Center**
+
+**Help Center Structure:**
+
+**Required Content:**
+
+| Category | Articles | Purpose |
+|----------|----------|---------|
+| **Getting Started** | Account creation, first purchase, downloading products | Onboard new users |
+| **Account Management** | Update email, change password, delete account | Self-service account tasks |
+| **Orders & Downloads** | View order history, re-download products, refund policy | Reduce "where's my stuff?" emails |
+| **Membership** | Benefits, cancellation, upgrade/downgrade | Transparency, self-service management |
+| **Payment Issues** | Card declined, update payment method, billing questions | Reduce payment-related emails |
+| **Technical Support** | File formats, device compatibility, troubleshooting | Reduce "product doesn't work" emails |
+| **Policies** | Refund policy, privacy policy, terms of service | Legal transparency, set expectations |
+
+**Help Center Best Practices:**
+
+- **Searchable:** Full-text search (users find answers fast)
+- **Mobile-Friendly:** 60%+ users on mobile (must be readable on small screens)
+- **Screenshots/Videos:** Visual guides reduce confusion (show, don't just tell)
+- **Updated Regularly:** Outdated help docs worse than no docs (cause frustration)
+- **Analytics:** Track most-viewed articles (indicates common pain points to fix in product)
+
+**Help Center Tool Recommendation (Phase 1):**
+
+- **Option A: Simple Static Site** (Free)
+  - Build with Markdown + static site generator (Hugo, Jekyll)
+  - Host on Vercel/Netlify (free)
+  - Search via Algolia DocSearch (free for open docs)
+  - **Cost: £0/month**
+
+- **Option B: Dedicated Help Desk Tool** (Paid, Phase 2+)
+  - Crisp, Intercom, Help Scout (£25-50/month)
+  - Includes ticketing, live chat, knowledge base
+  - **Cost: £25-50/month**
+
+**Recommendation: Start with Option A (static site), migrate to Option B at £5,000/month revenue if support volume justifies.**
+
+---
+
+**Tier 2: Automated Support**
+
+**Automation Opportunities:**
+
+| Task | Automation Strategy | Tool/Implementation |
+|------|---------------------|---------------------|
+| **Order Confirmation** | Auto-send email after purchase | Stripe webhook → SendGrid |
+| **Download Link Delivery** | Auto-send download link after payment | Stripe webhook → signed URL → email |
+| **Receipt/Invoice** | Auto-generate PDF receipt | Stripe invoice API → PDF → email |
+| **Password Reset** | Magic link sent to email | Auth system (NextAuth, Supabase Auth) |
+| **Subscription Renewal Reminder** | Email 7 days before renewal | Cron job → check subscriptions → email |
+| **Failed Payment Retry** | Auto-retry failed subscription payments | Stripe Smart Retries (built-in) |
+| **Refund Processing** | Self-service refund (if <24hr, auto-approve) | Stripe refund API + business logic |
+
+**Chatbot (Phase 2+ Optional):**
+
+- **Purpose:** Answer common questions 24/7 without human intervention
+- **Scope:** "Where's my download?" "How do I cancel?" "What's refund policy?"
+- **Implementation:** Simple FAQ bot (not AI—rule-based, predictable)
+- **Tool:** Crisp, Intercom (£25/month includes chatbot + help desk)
+- **Coverage Target:** Handle 50% of Tier 3 support volume (reduce email burden)
+
+**Recommendation:** Skip chatbot in Phase 1 (overkill for <100 customers), add in Phase 2 if support emails >20/week.
+
+---
+
+**Tier 3: Asynchronous Human Support (Email)**
+
+**Email Support Standards:**
+
+| Metric | Target | Rationale |
+|--------|--------|-----------|
+| **Response Time (Business Hours)** | <24 hours | Users expect response within 1 business day |
+| **Response Time (Weekends)** | <48 hours | Solo founder needs weekends off (set expectations) |
+| **Resolution Time** | <72 hours | Most issues resolved within 3 days (complex issues may take longer) |
+| **Support Hours** | Mon-Fri, 9am-5pm GMT | Clear boundaries (prevents burnout) |
+| **Auto-Responder** | Immediate acknowledgment | "Thanks for contacting us, we'll respond within 24hrs" |
+
+**Support Email Address:**
+
+- **Primary:** support@sfsupernova.com (professional, clear purpose)
+- **Auto-Responder Text:**
+````
+  Thanks for contacting SF Supernova support!
+  
+  We aim to respond within 24 hours (Monday-Friday).
+  
+  Common questions (instant answers):
+  • Download link: Check your email or visit [Account Dashboard]
+  • Password reset: Use [Forgot Password] on login page
+  • Refund policy: [Link to refund policy]
+  
+  If your question is urgent, check our [Help Center] for instant answers.
+  
+  — SF Supernova Team
+````
+
+**Support Workflow:**
+
+1. **User Sends Email → Auto-Responder Sent** (immediate acknowledgment)
+2. **Email Arrives in Inbox → Triaged** (urgent/non-urgent)
+3. **Founder Responds** (within 24hrs business days)
+4. **Issue Resolved or Escalated** (most resolved in 1-2 exchanges)
+5. **Follow-Up (Optional)** (confirm issue resolved, ask for feedback)
+
+**Support Email Management:**
+
+- **Tool (Phase 1):** Gmail with labels/filters (free, sufficient for <50 emails/week)
+- **Tool (Phase 2):** Help desk software (Crisp, Help Scout) at £25-50/month (better for >50 emails/week)
+- **Shared Inbox:** If hiring contractor/VA, use shared inbox (support@) not personal email
+
+**Support Macros/Templates (Save Time):**
+
+| Scenario | Template Response |
+|----------|-------------------|
+| **Can't find download link** | "Your download link was sent to [email]. Please check spam folder. You can also download from your [Account Dashboard: link]. If still having issues, let me know!" |
+| **Refund request (<24hr)** | "I've processed your refund. You should see £X back on your card within 5-10 business days. Let me know if you need anything else!" |
+| **Refund request (>24hr)** | "Our refund policy covers purchases within 24 hours [link]. However, I'd love to understand what went wrong. Can you share what issue you encountered? I may be able to help or make an exception." |
+| **Product doesn't work** | "Sorry to hear that! To help troubleshoot: (1) What device/app are you using? (2) What error do you see? (3) What file format did you download? I'll get this sorted for you!" |
+| **Payment failed** | "Your payment didn't go through (likely card issue). Please try again with a different card or payment method. If it continues failing, contact your bank—sometimes they block online purchases. Let me know if you need help!" |
+
+**Support Volume Targets:**
+
+| Phase | Expected Support Volume | Weekly Time Commitment | Scalability Plan |
+|-------|-------------------------|------------------------|------------------|
+| **Phase 1** | 5-20 emails/week | 2-4 hours/week | Manageable solo |
+| **Phase 2** | 20-50 emails/week | 5-10 hours/week | Add self-service content, consider VA |
+| **Phase 3** | 50-100 emails/week | 10-20 hours/week | Hire part-time support VA (£10-15/hr) |
+
+**When to Hire Support Help:**
+
+- Support consuming >10 hours/week (25% of full-time)
+- Revenue >£5,000/month (can afford £500-1,000/month for part-time VA)
+- Repetitive questions dominating (FAQ/automation can't solve)
+
+**Support Hiring Strategy (Phase 2-3):**
+
+- **Part-Time VA (20 hrs/week):** £10-15/hr × 20 hrs = £200-300/week = £800-1,200/month
+- **Responsibilities:** Answer tier-1 questions, escalate complex issues to founder
+- **Training:** Provide runbook, FAQ, access to help desk software
+- **Location:** UK-based preferred (timezone alignment, cultural fit) or remote (global talent pool)
+
+---
+
+**Incident Response & Downtime Management**
+
+**Incident Philosophy:**
+
+*"Incidents will happen. Prepare for them, respond quickly, communicate proactively, learn from them."*
+
+**Incident Severity Levels:**
+
+| Severity | Definition | Response Time | Example |
+|----------|------------|---------------|---------|
+| **P0 (Critical)** | Site completely down, payment broken, data loss | <15 minutes | Site unreachable, payment processing failing |
+| **P1 (High)** | Major feature broken, affecting >50% users | <1 hour | Login broken, downloads failing, membership broken |
+| **P2 (Medium)** | Minor feature broken, affecting <50% users | <24 hours | Search broken, slow page load, image missing |
+| **P3 (Low)** | Cosmetic issue, no functional impact | <1 week | Typo, layout glitch, minor UI bug |
+
+**Incident Response Workflow:**
+
+**P0 (Critical) Response:**
+
+1. **Detect (0-5 min):** Alert fires (Sentry, UptimeRobot) → founder notified (SMS, push)
+2. **Acknowledge (5-10 min):** Update status page: "Investigating issue"
+3. **Diagnose (10-20 min):** Check logs, error tracking, monitoring (identify root cause)
+4. **Mitigate (20-30 min):** Apply fix or rollback to previous version
+5. **Verify (30-40 min):** Confirm site functional, errors stopped
+6. **Communicate (40-45 min):** Update status page: "Issue resolved"
+7. **Post-Mortem (24-48 hrs):** Write incident report, identify prevention steps
+
+**P1 (High) Response:**
+
+- Same workflow, but 1-hour response window (less urgency)
+- Status page update: "Investigating [specific feature] issue"
+- Fix deployed within 1-2 hours
+- Post-mortem optional (only if valuable learnings)
+
+**P2/P3 (Medium/Low) Response:**
+
+- No immediate action required
+- Log issue in backlog, prioritize alongside feature work
+- Fix in next scheduled deployment (weekly/biweekly)
+- No status page update (not user-facing enough)
+
+---
+
+**Status Page (Transparency During Incidents)**
+
+**Status Page Purpose:**
+
+- **Reduce Support Volume:** Users check status page instead of emailing "is site down?"
+- **Build Trust:** Proactive communication shows professionalism, transparency
+- **Legal Protection:** Demonstrates good faith effort to communicate issues
+
+**Status Page Tool Recommendation:**
+
+- **Option A: Statuspage.io (Atlassian)** — £29/month, professional, trusted
+- **Option B: StatusPal** — £19/month, cheaper alternative
+- **Option C: Self-Hosted (Cachet)** — Free, open-source, requires self-hosting
+
+**Recommendation (Phase 1): Skip status page (overkill for <100 customers). Add in Phase 2 at £2,000/month revenue.**
+
+**Alternative (Phase 1):** Twitter/X account for status updates (free, immediate reach).
+
+---
+
+**Monitoring & Alerting Strategy**
+
+**Alerting Philosophy:**
+
+*"Alert only on conditions requiring immediate action. If alert doesn't require action, it's noise."*
+
+**Critical Alerts (Must Fire Immediately):**
+
+| Alert | Trigger | Action Required | Notification Channel |
+|-------|---------|-----------------|----------------------|
+| **Site Down** | 3 consecutive failed health checks (5 min) | Investigate, restore service | SMS + Push |
+| **Payment Processing Failed** | 5+ failed payments in 10 minutes | Check Stripe status, investigate | SMS + Push |
+| **Error Rate Spike** | Error rate >5% for 10 minutes | Check Sentry, identify cause, deploy fix | SMS + Push |
+| **Database Down** | Database connection failures | Restore DB, check backups | SMS + Push |
+| **SSL Certificate Expiring** | <7 days until expiry | Renew certificate | Email + Slack |
+
+**Warning Alerts (Can Wait 1-24 Hours):**
+
+| Alert | Trigger | Action Required | Notification Channel |
+|-------|---------|-----------------|----------------------|
+| **Slow Response Times** | Avg response time >2s for 30 min | Investigate performance, optimize queries | Email |
+| **High Error Rate** | Error rate 1-5% for 30 min | Check Sentry, prioritize fix | Email |
+| **Low Disk Space** | <20% free disk space | Archive old logs, expand storage | Email |
+| **High CDN Bandwidth** | Bandwidth spike (>2x baseline) | Check for abuse, optimize assets | Email |
+| **Support Volume Spike** | >20 emails in 24 hours | Review for common issue (potential bug) | Email |
+
+**Alert Fatigue Prevention:**
+
+- ❌ **No Noisy Alerts:** Don't alert on conditions that self-resolve (temporary spikes)
+- ❌ **No Redundant Alerts:** Don't send 10 alerts for same issue (group/dedupe)
+- ❌ **No Non-Actionable Alerts:** Don't alert if no action can be taken
+- ✅ **Alert Tuning:** Adjust thresholds to minimize false positives
+- ✅ **Alert Escalation:** Repeat alert every 15 min if not acknowledged (P0 only)
+
+**Alerting Tools:**
+
+- **Uptime Monitoring:** UptimeRobot (free, 50 monitors, 5-min checks)
+- **Error Tracking:** Sentry (free, 5K events/month, email/Slack alerts)
+- **Infrastructure:** Hosting provider alerts (Vercel, Railway, etc.)
+- **Custom Alerts:** Cron job + SendGrid for custom checks (database size, payment failures, etc.)
+
+**Notification Channels:**
+
+- **SMS (Critical Alerts):** Twilio, Vonage (£0.04/SMS, use sparingly)
+- **Push (Critical Alerts):** Mobile app notifications (if applicable)
+- **Email (Warning Alerts):** SendGrid, Gmail
+- **Slack (All Alerts):** Centralized alert dashboard (Phase 2+)
+
+---
+
+**Deployment & Release Management**
+
+**Deployment Philosophy:**
+
+*"Deploy small, deploy often, deploy safely. Every deploy is a risk—minimize risk through automation, testing, and rollback readiness."*
+
+**Deployment Frequency Standards:**
+
+| Phase | Deployment Frequency | Rationale |
+|-------|----------------------|-----------|
+| **Phase 1 (MVP)** | 2-3x per week | Rapid iteration, frequent bug fixes |
+| **Phase 2 (Growth)** | 1-2x per week | More stability, less churn |
+| **Phase 3 (Scale)** | 1x per week | High stability, scheduled releases |
+
+**Deployment Windows:**
+
+- **Preferred:** Weekday mornings (Tue-Thu, 9am-11am GMT)
+  - *Rationale:* Full day available to monitor, fix issues
+- **Avoid:** Friday afternoons (no weekend support), weekends (users active, founder not)
+- **Exception:** Hotfixes (critical bugs) can deploy anytime
+
+**Pre-Deployment Checklist:**
+
+- [ ] All tests pass (unit, integration, E2E)
+- [ ] Code reviewed (or self-reviewed)
+- [ ] Database migrations tested (if applicable)
+- [ ] Staging environment tested (if available)
+- [ ] Rollback plan documented
+- [ ] Monitoring/alerting enabled
+- [ ] Changelog/release notes drafted
+- [ ] Communication plan (if user-facing change)
+
+**Post-Deployment Checklist:**
+
+- [ ] Health check endpoint returns 200
+- [ ] Critical user flows tested (login, checkout, download)
+- [ ] Error rate baseline (check Sentry)
+- [ ] Response time baseline (check monitoring)
+- [ ] No spike in support emails
+- [ ] Monitor for 1-2 hours post-deploy (catch issues early)
+
+**Rollback Plan:**
+
+- **One-Click Rollback:** Vercel, Netlify, Railway all support instant rollback to previous version
+- **Rollback Triggers:** Error rate >5%, critical feature broken, payment processing failed
+- **Rollback Time Target:** <5 minutes from decision to rollback
+- **Post-Rollback:** Investigate issue in dev environment, fix, re-test, re-deploy
+
+---
+
+**Backup & Disaster Recovery**
+
+**Backup Philosophy:**
+
+*"Backups are insurance—worthless until disaster strikes, then priceless. Test backups regularly; untested backups are not backups."*
+
+**Backup Standards:**
+
+| Data Type | Backup Frequency | Retention Policy | Storage Location | Recovery Time Objective (RTO) |
+|-----------|------------------|------------------|------------------|-------------------------------|
+| **Database** | Daily (automated, 3am GMT) | 7 daily, 4 weekly, 12 monthly | Cloudflare R2 (encrypted) | <4 hours |
+| **User Files (Digital Products)** | Real-time (multi-region replication) | Indefinite | Cloudflare R2 (multi-region) | <1 hour |
+| **Code** | Every commit | Indefinite | GitHub | <15 minutes |
+| **Configuration/Secrets** | Manual (after changes) | Indefinite | Encrypted local + GitHub (private repo) | <30 minutes |
+
+**Disaster Recovery Scenarios:**
+
+| Scenario | Recovery Steps | RTO | Data Loss |
+|----------|----------------|-----|-----------|
+| **Accidental Code Deploy** | Git revert → Redeploy | 5-15 min | None |
+| **Database Corruption** | Restore from most recent daily backup | 2-4 hours | <24 hours |
+| **Hosting Provider Outage** | Migrate to new provider using backups | 4-8 hours | <24 hours |
+| **Ransomware/Hack** | Restore from backup, rotate all credentials | 8-24 hours | <24 hours |
+| **Accidental Data Deletion** | Restore from backup | 1-4 hours | Variable (depends on when noticed) |
+
+**Backup Testing Schedule:**
+
+- **Monthly:** Restore database backup to staging environment (verify integrity)
+- **Quarterly:** Full disaster recovery drill (simulate hosting failure, migrate to new provider)
+- **Annually:** Test all backup types (database, files, config) for completeness
+
+**Backup Failure Modes to Avoid:**
+
+- ❌ **Backups Never Tested:** Discover during disaster that backups corrupted
+- ❌ **Single Point of Failure:** Backups stored in same datacenter as primary (fire/flood destroys both)
+- ❌ **No Encryption:** Backups stolen, user data compromised
+- ❌ **No Alerting:** Backup job fails silently, discovered weeks later
+
+**Backup Alerting:**
+
+- **Daily Check:** Cron job verifies backup completed successfully
+- **Alert if Failure:** Email/Slack notification if backup fails
+- **Escalation:** If 2 consecutive failures, SMS alert (critical issue)
+
+---
+
+**Operational Runbooks (Documentation)**
+
+**Runbook Philosophy:**
+
+*"If you can't document it, you can't delegate it, automate it, or remember it. Runbooks save future-you hours of frustration."*
+
+**Required Runbooks (Phase 1):**
+
+| Runbook | Purpose | Update Frequency |
+|---------|---------|------------------|
+| **Deployment Guide** | How to deploy code to production | Every infrastructure change |
+| **Rollback Guide** | How to revert to previous version | Every infrastructure change |
+| **Backup Restoration** | How to restore database from backup | Quarterly (after testing) |
+| **Incident Response** | How to respond to P0/P1 incidents | Annually or after major incident |
+| **Database Migrations** | How to run/rollback migrations | Every migration process change |
+| **User Support Escalation** | How to handle complex support requests | Quarterly or as needed |
+| **Payment Issue Resolution** | How to handle refunds, failed payments, disputes | Annually or after policy change |
+| **Access & Credentials** | How to access services, where credentials stored | Every service addition |
+
+**Runbook Template:**
+````markdown
+# [Task Name] Runbook
+
+## Purpose
+[Why this runbook exists, when to use it]
+
+## Prerequisites
+- Access to [service/tool]
+- [Specific credentials/permissions needed]
+
+## Step-by-Step Instructions
+
+### Step 1: [Action]
+[Detailed instructions, including commands]
+```bash
+[example command if applicable]
+```
+
+### Step 2: [Action]
+[Continue with next steps...]
+
+## Verification
+[How to verify task completed successfully]
+
+## Troubleshooting
+**Issue:** [Common problem]
+**Solution:** [How to resolve]
+
+## Rollback (if applicable)
+[How to undo changes if something goes wrong]
+
+## Last Updated
+[Date, by whom]
+````
+
+**Runbook Storage:**
+
+- **Private GitHub Repo:** Version-controlled, searchable, accessible anywhere
+- **Encrypted for Sensitive Info:** Use git-crypt or similar for credentials
+- **Shared with Trusted Person:** "Bus factor" mitigation (if you're incapacitated, someone can access)
+
+---
+
+**Operational Metrics & KPIs**
+
+**Operational Health Metrics (Track Monthly):**
+
+| Metric | Target | Red Flag Threshold | Purpose |
+|--------|--------|-------------------|---------|
+| **Uptime** | >99.5% | <99% | Reliability indicator |
+| **Error Rate** | <0.5% | >1% | Code quality indicator |
+| **Avg Response Time** | <1s | >2s | Performance indicator |
+| **Support Volume** | <20 emails/week | >50 emails/week | Self-service effectiveness |
+| **Support Response Time** | <24 hours | >48 hours | Customer satisfaction |
+| **Time to Deploy** | <30 min | >1 hour | Deployment efficiency |
+| **Failed Deployments** | <5% | >10% | Code quality, testing |
+| **Incident Count (P0/P1)** | <2 per month | >5 per month | Platform stability |
+| **Mean Time to Recover (MTTR)** | <1 hour | >4 hours | Incident response effectiveness |
+
+**If Metrics Exceed Red Flags:** Stop feature development, dedicate time to operational improvements (stability > features).
+
+---
+
+**Operational Roadmap by Phase**
+
+**Phase 1 (PRD v1—MVP Launch):**
+
+- ✅ Basic monitoring (uptime, errors)
+- ✅ Automated order fulfillment (email, download links)
+- ✅ Self-service password reset
+- ✅ Help Center (static site with FAQ)
+- ✅ Email support (response <24hrs)
+- ✅ Deployment automation (CI/CD)
+- ✅ Daily database backups
+- ✅ Incident response runbook
+
+**Phase 2 (Growth):**
+
+- ✅ Help desk software (Crisp, Help Scout)
+- ✅ Status page (public uptime/incident communication)
+- ✅ Chatbot (basic FAQ automation)
+- ✅ Support metrics dashboard (track volume, response time)
+- ✅ Part-time VA for support (if volume >50 emails/week)
+- ✅ Advanced monitoring (APM, performance tracking)
+
+**Phase 3 (Scale):**
+
+- ✅ Full-time support staff (if volume >100 emails/week)
+- ✅ On-call rotation (if 24/7 uptime required)
+- ✅ Advanced incident management (PagerDuty, OpsGenie)
+- ✅ SLA commitments (99.9% uptime guarantee)
+- ✅ Multi-region redundancy (disaster recovery <1hr RTO)
+
+---
+
+**Operational Cost Budget**
+
+| Operational Expense | Phase 1 | Phase 2 | Phase 3 | Notes |
+|---------------------|---------|---------|---------|-------|
+| **Monitoring Tools** | £0 (free tiers) | £25/month | £100/month | Sentry, UptimeRobot → paid tiers |
+| **Help Desk Software** | £0 (static site) | £25/month | £50/month | Crisp, Help Scout |
+| **Status Page** | £0 (none) | £20/month | £30/month | Statuspage.io, StatusPal |
+| **Support Staff (VA)** | £0 (founder) | £0-500/month | £800-1,200/month | Part-time VA (20 hrs/week) |
+| **SMS Alerts** | £5/month | £10/month | £20/month | Twilio for critical alerts |
+| **Total Ops Cost** | **£5/month** | **£80-580/month** | **£1,000-1,400/month** |
+
+**Ops Cost as % of Revenue:**
+
+- **Phase 1:** £5 ops cost / £500 revenue = **1%** (excellent)
+- **Phase 2:** £580 ops cost / £10,000 revenue = **5.8%** (good)
+- **Phase 3:** £1,400 ops cost / £50,000 revenue = **2.8%** (excellent)
+
+**Key Insight:** Operational costs scale sublinearly with revenue (get more efficient over time), unlike linear costs like payment processing.
+
+---
+
+**Founder Wellness & Burnout Prevention**
+
+**Operational Sustainability Philosophy:**
+
+*"An exhausted, burned-out founder cannot build a sustainable business. Operational systems must protect founder time, energy, and mental health."*
+
+**Burnout Prevention Strategies:**
+
+| Strategy | Implementation | Rationale |
+|----------|----------------|-----------|
+| **Set Support Hours** | Mon-Fri, 9am-5pm GMT only | Clear boundaries, prevents 24/7 availability expectation |
+| **Weekend Disconnection** | No support emails, no deployments on weekends | Rest is productivity (can't sprint forever) |
+| **Automate Repetitive Tasks** | Order fulfillment, backups, monitoring | Eliminate soul-crushing manual work |
+| **Delegate When Possible** | Hire VA for tier-1 support at £5K/month revenue | Offload time-consuming, low-skill tasks |
+| **Batch Support Responses** | 2x daily (10am, 3pm) instead of constant checking | Reduces context-switching, increases focus time |
+| **Track Time Investment** | Log hours spent on operations (identify inefficiencies) | Data-driven optimization (what's consuming time?) |
+| **Vacation Mode** | Auto-responder, delayed responses, no guilt | Sustainable pace > sprint to burnout |
+
+**Warning Signs of Operational Burnout:**
+
+- 🚨 Spending >50% of time on support/ops (not building/creating)
+- 🚨 Dreading checking email (support anxiety)
+- 🚨 Feeling trapped by platform (can't take a day off)
+- 🚨 Neglecting self-care (sleep, exercise, social life)
+- 🚨 Resentment toward users (support feels like burden)
+
+**If Warning Signs Appear:** Stop, reassess, implement automation/delegation before continuing. Burnout kills businesses (founder quits or makes bad decisions).
+
+---
+
+**Summary: Operations as Force Multiplier**
+
+**Why Operations Matter:**
+
+- **Scalability:** Manual operations don't scale (will hit wall at 1,000-10,000 users)
+- **Founder Time:** Every hour spent on ops = hour not spent on growth
+- **User Trust:** Reliable platform, responsive support builds trust (drives revenue)
+- **Sustainability:** Operational burden must be manageable long-term (burnout kills businesses)
+- **Profitability:** Efficient operations = lower costs = higher margins
+
+**Operational Principles:**
+
+1. **Automate First:** If a task is repetitive, automate it (scales infinitely)
+2. **Self-Service Default:** Users solve own problems 80%+ of time (reduces support burden)
+3. **Document Everything:** Runbooks enable delegation, prevent "bus factor = 1" risk
+4. **Monitor Proactively:** Fix problems before users report them (reduces support volume)
+5. **Incident Response Readiness:** Disasters will happen; prepare, respond fast, learn
+6. **Founder Wellness:** Sustainable operations protect founder energy (marathon, not sprint)
+
+**Operational excellence is not overhead—it's the foundation of scalability. Platforms that neglect operations hit a wall where manual processes consume all founder time, preventing feature development and growth. SF Supernova's operational strategy prioritizes automation, self-service, and documentation to ensure 1 founder can manage 100 users as easily as 10,000 users. This is how solo founders build sustainable, profitable platforms that don't require venture funding or large teams. Operations done right are invisible to users (everything just works) but critical to founder sanity and business sustainability.**
+
+---
+
+## Section 8 Complete: Non-Functional Requirements
+
+We've now completed **Section 8: Non-Functional Requirements** with all eight subsections:
+
+- ✅ **8.1** Performance & Scalability Standards
+- ✅ **8.2** Editorial Quality & Content Standards  
+- ✅ **8.3** Reliability & Availability Targets
+- ✅ **8.4** Accessibility & Inclusive Design Requirements
+- ✅ **8.5** SEO Readiness & Discoverability Standards
+- ✅ **8.6** Maintainability & Technical Debt Management
+- ✅ **8.7** Cost Discipline & Infrastructure Constraints
+- ✅ **8.8** Operational & Support Requirements
+
+**Section 8 Status: COMPLETE** ✅
+
+This section comprehensively covers all the "how well" requirements that define SF Supernova's quality attributes, operational standards, and long-term sustainability. These non-functional requirements are as critical as the functional requirements—they determine whether the platform is merely functional or truly professional, scalable, and sustainable.
+
+Ready to move on to Section 9 when you are!
 
 
 
