@@ -29907,8 +29907,370 @@ We welcome your feedback on the accessibility of SF Supernova. Please contact us
 5. **Document Commitment:** Publish accessibility statement (transparency, legal protection)
 
 **Accessibility is not a "nice-to-have" checkbox—it's a fundamental requirement for professional, ethical, legally compliant web platform. SF Supernova's audience (vintage sci-fi enthusiasts, skewing older) particularly benefits from accessible design. Building accessible from start ensures SF Supernova serves all users, ranks well in Google, and avoids legal risk. The goal: WCAG 2.1 AA compliance, achieved through semantic HTML, thoughtful design choices, and regular testing—creating a platform truly usable by everyone.**
+
+
 ### 8.5 SEO Readiness & Discoverability Standards
 
+**Strategic Overview**
+
+SEO (Search Engine Optimization) standards define how SF Supernova ensures content is discoverable by search engines and ranks competitively for relevant queries. For content-driven platforms with minimal marketing budgets, organic search is the primary acquisition channel—poor SEO means invisible content, no traffic, no conversions, no revenue. SEO readiness is not "nice-to-have marketing"—it's existential.
+
+**Core Principle:** *"Content invisible to Google might as well not exist. SEO readiness must be built into every page, every template, every editorial decision—not bolted on afterward."*
+
+**Why SEO Matters for SF Supernova:**
+
+1. **Primary Acquisition Channel:** Organic search drives 80%+ of traffic (no paid ads budget)
+2. **Long-Tail Advantage:** Niche content (vintage sci-fi) ranks better than competing against mainstream topics
+3. **Compound Returns:** SEO investment compounds (rankings improve over time with consistent quality)
+4. **Zero Marginal Cost:** Once ranking, traffic is free (vs paid ads = ongoing cost)
+5. **Authority Building:** High rankings signal credibility, increasing trust and conversions
+
+**SEO Failure Modes to Avoid:**
+
+- **Thin content:** Pages with <300 words that offer no unique value
+- **Duplicate content:** Multiple pages with identical or near-identical text
+- **Slow load times:** >3 second Core Web Vitals scores (Google penalty)
+- **Missing metadata:** No title tags, meta descriptions, or structured data
+- **Poor mobile experience:** Non-responsive design or mobile usability issues
+- **Broken links:** 404 errors, redirect chains, or link rot
+- **Keyword cannibalization:** Multiple pages competing for same query
+
+---
+
+**Core SEO Standards**
+
+**Technical SEO Foundation**
+
+| Requirement | Standard | Target | Implementation |
+|-------------|----------|--------|----------------|
+| **Page Speed (Desktop)** | Core Web Vitals: LCP <2.5s, FID <100ms, CLS <0.1 | 90%+ pages "Good" | Optimized images, lazy loading, CDN |
+| **Page Speed (Mobile)** | Core Web Vitals: LCP <2.5s, FID <100ms, CLS <0.1 | 85%+ pages "Good" | Responsive design, mobile-first CSS |
+| **HTTPS Security** | All pages served over HTTPS (SSL certificate) | 100% compliance | SSL cert + HSTS header |
+| **Mobile-Friendly** | Passes Google Mobile-Friendly Test | 100% compliance | Responsive design |
+| **Crawlability** | robots.txt allows indexing, sitemap.xml submitted | 100% compliance | Auto-generated sitemap |
+| **URL Structure** | Clean, descriptive URLs (no query params for content) | 100% compliance | Semantic URL routing |
+| **Canonical Tags** | Every page has self-referencing or proper canonical tag | 100% compliance | Template-level implementation |
+| **Status Codes** | Proper HTTP status codes (200, 301, 404—never 302/500) | 100% compliance | Server configuration |
+
+**On-Page SEO Standards**
+
+| Element | Requirement | Target | Validation |
+|---------|------------|--------|------------|
+| **Title Tag** | Unique, descriptive, 50-60 characters, includes primary keyword | 100% coverage | Pre-publish checklist |
+| **Meta Description** | Compelling summary, 150-160 characters, includes keyword + CTA | 100% coverage | Pre-publish checklist |
+| **H1 Heading** | One per page, descriptive, includes primary keyword | 100% coverage | Template enforcement |
+| **Heading Hierarchy** | Logical H1 → H2 → H3 structure (no skipping levels) | 100% compliance | Editorial standards |
+| **Image Alt Text** | Descriptive alt text for all images (accessibility + SEO) | 100% coverage | Pre-publish checklist |
+| **Internal Links** | 2-5 contextual internal links per page (related content) | 90%+ pages | Editorial guidance |
+| **External Links** | Link to authoritative sources (ISFDB, Wikipedia, author sites) | Content-dependent | Editorial discretion |
+| **Keyword Usage** | Primary keyword in title, H1, first 100 words, 2-3x in body | 100% adherence | SEO copywriting guide |
+| **Content Length** | Minimum 500 words for blog posts, 300 for product pages | 95%+ compliance | Editorial standards |
+| **Readability** | Flesch Reading Ease 60-70 (8th-9th grade level) | Target range | Editorial review |
+
+**Content SEO Strategy**
+
+| Strategy | Implementation | Rationale |
+|----------|----------------|-----------|
+| **Long-Tail Keywords** | Target specific queries ("1950s robot science fiction" vs "sci-fi") | Less competition, higher conversion intent |
+| **Topic Clusters** | Hub pages (e.g., "Golden Age Sci-Fi") link to spokes (individual authors/works) | Google rewards topical authority |
+| **Search Intent Matching** | Informational content for discovery, transactional for product pages | Match user expectations at each funnel stage |
+| **Evergreen Content** | Prioritize timeless content (author bios, genre guides) over news | Compound SEO value over time |
+| **Unique Value Proposition** | Every page must offer insight not available elsewhere | Google prioritizes originality |
+| **E-E-A-T Signals** | Demonstrate expertise (editorial team), authoritativeness (citations), trustworthiness (transparency) | Google quality guidelines |
+
+**Structured Data (Schema.org Markup)**
+
+**Required Schema Types:**
+
+- **Organization Schema:** Homepage (name, logo, contact, social links)
+- **WebSite Schema:** Search action for site search functionality
+- **BreadcrumbList Schema:** Navigation breadcrumbs on all pages
+- **Article Schema:** Blog posts, editorials (author, publish date, modified date)
+- **Product Schema:** Digital products (name, description, price, rating, availability)
+- **Review Schema:** User reviews with rating, author, date
+- **Person Schema:** Author/creator profiles (name, bio, image, social)
+- **FAQPage Schema:** FAQ sections (question/answer pairs)
+
+**Implementation:** JSON-LD format (preferred by Google), auto-generated from database, validated via Google Rich Results Test.
+
+**Legal Benefit:** Rich snippets (star ratings, prices, FAQs) increase click-through rates 20-30%.
+
+---
+
+**Sitemap & Indexation Strategy**
+
+**XML Sitemap Requirements:**
+
+- **Auto-Generated:** Sitemap.xml updates automatically when content published/modified
+- **Segmented:** Separate sitemaps for content types (pages, products, blog, audio)
+- **Priority Tags:** Indicate relative importance (homepage = 1.0, product pages = 0.8, blog = 0.6)
+- **Change Frequency:** Indicate update cadence (homepage = daily, products = weekly, static pages = monthly)
+- **Last Modified:** Include accurate lastmod dates (tells Google when to recrawl)
+- **Image Sitemap:** Include image URLs within content sitemaps (helps image search rankings)
+- **Submission:** Auto-submit to Google Search Console & Bing Webmaster Tools on updates
+
+**Robots.txt Configuration:**
+```
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /checkout/
+Disallow: /account/
+Disallow: /api/
+Sitemap: https://sfsupernova.com/sitemap.xml
+```
+
+**Rationale:** Allow all content indexing, block private/functional pages, point crawlers to sitemap.
+
+**Indexation Monitoring:**
+
+- **Weekly Checks:** Google Search Console for indexation errors, coverage issues
+- **Quarterly Audits:** Full site crawl (Screaming Frog) to identify broken links, redirect chains, orphaned pages
+- **Alerting:** Automatic notifications for sudden indexation drops (site-wide issues)
+
+---
+
+**Link Building & Authority Strategy**
+
+**Internal Linking Best Practices:**
+
+- **Contextual Links:** Link from relevant anchor text within body content (not just menus)
+- **Hub & Spoke Model:** Hub pages (topic overviews) link to spokes (specific content)
+- **Orphan Page Prevention:** Every page accessible within 3 clicks from homepage
+- **Link Equity Distribution:** Prioritize linking to high-value pages (products, pillar content)
+- **Broken Link Monitoring:** Quarterly audits to fix 404s, update moved content
+
+**External Link Strategy:**
+
+- **Earn Links Naturally:** Create cite-worthy content (author guides, genre histories, curated lists)
+- **Outreach:** Contact vintage sci-fi bloggers, podcast hosts, academic researchers (offer collaboration)
+- **Guest Posts:** Contribute to relevant publications (ISFDB blog, genre communities)
+- **Resource Pages:** Get listed on "best sci-fi resources" pages (universities, libraries, fan sites)
+- **Avoid Spammy Tactics:** No link farms, paid links (Google penalty risk), or comment spam
+
+**Link Quality Metrics:**
+
+- **Domain Authority:** Prioritize links from high-authority sites (DA 40+)
+- **Relevance:** Links from vintage sci-fi, literature, book sites (not generic directories)
+- **Do-Follow Links:** Prefer do-follow links (pass link equity) over no-follow
+
+---
+
+**Local SEO (If Applicable)**
+
+*Note: SF Supernova is a digital-only platform with no physical location, so traditional local SEO (Google My Business, NAP citations) does not apply. However, if future plans include physical presence (events, meetups, bookstore partnerships), revisit this section.*
+
+---
+
+**SEO Monitoring & Analytics**
+
+**Required Tools:**
+
+- **Google Search Console:** Track indexation, search queries, click-through rates, Core Web Vitals
+- **Google Analytics 4:** Traffic sources, user behavior, conversion tracking
+- **Bing Webmaster Tools:** Secondary search engine monitoring (10-15% of search traffic)
+
+**Key SEO Metrics (Tracked Monthly):**
+
+| Metric | Target | Rationale |
+|--------|--------|-----------|
+| **Organic Traffic** | +10% MoM | Primary growth indicator |
+| **Keyword Rankings (Top 10)** | 50+ keywords | Visibility in search results |
+| **Average Position** | <20 (ideally <10) | Higher = more clicks |
+| **Click-Through Rate (CTR)** | 3-5% (position-dependent) | Well-optimized titles/descriptions |
+| **Indexation Coverage** | 95%+ pages indexed | Content accessible to Google |
+| **Core Web Vitals (Good)** | 80%+ pages | Google ranking factor |
+| **Backlinks (New/Month)** | +5-10 | Growing authority |
+| **Crawl Errors** | <10 | Site health indicator |
+
+**Quarterly SEO Audit Checklist:**
+
+- [ ] Full site crawl (Screaming Frog) for technical issues
+- [ ] Broken link check & fix
+- [ ] Thin content review (<300 words, low value)
+- [ ] Duplicate content check (canonical tags, consolidation)
+- [ ] Keyword cannibalization analysis (multiple pages targeting same query)
+- [ ] Mobile usability test (Google Mobile-Friendly Test)
+- [ ] Page speed audit (PageSpeed Insights, GTmetrix)
+- [ ] Structured data validation (Google Rich Results Test)
+- [ ] Competitor ranking analysis (who's outranking us, why?)
+- [ ] Backlink profile review (disavow toxic links if necessary)
+
+---
+
+**SEO-Friendly Content Workflow**
+
+**Pre-Publish SEO Checklist:**
+
+Every piece of content must pass this checklist before publication:
+
+- [ ] **Keyword Research:** Target keyword identified (search volume >100/month, low-medium competition)
+- [ ] **Title Tag:** 50-60 characters, includes primary keyword, compelling phrasing
+- [ ] **Meta Description:** 150-160 characters, includes keyword + CTA, enticing summary
+- [ ] **H1 Heading:** Matches or closely relates to title tag, includes primary keyword
+- [ ] **Heading Hierarchy:** Logical H1 → H2 → H3 structure (no skipping levels)
+- [ ] **Keyword Usage:** Primary keyword in first 100 words, 2-3x naturally in body, in conclusion
+- [ ] **Content Length:** Meets minimum standards (500+ words blog, 300+ words product)
+- [ ] **Internal Links:** 2-5 contextual links to related content
+- [ ] **External Links:** 1-2 links to authoritative sources (if applicable)
+- [ ] **Image Alt Text:** All images have descriptive alt text
+- [ ] **Image Optimization:** File size <200KB, descriptive filenames (not IMG_1234.jpg)
+- [ ] **Readability:** Flesch score 60-70, paragraphs <4 sentences, active voice
+- [ ] **Unique Value:** Content offers insight/perspective not available elsewhere
+- [ ] **Canonical Tag:** Set correctly (usually self-referencing)
+- [ ] **Structured Data:** Appropriate schema markup applied (Article, Product, etc.)
+- [ ] **Mobile Preview:** Content readable, CTA buttons accessible on mobile
+
+**Editorial SEO Guidelines:**
+
+- **Write for Humans First:** SEO-optimized content must still be engaging, readable, valuable
+- **Avoid Keyword Stuffing:** Natural language > awkward keyword insertion
+- **Update Old Content:** Refresh underperforming pages (add sections, improve formatting, update info)
+- **Answer User Questions:** Use FAQ sections, "how-to" content (matches voice search queries)
+- **Use Descriptive Anchor Text:** "Read our guide to 1950s sci-fi" > "Click here"
+
+---
+
+**SEO Penalties & Risk Mitigation**
+
+**Google Manual Actions (to Avoid):**
+
+- **Thin Content:** Pages with no unique value (scraped, auto-generated, or minimal text)
+- **Keyword Stuffing:** Unnatural repetition of keywords
+- **Cloaking:** Showing different content to users vs. search engines
+- **Paid Links:** Buying links or link schemes
+- **Malware/Hacked Content:** Security breaches that inject spam
+- **User-Generated Spam:** Unmoderated comments with spammy links
+
+**Mitigation Strategy:**
+
+- **Quality-First Approach:** Every page must provide genuine value
+- **Regular Audits:** Quarterly technical SEO audits to catch issues early
+- **Security Monitoring:** HTTPS, regular updates, malware scanning
+- **Ethical Link Building:** Earn links through quality content, not manipulation
+- **Google Webmaster Guidelines Compliance:** Follow official guidelines explicitly
+
+**If Manual Action Occurs:**
+
+1. Identify issue via Google Search Console
+2. Fix underlying problem (remove spam, improve content, disavow bad links)
+3. Submit reconsideration request via Search Console
+4. Monitor resolution (typically 2-4 weeks)
+
+---
+
+**SEO Roadmap by Phase**
+
+**Phase 1 (PRD v1—Product Engine Launch):**
+
+- ✅ Technical SEO foundation (HTTPS, mobile-friendly, fast load times)
+- ✅ On-page SEO (title tags, meta descriptions, H1s, alt text)
+- ✅ XML sitemap auto-generation
+- ✅ Google Search Console & Analytics setup
+- ✅ Structured data (Product, Organization, WebSite schema)
+- ✅ Internal linking strategy (related products, editorial to products)
+
+**Phase 2 (Membership System Launch):**
+
+- ✅ Content expansion (blog posts, author guides, genre primers)
+- ✅ Topic clusters (hub-and-spoke linking)
+- ✅ Link building outreach (vintage sci-fi community)
+- ✅ Core Web Vitals optimization (target "Good" scores site-wide)
+
+**Phase 3 (Discovery Engine Launch):**
+
+- ✅ Advanced filters/search (user-facing + SEO benefits)
+- ✅ Long-tail keyword targeting (specific queries like "1952 robot invasion stories")
+- ✅ Evergreen content library (comprehensive author/genre guides)
+- ✅ Rich snippets optimization (FAQs, ratings, reviews)
+
+**Phase 4 (Structured Data Tools Launch):**
+
+- ✅ Advanced schema (Dataset, DataFeed for research tools)
+- ✅ API documentation (if public, generates inbound links from developers)
+- ✅ Authority content (whitepapers, research, genre analysis)
+
+---
+
+**SEO Success Metrics (Annual Targets)**
+
+| Year | Organic Traffic/Month | Keywords Ranking (Top 10) | Domain Authority | Conversion Rate (Organic) |
+|------|----------------------|---------------------------|------------------|---------------------------|
+| **Year 1** | 5,000 sessions | 50+ keywords | DA 15-20 | 0.5-1% |
+| **Year 2** | 15,000 sessions | 150+ keywords | DA 25-30 | 1-2% |
+| **Year 3** | 40,000 sessions | 300+ keywords | DA 35-40 | 2-3% |
+
+**Rationale:** SEO compounds over time—rankings improve, backlinks accumulate, authority grows. Initial growth slow (6-12 months), then accelerates.
+
+---
+
+**Example: SEO-Optimized Product Page**
+
+**Page URL:** `https://sfsupernova.com/products/robots-have-no-tails-henry-kuttner`
+
+**Title Tag:** "Robots Have No Tails by Henry Kuttner | Curated Golden Age Sci-Fi"
+
+**Meta Description:** "Discover Henry Kuttner's Robots Have No Tails—witty, inventive Golden Age sci-fi. Expertly curated with author bio, reading guide, and historical context. Shop now."
+
+**H1:** Robots Have No Tails by Henry Kuttner
+
+**Structured Data (JSON-LD):**
+```json
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "Robots Have No Tails by Henry Kuttner",
+  "image": "https://sfsupernova.com/images/robots-no-tails.jpg",
+  "description": "A collection of humorous sci-fi stories featuring Gallegher, the drunken inventor...",
+  "brand": {
+    "@type": "Brand",
+    "name": "Henry Kuttner"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://sfsupernova.com/products/robots-have-no-tails-henry-kuttner",
+    "priceCurrency": "GBP",
+    "price": "2.99",
+    "availability": "https://schema.org/InStock"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "23"
+  }
+}
+```
+
+**Internal Links (in description):**
+- "Explore more by [Henry Kuttner](link)"
+- "Discover other [Golden Age sci-fi classics](link)"
+- "Read our [guide to 1940s science fiction](link)"
+
+**Image Alt Text:** "Cover of Robots Have No Tails by Henry Kuttner showing retro robot illustration"
+
+**Legal Benefit:** Well-optimized product page ranks for "Henry Kuttner Robots Have No Tails," driving organic traffic that converts at 2-5% (vs paid ads 0.5-1%).
+
+---
+
+**Summary: SEO as Growth Engine**
+
+**Why SEO Matters:**
+
+- **Primary Traffic Source:** 80%+ of users arrive via organic search (no ads budget)
+- **Compound Returns:** Rankings improve over time, generating increasing traffic with no marginal cost
+- **Trust Signal:** High rankings signal authority, credibility (users trust Google results)
+- **Conversion Efficiency:** Organic traffic converts better than cold ads (users actively searching)
+- **Sustainable Advantage:** Once ranking, difficult for competitors to displace (unlike ads = stop paying, traffic stops)
+
+**SEO Principles:**
+
+1. **Technical Foundation First:** Fast, mobile-friendly, secure, crawlable (table stakes)
+2. **Content is King:** Unique, valuable, well-structured content (Google rewards quality)
+3. **On-Page Optimization:** Every page optimized (title, meta, headings, keywords, internal links)
+4. **Structured Data:** Help Google understand content (rich snippets = higher CTR)
+5. **Monitor & Iterate:** Track metrics, identify issues, fix quickly (SEO is ongoing, not one-time)
+
+**SEO is not a marketing tactic—it's the foundation of SF Supernova's acquisition strategy. Without it, even the best content remains invisible. With it, organic search becomes a predictable, scalable, zero-marginal-cost growth engine. The goal: build every page, every template, every editorial workflow with SEO readiness from the start—not bolted on later. Search visibility is not optional; it's survival.**
 ### 8.6 Maintainability & Technical Debt Management
 
 ### 8.7 Cost Discipline & Infrastructure Constraints
