@@ -32164,16 +32164,7 @@ Operational and support requirements define how SF Supernova maintains day-to-da
 
 
 
-## 9. Content & Data Requirements
-Rules for:
-•⁠  ⁠Metadata standards
-•⁠  ⁠Text cleaning and OCR correction
-•⁠  ⁠Art ingestion and quality thresholds
-•⁠  ⁠Audio indexing
-•⁠  ⁠Corpus consistency
-All aligned to product creation and searchability.
 
-### 9.1 Content Governance Framework
 ## 9. User Experience & Interface Standards
 Defines interaction patterns, navigation, responsive design, onboarding flows, and UX principles that make SF Supernova intuitive and delightful.
 
@@ -33513,29 +33504,7 @@ Accessible design ensures SF Supernova is usable by people with disabilities (vi
 
 
 
-## 10. User Experience Principles & Navigation Framework
-Defines:
-•⁠  ⁠Reading flow
-•⁠  ⁠Browsing structure
-•⁠  ⁠Search and discovery patterns
-•⁠  ⁠Conversion pathways (free → product → membership)
 
-
-### 10.1 UX Design Philosophy & Core Principles
-
-### 10.2 Reading Flow & Content Consumption Patterns
-
-### 10.3 Browsing Structure & Information Architecture
-
-### 10.4 Search & Discovery Patterns
-
-### 10.5 Conversion Pathways (Free → Product → Membership)
-
-### 10.6 Navigation Hierarchy & Wayfinding
-
-### 10.7 Responsive & Cross-Device Considerations
-
-### 10.8 Onboarding & First-Time User Experience
 
 
 ## 10. Data Model & Content Structure
@@ -34828,21 +34797,1499 @@ Translates the board-approved sequence into concrete releases:
 •⁠  ⁠Phase 3: Option 5 expansion
 Includes commercial triggers for each phase.
 
-### 11.1 Phasing Strategy & Rationale
+## 11. Technical Architecture & Infrastructure
+Defines the technology stack, system architecture, API design, third-party integrations, and deployment strategy.
 
-### 11.2 Phase 1: Digital Products & Membership (Options 3 & 2)
+### 11.1 Technology Stack Selection & Rationale
 
-### 11.3 Phase 2: Structured Data & Discovery Enhancement (Options 4 & 1)
+**Strategic Overview**
 
-### 11.4 Phase 3: Expansion & Advanced Features (Option 5)
+Technology stack selection determines SF Supernova's development velocity, operational costs, scalability ceiling, and maintainability burden. For a solo-founder, bootstrapped platform, the stack must optimize for: (1) developer productivity (build fast), (2) operational simplicity (minimal DevOps), (3) cost efficiency (low hosting costs), and (4) future flexibility (avoid lock-in). The stack should be boring, proven, and well-documented—not cutting-edge or experimental.
 
-### 11.5 Commercial Triggers & Go/No-Go Criteria
+**Core Principle:** *"Choose boring technology. Optimize for productivity and operational simplicity over resume-driven development. Every technology choice is a long-term commitment—choose wisely."*
 
-### 11.6 Release Timeline & Milestones
+**Technology Stack Decision Framework:**
 
-### 11.7 Inter-Phase Dependencies & Sequencing Logic
+| Criterion | Weight | Questions to Ask |
+|-----------|--------|------------------|
+| **Maturity** | Critical | Proven in production? Active community? Stable APIs? |
+| **Developer Experience** | High | Fast iteration? Good debugging tools? Clear documentation? |
+| **Ecosystem** | High | Rich library ecosystem? Easy to hire help? Abundant tutorials? |
+| **Operational Simplicity** | High | Easy to deploy? Minimal server management? Good monitoring tools? |
+| **Cost Efficiency** | Medium | Hosting costs scale linearly? Generous free tiers? Avoid vendor lock-in? |
+| **Performance** | Medium | Fast enough for target load? (10,000 users, not 10 million—don't over-optimize) |
+| **Flexibility** | Medium | Can migrate if needed? Open-source alternatives available? |
 
-### 11.8 Roadmap Flexibility & Adaptation Framework
+---
+
+**Recommended Technology Stack (Phase 1)**
+
+**Frontend Stack:**
+
+| Component | Technology | Rationale |
+|-----------|-----------|-----------|
+| **Framework** | **Next.js 14+** (React) | Industry standard, excellent DX, built-in SSR/SSG (SEO), Vercel hosting (zero-config), huge ecosystem |
+| **Styling** | **Tailwind CSS** | Utility-first, fast iteration, small bundle size, no CSS-in-JS overhead |
+| **State Management** | **React Context + Hooks** (Phase 1), Zustand (Phase 2+) | Built-in (Context), lightweight (Zustand)—avoid Redux complexity |
+| **Data Fetching** | **SWR** or **React Query** | Client-side caching, automatic revalidation, optimistic updates, excellent DX |
+| **Forms** | **React Hook Form** | Performant, minimal re-renders, excellent validation, TypeScript support |
+| **UI Components** | **Headless UI** + custom Tailwind | Accessible primitives (modals, dropdowns), full styling control |
+
+**Why Next.js?**
+
+- **SSR/SSG:** SEO-critical pages (product, browse) server-rendered, user pages (account) client-rendered
+- **File-Based Routing:** `/pages/product/[slug].js` → automatic routing (no config)
+- **API Routes:** `/pages/api/...` → serverless functions (backend logic without separate server)
+- **Image Optimization:** `<Image>` component (automatic lazy loading, WebP conversion, responsive images)
+- **Vercel Hosting:** Zero-config deployment, auto-scaling, CDN, preview deployments (£0 Hobby tier)
+
+**Alternatives Considered:**
+
+- **Remix:** Excellent framework, but smaller ecosystem, less mature hosting options
+- **Astro:** Great for static sites, but SF Supernova needs dynamic user accounts/checkout
+- **Vue/Nuxt:** Comparable to React/Next, but smaller talent pool (harder to hire help)
+
+---
+
+**Backend Stack:**
+
+| Component | Technology | Rationale |
+|-----------|-----------|-----------|
+| **API Framework** | **Next.js API Routes** (Phase 1) or **Node.js + Express** (Phase 2+) | Next.js API routes for simplicity (Phase 1), migrate to standalone Express if complex logic needed (Phase 2+) |
+| **Language** | **TypeScript** | Type safety (catch bugs at compile time), excellent IDE support, industry standard |
+| **Database** | **PostgreSQL 15+** | Best open-source RDBMS, excellent for structured data (products, orders), JSONB for flexible metadata, battle-tested |
+| **ORM** | **Prisma** | Excellent DX, type-safe queries, automatic migrations, great with TypeScript |
+| **Authentication** | **NextAuth.js** or **Clerk** | NextAuth (free, open-source, flexible), Clerk (paid, better UX, faster integration) |
+| **File Storage** | **Cloudflare R2** | S3-compatible, zero egress fees (critical for digital product delivery), cheap storage (£0.015/GB) |
+| **Email** | **SendGrid** (free tier) or **Resend** | SendGrid (mature, 100 emails/day free), Resend (modern, better DX, £0.80/1000 emails) |
+| **Payments** | **Stripe** | Industry standard, excellent docs, Stripe Checkout (hosted, PCI compliant), subscription management |
+| **Background Jobs** | **Inngest** or **BullMQ + Redis** | Inngest (serverless, simple), BullMQ (self-hosted, more control)—for async tasks (email sends, analytics) |
+
+**Why PostgreSQL?**
+
+- **Relational Data:** Products, authors, orders, users have clear relationships (foreign keys, joins)
+- **JSONB:** Flexible metadata storage (user preferences, product tags) without schema bloat
+- **Full-Text Search:** Built-in (good enough for Phase 1, Algolia for Phase 3 if needed)
+- **Mature Ecosystem:** Prisma, pg_dump backups, pgAdmin, battle-tested at scale
+- **Cost-Effective:** Neon (free tier → £19/month), Railway (£20/month), or self-hosted VPS (£0 incremental)
+
+**Alternatives Considered:**
+
+- **MySQL:** Comparable to Postgres, but weaker JSON support, less modern features
+- **MongoDB:** No-SQL great for unstructured data, but SF Supernova's data is highly structured (products, orders)—relational DB better fit
+- **Supabase:** Postgres + auth + storage + realtime (all-in-one), but more vendor lock-in than plain Postgres
+
+---
+
+**Hosting & Infrastructure:**
+
+| Component | Technology | Rationale |
+|-----------|-----------|-----------|
+| **Frontend Hosting** | **Vercel** (Hobby tier, £0) | Zero-config Next.js deployment, auto-scaling, CDN, preview URLs, generous free tier |
+| **Database Hosting** | **Neon** (free tier → £19/month Pro) | Serverless Postgres, auto-scaling, generous free tier (0.5GB), easy backups |
+| **CDN** | **Cloudflare** (free tier) | Unlimited bandwidth, 200+ edge locations, DDoS protection, SSL certificates, page rules |
+| **File Storage** | **Cloudflare R2** (£0.015/GB storage, £0 egress) | S3-compatible, zero egress fees (massive savings for digital product downloads) |
+| **Email Sending** | **SendGrid** (free tier, 100/day) | Reliable, 100 emails/day free (sufficient Phase 1), upgrade to £15/month as needed |
+| **Monitoring** | **Sentry** (free tier, 5K events/month) | Error tracking, performance monitoring, free tier sufficient Phase 1 |
+| **Uptime Monitoring** | **UptimeRobot** (free tier, 50 monitors) | 5-min checks, email alerts, free tier sufficient |
+| **Analytics** | **Google Analytics 4** (free) | Traffic analytics, user behavior, conversion tracking, free forever |
+
+**Total Infrastructure Cost (Phase 1):**
+
+| Service | Cost | Notes |
+|---------|------|-------|
+| Vercel Hosting | £0 | Hobby tier (sufficient for 100-500 users) |
+| Neon Database | £0-19 | Free tier → Pro when >0.5GB or need backups |
+| Cloudflare CDN | £0 | Free tier (unlimited bandwidth) |
+| Cloudflare R2 | £5 | ~50GB storage + unlimited downloads |
+| SendGrid Email | £0 | Free tier (100 emails/day) |
+| Sentry Monitoring | £0 | Free tier (5K events/month) |
+| UptimeRobot | £0 | Free tier |
+| Google Analytics | £0 | Free |
+| Domain (.com) | £15/year | Cloudflare Registrar (at-cost) |
+| **Total** | **£5-25/month** | **Phase 1 budget: well under £150/month target** |
+
+---
+
+**Development Tools:**
+
+| Tool | Purpose | Cost |
+|------|---------|------|
+| **VS Code** | Code editor | Free |
+| **GitHub** | Version control, CI/CD (Actions) | Free (public repos, 2K CI/CD min/month) |
+| **Figma** | Design, mockups | Free (3 files, unlimited viewers) |
+| **Insomnia/Postman** | API testing | Free |
+| **DBeaver/pgAdmin** | Database GUI | Free (open-source) |
+| **Notion** (optional) | Task management, docs | Free (solo use) |
+
+**Total Dev Tools Cost: £0**
+
+---
+
+**Technology Stack Diagram (Phase 1 Architecture):**
+```
+┌─────────────────────────────────────────────────────────────┐
+│                         USERS                               │
+│                    (Browser, Mobile)                        │
+└────────────────────────┬────────────────────────────────────┘
+                         │
+                         ▼
+┌─────────────────────────────────────────────────────────────┐
+│                   CLOUDFLARE CDN                            │
+│              (Caching, DDoS, SSL, DNS)                      │
+└────────────────────────┬────────────────────────────────────┘
+                         │
+                         ▼
+┌─────────────────────────────────────────────────────────────┐
+│                  VERCEL (Frontend)                          │
+│                                                             │
+│  ┌──────────────────────────────────────────────────┐      │
+│  │         Next.js App                              │      │
+│  │  • Pages (SSR/SSG)                              │      │
+│  │  • API Routes (Serverless Functions)           │      │
+│  │  • React Components                             │      │
+│  └──────────────────┬───────────────────────────────┘      │
+└────────────────────┼────────────────────────────────────────┘
+                     │
+        ─────────────┼─────────────────────────────
+        │            │            │                │
+        ▼            ▼            ▼                ▼
+  ┌─────────┐  ┌─────────┐  ┌─────────┐    ┌──────────┐
+  │  NEON   │  │ STRIPE  │  │CLOUDFLARE│    │SENDGRID │
+  │ (DB)    │  │(Payment)│  │   R2     │    │ (Email) │
+  │         │  │         │  │ (Storage)│    │         │
+  │Postgres │  │  API    │  │ Digital  │    │Transact.│
+  └─────────┘  └─────────┘  │ Products │    │ Emails  │
+                             └─────────┘    └──────────┘
+```
+
+**Data Flow:**
+
+1. **User visits sfsupernova.com** → Cloudflare CDN (cached assets) → Vercel (Next.js app)
+2. **User browses products** → Next.js queries Neon (Postgres) → renders page (SSR)
+3. **User adds to cart** → Client-side state (React Context)
+4. **User checks out** → Next.js API route → Stripe Checkout (hosted) → Payment processed
+5. **Stripe webhook** → Next.js API route → Create order (Neon) → Send email (SendGrid) → Deliver download link (Cloudflare R2 signed URL)
+6. **User downloads product** → Cloudflare R2 → File delivered (zero egress fees)
+
+---
+
+**Why This Stack?**
+
+**Advantages:**
+
+1. **Low Operational Burden:** Serverless (Vercel, Neon) = no server management, auto-scaling
+2. **Cost-Efficient:** ~£5-25/month Phase 1 (well under £150 budget)
+3. **Developer Productivity:** Next.js + TypeScript + Prisma = fast iteration, type-safe
+4. **Proven & Boring:** Every component battle-tested by thousands of production apps
+5. **Flexible:** Can migrate off Vercel (self-host Next.js), off Neon (self-host Postgres), off R2 (S3-compatible)—no hard lock-in
+6. **SEO-Ready:** Next.js SSR/SSG optimized for SEO (critical for content platform)
+
+**Trade-Offs:**
+
+1. **Vercel Vendor Lock-In (Mild):** Hosting tied to Vercel (but can self-host Next.js if needed)
+2. **Serverless Cold Starts:** API routes may have 100-500ms cold start (acceptable for Phase 1, optimize later)
+3. **PostgreSQL Complexity:** More complex than NoSQL (but SF Supernova's data is relational—right tool for job)
+
+**Alternatives Rejected:**
+
+- **LAMP Stack (PHP/MySQL):** Outdated, poor DX, slow iteration
+- **Ruby on Rails:** Great framework, but smaller ecosystem than Node/React, harder to hire
+- **Django (Python):** Excellent for backend-heavy apps, but Next.js better for SEO + frontend experience
+- **Full AWS Stack:** Over-engineered, expensive, steep learning curve (avoid unless scale demands it)
+
+---
+
+### 11.2 System Architecture & Component Design
+
+**Strategic Overview**
+
+System architecture defines how SF Supernova's components (frontend, backend, database, storage, third-party services) interact to deliver functionality. A well-architected system is modular (components can be replaced), scalable (handles 10x growth without rewrite), and maintainable (clear boundaries, minimal coupling). This section defines the architectural patterns, component responsibilities, and integration points.
+
+**Core Principle:** *"Design for modularity and separation of concerns. Frontend renders UI, backend handles business logic, database stores data, third-party services handle specialized tasks (payment, email). Each component does one thing well."*
+
+---
+
+**Architectural Pattern: Serverless Monolith (Phase 1)**
+
+**Pattern Definition:**
+
+- **Monolith:** All code in one repository (Next.js app)
+- **Serverless:** Deployed to Vercel (auto-scaling, no server management)
+- **API Routes as Backend:** `/pages/api/*` handle business logic (lightweight Node.js functions)
+
+**Why Serverless Monolith?**
+
+**Advantages:**
+
+- **Simplicity:** One codebase, one deployment, easy to reason about
+- **Fast Iteration:** No microservice complexity (no inter-service communication overhead)
+- **Low Ops Burden:** Vercel handles scaling, monitoring, CDN
+- **Type Safety:** Frontend + backend in same repo → shared TypeScript types
+
+**Limitations:**
+
+- **Scaling Ceiling:** Vercel function limits (10s timeout, 50MB response size)—fine for Phase 1-2, may need migration Phase 3+
+- **Tight Coupling:** Frontend + backend changes require full redeploy (acceptable for small team/solo founder)
+
+**When to Migrate (Phase 3+):**
+
+- **Trigger:** API functions exceeding 10s timeout, need background jobs, microservice architecture needed
+- **Migration Path:** Extract backend to standalone Node.js + Express, deploy to VPS/Railway/Fly.io
+
+---
+
+**Component Architecture (Logical Layers)**
+
+**1. Presentation Layer (Frontend)**
+
+**Responsibilities:**
+
+- Render UI (pages, components)
+- Handle user interactions (clicks, form submissions)
+- Manage client-side state (cart, filters, UI state)
+- Fetch data from backend (API routes)
+- Display data (product lists, user account, etc.)
+
+**Technologies:**
+
+- **React Components:** Reusable UI elements (ProductCard, Button, Modal)
+- **Next.js Pages:** File-based routing (`/pages/product/[slug].tsx`)
+- **Tailwind CSS:** Styling (utility-first, responsive)
+- **SWR/React Query:** Data fetching, caching, revalidation
+
+**Key Patterns:**
+
+- **Component Composition:** Build complex UIs from simple components
+- **Server-Side Rendering (SSR):** Product pages, browse pages (SEO-critical)
+- **Client-Side Rendering (CSR):** User account, cart (auth-required, dynamic)
+- **Static Generation (SSG):** Homepage, blog posts (content changes infrequently)
+
+---
+
+**2. Application Layer (Backend API)**
+
+**Responsibilities:**
+
+- Handle HTTP requests (GET /api/products, POST /api/checkout)
+- Validate input (form data, query params)
+- Execute business logic (calculate discounts, create orders)
+- Interact with database (Prisma ORM)
+- Call third-party services (Stripe, SendGrid)
+- Return JSON responses
+
+**Technologies:**
+
+- **Next.js API Routes:** `/pages/api/products.ts`, `/pages/api/checkout.ts`
+- **TypeScript:** Type-safe API handlers
+- **Prisma:** Database queries (type-safe, auto-generated client)
+- **Zod:** Schema validation (validate request bodies, query params)
+
+**Key Patterns:**
+
+- **RESTful API:** Standard HTTP methods (GET, POST, PUT, DELETE)
+- **Middleware:** Authentication checks, request logging, error handling
+- **Dependency Injection:** Pass database client, services to handlers (testability)
+- **Error Handling:** Consistent error responses (JSON, HTTP status codes)
+
+**Example API Route:**
+```typescript
+// /pages/api/products/[slug].ts
+import { NextApiRequest, NextApiResponse } from 'next';
+import { prisma } from '@/lib/prisma';
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { slug } = req.query;
+  
+  if (req.method === 'GET') {
+    try {
+      const product = await prisma.product.findUnique({
+        where: { slug: String(slug) },
+        include: {
+          authors: true,
+          genres: true,
+          formats: true,
+        },
+      });
+      
+      if (!product) {
+        return res.status(404).json({ error: 'Product not found' });
+      }
+      
+      return res.status(200).json(product);
+    } catch (error) {
+      console.error('Error fetching product:', error);
+      return res.status(500).json({ error: 'Internal server error' });
+    }
+  } else {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+}
+```
+
+---
+
+**3. Data Layer (Database)**
+
+**Responsibilities:**
+
+- Store structured data (users, products, orders)
+- Enforce data integrity (foreign keys, constraints)
+- Support efficient queries (indexes)
+- Handle transactions (atomicity for orders, payments)
+- Enable data migrations (schema changes)
+
+**Technologies:**
+
+- **PostgreSQL:** Relational database
+- **Prisma:** ORM (Object-Relational Mapping)
+- **Neon:** Managed Postgres hosting
+
+**Key Patterns:**
+
+- **Normalized Schema:** Avoid data duplication (authors, genres in separate tables)
+- **Foreign Keys:** Enforce relationships (orders → users, order_items → products)
+- **Indexes:** Speed up queries (slug, email, created_at)
+- **Transactions:** Atomic operations (create order + order items in single transaction)
+
+**Example Prisma Schema:**
+```prisma
+// schema.prisma
+model Product {
+  id          String   @id @default(uuid())
+  title       String
+  slug        String   @unique
+  description String?
+  price_gbp   Decimal  @db.Decimal(10, 2)
+  status      ProductStatus @default(DRAFT)
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+  
+  authors     ProductAuthor[]
+  genres      ProductGenre[]
+  orderItems  OrderItem[]
+}
+
+model Author {
+  id       String   @id @default(uuid())
+  name     String
+  slug     String   @unique
+  bio      String?
+  
+  products ProductAuthor[]
+}
+
+model ProductAuthor {
+  product_id String
+  author_id  String
+  product    Product @relation(fields: [product_id], references: [id])
+  author     Author  @relation(fields: [author_id], references: [id])
+  
+  @@id([product_id, author_id])
+}
+
+enum ProductStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+```
+
+---
+
+**4. Integration Layer (Third-Party Services)**
+
+**Responsibilities:**
+
+- Payment processing (Stripe)
+- Email delivery (SendGrid)
+- File storage (Cloudflare R2)
+- Error tracking (Sentry)
+- Analytics (Google Analytics)
+
+**Technologies:**
+
+- **Stripe SDK:** `stripe` npm package
+- **SendGrid SDK:** `@sendgrid/mail` npm package
+- **AWS SDK:** `@aws-sdk/client-s3` (S3-compatible for R2)
+- **Sentry SDK:** `@sentry/nextjs`
+
+**Key Patterns:**
+
+- **Abstraction:** Wrap third-party SDKs in service classes (easier to mock, test, replace)
+- **Error Handling:** Graceful degradation (if SendGrid fails, log error but don't block checkout)
+- **Webhooks:** Listen for events (Stripe payment succeeded → create order)
+- **Retry Logic:** Retry failed API calls (SendGrid rate limit → retry after 1s)
+
+**Example Service Abstraction:**
+```typescript
+// /lib/services/email.ts
+import sgMail from '@sendgrid/mail';
+
+sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
+
+export class EmailService {
+  async sendOrderConfirmation(to: string, orderData: any) {
+    try {
+      await sgMail.send({
+        to,
+        from: 'orders@sfsupernova.com',
+        subject: `Order Confirmation - ${orderData.orderNumber}`,
+        html: `<p>Thanks for your order!</p>...`,
+      });
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      // Don't throw—log error but don't block order creation
+    }
+  }
+}
+
+export const emailService = new EmailService();
+```
+
+---
+
+**5. Storage Layer (Files)**
+
+**Responsibilities:**
+
+- Store digital products (ePub, audio files)
+- Store cover images, author photos
+- Generate signed URLs (time-limited download links)
+- Handle large files efficiently (streaming, CDN)
+
+**Technologies:**
+
+- **Cloudflare R2:** S3-compatible object storage
+- **AWS SDK:** `@aws-sdk/client-s3` (works with R2)
+- **Pre-Signed URLs:** Generate time-limited download links (1 hour expiry)
+
+**Key Patterns:**
+
+- **Signed URLs:** Don't expose raw file URLs (prevent unauthorized downloads)
+- **CDN Delivery:** Serve files via Cloudflare CDN (fast, no egress fees)
+- **File Organization:** Organize by type (`/products/`, `/covers/`, `/authors/`)
+- **Lazy Loading:** Load images on-demand (not all upfront)
+
+**Example File Storage Service:**
+```typescript
+// /lib/services/storage.ts
+import { S3Client, GetObjectCommand, PutObjectCommand } from '@aws-sdk/client-s3';
+import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
+
+const s3 = new S3Client({
+  region: 'auto',
+  endpoint: process.env.R2_ENDPOINT,
+  credentials: {
+    accessKeyId: process.env.R2_ACCESS_KEY_ID!,
+    secretAccessKey: process.env.R2_SECRET_ACCESS_KEY!,
+  },
+});
+
+export class StorageService {
+  async getDownloadUrl(productId: string, format: string): Promise<string> {
+    const key = `products/${productId}.${format}`;
+    const command = new GetObjectCommand({
+      Bucket: 'sf-supernova',
+      Key: key,
+    });
+    
+    // Generate signed URL (expires in 1 hour)
+    return getSignedUrl(s3, command, { expiresIn: 3600 });
+  }
+  
+  async uploadProductFile(
+    productId: string,
+    format: string,
+    fileBuffer: Buffer
+  ): Promise<void> {
+    const key = `products/${productId}.${format}`;
+    await s3.send(new PutObjectCommand({
+      Bucket: 'sf-supernova',
+      Key: key,
+      Body: fileBuffer,
+      ContentType: this.getMimeType(format),
+    }));
+  }
+  
+  private getMimeType(format: string): string {
+    const mimeTypes: Record<string, string> = {
+      epub: 'application/epub+zip',
+      pdf: 'application/pdf',
+      mp3: 'audio/mpeg',
+    };
+    return mimeTypes[format] || 'application/octet-stream';
+  }
+}
+
+export const storageService = new StorageService();
+```
+
+---
+
+**Component Interaction Flow (Example: User Purchases Product)**
+
+**Sequence:**
+
+1. **User clicks "Add to Cart"**
+   - Frontend: Update cart state (React Context)
+   - No API call yet (cart is client-side only until checkout)
+
+2. **User clicks "Proceed to Checkout"**
+   - Frontend: Navigate to `/checkout`
+   - Render checkout form (email, payment)
+
+3. **User submits checkout form**
+   - Frontend: POST `/api/checkout` with cart items, email, Stripe payment token
+   - Backend (`/api/checkout.ts`):
+     a. Validate input (Zod schema)
+     b. Calculate total (apply membership discount if applicable)
+     c. Create Stripe payment intent
+     d. If payment succeeds:
+        - Create order record (Prisma transaction)
+        - Create order items (link to products)
+        - Generate download links (signed URLs from R2)
+        - Send order confirmation email (SendGrid)
+     e. Return order details to frontend
+
+4. **Frontend receives success response**
+   - Clear cart
+   - Navigate to `/thank-you?orderId=...`
+   - Display order confirmation, download links
+
+5. **User clicks "Download"**
+   - Frontend: Open signed URL (from `/api/download/[orderId]/[productId]`)
+   - Backend (`/api/download/...`):
+     a. Verify user owns product (check order)
+     b. Generate fresh signed URL (1 hour expiry)
+     c. Log download event (analytics)
+     d. Redirect to R2 signed URL
+   - R2: Serve file (zero egress fees via Cloudflare CDN)
+
+---
+
+**Error Handling & Resilience**
+
+**Principles:**
+
+1. **Fail Gracefully:** Don't crash entire app if one component fails
+2. **Log Everything:** Track errors (Sentry), log context (user ID, request ID)
+3. **User-Friendly Messages:** "Payment failed. Please try again." (not "Error 500")
+4. **Retry Transient Failures:** Network timeouts, rate limits (retry with exponential backoff)
+5. **Rollback Transactions:** If order creation fails mid-way, rollback (atomic transactions)
+
+**Example Error Boundaries:**
+```typescript
+// Frontend Error Boundary (catch React errors)
+class ErrorBoundary extends React.Component {
+  componentDidCatch(error, errorInfo) {
+    Sentry.captureException(error, { extra: errorInfo });
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong. Please refresh.</div>;
+    }
+    return this.props.children;
+  }
+}
+
+// Backend Error Handling Middleware
+export function withErrorHandling(handler: NextApiHandler): NextApiHandler {
+  return async (req, res) => {
+    try {
+      return await handler(req, res);
+    } catch (error) {
+      console.error('API Error:', error);
+      Sentry.captureException(error);
+      
+      if (error instanceof ZodError) {
+        return res.status(400).json({ error: 'Invalid input', details: error.errors });
+      }
+      
+      return res.status(500).json({ error: 'Internal server error' });
+    }
+  };
+}
+```
+
+---
+
+### 11.3 API Design & Integration Patterns
+
+**Strategic Overview**
+
+API design defines how frontend and backend communicate (HTTP endpoints, request/response formats, authentication). Well-designed APIs are consistent, predictable, and easy to use. For SF Supernova, APIs serve internal frontend (not public third-party developers), so prioritize simplicity over comprehensive REST compliance.
+
+**Core Principle:** *"Design APIs for ease of use, not theoretical purity. Consistency matters more than RESTfulness. Optimize for common use cases (browse products, checkout), handle edge cases gracefully."*
+
+---
+
+**API Design Standards**
+
+**1. RESTful Principles (Loosely Followed)**
+
+**HTTP Methods:**
+
+| Method | Use Case | Idempotent? | Example |
+|--------|----------|-------------|---------|
+| **GET** | Retrieve data | Yes | `GET /api/products?genre=golden-age` |
+| **POST** | Create new resource | No | `POST /api/orders` (create order) |
+| **PUT** | Replace entire resource | Yes | `PUT /api/users/:id` (update user profile) |
+| **PATCH** | Partial update | No | `PATCH /api/users/:id` (update email only) |
+| **DELETE** | Delete resource | Yes | `DELETE /api/users/:id` (delete account) |
+
+**Idempotency:** Same request repeated = same result (GET, PUT, DELETE are idempotent; POST is not)
+
+---
+
+**2. URL Structure**
+
+**Pattern:** `/api/<resource>/<identifier>/<action>`
+
+**Examples:**
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/products` | GET | List products (with filters) |
+| `/api/products/:slug` | GET | Get single product by slug |
+| `/api/products/:id/formats` | GET | Get available formats for product |
+| `/api/orders` | POST | Create new order (checkout) |
+| `/api/orders/:id` | GET | Get order details |
+| `/api/orders/:id/download/:productId` | GET | Download product from order |
+| `/api/users/me` | GET | Get current user profile |
+| `/api/users/me` | PATCH | Update current user profile |
+| `/api/auth/login` | POST | Login user |
+| `/api/auth/logout` | POST | Logout user |
+| `/api/webhooks/stripe` | POST | Stripe webhook handler |
+
+**Naming Conventions:**
+
+- **Plural Nouns:** `/products`, `/orders` (not `/product`, `/order`)
+- **Kebab-Case:** `/api/order-items` (not `/api/orderItems` or `/api/order_items`)
+- **Descriptive:** `/api/products/featured` (not `/api/products?featured=true`)—use dedicated endpoints for common queries
+
+---
+
+**3. Request Format**
+
+**Query Parameters (GET):**
+```
+GET /api/products?genre=golden-age&format=epub&sort=popularity&limit=12&page=2
+```
+
+**Request Body (POST/PUT/PATCH):**
+```json
+POST /api/orders
+Content-Type: application/json
+
+{
+  "items": [
+    { "productId": "abc-123", "quantity": 1 },
+    { "productId": "def-456", "quantity": 1 }
+  ],
+  "email": "user@example.com",
+  "paymentMethodId": "pm_abc123"
+}
+```
+
+**Standards:**
+
+- **JSON:** All request bodies are JSON (not form-encoded)
+- **Validation:** Validate with Zod before processing
+- **Required Fields:** Document which fields required vs. optional
+- **Defaults:** Provide sensible defaults (e.g., `limit=12` if not specified)
+
+---
+
+**4. Response Format**
+
+**Success Response (200-299):**
+```json
+{
+  "data": {
+    "id": "abc-123",
+    "title": "Foundation",
+    "author": "Isaac Asimov",
+    "price": 2.99
+  }
+}
+```
+
+**List Response (with Pagination):**
+```json
+{
+  "data": [
+    { "id": "abc-123", "title": "Foundation", ... },
+    { "id": "def-456", "title": "I, Robot", ... }
+  ],
+  "pagination": {
+    "page": 2,
+    "limit": 12,
+    "total": 127,
+    "totalPages": 11
+  }
+}
+```
+
+**Error Response (400-599):**
+```json
+{
+  "error": {
+    "message": "Invalid email address",
+    "code": "INVALID_INPUT",
+    "details": {
+      "field": "email",
+      "issue": "Must be valid email format"
+    }
+  }
+}
+```
+
+**HTTP Status Codes:**
+
+| Code | Meaning | Use Case |
+|------|---------|----------|
+| **200** | OK | Successful GET, PUT, PATCH |
+| **201** | Created | Successful POST (resource created) |
+| **204** | No Content | Successful DELETE (nothing to return) |
+| **400** | Bad Request | Invalid input (validation error) |
+| **401** | Unauthorized | Authentication required (not logged in) |
+| **403** | Forbidden | Authenticated but not authorized (wrong user) |
+| **404** | Not Found | Resource doesn't exist |
+| **409** | Conflict | Resource already exists (duplicate email, slug) |
+| **422** | Unprocessable Entity | Semantic validation error (e.g., product out of stock) |
+| **429** | Too Many Requests | Rate limit exceeded |
+| **500** | Internal Server Error | Unexpected server error |
+
+---
+
+**5. Authentication & Authorization**
+
+**Authentication Strategy:**
+
+- **Session-Based (NextAuth.js):** Cookie-based sessions (secure, HTTP-only, SameSite)
+- **JWT Alternative:** Can use JWT tokens for stateless auth (simpler scaling, but less secure if not handled carefully)
+
+**Protected Endpoints:**
+```typescript
+// /lib/auth.ts
+import { getServerSession } from 'next-auth';
+import { authOptions } from '@/pages/api/auth/[...nextauth]';
+
+export async function requireAuth(req: NextApiRequest, res: NextApiResponse) {
+  const session = await getServerSession(req, res, authOptions);
+  
+  if (!session) {
+    return res.status(401).json({ error: 'Unauthorized' });
+  }
+  
+  return session;
+}
+
+// Usage in API route:
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const session = await requireAuth(req, res);
+  if (!session) return; // Response already sent by requireAuth
+  
+  // Proceed with authenticated logic
+  const userId = session.user.id;
+  // ...
+}
+```
+
+**Authorization (Access Control):**
+
+- **User-Owned Resources:** User can only access their own orders, account
+- **Admin-Only Resources:** Product creation, order management (Phase 2+)
+
+**Example:**
+```typescript
+// /api/orders/[id].ts
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const session = await requireAuth(req, res);
+  if (!session) return;
+  
+  const orderId = String(req.query.id);
+  const order = await prisma.order.findUnique({ where: { id: orderId } });
+  
+  if (!order) {
+    return res.status(404).json({ error: 'Order not found' });
+  }
+  
+  // Authorization check: user can only access their own orders
+  if (order.userId !== session.user.id) {
+    return res.status(403).json({ error: 'Forbidden' });
+  }
+  
+  return res.status(200).json({ data: order });
+}
+```
+
+---
+
+**6. Pagination**
+
+**Pattern:** Offset-based pagination (simple, sufficient for Phase 1-2)
+
+**Query Params:**
+
+- `page` (1-indexed): Page number (default 1)
+- `limit`: Items per page (default 12, max 100)
+
+**Example:**
+```
+GET /api/products?page=2&limit=12
+```
+
+**Response:**
+```json
+{
+  "data": [...],
+  "pagination": {
+    "page": 2,
+    "limit": 12,
+    "total": 127,
+    "totalPages": 11,
+    "hasNextPage": true,
+    "hasPreviousPage": true
+  }
+}
+```
+
+**Implementation (Prisma):**
+```typescript
+const page = parseInt(req.query.page as string) || 1;
+const limit = parseInt(req.query.limit as string) || 12;
+const skip = (page - 1) * limit;
+
+const [products, total] = await Promise.all([
+  prisma.product.findMany({
+    skip,
+    take: limit,
+    where: { status: 'PUBLISHED' },
+    orderBy: { created_at: 'desc' },
+  }),
+  prisma.product.count({ where: { status: 'PUBLISHED' } }),
+]);
+
+const totalPages = Math.ceil(total / limit);
+
+return res.status(200).json({
+  data: products,
+  pagination: {
+    page,
+    limit,
+    total,
+    totalPages,
+    hasNextPage: page < totalPages,
+    hasPreviousPage: page > 1,
+  },
+});
+```
+
+**Alternative (Phase 3+):** Cursor-based pagination (more efficient for large datasets, infinite scroll)
+
+---
+
+**7. Filtering & Sorting**
+
+**Filtering Query Params:**
+```
+GET /api/products?genre=golden-age&format=epub&author=asimov&price_max=5
+```
+
+**Implementation:**
+```typescript
+const where: Prisma.ProductWhereInput = {
+  status: 'PUBLISHED',
+};
+
+if (req.query.genre) {
+  where.genres = { some: { genre: { slug: String(req.query.genre) } } };
+}
+
+if (req.query.format) {
+  where.formats = { some: { format: { name: String(req.query.format) } } };
+}
+
+if (req.query.author) {
+  where.authors = { some: { author: { slug: String(req.query.author) } } };
+}
+
+if (req.query.price_max) {
+  where.price_gbp = { lte: parseFloat(req.query.price_max as string) };
+}
+
+const products = await prisma.product.findMany({ where });
+```
+
+**Sorting Query Params:**
+```
+GET /api/products?sort=price_asc
+GET /api/products?sort=popularity
+GET /api/products?sort=newest
+```
+
+**Implementation:**
+```typescript
+const sortOptions: Record<string, Prisma.ProductOrderByWithRelationInput> = {
+  price_asc: { price_gbp: 'asc' },
+  price_desc: { price_gbp: 'desc' },
+  popularity: { popularity_score: 'desc' },
+  newest: { created_at: 'desc' },
+  title: { title: 'asc' },
+};
+
+const orderBy = sortOptions[req.query.sort as string] || sortOptions.newest;
+
+const products = await prisma.product.findMany({
+  where,
+  orderBy,
+});
+```
+
+---
+
+**8. Rate Limiting (Phase 2+)**
+
+**Purpose:** Prevent abuse (scraping, DDoS, brute-force login)
+
+**Strategy:**
+
+- **Public Endpoints:** 100 requests/minute per IP (browse, search)
+- **Auth Endpoints:** 5 requests/minute per IP (login, password reset)
+- **Checkout Endpoint:** 10 requests/hour per user (prevent fraud)
+
+**Implementation (Vercel):**
+```typescript
+// /lib/rate-limit.ts
+import { LRUCache } from 'lru-cache';
+
+const rateLimit = new LRUCache({
+  max: 500,
+  ttl: 60000, // 1 minute
+});
+
+export function checkRateLimit(identifier: string, limit: number): boolean {
+  const requests = rateLimit.get(identifier) || 0;
+  if (requests >= limit) {
+    return false; // Rate limit exceeded
+  }
+  rateLimit.set(identifier, requests + 1);
+  return true; // Within limit
+}
+
+// Usage:
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+  
+  if (!checkRateLimit(String(ip), 100)) {
+    return res.status(429).json({ error: 'Too many requests' });
+  }
+  
+  // Proceed with handler
+}
+```
+
+---
+
+**9. Webhooks (Stripe Integration)**
+
+**Purpose:** Listen for Stripe events (payment succeeded, subscription cancelled)
+
+**Endpoint:** `POST /api/webhooks/stripe`
+
+**Security:** Verify webhook signature (prevents spoofing)
+
+**Implementation:**
+```typescript
+// /pages/api/webhooks/stripe.ts
+import { buffer } from 'micro';
+import Stripe from 'stripe';
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+
+export const config = {
+  api: {
+    bodyParser: false, // Must disable to verify signature
+  },
+};
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+  
+  const buf = await buffer(req);
+  const sig = req.headers['stripe-signature']!;
+  
+  let event: Stripe.Event;
+  
+  try {
+    event = stripe.webhooks.constructEvent(
+      buf,
+      sig,
+      process.env.STRIPE_WEBHOOK_SECRET!
+    );
+  } catch (err) {
+    console.error('Webhook signature verification failed:', err);
+    return res.status(400).json({ error: 'Invalid signature' });
+  }
+  
+  // Handle event
+  switch (event.type) {
+    case 'payment_intent.succeeded':
+      const paymentIntent = event.data.object as Stripe.PaymentIntent;
+      await handlePaymentSuccess(paymentIntent);
+      break;
+      
+    case 'customer.subscription.deleted':
+      const subscription = event.data.object as Stripe.Subscription;
+      await handleSubscriptionCancelled(subscription);
+      break;
+      
+    // ... handle other events
+  }
+  
+  return res.status(200).json({ received: true });
+}
+
+async function handlePaymentSuccess(paymentIntent: Stripe.PaymentIntent) {
+  // Create order, send confirmation email, etc.
+}
+
+async function handleSubscriptionCancelled(subscription: Stripe.Subscription) {
+  // Update user membership status
+}
+```
+
+---
+
+### 11.4 Third-Party Integrations & Service Contracts
+
+**Strategic Overview**
+
+Third-party integrations enable SF Supernova to leverage specialized services (payment processing, email delivery, file storage) without building them in-house. This section defines integration points, service contracts (SLAs, error handling), and contingency plans if services fail.
+
+**Core Principle:** *"Integrate with best-in-class services for non-core functionality. Own the customer experience, outsource the infrastructure. Always have fallback plans for critical services."*
+
+---
+
+**Critical Integrations (Phase 1)**
+
+**1. Stripe (Payment Processing)**
+
+**Purpose:** Process payments, manage subscriptions, handle refunds
+
+**Integration Points:**
+
+| Stripe Component | SF Supernova Use Case |
+|------------------|----------------------|
+| **Checkout Session** | Hosted checkout page (PCI compliant, Stripe handles card forms) |
+| **Payment Intents** | Server-side payment confirmation (confirm payment succeeded) |
+| **Customers** | Store customer payment methods (for subscriptions, saved cards) |
+| **Subscriptions** | Manage membership subscriptions (monthly/yearly billing) |
+| **Webhooks** | Listen for events (payment succeeded, subscription cancelled) |
+| **Refunds** | Process refunds via API |
+
+**Service Contract (SLA):**
+
+- **Uptime:** 99.99% (Stripe guarantee)
+- **Response Time:** <500ms (Stripe API)
+- **Webhook Delivery:** Retry up to 3 days if initial delivery fails
+
+**Error Handling:**
+
+- **Payment Declined:** Display user-friendly message ("Card declined. Try another card.")
+- **API Timeout:** Retry request (up to 3 attempts with exponential backoff)
+- **Webhook Failure:** Stripe retries automatically; SF Supernova logs missed webhooks, manual reconciliation if needed
+
+**Fallback Plan:**
+
+- **Stripe Outage:** Display "Payment processing temporarily unavailable. Try again in a few minutes."
+- **Alternative:** PayPal integration (Phase 2+ if needed)
+
+**Monitoring:**
+
+- **Track Payment Success Rate:** Alert if <95% success rate (indicates issues)
+- **Monitor Webhook Delays:** Alert if webhooks >5 min delayed (Stripe issue or our processing issue)
+
+---
+
+**2. SendGrid (Email Delivery)**
+
+**Purpose:** Send transactional emails (order confirmations, password resets)
+
+**Integration Points:**
+
+| Email Type | Trigger | Template |
+|------------|---------|----------|
+| **Order Confirmation** | Order created (Stripe webhook) | Order summary, download links, receipt |
+| **Download Delivery** | Order confirmed | Direct download links (signed URLs, 1-hour expiry) |
+| **Password Reset** | User requests reset | Magic link (time-limited) |
+| **Membership Welcome** | Subscription created | Membership benefits, how to use |
+| **Membership Expiry Warning** | 7 days before expiry | Renewal reminder |
+
+**Service Contract (SLA):**
+
+- **Uptime:** 99.9% (SendGrid guarantee)
+- **Delivery Time:** <1 minute (typically <10 seconds)
+- **Bounce Rate Target:** <5% (our email list health)
+
+**Error Handling:**
+
+- **SendGrid API Failure:** Log error, retry after 5 seconds (up to 3 attempts)
+- **Hard Bounce (invalid email):** Mark email invalid, notify user to update
+- **Soft Bounce (temporary failure):** SendGrid retries automatically (72 hours)
+- **Spam Complaints:** Monitor rate (<0.1%), investigate if spiking
+
+**Fallback Plan:**
+
+- **SendGrid Outage:** Switch to backup provider (Postmark, Resend)—requires pre-configuration
+- **Critical Emails:** Queue failed emails, retry when service restored
+
+**Monitoring:**
+
+- **Track Email Delivery Rate:** Alert if <95% delivered (indicates bounce issues)
+- **Monitor Spam Complaints:** Alert if >0.1% (reputation damage)
+
+---
+
+**3. Cloudflare R2 (File Storage)**
+
+**Purpose:** Store and deliver digital products, cover images
+
+**Integration Points:**
+
+| File Type | Storage Path | Access Method |
+|-----------|--------------|---------------|
+| **Digital Products** | `/products/{productId}.{format}` | Pre-signed URL (1-hour expiry) |
+| **Cover Images** | `/covers/{productId}.jpg` | Public URL (cached by Cloudflare CDN) |
+| **Author Photos** | `/authors/{authorId}.jpg` | Public URL |
+
+**Service Contract (SLA):**
+
+- **Uptime:** 99.9% (Cloudflare guarantee)
+- **Durability:** 99.999999999% (11 nines, AWS S3-compatible)
+- **Bandwidth:** Unlimited egress (zero fees via Cloudflare CDN)
+
+**Error Handling:**
+
+- **Upload Failure:** Retry with exponential backoff (up to 5 attempts)
+- **Download Failure (404):** Log error, investigate (file missing?)
+- **Slow Downloads:** Cloudflare CDN caches files (99%+ cache hit rate)
+
+**Fallback Plan:**
+
+- **R2 Outage:** Use Backblaze B2 or AWS S3 (S3-compatible, can migrate)
+- **Critical Files:** Replicate to second storage provider (Phase 3+ if needed)
+
+**Monitoring:**
+
+- **Track Upload Success Rate:** Alert if <99% (indicates issues)
+- **Monitor Download Performance:** Alert if avg download time >5s (CDN issue?)
+
+---
+
+**4. Neon (Database Hosting)**
+
+**Purpose:** Host PostgreSQL database
+
+**Service Contract (SLA):**
+
+- **Uptime:** 99.9% (Neon Pro tier)
+- **Backup:** Automated daily backups (retained 7 days)
+- **Response Time:** <10ms (queries)
+
+**Error Handling:**
+
+- **Connection Failure:** Retry connection (up to 3 attempts)
+- **Query Timeout:** Optimize slow queries, add indexes
+- **Out of Storage:** Upgrade tier or archive old data
+
+**Fallback Plan:**
+
+- **Neon Outage:** Restore from backup to Railway, Supabase, or self-hosted VPS
+- **Critical Data:** Daily backups to Cloudflare R2 (independent of Neon)
+
+**Monitoring:**
+
+- **Track Query Performance:** Alert if avg query time >100ms (optimization needed)
+- **Monitor Uptime:** UptimeRobot checks database health endpoint every 5 min
+
+---
+
+**5. Sentry (Error Tracking)**
+
+**Purpose:** Track errors, performance issues
+
+**Service Contract (SLA):**
+
+- **Uptime:** 99.9% (Sentry guarantee)
+- **Event Processing:** <1 second (errors appear in dashboard immediately)
+
+**Error Handling:**
+
+- **Sentry Outage:** Errors logged to console (backup), no alerts sent
+- **Rate Limit Exceeded:** Upgrade tier or reduce error volume (fix bugs)
+
+**Fallback Plan:**
+
+- **Alternative:** Self-hosted error tracking (Glitchtip, open-source Sentry alternative)
+
+---
+
+**Non-Critical Integrations (Phase 1)**
+
+**6. Google Analytics 4 (Analytics)**
+
+**Purpose:** Track traffic, user behavior, conversions
+
+**Failure Impact:** Low (analytics outage doesn't break site)
+
+**Fallback:** None needed (can operate without analytics temporarily)
+
+---
+
+**7. UptimeRobot (Monitoring)**
+
+**Purpose:** Monitor site uptime, alert on downtime
+
+**Failure Impact:** Low (site operates fine, just no alerts)
+
+**Fallback:** Manual checks, Sentry uptime monitoring
+
+---
+
+**Service Dependency Matrix**
+
+| Service | Criticality | Downtime Impact | Fallback Plan |
+|---------|-------------|-----------------|---------------|
+| **Stripe** | Critical | Can't process payments | Display "temporarily unavailable" message, queue orders |
+| **SendGrid** | High | Can't send emails | Queue emails, retry, switch to backup provider |
+| **Cloudflare R2** | High | Can't deliver products | Use cached copies, restore from backup |
+| **Neon (DB)** | Critical | Site down | Restore from backup to alternative hosting |
+| **Cloudflare CDN** | High | Slow/no site access | DNS failover to Vercel direct (bypassing CDN) |
+| **Sentry** | Low | No error tracking | Log errors locally, fix later |
+| **Google Analytics** | Low | No analytics data | Operate without analytics temporarily |
+| **UptimeRobot** | Low | No uptime alerts | Manual monitoring |
+
+---
+
+### 11.5 Deployment Strategy & CI/CD Pipeline
+
+**Strategic Overview**
+
+Deployment strategy defines how code moves from development to production (build, test, deploy). CI/CD (Continuous Integration/Continuous Deployment) automates this process, reducing human error and enabling frequent, safe deployments. For a solo founder, deployment must be effortless—no manual steps, no SSH-ing into servers, no downtime.
+
+**Core Principle:** *"Deploy early, deploy often. Automate everything. Every git push to main should trigger deployment. Rollback should be one click."*
+
+---
+
+**Deployment Environments**
+
+| Environment | Purpose | URL | Database | Deployment Trigger |
+|-------------|---------|-----|----------|-------------------|
+| **Local** | Development | localhost:3000 | Local Postgres or Neon (dev) | Manual (`npm run dev`) |
+| **Preview** | Testing, demos | preview-xyz.vercel.app | Neon (staging) | Every PR (Vercel auto-deploys) |
+| **Staging** | Pre-production testing | staging.sfsupernova.com | Neon (staging, copy of prod) | Push to `staging` branch |
+| **Production** | Live site | sfsupernova.com | Neon (production) | Push to `main` branch |
+
+**Environment Parity:**
+
+- **Goal:** Staging mirrors production (same data, same config)
+- **How:** Copy production database to staging weekly (anonymize user data)
+- **Why:** Catch bugs before production (test in realistic environment)
+
+---
+
+**CI/CD Pipeline (GitHub Actions)**
+
+**Workflow File:** `.github/workflows/deploy.yml`
+```yaml
+name: Deploy
+
+on:
+  push:
+    branches: [main, staging]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run type-check
+      - run: npm run test
+      
+  deploy-production:
+    runs-on: ubuntu-latest
+    needs: test
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: '--prod'
+          
+  deploy-staging:
+    runs-on: ubuntu-latest
+    needs: test
+    if: github.ref == 'refs/heads/staging' && github.event_name == 'push'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+```
+
+**Pipeline Steps:**
+
+1. **Checkout Code:** Pull latest code from GitHub
+2. **Install Dependencies:** `npm ci` (clean install from lockfile)
+3. **Lint:** Run ESLint (catch code style issues)
+4. **Type Check:** Run TypeScript compiler (catch type errors)
+5. **Run Tests:** Execute unit/integration tests (catch bugs)
+6. **Deploy to Vercel:** If tests pass, deploy to production or staging
+
+**Deployment Time:** ~3-5 minutes (checkout → build → deploy)
+
+---
+
+**Database Migrations**
+
+**Challenge:** Database schema changes must be applied before code deployment (avoid breaking changes)
+
+**Strategy:**
+
+1. **Write Migration:** Use Prisma Migrate (`npx prisma migrate dev --name add_popularity_score`)
+2. **Test Locally:** Verify migration works on local database
+3. **Commit Migration Files:** Git commit migration SQL files (`/prisma/migrations/`)
+4. **Deploy Migration First:** Run migration on production database before deploying code
+```bash
+   npx prisma migrate deploy --preview-feature
+```
+5. **Deploy Code:** After migration succeeds, deploy new code (Vercel auto-deploys)
+
+**Automated Migration (CI/CD):**
+
+Add step to GitHub Actions workflow:
+```yaml
+- name: Run Database Migrations
+  run: npx prisma migrate deploy
+  env:
+    DATABASE_URL: ${{ secrets.DATABASE_URL }}
+```
+
+**Rollback Plan:**
+
+- **If Migration Fails:** Revert migration manually (`prisma migrate resolve --rolled-back`)
+- **If Code Deployment Fails:** Rollback code (Vercel one-click rollback)
+
+---
+
+**Rollback Strategy**
+
+**Vercel Rollback (One-Click):**
+
+1. **Navigate to Vercel Dashboard** → Project → Deployments
+2. **Find Previous Deployment** (before broken deploy)
+3. **Click "Promote to Production"**
+4. **Result:** Previous version live within 1-2 minutes
+
+**Database Rollback (Manual, Rare):**
+
+- **If Migration Causes Issues:** Restore from backup (daily backups on Neon)
+- **If Data Corruption:** Restore from most recent backup (max 24hr data loss)
+
+**Rollback Triggers:**
+
+- 🚨 Error rate >5% (Sentry alert)
+- 🚨 Payment processing broken (manual testing/user reports)
+- 🚨 Site completely down (UptimeRobot alert)
+
+---
+
+**Deployment Checklist (Manual Review Before Deploy)**
+
+- [ ] All tests pass locally
+- [ ] Code reviewed (self-review or peer review if team grows)
+- [ ] Database migrations tested (if applicable)
+- [ ] Staging deployment successful (test in staging first)
+- [ ] Environment variables updated (if new variables added)
+- [ ] Changelog/release notes drafted (internal documentation)
+- [ ] Monitoring enabled (Sentry, UptimeRobot)
+- [ ] Rollback plan documented (know how to revert if needed)
+
+---
+
+**Post-Deployment Checklist**
+
+- [ ] Health check passes (`/api/health` returns 200)
+- [ ] Critical user flows tested:
+  - [ ] Homepage loads
+  - [ ] Product pages load
+  - [ ] Add to cart works
+  - [ ] Checkout works (test with Stripe test mode)
+  - [ ] Account login/signup works
+- [ ] Error rate baseline (check Sentry—no spike in errors)
+- [ ] Response time baseline (check Vercel analytics—no slowdown)
+- [ ] Monitor for 1-2 hours (catch issues early)
+
+---
+
+**Deployment Frequency**
+
+| Phase | Deployment Frequency | Rationale |
+|-------|----------------------|-----------|
+| **Phase 1 (MVP)** | 2-3x per week | Rapid iteration, frequent bug fixes |
+| **Phase 2 (Growth)** | 1-2x per week | More stability, less churn |
+| **Phase 3 (Scale)** | 1x per week (scheduled) | High stability, predictable release cadence |
+
+**Emergency Hotfixes:** Can deploy anytime (skip staging, deploy directly to production if critical bug)
+
+---
+
+**Deployment Best Practices**
+
+1. **Deploy During Low-Traffic Windows:** Tue-Thu, 9am-11am GMT (avoid Fridays, weekends)
+2. **Test in Staging First:** Every production deploy should be tested in staging
+3. **Automate Everything:** No manual steps (reduces human error)
+4. **Monitor Post-Deploy:** Watch metrics for 1-2 hours after deploy
+5. **Communicate:** If user-facing changes, notify users (email, social media)
+6. **Keep Calm:** If deploy fails, rollback immediately (don't try to "fix forward" under pressure)
+
+---
+
+**Summary: Technical Architecture Principles**
+
+1. **Boring Technology:** Next.js, React, Postgres—proven, mature, well-documented
+2. **Serverless First:** Vercel, Neon—auto-scaling, low ops burden, cost-efficient
+3. **Modular Design:** Frontend, backend, database, third-party services—clear boundaries
+4. **API-Driven:** Frontend consumes backend APIs (enables future mobile app, public API)
+5. **Third-Party for Non-Core:** Stripe (payments), SendGrid (email), R2 (storage)—don't build what you can buy
+6. **Automate Deployment:** GitHub Actions → Vercel—zero-touch deployments
+7. **Monitor Everything:** Sentry (errors), UptimeRobot (uptime), Vercel (performance)
+
+**SF Supernova's technical architecture prioritizes developer productivity, operational simplicity, and cost efficiency. By choosing boring, proven technology and leveraging serverless infrastructure, the platform can scale from 100 to 10,000 users without requiring architectural rewrites or expensive infrastructure upgrades. The stack is flexible—components can be replaced if needed (Vercel → VPS, Neon → self-hosted Postgres)—avoiding hard vendor lock-in. This architecture supports rapid iteration in Phase 1, stable growth in Phase 2, and scale in Phase 3, all while keeping costs under £150/month until revenue exceeds £2,000/month.**
+
+
+
 
 
 
