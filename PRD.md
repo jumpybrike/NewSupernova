@@ -36294,7 +36294,1404 @@ Add step to GitHub Actions workflow:
 
 
 ## 12. Risks, Dependencies & Constraints
-SEO risks, content ingestion risks, production bottlenecks, dependency on PD sources, labour constraints, AI reliability, hosting cost risks.
+EO risks, content ingestion risks, production bottlenecks, dependency on PD sources, labour constraints, AI reliability, hosting cost risks.
+
+## 12. Legal, Compliance & Risk Management
+Defines legal requirements, regulatory compliance, risk mitigation strategies, and policies needed to operate SF Supernova legally and ethically.
+
+### 12.1 Legal Structure & Business Registration
+
+**Strategic Overview**
+
+Legal structure defines how SF Supernova is organized as a business entity—sole trader, limited company, partnership, etc. The structure impacts taxation, liability protection, credibility, and administrative burden. For a bootstrapped, solo-founder platform, the structure must balance simplicity (low admin overhead) with protection (limited liability).
+
+**Core Principle:** *"Choose the simplest legal structure that provides adequate liability protection. Optimize for operational simplicity in Phase 1, formalize as revenue grows."*
+
+**Why Legal Structure Matters:**
+
+1. **Liability Protection:** Separate personal assets from business liabilities (lawsuits, debts)
+2. **Tax Efficiency:** Different structures have different tax treatments
+3. **Credibility:** Limited company more credible than sole trader (B2B relationships, investors)
+4. **Payment Processing:** Stripe requires business registration for certain features (invoicing, tax collection)
+5. **Compliance:** Some regulations require specific business structures (GDPR, data protection registration)
+
+---
+
+**Recommended Legal Structure (UK Context)**
+
+**Phase 1 (MVP Launch, £0-2,000/month revenue): Sole Trader**
+
+**Definition:** Simplest business structure—you and the business are legally the same entity.
+
+**Advantages:**
+
+- **Simple Setup:** Register with HMRC (free, online, 10 minutes)
+- **Low Admin:** No separate accounts, no Companies House filing
+- **Full Control:** You make all decisions, no shareholders
+- **Tax-Efficient (Low Revenue):** Pay income tax on profits (£12,570 personal allowance tax-free in 2024/25)
+
+**Disadvantages:**
+
+- **Unlimited Liability:** Personal assets at risk if business sued or in debt
+- **Tax Inefficient (High Revenue):** Income tax up to 45% (vs. 19-25% corporation tax)
+- **Less Credible:** Some B2B clients prefer dealing with limited companies
+
+**When to Use:**
+
+- **Revenue <£2,000/month:** Simplicity outweighs benefits of limited company
+- **Low Risk:** Digital products = low liability (no physical products, no employees initially)
+- **Testing Phase:** Validating business model before committing to company structure
+
+**Registration Steps:**
+
+1. **Register as Self-Employed with HMRC:** https://www.gov.uk/set-up-sole-trader
+2. **Choose Business Name:** "SF Supernova" (can trade under any name)
+3. **Set Up Business Bank Account:** Separate personal/business finances (not legally required but good practice)
+4. **Keep Records:** Income, expenses (HMRC requires 5 years of records)
+5. **File Self-Assessment Tax Return:** Annually by January 31st
+
+**Cost:** £0 (registration free, tax return filing free online)
+
+---
+
+**Phase 2 (Growth, £2,000-10,000/month revenue): Limited Company**
+
+**Definition:** Separate legal entity—you are director/shareholder, company has its own legal identity.
+
+**Advantages:**
+
+- **Limited Liability:** Personal assets protected (company debts stay with company)
+- **Tax Efficient (Higher Revenue):** Corporation tax 19-25% (lower than income tax 40-45%)
+- **Dividend Tax Advantage:** Pay yourself via dividends (lower tax than salary)
+- **Credibility:** Professional image, easier to attract investors/partners
+- **Asset Protection:** Intellectual property owned by company (not personally)
+
+**Disadvantages:**
+
+- **More Admin:** Annual accounts, Companies House filing, corporation tax return
+- **Higher Costs:** Accountant fees (£500-1,500/year), Companies House fees (£12-50/year)
+- **Public Records:** Accounts published on Companies House (privacy trade-off)
+
+**When to Use:**
+
+- **Revenue >£2,000/month:** Tax savings outweigh admin burden
+- **Growing Risk:** More revenue = more potential liability (protect personal assets)
+- **Professional Image:** B2B partnerships, investor conversations
+
+**Registration Steps:**
+
+1. **Choose Company Name:** "SF Supernova Ltd" (check availability on Companies House)
+2. **Register with Companies House:** https://www.gov.uk/limited-company-formation
+   - Online registration: £12
+   - Requires: Company name, registered address, director details, shareholder details, SIC code
+3. **Register for Corporation Tax:** HMRC (within 3 months of starting to trade)
+4. **Open Business Bank Account:** Required (separate company finances)
+5. **Set Up Accounting:** Hire accountant or use software (Xero, FreeAgent)
+6. **File Annual Accounts:** Companies House + HMRC (annually)
+
+**Cost:** 
+
+- Registration: £12 (Companies House)
+- Accountant: £500-1,500/year (depends on complexity)
+- Business bank account: £5-20/month (most banks)
+- **Total Year 1:** ~£700-2,000
+
+---
+
+**Phase 3 (Scale, £10,000+/month revenue): Limited Company (Established)**
+
+**Structure:** Continue as limited company, possibly add:
+
+- **Multiple Directors:** If hiring co-founder or key employees
+- **Shareholders Agreement:** If bringing in investors or co-founders
+- **Employee Contracts:** If hiring staff (PAYE, pension obligations)
+
+**Additional Compliance:**
+
+- **VAT Registration:** Required if turnover >£90,000/year (2024/25 threshold)
+  - Charge 20% VAT on sales
+  - Reclaim VAT on business expenses
+  - File quarterly VAT returns
+- **Employer Obligations:** If hiring staff (PAYE, National Insurance, workplace pension)
+
+---
+
+**Recommended Transition Plan**
+
+| Phase | Revenue | Legal Structure | Action Required | Timeline |
+|-------|---------|-----------------|-----------------|----------|
+| **Phase 1** | £0-2,000/mo | Sole Trader | Register with HMRC | Pre-launch (1 day) |
+| **Phase 2** | £2,000-10,000/mo | Limited Company | Incorporate, transfer assets, hire accountant | Month 6-12 (when revenue hits £2K/mo consistently) |
+| **Phase 3** | £10,000+/mo | Limited Company + VAT | Register for VAT (if turnover >£90K/yr) | As needed |
+
+**Transition from Sole Trader → Limited Company:**
+
+1. **Incorporate Company:** Register with Companies House
+2. **Transfer Business Assets:** Intellectual property, domain, contracts (formal assignment)
+3. **Notify Stripe:** Update business details (change from sole trader to company)
+4. **Close Sole Trader:** File final self-assessment, notify HMRC
+5. **Update Policies:** Privacy policy, terms of service (company name)
+6. **Inform Customers:** Email notification (transparency, continuity)
+
+**Cost:** ~£500-1,000 (legal fees for asset transfer, accountant for setup)
+
+---
+
+**Tax Obligations Summary**
+
+**Sole Trader:**
+
+| Tax Type | Rate | Due Date | Notes |
+|----------|------|----------|-------|
+| **Income Tax** | 0-45% (progressive) | Jan 31 (Self-Assessment) | First £12,570 tax-free (2024/25) |
+| **National Insurance** | Class 2: £3.45/week (if profit >£12,570)<br>Class 4: 6-9% on profits >£12,570 | Jan 31 | Mandatory for self-employed |
+| **VAT** | 20% (if turnover >£90K) | Quarterly | Optional below threshold |
+
+**Limited Company:**
+
+| Tax Type | Rate | Due Date | Notes |
+|----------|------|----------|-------|
+| **Corporation Tax** | 19% (profit <£50K)<br>25% (profit >£250K) | 9 months after year-end | Lower than income tax at higher earnings |
+| **Dividend Tax** | 0% (first £500)<br>8.75% (basic rate)<br>33.75% (higher rate) | Jan 31 (Self-Assessment) | Pay yourself via dividends (tax-efficient) |
+| **PAYE (Salary)** | 0-45% (if paying salary) | Monthly | Paying minimal salary + dividends is tax-efficient |
+| **VAT** | 20% (if turnover >£90K) | Quarterly | Mandatory above threshold |
+
+**Tax Strategy (Limited Company, Phase 2+):**
+
+- **Small Salary:** Pay yourself £9,100/year (NI threshold, tax-free)
+- **Dividends:** Pay remaining income as dividends (lower tax than salary)
+- **Expenses:** Claim business expenses (hosting, software, domain, office costs if home office)
+- **Pension Contributions:** Company pension contributions are tax-deductible (reduce corporation tax)
+
+**Example (£50,000 profit):**
+
+- **Salary:** £9,100 (no tax, no NI)
+- **Dividends:** £40,900 (£500 tax-free, rest taxed at 8.75% = £3,535 tax)
+- **Total Tax:** £3,535 (7% effective rate)
+- **vs. Sole Trader:** £50,000 profit = £10,432 income tax + £3,544 NI = £13,976 (28% effective rate)
+- **Savings:** £10,441/year by using limited company + dividend strategy
+
+---
+
+**Insurance (Risk Mitigation)**
+
+**Recommended Insurance (Phase 2+):**
+
+| Insurance Type | Coverage | Cost | When Required |
+|----------------|----------|------|---------------|
+| **Professional Indemnity** | Covers claims of negligence, errors, omissions | £200-500/year | When revenue >£5K/mo (protects against lawsuits) |
+| **Cyber Liability** | Covers data breaches, cyber attacks, GDPR fines | £300-800/year | When handling >1,000 users (data breach risk) |
+| **Public Liability** | Covers injury/damage to third parties | £100-300/year | If hosting events, meetups (not needed Phase 1) |
+
+**Self-Insurance (Phase 1):**
+
+- **Emergency Fund:** Set aside 3-6 months operating costs (£500-1,500)
+- **Legal Fund:** £1,000-2,000 for legal defense if needed
+- **Acceptance:** Some risks must be accepted (low probability, high cost to insure)
+
+---
+
+**Intellectual Property (IP) Protection**
+
+**Trademarks:**
+
+- **Business Name:** "SF Supernova" (not trademarked Phase 1—too expensive)
+- **Logo:** Design original logo (own copyright automatically)
+- **When to Trademark:** Phase 2-3, if brand becomes valuable (£170-400 UK trademark, £850 EU-wide)
+
+**Copyright:**
+
+- **Platform Code:** You own copyright (closed-source, not open-sourced)
+- **Editorial Content:** SF Supernova owns copyright on blog posts, descriptions
+- **User-Generated Content:** Users retain copyright on reviews (SF Supernova licenses use via ToS)
+- **Public Domain Content:** No copyright (freely usable)
+
+**Domain Name:**
+
+- **Register Early:** sfsupernova.com (£10-15/year, Cloudflare Registrar)
+- **Protect Variations:** .co.uk, .net (optional, prevents squatting)
+
+---
+
+### 12.2 Terms of Service & User Agreements
+
+**Strategic Overview**
+
+Terms of Service (ToS) is the legal contract between SF Supernova and users. It defines: what users can/cannot do, what SF Supernova provides (and disclaims), how disputes are resolved, and how accounts can be terminated. A well-drafted ToS protects SF Supernova from liability, sets user expectations, and provides legal recourse if users violate terms.
+
+**Core Principle:** *"Terms of Service protect the business while remaining fair to users. Clear, reasonable terms build trust; one-sided, predatory terms drive users away."*
+
+**Why Terms of Service Matter:**
+
+1. **Legal Protection:** Limit liability for service disruptions, content issues, user disputes
+2. **User Behavior:** Define acceptable use (no piracy, no abuse, no scraping)
+3. **Payment Terms:** Define refund policy, pricing, billing
+4. **Content Rights:** Clarify who owns content (users, SF Supernova, third parties)
+5. **Dispute Resolution:** Define how disputes handled (jurisdiction, arbitration)
+
+---
+
+**Key Terms of Service Sections**
+
+**1. Acceptance of Terms**
+
+**Content:**
+```
+By accessing or using SF Supernova ("the Service"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the Service.
+
+We may update these Terms at any time. Continued use of the Service after changes constitutes acceptance of the new Terms. We will notify users of material changes via email or prominent notice on the site.
+```
+
+**Legal Purpose:** Establish binding contract, reserve right to update terms.
+
+---
+
+**2. Eligibility**
+
+**Content:**
+```
+You must be at least 13 years old to use the Service. If you are under 18, you must have parental/guardian consent. By using the Service, you represent that you meet these requirements.
+```
+
+**Legal Purpose:** Comply with COPPA (Children's Online Privacy Protection Act—US law, 13+ requirement).
+
+**Rationale:** SF Supernova targets adults (vintage sci-fi collectors), but 13+ allows teenagers with parental consent.
+
+---
+
+**3. Account Registration & Security**
+
+**Content:**
+```
+To purchase products or access certain features, you must create an account. You agree to:
+
+- Provide accurate, current information
+- Maintain the security of your password
+- Notify us immediately of unauthorized account use
+- Accept responsibility for all activity under your account
+
+We reserve the right to suspend or terminate accounts that violate these Terms or are inactive for extended periods.
+```
+
+**Legal Purpose:** Establish user responsibility for account security, reserve right to terminate accounts.
+
+---
+
+**4. Acceptable Use Policy**
+
+**Content:**
+```
+You agree NOT to:
+
+- Use the Service for illegal purposes
+- Violate intellectual property rights (piracy, unauthorized distribution)
+- Upload malicious code (viruses, malware)
+- Scrape, data mine, or automatically extract content
+- Harass, abuse, or harm other users
+- Impersonate others or provide false information
+- Circumvent security measures or access restrictions
+- Use the Service to distribute spam or unsolicited messages
+
+We reserve the right to investigate violations and terminate accounts without refund.
+```
+
+**Legal Purpose:** Define prohibited behavior, reserve right to enforce.
+
+**Rationale:** Protect platform from abuse (piracy, scraping, harassment).
+
+---
+
+**5. Products & Purchases**
+
+**Content:**
+```
+SF Supernova offers digital products (ebooks, audiobooks) for purchase. By purchasing, you agree:
+
+- Products are licensed for personal, non-commercial use
+- Products are delivered electronically (no physical goods)
+- Prices are in GBP (British Pounds) unless otherwise stated
+- Payment is processed securely via Stripe (we do not store payment details)
+- All sales are final unless otherwise stated in our Refund Policy
+
+Product availability, pricing, and descriptions are subject to change without notice.
+```
+
+**Legal Purpose:** Define what users are buying (license, not ownership), clarify payment terms.
+
+---
+
+**6. Refund Policy**
+
+**Content:**
+```
+We offer refunds under the following conditions:
+
+- Within 24 hours of purchase, no questions asked
+- Product is defective or cannot be downloaded (technical issues)
+- Duplicate purchase (charged twice for same product)
+
+Refunds are NOT available for:
+
+- Change of mind after 24 hours
+- Products already downloaded (you have accessed the content)
+- Membership subscriptions after first month (cancel anytime, no refund for partial month)
+
+To request a refund, contact support@sfsupernova.com with your order number. Refunds processed within 5-10 business days.
+```
+
+**Legal Purpose:** Set clear refund expectations, protect against abuse.
+
+**Rationale:** 24-hour window is industry standard for digital goods (balances user satisfaction with abuse prevention).
+
+---
+
+**7. Intellectual Property Rights**
+
+**Content:**
+```
+SF Supernova Content: All content on the Service (website design, logos, text, graphics, code) is owned by SF Supernova or its licensors and protected by copyright, trademark, and other intellectual property laws. You may not copy, reproduce, distribute, or create derivative works without permission.
+
+User Content: If you submit content to the Service (reviews, comments, feedback), you grant SF Supernova a non-exclusive, worldwide, royalty-free license to use, display, and distribute your content. You retain copyright ownership of your content.
+
+Public Domain Content: Products derived from public domain works are clearly labeled. Public domain status applies to original works; SF Supernova's curation, formatting, and editorial additions are protected by copyright.
+```
+
+**Legal Purpose:** Protect SF Supernova's IP, clarify rights to user-generated content, explain public domain status.
+
+---
+
+**8. License to Use Products**
+
+**Content:**
+```
+When you purchase a product, you receive a personal, non-transferable, non-exclusive license to use the product for personal, non-commercial purposes. You may:
+
+- Download the product to your personal devices
+- Make backup copies for personal use
+- Transfer the product between your personal devices
+
+You may NOT:
+
+- Share, distribute, or resell the product
+- Upload the product to file-sharing sites
+- Remove DRM or copyright notices (if applicable)
+- Use the product for commercial purposes without permission
+
+License is perpetual (no expiration) but may be terminated if you violate these Terms.
+```
+
+**Legal Purpose:** Define scope of license (personal use only), prohibit piracy/redistribution.
+
+**Rationale:** DRM-free products require clear license terms to discourage piracy while allowing legitimate personal use.
+
+---
+
+**9. Disclaimers & Limitation of Liability**
+
+**Content:**
+```
+DISCLAIMER OF WARRANTIES:
+The Service is provided "AS IS" and "AS AVAILABLE" without warranties of any kind, express or implied. We do not guarantee that the Service will be uninterrupted, error-free, secure, or virus-free. We do not warrant the accuracy, completeness, or reliability of content.
+
+LIMITATION OF LIABILITY:
+To the maximum extent permitted by law, SF Supernova shall not be liable for any indirect, incidental, consequential, or punitive damages arising from your use of the Service, including but not limited to:
+
+- Loss of data or content
+- Service interruptions or downtime
+- Errors in product descriptions or pricing
+- Third-party actions (payment processor failures, etc.)
+
+Our total liability for any claim shall not exceed the amount you paid to SF Supernova in the 12 months preceding the claim.
+```
+
+**Legal Purpose:** Limit SF Supernova's liability for things outside control (server outages, payment processor failures).
+
+**Rationale:** Standard "AS IS" disclaimer (protects against lawsuits for service disruptions, errors).
+
+**Note:** Some jurisdictions (e.g., EU, UK consumer protection law) do not allow full disclaimer of liability—this clause is "to the maximum extent permitted by law."
+
+---
+
+**10. Indemnification**
+
+**Content:**
+```
+You agree to indemnify and hold harmless SF Supernova, its directors, employees, and agents from any claims, damages, losses, or expenses (including legal fees) arising from:
+
+- Your violation of these Terms
+- Your use of the Service
+- Your violation of any third-party rights (copyright infringement, defamation, etc.)
+```
+
+**Legal Purpose:** User agrees to cover SF Supernova's legal costs if user's actions cause lawsuits.
+
+**Rationale:** If user uploads pirated content or defamatory reviews, user (not SF Supernova) is responsible.
+
+---
+
+**11. Termination**
+
+**Content:**
+```
+We reserve the right to suspend or terminate your account at any time, with or without cause, with or without notice. Reasons for termination include (but are not limited to):
+
+- Violation of these Terms
+- Fraudulent or illegal activity
+- Abuse of the Service or other users
+- Chargebacks or payment disputes
+
+Upon termination:
+- Your access to the Service will be revoked
+- You forfeit access to purchased products (in cases of Terms violation)
+- No refund will be issued for terminated accounts (except as required by law)
+
+You may terminate your account at any time by contacting support@sfsupernova.com or using the account deletion feature. Purchased products remain accessible after account deletion (via download links sent to your email).
+```
+
+**Legal Purpose:** Reserve right to remove abusive users, clarify consequences of termination.
+
+---
+
+**12. Dispute Resolution & Governing Law**
+
+**Content:**
+```
+GOVERNING LAW:
+These Terms are governed by the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales.
+
+DISPUTE RESOLUTION:
+If you have a complaint, please contact support@sfsupernova.com. We will attempt to resolve disputes informally before resorting to legal action.
+
+For consumer disputes: If you are a consumer in the EU or UK, you may have additional rights under local consumer protection laws. Nothing in these Terms affects your statutory rights.
+```
+
+**Legal Purpose:** Establish which country's laws apply (UK), define dispute resolution process.
+
+**Rationale:** UK-based company = UK law applies. EU/UK consumer protections cannot be waived (statutory rights).
+
+---
+
+**13. Membership Subscriptions (If Applicable)**
+
+**Content:**
+```
+Membership subscriptions automatically renew monthly or yearly (depending on plan selected) until cancelled. You agree:
+
+- Your payment method will be charged automatically on renewal date
+- You can cancel anytime via account settings (no cancellation fee)
+- Cancellation takes effect at end of current billing period (no prorated refunds)
+- Membership benefits (discounts, exclusive content) apply only while subscription is active
+- We may change membership pricing with 30 days' notice (you can cancel before price increase takes effect)
+
+Failed payments: If your payment method fails, we will retry up to 3 times. If payment continues to fail, your membership will be cancelled (you retain access until end of paid period).
+```
+
+**Legal Purpose:** Define auto-renewal terms, cancellation policy, pricing changes.
+
+---
+
+**14. Privacy**
+
+**Content:**
+```
+Your use of the Service is also governed by our Privacy Policy, which explains how we collect, use, and protect your personal information. By using the Service, you consent to our Privacy Policy.
+
+[Link to Privacy Policy]
+```
+
+**Legal Purpose:** Reference Privacy Policy (detailed in Section 12.3).
+
+---
+
+**15. Changes to Terms**
+
+**Content:**
+```
+We may update these Terms at any time. Material changes will be communicated via email or prominent notice on the site. Continued use of the Service after changes constitutes acceptance.
+
+If you do not agree to updated Terms, you must stop using the Service and may request account deletion.
+```
+
+**Legal Purpose:** Reserve right to update terms, define notification process.
+
+---
+
+**16. Contact Information**
+
+**Content:**
+```
+If you have questions about these Terms, contact us:
+
+Email: legal@sfsupernova.com
+Address: [Registered Business Address]
+
+Last Updated: [Date]
+```
+
+**Legal Purpose:** Provide contact method for legal inquiries.
+
+---
+
+**Terms of Service Best Practices**
+
+1. **Plain Language:** Avoid legalese where possible (users should understand terms)
+2. **Prominent Display:** Link in footer, during signup, before checkout
+3. **Acceptance Required:** Users must check "I agree to Terms of Service" (checkbox, not just link)
+4. **Versioning:** Date terms, archive old versions (prove what users agreed to)
+5. **Fair & Balanced:** Protect business but don't be predatory (builds trust)
+6. **Legal Review:** Have lawyer review (one-time cost £300-800, worth it)
+
+---
+
+### 12.3 Privacy Policy & Data Protection (GDPR Compliance)
+
+**Strategic Overview**
+
+Privacy Policy explains how SF Supernova collects, uses, stores, and protects user data. GDPR (General Data Protection Regulation) requires transparency about data practices and gives users control over their data. A compliant Privacy Policy is both legal requirement and trust signal—users more likely to purchase if they trust platform with their data.
+
+**Core Principle:** *"Collect only what's needed, protect what you collect, delete when requested. Transparency builds trust; violations destroy it."*
+
+**Why Privacy Policy & GDPR Compliance Matter:**
+
+1. **Legal Requirement:** GDPR (EU), UK GDPR, DPA 2018 (UK) require privacy policy
+2. **Trust Signal:** Users more comfortable purchasing if privacy respected
+3. **Avoid Fines:** GDPR fines up to €20M or 4% of global turnover (whichever higher)
+4. **Ethical Imperative:** Users deserve to know what happens to their data
+
+---
+
+**GDPR Key Principles**
+
+1. **Lawfulness, Fairness, Transparency:** Tell users what data collected, why, how used
+2. **Purpose Limitation:** Use data only for stated purposes (no secret data uses)
+3. **Data Minimization:** Collect only necessary data (don't collect "just in case")
+4. **Accuracy:** Keep data accurate, allow users to correct
+5. **Storage Limitation:** Delete data when no longer needed (retention limits)
+6. **Integrity & Confidentiality:** Protect data from breaches, unauthorized access
+7. **Accountability:** Document compliance, be able to prove it
+
+---
+
+**Privacy Policy Required Sections**
+
+**1. What Data We Collect**
+
+**Content:**
+```
+We collect the following types of personal data:
+
+ACCOUNT INFORMATION:
+- Email address (required for account creation, order confirmation)
+- Password (hashed, never stored in plaintext)
+- Name (optional, for personalized communications)
+
+ORDER INFORMATION:
+- Purchase history (products bought, prices paid, order dates)
+- Payment information (processed by Stripe—we do not store card details)
+- IP address (fraud prevention, analytics)
+
+USAGE DATA:
+- Pages visited, products viewed (Google Analytics)
+- Browser type, device type (analytics, optimization)
+- Download logs (which products downloaded, when)
+
+COMMUNICATIONS:
+- Support emails, feedback submitted
+- Newsletter subscription (if opted-in)
+
+COOKIES:
+- Session cookies (keep you logged in)
+- Analytics cookies (Google Analytics—can opt out)
+- Preference cookies (remember settings, e.g., dark mode)
+```
+
+**Legal Purpose:** Transparency—users know exactly what data collected.
+
+---
+
+**2. Why We Collect Data (Legal Basis)**
+
+**Content:**
+```
+We collect and process your data based on the following legal grounds:
+
+CONTRACT PERFORMANCE:
+- Order fulfillment (send download links, receipts)
+- Account management (login, order history)
+- Customer support (resolve issues)
+
+LEGAL OBLIGATION:
+- Tax records (UK law requires 6-year retention)
+- Fraud prevention (payment processor requirements)
+
+LEGITIMATE INTEREST:
+- Analytics (improve website, understand user behavior)
+- Marketing (newsletter—opt-in only)
+- Security (prevent abuse, protect platform)
+
+CONSENT:
+- Newsletter subscription (you opt-in, can unsubscribe anytime)
+- Optional cookies (analytics—can opt out)
+```
+
+**Legal Purpose:** GDPR requires stating legal basis for each data processing activity.
+
+---
+
+**3. How We Use Data**
+
+**Content:**
+```
+We use your data for the following purposes:
+
+- Order fulfillment: Send download links, receipts, order confirmations
+- Account management: Enable login, display order history, manage subscriptions
+- Customer support: Respond to inquiries, resolve issues
+- Payment processing: Process payments via Stripe (PCI-compliant)
+- Fraud prevention: Detect suspicious activity, prevent chargebacks
+- Analytics: Understand user behavior, improve website (Google Analytics)
+- Marketing: Send newsletter about new products (opt-in only, unsubscribe anytime)
+- Legal compliance: Maintain tax records, respond to legal requests
+
+We do NOT:
+- Sell your data to third parties
+- Use your data for targeted advertising (no ad tracking)
+- Share your data with partners for their marketing purposes
+```
+
+**Legal Purpose:** Transparency about data uses, reassure users data not sold.
+
+---
+
+**4. Who We Share Data With (Third Parties)**
+
+**Content:**
+```
+We share your data with the following third-party service providers:
+
+PAYMENT PROCESSING:
+- Stripe: Processes payments, stores payment methods (PCI-compliant)
+  - Privacy Policy: https://stripe.com/privacy
+
+EMAIL DELIVERY:
+- SendGrid: Sends transactional emails (order confirmations, password resets)
+  - Privacy Policy: https://www.twilio.com/legal/privacy
+
+HOSTING & STORAGE:
+- Vercel: Hosts website (server logs, performance data)
+  - Privacy Policy: https://vercel.com/legal/privacy-policy
+- Neon: Hosts database (order history, account data)
+  - Privacy Policy: https://neon.tech/privacy-policy
+- Cloudflare: CDN, file storage (download logs, IP addresses)
+  - Privacy Policy: https://www.cloudflare.com/privacypolicy/
+
+ANALYTICS:
+- Google Analytics: Website traffic, user behavior (anonymized IP)
+  - Privacy Policy: https://policies.google.com/privacy
+  - Opt-out: [Link to Google Analytics opt-out]
+
+All third parties are bound by Data Processing Agreements (DPAs) and comply with GDPR.
+
+We do NOT share your data with:
+- Advertisers or ad networks
+- Data brokers
+- Social media platforms (for their use)
+```
+
+**Legal Purpose:** Transparency about third-party data sharing, provide links to their privacy policies.
+
+---
+
+**5. Data Retention (How Long We Keep Data)**
+
+**Content:**
+```
+We retain your data for the following periods:
+
+ACCOUNT DATA:
+- Active accounts: Until you delete your account
+- Deleted accounts: Personal data anonymized, order history retained (see below)
+
+ORDER DATA:
+- Order history: 7 years (UK tax law requirement—HMRC)
+- Payment data: Stored by Stripe, not by us
+- Download logs: 2 years (support, re-download access)
+
+COMMUNICATIONS:
+- Support emails: 2 years (reference for recurring issues)
+- Newsletter: Until you unsubscribe
+
+ANALYTICS:
+- Google Analytics: 26 months (Google default)
+- Anonymized aggregated data: Indefinitely (no personal identifiers)
+
+After retention period: Data permanently deleted from active databases and backups.
+```
+
+**Legal Purpose:** Define how long data stored (GDPR storage limitation principle).
+
+---
+
+**6. Your Rights (GDPR User Rights)**
+
+**Content:**
+```
+Under GDPR, you have the following rights:
+
+RIGHT TO ACCESS:
+- Request a copy of all personal data we hold about you
+- Provided as downloadable JSON file
+
+RIGHT TO RECTIFICATION:
+- Correct inaccurate or incomplete personal data
+- Update email, name, preferences in account settings
+
+RIGHT TO ERASURE ("Right to be Forgotten"):
+- Request deletion of your personal data
+- Exception: We must retain order history for 7 years (tax law)
+- Process: Personal data anonymized (name, email removed), order history retained as "Deleted User #12345"
+
+RIGHT TO RESTRICT PROCESSING:
+- Temporarily limit how we use your data
+- E.g., suspend newsletter while investigating complaint
+
+RIGHT TO DATA PORTABILITY:
+- Receive your data in machine-readable format (JSON)
+- Transfer data to another service
+
+RIGHT TO OBJECT:
+- Object to data processing based on legitimate interest
+- Object to marketing communications (unsubscribe)
+
+RIGHT TO WITHDRAW CONSENT:
+- Withdraw consent for newsletter, optional cookies
+- Does not affect lawfulness of prior processing
+
+To exercise your rights: Contact privacy@sfsupernova.com or use account settings.
+
+Response time: Within 30 days (free of charge, unless request excessive).
+```
+
+**Legal Purpose:** Inform users of GDPR rights, explain how to exercise them.
+
+---
+
+**7. Data Security (How We Protect Data)**
+
+**Content:**
+```
+We implement industry-standard security measures to protect your data:
+
+ENCRYPTION:
+- All data transmitted over HTTPS (TLS 1.2+)
+- Database backups encrypted (AES-256)
+- Passwords hashed with bcrypt (never stored plaintext)
+
+ACCESS CONTROL:
+- Role-based access (admin, user)
+- Two-factor authentication for admin accounts
+- Least privilege principle (employees access only what needed)
+
+MONITORING:
+- Automated intrusion detection (Cloudflare WAF)
+- Error tracking (Sentry—no passwords logged)
+- Uptime monitoring (alerts on downtime)
+
+VENDOR SECURITY:
+- All third parties PCI-compliant (Stripe), SOC 2 certified (Vercel, Neon)
+- Regular security audits of dependencies (npm audit)
+
+BACKUPS:
+- Daily database backups (encrypted, stored off-site)
+- Disaster recovery plan (restore within 4 hours)
+
+Despite best efforts, no system is 100% secure. If a breach occurs, we will notify affected users within 72 hours and report to ICO (UK data protection authority) as required by law.
+```
+
+**Legal Purpose:** Demonstrate security measures (GDPR "integrity and confidentiality" principle).
+
+---
+
+**8. International Data Transfers**
+
+**Content:**
+```
+SF Supernova is based in the United Kingdom. Your data may be transferred to and processed in countries outside the UK/EU, specifically:
+
+- United States: Stripe (payment processing), Google Analytics (analytics)
+- These transfers are protected by:
+  - Standard Contractual Clauses (SCCs) approved by EU Commission
+  - Data Processing Agreements (DPAs) with all vendors
+  - Vendors certified under EU-US Data Privacy Framework (where applicable)
+
+We ensure all international transfers comply with GDPR safeguards.
+```
+
+**Legal Purpose:** GDPR requires disclosure of international data transfers and safeguards.
+
+---
+
+**9. Children's Privacy**
+
+**Content:**
+```
+SF Supernova is not intended for children under 13. We do not knowingly collect personal data from children under 13.
+
+If you are between 13-18, you must have parental/guardian consent to use the Service.
+
+If we discover we have collected data from a child under 13, we will delete it immediately. If you believe we have collected data from a child, contact us: privacy@sfsupernova.com.
+```
+
+**Legal Purpose:** COPPA compliance (US law), GDPR compliance (children require parental consent).
+
+---
+
+**10. Cookies & Tracking**
+
+**Content:**
+```
+We use the following types of cookies:
+
+ESSENTIAL COOKIES (Always Active):
+- Session cookies: Keep you logged in
+- Security cookies: Prevent CSRF attacks
+- Cannot be disabled (required for site functionality)
+
+ANALYTICS COOKIES (Optional):
+- Google Analytics: Track page views, user behavior
+- Can opt out: [Link to cookie settings]
+
+PREFERENCE COOKIES (Optional):
+- Remember settings (dark mode, language)
+- Can clear via browser settings
+
+We do NOT use:
+- Advertising cookies
+- Cross-site tracking cookies
+- Third-party marketing cookies
+
+Cookie consent: On first visit, you will see a cookie banner. You can accept, reject optional cookies, or manage preferences.
+
+For more information about cookies: https://www.allaboutcookies.org
+```
+
+**Legal Purpose:** ePrivacy Directive (EU cookie law) requires cookie disclosure and consent.
+
+---
+
+**11. Changes to Privacy Policy**
+
+**Content:**
+```
+We may update this Privacy Policy from time to time. Material changes will be communicated via:
+
+- Email notification (to registered users)
+- Prominent notice on the website
+
+Continued use of the Service after changes constitutes acceptance of the updated Privacy Policy.
+
+Last Updated: [Date]
+```
+
+**Legal Purpose:** Reserve right to update policy, define notification process.
+
+---
+
+**12. Contact & Complaints**
+
+**Content:**
+```
+For privacy-related questions or to exercise your rights:
+
+Email: privacy@sfsupernova.com
+Address: [Registered Business Address]
+
+Response time: Within 30 days
+
+COMPLAINTS:
+If you believe we have violated your data protection rights, you have the right to lodge a complaint with the UK Information Commissioner's Office (ICO):
+
+ICO Website: https://ico.org.uk/make-a-complaint/
+ICO Helpline: 0303 123 1113
+```
+
+**Legal Purpose:** Provide contact info, inform users of right to complain to supervisory authority.
+
+---
+
+**GDPR Compliance Checklist**
+
+- [ ] Privacy Policy published and accessible (footer link)
+- [ ] Cookie consent banner (optional cookies require consent)
+- [ ] User can access their data (account dashboard, export feature)
+- [ ] User can correct their data (account settings)
+- [ ] User can delete their data (account deletion with anonymization)
+- [ ] User can export their data (JSON download)
+- [ ] Data Processing Agreements with third parties (Stripe, SendGrid, etc.)
+- [ ] Data breach notification plan (72-hour requirement)
+- [ ] Records of Processing Activities (ROPA) documented
+- [ ] ICO registration (if processing sensitive data or >250 employees—SF Supernova likely exempt Phase 1)
+
+---
+
+### 12.4 Content Licensing & Copyright Compliance
+
+**Strategic Overview**
+
+Content licensing defines the legal rights to use, distribute, and sell content (ebooks, audiobooks). Copyright compliance ensures SF Supernova does not infringe on others' intellectual property rights. For a platform built on public domain content, understanding public domain law and properly attributing sources is critical to avoid legal risk.
+
+**Core Principle:** *"Only use content you have legal right to use. When in doubt, don't use it. Respect creators' rights, even when not legally required."*
+
+---
+
+**Public Domain: Definition & Rules**
+
+**What is Public Domain?**
+
+Content not protected by copyright—free to use, modify, distribute, sell without permission.
+
+**How Content Enters Public Domain (UK/US Context):**
+
+| Method | Description | Examples |
+|--------|-------------|----------|
+| **Copyright Expired** | Works published before certain date (varies by country) | UK: Pre-1955 generally safe<br>US: Pre-1928 safe, 1928-1977 complex |
+| **Government Works** | Created by government (no copyright) | UK: Crown Copyright (complex)<br>US: Federal gov works (public domain) |
+| **Dedicated to Public Domain** | Creator explicitly releases rights | CC0 license, author waiver |
+| **Never Copyrighted** | No copyright notice (US pre-1989, complex) | Rare, risky to rely on |
+
+**Critical: Public Domain Status Varies by Country**
+
+- Work may be public domain in US but still copyrighted in UK (or vice versa)
+- SF Supernova operates in UK → must respect UK copyright law
+- Safe approach: Use works public domain in BOTH UK and US
+
+---
+
+**Public Domain Safe Harbor (Conservative Approach)**
+
+**Safe Works for SF Supernova:**
+
+| Category | Safe Date Range | Rationale |
+|----------|----------------|-----------|
+| **UK Works** | Published before 1955 | Author died >70 years ago (assuming 1884 death date) |
+| **US Works** | Published before 1928 | Definitely public domain in US |
+| **Both UK & US** | Published before 1928 | Safe in both jurisdictions (overlap) |
+
+**Golden Age Sci-Fi (1938-1950s):**
+
+- **Problem:** Some works still under copyright (authors died 1960s-1990s)
+- **Example:** Isaac Asimov (died 1992) → works copyrighted until 2062 (UK: 70 years after death)
+- **Solution:** Only use works by authors confirmed public domain (died before 1954)
+
+**Curated Public Domain Authors (Safe List):**
+
+- Edgar Rice Burroughs (died 1950) → Safe from 2020
+- H.G. Wells (died 1946) → Safe from 2016
+- Jules Verne (died 1905) → Safe since 1975
+- E.E. Smith (died 1965) → Safe from 2035 (NOT SAFE YET—risky)
+
+**Phase 1 Strategy:**
+
+- **Conservative:** Only use pre-1928 works (100% safe)
+- **Phase 2:** Expand to 1928-1955 with careful author death date research
+- **Phase 3:** License modern works (pay royalties to estates/publishers)
+
+---
+
+**Verifying Public Domain Status**
+
+**Research Checklist:**
+
+1. **Publication Date:** When was work first published?
+2. **Author Death Date:** When did author die?
+3. **Copyright Renewal:** Was copyright renewed (US works 1928-1963)?
+4. **Country of Origin:** Where was work first published?
+5. **Editions:** Is THIS edition public domain (new translations may have copyright)?
+
+**Trusted Sources:**
+
+- **Project Gutenberg:** https://www.gutenberg.org (vets public domain status)
+- **Internet Archive:** https://archive.org (some works marked public domain, some not)
+- **ISFDB:** https://www.isfdb.org (publication dates, author death dates)
+- **Stanford Copyright Renewal Database:** https://exhibits.stanford.edu/copyrightrenewals
+
+**Example Research (Isaac Asimov's "Foundation"):**
+
+- **Published:** 1951 (serialized), 1953 (novel)
+- **Author Died:** 1992
+- **Public Domain Status:** NO—copyrighted until 2062 (UK: death + 70 years)
+- **Conclusion:** Cannot use without license
+
+**Example Research (H.G. Wells' "The War of the Worlds"):**
+
+- **Published:** 1898
+- **Author Died:** 1946
+- **Public Domain Status:** YES—safe since 2016 (UK), safe since 1898+95=1993 (US)
+- **Conclusion:** Safe to use
+
+---
+
+**Derivative Works & Translations**
+
+**Critical Rule:** Public domain status applies to ORIGINAL work, not all editions.
+
+**Example:**
+
+- **Original:** "War of the Worlds" (1898, H.G. Wells) → Public domain
+- **New Translation:** 2020 translation into Spanish → COPYRIGHTED (translator owns copyright on translation)
+- **Illustrated Edition:** 2021 illustrated edition → COPYRIGHTED (illustrator owns copyright on illustrations)
+
+**SF Supernova Approach:**
+
+- **Use Original Text:** Public domain editions (Project Gutenberg, Internet Archive)
+- **No Modern Translations:** Unless licensed or translator explicitly released to public domain
+- **No Modern Covers:** Commission original covers or use public domain images (NASA, Unsplash, etc.)
+
+---
+
+**Attribution & Credits**
+
+**Ethical Practice (Even When Not Legally Required):**
+
+- **Author Credit:** Always credit original author, even if public domain
+- **Source Credit:** Acknowledge where content obtained (Project Gutenberg, Internet Archive)
+- **Curation Credit:** SF Supernova owns copyright on editorial additions (descriptions, analysis, formatting)
+
+**Example Product Description:**
+```
+The War of the Worlds
+by H.G. Wells
+
+Original text from Project Gutenberg (public domain)
+Editorial description by SF Supernova
+
+Published: 1898
+Genre: Science Fiction, Invasion
+
+[Description, analysis, historical context—copyrighted by SF Supernova]
+```
+
+---
+
+**User-Generated Content (Reviews, Comments)**
+
+**Copyright Ownership:**
+
+- **Users Retain Copyright:** Users own copyright on reviews, comments
+- **SF Supernova License:** Users grant SF Supernova license to display, distribute (via Terms of Service)
+
+**Terms of Service Language:**
+```
+By submitting content (reviews, comments), you grant SF Supernova a non-exclusive, worldwide, royalty-free license to use, display, and distribute your content on the Service. You retain copyright ownership of your content and can request removal at any time.
+```
+
+**Moderation:**
+
+- **SF Supernova Can Remove:** Spam, abusive, defamatory, or copyright-infringing content
+- **User Responsibility:** Users liable for copyright infringement in their own content
+
+---
+
+**DMCA Compliance (US Law, Applies if Targeting US Users)**
+
+**What is DMCA?**
+
+Digital Millennium Copyright Act (US law)—provides "safe harbor" for platforms if they respond to copyright complaints.
+
+**DMCA Requirements:**
+
+1. **Designated Agent:** Appoint DMCA agent to receive complaints
+2. **DMCA Takedown Process:** Remove infringing content when notified
+3. **Counter-Notice Process:** Allow users to dispute takedowns
+4. **Repeat Infringer Policy:** Terminate accounts with multiple infringements
+
+**DMCA Takedown Process:**
+
+1. **Copyright Holder Sends DMCA Notice:** Claims content infringes their copyright
+2. **SF Supernova Reviews Notice:** Verify notice contains required elements
+3. **Remove Content:** Take down allegedly infringing content (within 24-48 hours)
+4. **Notify User:** Inform user of takedown, provide copy of DMCA notice
+5. **User Can File Counter-Notice:** If user believes content is not infringing
+6. **Restore Content (If Counter-Notice Filed):** After 10-14 days, restore content (unless copyright holder files lawsuit)
+
+**DMCA Agent Contact:**
+
+- Must be listed on website
+- Must be registered with US Copyright Office (https://www.copyright.gov/dmca-directory/)
+
+**DMCA Notice Template (Receive from Copyright Holders):**
+```
+Subject: DMCA Takedown Notice
+
+I, [Name], am the copyright owner (or authorized agent) of the following work:
+
+[Title of copyrighted work]
+
+I have a good faith belief that the following content on sfsupernova.com infringes my copyright:
+
+[URL of infringing content]
+
+I request that you remove or disable access to this content.
+
+Under penalty of perjury, I state that the information in this notice is accurate and that I am authorized to act on behalf of the copyright owner.
+
+Signed: [Name]
+Date: [Date]
+Contact: [Email, Phone]
+```
+
+**Phase 1 Approach:**
+
+- **Skip DMCA Registration:** Not required for UK-only operation
+- **Phase 2:** Register DMCA agent if targeting US users (helps with safe harbor protection)
+
+---
+
+**Trademark Issues**
+
+**Author Names:**
+
+- **No Trademark Protection (Usually):** Author names typically not trademarked (free to use)
+- **Exception:** Brand names (e.g., "Star Trek" trademark of Paramount—can't use without license)
+
+**Book Titles:**
+
+- **No Copyright Protection:** Titles not copyrightable (can use "Foundation" title without issue)
+- **Trademark Possible:** If title is also brand name (e.g., "Harry Potter")
+
+**SF Supernova Safe Practice:**
+
+- **Use Author Names Freely:** "Isaac Asimov Collection" (OK)
+- **Avoid Trademarks:** Don't use "Star Trek" or "Star Wars" (trademarked brands)
+- **Descriptive Use:** "Sci-fi like Star Trek" (OK—descriptive fair use)
+
+---
+
+### 12.5 Risk Assessment & Mitigation Strategies
+
+**Strategic Overview**
+
+Risk assessment identifies potential threats to SF Supernova's business, legal, operational, and financial health. Risk mitigation defines strategies to reduce likelihood or impact of risks. For a bootstrapped platform, risks must be managed proactively—unmanaged risks can destroy the business (lawsuits, data breaches, payment processor bans).
+
+**Core Principle:** *"Identify risks early, mitigate where possible, accept where mitigation too costly. Some risk is inherent to business—manage it, don't fear it."*
+
+---
+
+**Risk Categories**
+
+1. **Legal Risks:** Lawsuits, regulatory compliance failures, IP infringement
+2. **Financial Risks:** Revenue shortfalls, refund spikes, fraud, payment processor issues
+3. **Operational Risks:** Downtime, data loss, security breaches, supply chain failures
+4. **Reputational Risks:** Negative reviews, social media backlash, poor customer service
+5. **Strategic Risks:** Market changes, competitor threats, technology obsolescence
+
+---
+
+**Risk Matrix (Likelihood × Impact)**
+
+| Risk | Likelihood | Impact | Priority | Mitigation Strategy |
+|------|-----------|--------|----------|---------------------|
+| **Copyright Infringement Lawsuit** | Low | High | High | Rigorous public domain verification, DMCA compliance |
+| **GDPR Fine** | Low | High | High | Privacy policy, data protection measures, user rights implementation |
+| **Payment Processor Ban (Stripe)** | Low | High | High | Comply with ToS, avoid chargebacks, fraud prevention |
+| **Data Breach** | Low | High | High | Encryption, access control, security monitoring |
+| **Site Downtime (>4 hours)** | Medium | Medium | Medium | Monitoring, backups, rollback plan, CDN redundancy |
+| **Refund Spike (>10% of revenue)** | Low | Medium | Medium | Clear product descriptions, 24-hour refund policy, quality control |
+| **Key Vendor Failure (Stripe, Neon, R2)** | Low | High | High | Fallback providers, regular backups, S3-compatible storage |
+| **Founder Incapacitation** | Low | High | Medium | Documentation, access delegation (trusted person), insurance |
+| **Market Shift (eBooks decline)** | Low | Medium | Low | Diversify formats (audio), monitor trends, agile pivot |
+| **Negative Viral Event (social media)** | Low | High | Medium | Excellent customer service, transparent communication, crisis plan |
+| **Competitor Launches** | Medium | Low | Low | Differentiation (curation, quality), focus on execution |
+| **Tax Audit** | Low | Medium | Low | Accurate records, accountant, receipts for 7 years |
+
+---
+
+**Top 5 Risks (Detailed Mitigation)**
+
+**1. Copyright Infringement Lawsuit**
+
+**Risk:** SF Supernova distributes copyrighted work without permission → copyright holder sues for infringement.
+
+**Likelihood:** Low (using public domain content, careful verification)
+
+**Impact:** High (legal fees £10,000-50,000, damages, business shutdown)
+
+**Mitigation Strategies:**
+
+- **Pre-1928 Content Only (Phase 1):** Conservative approach (100% safe)
+- **Public Domain Research:** Verify author death date, publication date, copyright status
+- **DMCA Compliance:** Register DMCA agent, respond to takedown notices (safe harbor)
+- **Legal Review:** Have lawyer review content list (one-time £500-1,000)
+- **Errors & Omissions Insurance:** Professional indemnity insurance (£300-500/year)
+
+**Contingency Plan:**
+
+- If DMCA notice received: Remove content immediately, apologize, investigate
+- If lawsuit filed: Hire IP lawyer, settle if possible (cheaper than trial)
+- Insurance covers legal fees (if insured)
+
+---
+
+**2. GDPR Fine**
+
+**Risk:** Data protection violation (breach, non-compliance with user rights) → ICO issues fine.
+
+**Likelihood:** Low (compliant privacy policy, user rights implemented)
+
+**Impact:** High (fines up to 4% of turnover or £17.5M, whichever higher—likely £10,000-50,000 for small business)
+
+**Mitigation Strategies:**
+
+- **Privacy Policy:** Comprehensive, accessible, regularly updated
+- **User Rights:** Access, correction, deletion, export all implemented
+- **Data Minimization:** Collect only necessary data
+- **Security Measures:** Encryption, access control, monitoring
+- **Data Processing Agreements:** With all third parties (Stripe, SendGrid, etc.)
+- **Breach Response Plan:** 72-hour notification requirement
+- **Regular Audits:** Quarterly review of data practices, compliance checklist
+
+**Contingency Plan:**
+
+- If ICO complaint: Respond within deadline, demonstrate compliance efforts, cooperate fully
+- If breach: Notify ICO within 72 hours, notify affected users, remediate vulnerability
+- Insurance may cover fines (cyber liability insurance)
+
+---
+
+**3. Payment Processor Ban (Stripe)**
+
+**Risk:** Stripe suspends or bans account → cannot process payments, revenue stops.
+
+**Likelihood:** Low (compliant with Stripe ToS, low chargeback rate)
+
+**Impact:** High (revenue loss, customer frustration, potential business closure)
+
+**Common Causes:**
+
+- High chargeback rate (>1%)
+- Fraud (stolen cards, suspicious activity)
+- Prohibited products (adult content, weapons—not applicable to SF Supernova)
+- Terms of Service violations
+
+**Mitigation Strategies:**
+
+- **Fraud Prevention:** Stripe Radar (built-in fraud detection), monitor suspicious orders
+- **Chargeback Prevention:** Clear product descriptions, responsive support, 24-hour refunds
+- **Compliance:** Read Stripe ToS, avoid prohibited activities
+- **Backup Processor:** PayPal or Paddle as backup (pre-approved, ready to activate)
+- **Communication:** Respond to Stripe emails immediately (don't ignore compliance requests)
+
+**Contingency Plan:**
+
+- If Stripe suspends: Contact support immediately, provide requested documents, resolve issue
+- If Stripe bans: Activate backup processor (PayPal), notify customers of temporary payment issues
+- Revenue loss mitigation: Keep 3-6 months operating costs in reserve
+
+---
+
+**4. Data Breach**
+
+**Risk:** Hackers access database, steal user data (emails, passwords, order history).
+
+**Likelihood:** Low (modern security practices, reputable hosting)
+
+**Impact:** High (GDPR fine, reputation damage, customer loss, legal costs)
+
+**Mitigation Strategies:**
+
+- **Encryption:** All data in transit (HTTPS), at rest (encrypted backups)
+- **Password Security:** bcrypt hashing, no plaintext passwords
+- **Access Control:** Role-based access, least privilege, 2FA for admin
+- **Security Monitoring:** Sentry (error tracking), Cloudflare WAF (firewall), UptimeRobot (downtime alerts)
+- **Vendor Security:** Use SOC 2 certified providers (Vercel, Neon, Stripe)
+- **Regular Updates:** Dependency updates (npm audit), security patches
+- **Penetration Testing:** Hire security auditor (Phase 2+, £1,000-3,000)
+
+**Contingency Plan:**
+
+- If breach detected: Isolate affected systems (1 hour), assess scope (4 hours), notify ICO (72 hours), notify users (72 hours)
+- **Communication Template:** "We detected a security incident on [date]. The following data was potentially accessed: [details]. We have taken the following actions: [remediation]. We recommend you: [user actions—change password, monitor accounts]."
+- **Remediation:** Fix vulnerability, improve security, offer credit monitoring (if severe)
+
+---
+
+**5. Key Vendor Failure**
+
+**Risk:** Critical vendor (Stripe, Neon, Cloudflare R2) experiences prolonged outage or shuts down → platform unusable.
+
+**Likelihood:** Low (reputable vendors, 99.9% uptime SLAs)
+
+**Impact:** High (revenue loss, customer frustration, data loss risk)
+
+**Mitigation Strategies:**
+
+- **Redundancy:** Daily backups (Neon → Cloudflare R2), can restore to alternative hosting
+- **S3-Compatible Storage:** Cloudflare R2 uses S3 API → easy migration to AWS S3, Backblaze B2
+- **Backup Payment Processor:** PayPal pre-approved (activate if Stripe down)
+- **Status Monitoring:** Subscribe to vendor status pages, alerts on outages
+- **Testing:** Quarterly test restore from backup (verify backups work)
+
+**Contingency Plan:**
+
+- **Stripe Outage:** Display "Payment processing temporarily unavailable" message, queue orders, process when restored
+- **Neon Outage:** Restore database to Railway, Supabase, or self-hosted VPS (4-8 hours)
+- **Cloudflare R2 Outage:** Migrate files to Backblaze B2 or AWS S3 (S3-compatible, 2-4 hours)
+- **Communication:** Email customers, post status updates (Twitter, homepage banner)
+
+---
+
+**Risk Acceptance (Some Risks Cannot Be Mitigated)**
+
+**Accepted Risks:**
+
+- **Market Risk:** eBook market declines → pivot to audio, adjust business model
+- **Competitor Risk:** Larger competitor launches similar platform → differentiate via curation, quality
+- **Founder Risk:** Founder incapacitation → document everything, delegate access to trusted person
+
+**Why Accepted:** Mitigation too costly, likelihood too low, or impact manageable.
+
+---
+
+**Crisis Communication Plan**
+
+**Crisis Scenarios:**
+
+1. **Data Breach:** Notify users within 72 hours, explain what happened, what we're doing, what users should do
+2. **Payment Processor Down:** Email users, post status updates, process orders manually if possible
+3. **Site Downtime:** Post status updates (Twitter, status page), estimate restoration time
+4. **Legal Threat:** Consult lawyer, do not respond publicly without legal advice
+5. **Negative Viral Event:** Acknowledge issue, apologize if appropriate, explain resolution, be transparent
+
+**Communication Channels:**
+
+- **Email:** Direct to affected users (order confirmation emails, account emails)
+- **Twitter/X:** Public status updates (quick, broad reach)
+- **Homepage Banner:** Prominent notice for active users
+- **Status Page:** Statuspage.io (Phase 2+, dedicated uptime/incident page)
+
+**Crisis Response Template:**
+```
+Subject: Important Update: [Issue Summary]
+
+Hi [Name],
+
+We're writing to inform you of [issue description]. Here's what happened:
+
+WHAT HAPPENED:
+[Clear, factual explanation]
+
+WHAT WE'RE DOING:
+[Steps taken to resolve, prevent future occurrence]
+
+WHAT YOU SHOULD DO:
+[User actions, if any—change password, monitor accounts, etc.]
+
+We take this seriously and apologize for any inconvenience. If you have questions, contact support@sfsupernova.com.
+
+Thank you for your patience.
+
+— SF Supernova Team
+```
 
 ---
 
@@ -36309,8 +37706,6 @@ SEO risks, content ingestion risks, production bottlenecks, dependency on PD sou
 7. **Learn & Improve:** Post-incident reviews, update processes, prevent recurrence
 
 **SF Supernova's risk management strategy balances caution with pragmatism. High-impact risks (copyright lawsuits, GDPR fines, payment processor bans, data breaches) are mitigated through rigorous compliance, security measures, and insurance. Lower-impact risks (downtime, refunds) are managed through monitoring and contingency plans. Some risks (market shifts, competitors) are accepted as inherent to business. By identifying, mitigating, and preparing for risks proactively, SF Supernova can operate confidently and respond effectively when inevitable challenges arise.**
-
----
 
 
 
