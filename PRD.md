@@ -36293,8 +36293,7 @@ Add step to GitHub Actions workflow:
 
 
 
-## 12. Risks, Dependencies & Constraints
-EO risks, content ingestion risks, production bottlenecks, dependency on PD sources, labour constraints, AI reliability, hosting cost risks.
+
 
 ## 12. Legal, Compliance & Risk Management
 Defines legal requirements, regulatory compliance, risk mitigation strategies, and policies needed to operate SF Supernova legally and ethically.
