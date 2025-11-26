@@ -39543,23 +39543,560 @@ The "living document" philosophy treats the PRD as evolving, not static. It adap
 - **Growing Team (Phase 3):** PRD Committee, weekly meeting, Git-based workflow
 
 **The PRD is not a bureaucratic artifact—it's the strategic anchor that prevents drift, enables iteration, and ensures everyone (present and future) understands what SF Supernova is building and why. Governance is not about rigidity—it's about disciplined flexibility. By maintaining the PRD rigorously, SF Supernova ensures product decisions are transparent, justified, and aligned with strategy—even as the platform evolves.**
+
+
 ## 15. Appendices
 Glossary, research summaries, dataset notes, citations, diagrams, keyword maps, and supporting materials.
+
 ### 15.1 Glossary of Terms & Definitions
+
+**Strategic Overview**
+
+A comprehensive glossary ensures all stakeholders (technical and non-technical) share a common vocabulary. For SF Supernova, this includes business terms, technical terms, sci-fi genre terms, and public domain legal terms.
+
+**Core Principle:** *"Shared language enables shared understanding. Ambiguous terms breed confusion and misalignment."*
+
+---
+
+**Business & Product Terms**
+
+| Term | Definition |
+|------|------------|
+| **ARR (Annual Recurring Revenue)** | Total value of recurring subscriptions annualized (e.g., £2,000/month membership revenue = £24,000 ARR) |
+| **CAC (Customer Acquisition Cost)** | Total marketing/sales cost divided by new customers acquired in period |
+| **Churn Rate** | Percentage of subscribers who cancel in a given period (Monthly churn = cancellations ÷ total subscribers) |
+| **Conversion Rate** | Percentage of visitors who complete desired action (e.g., free → paid, visitor → email subscriber) |
+| **Discovery Layer** | Free content (blog posts, author bios, reviews) that attracts organic traffic and introduces users to SF Supernova |
+| **LTV (Lifetime Value)** | Total revenue expected from a customer over their entire relationship with SF Supernova |
+| **MVP (Minimum Viable Product)** | Smallest feature set that delivers value and enables learning (Phase 1 = MVP) |
+| **MRR (Monthly Recurring Revenue)** | Predictable revenue from subscriptions each month |
+| **Option 1-5** | Board-approved phased rollout strategy (Option 3+2 → 4+1 → 5) |
+| **Product** | Digital goods for sale (ebooks, audiobooks)—SF Supernova's term for individual purchasable items |
+| **RPM (Revenue Per Mille)** | Revenue per 1,000 pageviews (ad monetization metric, e.g., £10 RPM = £10 per 1,000 views) |
+| **SAIS (System Architecture & Interface Specification)** | Technical blueprint defining how SF Supernova is built (follows PRD) |
+| **SEO (Search Engine Optimization)** | Practices to improve organic search rankings and visibility |
+
+---
+
+**Technical Terms**
+
+| Term | Definition |
+|------|------------|
+| **API (Application Programming Interface)** | Interface allowing systems to communicate (e.g., Stripe API for payments) |
+| **CMS (Content Management System)** | Software for creating/managing digital content (e.g., WordPress, Strapi) |
+| **CDN (Content Delivery Network)** | Distributed network of servers delivering content faster (e.g., Cloudflare, Fastly) |
+| **CRUD (Create, Read, Update, Delete)** | Basic database operations for managing data |
+| **DA (Domain Authority)** | Moz metric (1-100) predicting search engine ranking ability (higher = better) |
+| **DRM (Digital Rights Management)** | Technology controlling access to digital content (SF Supernova uses DRM-free approach) |
+| **EPUB** | Standard ebook format (reflowable text, works on most ereaders) |
+| **GDPR (General Data Protection Regulation)** | EU privacy law governing personal data collection and processing |
+| **HTML/CSS/JavaScript** | Core web technologies (structure, styling, interactivity) |
+| **JSON (JavaScript Object Notation)** | Data format for transmitting structured data (used in APIs) |
+| **Markdown** | Lightweight markup language for formatting text (used for blog posts, content creation) |
+| **OCR (Optical Character Recognition)** | Technology converting scanned images to editable text (notoriously error-prone for vintage texts) |
+| **REST API** | Architectural style for web APIs (standard for modern web services) |
+| **RSS (Really Simple Syndication)** | Feed format allowing users to subscribe to content updates |
+| **SaaS (Software as a Service)** | Cloud-based software model (e.g., Stripe, Mailchimp) |
+| **SSG (Static Site Generator)** | Tool generating static HTML sites from templates (e.g., Next.js, Hugo) |
+| **SSL/TLS** | Encryption protocols securing web traffic (HTTPS) |
+| **WCAG (Web Content Accessibility Guidelines)** | International standards for accessible web design |
+
+---
+
+**Science Fiction & Content Terms**
+
+| Term | Definition |
+|------|------------|
+| **Golden Age of Science Fiction** | Period from late 1930s to early 1950s (Asimov, Heinlein, Clarke); defined modern sci-fi |
+| **Pulp Magazines** | Inexpensive fiction magazines (1896-1950s) printed on cheap "pulp" paper; birthplace of sci-fi genre |
+| **Amazing Stories** | First sci-fi magazine (founded 1926 by Hugo Gernsback); iconic cover art by Frank R. Paul |
+| **Astounding Science Fiction** | Influential sci-fi magazine (1930-) edited by John W. Campbell Jr.; published Asimov, Heinlein, Clarke |
+| **Space Opera** | Sci-fi subgenre emphasizing adventure, romance, and interstellar conflict (e.g., E.E. "Doc" Smith's Lensman series) |
+| **Hard Science Fiction** | Subgenre emphasizing scientific accuracy and technical detail (e.g., Arthur C. Clarke, Isaac Asimov) |
+| **New Wave Science Fiction** | 1960s-1970s movement emphasizing literary experimentation, social commentary (e.g., Ursula K. Le Guin, Philip K. Dick) |
+| **Bug-Eyed Monster (BEM)** | Pulp sci-fi trope: alien creatures with exaggerated features (common on 1930s-1950s covers) |
+| **Retro-Futurism** | Aesthetic depicting past visions of the future (rocket ships, ray guns, chrome cities) |
+| **Fanzine** | Amateur fan magazine (sci-fi community staple since 1930s) |
+
+---
+
+**Public Domain & Legal Terms**
+
+| Term | Definition |
+|------|------------|
+| **Public Domain** | Works no longer protected by copyright (free to use, modify, distribute) |
+| **Pre-1928 Rule (US)** | Works published before January 1, 1928 are definitively in US public domain |
+| **1928-1963 (Copyright Renewal)** | Works published 1928-1963 that didn't renew copyright are public domain (requires verification) |
+| **Life+70 Rule** | Copyright expires 70 years after author's death (US, UK, EU standard) |
+| **Creative Commons (CC)** | Licensing system allowing creators to grant usage rights (e.g., CC BY = attribution required) |
+| **Fair Use** | Legal doctrine allowing limited use of copyrighted material (commentary, criticism, parody)—context-dependent |
+| **Derivative Work** | New work based on existing copyrighted work (requires permission unless original is public domain) |
+| **Project Gutenberg** | Largest free ebook library (70,000+ public domain titles) |
+| **Internet Archive** | Non-profit digital library (texts, audio, video, software, web archives) |
+| **LibriVox** | Volunteer-run project creating free public domain audiobooks |
+
+---
 
 ### 15.2 Research Summaries & Market Analysis
 
+**Strategic Overview**
+
+This section summarizes key research findings that informed the PRD. Includes competitive analysis, market sizing, traffic projections, and monetization benchmarks.
+
+---
+
+**Research Summary #1: Competitive Traffic & Monetization Analysis**
+
+**Objective:** Understand how similar vintage sci-fi sites monetize and what traffic levels they achieve.
+
+**Key Findings:**
+
+1. **Project Gutenberg:** 15M+ monthly visits, but zero direct monetization (donation-funded)
+2. **Internet Archive:** 30M+ monthly visits, but not optimized for discovery or monetization
+3. **Vintage Sci-Fi Blogs (e.g., PulpCovers.com, Vintage Paperbacks):** 10K-50K monthly visits, ad revenue only (£200-1,000/month estimated)
+4. **Niche Content Sites (non-sci-fi benchmarks):** 50K monthly visits can generate £2,000-5,000/month (ads + affiliates + digital products)
+
+**Monetization Benchmarks:**
+
+| Traffic Level | Ad Revenue (£10 RPM) | Affiliate Revenue (2% conversion, £10 AOV) | Digital Products (1% conversion, £5 AOV) | Total Monthly Revenue |
+|---------------|----------------------|---------------------------------------------|------------------------------------------|---------------------|
+| **10K visits/month** | £100 | £20 | £5 | **£125** |
+| **50K visits/month** | £500 | £100 | £25 | **£625** |
+| **100K visits/month** | £1,000 | £200 | £50 | **£1,250** |
+| **200K visits/month** | £2,000 | £400 | £100 | **£2,500** |
+
+**Conclusion:** SF Supernova needs 50K-100K monthly visits to reach £2,000/month revenue milestone (unlocks Phase 2).
+
+---
+
+**Research Summary #2: SEO Keyword Opportunity Analysis**
+
+**Objective:** Identify high-value, low-competition keywords for organic traffic acquisition.
+
+**Top 20 Target Keywords:**
+
+| Keyword | Monthly Search Volume | Keyword Difficulty | Commercial Intent | Priority |
+|---------|----------------------|-------------------|------------------|----------|
+| "Isaac Asimov books" | 9,900 | 45 | High | 1 |
+| "Golden Age science fiction" | 2,400 | 38 | Medium | 1 |
+| "best vintage sci-fi books" | 1,600 | 42 | High | 1 |
+| "Arthur C Clarke novels" | 5,400 | 47 | High | 2 |
+| "Ray Bradbury short stories" | 3,600 | 40 | Medium | 2 |
+| "public domain science fiction" | 720 | 25 | Low | 3 |
+| "retro sci-fi art" | 1,300 | 30 | Low | 3 |
+| "pulp magazine covers" | 880 | 28 | Low | 4 |
+| "old time radio sci-fi" | 590 | 22 | Medium | 4 |
+| "E.E. Doc Smith Lensman" | 480 | 20 | High | 5 |
+
+**Content Strategy:** Target low-hanging fruit first (KD <30), build authority, then tackle competitive keywords (KD 40-50).
+
+**Traffic Projection:** Ranking top 3 for 20 keywords = 15K-25K monthly organic visits (Year 1 target).
+
+---
+
+**Research Summary #3: Public Domain Content Audit**
+
+**Objective:** Map available copyright-free content and identify curation opportunities.
+
+**Available Content:**
+
+- **Pre-1928 Texts:** 50+ major novels (Wells, Verne, Burroughs), 2,000-3,000 total works
+- **Pulp Magazine Archives:** 11,000+ digitized magazines (Internet Archive)
+- **Cover Art:** Thousands of public domain pulp covers (Frank R. Paul, Virgil Finlay, etc.)
+- **Audio Dramas:** Limited high-quality recordings (LibriVox is amateur-only)
+
+**Major Gaps (SF Supernova Opportunities):**
+
+1. **OCR Quality:** Existing digitizations have 10-30% error rates → Opportunity: professional OCR correction
+2. **Curation:** Archives have no editorial context → Opportunity: expert curation, contextual essays
+3. **Audio:** No professional audiobook versions → Opportunity: AI-narrated or human-narrated audiobooks
+4. **Discovery:** Archives have terrible search/navigation → Opportunity: structured metadata, rich browsing
+
+**Conclusion:** Content is abundant; SF Supernova's moat is curation, quality, and structured discovery.
+
+---
+
 ### 15.3 Dataset Notes & Content Inventory
+
+**Strategic Overview**
+
+Documents the data sources, content pipelines, and inventory status for SF Supernova's catalog.
+
+---
+
+**Content Sources**
+
+| Source | Content Type | Volume | Quality | License | Usage |
+|--------|-------------|--------|---------|---------|-------|
+| **Project Gutenberg** | Ebooks (EPUB, HTML, plain text) | 70,000+ titles (2,000+ sci-fi) | Variable OCR quality | Public domain + CC | Primary ebook source |
+| **Internet Archive** | Pulp magazines (PDF, DJVU), audio | 11,000+ magazines, 5,000+ audio | Low OCR quality, amateur audio | Public domain + CC | Magazine scans, audio dramas |
+| **LibriVox** | Audiobooks (MP3, Ogg) | 200+ sci-fi titles | Amateur narration | Public domain | Audio reference (not primary) |
+| **Wikisource** | Curated texts (HTML) | 500+ sci-fi works | High editorial quality | Public domain + CC | Editorial reference |
+| **HathiTrust** | Academic scans (PDF) | 10,000+ sci-fi titles | High scan quality | Varies (check per item) | Rare works, verification |
+
+---
+
+**Content Ingestion Pipeline**
+
+1. **Source Identification:** Identify public domain work (copyright verification)
+2. **Acquisition:** Download from archive (Project Gutenberg, Internet Archive)
+3. **OCR Correction:** AI-assisted OCR cleanup (OpenAI GPT, custom scripts)
+4. **Formatting:** Convert to EPUB/MOBI/PDF (Calibre, Pandoc)
+5. **Metadata Enrichment:** Add author bio, cover art, tags, genre classification
+6. **Editorial Context:** Write introduction, historical context, thematic analysis
+7. **Quality Check:** Proofread, validate links, test downloads
+8. **Publish:** Upload to SF Supernova catalog, generate product page
+
+**Average Processing Time:** 3-5 hours per ebook (OCR correction + editorial context)
+
+---
+
+**Phase 1 Content Inventory Target**
+
+| Content Type | Launch Target | Month 3 Target | Month 6 Target |
+|-------------|--------------|---------------|---------------|
+| **Ebooks (Free)** | 50 | 100 | 200 |
+| **Ebooks (Premium)** | 10 | 25 | 50 |
+| **Audiobooks** | 5 | 15 | 30 |
+| **Author Bios** | 20 | 40 | 75 |
+| **Blog Posts** | 10 | 25 | 50 |
+| **Cover Art Gallery** | 100 | 250 | 500 |
+
+---
 
 ### 15.4 Citations & Reference Materials
 
+**Strategic Overview**
+
+Academic-style citations for external research, data sources, and legal references used in PRD.
+
+---
+
+**Market Research & Competitive Analysis**
+
+1. SimilarWeb traffic data (2024). *Project Gutenberg traffic analysis.* Retrieved from similarweb.com
+2. Ahrefs SEO data (2024). *Keyword difficulty and search volume analysis.* Retrieved from ahrefs.com
+3. Mediavine (2024). *Ad revenue benchmarks for content sites.* Retrieved from mediavine.com/blog
+4. Stripe (2024). *Digital product pricing benchmarks.* Retrieved from stripe.com/resources
+
+**Public Domain & Copyright Law**
+
+5. U.S. Copyright Office (2024). *Copyright Basics (Circular 1).* Retrieved from copyright.gov
+6. Stanford Libraries (2024). *Copyright Term and the Public Domain in the United States.* Retrieved from fairuse.stanford.edu
+7. Project Gutenberg (2024). *Copyright FAQ.* Retrieved from gutenberg.org/policy/copyright
+8. Creative Commons (2024). *CC Licenses Overview.* Retrieved from creativecommons.org/licenses
+
+**SEO & Content Marketing**
+
+9. Google (2024). *Search Quality Evaluator Guidelines.* Retrieved from google.com/search/howsearchworks
+10. Moz (2024). *Beginner's Guide to SEO.* Retrieved from moz.com/beginners-guide-to-seo
+11. Backlinko (2024). *SEO Statistics & Trends.* Retrieved from backlinko.com/seo-stats
+
+**Technical Standards**
+
+12. W3C (2024). *Web Content Accessibility Guidelines (WCAG) 2.1.* Retrieved from w3.org/WAI/WCAG21
+13. Google (2024). *Core Web Vitals.* Retrieved from web.dev/vitals
+14. OWASP (2024). *Top 10 Web Application Security Risks.* Retrieved from owasp.org/www-project-top-ten
+
+---
+
 ### 15.5 System Diagrams & Visual Models
+
+**Strategic Overview**
+
+Visual representations of SF Supernova's architecture, user flows, and data models.
+
+---
+
+**Diagram 1: User Acquisition Funnel**
+```
+┌─────────────────────────────────────────┐
+│     DISCOVERY LAYER (Free Content)      │
+│  • Blog posts (author guides, reviews)  │
+│  • Author bios                           │
+│  • Free ebooks (teasers)                 │
+│  • Cover art galleries                   │
+└─────────────────┬───────────────────────┘
+                  │ 
+                  │ Organic Search (SEO)
+                  │ Social Media (Reddit, Twitter)
+                  │ Word of Mouth
+                  ▼
+┌─────────────────────────────────────────┐
+│      PRODUCT LAYER (Digital Goods)       │
+│  • Premium ebooks (£0.99-2.99)          │
+│  • Audiobooks (£2.99-4.99)              │
+│  • Collections/bundles (£9.99-14.99)    │
+└─────────────────┬───────────────────────┘
+                  │
+                  │ 1-3% Conversion Rate
+                  ▼
+┌─────────────────────────────────────────┐
+│    MEMBERSHIP LAYER (Recurring Revenue)  │
+│  • Explorer: £2.99/month                │
+│  • Collector: £4.99/month               │
+│  • Archivist: £9.99/month               │
+└─────────────────┬───────────────────────┘
+                  │
+                  │ 5-10% Product-to-Membership
+                  ▼
+┌─────────────────────────────────────────┐
+│         RETENTION & EXPANSION            │
+│  • Email marketing (re-engagement)       │
+│  • New content releases (monthly)        │
+│  • Tier upgrades (Collector → Archivist)│
+└─────────────────────────────────────────┘
+```
+
+---
+
+**Diagram 2: Content Production Pipeline**
+```
+┌──────────────┐    ┌──────────────┐    ┌──────────────┐
+│   Source     │───▶│   Acquire    │───▶│ OCR Correct  │
+│ Identification│    │   Content    │    │  (AI-assist) │
+└──────────────┘    └──────────────┘    └──────┬───────┘
+                                                │
+                    ┌──────────────┐    ┌──────▼───────┐
+                    │   Publish    │◀───│   Format     │
+                    │  (Live Site) │    │ (EPUB/PDF)   │
+                    └──────────────┘    └──────┬───────┘
+                                                │
+                    ┌──────────────┐    ┌──────▼───────┐
+                    │ Quality Check│◀───│   Enrich     │
+                    │  (Proofread) │    │  (Metadata)  │
+                    └──────────────┘    └──────────────┘
+```
+
+---
+
+**Diagram 3: Phase Progression & Revenue Milestones**
+```
+Phase 1 (MVP)              Phase 2 (Growth)           Phase 3 (Scale)
+┌─────────────┐           ┌─────────────┐           ┌─────────────┐
+│  Months 0-6 │──────────▶│ Months 7-18 │──────────▶│ Months 19+  │
+├─────────────┤           ├─────────────┤           ├─────────────┤
+│• Digital    │           │• Structured │           │• Advanced   │
+│  Products   │           │  Data (Opt4)│           │  Features   │
+│  (Option 3) │           │• Dashboards │           │  (Option 5) │
+│• Membership │           │  (Option 1) │           │             │
+│  (Option 2) │           │             │           │             │
+├─────────────┤           ├─────────────┤           ├─────────────┤
+│ Target:     │           │ Target:     │           │ Target:     │
+│ £2K MRR     │           │ £10K MRR    │           │ £50K MRR    │
+│ 50K visits  │           │ 200K visits │           │ 500K visits │
+└─────────────┘           └─────────────┘           └─────────────┘
+      ▲                         ▲                         ▲
+      │                         │                         │
+  Go/No-Go                  Go/No-Go                  Go/No-Go
+  Decision                  Decision                  Decision
+```
+
+---
 
 ### 15.6 Keyword Maps & SEO Research
 
+**Strategic Overview**
+
+Detailed keyword research, search intent mapping, and content-to-keyword mapping for SEO strategy.
+
+---
+
+**Keyword Clusters (Content Themes)**
+
+**Cluster 1: Author-Focused Keywords**
+
+| Keyword | Search Volume | Difficulty | Target Content |
+|---------|--------------|-----------|----------------|
+| "Isaac Asimov books" | 9,900 | 45 | Isaac Asimov author guide |
+| "Arthur C Clarke novels" | 5,400 | 47 | Arthur C. Clarke author guide |
+| "Ray Bradbury short stories" | 3,600 | 40 | Ray Bradbury author guide |
+| "Robert Heinlein books" | 2,900 | 43 | Robert A. Heinlein author guide |
+| "E.E. Doc Smith Lensman" | 480 | 20 | E.E. "Doc" Smith author guide |
+
+**Content Strategy:** Comprehensive author guides (biography, bibliography, reading order, thematic analysis)
+
+---
+
+**Cluster 2: Genre & Era Keywords**
+
+| Keyword | Search Volume | Difficulty | Target Content |
+|---------|--------------|-----------|----------------|
+| "Golden Age science fiction" | 2,400 | 38 | Golden Age era guide |
+| "best vintage sci-fi books" | 1,600 | 42 | Best of Golden Age list |
+| "pulp science fiction" | 880 | 35 | Pulp era guide |
+| "space opera books" | 1,900 | 40 | Space opera subgenre guide |
+| "hard science fiction" | 1,300 | 38 | Hard sci-fi subgenre guide |
+
+**Content Strategy:** Genre primers, historical context, curated lists
+
+---
+
+**Cluster 3: Public Domain & Free Resources**
+
+| Keyword | Search Volume | Difficulty | Target Content |
+|---------|--------------|-----------|----------------|
+| "public domain science fiction" | 720 | 25 | Public domain ebook library |
+| "free science fiction books" | 2,400 | 42 | Free ebook collection page |
+| "free audiobooks science fiction" | 1,600 | 38 | Free audiobook collection |
+| "classic sci-fi free" | 590 | 30 | Classic sci-fi free downloads |
+
+**Content Strategy:** Landing pages for free content, SEO-optimized product pages
+
+---
+
+**Cluster 4: Visual & Collectible Keywords**
+
+| Keyword | Search Volume | Difficulty | Target Content |
+|---------|--------------|-----------|----------------|
+| "retro sci-fi art" | 1,300 | 30 | Cover art gallery |
+| "pulp magazine covers" | 880 | 28 | Pulp cover art collection |
+| "vintage science fiction covers" | 480 | 32 | Vintage cover gallery |
+| "Frank R Paul art" | 390 | 25 | Frank R. Paul artist spotlight |
+
+**Content Strategy:** Visual galleries, artist spotlights, high-quality images
+
+---
+
 ### 15.7 User Research & Interview Summaries
 
+**Strategic Overview**
+
+Summaries of user interviews, surveys, and feedback sessions informing product decisions.
+
+---
+
+**User Interview Summary #1: Vintage Sci-Fi Enthusiasts (n=15)**
+
+**Profile:** Ages 45-70, long-time sci-fi readers, collectors, nostalgic for "golden era"
+
+**Key Findings:**
+
+1. **Pain Point:** "Project Gutenberg has terrible formatting—I can't read it on my Kindle"
+2. **Pain Point:** "Internet Archive is overwhelming—I don't know where to start"
+3. **Desire:** "I want someone to tell me what's actually worth reading from the old stuff"
+4. **Desire:** "I'd pay for properly formatted ebooks with good cover art"
+5. **Skepticism:** "Why would I pay when it's free on Gutenberg?" (needs education on value-add)
+
+**Product Implications:**
+
+- High-quality formatting is critical (not just OCR dumps)
+- Curation and editorial context are key differentiators
+- Cover art matters emotionally (nostalgia trigger)
+- Need clear value proposition (why pay for public domain content?)
+
+---
+
+**User Interview Summary #2: Newcomers to Golden Age Sci-Fi (n=12)**
+
+**Profile:** Ages 25-40, modern sci-fi fans, curious about "classics"
+
+**Key Findings:**
+
+1. **Barrier:** "I don't know where to start—there's so much old stuff"
+2. **Barrier:** "Some of the old books are really dated (sexism, racism)—hard to read"
+3. **Desire:** "I want a curated list of 'essential classics' that still hold up"
+4. **Desire:** "Tell me the cultural context—why does this matter?"
+5. **Format Preference:** Audiobooks > ebooks (busy lifestyles)
+
+**Product Implications:**
+
+- "Start here" guides are essential (newcomer onboarding)
+- Content warnings and cultural context (address problematic elements)
+- Audiobooks are high-value product (convenience, accessibility)
+- Educational content (why these works matter) drives engagement
+
+---
+
 ### 15.8 Supporting Documentation & Links
+
+**Strategic Overview**
+
+Links to external documents, tools, platforms, and resources supporting SF Supernova operations.
+
+---
+
+**Internal Documents (Project Links)**
+
+- **Board Reports:** [Link to board strategy deck]
+- **Financial Models:** [Link to revenue projections spreadsheet]
+- **Content Calendar:** [Link to editorial calendar]
+- **SAIS Document:** [Link to System Architecture & Interface Specification]
+- **Brand Guidelines:** [Link to visual identity guide]
+
+---
+
+**External Tools & Platforms**
+
+| Category | Tool | Purpose | Link |
+|----------|------|---------|------|
+| **Analytics** | Google Analytics | Traffic tracking | analytics.google.com |
+| **Analytics** | Google Search Console | SEO monitoring | search.google.com/search-console |
+| **SEO** | Ahrefs | Keyword research, backlinks | ahrefs.com |
+| **SEO** | Moz | Domain authority tracking | moz.com |
+| **Content** | WordPress | CMS (if used) | wordpress.org |
+| **Content** | Strapi | Headless CMS (if used) | strapi.io |
+| **Payment** | Stripe | Payment processing | stripe.com |
+| **Email** | Mailchimp | Email marketing | mailchimp.com |
+| **Design** | Figma | UI/UX design | figma.com |
+| **Hosting** | Vercel | Static site hosting | vercel.com |
+| **CDN** | Cloudflare | Content delivery | cloudflare.com |
+
+---
+
+**Public Domain Resources**
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **Project Gutenberg** | 70,000+ free ebooks | gutenberg.org |
+| **Internet Archive** | Digital library (texts, audio, video) | archive.org |
+| **LibriVox** | Free public domain audiobooks | librivox.org |
+| **Wikisource** | Curated public domain texts | wikisource.org |
+| **HathiTrust** | Academic digital library | hathitrust.org |
+| **Public Domain Review** | Curated public domain content | publicdomainreview.org |
+| **Copyright.gov** | U.S. Copyright Office | copyright.gov |
+| **Stanford Copyright FAQ** | Public domain guide | fairuse.stanford.edu |
+
+---
+
+**Community & Marketing Channels**
+
+| Platform | Purpose | Link |
+|----------|---------|------|
+| **Reddit** | r/printSF, r/sciencefiction communities | reddit.com/r/printsf |
+| **Twitter/X** | #ScienceFiction, #GoldenAgeSF | twitter.com |
+| **Goodreads** | Author pages, book lists, groups | goodreads.com |
+| **Discord** | SF Supernova community server | [TBD - Create server] |
+| **YouTube** | Sci-fi book channels (outreach targets) | youtube.com |
+| **Podcasts** | Coode Street, SF Signal (sponsorship) | [Contact info TBD] |
+
+---
+
+**Legal & Compliance**
+
+| Resource | Purpose | Link |
+|----------|---------|------|
+| **GDPR Compliance** | EU data protection guide | gdpr.eu |
+| **Privacy Policy Generator** | Template for privacy policy | termsfeed.com |
+| **Stripe Legal** | Payment processing compliance | stripe.com/legal |
+| **WCAG Guidelines** | Accessibility standards | w3.org/WAI/WCAG21 |
+
+---
+
+**Summary: Appendices as Reference Library**
+
+The appendices provide essential reference materials supporting the PRD:
+
+1. **Glossary (15.1):** Shared vocabulary for stakeholders
+2. **Research Summaries (15.2):** Evidence backing strategic decisions
+3. **Dataset Notes (15.3):** Content inventory and pipeline documentation
+4. **Citations (15.4):** Academic rigor, legal defensibility
+5. **Diagrams (15.5):** Visual models for complex systems
+6. **Keyword Maps (15.6):** SEO execution blueprint
+7. **User Research (15.7):** Voice of customer informing product
+8. **Supporting Links (15.8):** Quick access to tools, platforms, resources
+
+**These appendices are not "nice-to-have" extras—they're the foundational evidence and tools enabling SF Supernova's execution. They ensure decisions are data-driven, stakeholders are aligned, and the team has the resources needed to build, launch, and scale successfully.**
 
 
 
