@@ -172,9 +172,11 @@ Footer bottom bar includes copyright statement ("© 2025 SF Supernova"), tagline
 
 ### 5.1 Global Search
 
+**Search Implementation:** Persistent search icon in global header triggers overlay/modal with autofocus input field, searching across all content types (articles, products, authors, themes) with unified results page. Phase 1 uses native platform search (WordPress/Shopify) or basic Algolia integration; Phase 2+ upgrades to full-text semantic search with natural language understanding. Search suggests queries as user types (autocomplete) based on popular searches and taxonomy terms, with minimum 3-character trigger to reduce noise. Results page segments by content type with tabbed navigation (All/Products/Articles/Authors) and displays 10 results per page with pagination. **Search Features:** Each result includes thumbnail, title, brief description/excerpt, content type badge, and relevance score. Product results show format options and pricing; article results show publish date and reading time; author results show biography snippet and work count. Search supports Boolean operators (AND, OR, NOT), quoted phrases for exact matching, and basic filtering by content type via dropdown. Search queries logged for analytics to identify content gaps and SEO opportunities. Mobile search maintains same overlay pattern with keyboard-optimized interface and voice input support where available.
+
 ### 5.2 Faceted Filtering
 
----
+**Filter Dimensions:** Browse pages (Discover sections, Library catalog) include left sidebar filters enabling multi-dimensional refinement: **Era** (checkboxes for decades 1920s-1980s), **Theme** (30+ options with scroll or search-within-filter for long lists), **Author** (alphabetical with search), **Format** (Novel/Novella/Short Story/Collection/Radio Drama), **Product Type** (Ebook/Audiobook/Bundle/Enhanced Edition), **Length** (Short <200 pages, Medium 200-400, Long 400+, Epic 600+), **Price Range** (slider: $0-$150), and **Availability** (Free/Paid/Member-Only). Filters use checkbox UI allowing multiple simultaneous selections within each dimension, with OR logic within dimension and AND logic between dimensions (e.g., 1950s OR 1960s AND Time Travel AND Audiobook). **Filter Behavior:** Active filters display as removable chips/tags above results with "Clear all" option. Result count updates dynamically as filters applied (via AJAX without page reload in Phase 2+). Filter state persists in URL query parameter
 
 ## 6. Page Templates & Components
 
