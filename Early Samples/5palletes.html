@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SF Supernova - Final 5 Palette Concepts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display&family=Young+Serif&family=Instrument+Serif&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'EB Garamond', Georgia, serif;
+      background: #f8f6f1;
+      color: #2a2a2a;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    /* ==========================================
+       CONCEPT NAVIGATION - Refined
+       ========================================== */
+    
+    .concept-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(250,248,243,0.97);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      padding: 1rem 2rem;
+    }
+    
+    .concept-nav-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    
+    .nav-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #6b5d4d;
+      letter-spacing: 0.02em;
+    }
+    
+    .concept-tabs {
+      display: flex;
+      gap: 0.5rem;
+    }
+    
+    .concept-tab {
+      padding: 0.6rem 1.2rem;
+      background: transparent;
+      border: 1px solid rgba(0,0,0,0.1);
+      color: #6b6560;
+      font-family: 'EB Garamond', serif;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 2px;
+    }
+    
+    .concept-tab:hover {
+      border-color: rgba(0,0,0,0.25);
+      color: #2a2a2a;
+    }
+    
+    .concept-tab.active {
+      background: #2d2d28;
+      border-color: #2d2d28;
+      color: #faf8f3;
+    }
+    
+    .concept-section {
+      display: none;
+      min-height: 100vh;
+      padding-top: 70px;
+    }
+    
+    .concept-section.active {
+      display: block;
+    }
+
+    /* ==========================================
+       CONCEPT 1: THE ANTIQUARIAN
+       
+       The original beloved - Amber, Espresso,
+       Parchment. Rare bookshop warmth.
+       ========================================== */
+    
+    .concept-1 {
+      --bg: #f4ebe1;
+      --bg-alt: #ebe0d3;
+      --bg-dark: #2c2418;
+      --text: #2c2418;
+      --text-muted: #6b5d4d;
+      --accent: #c4873b;
+      --accent-hover: #d9a05c;
+      --secondary: #8b7355;
+      background: var(--bg);
+      color: var(--text);
+    }
+    
+    /* ==========================================
+       CONCEPT 2: THE CONSERVATORY
+       
+       Sage meets the Antiquarian's warmth.
+       Botanical library, pressed ferns,
+       leather-bound field guides.
+       ========================================== */
+    
+    .concept-2 {
+      --bg: #f2efe8;
+      --bg-alt: #e6e2d8;
+      --bg-dark: #2d3029;
+      --text: #2d3029;
+      --text-muted: #5c6358;
+      --accent: #5c6b5a;
+      --accent-hover: #7a8a78;
+      --secondary: #a69f8a;
+      background: var(--bg);
+      color: var(--text);
+    }
+    
+    /* ==========================================
+       CONCEPT 3: THE HARBOURMASTER
+       
+       Deep Teal as hero, warmed with
+       parchment and brass. Nautical charts,
+       captain's quarters, maritime archives.
+       ========================================== */
+    
+    .concept-3 {
+      --bg: #f5f2eb;
+      --bg-alt: #e8e4da;
+      --bg-dark: #1a3a3a;
+      --text: #1f2d2d;
+      --text-muted: #4a5c5c;
+      --accent: #1a4a4a;
+      --accent-hover: #2d6b6b;
+      --secondary: #c4a04a;
+      background: var(--bg);
+      color: var(--text);
+    }
+    
+    /* ==========================================
+       CONCEPT 4: THE EXPEDITION
+       
+       Amber + Sage together. Explorer's journal,
+       specimen collections, the warmth of
+       discovery and the cool of observation.
+       ========================================== */
+    
+    .concept-4 {
+      --bg: #f6f2e9;
+      --bg-alt: #ebe5d8;
+      --bg-dark: #2a2a22;
+      --text: #2a2a22;
+      --text-muted: #6b6560;
+      --accent: #b8864a;
+      --accent-hover: #cfa05e;
+      --secondary: #5c6b5a;
+      background: var(--bg);
+      color: var(--text);
+    }
+    
+    /* ==========================================
+       CONCEPT 5: THE CARTOGRAPHER
+       
+       Deep Teal + Amber. Celestial charts,
+       brass instruments, aged maps on
+       expedition tables. The full synthesis.
+       ========================================== */
+    
+    .concept-5 {
+      --bg: #f4f1e8;
+      --bg-alt: #e8e3d6;
+      --bg-dark: #1a3535;
+      --text: #1f2a2a;
+      --text-muted: #4d5858;
+      --accent: #1a4a4a;
+      --accent-hover: #2d5f5f;
+      --secondary: #c9943a;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    /* ==========================================
+       SHARED LAYOUT COMPONENTS
+       All concepts share the same structure
+       ========================================== */
+    
+    .palette-strip {
+      display: flex;
+      height: 6px;
+    }
+    
+    .palette-strip span {
+      flex: 1;
+      transition: flex 0.4s ease;
+    }
+    
+    .palette-strip:hover span:hover {
+      flex: 2;
+    }
+    
+    .site-header {
+      padding: 2rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    
+    .site-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+    
+    .site-nav {
+      display: flex;
+      gap: 2.5rem;
+    }
+    
+    .site-nav a {
+      font-family: 'EB Garamond', serif;
+      font-size: 1rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    
+    .site-nav a:hover {
+      color: var(--accent);
+    }
+    
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: calc(100vh - 200px);
+    }
+    
+    .hero-content {
+      padding: 8% 5%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 600px;
+    }
+    
+    .hero-label {
+      font-family: 'EB Garamond', serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
+    
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.6rem, 4.5vw, 3.8rem);
+      font-weight: 600;
+      line-height: 1.12;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+    }
+    
+    .hero-subtitle {
+      font-family: 'EB Garamond', serif;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 3rem;
+    }
+    
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 2rem;
+      background: var(--accent);
+      color: var(--bg);
+      font-family: 'EB Garamond', serif;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      width: fit-content;
+    }
+    
+    .hero-cta:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+    }
+    
+    .hero-cta svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+    
+    .hero-cta:hover svg {
+      transform: translateX(4px);
+    }
+    
+    .hero-visual {
+      background: var(--bg-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-visual::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.05) 0%, transparent 60%);
+    }
+    
+    .book-stack {
+      position: relative;
+      width: 300px;
+      height: 420px;
+    }
+    
+    .book {
+      position: absolute;
+      width: 240px;
+      height: 340px;
+      border-radius: 2px 6px 6px 2px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 2rem;
+      box-shadow: -10px 10px 30px rgba(0,0,0,0.35);
+      transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    
+    .book:nth-child(1) {
+      transform: translateX(-20px) rotate(-4deg);
+      z-index: 1;
+    }
+    
+    .book:nth-child(2) {
+      transform: translateX(10px) translateY(20px) rotate(2deg);
+      z-index: 2;
+    }
+    
+    .book:nth-child(3) {
+      transform: translateY(-15px) rotate(-1deg);
+      z-index: 3;
+    }
+    
+    .book-stack:hover .book:nth-child(1) {
+      transform: translateX(-50px) rotate(-8deg);
+    }
+    
+    .book-stack:hover .book:nth-child(2) {
+      transform: translateX(40px) translateY(30px) rotate(5deg);
+    }
+    
+    .book-stack:hover .book:nth-child(3) {
+      transform: translateY(-30px) scale(1.02);
+    }
+    
+    .book-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+    
+    .book-author {
+      font-family: 'EB Garamond', serif;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+      opacity: 0.8;
+    }
+    
+    /* Palette showcase - the star of the show */
+    .palette-showcase {
+      padding: 5rem 5%;
+      background: var(--bg-alt);
+    }
+    
+    .palette-showcase-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .palette-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      text-align: center;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    
+    .palette-tagline {
+      font-family: 'EB Garamond', serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      text-align: center;
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+    }
+    
+    .swatch-grid {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    
+    .swatch {
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    
+    .swatch:hover {
+      transform: translateY(-4px);
+    }
+    
+    .swatch-color {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      box-shadow: 
+        0 4px 12px rgba(0,0,0,0.1),
+        inset 0 -4px 12px rgba(0,0,0,0.05);
+      position: relative;
+    }
+    
+    .swatch-color::after {
+      content: '';
+      position: absolute;
+      top: 8%;
+      left: 15%;
+      width: 35%;
+      height: 20%;
+      background: linear-gradient(180deg, rgba(255,255,255,0.3) 0%, transparent 100%);
+      border-radius: 50%;
+    }
+    
+    .swatch-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    
+    .swatch-hex {
+      font-family: 'EB Garamond', serif;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+    
+    .swatch-role {
+      font-family: 'EB Garamond', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-top: 0.5rem;
+    }
+    
+    /* Feature grid */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid rgba(0,0,0,0.08);
+    }
+    
+    .feature {
+      padding: 3.5rem 5%;
+      border-right: 1px solid rgba(0,0,0,0.08);
+      background: var(--bg);
+    }
+    
+    .feature:last-child {
+      border-right: none;
+    }
+    
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--bg);
+      margin-bottom: 1.5rem;
+    }
+    
+    .feature-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+    
+    .feature-text {
+      font-family: 'EB Garamond', serif;
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    
+    /* Color application demo */
+    .color-demo {
+      padding: 4rem 5%;
+      background: var(--bg);
+      border-top: 1px solid rgba(0,0,0,0.08);
+    }
+    
+    .color-demo-title {
+      font-family: 'EB Garamond', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .color-demo-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .demo-card {
+      padding: 1.5rem;
+      border-radius: 4px;
+      transition: transform 0.3s ease;
+    }
+    
+    .demo-card:hover {
+      transform: translateY(-4px);
+    }
+    
+    .demo-card-label {
+      font-family: 'EB Garamond', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+      opacity: 0.7;
+    }
+    
+    .demo-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    
+    .demo-card-text {
+      font-family: 'EB Garamond', serif;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+      opacity: 0.8;
+    }
+
+    /* ==========================================
+       CONCEPT-SPECIFIC BOOK COLORS
+       ========================================== */
+    
+    /* Concept 1: Antiquarian */
+    .concept-1 .book:nth-child(1) {
+      background: linear-gradient(135deg, #c4873b 0%, #a66b28 100%);
+      color: #fff;
+    }
+    .concept-1 .book:nth-child(2) {
+      background: linear-gradient(135deg, #f4ebe1 0%, #e8dcc8 100%);
+      color: #2c2418;
+    }
+    .concept-1 .book:nth-child(3) {
+      background: linear-gradient(135deg, #3d2e1f 0%, #1f170f 100%);
+      color: #f4ebe1;
+    }
+    
+    /* Concept 2: Conservatory */
+    .concept-2 .book:nth-child(1) {
+      background: linear-gradient(135deg, #5c6b5a 0%, #4a5a48 100%);
+      color: #f2efe8;
+    }
+    .concept-2 .book:nth-child(2) {
+      background: linear-gradient(135deg, #f2efe8 0%, #e0dcd0 100%);
+      color: #2d3029;
+    }
+    .concept-2 .book:nth-child(3) {
+      background: linear-gradient(135deg, #2d3029 0%, #1a1f1a 100%);
+      color: #f2efe8;
+    }
+    
+    /* Concept 3: Harbourmaster */
+    .concept-3 .book:nth-child(1) {
+      background: linear-gradient(135deg, #1a4a4a 0%, #0f2d2d 100%);
+      color: #f5f2eb;
+    }
+    .concept-3 .book:nth-child(2) {
+      background: linear-gradient(135deg, #f5f2eb 0%, #e8e4da 100%);
+      color: #1a3a3a;
+    }
+    .concept-3 .book:nth-child(3) {
+      background: linear-gradient(135deg, #c4a04a 0%, #a68838 100%);
+      color: #1a3a3a;
+    }
+    
+    /* Concept 4: Expedition */
+    .concept-4 .book:nth-child(1) {
+      background: linear-gradient(135deg, #b8864a 0%, #9a6d38 100%);
+      color: #fff;
+    }
+    .concept-4 .book:nth-child(2) {
+      background: linear-gradient(135deg, #5c6b5a 0%, #4a5a48 100%);
+      color: #f6f2e9;
+    }
+    .concept-4 .book:nth-child(3) {
+      background: linear-gradient(135deg, #f6f2e9 0%, #e8e2d4 100%);
+      color: #2a2a22;
+    }
+    
+    /* Concept 5: Cartographer */
+    .concept-5 .book:nth-child(1) {
+      background: linear-gradient(135deg, #1a4a4a 0%, #0f2d2d 100%);
+      color: #f4f1e8;
+    }
+    .concept-5 .book:nth-child(2) {
+      background: linear-gradient(135deg, #c9943a 0%, #b07e2d 100%);
+      color: #1a3535;
+    }
+    .concept-5 .book:nth-child(3) {
+      background: linear-gradient(135deg, #f4f1e8 0%, #e4dfd2 100%);
+      color: #1a3535;
+    }
+
+    /* ==========================================
+       RESPONSIVE
+       ========================================== */
+    
+    @media (max-width: 1024px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      
+      .hero-visual {
+        min-height: 50vh;
+      }
+      
+      .features {
+        grid-template-columns: 1fr;
+      }
+      
+      .feature {
+        border-right: none;
+        border-bottom: 1px solid rgba(0,0,0,0.08);
+      }
+      
+      .color-demo-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .concept-nav-inner {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .concept-tabs {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .swatch-grid {
+        gap: 1.5rem;
+      }
+      
+      .swatch-color {
+        width: 70px;
+        height: 70px;
+      }
+      
+      .color-demo-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="concept-nav">
+    <div class="concept-nav-inner">
+      <span class="nav-title">SF Supernova · Final Palettes</span>
+      <div class="concept-tabs">
+        <button class="concept-tab active" data-concept="1">The Antiquarian</button>
+        <button class="concept-tab" data-concept="2">The Conservatory</button>
+        <button class="concept-tab" data-concept="3">The Harbourmaster</button>
+        <button class="concept-tab" data-concept="4">The Expedition</button>
+        <button class="concept-tab" data-concept="5">The Cartographer</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       CONCEPT 1: THE ANTIQUARIAN
+       Amber, Espresso, Parchment
+       ========================================== -->
+  <section class="concept-section concept-1 active" id="concept-1">
+    <div class="palette-strip">
+      <span style="background: #f4ebe1"></span>
+      <span style="background: #ebe0d3"></span>
+      <span style="background: #c4873b"></span>
+      <span style="background: #6b5d4d"></span>
+      <span style="background: #2c2418"></span>
+    </div>
+    
+    <header class="site-header">
+      <div class="site-logo">SF Supernova</div>
+      <nav class="site-nav">
+        <a href="#">Library</a>
+        <a href="#">Authors</a>
+        <a href="#">Collections</a>
+        <a href="#">Membership</a>
+      </nav>
+    </header>
+    
+    <div class="hero">
+      <div class="hero-content">
+        <span class="hero-label">Vintage Science Fiction Archive</span>
+        <h1 class="hero-title">Treasures from Tomorrow's Yesterday</h1>
+        <p class="hero-subtitle">Rare editions and forgotten masterworks, restored with the care they deserve. A collector's haven for golden age science fiction.</p>
+        <a href="#" class="hero-cta">
+          <span>Browse the Collection</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="book-stack">
+          <div class="book">
+            <div class="book-title">The Dying Earth</div>
+            <div class="book-author">Jack Vance</div>
+          </div>
+          <div class="book">
+            <div class="book-title">City</div>
+            <div class="book-author">Clifford D. Simak</div>
+          </div>
+          <div class="book">
+            <div class="book-title">The Demolished Man</div>
+            <div class="book-author">Alfred Bester</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="palette-showcase">
+      <div class="palette-showcase-inner">
+        <h2 class="palette-name">The Antiquarian</h2>
+        <p class="palette-tagline">Rare bookshop warmth. Leather bindings, aged paper, lamplight on mahogany.</p>
+        <div class="swatch-grid">
+          <div class="swatch">
+            <div class="swatch-color" style="background: #f4ebe1"></div>
+            <div class="swatch-name">Parchment</div>
+            <div class="swatch-hex">#F4EBE1</div>
+            <div class="swatch-role">Background</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: #ebe0d3"></div>
+            <div class="swatch-name">Vellum</div>
+            <div class="swatch-hex">#EBE0D3</div>
+            <div class="swatch-role">Surface</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: #c4873b"></div>
+            <div class="swatch-name">Amber</div>
+            <div class="swatch-hex">#C4873B</div>
+            <div class="swatch-role">Primary</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: #6b5d4d"></div>
+            <div class="swatch-name">Umber</div>
+            <div class="swatch-hex">#6B5D4D</div>
+            <div class="swatch-role">Muted Text</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: #2c2418"></div>
+            <div class="swatch-name">Espresso</div>
+            <div class="swatch-hex">#2C2418</div>
+            <div class="swatch-role">Text / Dark</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="color-demo">
+      <h3 class="color-demo-title">Colour in Application</h3>
+      <div class="color-demo-grid">
+        <div class="demo-card" style="background: #c4873b; color: #fff;">
+          <div class="demo-card-label">Primary CTA</div>
+          <div class="demo-card-title">Begin Exploring</div>
+          <div class="demo-card-text">Amber draws the eye</div>
+        </div>
+        <div class="demo-card" style="background: #2c2418; color: #f4ebe1;">
+          <div class="demo-card-label">Dark Surface</div>
+          <div class="demo-card-title">Featured Content</div>
+          <div class="demo-card-text">Espresso for depth</div>
+        </div>
+        <div class="demo-card" style="background: #ebe0d3; color: #2c2418;">
+          <div class="demo-card-label">Card Surface</div>
+          <div class="demo-card-title">Book Preview</div>
+          <div class="demo-card-text">Vellum for elevation</div>
+        </div>
+        <div class="demo-card" style="background: #f4ebe1; color: #2c2418; border: 1px solid #ebe0d3;">
+          <div class="demo-card-label">Page Background</div>
+          <div class="demo-card-title">Main Content</div>
+          <div class="demo-card-text">Parchment breathes</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Curated Library</h3>
+        <p class="feature-text">Over 250 titles spanning the formative decades of science fiction, from pulp origins to literary recognition.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Historical Context</h3>
+        <p class="feature-text">Every work enhanced with period context, author biographies, and thematic analysis.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Premium Editions</h3>
+        <p class="feature-text">Beautifully typeset ebooks and audiobooks, professionally produced for discerning readers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CONCEPT 2: THE CONSERVATORY
+       Sage-forward with warm undertones
+       ========================================== -->
+  <section class="concept-section concept-2" id="concept-2">
+    <div class="palette-strip">
+      <span style="background: #f2efe8"></span>
+      <span style="background: #e6e2d8"></span>
+      <span style="background: #5c6b5a"></span>
+      <span style="background: #a69f8a"></span>
+      <span style="background: #2d3029"></span>
+    </div>
+    
+    <header class="site-header">
+      <div class="site-logo">SF Supernova</div>
+      <nav class="site-nav">
+        <a href="#">Library</a>
+        <a href="#">Authors</a>
+        <a href="#">Collections</a>
+        <a href="#">Membership</a>
+      </nav>
+    </header>
+    
+    <div class="hero">
+      <div class="hero-content">
+        <span class="hero-label">Vintage Science Fiction Archive</span>
+        <h1 class="hero-title">Cultivating the Literature of Tomorrow</h1>
+        <p class="hero-subtitle">Where visionary fiction takes root. Carefully tended editions of science fiction's golden age, growing more relevant with each passing year.</p>
+        <a href="#" class="hero-cta">
+          <span>Enter the Collection</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="book-stack">
+          <div class="book">
+            <div class="book-title">The Martian Chronicles</div>
+            <div class="book-author">Ray Bradbury</div>
+          </div>
+          <div class="book">
+            <div class="book-title">More Than Human</div>
+            <div class="book-author">Theodore Sturgeon</div>
+          </div>
+          <div class="book">
+            <div class="book-title">The Stars My Destination</div>
+            <div class="book-author">Alfred Bester</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="palette-showcase">
+      <div class="palette-showcase-inner">
+        <h2 class="palette-name">The Conservatory</h2>
+        <p class="palette-tagline">Botanical library. Pressed ferns between pages, specimen jars, field guides in cloth binding.</p>
+        <div class="swatch-grid">
+          <div class="swatch">
+            <div class="swatch-color" style="background: #f2efe8"></div>
+            <div class="swatch-name">Linen</div>
+            <div class="swatch-hex">#F2EFE8</div>
+            <div class="swatch-role">Background</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: #e6e2d8"></div>
+            <div class="swatch-name">Canvas</div>
+            <div class="swatch-hex">#E6E2D8</div>
+            <div class="swatch-role">Surface</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: #5c6b5a"></div>
+            <div class="swatch-name">Sage</div>
+            <div class="swatch-hex">#5C6B5A</div>
+            <div class="swatch-role">Primary</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: #a69f8a"></div>
+            <div class="swatch-name">Driftwood</div>
+            <div class="swatch-hex">#A69F8A</div>
+            <div class="swatch-role">Muted Text</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: #2d3029"></div>
+            <div class="swatch-name">Forest Floor</div>
+            <div class="swatch-hex">#2D3029</div>
+            <div class="swatch-role">Text / Dark</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="color-demo">
+      <h3 class="color-demo-title">Colour in Application</h3>
+      <div class="color-demo-grid">
+        <div class="demo-card" style="background: #5c6b5a; color: #f2efe8;">
+          <div class="demo-card-label">Primary CTA</div>
+          <div class="demo-card-title">Begin Exploring</div>
+          <div class="demo-card-text">Sage invites calmly</div>
+        </div>
+        <div class="demo-card" style="background: #2d3029; color: #f2efe8;">
+          <div class="demo-card-label">Dark Surface</div>
+          <div class="demo-card-title">Featured Content</div>
+          <div class="demo-card-text">Forest depth</div>
+        </div>
+        <div class="demo-card" style="background: #e6e2d8; color: #2d3029;">
+          <div class="demo-card-label">Card Surface</div>
+          <div class="demo-card-title">Book Preview</div>
+          <div class="demo-card-text">Canvas for content</div>
+        </div>
+        <div class="demo-card" style="background: #f2efe8; color: #2d3029; border: 1px solid #e6e2d8;">
+          <div class="demo-card-label">Page Background</div>
+          <div class="demo-card-title">Main Content</div>
+          <div class="demo-card-text">Linen softness</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Curated Library</h3>
+        <p class="feature-text">Over 250 titles spanning the formative decades of science fiction, from pulp origins to literary recognition.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Historical Context</h3>
+        <p class="feature-text">Every work enhanced with period context, author biographies, and thematic analysis.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Premium Editions</h3>
+        <p class="feature-text">Beautifully typeset ebooks and audiobooks, professionally produced for discerning readers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CONCEPT 3: THE HARBOURMASTER
+       Deep Teal as hero, brass accents
+       ========================================== -->
+  <section class="concept-section concept-3" id="concept-3">
+    <div class="palette-strip">
+      <span style="background: #f5f2eb"></span>
+      <span style="background: #e8e4da"></span>
+      <span style="background: #1a4a4a"></span>
+      <span style="background: #c4a04a"></span>
+      <span style="background: #1f2d2d"></span>
+    </div>
+    
+    <header class="site-header">
+      <div class="site-logo">SF Supernova</div>
+      <nav class="site-nav">
+        <a href="#">Library</a>
+        <a href="#">Authors</a>
+        <a href="#">Collections</a>
+        <a href="#">Membership</a>
+      </nav>
+    </header>
+    
+    <div class="hero">
+      <div class="hero-content">
+        <span class="hero-label">Vintage Science Fiction Archive</span>
+        <h1 class="hero-title">Charting the Uncharted Territories</h1>
+        <p class="hero-subtitle">Navigate the vast seas of golden age imagination. Expertly restored editions, each a vessel for journeys beyond the known.</p>
+        <a href="#" class="hero-cta">
+          <span>Set Your Course</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="book-stack">
+          <div class="book">
+            <div class="book-title">Solaris</div>
+            <div class="book-author">Stanisław Lem</div>
+          </div>
+          <div class="book">
+            <div class="book-title">Ringworld</div>
+            <div class="book-author">Larry Niven</div>
+          </div>
+          <div class="book">
+            <div class="book-title">The Dispossessed</div>
+            <div class="book-author">Ursula K. Le Guin</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="palette-showcase">
+      <div class="palette-showcase-inner">
+        <h2 class="palette-name">The Harbourmaster</h2>
+        <p class="palette-tagline">Maritime archives. Nautical charts on vellum, brass instruments, the captain's private library.</p>
+        <div class="swatch-grid">
+          <div class="swatch">
+            <div class="swatch-color" style="background: #f5f2eb"></div>
+            <div class="swatch-name">Chart Paper</div>
+            <div class="swatch-hex">#F5F2EB</div>
+            <div class="swatch-role">Background</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: #e8e4da"></div>
+            <div class="swatch-name">Sail Cloth</div>
+            <div class="swatch-hex">#E8E4DA</div>
+            <div class="swatch-role">Surface</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: #1a4a4a"></div>
+            <div class="swatch-name">Deep Teal</div>
+            <div class="swatch-hex">#1A4A4A</div>
+            <div class="swatch-role">Primary</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: #c4a04a"></div>
+            <div class="swatch-name">Brass</div>
+            <div class="swatch-hex">#C4A04A</div>
+            <div class="swatch-role">Accent</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: #1f2d2d"></div>
+            <div class="swatch-name">Midnight</div>
+            <div class="swatch-hex">#1F2D2D</div>
+            <div class="swatch-role">Text / Dark</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="color-demo">
+      <h3 class="color-demo-title">Colour in Application</h3>
+      <div class="color-demo-grid">
+        <div class="demo-card" style="background: #1a4a4a; color: #f5f2eb;">
+          <div class="demo-card-label">Primary CTA</div>
+          <div class="demo-card-title">Begin Exploring</div>
+          <div class="demo-card-text">Teal commands</div>
+        </div>
+        <div class="demo-card" style="background: #c4a04a; color: #1f2d2d;">
+          <div class="demo-card-label">Highlight</div>
+          <div class="demo-card-title">Featured Work</div>
+          <div class="demo-card-text">Brass catches light</div>
+        </div>
+        <div class="demo-card" style="background: #e8e4da; color: #1f2d2d;">
+          <div class="demo-card-label">Card Surface</div>
+          <div class="demo-card-title">Book Preview</div>
+          <div class="demo-card-text">Sail cloth warmth</div>
+        </div>
+        <div class="demo-card" style="background: #f5f2eb; color: #1f2d2d; border: 1px solid #e8e4da;">
+          <div class="demo-card-label">Page Background</div>
+          <div class="demo-card-title">Main Content</div>
+          <div class="demo-card-text">Chart paper clarity</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Curated Library</h3>
+        <p class="feature-text">Over 250 titles spanning the formative decades of science fiction, from pulp origins to literary recognition.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Historical Context</h3>
+        <p class="feature-text">Every work enhanced with period context, author biographies, and thematic analysis.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Premium Editions</h3>
+        <p class="feature-text">Beautifully typeset ebooks and audiobooks, professionally produced for discerning readers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CONCEPT 4: THE EXPEDITION
+       Amber + Sage together
+       ========================================== -->
+  <section class="concept-section concept-4" id="concept-4">
+    <div class="palette-strip">
+      <span style="background: #f6f2e9"></span>
+      <span style="background: #ebe5d8"></span>
+      <span style="background: #b8864a"></span>
+      <span style="background: #5c6b5a"></span>
+      <span style="background: #2a2a22"></span>
+    </div>
+    
+    <header class="site-header">
+      <div class="site-logo">SF Supernova</div>
+      <nav class="site-nav">
+        <a href="#">Library</a>
+        <a href="#">Authors</a>
+        <a href="#">Collections</a>
+        <a href="#">Membership</a>
+      </nav>
+    </header>
+    
+    <div class="hero">
+      <div class="hero-content">
+        <span class="hero-label">Vintage Science Fiction Archive</span>
+        <h1 class="hero-title">Dispatches from the Golden Age</h1>
+        <p class="hero-subtitle">Field notes from literature's great explorers. Documented, preserved, and ready for your own expedition into the worlds they discovered.</p>
+        <a href="#" class="hero-cta">
+          <span>Begin the Expedition</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="book-stack">
+          <div class="book">
+            <div class="book-title">Childhood's End</div>
+            <div class="book-author">Arthur C. Clarke</div>
+          </div>
+          <div class="book">
+            <div class="book-title">The Left Hand of Darkness</div>
+            <div class="book-author">Ursula K. Le Guin</div>
+          </div>
+          <div class="book">
+            <div class="book-title">Foundation</div>
+            <div class="book-author">Isaac Asimov</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="palette-showcase">
+      <div class="palette-showcase-inner">
+        <h2 class="palette-name">The Expedition</h2>
+        <p class="palette-tagline">Explorer's journal. Specimen collections, field sketches, the warmth of discovery and the cool of careful observation.</p>
+        <div class="swatch-grid">
+          <div class="swatch">
+            <div class="swatch-color" style="background: #f6f2e9"></div>
+            <div class="swatch-name">Journal</div>
+            <div class="swatch-hex">#F6F2E9</div>
+            <div class="swatch-role">Background</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: #ebe5d8"></div>
+            <div class="swatch-name">Field Paper</div>
+            <div class="swatch-hex">#EBE5D8</div>
+            <div class="swatch-role">Surface</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: #b8864a"></div>
+            <div class="swatch-name">Amber</div>
+            <div class="swatch-hex">#B8864A</div>
+            <div class="swatch-role">Primary</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: #5c6b5a"></div>
+            <div class="swatch-name">Sage</div>
+            <div class="swatch-hex">#5C6B5A</div>
+            <div class="swatch-role">Secondary</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: #2a2a22"></div>
+            <div class="swatch-name">Ink</div>
+            <div class="swatch-hex">#2A2A22</div>
+            <div class="swatch-role">Text / Dark</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="color-demo">
+      <h3 class="color-demo-title">Colour in Application</h3>
+      <div class="color-demo-grid">
+        <div class="demo-card" style="background: #b8864a; color: #fff;">
+          <div class="demo-card-label">Primary CTA</div>
+          <div class="demo-card-title">Begin Exploring</div>
+          <div class="demo-card-text">Amber warmth</div>
+        </div>
+        <div class="demo-card" style="background: #5c6b5a; color: #f6f2e9;">
+          <div class="demo-card-label">Secondary</div>
+          <div class="demo-card-title">Collections</div>
+          <div class="demo-card-text">Sage categorises</div>
+        </div>
+        <div class="demo-card" style="background: #ebe5d8; color: #2a2a22;">
+          <div class="demo-card-label">Card Surface</div>
+          <div class="demo-card-title">Book Preview</div>
+          <div class="demo-card-text">Field paper texture</div>
+        </div>
+        <div class="demo-card" style="background: #2a2a22; color: #f6f2e9;">
+          <div class="demo-card-label">Dark Surface</div>
+          <div class="demo-card-title">Featured</div>
+          <div class="demo-card-text">Ink grounds</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Curated Library</h3>
+        <p class="feature-text">Over 250 titles spanning the formative decades of science fiction, from pulp origins to literary recognition.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon" style="background: var(--secondary);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Historical Context</h3>
+        <p class="feature-text">Every work enhanced with period context, author biographies, and thematic analysis.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Premium Editions</h3>
+        <p class="feature-text">Beautifully typeset ebooks and audiobooks, professionally produced for discerning readers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CONCEPT 5: THE CARTOGRAPHER
+       Deep Teal + Amber synthesis
+       ========================================== -->
+  <section class="concept-section concept-5" id="concept-5">
+    <div class="palette-strip">
+      <span style="background: #f4f1e8"></span>
+      <span style="background: #e8e3d6"></span>
+      <span style="background: #1a4a4a"></span>
+      <span style="background: #c9943a"></span>
+      <span style="background: #1a3535"></span>
+    </div>
+    
+    <header class="site-header">
+      <div class="site-logo">SF Supernova</div>
+      <nav class="site-nav">
+        <a href="#">Library</a>
+        <a href="#">Authors</a>
+        <a href="#">Collections</a>
+        <a href="#">Membership</a>
+      </nav>
+    </header>
+    
+    <div class="hero">
+      <div class="hero-content">
+        <span class="hero-label">Vintage Science Fiction Archive</span>
+        <h1 class="hero-title">Mapping the Infinite Possibilities</h1>
+        <p class="hero-subtitle">Celestial charts of literary imagination. Where brass instruments measure the distance to worlds that never were—and always will be.</p>
+        <a href="#" class="hero-cta">
+          <span>Chart Your Course</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="book-stack">
+          <div class="book">
+            <div class="book-title">Rendezvous with Rama</div>
+            <div class="book-author">Arthur C. Clarke</div>
+          </div>
+          <div class="book">
+            <div class="book-title">Dune</div>
+            <div class="book-author">Frank Herbert</div>
+          </div>
+          <div class="book">
+            <div class="book-title">A Fire Upon the Deep</div>
+            <div class="book-author">Vernor Vinge</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="palette-showcase">
+      <div class="palette-showcase-inner">
+        <h2 class="palette-name">The Cartographer</h2>
+        <p class="palette-tagline">Celestial navigation. Brass sextants, aged star charts, the marriage of precision and wonder.</p>
+        <div class="swatch-grid">
+          <div class="swatch">
+            <div class="swatch-color" style="background: #f4f1e8"></div>
+            <div class="swatch-name">Star Chart</div>
+            <div class="swatch-hex">#F4F1E8</div>
+            <div class="swatch-role">Background</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: #e8e3d6"></div>
+            <div class="swatch-name">Vellum</div>
+            <div class="swatch-hex">#E8E3D6</div>
+            <div class="swatch-role">Surface</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: #1a4a4a"></div>
+            <div class="swatch-name">Deep Teal</div>
+            <div class="swatch-hex">#1A4A4A</div>
+            <div class="swatch-role">Primary</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: #c9943a"></div>
+            <div class="swatch-name">Amber</div>
+            <div class="swatch-hex">#C9943A</div>
+            <div class="swatch-role">Accent</div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: #1a3535"></div>
+            <div class="swatch-name">Night Sky</div>
+            <div class="swatch-hex">#1A3535</div>
+            <div class="swatch-role">Text / Dark</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="color-demo">
+      <h3 class="color-demo-title">Colour in Application</h3>
+      <div class="color-demo-grid">
+        <div class="demo-card" style="background: #1a4a4a; color: #f4f1e8;">
+          <div class="demo-card-label">Primary CTA</div>
+          <div class="demo-card-title">Begin Exploring</div>
+          <div class="demo-card-text">Teal depth</div>
+        </div>
+        <div class="demo-card" style="background: #c9943a; color: #1a3535;">
+          <div class="demo-card-label">Highlight</div>
+          <div class="demo-card-title">Featured Work</div>
+          <div class="demo-card-text">Amber glows</div>
+        </div>
+        <div class="demo-card" style="background: #e8e3d6; color: #1a3535;">
+          <div class="demo-card-label">Card Surface</div>
+          <div class="demo-card-title">Book Preview</div>
+          <div class="demo-card-text">Vellum clarity</div>
+        </div>
+        <div class="demo-card" style="background: #1a3535; color: #f4f1e8;">
+          <div class="demo-card-label">Dark Surface</div>
+          <div class="demo-card-title">Night Mode</div>
+          <div class="demo-card-text">Night sky</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Curated Library</h3>
+        <p class="feature-text">Over 250 titles spanning the formative decades of science fiction, from pulp origins to literary recognition.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon" style="background: var(--secondary);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Historical Context</h3>
+        <p class="feature-text">Every work enhanced with period context, author biographies, and thematic analysis.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Premium Editions</h3>
+        <p class="feature-text">Beautifully typeset ebooks and audiobooks, professionally produced for discerning readers.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.concept-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.concept-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        
+        const conceptNum = tab.dataset.concept;
+        document.querySelectorAll('.concept-section').forEach(s => s.classList.remove('active'));
+        document.getElementById(`concept-${conceptNum}`).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

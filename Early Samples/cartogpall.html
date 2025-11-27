@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SF Supernova – The Cartographer Colour Token System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* ============================================
+         THE CARTOGRAPHER
+         Celestial navigation. Brass sextants, aged 
+         star charts, the marriage of precision and wonder.
+         Deep Teal + Amber synthesis.
+         ============================================ */
+
+      /* Primary palette – Deep Teal as hero */
+
+      --teal-900: #0a2424;   /* deepest night sky */
+      --teal-800: #0f3333;   /* night sky */
+      --teal-700: #153d3d;   /* deep ocean */
+      --teal-600: #1a4a4a;   /* primary teal */
+      --teal-500: #236060;   /* teal mid */
+      --teal-400: #2d7a7a;   /* teal bright */
+      --teal-300: #4a9999;   /* teal soft */
+      --teal-200: #7dbdbd;   /* teal pale */
+      --teal-100: #b8dada;   /* teal whisper */
+      --teal-50:  #e5f2f2;   /* teal tint */
+
+      /* Secondary palette – Amber as warm accent */
+
+      --amber-900: #5c3a10;  /* burnt amber */
+      --amber-800: #7a4d15;  /* deep amber */
+      --amber-700: #9a6520;  /* amber dark */
+      --amber-600: #b8802e;  /* amber rich */
+      --amber-500: #c9943a;  /* primary amber */
+      --amber-400: #d9a854;  /* amber mid */
+      --amber-300: #e5bc70;  /* amber soft */
+      --amber-200: #f0d49e;  /* amber pale */
+      --amber-100: #f8e8c8;  /* amber whisper */
+      --amber-50:  #fdf6eb;  /* amber tint */
+
+      /* Warm paper surfaces – the chart paper */
+
+      --surface-0:   #ffffff;  /* pure white */
+      --surface-50:  #fdfcf9;  /* warm white */
+      --surface-100: #f9f6f0;  /* star chart */
+      --surface-200: #f4f1e8;  /* vellum */
+      --surface-300: #ebe5d8;  /* aged paper */
+      --surface-400: #ddd5c4;  /* weathered */
+      --surface-500: #c9bfa8;  /* antique */
+
+      /* Neutral warm greys – ink and shadow */
+
+      --neutral-900: #1a2020;  /* near black, warm */
+      --neutral-800: #262d2d;  /* deep ink */
+      --neutral-700: #364040;  /* dark grey */
+      --neutral-600: #4d5858;  /* medium dark */
+      --neutral-500: #667272;  /* medium */
+      --neutral-400: #8a9494;  /* medium light */
+      --neutral-300: #a8b0b0;  /* light grey */
+      --neutral-200: #c5cbcb;  /* pale grey */
+      --neutral-100: #e0e4e4;  /* near white */
+      --neutral-50:  #f2f4f4;  /* ghost */
+
+      /* Semantic states */
+
+      --success-bg: #ecf7f2;
+      --success-border: #a8dcbe;
+      --success-text: #1a5c38;
+
+      --warn-bg: #fdf8eb;
+      --warn-border: #f0d49e;
+      --warn-text: #7a4d15;
+
+      --err-bg: #fdf2f2;
+      --err-border: #f0b8b8;
+      --err-text: #8b2020;
+
+      /* Filigree – brass instrument detailing */
+
+      --filigree-brass-50:  #fdf8eb;
+      --filigree-brass-100: #f8ecd0;
+      --filigree-brass-200: #e5c87a;
+      --filigree-brass-300: #c9943a;
+
+      /* Export / print-safe */
+
+      --export-teal-safe: #1a4a4a;
+      --export-amber-safe: #b8802e;
+      --export-neutral-safe: #1a2020;
+      --export-text-primary: #1a2020;
+      --export-text-secondary: #4d5858;
+
+      /* Layout tokens */
+
+      --radius-card: 8px;
+      --radius-pill: 999px;
+
+      --shadow-soft: 0 12px 30px rgba(26, 74, 74, 0.15);
+      --shadow-subtle: 0 2px 8px rgba(26, 74, 74, 0.08);
+      --shadow-warm: 0 8px 24px rgba(201, 148, 58, 0.12);
+
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'EB Garamond', Georgia, serif;
+      --font-mono: 'SF Mono', ui-monospace, Menlo, Monaco, Consolas, monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px;
+      font-family: var(--font-body);
+      background: linear-gradient(180deg, var(--teal-800) 0%, var(--teal-900) 100%);
+      color: var(--surface-100);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    h1, h2, h3, h4 {
+      margin: 0;
+      font-family: var(--font-display);
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.35rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.15rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+    }
+
+    p {
+      margin: 0.1rem 0 0.35rem;
+      font-size: 0.95rem;
+      color: var(--teal-200);
+    }
+
+    .section {
+      margin-top: 28px;
+      padding: 20px;
+      border-radius: 12px;
+      background: rgba(15, 51, 51, 0.7);
+      border: 1px solid rgba(77, 153, 153, 0.25);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(8px);
+    }
+
+    .section + .section {
+      margin-top: 20px;
+    }
+
+    .section-header {
+      margin-bottom: 16px;
+      border-bottom: 1px solid rgba(77, 153, 153, 0.3);
+      padding-bottom: 12px;
+    }
+
+    .section-header.filigree-line {
+      border-bottom-color: var(--filigree-brass-200);
+    }
+
+    .grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    @media (min-width: 880px) {
+      .grid.cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .grid.cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .grid.cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+      .grid.cols-5 {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+      .grid.cols-6 {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+      }
+    }
+
+    .swatch-card {
+      border-radius: var(--radius-card);
+      background: rgba(10, 36, 36, 0.9);
+      border: 1px solid rgba(77, 153, 153, 0.2);
+      overflow: hidden;
+      font-size: 0.85rem;
+      box-shadow: var(--shadow-subtle);
+      display: flex;
+      flex-direction: column;
+      min-height: 130px;
+    }
+
+    .swatch-chip {
+      height: 56px;
+      border-bottom: 1px solid rgba(77, 153, 153, 0.15);
+      position: relative;
+    }
+
+    .swatch-chip::after {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 10px;
+      width: 28%;
+      height: 16%;
+      background: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, transparent 100%);
+      border-radius: 50%;
+    }
+
+    .swatch-body {
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      flex: 1;
+    }
+
+    .swatch-name {
+      font-family: var(--font-display);
+      font-weight: 600;
+      color: var(--surface-100);
+      font-size: 0.9rem;
+    }
+
+    .swatch-token {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--teal-300);
+      word-break: break-all;
+    }
+
+    .swatch-note {
+      font-size: 0.78rem;
+      color: var(--teal-200);
+      margin-top: auto;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(201, 148, 58, 0.5);
+      padding: 4px 12px;
+      font-size: 0.78rem;
+      color: var(--amber-200);
+      background: rgba(201, 148, 58, 0.1);
+    }
+
+    .tag-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--amber-500);
+      flex-shrink: 0;
+    }
+
+    .demo-row {
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px dashed rgba(77, 153, 153, 0.3);
+      font-size: 0.88rem;
+    }
+
+    .demo-row > div:first-child {
+      font-family: var(--font-display);
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: var(--surface-200);
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .btn {
+      border-radius: 4px;
+      padding: 10px 18px;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      border: 1px solid transparent;
+      background: transparent;
+      color: inherit;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--teal-600), var(--teal-700));
+      color: var(--surface-100);
+      border-color: var(--teal-500);
+      box-shadow: 0 8px 20px rgba(26, 74, 74, 0.4);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--teal-500), var(--teal-600));
+      transform: translateY(-2px);
+    }
+
+    .btn-accent {
+      background: linear-gradient(135deg, var(--amber-500), var(--amber-600));
+      color: var(--teal-900);
+      border-color: var(--amber-400);
+      box-shadow: var(--shadow-warm);
+    }
+
+    .btn-accent:hover {
+      background: linear-gradient(135deg, var(--amber-400), var(--amber-500));
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      border-color: rgba(201, 148, 58, 0.4);
+      color: var(--amber-200);
+      background: rgba(201, 148, 58, 0.08);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--amber-400);
+      background: rgba(201, 148, 58, 0.15);
+    }
+
+    .btn-outline {
+      border-color: var(--teal-400);
+      color: var(--teal-200);
+      background: rgba(26, 74, 74, 0.3);
+    }
+
+    .btn-outline:hover {
+      background: rgba(26, 74, 74, 0.5);
+      border-color: var(--teal-300);
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: var(--radius-pill);
+      padding: 4px 10px;
+      font-size: 0.78rem;
+      border-width: 1px;
+      border-style: solid;
+    }
+
+    .pill-success {
+      background: var(--success-bg);
+      border-color: var(--success-border);
+      color: var(--success-text);
+    }
+
+    .pill-warn {
+      background: var(--warn-bg);
+      border-color: var(--warn-border);
+      color: var(--warn-text);
+    }
+
+    .pill-error {
+      background: var(--err-bg);
+      border-color: var(--err-border);
+      color: var(--err-text);
+    }
+
+    .pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: currentColor;
+    }
+
+    .alert {
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 0.85rem;
+      margin-top: 8px;
+      border-width: 1px;
+      border-style: solid;
+    }
+
+    .alert-success {
+      background: var(--success-bg);
+      border-color: var(--success-border);
+      color: var(--success-text);
+    }
+
+    .alert-warn {
+      background: var(--warn-bg);
+      border-color: var(--warn-border);
+      color: var(--warn-text);
+    }
+
+    .alert-error {
+      background: var(--err-bg);
+      border-color: var(--err-border);
+      color: var(--err-text);
+    }
+
+    .export-card {
+      border-radius: var(--radius-card);
+      border: 1px solid var(--surface-400);
+      background: var(--surface-100);
+      color: var(--export-text-primary);
+      padding: 14px 16px;
+      font-size: 0.88rem;
+      box-shadow: var(--shadow-subtle);
+      max-width: 460px;
+    }
+
+    .export-heading {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .export-sub {
+      font-size: 0.85rem;
+      color: var(--export-text-secondary);
+      margin-bottom: 10px;
+    }
+
+    .export-bar {
+      width: 100%;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--surface-300);
+      overflow: hidden;
+      margin-top: 6px;
+    }
+
+    .export-bar-inner {
+      height: 100%;
+      width: 72%;
+      background: linear-gradient(90deg, var(--teal-600), var(--teal-500));
+      border-radius: 999px;
+    }
+
+    .mono {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+    }
+
+    .hero-head {
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(201, 148, 58, 0.3);
+    }
+
+    .hero-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.75rem;
+      color: var(--amber-400);
+      margin-bottom: 6px;
+    }
+
+    .teal-text {
+      color: var(--teal-300);
+    }
+
+    .amber-text {
+      color: var(--amber-400);
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, var(--teal-300), var(--amber-400));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .filigree-footnote {
+      font-size: 0.8rem;
+      color: var(--surface-200);
+      background: linear-gradient(
+        135deg,
+        rgba(10, 36, 36, 0.95),
+        rgba(201, 148, 58, 0.15)
+      );
+      border-radius: 8px;
+      padding: 10px 14px;
+      border: 1px solid var(--filigree-brass-200);
+      margin-top: 12px;
+    }
+
+    .filigree-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: var(--radius-pill);
+      padding: 4px 10px;
+      font-size: 0.75rem;
+      border: 1px solid var(--filigree-brass-300);
+      background: var(--filigree-brass-50);
+      color: var(--amber-800);
+    }
+
+    .filigree-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--filigree-brass-300);
+    }
+
+    /* Light mode card demo */
+    .light-card {
+      background: var(--surface-100);
+      border-radius: var(--radius-card);
+      padding: 14px 16px;
+      color: var(--neutral-800);
+      box-shadow: var(--shadow-subtle);
+      max-width: 480px;
+    }
+
+    .light-card-heading {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--neutral-900);
+      margin-bottom: 4px;
+    }
+
+    .light-card-sub {
+      font-size: 0.88rem;
+      color: var(--neutral-600);
+      margin-bottom: 8px;
+    }
+
+    .light-card-meta {
+      display: flex;
+      gap: 12px;
+      font-size: 0.82rem;
+      color: var(--neutral-500);
+    }
+
+    .light-card-meta strong {
+      color: var(--neutral-800);
+      font-weight: 500;
+    }
+
+    /* Palette strip */
+    .palette-strip {
+      display: flex;
+      border-radius: 6px;
+      overflow: hidden;
+      height: 48px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .palette-strip > span {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 6px;
+      font-size: 0.65rem;
+      font-family: var(--font-mono);
+      color: rgba(255,255,255,0.7);
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+      transition: flex 0.3s ease;
+    }
+
+    .palette-strip > span.dark-text {
+      color: rgba(0,0,0,0.5);
+      text-shadow: none;
+    }
+
+    .palette-strip:hover > span:hover {
+      flex: 1.5;
+    }
+
+    /* Book card demo */
+    .book-card {
+      display: flex;
+      gap: 16px;
+      background: var(--surface-100);
+      border-radius: var(--radius-card);
+      padding: 16px;
+      max-width: 400px;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .book-cover {
+      width: 80px;
+      height: 120px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .book-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .book-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--neutral-900);
+      margin-bottom: 4px;
+    }
+
+    .book-author {
+      font-size: 0.9rem;
+      font-style: italic;
+      color: var(--neutral-600);
+      margin-bottom: 8px;
+    }
+
+    .book-era {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+      background: var(--teal-50);
+      color: var(--teal-700);
+      border: 1px solid var(--teal-200);
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header / Hero -->
+  <header class="hero-head">
+    <div class="hero-eyebrow">SF Supernova · The Cartographer</div>
+    <h1>Colour Token System</h1>
+    <p>
+      Deep Teal + Amber synthesis. Celestial navigation, brass sextants, aged star charts.
+      The marriage of precision and wonder.
+    </p>
+    <div style="margin-top: 12px;">
+      <span class="tag">
+        <span class="tag-dot"></span>
+        <span class="teal-text">Deep Teal</span> primary · <span class="amber-text">Amber</span> accent · warm paper surfaces
+      </span>
+    </div>
+  </header>
+
+  <!-- Core palette strip -->
+  <section class="section">
+    <div class="section-header">
+      <h2>The Cartographer at a Glance</h2>
+      <p>Five core colours that define the entire system.</p>
+    </div>
+
+    <div class="palette-strip">
+      <span style="background: var(--surface-100);" class="dark-text">#F9F6F0</span>
+      <span style="background: var(--surface-300);" class="dark-text">#EBE5D8</span>
+      <span style="background: var(--teal-600);">#1A4A4A</span>
+      <span style="background: var(--amber-500);" class="dark-text">#C9943A</span>
+      <span style="background: var(--neutral-900);">#1A2020</span>
+    </div>
+
+    <div class="grid cols-5">
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--surface-100);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Star Chart</div>
+          <div class="swatch-token">--surface-100</div>
+          <div class="swatch-note">Primary background</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--surface-300);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Vellum</div>
+          <div class="swatch-token">--surface-300</div>
+          <div class="swatch-note">Card surfaces</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--teal-600);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Deep Teal</div>
+          <div class="swatch-token">--teal-600</div>
+          <div class="swatch-note">Primary actions</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--amber-500);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Amber</div>
+          <div class="swatch-token">--amber-500</div>
+          <div class="swatch-note">Warm accent</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--neutral-900);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Night Sky</div>
+          <div class="swatch-token">--neutral-900</div>
+          <div class="swatch-note">Text & dark UI</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deep Teal scale -->
+  <section class="section">
+    <div class="section-header">
+      <h2>Deep Teal – Primary Scale</h2>
+      <p>The commanding presence. Oceanic depth meets celestial navigation. Use for CTAs, headers, and authoritative surfaces.</p>
+    </div>
+
+    <div class="grid cols-5">
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--teal-900);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Teal 900</div>
+          <div class="swatch-token">--teal-900</div>
+          <div class="swatch-note">Deepest night sky. Dark mode base.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--teal-800);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Teal 800</div>
+          <div class="swatch-token">--teal-800</div>
+          <div class="swatch-note">Night sky. Hero backgrounds.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--teal-700);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Teal 700</div>
+          <div class="swatch-token">--teal-700</div>
+          <div class="swatch-note">Deep ocean. Button hover.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--teal-600);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Teal 600</div>
+          <div class="swatch-token">--teal-600</div>
+          <div class="swatch-note">Primary. Main CTAs.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--teal-500);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Teal 500</div>
+          <div class="swatch-token">--teal-500</div>
+          <div class="swatch-note">Mid teal. Secondary buttons.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--teal-400);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Teal 400</div>
+          <div class="swatch-token">--teal-400</div>
+          <div class="swatch-note">Bright. Links, icons.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--teal-300);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Teal 300</div>
+          <div class="swatch-token">--teal-300</div>
+          <div class="swatch-note">Soft. Text on dark.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--teal-200);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Teal 200</div>
+          <div class="swatch-token">--teal-200</div>
+          <div class="swatch-note">Pale. Muted text on dark.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--teal-100);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Teal 100</div>
+          <div class="swatch-token">--teal-100</div>
+          <div class="swatch-note">Whisper. Subtle borders.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--teal-50);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Teal 50</div>
+          <div class="swatch-token">--teal-50</div>
+          <div class="swatch-note">Tint. Tag backgrounds.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-row">
+      <div>Teal button hierarchy:</div>
+      <div class="btn-row">
+        <button class="btn btn-primary">Primary Action</button>
+        <button class="btn btn-outline">Secondary Action</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amber scale -->
+  <section class="section">
+    <div class="section-header filigree-line">
+      <h2>Amber – Warm Accent Scale</h2>
+      <p>The brass instrument. Warmth, discovery, illumination. Use sparingly for highlights, featured content, and calls to action that need warmth.</p>
+    </div>
+
+    <div class="grid cols-5">
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--amber-900);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Amber 900</div>
+          <div class="swatch-token">--amber-900</div>
+          <div class="swatch-note">Burnt amber. Deep shadows.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--amber-800);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Amber 800</div>
+          <div class="swatch-token">--amber-800</div>
+          <div class="swatch-note">Deep amber. Text on light.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--amber-700);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Amber 700</div>
+          <div class="swatch-token">--amber-700</div>
+          <div class="swatch-note">Dark amber. Pressed states.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--amber-600);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Amber 600</div>
+          <div class="swatch-token">--amber-600</div>
+          <div class="swatch-note">Rich amber. Button gradient.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--amber-500);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Amber 500</div>
+          <div class="swatch-token">--amber-500</div>
+          <div class="swatch-note">Primary amber. Accent CTAs.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--amber-400);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Amber 400</div>
+          <div class="swatch-token">--amber-400</div>
+          <div class="swatch-note">Mid amber. Hover states.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--amber-300);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Amber 300</div>
+          <div class="swatch-token">--amber-300</div>
+          <div class="swatch-note">Soft amber. Highlights.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--amber-200);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Amber 200</div>
+          <div class="swatch-token">--amber-200</div>
+          <div class="swatch-note">Pale amber. Text on dark.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--amber-100);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Amber 100</div>
+          <div class="swatch-token">--amber-100</div>
+          <div class="swatch-note">Whisper. Warm backgrounds.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--amber-50);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Amber 50</div>
+          <div class="swatch-token">--amber-50</div>
+          <div class="swatch-note">Tint. Featured card bg.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-row">
+      <div>Amber accent buttons:</div>
+      <div class="btn-row">
+        <button class="btn btn-accent">Featured Action</button>
+        <button class="btn btn-ghost">Ghost Action</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paper surfaces -->
+  <section class="section">
+    <div class="section-header">
+      <h2>Warm Paper Surfaces</h2>
+      <p>The chart paper. Aged vellum, weathered maps. Never pure white – always warm.</p>
+    </div>
+
+    <div class="grid cols-6">
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--surface-0);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Surface 0</div>
+          <div class="swatch-token">--surface-0</div>
+          <div class="swatch-note">Pure white. Rare use only.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--surface-50);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Surface 50</div>
+          <div class="swatch-token">--surface-50</div>
+          <div class="swatch-note">Warm white. Light mode bg.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--surface-100);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Surface 100</div>
+          <div class="swatch-token">--surface-100</div>
+          <div class="swatch-note">Star chart. Primary surface.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--surface-200);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Surface 200</div>
+          <div class="swatch-token">--surface-200</div>
+          <div class="swatch-note">Vellum. Card elevation.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--surface-300);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Surface 300</div>
+          <div class="swatch-token">--surface-300</div>
+          <div class="swatch-note">Aged paper. Borders.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--surface-400);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Surface 400</div>
+          <div class="swatch-token">--surface-400</div>
+          <div class="swatch-note">Weathered. Heavy borders.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-row">
+      <div>Light mode card on Star Chart surface:</div>
+      <div style="margin-top: 8px;">
+        <div class="book-card">
+          <div class="book-cover" style="background: linear-gradient(135deg, var(--teal-600), var(--teal-800));"></div>
+          <div class="book-info">
+            <div class="book-title">Rendezvous with Rama</div>
+            <div class="book-author">Arthur C. Clarke</div>
+            <span class="book-era">Golden Age</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Neutral scale -->
+  <section class="section">
+    <div class="section-header">
+      <h2>Neutral Foundations</h2>
+      <p>Warm-shifted greys. Ink and shadow. Never blue-grey – always with a hint of teal warmth.</p>
+    </div>
+
+    <div class="grid cols-5">
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--neutral-900);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Neutral 900</div>
+          <div class="swatch-token">--neutral-900</div>
+          <div class="swatch-note">Primary text on light.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--neutral-800);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Neutral 800</div>
+          <div class="swatch-token">--neutral-800</div>
+          <div class="swatch-note">Strong headings.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--neutral-700);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Neutral 700</div>
+          <div class="swatch-token">--neutral-700</div>
+          <div class="swatch-note">Secondary headings.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--neutral-600);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Neutral 600</div>
+          <div class="swatch-token">--neutral-600</div>
+          <div class="swatch-note">Body text.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--neutral-500);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Neutral 500</div>
+          <div class="swatch-token">--neutral-500</div>
+          <div class="swatch-note">Muted text, meta.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--neutral-400);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Neutral 400</div>
+          <div class="swatch-token">--neutral-400</div>
+          <div class="swatch-note">Tertiary labels.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--neutral-300);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Neutral 300</div>
+          <div class="swatch-token">--neutral-300</div>
+          <div class="swatch-note">Borders, separators.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--neutral-200);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Neutral 200</div>
+          <div class="swatch-token">--neutral-200</div>
+          <div class="swatch-note">Soft dividers.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--neutral-100);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Neutral 100</div>
+          <div class="swatch-token">--neutral-100</div>
+          <div class="swatch-note">Lifted backgrounds.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--neutral-50);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Neutral 50</div>
+          <div class="swatch-token">--neutral-50</div>
+          <div class="swatch-note">Ghost backgrounds.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-row">
+      <div>Neutral-driven content card (light mode):</div>
+      <div style="margin-top: 8px;">
+        <div class="light-card">
+          <div class="light-card-heading">Author Profile: Ursula K. Le Guin</div>
+          <div class="light-card-sub">
+            Neutral hierarchy: heading, body, and meta use different greys, not different colours.
+          </div>
+          <div class="light-card-meta">
+            <span>Works: <strong>42</strong></span>
+            <span>·</span>
+            <span>Era: <strong>New Wave</strong></span>
+            <span>·</span>
+            <span>Active: <strong>1966–2018</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Semantic states -->
+  <section class="section">
+    <div class="section-header">
+      <h2>Semantic States</h2>
+      <p>Success, warning, error. State, not personality. Warmed to match the Cartographer's palette.</p>
+    </div>
+
+    <div class="grid cols-3">
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--success-bg); border-bottom-color: var(--success-border);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Success</div>
+          <div class="swatch-token">--success-bg / -border / -text</div>
+          <div class="swatch-note">Complete, valid, healthy state.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--warn-bg); border-bottom-color: var(--warn-border);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Warning</div>
+          <div class="swatch-token">--warn-bg / -border / -text</div>
+          <div class="swatch-note">Attention needed, caution.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--err-bg); border-bottom-color: var(--err-border);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Error</div>
+          <div class="swatch-token">--err-bg / -border / -text</div>
+          <div class="swatch-note">Invalid, blocked, failed.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-row">
+      <div>Status pills and alerts:</div>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+        <span class="pill pill-success">
+          <span class="pill-dot"></span>
+          Edition complete
+        </span>
+        <span class="pill pill-warn">
+          <span class="pill-dot"></span>
+          Review pending
+        </span>
+        <span class="pill pill-error">
+          <span class="pill-dot"></span>
+          Missing content
+        </span>
+      </div>
+      <div style="display: grid; gap: 8px; margin-top: 12px; max-width: 500px;">
+        <div class="alert alert-success">All chapters have been proofread and approved.</div>
+        <div class="alert alert-warn">Author biography is incomplete. Review before publishing.</div>
+        <div class="alert alert-error">Cover image missing. Cannot proceed with production.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filigree / brass detail -->
+  <section class="section">
+    <div class="section-header filigree-line">
+      <h2>Filigree / Brass Detail</h2>
+      <p>Instrument detailing. Reserved for metadata, ornament, and decorative elements – never for primary UI.</p>
+    </div>
+
+    <div class="grid cols-4">
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--filigree-brass-50);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Filigree 50</div>
+          <div class="swatch-token">--filigree-brass-50</div>
+          <div class="swatch-note">Featured backgrounds, tints.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--filigree-brass-100);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Filigree 100</div>
+          <div class="swatch-token">--filigree-brass-100</div>
+          <div class="swatch-note">Decorative borders, rules.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--filigree-brass-200);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Filigree 200</div>
+          <div class="swatch-token">--filigree-brass-200</div>
+          <div class="swatch-note">Dividers, ornamental lines.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--filigree-brass-300);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Filigree 300</div>
+          <div class="swatch-token">--filigree-brass-300</div>
+          <div class="swatch-note">Accent dots, badges.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-row">
+      <div>Document-style filigree demo:</div>
+      <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 10px; max-width: 520px;">
+        <div style="padding: 12px 16px; border-radius: 8px; background: var(--surface-100); border: 1px solid var(--filigree-brass-200); position: relative;">
+          <div style="font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--neutral-500); margin-bottom: 4px;">
+            SF Supernova · Curated Edition
+          </div>
+          <div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; color: var(--neutral-900); margin-bottom: 3px;">
+            § 3.2 The Golden Age: 1938–1960
+          </div>
+          <div style="font-size: 0.88rem; color: var(--neutral-600);">
+            The period defined by John W. Campbell's editorship of Astounding Science Fiction.
+          </div>
+          <div style="position: absolute; right: 12px; top: 10px;">
+            <span class="filigree-chip">
+              <span class="filigree-dot"></span>
+              Historical Context
+            </span>
+          </div>
+        </div>
+
+        <div class="filigree-footnote">
+          <span class="mono">Note:</span> Filigree brass colours are for decoration only – never use on buttons,
+          status indicators, or interactive elements. They exist for document framing and ornament.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Export / print safe -->
+  <section class="section">
+    <div class="section-header">
+      <h2>Export / Print-Safe Tokens</h2>
+      <p>For PDFs, ebook covers, and printed materials. Optimised for reproduction fidelity.</p>
+    </div>
+
+    <div class="grid cols-4">
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--export-teal-safe);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Export Teal</div>
+          <div class="swatch-token">--export-teal-safe</div>
+          <div class="swatch-note">Headings, covers, key markers.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--export-amber-safe);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Export Amber</div>
+          <div class="swatch-token">--export-amber-safe</div>
+          <div class="swatch-note">Accent elements, highlights.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--export-text-primary);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Export Text Primary</div>
+          <div class="swatch-token">--export-text-primary</div>
+          <div class="swatch-note">Main copy in exports.</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-chip" style="background: var(--export-text-secondary);"></div>
+        <div class="swatch-body">
+          <div class="swatch-name">Export Text Secondary</div>
+          <div class="swatch-token">--export-text-secondary</div>
+          <div class="swatch-note">Captions, meta, bylines.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-row">
+      <div>Export card demo (print preview):</div>
+      <div style="margin-top: 10px;">
+        <div class="export-card">
+          <div class="export-heading" style="color: var(--export-teal-safe);">
+            SF Supernova Collection – Author Guide
+          </div>
+          <div class="export-sub">
+            Comprehensive author profile for <span class="mono">Isaac Asimov</span> including bibliography and critical context.
+          </div>
+          <div style="font-size: 0.82rem; color: var(--export-text-secondary);">
+            Content completion
+          </div>
+          <div class="export-bar">
+            <div class="export-bar-inner"></div>
+          </div>
+          <div style="margin-top: 6px; font-size: 0.8rem; color: var(--export-text-secondary);">
+            72% of sections complete and ready for publication.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teal + Amber interaction -->
+  <section class="section">
+    <div class="section-header filigree-line">
+      <h2>The Synthesis: Teal + Amber Together</h2>
+      <p>How the two primaries interact. The marriage of precision and wonder.</p>
+    </div>
+
+    <div class="grid cols-2">
+      <div style="padding: 20px; background: var(--teal-800); border-radius: var(--radius-card); border: 1px solid var(--teal-600);">
+        <div style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--surface-100); margin-bottom: 8px;">
+          Teal Dominant, Amber Accent
+        </div>
+        <div style="font-size: 0.9rem; color: var(--teal-200); margin-bottom: 12px;">
+          Deep teal establishes authority. Amber draws attention to key moments.
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button class="btn btn-primary" style="flex: 1;">Primary</button>
+          <button class="btn btn-accent" style="flex: 0;">Featured</button>
+        </div>
+      </div>
+
+      <div style="padding: 20px; background: var(--surface-100); border-radius: var(--radius-card); border: 1px solid var(--surface-300);">
+        <div style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--neutral-900); margin-bottom: 8px;">
+          Light Mode Harmony
+        </div>
+        <div style="font-size: 0.9rem; color: var(--neutral-600); margin-bottom: 12px;">
+          Warm paper grounds both colours. They complement, never compete.
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button class="btn" style="flex: 1; background: var(--teal-600); color: var(--surface-100);">Explore</button>
+          <button class="btn" style="flex: 0; background: var(--amber-500); color: var(--teal-900);">Join</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-row">
+      <div>Full button palette:</div>
+      <div class="btn-row">
+        <button class="btn btn-primary">Teal Primary</button>
+        <button class="btn btn-accent">Amber Accent</button>
+        <button class="btn btn-outline">Teal Outline</button>
+        <button class="btn btn-ghost">Amber Ghost</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="margin-top: 24px; padding-top: 12px; border-top: 1px solid rgba(201, 148, 58, 0.3); font-size: 0.8rem; color: var(--teal-300);">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+      <div>All colours mapped through tokens. Adjust hex values centrally; behaviour remains unchanged.</div>
+      <div>
+        <span class="tag" style="font-size: 0.72rem;">
+          <span class="tag-dot"></span>
+          The Cartographer · v1.0
+        </span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
