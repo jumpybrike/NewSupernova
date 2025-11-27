@@ -38,7 +38,7 @@
 
 #### 1.1.1 Level 0: Homepage
 
-The homepage serves as the primary entry point and value demonstration layer, designed to immediately establish credibility and guide users toward their intent (browse, search, or discover). Key components include hero messaging ("Discover the overlooked masterpieces of golden age sci-fi"), featured content carousels (recent articles, new releases, curated collections), and clear navigation pathways to core site sections. The homepage must achieve bounce rate <60% and communicate SF Supernova's unique value proposition within 5 seconds of landing. End
+The homepage serves as the primary entry point and value demonstration layer, designed to immediately establish credibility and guide users toward their intent (browse, search, or discover). Key components include hero messaging ("Discover the overlooked masterpieces of golden age sci-fi"), featured content carousels (recent articles, new releases, curated collections), and clear navigation pathways to core site sections. The homepage must achieve bounce rate <60% and communicate SF Supernova's unique value proposition within 5 seconds of landing.
 
 #### 1.1.2 Level 1: Primary Navigation Categories
 
