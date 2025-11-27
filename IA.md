@@ -106,41 +106,55 @@ Active section highlighted via accent color underline and bold weight; hover sta
 
 #### 2.2.1 Breadcrumb Navigation
 
+Breadcrumbs appear below header on all pages except homepage, displaying hierarchical path from root to current page (e.g., Home > Discover > Era > 1950s > The Stars My Destination). Each segment clickable except current page (non-link, distinct styling), separated by chevron (›) or slash (/) symbols. Breadcrumbs structured with Schema.org BreadcrumbList markup for rich snippets in search results. Mobile breadcrumbs collapse to show only parent level with dropdown for full path to conserve space while maintaining wayfinding functionality.
+
 #### 2.2.2 Related Content Links
+
+Every content detail page includes "Related" section showcasing 3-6 algorithmically or editorially selected items based on taxonomy overlap (shared era, theme, author). Product pages show "Customers also bought" and "Similar works" with thumbnail, title, price, and brief description. Article pages display "Continue reading" recommendations matching user's browsing history or article category. Related links include clear visual cards with hover states, positioned above footer to capture exit intent and extend session duration through discovery pathways.
 
 #### 2.2.3 In-Page Navigation (Table of Contents)
 
+Long-form articles (>2,000 words) include auto-generated table of contents positioned below title/meta but above content, linking to H2/H3 headers via anchor fragments. TOC uses sticky sidebar on desktop (remaining visible during scroll) or collapsible accordion on mobile. Smooth scroll behavior (400ms) with offset accounting for sticky header ensures target heading appears below navigation. Active section highlighting in TOC updates as user scrolls, providing orientation within lengthy content and enabling quick navigation to specific sections.
+
 #### 2.2.4 Previous/Next Navigation
+
+Sequential content (book series, article series, chronological era pages) includes Previous/Next buttons at bottom of page enabling linear browsing without returning to parent index. Buttons display destination title preview (e.g., "Next: 1960s Science Fiction →") with directional arrows and hover states. Navigation respects logical sequence (chronological for eras, publication order for series, posting date for articles). Buttons omitted when reaching series boundaries; keyboard shortcuts (← → arrow keys) provide power-user navigation option.
 
 #### 2.2.5 Cross-Sell & Upsell Navigation
 
-
-
-
-
-
-
-
+Product pages include strategic conversion elements: "Complete your collection" bundles (save X%), "Upgrade to audiobook" options (format upsell), and "Members save 30%" prompts driving membership conversion. Cart page displays "Frequently bought together" recommendations and "Reach free shipping" threshold indicators. Non-members see persistent "Join for discounts" callout on product pages; one-time buyers see "Save on future purchases" membership pitch. All upsells positioned post-primary CTA to avoid friction in initial conversion funnel.
 
 ### 2.3 Footer Navigation
 
 #### 2.3.1 Footer Menu Structure
 
+Footer organized into four columns: **Discover** (browse links mirroring header), **Library** (product categories), **Community** (articles/member content), and **About** (mission/support/legal). Each column header uses accent color with 8-10 links maximum to maintain scannability. Desktop displays full four-column layout; tablet collapses to two columns; mobile uses accordion expansion pattern. Footer includes logo lockup at top (or left on desktop) reinforcing brand identity and providing visual anchor for wayfinding.
+
 #### 2.3.2 Legal & Policy Links
+
+Legal links positioned in footer bottom bar (below main columns): Terms of Service, Privacy Policy, Refund Policy, and Cookie Preferences. Links use smaller font size (0.875rem) with subtle styling distinguishing from primary navigation. GDPR/CCPA compliance links trigger inline modal overlays rather than full page navigation. Copyright notice and business entity information appear inline with legal links. All legal pages use minimal design (no sidebar navigation) prioritizing readability and clarity of contractual language.
 
 #### 2.3.3 Social Media & Community Links
 
+Social icons positioned in footer (top-right on desktop, centered on mobile) linking to Twitter, Facebook, Instagram, Reddit, and Discord communities. Icons use brand colors on hover, maintaining visual consistency with site palette. "Join the conversation" microcopy encourages community participation. RSS feed icon included for content subscribers. Social proof counters (e.g., "2,500+ members") optionally displayed near social links to demonstrate active community and reduce perceived risk for new users.
+
 #### 2.3.4 Newsletter Signup
+
+Prominent email capture module in footer (above or alongside footer columns) with headline "Start Your Journey Free" and value proposition copy. Single email input field with adjacent CTA button ("Get Free Guide" or "Subscribe"). Privacy reassurance microcopy ("Join 2,500+ readers. Unsubscribe anytime.") positioned below input. Submission triggers inline success message without page reload; email validated client-side before submission. Form includes honeypot field for spam prevention and integrates with ConvertKit/Mailchimp API for list management.
 
 #### 2.3.5 Site Credits & Branding
 
+Footer bottom bar includes copyright statement ("© 2025 SF Supernova"), tagline ("Celebrating the golden age of science fiction"), and optional attribution ("Built with passion by [Founder]"). Design credits or technology stack mentions optional for authenticity/transparency. Tagline reinforces brand positioning and mission even at page exit points. All footer text maintains readability contrast ratios (4.5:1 minimum) against background color. Mobile footer maintains vertical spacing preventing accidental clicks on iOS Safari bottom navigation bar.
 
 ## 3. Content Taxonomy & Classification
 
 ### 3.1 Primary Taxonomies
 
+**Era Taxonomy:** Decade-based classification (1920s, 1930s, 1940s, 1950s, 1960s, 1970s, 1980s) with historical context descriptions and defining characteristics for each period. Enables chronological browsing and supports PRD's "journey through sci-fi evolution" narrative. **Theme Taxonomy:** 30+ topical categories including Time Travel, Space Opera, Dystopia, First Contact, Robots & AI, Cybernetics, Planetary Romance, Hard SF, Social SF, Post-Apocalyptic, and Alternate History. Themes cross decades enabling thematic discovery pathways. **Author Taxonomy:** Alphabetical directory with 200+ authors at maturity, filterable by gender, nationality, era, and influence relationships. **Format Taxonomy:** Content type classification (Novels, Novellas, Short Stories, Collections, Radio Dramas, Essays) and delivery format (Ebook, Audiobook, Enhanced Edition, Bundle). **Quality Tier:** Internal classification (Essential/Recommended/Deep Cut) guiding editorial curation and algorithmic recommendations, not exposed to users but influences "Featured" and "Hidden Gems" collections.
+
 ### 3.2 Metadata Schema
 
+**Core Work Metadata:** Title, author(s), original publication year, publisher, page count/word count, ISBN (if applicable), language, copyright status (public domain verification date). **Descriptive Metadata:** Synopsis (50-150 words), themes (3-5 primary tags), subgenre classifications, content warnings (where applicable), reading difficulty level. **Production Metadata:** OCR quality score (internal), text version history, audiobook narrator(s), narration length, enhancement type (standard/scholarly/annotated), cover artist attribution. **Relationship Metadata:** Series information (order, completeness), influence mappings (inspired by, influenced), adaptation references (film/TV/radio versions), thematic connections enabling "Similar works" recommendations. **Commercial Metadata:** Product formats available, pricing by format, bundle inclusions, membership tier access, affiliate links (Amazon/Bookshop), sales rank/popularity scores. **SEO Metadata:** Slug (URL-friendly), meta title (55-60 chars), meta description (150-160 chars), Open Graph tags, Schema.org Book markup, primary/secondary keywords targeting long-tail searches. All metadata fields populate CMS with validation rules ensuring consistency and completeness before publication.
 ---
 
 ## 4. User Journeys & Scenarios
