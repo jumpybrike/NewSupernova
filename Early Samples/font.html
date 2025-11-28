@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SF Supernova — Typography & Colour Test</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      background-color: #F4F1E8;
+      min-height: 100vh;
+    }
+    
+    /* Header */
+    header {
+      background-color: #0F3333;
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      color: #F4F1E8;
+      letter-spacing: -0.5px;
+    }
+    
+    nav {
+      display: flex;
+      gap: 32px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+    }
+    
+    nav a {
+      color: #B8DADA;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    nav a:hover {
+      color: #F4F1E8;
+    }
+    
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #0F3333 0%, #1A4A4A 100%);
+      padding: 80px 32px;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 56px;
+      color: #F4F1E8;
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+      line-height: 1.1;
+    }
+    
+    .hero .tagline {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 20px;
+      color: #B8DADA;
+      margin-bottom: 32px;
+      font-style: italic;
+    }
+    
+    .btn-group {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+    }
+    
+    .btn {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 14px 28px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .btn-primary {
+      background-color: #C9943A;
+      color: #1A3535;
+      border: none;
+    }
+    
+    .btn-primary:hover {
+      background-color: #D9A854;
+    }
+    
+    .btn-secondary {
+      background-color: transparent;
+      color: #F4F1E8;
+      border: 2px solid #4A9999;
+    }
+    
+    .btn-secondary:hover {
+      background-color: rgba(74, 153, 153, 0.2);
+    }
+    
+    /* Main */
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 48px 32px;
+    }
+    
+    .section-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      color: #1A4A4A;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      color: #1A2020;
+      margin-top: 8px;
+      letter-spacing: -0.5px;
+    }
+    
+    /* Article Card */
+    .article-card {
+      background-color: #E8E3D6;
+      border-radius: 12px;
+      padding: 40px;
+      margin: 32px 0 48px;
+    }
+    
+    .article-card p {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.75;
+      color: #4D5858;
+      margin-bottom: 24px;
+    }
+    
+    .article-card p:last-of-type {
+      margin-bottom: 0;
+    }
+    
+    blockquote {
+      border-left: 4px solid #C9943A;
+      padding-left: 24px;
+      margin: 32px 0;
+      font-family: 'Outfit', sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      color: #1A4A4A;
+      line-height: 1.5;
+      font-style: normal;
+    }
+    
+    blockquote cite {
+      display: block;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      color: #667272;
+      margin-top: 12px;
+      font-weight: 400;
+    }
+    
+    /* Product Grid */
+    h3 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      color: #1A2020;
+      margin-bottom: 24px;
+    }
+    
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+    
+    @media (max-width: 768px) {
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .hero h1 {
+        font-size: 36px;
+      }
+      
+      nav {
+        display: none;
+      }
+    }
+    
+    .product-card {
+      background-color: #FDFCF9;
+      border-radius: 8px;
+      padding: 24px;
+      border: 1px solid #DDD5C4;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(26, 74, 74, 0.12);
+    }
+    
+    .cover-placeholder {
+      background-color: #1A4A4A;
+      height: 180px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      color: #7DBDBD;
+    }
+    
+    .tag {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: #1A4A4A;
+      background-color: #E5F2F2;
+      padding: 4px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: inline-block;
+    }
+    
+    .tag.amber {
+      background-color: #F8E8C8;
+      color: #7A4D15;
+    }
+    
+    .product-card h4 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      color: #1A2020;
+      margin-top: 12px;
+      margin-bottom: 4px;
+    }
+    
+    .product-card .meta {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 15px;
+      color: #667272;
+      margin-bottom: 12px;
+    }
+    
+    .product-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .price {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: #1A4A4A;
+    }
+    
+    .btn-small {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 8px 16px;
+      background-color: #1A4A4A;
+      color: #F4F1E8;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    
+    .btn-small:hover {
+      background-color: #153D3D;
+    }
+    
+    /* Specimen */
+    .specimen {
+      background-color: #E8E3D6;
+      border-radius: 12px;
+      padding: 40px;
+      margin-top: 48px;
+    }
+    
+    .specimen h3 {
+      margin-bottom: 24px;
+      font-size: 24px;
+    }
+    
+    .specimen-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    
+    @media (max-width: 768px) {
+      .specimen-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .specimen-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      color: #667272;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    
+    .outfit-samples {
+      font-family: 'Outfit', sans-serif;
+      color: #1A2020;
+    }
+    
+    .outfit-samples p {
+      margin-bottom: 8px;
+    }
+    
+    .serif-samples {
+      font-family: 'Source Serif 4', Georgia, serif;
+      color: #4D5858;
+    }
+    
+    .serif-samples p {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    
+    .ui-samples {
+      margin-top: 32px;
+    }
+    
+    .tag-row {
+      font-family: 'Space Grotesk', sans-serif;
+      color: #1A4A4A;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 12px;
+    }
+    
+    .tag-row span {
+      font-size: 14px;
+    }
+    
+    .tag-row .muted {
+      color: #667272;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: #0F3333;
+      padding: 48px 32px;
+      margin-top: 48px;
+    }
+    
+    .footer-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    @media (max-width: 768px) {
+      .footer-content {
+        flex-direction: column;
+        gap: 32px;
+      }
+    }
+    
+    .footer-brand .logo {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+    
+    .footer-brand .tagline {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 14px;
+      color: #7DBDBD;
+      font-style: italic;
+    }
+    
+    .footer-links {
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      color: #B8DADA;
+    }
+    
+    .footer-links h4 {
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #F4F1E8;
+      font-size: 14px;
+    }
+    
+    .footer-links p {
+      margin-bottom: 8px;
+    }
+    
+    .footer-links a {
+      color: #B8DADA;
+      text-decoration: none;
+    }
+    
+    .footer-links a:hover {
+      color: #F4F1E8;
+    }
+
+    /* Colour Swatches */
+    .colour-section {
+      margin-top: 48px;
+    }
+
+    .swatch-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .swatch-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .swatch {
+      border-radius: 8px;
+      padding: 24px 16px 12px;
+      text-align: center;
+    }
+
+    .swatch-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 8px;
+    }
+
+    .swatch-hex {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 12px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">SF SUPERNOVA</div>
+    <nav>
+      <a href="#">Discover</a>
+      <a href="#">Library</a>
+      <a href="#">Articles</a>
+      <a href="#">Membership</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Where Golden Age<br>Science Fiction Lives</h1>
+    <p class="tagline">Past Futures, Present Discoveries</p>
+    <div class="btn-group">
+      <button class="btn btn-primary">Explore Collection</button>
+      <button class="btn btn-secondary">View Membership</button>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    
+    <!-- Article Section -->
+    <div style="margin-bottom: 32px;">
+      <span class="section-label">Featured Article</span>
+      <h2>The Foundation of Modern Science Fiction</h2>
+    </div>
+
+    <article class="article-card">
+      <p>Isaac Asimov's <em>Foundation</em> series stands as one of the defining works of the Golden Age. Drawing inspiration from Gibbon's <em>Decline and Fall of the Roman Empire</em>, Asimov crafted a sweeping narrative of galactic civilization that would influence generations of writers and thinkers.</p>
+      
+      <p>The concept of psychohistory—a mathematical sociology capable of predicting the behaviour of large populations—remains one of science fiction's most provocative thought experiments. It asks us to consider whether humanity's future might be not just predictable, but <em>guidable</em>.</p>
+      
+      <blockquote>
+        "Violence is the last refuge of the incompetent."
+        <cite>— Salvor Hardin, Foundation (1951)</cite>
+      </blockquote>
+
+      <p>The trilogy's influence extends far beyond literature. Elon Musk has cited it as formative to his thinking about civilizational resilience; Paul Krugman credits it with inspiring his career in economics. Few works of fiction can claim such tangible impact on the real world.</p>
+    </article>
+
+    <!-- Product Grid -->
+    <h3>Explore the Collection</h3>
+    
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="cover-placeholder">Cover Art</div>
+        <span class="tag">Essential</span>
+        <h4>Foundation</h4>
+        <p class="meta">Isaac Asimov · 1951</p>
+        <div class="product-footer">
+          <span class="price">$3.99</span>
+          <button class="btn-small">Add to Cart</button>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="cover-placeholder">Cover Art</div>
+        <span class="tag amber">Hidden Gem</span>
+        <h4>The Stars My Destination</h4>
+        <p class="meta">Alfred Bester · 1956</p>
+        <div class="product-footer">
+          <span class="price">$4.99</span>
+          <button class="btn-small">Add to Cart</button>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="cover-placeholder">Cover Art</div>
+        <span class="tag">New Wave</span>
+        <h4>The Left Hand of Darkness</h4>
+        <p class="meta">Ursula K. Le Guin · 1969</p>
+        <div class="product-footer">
+          <span class="price">$4.99</span>
+          <button class="btn-small">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Colour Swatches -->
+    <div class="colour-section">
+      <h3>The Cartographer Palette</h3>
+      
+      <div class="swatch-grid">
+        <div class="swatch" style="background-color: #1A4A4A;">
+          <div class="swatch-label" style="color: #F4F1E8;">Deep Teal</div>
+          <div class="swatch-hex" style="color: #B8DADA;">#1A4A4A</div>
+        </div>
+        <div class="swatch" style="background-color: #C9943A;">
+          <div class="swatch-label" style="color: #1A3535;">Amber</div>
+          <div class="swatch-hex" style="color: #5C3A10;">#C9943A</div>
+        </div>
+        <div class="swatch" style="background-color: #F4F1E8; border: 1px solid #DDD5C4;">
+          <div class="swatch-label" style="color: #4D5858;">Star Chart</div>
+          <div class="swatch-hex" style="color: #667272;">#F4F1E8</div>
+        </div>
+        <div class="swatch" style="background-color: #E8E3D6;">
+          <div class="swatch-label" style="color: #4D5858;">Vellum</div>
+          <div class="swatch-hex" style="color: #667272;">#E8E3D6</div>
+        </div>
+        <div class="swatch" style="background-color: #0F3333;">
+          <div class="swatch-label" style="color: #F4F1E8;">Night Sky</div>
+          <div class="swatch-hex" style="color: #7DBDBD;">#0F3333</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Typography Specimen -->
+    <div class="specimen">
+      <h3>Typography Specimen</h3>
+      
+      <div class="specimen-grid">
+        <div>
+          <p class="specimen-label">Headers — Outfit</p>
+          <div class="outfit-samples">
+            <p style="font-size: 32px; font-weight: 700;">Bold 700</p>
+            <p style="font-size: 24px; font-weight: 600;">Semibold 600</p>
+            <p style="font-size: 18px; font-weight: 500;">Medium 500</p>
+            <p style="font-size: 16px; font-weight: 400;">Regular 400</p>
+          </div>
+        </div>
+        
+        <div>
+          <p class="specimen-label">Body — Source Serif 4</p>
+          <div class="serif-samples">
+            <p style="font-weight: 400;">Regular 400 — Body text</p>
+            <p style="font-weight: 500;">Medium 500 — Emphasis</p>
+            <p style="font-weight: 600;">Semibold 600 — Strong</p>
+            <p style="font-style: italic;">Italic — Quotations</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="ui-samples">
+        <p class="specimen-label">UI / Accent — Space Grotesk</p>
+        <div class="tag-row">
+          <span class="tag">TAG LABEL</span>
+          <span class="tag amber">GOLDEN AGE</span>
+          <span class="tag">1950s</span>
+          <span class="muted">Metadata · Captions · UI Elements</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="logo">SF SUPERNOVA</div>
+        <p class="tagline">Celebrating the golden age of science fiction</p>
+      </div>
+      
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <p><a href="#">Browse by Era</a></p>
+        <p><a href="#">Browse by Theme</a></p>
+        <p><a href="#">Authors</a></p>
+      </div>
+      
+      <div class="footer-links">
+        <h4>Company</h4>
+        <p><a href="#">About</a></p>
+        <p><a href="#">Contact</a></p>
+        <p><a href="#">Terms</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
