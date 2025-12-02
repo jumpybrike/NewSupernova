@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <path d="M50,5 L92,35 L92,75 L50,95 L8,75 L8,35 Z" fill="#d4a84b"/>
+  
+  <path d="M50,12 L85,38 L85,72 L50,88 L15,72 L15,38 Z" fill="#1a1a2e"/>
+  
+  <g transform="translate(50,50)">
+    
+    <circle cx="0" cy="0" r="18" fill="none" stroke="#f7931e" stroke-width="0.5" opacity="0.6"/>
+
+    <polygon points="-24,-24 -5,-2 -2,-5" fill="#e63946"/>
+    <polygon points="24,-24 5,-2 2,-5" fill="#e63946"/>
+    <polygon points="-24,24 -5,2 -2,5" fill="#e63946"/>
+    <polygon points="24,24 5,2 2,5" fill="#e63946"/>
+    
+    <polygon points="0,-32 3,-8 0,-4 -3,-8" fill="#ff6b35"/>
+    <polygon points="0,32 3,8 0,4 -3,8" fill="#ff6b35"/>
+    <polygon points="-32,0 -8,3 -4,0 -8,-3" fill="#ff6b35"/>
+    <polygon points="32,0 8,3 4,0 8,-3" fill="#ff6b35"/>
+    
+    <circle cx="0" cy="0" r="7" fill="#ff6b35"/>
+    
+    <circle cx="0" cy="0" r="3" fill="#fff8e7"/>
+  </g>
+</svg>
