@@ -2092,25 +2092,1533 @@ Auto-position to stay within viewport.
 - Ensure tooltip is focusable via keyboard
 - Dismiss on Escape key
 
----
-
-Ready for the next section.
----
-
-### ⚠️ MISSING: 6. Interactive States
-**⚠️ MISSING: 6.1 Hover States**
-**⚠️ MISSING: 6.2 Focus States**
-**⚠️ MISSING: 6.3 Active States**
-**⚠️ MISSING: 6.4 Disabled States**
-**⚠️ MISSING: 6.5 Error & Success States**
+Here's the complete Section 6:
 
 ---
 
-### ⚠️ MISSING: 7. Motion & Animation
-**⚠️ MISSING: 7.1 Timing & Easing**
-**⚠️ MISSING: 7.2 Transition Patterns**
-**⚠️ MISSING: 7.3 Loading Animations**
+## 6. Interactive States
 
+All interactive elements must provide clear visual feedback across states. Consistent state styling builds user confidence and supports accessibility requirements.
+
+### 6.1 Hover States
+
+Hover states indicate interactivity and provide feedback on desktop devices. All hover transitions use `200ms ease`.
+
+#### Colour Shifts
+
+| Element | Default | Hover |
+|---------|---------|-------|
+| **Primary button** | Teal 600 bg | Teal 700 bg |
+| **Accent button** | Amber 500 bg | Amber 400 bg |
+| **Secondary button** | Transparent bg | Teal 50 bg |
+| **Ghost button** | Transparent bg | Surface 100 bg |
+| **Text link** | Teal 600 | Teal 700 + underline |
+| **Nav link (dark)** | Teal 200 | Surface 200 |
+| **Icon button** | Neutral 600 | Teal 600 + Surface 100 bg |
+| **Card** | Surface 400 border | Teal 600 border |
+
+#### Transform Effects
+
+| Element | Hover Effect |
+|---------|--------------|
+| **Product card** | `translateY(-4px)` + shadow |
+| **Card image** | `scale(1.02)` within overflow hidden |
+| **Icon button** | `scale(1.05)` (subtle) |
+
+#### Shadow Effects
+
+| Element | Default Shadow | Hover Shadow |
+|---------|----------------|--------------|
+| **Card** | none | `0 4px 12px rgba(26, 74, 74, 0.1)` |
+| **Dropdown** | — | `0 8px 24px rgba(26, 74, 74, 0.15)` |
+| **Floating button** | `0 2px 8px rgba(26, 74, 74, 0.1)` | `0 4px 16px rgba(26, 74, 74, 0.15)` |
+
+#### CSS Implementation
+
+```css
+/* Link hover */
+a:hover {
+  color: var(--teal-700);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Card hover */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--teal-600);
+  box-shadow: 0 4px 12px rgba(26, 74, 74, 0.1);
+}
+
+/* Card image zoom */
+.card-image-wrapper {
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-image {
+  transition: transform 0.2s ease;
+}
+
+.card:hover .card-image {
+  transform: scale(1.02);
+}
+
+/* Icon button hover */
+.icon-button:hover {
+  color: var(--teal-600);
+  background-color: var(--surface-100);
+}
+```
+
+#### Touch Devices
+
+Hover states should not be relied upon for essential information on touch devices. Use `@media (hover: hover)` to apply hover-only styles:
+
+```css
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(26, 74, 74, 0.1);
+  }
+}
+```
+
+---
+
+### 6.2 Focus States
+
+Focus states are **critical for accessibility**. They indicate which element has keyboard focus and must be clearly visible. Never remove focus outlines without providing an alternative.
+
+#### Focus Ring Specification
+
+| Property | Value |
+|----------|-------|
+| Colour | Amber 500 (`#C9943A`) |
+| Width | 2px |
+| Style | solid |
+| Offset | 2px |
+| Border radius | Follows element's border-radius + 2px |
+
+#### Focus by Element Type
+
+| Element | Focus Style |
+|---------|-------------|
+| **Buttons** | 2px Amber 500 outline, 2px offset |
+| **Links** | 2px Amber 500 outline, 2px offset |
+| **Inputs** | 2px Teal 600 border (replaces default border) |
+| **Cards (interactive)** | 2px Amber 500 outline, 2px offset |
+| **Checkboxes/Radios** | 2px Amber 500 outline on custom box |
+| **Icon buttons** | 2px Amber 500 outline, 2px offset |
+
+#### Focus-Visible vs Focus
+
+Use `:focus-visible` to show focus rings only for keyboard navigation, not mouse clicks:
+
+```css
+/* Remove default outline */
+button:focus {
+  outline: none;
+}
+
+/* Show custom focus ring for keyboard users only */
+button:focus-visible {
+  outline: 2px solid var(--amber-500);
+  outline-offset: 2px;
+}
+
+/* For browsers without focus-visible support, fall back to :focus */
+@supports not selector(:focus-visible) {
+  button:focus {
+    outline: 2px solid var(--amber-500);
+    outline-offset: 2px;
+  }
+}
+```
+
+#### Input Focus
+
+Inputs use a border change rather than outline for a cleaner appearance:
+
+```css
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+  outline: none;
+  border: 2px solid var(--teal-600);
+  background-color: var(--surface-0);
+}
+```
+
+#### Focus on Dark Backgrounds
+
+On dark backgrounds (Teal 900), use Surface 200 for focus indicators:
+
+```css
+.dark-bg button:focus-visible {
+  outline-color: var(--surface-200);
+}
+```
+
+#### Focus Order
+
+Focus order must follow visual reading order (left-to-right, top-to-bottom for LTR languages). Never use positive `tabindex` values; use DOM order instead.
+
+```html
+<!-- Correct: DOM order matches visual order -->
+<nav>
+  <a href="/discover">Discover</a>
+  <a href="/library">Library</a>
+  <a href="/articles">Articles</a>
+</nav>
+
+<!-- Incorrect: Don't manipulate tab order -->
+<nav>
+  <a href="/articles" tabindex="3">Articles</a>
+  <a href="/discover" tabindex="1">Discover</a>
+  <a href="/library" tabindex="2">Library</a>
+</nav>
+```
+
+#### CSS Implementation
+
+```css
+/* Global focus-visible styles */
+:focus-visible {
+  outline: 2px solid var(--amber-500);
+  outline-offset: 2px;
+}
+
+/* Remove outline for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Specific element adjustments */
+.btn:focus-visible {
+  outline: 2px solid var(--amber-500);
+  outline-offset: 2px;
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--amber-500);
+  outline-offset: 2px;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--amber-500);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Input focus (uses border instead of outline) */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border: 2px solid var(--teal-600);
+}
+```
+
+---
+
+### 6.3 Active States
+
+Active states provide immediate feedback when an element is being clicked or tapped. They should feel "pressed" or "depressed".
+
+#### Active Colour Shifts
+
+| Element | Default | Active |
+|---------|---------|--------|
+| **Primary button** | Teal 600 bg | Teal 800 bg |
+| **Accent button** | Amber 500 bg | Amber 600 bg |
+| **Secondary button** | Transparent bg | Teal 100 bg |
+| **Ghost button** | Transparent bg | Surface 200 bg |
+| **Text link** | Teal 600 | Teal 800 |
+| **Nav link (dark)** | Teal 200 | Surface 200 |
+| **Icon button** | Neutral 600 | Teal 700 |
+
+#### Active Transform
+
+Buttons scale down slightly to create a "pressed" effect:
+
+```css
+.btn:active {
+  transform: scale(0.98);
+}
+```
+
+#### Active Duration
+
+Active states should be visible but brief. Transition should be faster than hover (100ms vs 200ms):
+
+```css
+.btn {
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:active {
+  background-color: var(--teal-800);
+  transform: scale(0.98);
+}
+```
+
+#### CSS Implementation
+
+```css
+/* Primary button active */
+.btn-primary:active {
+  background-color: var(--teal-800);
+  transform: scale(0.98);
+}
+
+/* Secondary button active */
+.btn-secondary:active {
+  background-color: var(--teal-100);
+  transform: scale(0.98);
+}
+
+/* Ghost button active */
+.btn-ghost:active {
+  background-color: var(--surface-200);
+  transform: scale(0.98);
+}
+
+/* Link active */
+a:active {
+  color: var(--teal-800);
+}
+
+/* Card active (for clickable cards) */
+.card-clickable:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Icon button active */
+.icon-button:active {
+  color: var(--teal-700);
+  transform: scale(0.95);
+}
+```
+
+---
+
+### 6.4 Disabled States
+
+Disabled states indicate that an element is not interactive. They should look visibly "inactive" while maintaining readability.
+
+#### Disabled Styling
+
+| Property | Value |
+|----------|-------|
+| Background | Neutral 200 or Neutral 100 |
+| Text/Icon | Neutral 400 |
+| Border | Neutral 300 (if applicable) |
+| Cursor | `not-allowed` |
+| Opacity | Do not use opacity alone—use explicit colours |
+| Pointer events | `none` (optional, cursor handles this) |
+
+#### Disabled by Element
+
+| Element | Disabled Style |
+|---------|----------------|
+| **Primary button** | Neutral 200 bg, Neutral 500 text |
+| **Secondary button** | Neutral 300 border, Neutral 400 text |
+| **Ghost button** | Neutral 300 border, Neutral 400 text |
+| **Text link** | Neutral 400, no underline, `cursor: default` |
+| **Input** | Neutral 100 bg, Neutral 400 text |
+| **Checkbox/Radio** | Neutral 200 fill, Neutral 400 border |
+| **Select** | Neutral 100 bg, Neutral 400 text |
+| **Card (non-interactive)** | No change (cards are not "disabled") |
+
+#### Accessibility Considerations
+
+- Use `disabled` attribute for form elements—this removes them from tab order
+- Use `aria-disabled="true"` for custom components that should remain in tab order but not be activatable
+- Provide context for why something is disabled when possible
+
+```html
+<!-- Native disabled (removed from tab order) -->
+<button disabled>Sold Out</button>
+
+<!-- ARIA disabled (remains in tab order, announced as disabled) -->
+<button aria-disabled="true">Sold Out</button>
+
+<!-- With explanation -->
+<button disabled aria-describedby="sold-out-msg">Add to Cart</button>
+<span id="sold-out-msg" class="sr-only">This item is currently sold out</span>
+```
+
+#### CSS Implementation
+
+```css
+/* Button disabled */
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  background-color: var(--neutral-200);
+  border-color: var(--neutral-200);
+  color: var(--neutral-500);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn:disabled:hover,
+.btn[aria-disabled="true"]:hover {
+  background-color: var(--neutral-200);
+  transform: none;
+}
+
+/* Secondary button disabled */
+.btn-secondary:disabled {
+  background-color: transparent;
+  border-color: var(--neutral-300);
+  color: var(--neutral-400);
+}
+
+/* Input disabled */
+input:disabled,
+textarea:disabled,
+select:disabled {
+  background-color: var(--neutral-100);
+  border-color: var(--neutral-200);
+  color: var(--neutral-400);
+  cursor: not-allowed;
+}
+
+/* Link disabled (use class, links don't have disabled attribute) */
+a.disabled {
+  color: var(--neutral-400);
+  text-decoration: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Checkbox/Radio disabled */
+input[type="checkbox"]:disabled + .checkbox-box,
+input[type="radio"]:disabled + .radio-dot {
+  background-color: var(--neutral-200);
+  border-color: var(--neutral-300);
+}
+
+input[type="checkbox"]:disabled + .checkbox-box + .checkbox-label,
+input[type="radio"]:disabled + .radio-dot + .radio-label {
+  color: var(--neutral-400);
+}
+```
+
+---
+
+### 6.5 Error & Success States
+
+Error and success states provide feedback on form validation and system responses. They use semantic colours consistently across all components.
+
+#### Error States
+
+| Property | Value |
+|----------|-------|
+| Background | Error bg (`#FDF2F2`) |
+| Border | Error border (`#F0B8B8`) |
+| Text | Error text (`#8B2020`) |
+| Icon | AlertCircle or AlertTriangle |
+
+**Error state elements:**
+- Form inputs with validation errors
+- Alert messages
+- Toast notifications
+- Inline error messages
+
+#### Error Input Pattern
+
+```
+Email Address *                           ← Label turns Error text
+┌─────────────────────────────────────┐
+│ invalid-email                       │   ← Border: Error border, bg: Error bg
+└─────────────────────────────────────┘
+⚠ Please enter a valid email address     ← Error text + icon
+```
+
+```html
+<div class="form-field is-error">
+  <label for="email">Email Address <span class="required">*</span></label>
+  <input 
+    type="email" 
+    id="email" 
+    value="invalid-email"
+    aria-invalid="true"
+    aria-describedby="email-error"
+  />
+  <span id="email-error" class="field-error" role="alert">
+    <svg><!-- AlertCircle icon --></svg>
+    Please enter a valid email address
+  </span>
+</div>
+```
+
+#### Success States
+
+| Property | Value |
+|----------|-------|
+| Background | Success bg (`#ECF7F2`) |
+| Border | Success border (`#A8DCBE`) |
+| Text | Success text (`#1A5C38`) |
+| Icon | Check or CheckCircle |
+
+**Success state elements:**
+- Validated form inputs (optional—use sparingly)
+- Confirmation messages
+- Toast notifications
+- Completed step indicators
+
+#### Success Input Pattern
+
+```
+Email Address *
+┌─────────────────────────────────────┐
+│ user@example.com                 ✓  │   ← Border: Success border, icon inside
+└─────────────────────────────────────┘
+```
+
+#### Warning States
+
+| Property | Value |
+|----------|-------|
+| Background | Warning bg (`#FDF8EB`) |
+| Border | Warning border (`#F0D49E`) |
+| Text | Warning text (`#7A4D15`) |
+| Icon | AlertTriangle |
+
+**Warning state elements:**
+- Non-critical alerts
+- Notices requiring attention
+- Deprecation warnings
+
+#### Info States
+
+| Property | Value |
+|----------|-------|
+| Background | Info bg (`#E5F2F2`) |
+| Border | Info border (`#7DBDBD`) |
+| Text | Info text (`#1A4A4A`) |
+| Icon | Info |
+
+**Info state elements:**
+- Informational messages
+- Tips and hints
+- Neutral system notifications
+
+#### Alert Component
+
+```
+┌─────────────────────────────────────────────────────────┐
+│ ⚠  Your session will expire in 5 minutes.        [✕]   │
+└─────────────────────────────────────────────────────────┘
+```
+
+**Specifications:**
+- Padding: 12px 16px
+- Border-left: 4px solid (state colour)
+- Border-radius: 6px
+- Icon: 20px, aligned with first line of text
+- Dismiss button (optional): icon-button style
+
+#### Toast Notifications
+
+```
+┌────────────────────────────────────┐
+│ ✓  Product added to cart           │   ← Success toast
+└────────────────────────────────────┘
+
+┌────────────────────────────────────┐
+│ ⚠  Payment failed. Please retry.   │   ← Error toast
+└────────────────────────────────────┘
+```
+
+**Specifications:**
+- Position: fixed bottom-right (desktop), bottom-center (mobile)
+- Margin from edge: 24px
+- Auto-dismiss: 5 seconds (success/info), persistent (error/warning)
+- Animation: slide up + fade in
+- Stack multiple toasts with 8px gap
+
+#### CSS Implementation
+
+```css
+/* Error state */
+.form-field.is-error label {
+  color: var(--error-text);
+}
+
+.form-field.is-error input,
+.form-field.is-error textarea,
+.form-field.is-error select {
+  border-color: var(--error-border);
+  background-color: var(--error-bg);
+}
+
+.form-field.is-error input:focus {
+  border-color: var(--error-text);
+}
+
+.field-error {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-ui);
+  font-size: 12px;
+  color: var(--error-text);
+  margin-top: 6px;
+}
+
+/* Success state */
+.form-field.is-success input {
+  border-color: var(--success-border);
+  background-color: var(--success-bg);
+}
+
+.field-success {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-ui);
+  font-size: 12px;
+  color: var(--success-text);
+  margin-top: 6px;
+}
+
+/* Alert component */
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border-left: 4px solid;
+}
+
+.alert-error {
+  background-color: var(--error-bg);
+  border-left-color: var(--error-text);
+  color: var(--error-text);
+}
+
+.alert-success {
+  background-color: var(--success-bg);
+  border-left-color: var(--success-text);
+  color: var(--success-text);
+}
+
+.alert-warning {
+  background-color: var(--warning-bg);
+  border-left-color: var(--warning-text);
+  color: var(--warning-text);
+}
+
+.alert-info {
+  background-color: var(--info-bg);
+  border-left-color: var(--info-text);
+  color: var(--info-text);
+}
+
+.alert-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.alert-content {
+  flex: 1;
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.alert-dismiss {
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+/* Toast */
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (max-width: 767px) {
+  .toast-container {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background-color: var(--teal-900);
+  color: var(--surface-200);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(15, 51, 51, 0.2);
+  animation: slideUp 0.3s ease;
+}
+
+.toast-success {
+  background-color: var(--success-text);
+}
+
+.toast-error {
+  background-color: var(--error-text);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+```
+
+### 6.6 State Transition Summary
+
+| Transition | Duration | Easing | Properties |
+|------------|----------|--------|------------|
+| Hover | 200ms | ease | background-color, border-color, color, box-shadow |
+| Focus | 0ms | — | outline (instant for accessibility) |
+| Active | 100ms | ease | background-color, transform |
+| Disabled | 0ms | — | No transition (instant) |
+| Error/Success | 200ms | ease | border-color, background-color |
+| Card lift | 200ms | ease | transform, box-shadow |
+| Image zoom | 200ms | ease | transform |
+
+```css
+/* Standard transition preset */
+.interactive {
+  transition: 
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.1s ease;
+}
+```
+---
+
+## 7. Motion & Animation
+
+Motion and animation enhance user experience by providing feedback, guiding attention, and creating a sense of polish. However, animation must be purposeful, performant, and accessible.
+
+**Core principle:** Motion should feel natural and supportive, never gratuitous or distracting.
+
+### 7.1 Animation Principles
+
+#### Purpose-Driven Motion
+
+Every animation must serve at least one purpose:
+
+| Purpose | Example |
+|---------|---------|
+| **Feedback** | Button press, form submission confirmation |
+| **Orientation** | Page transitions, modal open/close |
+| **Guidance** | Drawing attention to new content, error fields |
+| **Continuity** | Maintaining context during state changes |
+| **Delight** | Subtle polish that reinforces brand personality |
+
+#### Motion Personality
+
+SF Supernova's motion should feel:
+
+- **Confident:** Decisive movements, no hesitation or bounce
+- **Warm:** Smooth easing, never mechanical or robotic
+- **Sophisticated:** Subtle and refined, never flashy
+- **Efficient:** Quick enough to feel responsive, slow enough to be perceived
+
+### 7.2 Timing & Duration
+
+#### Duration Scale
+
+| Token | Duration | Use Case |
+|-------|----------|----------|
+| `--duration-instant` | 0ms | Focus states, disabled states |
+| `--duration-fast` | 100ms | Active states, micro-interactions |
+| `--duration-normal` | 200ms | Hover states, colour transitions |
+| `--duration-moderate` | 300ms | Modal open/close, panel slide |
+| `--duration-slow` | 400ms | Page transitions, complex reveals |
+| `--duration-slower` | 500ms | Skeleton shimmer, attention-drawing |
+
+#### Duration Guidelines
+
+| Animation Type | Recommended Duration |
+|----------------|---------------------|
+| Colour change | 150–200ms |
+| Opacity fade | 200–300ms |
+| Transform (small) | 150–200ms |
+| Transform (large) | 300–400ms |
+| Slide/expand | 250–350ms |
+| Page transition | 300–400ms |
+| Loading shimmer | 1500ms (loop) |
+| Spinner rotation | 1000ms (loop) |
+
+**Rule of thumb:** Smaller movements = shorter duration. Larger movements = longer duration.
+
+### 7.3 Easing Functions
+
+#### Standard Easings
+
+| Token | Value | Use Case |
+|-------|-------|----------|
+| `--ease-default` | `ease` | General purpose, balanced |
+| `--ease-in` | `cubic-bezier(0.4, 0, 1, 1)` | Elements exiting view |
+| `--ease-out` | `cubic-bezier(0, 0, 0.2, 1)` | Elements entering view |
+| `--ease-in-out` | `cubic-bezier(0.4, 0, 0.2, 1)` | Elements moving within view |
+| `--ease-bounce` | `cubic-bezier(0.34, 1.56, 0.64, 1)` | Playful emphasis (use sparingly) |
+
+#### Easing Selection Guide
+
+| Scenario | Easing |
+|----------|--------|
+| **Hover state** | `ease` or `ease-out` |
+| **Modal appearing** | `ease-out` |
+| **Modal dismissing** | `ease-in` |
+| **Expanding accordion** | `ease-in-out` |
+| **Card lifting on hover** | `ease-out` |
+| **Page entering** | `ease-out` |
+| **Page exiting** | `ease-in` |
+| **Attention pulse** | `ease-in-out` |
+
+#### CSS Custom Properties
+
+```css
+:root {
+  /* Durations */
+  --duration-instant: 0ms;
+  --duration-fast: 100ms;
+  --duration-normal: 200ms;
+  --duration-moderate: 300ms;
+  --duration-slow: 400ms;
+  --duration-slower: 500ms;
+  
+  /* Easings */
+  --ease-default: ease;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+```
+
+### 7.4 Transition Patterns
+
+#### Standard Transitions
+
+```css
+/* Colour transitions (buttons, links) */
+.transition-colors {
+  transition-property: color, background-color, border-color;
+  transition-duration: var(--duration-normal);
+  transition-timing-function: var(--ease-default);
+}
+
+/* Opacity transitions (fade in/out) */
+.transition-opacity {
+  transition-property: opacity;
+  transition-duration: var(--duration-normal);
+  transition-timing-function: var(--ease-default);
+}
+
+/* Transform transitions (move, scale) */
+.transition-transform {
+  transition-property: transform;
+  transition-duration: var(--duration-normal);
+  transition-timing-function: var(--ease-out);
+}
+
+/* Shadow transitions (elevation changes) */
+.transition-shadow {
+  transition-property: box-shadow;
+  transition-duration: var(--duration-normal);
+  transition-timing-function: var(--ease-default);
+}
+
+/* All common properties */
+.transition-all {
+  transition-property: color, background-color, border-color, opacity, transform, box-shadow;
+  transition-duration: var(--duration-normal);
+  transition-timing-function: var(--ease-default);
+}
+```
+
+#### Component-Specific Transitions
+
+```css
+/* Button */
+.btn {
+  transition: 
+    background-color var(--duration-normal) var(--ease-default),
+    border-color var(--duration-normal) var(--ease-default),
+    color var(--duration-normal) var(--ease-default),
+    transform var(--duration-fast) var(--ease-default);
+}
+
+/* Card */
+.card {
+  transition:
+    transform var(--duration-normal) var(--ease-out),
+    box-shadow var(--duration-normal) var(--ease-out),
+    border-color var(--duration-normal) var(--ease-default);
+}
+
+/* Link */
+a {
+  transition: color var(--duration-normal) var(--ease-default);
+}
+
+/* Input */
+input, textarea, select {
+  transition:
+    border-color var(--duration-normal) var(--ease-default),
+    background-color var(--duration-normal) var(--ease-default);
+}
+```
+
+### 7.5 Keyframe Animations
+
+#### Fade In
+
+```css
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn var(--duration-moderate) var(--ease-out) forwards;
+}
+```
+
+#### Fade Out
+
+```css
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animate-fade-out {
+  animation: fadeOut var(--duration-moderate) var(--ease-in) forwards;
+}
+```
+
+#### Slide Up (Enter)
+
+```css
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp var(--duration-moderate) var(--ease-out) forwards;
+}
+```
+
+#### Slide Down (Exit)
+
+```css
+@keyframes slideDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+.animate-slide-down {
+  animation: slideDown var(--duration-moderate) var(--ease-in) forwards;
+}
+```
+
+#### Scale In (Modal)
+
+```css
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-scale-in {
+  animation: scaleIn var(--duration-moderate) var(--ease-out) forwards;
+}
+```
+
+#### Scale Out (Modal)
+
+```css
+@keyframes scaleOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+.animate-scale-out {
+  animation: scaleOut var(--duration-normal) var(--ease-in) forwards;
+}
+```
+
+#### Slide In From Left (Mobile Nav)
+
+```css
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft var(--duration-moderate) var(--ease-out) forwards;
+}
+```
+
+#### Slide Out To Left
+
+```css
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slide-out-left {
+  animation: slideOutLeft var(--duration-moderate) var(--ease-in) forwards;
+}
+```
+
+#### Slide Up From Bottom (Mobile Modal)
+
+```css
+@keyframes slideUpFromBottom {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up-bottom {
+  animation: slideUpFromBottom var(--duration-moderate) var(--ease-out) forwards;
+}
+```
+
+### 7.6 Loading Animations
+
+#### Spinner
+
+```css
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+```
+
+#### Skeleton Shimmer
+
+```css
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--neutral-200) 25%,
+    var(--neutral-100) 50%,
+    var(--neutral-200) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+```
+
+#### Pulse (Attention)
+
+```css
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s var(--ease-in-out) infinite;
+}
+```
+
+#### Progress Bar (Indeterminate)
+
+```css
+@keyframes progressIndeterminate {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+.progress-indeterminate::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100%;
+  background-color: var(--amber-500);
+  animation: progressIndeterminate 1.5s var(--ease-in-out) infinite;
+}
+```
+
+#### Dot Loading
+
+```css
+@keyframes dotBounce {
+  0%, 80%, 100% {
+    transform: scale(0.6);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.loading-dots span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--teal-600);
+  animation: dotBounce 1.4s var(--ease-in-out) infinite;
+}
+
+.loading-dots span:nth-child(1) { animation-delay: 0s; }
+.loading-dots span:nth-child(2) { animation-delay: 0.2s; }
+.loading-dots span:nth-child(3) { animation-delay: 0.4s; }
+```
+
+### 7.7 Interaction Animations
+
+#### Button Press
+
+```css
+.btn:active {
+  transform: scale(0.98);
+  transition: transform var(--duration-fast) var(--ease-default);
+}
+```
+
+#### Card Lift
+
+```css
+.card {
+  transition: 
+    transform var(--duration-normal) var(--ease-out),
+    box-shadow var(--duration-normal) var(--ease-out);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(26, 74, 74, 0.1);
+}
+```
+
+#### Image Zoom
+
+```css
+.card-image-wrapper {
+  overflow: hidden;
+}
+
+.card-image {
+  transition: transform var(--duration-normal) var(--ease-out);
+}
+
+.card:hover .card-image {
+  transform: scale(1.02);
+}
+```
+
+#### Accordion Expand
+
+```css
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--duration-moderate) var(--ease-in-out);
+}
+
+.accordion-content.is-open {
+  grid-template-rows: 1fr;
+}
+
+.accordion-inner {
+  overflow: hidden;
+}
+```
+
+#### Chevron Rotate
+
+```css
+.accordion-trigger svg {
+  transition: transform var(--duration-normal) var(--ease-default);
+}
+
+.accordion-trigger[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+```
+
+#### Toast Enter/Exit
+
+```css
+.toast {
+  animation: toastEnter var(--duration-moderate) var(--ease-out) forwards;
+}
+
+.toast.is-exiting {
+  animation: toastExit var(--duration-normal) var(--ease-in) forwards;
+}
+
+@keyframes toastEnter {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes toastExit {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.95);
+  }
+}
+```
+
+### 7.8 Page Transitions
+
+For single-page applications or smooth navigation experiences.
+
+#### Page Enter
+
+```css
+.page-enter {
+  animation: pageEnter var(--duration-slow) var(--ease-out) forwards;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+```
+
+#### Page Exit
+
+```css
+.page-exit {
+  animation: pageExit var(--duration-moderate) var(--ease-in) forwards;
+}
+
+@keyframes pageExit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+```
+
+#### Staggered Content
+
+For lists and grids, stagger child animations:
+
+```css
+.stagger-children > * {
+  opacity: 0;
+  animation: fadeSlideUp var(--duration-moderate) var(--ease-out) forwards;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0ms; }
+.stagger-children > *:nth-child(2) { animation-delay: 50ms; }
+.stagger-children > *:nth-child(3) { animation-delay: 100ms; }
+.stagger-children > *:nth-child(4) { animation-delay: 150ms; }
+.stagger-children > *:nth-child(5) { animation-delay: 200ms; }
+.stagger-children > *:nth-child(6) { animation-delay: 250ms; }
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+```
+
+### 7.9 Accessibility & Reduced Motion
+
+#### Respecting User Preferences
+
+Users can indicate a preference for reduced motion via their operating system settings. Respect this preference using the `prefers-reduced-motion` media query.
+
+```css
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+```
+
+#### Alternative: Selective Reduction
+
+For more nuanced control, reduce rather than eliminate motion:
+
+```css
+@media (prefers-reduced-motion: reduce) {
+  /* Disable decorative animations */
+  .animate-pulse,
+  .animate-bounce,
+  .stagger-children > * {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  
+  /* Keep functional animations but make them instant */
+  .modal {
+    animation: none;
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* Reduce skeleton shimmer to static */
+  .skeleton {
+    animation: none;
+    background: var(--neutral-200);
+  }
+  
+  /* Keep spinner for loading indication */
+  .animate-spin {
+    animation: spin 1s linear infinite;
+  }
+}
+```
+
+#### Motion Safety Guidelines
+
+| Animation Type | Reduced Motion Behaviour |
+|----------------|--------------------------|
+| **Decorative** (pulse, shimmer) | Remove entirely |
+| **Feedback** (button press) | Keep, but reduce duration |
+| **Navigation** (page transitions) | Replace with instant cut |
+| **Loading** (spinner) | Keep—essential for feedback |
+| **Modal open/close** | Replace with instant appear/disappear |
+| **Hover effects** | Keep subtle colour changes, remove transforms |
+
+#### Seizure Safety
+
+Never use animations that flash more than 3 times per second. Avoid:
+
+- Rapidly flashing colours
+- Strobe effects
+- Rapid opacity oscillation
+
+```css
+/* NEVER do this */
+.dangerous-flash {
+  animation: flash 0.1s infinite; /* Dangerous: 10 flashes/second */
+}
+
+/* Safe alternative */
+.safe-pulse {
+  animation: pulse 2s ease-in-out infinite; /* Safe: < 1 flash/second */
+}
+```
+
+### 7.10 Performance Guidelines
+
+#### Use Transform and Opacity
+
+Animate only `transform` and `opacity` when possible—these properties are GPU-accelerated and don't trigger layout recalculations.
+
+```css
+/* ✅ Good: GPU-accelerated */
+.card:hover {
+  transform: translateY(-4px);
+  opacity: 0.9;
+}
+
+/* ❌ Avoid: Triggers layout */
+.card:hover {
+  margin-top: -4px;
+  height: 204px;
+}
+```
+
+#### Use will-change Sparingly
+
+`will-change` hints to the browser that an element will animate, but overuse consumes memory.
+
+```css
+/* Use only for elements that will definitely animate */
+.modal {
+  will-change: transform, opacity;
+}
+
+/* Remove after animation completes */
+.modal.is-open {
+  will-change: auto;
+}
+```
+
+#### Avoid Animating Layout Properties
+
+Properties that trigger layout recalculation are expensive:
+
+| Avoid Animating | Use Instead |
+|-----------------|-------------|
+| `width`, `height` | `transform: scale()` |
+| `top`, `left`, `right`, `bottom` | `transform: translate()` |
+| `margin`, `padding` | `transform: translate()` |
+| `border-width` | `box-shadow` or `outline` |
+
+#### Contain Paint
+
+For complex animated components, use `contain` to isolate repaints:
+
+```css
+.card {
+  contain: layout paint;
+}
+```
+
+### 7.11 Animation Utility Classes
+
+```css
+/* Duration utilities */
+.duration-fast { animation-duration: var(--duration-fast); transition-duration: var(--duration-fast); }
+.duration-normal { animation-duration: var(--duration-normal); transition-duration: var(--duration-normal); }
+.duration-moderate { animation-duration: var(--duration-moderate); transition-duration: var(--duration-moderate); }
+.duration-slow { animation-duration: var(--duration-slow); transition-duration: var(--duration-slow); }
+
+/* Easing utilities */
+.ease-default { animation-timing-function: var(--ease-default); transition-timing-function: var(--ease-default); }
+.ease-in { animation-timing-function: var(--ease-in); transition-timing-function: var(--ease-in); }
+.ease-out { animation-timing-function: var(--ease-out); transition-timing-function: var(--ease-out); }
+.ease-in-out { animation-timing-function: var(--ease-in-out); transition-timing-function: var(--ease-in-out); }
+
+/* Delay utilities */
+.delay-100 { animation-delay: 100ms; transition-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; transition-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; transition-delay: 300ms; }
+.delay-500 { animation-delay: 500ms; transition-delay: 500ms; }
+
+/* Animation utilities */
+.animate-fade-in { animation: fadeIn var(--duration-moderate) var(--ease-out) forwards; }
+.animate-fade-out { animation: fadeOut var(--duration-moderate) var(--ease-in) forwards; }
+.animate-slide-up { animation: slideUp var(--duration-moderate) var(--ease-out) forwards; }
+.animate-scale-in { animation: scaleIn var(--duration-moderate) var(--ease-out) forwards; }
+.animate-spin { animation: spin 1s linear infinite; }
+.animate-pulse { animation: pulse 2s var(--ease-in-out) infinite; }
+.animate-shimmer { animation: shimmer 1.5s infinite; }
+```
+---
 # 8. Pages
 
 ### Public
