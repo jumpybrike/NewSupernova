@@ -948,22 +948,1153 @@ Usage with Tailwind:
 <svg class="w-5 h-5 stroke-current stroke-[1.5]"><!-- 20px icon --></svg>
 <svg class="w-6 h-6 stroke-current stroke-[1.5]"><!-- 24px icon --></svg>
 ```
+---
+
+## 5. Components
+
+### 5.1 Buttons
+
+#### Button Hierarchy
+
+| Type | Background | Border | Text | Use Case |
+|------|------------|--------|------|----------|
+| **Primary** | Teal 600 | none | Surface 200 | Main CTA: Add to Cart, Checkout, Subscribe |
+| **Accent** | Amber 500 | none | Teal 900 | Featured actions: Join Now, Get Started (use sparingly) |
+| **Secondary** | transparent | 2px Teal 600 | Teal 600 | Secondary actions: Continue Shopping, Learn More |
+| **Ghost** | transparent | 1px Surface 400 | Neutral 600 | Tertiary actions: Cancel, Back, Skip |
+| **Danger** | Error bg | 1px Error border | Error text | Destructive: Remove, Delete, Cancel Membership |
+
+#### Button Sizes
+
+| Size | Height | Padding (x) | Font Size | Icon Size | Use Case |
+|------|--------|-------------|-----------|-----------|----------|
+| **Large** | 48px | 28px | 16px | 20px | Primary CTAs, mobile touch targets |
+| **Medium** | 40px | 24px | 16px | 20px | Default desktop buttons |
+| **Small** | 32px | 16px | 14px | 16px | Inline actions, table rows, tight spaces |
+
+#### Button States
+
+| State | Primary | Secondary | Ghost |
+|-------|---------|-----------|-------|
+| **Default** | Teal 600 bg | Teal 600 border | Surface 400 border |
+| **Hover** | Teal 700 bg | Teal 50 bg | Surface 100 bg |
+| **Active** | Teal 800 bg | Teal 100 bg | Surface 200 bg |
+| **Focus** | 2px Amber 500 outline, 2px offset | 2px Amber 500 outline | 2px Amber 500 outline |
+| **Disabled** | Neutral 300 bg, Neutral 500 text | Neutral 300 border, Neutral 400 text | Neutral 300 border, Neutral 400 text |
+| **Loading** | Teal 600 bg, spinner icon, "Loading…" | — | — |
+
+#### Button Anatomy
+
+```
+┌─────────────────────────────────────┐
+│  [icon]  Label Text  [trailing]     │
+│    ↑         ↑            ↑         │
+│  8px gap   center     8px gap       │
+└─────────────────────────────────────┘
+     └──────── 24px padding ────────┘
+```
+
+#### CSS Implementation
+
+```css
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--amber-500);
+  outline-offset: 2px;
+}
+
+/* Sizes */
+.btn-lg { height: 48px; padding: 0 28px; }
+.btn-md { height: 40px; padding: 0 24px; }
+.btn-sm { height: 32px; padding: 0 16px; font-size: 14px; }
+
+/* Primary */
+.btn-primary {
+  background-color: var(--teal-600);
+  border: none;
+  color: var(--surface-200);
+}
+.btn-primary:hover { background-color: var(--teal-700); }
+.btn-primary:active { background-color: var(--teal-800); }
+
+/* Accent */
+.btn-accent {
+  background-color: var(--amber-500);
+  border: none;
+  color: var(--teal-900);
+}
+.btn-accent:hover { background-color: var(--amber-400); }
+.btn-accent:active { background-color: var(--amber-600); }
+
+/* Secondary */
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--teal-600);
+  color: var(--teal-600);
+}
+.btn-secondary:hover { background-color: var(--teal-50); }
+.btn-secondary:active { background-color: var(--teal-100); }
+
+/* Ghost */
+.btn-ghost {
+  background-color: transparent;
+  border: 1px solid var(--surface-400);
+  color: var(--neutral-600);
+}
+.btn-ghost:hover { background-color: var(--surface-100); }
+.btn-ghost:active { background-color: var(--surface-200); }
+
+/* Disabled (all variants) */
+.btn:disabled {
+  background-color: var(--neutral-300);
+  border-color: var(--neutral-300);
+  color: var(--neutral-500);
+  cursor: not-allowed;
+}
+
+/* Loading state */
+.btn-loading {
+  pointer-events: none;
+}
+.btn-loading .btn-spinner {
+  animation: spin 1s linear infinite;
+}
+```
+
+#### Button on Dark Backgrounds
+
+| Type | Background | Border | Text |
+|------|------------|--------|------|
+| **Primary** | Amber 500 | none | Teal 900 |
+| **Secondary** | transparent | 2px Teal 400 | Surface 200 |
+| **Ghost** | transparent | 1px Teal 600 | Teal 200 |
+
+---
+
+### 5.2 Form Inputs
+
+#### Input Sizes
+
+| Size | Height | Font Size | Use Case |
+|------|--------|-----------|----------|
+| **Large** | 48px | 16px | Mobile forms, prominent inputs |
+| **Medium** | 40px | 16px | Default desktop inputs |
+| **Small** | 32px | 14px | Compact forms, filters |
+
+#### Input States
+
+| State | Border | Background | Label | Helper/Error |
+|-------|--------|------------|-------|--------------|
+| **Default** | Neutral 200 | Surface 50 | Neutral 600 | Neutral 500 |
+| **Hover** | Neutral 300 | Surface 50 | Neutral 600 | — |
+| **Focus** | 2px Teal 600 | Surface 0 | Teal 600 | — |
+| **Filled** | Neutral 200 | Surface 50 | Neutral 600 | — |
+| **Valid** | Success border | Success bg (subtle) | Neutral 600 | Success text |
+| **Invalid** | Error border | Error bg (subtle) | Error text | Error text |
+| **Disabled** | Neutral 200 | Neutral 100 | Neutral 400 | Neutral 400 |
+
+#### Input Anatomy
+
+```
+Label *                          ← Outfit 500, 14px, Neutral 700
+┌─────────────────────────────┐
+│ Placeholder text            │  ← Source Serif 4, 16px, Neutral 400
+└─────────────────────────────┘
+Helper text or error message     ← Space Grotesk, 12px, Neutral 500 / Error text
+```
+
+#### Field Types
+
+**Text Input**
+```html
+<div class="form-field">
+  <label for="email">Email Address <span class="required">*</span></label>
+  <input type="email" id="email" placeholder="you@example.com" />
+  <span class="helper">We'll never share your email</span>
+</div>
+```
+
+**Textarea**
+```html
+<div class="form-field">
+  <label for="message">Message</label>
+  <textarea id="message" rows="4" placeholder="Your message..."></textarea>
+  <span class="helper">Maximum 500 characters</span>
+</div>
+```
+
+**Select**
+```html
+<div class="form-field">
+  <label for="era">Era</label>
+  <div class="select-wrapper">
+    <select id="era">
+      <option value="">Select an era...</option>
+      <option value="1920s">1920s – Early Pulps</option>
+      <option value="1930s">1930s – Golden Age Begins</option>
+    </select>
+    <ChevronDown class="select-icon" />
+  </div>
+</div>
+```
+
+**Checkbox**
+```html
+<label class="checkbox">
+  <input type="checkbox" />
+  <span class="checkbox-box"></span>
+  <span class="checkbox-label">Subscribe to newsletter</span>
+</label>
+```
+
+**Radio Group**
+```html
+<fieldset class="radio-group">
+  <legend>Preferred format</legend>
+  <label class="radio">
+    <input type="radio" name="format" value="epub" />
+    <span class="radio-dot"></span>
+    <span class="radio-label">ePub</span>
+  </label>
+  <label class="radio">
+    <input type="radio" name="format" value="pdf" />
+    <span class="radio-dot"></span>
+    <span class="radio-label">PDF</span>
+  </label>
+</fieldset>
+```
+
+#### Validation Pattern
+
+**Inline validation:** Validate on blur (when user leaves field). Show error immediately.
+
+```html
+<div class="form-field is-invalid">
+  <label for="email">Email Address <span class="required">*</span></label>
+  <input 
+    type="email" 
+    id="email" 
+    value="invalid-email"
+    aria-invalid="true"
+    aria-describedby="email-error"
+  />
+  <span id="email-error" class="error" role="alert">
+    <AlertCircle size={14} />
+    Please enter a valid email address
+  </span>
+</div>
+```
+
+#### CSS Implementation
+
+```css
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field label {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--neutral-700);
+}
+
+.form-field .required {
+  color: var(--error-text);
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+  font-family: var(--font-body);
+  font-size: 16px;
+  height: 40px;
+  padding: 0 12px;
+  background-color: var(--surface-50);
+  border: 1px solid var(--neutral-200);
+  border-radius: 6px;
+  color: var(--neutral-900);
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.form-field textarea {
+  height: auto;
+  padding: 12px;
+  resize: vertical;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--neutral-400);
+}
+
+.form-field input:hover,
+.form-field textarea:hover {
+  border-color: var(--neutral-300);
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border: 2px solid var(--teal-600);
+  background-color: var(--surface-0);
+}
+
+.form-field .helper {
+  font-family: var(--font-ui);
+  font-size: 12px;
+  color: var(--neutral-500);
+}
+
+/* Invalid state */
+.form-field.is-invalid input {
+  border-color: var(--error-border);
+  background-color: var(--error-bg);
+}
+
+.form-field .error {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-ui);
+  font-size: 12px;
+  color: var(--error-text);
+}
+
+/* Disabled state */
+.form-field input:disabled {
+  background-color: var(--neutral-100);
+  color: var(--neutral-400);
+  cursor: not-allowed;
+}
+```
+
+---
+
+### 5.3 Cards
+
+#### Product Card (Standard)
+
+```
+┌─────────────────────────┐
+│                         │
+│      [Cover Image]      │  ← 3:4 aspect ratio
+│                         │
+├─────────────────────────┤
+│ [Tag]                   │  ← Optional: "Essential", "New"
+│ Title of the Book       │  ← Outfit 600, Neutral 900, 2 lines max
+│ Author Name             │  ← Source Serif 4, Neutral 600
+│ £2.99                   │  ← Outfit 600, Teal 600
+│ [Add to Cart]           │  ← Button small, secondary
+└─────────────────────────┘
+```
+
+| Element | Font | Size | Colour |
+|---------|------|------|--------|
+| Tag | Space Grotesk 600 | 11px uppercase | Teal 700 on Teal 50 |
+| Title | Outfit 600 | 16px | Neutral 900 |
+| Author | Source Serif 4 400 | 14px | Neutral 600 |
+| Price | Outfit 600 | 16px | Teal 600 |
+
+**Specifications:**
+- Background: Surface 50
+- Border: 1px Surface 400
+- Border radius: 8px
+- Padding: 16px (below image)
+- Image: 100% width, 3:4 aspect ratio, 8px radius (top corners)
+- Gap between elements: 8px
+
+**Hover state (desktop):**
+- Border: Teal 600
+- Cover: scale(1.02) with overflow hidden
+- Box shadow: 0 4px 12px rgba(26, 74, 74, 0.1)
+- Transition: 0.2s ease
+
+#### Product Card (Compact)
+
+For related products, "you may also like" sections.
+
+```
+┌─────────────────────────┐
+│      [Cover Image]      │  ← 2:3 aspect ratio, smaller
+├─────────────────────────┤
+│ Title                   │  ← 14px, 1 line, truncate
+│ £2.99                   │  ← 14px
+└─────────────────────────┘
+```
+
+**Specifications:**
+- No CTA button
+- No author
+- Padding: 12px
+
+#### Product Card (List / Horizontal)
+
+For mobile list views, search results.
+
+```
+┌──────────────────────────────────────────┐
+│ ┌─────────┐  Title of the Book          │
+│ │ [Cover] │  Author Name                │
+│ │         │  £2.99     [Add to Cart]    │
+│ └─────────┘                              │
+└──────────────────────────────────────────┘
+```
+
+**Specifications:**
+- Cover: 80px × 120px fixed
+- Gap: 16px between cover and content
+- Padding: 16px
+
+#### Article Card
+
+```
+┌─────────────────────────┐
+│                         │
+│    [Featured Image]     │  ← 16:9 aspect ratio
+│                         │
+├─────────────────────────┤
+│ [Category]              │  ← Tag style
+│ Article Title Goes      │  ← Outfit 600, 18px
+│ Here on Two Lines       │
+│ Brief excerpt text...   │  ← Source Serif 4, 14px, 2 lines
+│ 5 min read              │  ← Space Grotesk, 12px, Neutral 500
+└─────────────────────────┘
+```
+
+#### Author Card
+
+```
+┌─────────────────────────┐
+│    ┌─────────────┐      │
+│    │   [Photo]   │      │  ← 96px circle
+│    └─────────────┘      │
+│      Author Name        │  ← Outfit 600, centre
+│      (1920–1992)        │  ← Source Serif 4 italic
+│      12 works           │  ← Space Grotesk, Neutral 500
+└─────────────────────────┘
+```
+
+#### CSS Implementation
+
+```css
+.card {
+  background-color: var(--surface-50);
+  border: 1px solid var(--surface-400);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  border-color: var(--teal-600);
+  box-shadow: 0 4px 12px rgba(26, 74, 74, 0.1);
+}
+
+.card-image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.card:hover .card-image {
+  transform: scale(1.02);
+}
+
+.card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-title {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--neutral-900);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-author {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--neutral-600);
+}
+
+.card-price {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--teal-600);
+}
+```
+
+---
+
+### 5.4 Navigation
+
+#### Header (Desktop)
+
+```
+┌────────────────────────────────────────────────────────────────────┐
+│  [Logo]     Discover  Library  Articles  Membership  About    🔍 👤 🛒 │
+└────────────────────────────────────────────────────────────────────┘
+```
+
+| Element | Font | Size | Colour |
+|---------|------|------|--------|
+| Logo | Outfit 700 | 24px | Surface 200 |
+| Nav links | Outfit 500 | 15px | Teal 200, hover Surface 200 |
+| Active link | Outfit 600 | 15px | Surface 200, underline Amber 500 |
+
+**Specifications:**
+- Background: Teal 900
+- Height: 64px
+- Sticky on scroll
+- Container: 1200px max, centred
+- Padding: 0 48px
+
+#### Header (Mobile)
+
+```
+┌────────────────────────────────┐
+│  [☰]    [Logo]           🔍 🛒 │
+└────────────────────────────────┘
+```
+
+**Specifications:**
+- Height: 56px
+- Hamburger opens full-screen overlay
+- Logo centred
+
+#### Mobile Navigation Overlay
+
+```
+┌────────────────────────────────┐
+│  [✕]                           │
+├────────────────────────────────┤
+│  🔍 Search                     │
+├────────────────────────────────┤
+│  Discover                   ▸  │
+│  Library                    ▸  │
+│  Articles                   ▸  │
+│  Membership                 ▸  │
+│  About                      ▸  │
+├────────────────────────────────┤
+│  [Login]    [Join Now]         │
+└────────────────────────────────┘
+```
+
+**Specifications:**
+- Background: Teal 900
+- Full viewport height
+- Slide in from left (300ms ease)
+- Backdrop: rgba(15, 51, 51, 0.8)
+- Touch target: 48px height per item
+
+#### Mega Menu (Desktop)
+
+Triggered on hover for Discover and Library.
+
+```
+┌────────────────────────────────────────────────────────────────────┐
+│  Browse By          Featured            Quick Links               │
+│  ─────────          ────────            ───────────               │
+│  Era                [img] Foundation    Popular This Week         │
+│  Theme                    Reading Guide New Arrivals              │
+│  Author             [img] Golden Age    Staff Picks               │
+│  Format                   Collection                              │
+└────────────────────────────────────────────────────────────────────┘
+```
+
+**Specifications:**
+- Background: Surface 50
+- Border-top: 2px Amber 500
+- Box shadow: 0 8px 24px rgba(26, 74, 74, 0.15)
+- 3 columns, 24px gap
+- Appears on hover with 200ms delay
+- Max height: 400px
+
+#### Breadcrumbs
+
+```
+Home  /  Library  /  Ebooks  /  Foundation
+```
+
+| Element | Font | Colour |
+|---------|------|--------|
+| Links | Outfit 400, 14px | Teal 600 |
+| Separator | — | Neutral 400 |
+| Current | Outfit 500, 14px | Neutral 900 |
+
+#### Pagination
+
+```
+[←]  1  2  [3]  4  5  ...  12  [→]
+```
+
+| Element | Style |
+|---------|-------|
+| Current page | Teal 600 bg, Surface 200 text |
+| Other pages | Transparent bg, Teal 600 text |
+| Arrows | Icon button style |
+| Disabled arrow | Neutral 400 |
+
+---
+
+### 5.5 Modals & Dialogs
+
+#### Modal Anatomy
+
+```
+┌───────────────────────────────────────────┐
+│  Modal Title                        [✕]   │  ← Header
+├───────────────────────────────────────────┤
+│                                           │
+│  Modal content goes here. This can        │  ← Body
+│  include text, forms, or other            │
+│  components.                              │
+│                                           │
+├───────────────────────────────────────────┤
+│              [Cancel]    [Confirm]        │  ← Footer
+└───────────────────────────────────────────┘
+```
+
+**Specifications:**
+- Max width: 480px (small), 640px (medium), 800px (large)
+- Background: Surface 50
+- Border radius: 12px
+- Padding: 24px
+- Header: Outfit 600, 20px
+- Backdrop: rgba(15, 51, 51, 0.6)
+
+**Behaviour:**
+- Escape key closes modal
+- Click outside closes modal (unless `persistent`)
+- Focus trapped within modal
+- First focusable element receives focus on open
+- Return focus to trigger element on close
+
+#### Confirmation Dialog
+
+```
+┌───────────────────────────────────────────┐
+│  Remove from Cart                   [✕]   │
+├───────────────────────────────────────────┤
+│                                           │
+│  Are you sure you want to remove          │
+│  "Foundation" from your cart?             │
+│                                           │
+├───────────────────────────────────────────┤
+│              [Cancel]    [Remove Item]    │
+└───────────────────────────────────────────┘
+```
+
+**Button placement:** Cancel (ghost) left, Confirm (primary/danger) right.
+
+#### Mobile Modal
+
+On mobile (<768px), modals become bottom sheets:
+
+```
+┌────────────────────────────────┐
+│████████████████████████████████│  ← Backdrop
+│████████████████████████████████│
+│████████████████████████████████│
+├────────────────────────────────┤
+│  ─────  (drag handle)          │  ← Rounded top corners
+│  Modal Title             [✕]   │
+│                                │
+│  Content...                    │
+│                                │
+│  [Cancel]    [Confirm]         │
+└────────────────────────────────┘
+```
+
+**Specifications:**
+- Slides up from bottom (300ms ease-out)
+- Drag handle: 40px × 4px, Neutral 300, centred
+- Border radius: 16px 16px 0 0
+- Max height: 90vh
+- Swipe down to dismiss
+
+#### CSS Implementation
+
+```css
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 51, 51, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
+.modal {
+  background-color: var(--surface-50);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: scaleIn 0.2s ease;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--surface-300);
+}
+
+.modal-title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--neutral-900);
+}
+
+.modal-body {
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 24px;
+  border-top: 1px solid var(--surface-300);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Mobile bottom sheet */
+@media (max-width: 767px) {
+  .modal-backdrop {
+    align-items: flex-end;
+  }
+  
+  .modal {
+    border-radius: 16px 16px 0 0;
+    max-width: 100%;
+    animation: slideUp 0.3s ease-out;
+  }
+  
+  @keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+}
+```
+
+---
+
+### 5.6 Loading States
+
+#### Skeleton Screens
+
+Use skeleton placeholders that mirror content layout. Preferred over spinners for page/section loads.
+
+**Product Card Skeleton:**
+```
+┌─────────────────────────┐
+│  ░░░░░░░░░░░░░░░░░░░░   │  ← Animated pulse
+│  ░░░░░░░░░░░░░░░░░░░░   │
+│  ░░░░░░░░░░░░░░░░░░░░   │
+├─────────────────────────┤
+│  ░░░░░░░░░░░            │
+│  ░░░░░░                 │
+│  ░░░░                   │
+└─────────────────────────┘
+```
+
+**Specifications:**
+- Background: Neutral 200
+- Animation: pulse (opacity 0.6 → 1, 1.5s infinite)
+- Border radius: 4px (text), 8px (images)
+
+#### Button Loading
+
+```
+[●○○ Adding...]     ← Spinner + text change
+```
+
+**Specifications:**
+- Disable pointer events
+- Replace icon with spinner (Loader2, animated)
+- Text changes: "Add to Cart" → "Adding…"
+- Maintain button width (prevent layout shift)
+
+#### Page Loading
+
+For route transitions, show thin progress bar at top of viewport.
+
+**Specifications:**
+- Height: 3px
+- Colour: Amber 500
+- Position: fixed, top 0
+- Animation: width 0% → 90% (indeterminate), then 100% on complete
+
+#### Image Loading
+
+```
+┌─────────────────────────┐
+│                         │
+│   [Blurred preview]     │  ← Low-res placeholder or dominant colour
+│                         │
+└─────────────────────────┘
+         ↓
+┌─────────────────────────┐
+│                         │
+│   [Sharp full image]    │  ← Fade in on load
+│                         │
+└─────────────────────────┘
+```
+
+**Specifications:**
+- Placeholder: 20px blurred thumbnail or extracted dominant colour
+- Transition: opacity 0 → 1 over 0.3s
+
+#### CSS Implementation
+
+```css
+/* Skeleton base */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--neutral-200) 25%,
+    var(--neutral-100) 50%,
+    var(--neutral-200) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.skeleton-text {
+  height: 16px;
+  margin-bottom: 8px;
+}
+
+.skeleton-text.short { width: 60%; }
+.skeleton-text.medium { width: 80%; }
+
+.skeleton-image {
+  aspect-ratio: 3 / 4;
+  border-radius: 8px;
+}
+
+/* Progress bar */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background-color: var(--amber-500);
+  z-index: 9999;
+  transition: width 0.2s;
+}
+
+/* Button spinner */
+.btn-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+```
+
+---
+
+### 5.7 Badges & Tags
+
+#### Tag Variants
+
+| Variant | Background | Text | Border | Use Case |
+|---------|------------|------|--------|----------|
+| **Default** | Teal 50 | Teal 700 | none | Categories, genres, eras |
+| **Amber** | Amber 100 | Amber 800 | none | Featured, highlights, "New" |
+| **Neutral** | Neutral 100 | Neutral 700 | none | Counts, metadata |
+| **Outline** | transparent | Teal 600 | 1px Teal 300 | Filter chips (removable) |
+| **Success** | Success bg | Success text | none | "Available", "In Stock" |
+| **Warning** | Warning bg | Warning text | none | "Limited", "Ending Soon" |
+| **Error** | Error bg | Error text | none | "Sold Out", "Unavailable" |
+
+#### Tag Sizes
+
+| Size | Height | Padding | Font Size |
+|------|--------|---------|-----------|
+| **Small** | 20px | 6px 8px | 10px |
+| **Medium** | 24px | 6px 10px | 11px |
+| **Large** | 28px | 8px 12px | 12px |
+
+#### Tag Anatomy
+
+```
+┌───────────────┐
+│ TAG LABEL     │  ← Space Grotesk 600, uppercase, letter-spacing 0.5px
+└───────────────┘
+```
+
+#### Badge (Count)
+
+For notification counts, cart items.
+
+```
+[🛒]
+ ⁽³⁾   ← Badge overlapping icon
+```
+
+**Specifications:**
+- Min width: 18px
+- Height: 18px
+- Border radius: 9px (pill)
+- Background: Amber 500
+- Text: Teal 900, 11px, Outfit 600
+- Position: absolute, top -6px, right -6px
+
+#### CSS Implementation
+
+```css
+.tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+}
+
+/* Sizes */
+.tag-sm { height: 20px; padding: 0 8px; font-size: 10px; }
+.tag-md { height: 24px; padding: 0 10px; font-size: 11px; }
+.tag-lg { height: 28px; padding: 0 12px; font-size: 12px; }
+
+/* Variants */
+.tag-default { background: var(--teal-50); color: var(--teal-700); }
+.tag-amber { background: var(--amber-100); color: var(--amber-800); }
+.tag-neutral { background: var(--neutral-100); color: var(--neutral-700); }
+.tag-outline { 
+  background: transparent; 
+  color: var(--teal-600); 
+  border: 1px solid var(--teal-300);
+}
+.tag-success { background: var(--success-bg); color: var(--success-text); }
+.tag-warning { background: var(--warning-bg); color: var(--warning-text); }
+.tag-error { background: var(--error-bg); color: var(--error-text); }
+
+/* Removable tag */
+.tag-removable {
+  padding-right: 6px;
+}
+.tag-remove {
+  margin-left: 4px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.tag-remove:hover {
+  opacity: 1;
+}
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 600;
+  background-color: var(--amber-500);
+  color: var(--teal-900);
+  border-radius: 9px;
+}
+
+/* Badge on icon */
+.icon-with-badge {
+  position: relative;
+}
+.icon-with-badge .badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+}
+```
+
+---
+
+### 5.8 Tooltips
+
+#### Tooltip Anatomy
+
+```
+                    ┌─────────────────────────────┐
+                    │ ePub is a digital book      │
+         ▲          │ format compatible with most │
+         │          │ e-readers.                  │
+        [?]         └─────────────────────────────┘
+                              ▼
+```
+
+**Specifications:**
+- Background: Teal 900
+- Text: Surface 200, Source Serif 4, 14px
+- Padding: 8px 12px
+- Border radius: 6px
+- Max width: 240px
+- Arrow: 8px
+
+#### Trigger Behaviour
+
+| Trigger | Show | Hide |
+|---------|------|------|
+| Hover (desktop) | 200ms delay | Immediate on mouse leave |
+| Focus (keyboard) | Immediate | On blur |
+| Touch (mobile) | On tap | Tap elsewhere |
+
+#### Positions
+
+| Position | Arrow | Use When |
+|----------|-------|----------|
+| Top | Bottom centre | Default, most common |
+| Bottom | Top centre | When near top of viewport |
+| Left | Right centre | When near right edge |
+| Right | Left centre | When near left edge |
+
+Auto-position to stay within viewport.
+
+#### CSS Implementation
+
+```css
+.tooltip-trigger {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 1000;
+  padding: 8px 12px;
+  background-color: var(--teal-900);
+  color: var(--surface-200);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.4;
+  border-radius: 6px;
+  max-width: 240px;
+  white-space: normal;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.tooltip-trigger:hover .tooltip,
+.tooltip-trigger:focus .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Positions */
+.tooltip-top {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 8px;
+}
+
+.tooltip-bottom {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px;
+}
+
+/* Arrow */
+.tooltip::after {
+  content: '';
+  position: absolute;
+  border: 6px solid transparent;
+}
+
+.tooltip-top::after {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top-color: var(--teal-900);
+}
+
+.tooltip-bottom::after {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom-color: var(--teal-900);
+}
+```
+
+#### Accessibility
+
+```html
+<!-- Tooltip with accessible description -->
+<button aria-describedby="tooltip-1">
+  <HelpCircle size={16} />
+</button>
+<div id="tooltip-1" role="tooltip" class="tooltip tooltip-top">
+  ePub is a digital book format compatible with most e-readers.
+</div>
+```
+
+**Requirements:**
+- Use `role="tooltip"` on tooltip element
+- Use `aria-describedby` to link trigger to tooltip
+- Ensure tooltip is focusable via keyboard
+- Dismiss on Escape key
 
 ---
 
 Ready for the next section.
----
-
-### ⚠️ MISSING: 5. Components
-**⚠️ MISSING: 5.1 Buttons**
-**⚠️ MISSING: 5.2 Form Inputs**
-**⚠️ MISSING: 5.3 Cards**
-**⚠️ MISSING: 5.4 Navigation**
-**⚠️ MISSING: 5.5 Modals & Dialogs**
-**⚠️ MISSING: 5.6 Loading States**
-**⚠️ MISSING: 5.7 Badges & Tags**
-**⚠️ MISSING: 5.8 Tooltips**
-
 ---
 
 ### ⚠️ MISSING: 6. Interactive States
