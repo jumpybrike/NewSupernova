@@ -3619,37 +3619,1686 @@ For complex animated components, use `contain` to isolate repaints:
 .animate-shimmer { animation: shimmer 1.5s infinite; }
 ```
 ---
-# 8. Pages
+# 8. Pages 
 
-### Public
-`/` `/about` `/contact` `/blog` `/blog/[slug]` `/help` `/faq` `/newsletter` `/start-here` `/press` `/status` `/how-it-works`
+## 3. Pages (Detail)
 
-### Content Discovery
-`/authors` `/author/[slug]` `/eras` `/eras/[slug]` `/themes` `/themes/[slug]` `/category/[slug]` `/tag/[slug]` `/collections` `/new-arrivals` `/popular`
+This section provides design specifications for all pages. Pages are organised by template type, with key commercial pages receiving full specifications and supporting pages documented with template references and page-specific notes.
 
-### Free Content
-`/free` `/free/ebooks` `/free/audiobooks` `/radio-dramas` `/radio-dramas/[show-slug]` `/radio-dramas/[show-slug]/[episode-slug]`
+### 3.0 Page Templates
 
-### Reading Guides & Lists
-`/reading-guides` `/reading-guides/[slug]` `/reading-lists` `/reading-lists/[slug]`
+Before detailing individual pages, these reusable templates define common structural patterns.
 
-### Commerce
-`/browse` `/browse/[genre]` `/product/[slug]` `/search` `/cart` `/checkout` `/checkout/confirmation` `/gift-cards` `/formats`
+---
 
-### Membership
-`/membership` `/membership/compare` `/membership/gift`
+#### Template A: Landing Page
 
-### Account
-`/account` `/account/library` `/account/wishlist` `/account/reading-history` `/account/lists` `/account/lists/[id]` `/account/orders` `/account/orders/[id]` `/account/downloads` `/account/credits` `/account/membership` `/account/settings`
+Used for: Homepage, Membership, About, Start Here, How It Works
 
-### Auth
-`/login` `/register` `/forgot-password`
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                         [Header]                                │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│                     [Hero Section]                              │
+│              Full-width, gradient or image bg                   │
+│                  Headline + Tagline + CTAs                      │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│                  [Value Propositions]                           │
+│              3-column cards with icons                          │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│                  [Featured Content]                             │
+│              Grid of cards (products/articles)                  │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│                    [CTA Section]                                │
+│              Contrasting bg, conversion focus                   │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                  [Email Capture]                                │
+├─────────────────────────────────────────────────────────────────┤
+│                         [Footer]                                │
+└─────────────────────────────────────────────────────────────────┘
+```
 
-### Legal
-`/privacy` `/terms` `/refunds` `/accessibility` `/cookies` `/copyright` `/licensing`
+---
 
-### Error
-`/404` `/500`
+#### Template B: Index/Listing Page
+
+Used for: Browse, Authors, Eras, Themes, Collections, Blog Index, Reading Guides Index
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                         [Header]                                │
+├─────────────────────────────────────────────────────────────────┤
+│  [Breadcrumbs]                                                  │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  Page Title                                          [Sort ▼]   │
+│  Description text (2-3 sentences)                               │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│           │                                                     │
+│ [Filters] │  [Card] [Card] [Card] [Card]                       │
+│           │  [Card] [Card] [Card] [Card]                       │
+│  Genre    │  [Card] [Card] [Card] [Card]                       │
+│  Era      │                                                     │
+│  Format   │  [Pagination: ← 1 2 3 ... 10 →]                    │
+│  Price    │                                                     │
+│           │                                                     │
+├─────────────────────────────────────────────────────────────────┤
+│                         [Footer]                                │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Desktop:** Sidebar filters (240px) + content grid (3-4 columns)
+**Mobile:** Filters collapse to modal triggered by "Filters" button
+
+---
+
+#### Template C: Detail Page
+
+Used for: Product, Article, Author Profile, Reading Guide, Era, Theme
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                         [Header]                                │
+├─────────────────────────────────────────────────────────────────┤
+│  [Breadcrumbs]                                                  │
+├─────────────────────────────────────────────────────────────────┤
+│                    │                                            │
+│   [Primary        │   Title (H1)                               │
+│    Visual]        │   Metadata row                              │
+│                   │   Key info / Price                          │
+│   Cover image     │   [Primary CTA]                            │
+│   or hero         │                                             │
+│                    │                                            │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│                    [Content Body]                               │
+│              Description, tabs, or article text                 │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│                   [Related Items]                               │
+│              Cards row or grid                                  │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                         [Footer]                                │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Desktop:** 2-column header (visual left, info right), single-column body
+**Mobile:** Stacked single column, sticky CTA bar at bottom
+
+---
+
+#### Template D: Form Page
+
+Used for: Login, Register, Forgot Password, Contact, Checkout, Newsletter
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                         [Header]                                │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│                    ┌─────────────────┐                         │
+│                    │                 │                         │
+│                    │  Form Title     │                         │
+│                    │                 │                         │
+│                    │  [Form Fields]  │                         │
+│                    │                 │                         │
+│                    │  [Submit CTA]   │                         │
+│                    │                 │                         │
+│                    │  Helper links   │                         │
+│                    │                 │                         │
+│                    └─────────────────┘                         │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                         [Footer]                                │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Container:** `.container-narrow` (540px max)
+**Background:** Surface 200 with card (Surface 50) for form
+
+---
+
+#### Template E: Dashboard Page
+
+Used for: Account, Library, Orders, Settings, Membership Management
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                         [Header]                                │
+├─────────────────────────────────────────────────────────────────┤
+│           │                                                     │
+│ [Account  │  Page Title                                        │
+│  Sidebar] │                                                     │
+│           │  [Content Area]                                    │
+│  Library  │                                                     │
+│  Wishlist │  Tables, lists, cards, or settings forms           │
+│  Orders   │                                                     │
+│  Settings │                                                     │
+│           │                                                     │
+├─────────────────────────────────────────────────────────────────┤
+│                         [Footer]                                │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Desktop:** Sidebar (240px) + content area
+**Mobile:** Sidebar becomes horizontal tabs or dropdown menu
+
+---
+
+#### Template F: Content Page
+
+Used for: Legal pages, FAQ, Help, Press, Status
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                         [Header]                                │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│                    Page Title (H1)                              │
+│                    Last updated: [date]                         │
+│                                                                 │
+│              ┌─────────────────────────────┐                   │
+│              │                             │                   │
+│              │     [Long-form content]     │                   │
+│              │     .container-content      │                   │
+│              │     700px max width         │                   │
+│              │                             │                   │
+│              └─────────────────────────────┘                   │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                         [Footer]                                │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+### 3.1 Public Pages
+
+#### 3.1.1 Homepage `/`
+
+**Template:** Landing Page (A)
+
+**Purpose:** Primary entry point demonstrating value, guiding users to content/products, capturing emails.
+
+**Layout Structure:**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  [Header - Teal 900 bg]                                        │
+│  Logo    Discover  Library  Articles  Membership  About  🔍👤🛒 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│              [Hero Section - Full bleed]                        │
+│              Background: Teal 900 → Teal 600 gradient           │
+│              or vintage pulp art at 20% opacity                 │
+│                                                                 │
+│              "Where Golden Age                                  │
+│               Science Fiction Lives"                            │
+│              text-6xl, Outfit 800, Surface 200                  │
+│                                                                 │
+│              "Past Futures, Present Discoveries"                │
+│              text-lg, Source Serif italic, Teal 200            │
+│                                                                 │
+│              [Explore Collection]  [View Membership]           │
+│              Primary (Amber)       Secondary (outline)          │
+│                                                                 │
+│              Padding: 80px 0                                    │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│              [Value Propositions - Surface 200 bg]             │
+│              3-column grid, 24px gap                            │
+│                                                                 │
+│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐              │
+│  │ [icon]      │ │ [icon]      │ │ [icon]      │              │
+│  │ Expert      │ │ Professional│ │ Guided      │              │
+│  │ Curation    │ │ Quality     │ │ Discovery   │              │
+│  │ 2-3 lines   │ │ 2-3 lines   │ │ 2-3 lines   │              │
+│  └─────────────┘ └─────────────┘ └─────────────┘              │
+│                                                                 │
+│              Padding: 64px 0                                    │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│              [Featured This Week]                               │
+│              Section label + H2                                 │
+│                                                                 │
+│  [Product]  [Product]  [Article]  [Collection]                 │
+│  [Card]     [Card]     [Card]     [Card]                       │
+│                                                                 │
+│              4-column grid (3 on tablet, 1-2 on mobile)        │
+│              Padding: 48px 0                                    │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│              [Recent Articles]                                  │
+│              Section label + H2 + "View All →" link            │
+│                                                                 │
+│  [Article]  [Article]  [Article]                               │
+│  [Card]     [Card]     [Card]                                  │
+│                                                                 │
+│              3-column grid                                      │
+│              Padding: 48px 0                                    │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│              [Membership CTA - Teal 800 bg]                    │
+│              Full bleed dark section                            │
+│                                                                 │
+│              "Join the Community"                               │
+│              text-4xl, Outfit 700, Surface 200                  │
+│                                                                 │
+│              Value proposition paragraph                        │
+│              Teal 200                                           │
+│                                                                 │
+│  ┌─────────┐ ┌─────────────┐ ┌─────────┐                      │
+│  │Explorer │ │ Enthusiast  │ │Collector│                      │
+│  │ £4.99   │ │   £8.99     │ │ £14.99  │                      │
+│  │         │ │  ★ Popular  │ │         │                      │
+│  │ [Join]  │ │   [Join]    │ │ [Join]  │                      │
+│  └─────────┘ └─────────────┘ └─────────┘                      │
+│                                                                 │
+│              Padding: 80px 0                                    │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│              [Email Capture - Surface 300 bg]                  │
+│                                                                 │
+│              "Start Your Journey Free"                          │
+│              "Curated recommendations, new articles,           │
+│               and exclusive offers"                             │
+│                                                                 │
+│              [email@example.com        ] [Subscribe]           │
+│                                                                 │
+│              "Join 2,500+ readers. Unsubscribe anytime."       │
+│              text-sm, Neutral 500                               │
+│                                                                 │
+│              Padding: 48px 0                                    │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│  [Footer - Teal 900 bg]                                        │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Component Usage:**
+
+- Header (dark variant)
+- Hero with gradient background
+- Value proposition cards (icon + heading + text)
+- Product cards (standard)
+- Article cards
+- Membership tier cards
+- Email capture form
+- Footer (dark)
+
+**Responsive Behaviour:**
+
+- Hero: text-6xl → text-4xl on mobile, stack CTAs vertically
+- Value props: 3-col → 1-col stack on mobile
+- Featured grid: 4-col → 2-col (tablet) → 1-col (mobile)
+- Membership cards: 3-col → vertical stack on mobile
+
+**Key Metrics:**
+
+- Bounce rate: <50%
+- Email capture: 3-5%
+- Primary CTA click-through: 8-12%
+
+---
+
+#### 3.1.2 About `/about`
+
+**Template:** Landing Page (A) with content focus
+
+**Sections:**
+
+1. Hero: Mission statement headline + founder photo
+2. Story: Long-form content block (700px) telling founder story
+3. Values: 3-column value cards
+4. Team: Founder bio card (if solo) or team grid
+5. CTA: "Join the community" or newsletter capture
+
+**Unique Elements:**
+
+- Founder photo: 200px circle, border Amber 500
+- Pull quote block with Outfit 500
+- Timeline of milestones (optional)
+
+---
+
+#### 3.1.3 Contact `/contact`
+
+**Template:** Form Page (D)
+
+**Form Fields:**
+
+- Name (required)
+- Email (required)
+- Subject (dropdown: General, Support, Press, Partnership)
+- Message (textarea, required)
+- Submit button
+
+**Additional Content:**
+
+- Response time expectation: "We typically respond within 24 hours"
+- Direct email display: support@sfsupernova.com
+- FAQ link: "Check our FAQ for quick answers"
+
+---
+
+#### 3.1.4 Blog Index `/blog`
+
+**Template:** Index/Listing Page (B)
+
+**Filter Options:**
+
+- Category (Reviews, Guides, Author Profiles, History)
+- None (simpler than product browse)
+
+**Sort Options:**
+
+- Newest (default)
+- Popular
+- A-Z
+
+**Card Type:** Article card (16:9 image, title, excerpt, reading time)
+
+**Pagination:** 12 articles per page
+
+---
+
+#### 3.1.5 Blog Post `/blog/[slug]`
+
+**Template:** Detail Page (C) - Article variant
+
+**Layout:**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  [Header]                                                       │
+├─────────────────────────────────────────────────────────────────┤
+│  Home / Blog / [Category] / Article Title                       │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│              [Featured Image - 16:9]                            │
+│              Full width within container                        │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│              [Category Tag]                                     │
+│                                                                 │
+│              Article Title                                      │
+│              text-4xl, Outfit 700                               │
+│                                                                 │
+│              By [Author] · [Date] · [Reading Time]             │
+│              text-sm, Neutral 500                               │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│         ┌─────────────────────────────────────┐                │
+│         │                                     │                │
+│         │  [Article Body]                     │                │
+│         │  .container-content (700px)         │                │
+│         │                                     │                │
+│         │  Source Serif 4, 18px               │                │
+│         │  Line height 1.75                   │                │
+│         │                                     │                │
+│         │  H2: Outfit 700, text-2xl           │                │
+│         │  H3: Outfit 600, text-xl            │                │
+│         │                                     │                │
+│         │  Blockquotes: Outfit 500            │                │
+│         │  4px Amber left border              │                │
+│         │                                     │                │
+│         │  ─────────────────────────          │                │
+│         │  [Mid-article email CTA]            │                │
+│         │  ─────────────────────────          │                │
+│         │                                     │                │
+│         │  [Continue article...]              │                │
+│         │                                     │                │
+│         └─────────────────────────────────────┘                │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│              [Author Bio Card]                                  │
+│              Photo + name + short bio + link                    │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│              [Related Articles]                                 │
+│              3 article cards                                    │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│              [End-of-article email CTA]                        │
+│              Lead magnet if relevant                            │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│  [Footer]                                                       │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Mid-Article CTA (after ~50% of content):**
+
+- Light card (Surface 100 bg)
+- "Want more recommendations?"
+- Email input + Subscribe button
+- Inline within content flow
+
+**Schema Markup:** Article schema with headline, author, datePublished, image
+
+---
+
+#### 3.1.6 Help Centre `/help`
+
+**Template:** Content Page (F) with FAQ accordion
+
+**Structure:**
+
+1. Search bar (prominent)
+2. Category cards (4): Account, Orders, Membership, Content
+3. Popular articles list
+4. Contact CTA at bottom
+
+---
+
+#### 3.1.7 FAQ `/faq`
+
+**Template:** Content Page (F)
+
+**Component:** Accordion groups by category
+
+**Categories:**
+
+- General (What is SF Supernova?, etc.)
+- Products (Formats, Downloads, Compatibility)
+- Membership (Tiers, Credits, Cancellation)
+- Account (Password, Settings)
+- Payment (Methods, Refunds)
+
+**Accordion Behaviour:**
+
+- Single expand (one open at a time)
+- Chevron rotation on expand
+- Smooth height animation
+
+---
+
+#### 3.1.8 Newsletter `/newsletter`
+
+**Template:** Form Page (D)
+
+**Content:**
+
+- Headline: "Join Our Weekly Newsletter"
+- Value proposition (3 bullet points)
+- Email field + Subscribe button
+- Privacy reassurance
+- Sample newsletter preview (optional)
+
+---
+
+#### 3.1.9 Start Here `/start-here`
+
+**Template:** Landing Page (A) - Onboarding focus
+
+**Purpose:** Guide newcomers to vintage sci-fi
+
+**Sections:**
+
+1. Hero: "New to Vintage Sci-Fi?"
+2. Curated starter paths (3 cards): "The Essentials", "By Theme", "By Era"
+3. Interactive quiz CTA: "Find Your Perfect Starting Point"
+4. Featured beginner-friendly products
+5. Newsletter signup
+
+---
+
+#### 3.1.10 Press `/press`
+
+**Template:** Content Page (F)
+
+**Content:**
+
+- About SF Supernova (press-friendly summary)
+- Founder bio + high-res photo download
+- Logo assets download (PNG, SVG)
+- Press contact email
+- Recent coverage/mentions (if any)
+
+---
+
+#### 3.1.11 Status `/status`
+
+**Template:** Content Page (F) - Minimal
+
+**Content:**
+
+- Current system status (operational/degraded/down)
+- Recent incidents list
+- Uptime percentage
+- Link to subscribe to status updates
+
+**Styling:**
+
+- Green/Amber/Red status indicators
+- Minimal design, functional focus
+
+---
+
+#### 3.1.12 How It Works `/how-it-works`
+
+**Template:** Landing Page (A)
+
+**Sections:**
+
+1. Hero: "How SF Supernova Works"
+2. Step cards (3-4): Browse → Purchase → Download → Enjoy
+3. Format explanation (ePub, PDF, Audiobook)
+4. Device compatibility grid
+5. Membership benefits overview
+6. CTA: "Start Browsing"
+
+---
+
+### 3.2 Content Discovery
+
+#### 3.2.1 Author Directory `/authors`
+
+**Template:** Index/Listing Page (B) - Card variant
+
+**Layout:** Alphabetical grid with letter jump links
+
+```
+A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z
+
+[Author] [Author] [Author] [Author]
+[Card]   [Card]   [Card]   [Card]
+```
+
+**Card Type:** Author card (circular photo, name, dates, work count)
+
+**Filter:** Era checkboxes (optional)
+
+**Sort:** Alphabetical (default), Work count, Popularity
+
+---
+
+#### 3.2.2 Author Profile `/author/[slug]`
+
+**Template:** Detail Page (C) - Author variant
+
+**Layout:**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  [Breadcrumbs: Home / Authors / Isaac Asimov]                  │
+├─────────────────────────────────────────────────────────────────┤
+│                    │                                            │
+│   [Author Photo]   │   Isaac Asimov                            │
+│   200px circle     │   (1920–1992)                             │
+│                    │                                            │
+│                    │   [Era tags] [Theme tags]                 │
+│                    │                                            │
+│                    │   "The father of robotics fiction..."     │
+│                    │   Brief intro (2-3 sentences)              │
+│                    │                                            │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  [Biography - Tabs or Accordion]                               │
+│                                                                 │
+│  Life | Works | Influence | Further Reading                    │
+│  ─────────────────────────────────────────                     │
+│                                                                 │
+│  [Tab content - long form, .container-content]                 │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  [Available Works]                                              │
+│  Product grid (their books/audiobooks available on site)       │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  [Related Authors]                                              │
+│  "If you like Asimov, explore..."                              │
+│  Author cards row                                               │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+#### 3.2.3 Eras Index `/eras`
+
+**Template:** Index/Listing Page (B) - Visual variant
+
+**Layout:** Large era cards with period imagery
+
+```
+┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐
+│   [1920s]       │ │   [1930s]       │ │   [1940s]       │
+│   Pulp Era      │ │   Golden Age    │ │   WWII Era      │
+│   Begins        │ │   Dawns         │ │                 │
+│   43 works      │ │   127 works     │ │   89 works      │
+│   [Explore →]   │ │   [Explore →]   │ │   [Explore →]   │
+└─────────────────┘ └─────────────────┘ └─────────────────┘
+```
+
+**Card:** Large (spans 4 columns), period-appropriate cover art background
+
+---
+
+#### 3.2.4 Era Page `/eras/[slug]`
+
+**Template:** Index/Listing Page (B)
+
+**Header:** Era name, date range, description paragraph, representative image
+
+**Content:** Product grid filtered to era, with additional filters (theme, format)
+
+---
+
+#### 3.2.5 Themes Index `/themes`
+
+**Template:** Index/Listing Page (B) - Visual variant
+
+**Layout:** Theme cards with icons or representative imagery
+
+**Card Display:** Icon + Theme name + work count
+
+---
+
+#### 3.2.6 Theme Page `/themes/[slug]`
+
+**Template:** Index/Listing Page (B)
+
+**Header:** Theme name, description, "Why this theme matters" paragraph
+
+**Content:** Product grid filtered to theme
+
+---
+
+#### 3.2.7–3.2.8 Category/Tag Archive
+
+**Template:** Index/Listing Page (B)
+
+Standard archive pages with header and filtered product/article grid.
+
+---
+
+#### 3.2.9 Collections `/collections`
+
+**Template:** Index/Listing Page (B) - Featured variant
+
+**Content:** Curated collection cards (larger format with descriptions)
+
+**Card Type:** Collection card with cover montage, title, description, item count, price
+
+---
+
+#### 3.2.10 New Arrivals `/new-arrivals`
+
+**Template:** Index/Listing Page (B)
+
+**Sort:** Newest first (fixed)
+
+**Filter:** Format, Era, Theme
+
+---
+
+#### 3.2.11 Popular `/popular`
+
+**Template:** Index/Listing Page (B)
+
+**Sort:** Popularity (fixed)
+
+**Content:** Best-selling/most-viewed products
+
+---
+
+### 3.3 Free Content
+
+#### 3.3.1 Free Content Hub `/free`
+
+**Template:** Landing Page (A) - Feature showcase
+
+**Sections:**
+
+1. Hero: "Explore Free Content"
+2. Category cards: Free Ebooks, Free Audiobooks, Radio Dramas
+3. Featured free items grid
+4. "Want more?" Membership CTA
+
+---
+
+#### 3.3.2–3.3.3 Free Ebooks/Audiobooks
+
+**Template:** Index/Listing Page (B)
+
+Standard browse filtered to free items with format pre-selected.
+
+---
+
+#### 3.3.4 Radio Dramas Index `/radio-dramas`
+
+**Template:** Index/Listing Page (B)
+
+**Card Type:** Show card (show artwork, title, episode count, era)
+
+---
+
+#### 3.3.5 Radio Show `/radio-dramas/[show-slug]`
+
+**Template:** Detail Page (C)
+
+**Content:**
+
+- Show artwork and description
+- Episode list (sortable by date, episode number)
+- "Play All" functionality
+
+---
+
+#### 3.3.6 Radio Episode `/radio-dramas/[show-slug]/[episode-slug]`
+
+**Template:** Detail Page (C) - Audio variant
+
+**Content:**
+
+- Audio player (prominent)
+- Episode title, show name, date, duration
+- Description/synopsis
+- Transcript (expandable)
+- Previous/Next episode navigation
+
+---
+
+### 3.4 Reading Guides & Lists
+
+#### 3.4.1 Reading Guides Index `/reading-guides`
+
+**Template:** Index/Listing Page (B)
+
+**Card Type:** Article card with "Guide" tag
+
+---
+
+#### 3.4.2 Reading Guide `/reading-guides/[slug]`
+
+**Template:** Detail Page (C) - Article variant
+
+**Unique Elements:**
+
+- Checklist component (interactive checkboxes for tracking)
+- "Download PDF" CTA (lead magnet)
+- Embedded product cards for referenced works
+
+---
+
+#### 3.4.3–3.4.4 Reading Lists
+
+Similar to Reading Guides but lighter content, more list-focused.
+
+---
+
+### 3.5 Commerce
+
+#### 3.5.1 Browse `/browse`
+
+**Template:** Index/Listing Page (B)
+
+**Full Specification:**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  [Header]                                                       │
+├─────────────────────────────────────────────────────────────────┤
+│  Home / Browse                                                  │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  Browse All Products                          Showing 127 items │
+│                                               [Sort: Popular ▼] │
+│                                                                 │
+├───────────────┬─────────────────────────────────────────────────┤
+│               │                                                 │
+│  [Filters]    │  [Product] [Product] [Product] [Product]       │
+│  240px        │  [Card]    [Card]    [Card]    [Card]          │
+│               │                                                 │
+│  Format       │  [Product] [Product] [Product] [Product]       │
+│  ☑ Ebook (98) │  [Card]    [Card]    [Card]    [Card]          │
+│  ☐ Audio (56) │                                                 │
+│  ☐ Bundle(12) │  [Product] [Product] [Product] [Product]       │
+│               │  [Card]    [Card]    [Card]    [Card]          │
+│  Era          │                                                 │
+│  ☐ 1920s (12) │                                                 │
+│  ☐ 1930s (34) │  [← Previous]  1  2  3  4  5 ... 10  [Next →]  │
+│  ☑ 1940s (45) │                                                 │
+│  ☐ 1950s (67) │                                                 │
+│  [Show more]  │                                                 │
+│               │                                                 │
+│  Theme        │                                                 │
+│  ☐ Time Travel│                                                 │
+│  ☐ Space Opera│                                                 │
+│  ☐ Dystopia   │                                                 │
+│  [Show more]  │                                                 │
+│               │                                                 │
+│  Price        │                                                 │
+│  ☐ Under £3   │                                                 │
+│  ☐ £3–£5      │                                                 │
+│  ☐ Over £5    │                                                 │
+│               │                                                 │
+│  [Clear All]  │                                                 │
+│               │                                                 │
+├───────────────┴─────────────────────────────────────────────────┤
+│  [Footer]                                                       │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Filter Behaviour:**
+
+- Multi-select within groups
+- Show result count per option
+- Update results instantly (no "Apply" button)
+- Active filters shown as removable chips above grid
+- "Clear All" resets all filters
+
+**Sort Options:**
+
+- Relevance (default)
+- Popularity
+- Price: Low to High
+- Price: High to Low
+- Newest
+- Title: A-Z
+
+**Grid:** 4 columns (desktop), 3 (tablet), 2 (mobile)
+
+**Pagination:** 20 items per page
+
+**Mobile Filter Pattern:**
+
+```
+┌────────────────────────────────┐
+│  Browse Products     [Filters] │ ← Button triggers modal
+│  127 items           [Sort ▼]  │
+├────────────────────────────────┤
+│  [Active filter chips]         │
+├────────────────────────────────┤
+│  [Product] [Product]           │
+│  [Card]    [Card]              │
+```
+
+Filter modal: Full-screen overlay with all filter groups, "Show Results" CTA at bottom
+
+---
+
+#### 3.5.2 Browse by Genre `/browse/[genre]`
+
+**Template:** Index/Listing Page (B)
+
+Same as Browse but with genre pre-filtered and header specific to genre.
+
+---
+
+#### 3.5.3 Product Page `/product/[slug]`
+
+**Template:** Detail Page (C) - Product variant
+
+**Full Specification:**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  [Header]                                                       │
+├─────────────────────────────────────────────────────────────────┤
+│  Home / Library / Ebooks / Foundation                           │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  ┌─────────────────┐    Foundation                              │
+│  │                 │    by Isaac Asimov                         │
+│  │                 │                                            │
+│  │  [Cover Image]  │    [1950s] [Space Opera] [Essential]      │
+│  │                 │                                            │
+│  │  400px max      │    ★★★★★ (47 reviews)                      │
+│  │  3:4 aspect     │                                            │
+│  │                 │    £3.99                                   │
+│  │                 │    Members: £3.19 (save 20%)               │
+│  │                 │                                            │
+│  │                 │    Format: [ePub ▼]                        │
+│  │                 │                                            │
+│  │                 │    [Add to Cart]  btn-primary, btn-lg      │
+│  │                 │    [♡ Add to Wishlist]                     │
+│  │                 │                                            │
+│  │  [Read Sample]  │    ──────────────────────                  │
+│  │  btn-secondary  │    📄 ePub, 2.4 MB                         │
+│  │                 │    🕐 8 hour read                          │
+│  └─────────────────┘    📅 Originally published 1951            │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  [Synopsis] [Author] [Historical Context] [Reviews]            │
+│  ─────────────────────────────────────────────────              │
+│                                                                 │
+│  [Tab content]                                                  │
+│                                                                 │
+│  The Galactic Empire is crumbling. Hari Seldon has foreseen    │
+│  the coming dark age and established the Foundation to         │
+│  preserve human knowledge...                                    │
+│                                                                 │
+│  [Read more]                                                    │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  Frequently Bought Together                                     │
+│                                                                 │
+│  [Foundation] + [Foundation and Empire] + [Second Foundation]  │
+│  [This item]    £3.99                      £3.99               │
+│                                                                 │
+│  Total: £11.97  →  Bundle price: £9.99 (save 17%)              │
+│  [Add All to Cart]                                              │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  Similar Works                                                  │
+│                                                                 │
+│  [Product] [Product] [Product] [Product]                       │
+│  [Card]    [Card]    [Card]    [Card]                          │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  [Membership CTA Banner]                                        │
+│  "Members save 20-40% on every purchase"                       │
+│  [Learn More]                                                   │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│  [Footer]                                                       │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Mobile Layout:**
+
+```
+┌────────────────────────────────┐
+│  [Header]                      │
+├────────────────────────────────┤
+│  [Breadcrumbs - collapsed]     │
+├────────────────────────────────┤
+│                                │
+│      [Cover Image]             │
+│      Full width                │
+│                                │
+├────────────────────────────────┤
+│  Foundation                    │
+│  by Isaac Asimov               │
+│                                │
+│  [Tags row]                    │
+│                                │
+│  £3.99                         │
+│  Members: £3.19                │
+│                                │
+│  [Read Sample]                 │
+│                                │
+├────────────────────────────────┤
+│  [Tabs: Synopsis | Author...]  │
+├────────────────────────────────┤
+│  [Tab content]                 │
+├────────────────────────────────┤
+│  [Similar Works carousel]      │
+├────────────────────────────────┤
+│  [Footer]                      │
+├────────────────────────────────┤
+│  ┌────────────────────────┐    │ ← Sticky bottom bar
+│  │ £3.99   [Add to Cart]  │    │
+│  └────────────────────────┘    │
+└────────────────────────────────┘
+```
+
+**Sample Modal:**
+
+- Text sample: First chapter in reader modal
+- Audio sample: Inline player, 5-minute excerpt
+
+**Add to Cart Behaviour:**
+
+1. Button shows loading spinner
+2. Text changes to "Adding..."
+3. Success: "Added ✓" for 2 seconds
+4. Cart icon badge updates
+5. Optional: Mini-cart drawer slides in
+
+---
+
+#### 3.5.4 Search Results `/search`
+
+**Template:** Index/Listing Page (B) - Search variant
+
+**Layout:**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  [Header with search expanded]                                  │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  Search: "asimov foundation"                    [Clear] [🔍]   │
+│                                                                 │
+│  47 results for "asimov foundation"                            │
+│                                                                 │
+│  [All] [Products (23)] [Articles (18)] [Authors (6)]          │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  [Mixed results grid - cards vary by type]                     │
+│                                                                 │
+│  No sidebar filters on search (rely on content type tabs)      │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│  [Footer]                                                       │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**No Results State:**
+
+- "No results for [query]"
+- Suggestions: "Try different keywords" or browse categories
+- Popular searches list
+
+---
+
+#### 3.5.5 Cart `/cart`
+
+**Template:** Custom (Form Page variant)
+
+**Layout:**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  [Header]                                                       │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  Your Cart (3 items)                                           │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  ┌─────────────────────────────────────────────────────────┐   │
+│  │ [Cover]  Foundation                           £3.99     │   │
+│  │  80px    Isaac Asimov · ePub                           │   │
+│  │          [Remove]                                       │   │
+│  └─────────────────────────────────────────────────────────┘   │
+│                                                                 │
+│  ┌─────────────────────────────────────────────────────────┐   │
+│  │ [Cover]  The Stars My Destination             £4.99     │   │
+│  │  80px    Alfred Bester · ePub                          │   │
+│  │          [Remove]                                       │   │
+│  └─────────────────────────────────────────────────────────┘   │
+│                                                                 │
+│  ┌─────────────────────────────────────────────────────────┐   │
+│  │ [Cover]  Foundation Series (Audiobook)       £14.99     │   │
+│  │  80px    Isaac Asimov · MP3 Bundle                     │   │
+│  │          [Remove]                                       │   │
+│  └─────────────────────────────────────────────────────────┘   │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  [Frequently Bought Together suggestion]                       │
+│                                                                 │
+├───────────────────────────────────────┬─────────────────────────┤
+│                                       │                         │
+│  [Continue Shopping]                  │   Subtotal:    £23.97  │
+│                                       │   Member      -£4.79   │
+│                                       │   Discount:            │
+│                                       │   ─────────────────    │
+│                                       │   Total:       £19.18  │
+│                                       │                         │
+│                                       │   [Proceed to Checkout]│
+│                                       │   btn-primary, btn-lg  │
+│                                       │                         │
+│                                       │   🔒 Secure checkout    │
+│                                       │                         │
+└───────────────────────────────────────┴─────────────────────────┘
+```
+
+**Empty Cart:**
+
+- "Your cart is empty"
+- "Discover something new" CTA → Browse
+- Featured products below
+
+**Remove Animation:** Item fades out and collapses (300ms)
+
+---
+
+#### 3.5.6 Checkout `/checkout`
+
+**Template:** Custom (Single-page checkout)
+
+**Layout:**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  [Minimal Header - Logo only, no nav]                          │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  Checkout                                                       │
+│                                                                 │
+├─────────────────────────────────────┬───────────────────────────┤
+│                                     │                           │
+│  Contact Information                │   Order Summary           │
+│  ────────────────────               │                           │
+│  Email *                            │   [Cover] Foundation      │
+│  [________________________]         │           £3.99           │
+│                                     │                           │
+│  ☐ Email me with news and offers   │   [Cover] Stars My...     │
+│                                     │           £4.99           │
+│  Billing Address                    │                           │
+│  ────────────────────               │   ─────────────────       │
+│  Country *                          │   Subtotal    £23.97     │
+│  [United Kingdom           ▼]       │   Discount    -£4.79     │
+│                                     │   ─────────────────       │
+│  First Name *    Last Name *        │   Total       £19.18     │
+│  [___________]   [___________]      │                           │
+│                                     │   [Edit cart]             │
+│  Payment                            │                           │
+│  ────────────────────               │                           │
+│                                     │                           │
+│  [Stripe Payment Element]           │                           │
+│  Card number                        │                           │
+│  [____ ____ ____ ____]             │                           │
+│  Expiry    CVC                      │                           │
+│  [__/__]   [___]                   │                           │
+│                                     │                           │
+│  [Complete Purchase]                │                           │
+│  btn-primary, btn-lg, full width   │                           │
+│                                     │                           │
+│  🔒 Secured by Stripe              │                           │
+│  Visa  MC  Amex  icons             │                           │
+│                                     │                           │
+└─────────────────────────────────────┴───────────────────────────┘
+```
+
+**Mobile Layout:** Single column, order summary collapsed to expandable accordion at top
+
+**Processing State:**
+
+- Button disabled, shows spinner
+- "Processing payment..."
+- Overlay prevents interaction
+
+**Error States:**
+
+- Inline field errors (red border + message)
+- Payment error alert at top of form
+
+---
+
+#### 3.5.7 Order Confirmation `/checkout/confirmation`
+
+**Template:** Custom (Success page)
+
+**Layout:**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  [Minimal Header]                                               │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│              ✓                                                  │
+│              Success icon (Teal, 64px)                         │
+│                                                                 │
+│              Thank you for your order!                          │
+│              text-3xl, Outfit 700                               │
+│                                                                 │
+│              Order #SF-12345                                    │
+│              Confirmation sent to you@email.com                │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│              Your Downloads                                     │
+│                                                                 │
+│  ┌─────────────────────────────────────────────────────────┐   │
+│  │ [Cover]  Foundation              [Download ePub]        │   │
+│  │          Isaac Asimov                                   │   │
+│  └─────────────────────────────────────────────────────────┘   │
+│                                                                 │
+│  ┌─────────────────────────────────────────────────────────┐   │
+│  │ [Cover]  The Stars My Dest...    [Download ePub]        │   │
+│  │          Alfred Bester                                  │   │
+│  └─────────────────────────────────────────────────────────┘   │
+│                                                                 │
+│              [Download All]                                     │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│              What's Next?                                       │
+│                                                                 │
+│              • Downloads also sent to your email               │
+│              • Access anytime from your account                │
+│              • Need help? Visit our FAQ                        │
+│                                                                 │
+│              [Continue Browsing]    [Go to Library]            │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│              [Membership CTA - if not member]                  │
+│              "Enjoyed this? Members save 20-40%"               │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│  [Footer]                                                       │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+#### 3.5.8 Gift Cards `/gift-cards`
+
+**Template:** Landing Page (A) - Product focus
+
+**Sections:**
+
+1. Hero: "Give the Gift of Golden Age Sci-Fi"
+2. Gift card amount options (£10, £25, £50, £100, Custom)
+3. How it works (3 steps)
+4. Delivery options (email, print at home)
+5. FAQ section
+
+---
+
+#### 3.5.9 File Formats Guide `/formats`
+
+**Template:** Content Page (F)
+
+**Content:**
+
+- Format comparison table (ePub vs PDF vs Audiobook)
+- Device compatibility chart
+- Download instructions per device type
+- Troubleshooting FAQ
+
+---
+
+### 3.6 Membership
+
+#### 3.6.1 Membership `/membership`
+
+**Template:** Landing Page (A) - Conversion focus
+
+**Layout:**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  [Header]                                                       │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│              [Hero - Teal gradient]                            │
+│              "Unlock Your Sci-Fi Library"                       │
+│              Value proposition paragraph                        │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│              [Monthly] / [Annual - Save 17%]  ← Toggle         │
+│                                                                 │
+│  ┌─────────────┐ ┌─────────────────┐ ┌─────────────┐          │
+│  │             │ │  ★ Most Popular │ │             │          │
+│  │  Explorer   │ │   Enthusiast    │ │  Collector  │          │
+│  │             │ │                 │ │             │          │
+│  │   £4.99     │ │     £8.99       │ │   £14.99    │          │
+│  │   /month    │ │     /month      │ │   /month    │          │
+│  │             │ │                 │ │             │          │
+│  │ ✓ 20% off   │ │ ✓ 30% off       │ │ ✓ 40% off   │          │
+│  │ ✓ Ad-free   │ │ ✓ 2 credits/mo  │ │ ✓ 4 credits │          │
+│  │ ✓ Early     │ │ ✓ Exclusive     │ │ ✓ VIP       │          │
+│  │   access    │ │   content       │ │   access    │          │
+│  │             │ │                 │ │             │          │
+│  │ [Choose]    │ │ [Choose]        │ │ [Choose]    │          │
+│  │             │ │ Amber button    │ │             │          │
+│  └─────────────┘ └─────────────────┘ └─────────────┘          │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│              [Feature Comparison Table]                        │
+│              Detailed feature-by-tier breakdown                │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│              [Testimonials]                                     │
+│              Member quotes (when available)                     │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│              [FAQ Accordion]                                    │
+│              Common membership questions                        │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│  [Footer]                                                       │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Pricing Toggle:**
+
+- Monthly/Annual switch
+- Annual shows savings badge
+- Prices update without page reload
+
+**Popular Tier Highlight:**
+
+- Amber border
+- "Most Popular" badge
+- Slightly elevated (shadow or scale)
+
+---
+
+#### 3.6.2 Compare Memberships `/membership/compare`
+
+**Template:** Content Page (F) with table
+
+**Content:** Full feature comparison table with all tiers and all features
+
+---
+
+#### 3.6.3 Gift Membership `/membership/gift`
+
+**Template:** Form Page (D)
+
+**Form:**
+
+- Recipient name, email
+- Tier selection
+- Duration (1, 3, 6, 12 months)
+- Personal message
+- Delivery date
+- Payment
+
+---
+
+### 3.7 Account
+
+#### 3.7.1 Account Dashboard `/account`
+
+**Template:** Dashboard Page (E)
+
+**Layout:**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  [Header]                                                       │
+├─────────────────────────────────────────────────────────────────┤
+│               │                                                 │
+│  [Sidebar]    │   Welcome back, [Name]                         │
+│               │                                                 │
+│  Dashboard ●  │   ┌──────────────────┐ ┌──────────────────┐    │
+│  Library      │   │ Membership       │ │ Credits          │    │
+│  Wishlist     │   │ Enthusiast       │ │ 2 remaining      │    │
+│  Reading      │   │ Renews Dec 15    │ │ [Use Credit]     │    │
+│  History      │   │ [Manage]         │ │                  │    │
+│  My Lists     │   └──────────────────┘ └──────────────────┘    │
+│  Orders       │                                                 │
+│  Downloads    │   Recent Activity                               │
+│  Credits      │   ─────────────────                             │
+│  Membership   │                                                 │
+│  Settings     │   [Order card] [Order card]                    │
+│               │                                                 │
+│  ─────────    │   Quick Actions                                │
+│  [Logout]     │   [Browse Library] [View Downloads]            │
+│               │                                                 │
+├───────────────┴─────────────────────────────────────────────────┤
+│  [Footer]                                                       │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Mobile:** Sidebar becomes horizontal nav or dropdown
+
+---
+
+#### 3.7.2 My Library `/account/library`
+
+**Template:** Dashboard Page (E)
+
+**Content:** Grid of purchased products with download buttons, format filters
+
+---
+
+#### 3.7.3 Wishlist `/account/wishlist`
+
+**Template:** Dashboard Page (E)
+
+**Content:** Product cards with "Move to Cart" and "Remove" actions
+
+---
+
+#### 3.7.4 Reading History `/account/reading-history`
+
+**Template:** Dashboard Page (E)
+
+**Content:** Chronological list of viewed/started products
+
+---
+
+#### 3.7.5–3.7.6 My Lists
+
+**Template:** Dashboard Page (E)
+
+**Content:** User-created lists with add/remove/reorder functionality
+
+---
+
+#### 3.7.7 Order History `/account/orders`
+
+**Template:** Dashboard Page (E)
+
+**Content:** Table of orders (date, items, total, status, actions)
+
+---
+
+#### 3.7.8 Order Detail `/account/orders/[id]`
+
+**Template:** Dashboard Page (E)
+
+**Content:** Full order details, download links, invoice download
+
+---
+
+#### 3.7.9 Downloads `/account/downloads`
+
+**Template:** Dashboard Page (E)
+
+**Content:** All available downloads with format, size, download button
+
+---
+
+#### 3.7.10 Audiobook Credits `/account/credits`
+
+**Template:** Dashboard Page (E)
+
+**Content:** Credit balance, usage history, available audiobooks to claim
+
+---
+
+#### 3.7.11 Membership Management `/account/membership`
+
+**Template:** Dashboard Page (E)
+
+**Content:**
+
+- Current plan details
+- Upgrade/downgrade options
+- Billing history
+- Update payment method
+- Cancel membership (clear, ethical flow)
+
+---
+
+#### 3.7.12 Settings `/account/settings`
+
+**Template:** Dashboard Page (E)
+
+**Sections:**
+
+- Profile (name, email)
+- Password change
+- Email preferences
+- Connected accounts (if social login)
+- Delete account
+
+---
+
+### 3.8 Auth
+
+#### 3.8.1 Login `/login`
+
+**Template:** Form Page (D)
+
+**Form:**
+
+- Email
+- Password
+- Remember me checkbox
+- [Login] button
+- "Forgot password?" link
+- "Don't have an account? Register" link
+- Social login options (if enabled)
+
+---
+
+#### 3.8.2 Register `/register`
+
+**Template:** Form Page (D)
+
+**Form:**
+
+- Email
+- Password
+- Confirm password
+- Newsletter opt-in checkbox
+- Terms acceptance checkbox
+- [Create Account] button
+- "Already have an account? Login" link
+
+---
+
+#### 3.8.3 Forgot Password `/forgot-password`
+
+**Template:** Form Page (D)
+
+**Flow:**
+
+1. Email input → Submit
+2. Success message: "Check your email for reset link"
+3. Reset page: New password + confirm → Submit
+4. Success: "Password updated" → Login link
+
+---
+
+### 3.9 Legal
+
+All legal pages use **Template F: Content Page**
+
+**Common Elements:**
+
+- Last updated date
+- Table of contents (for long pages)
+- Print-friendly styling
+- 700px content width
+
+#### 3.9.1 Privacy Policy `/privacy`
+
+Standard privacy policy with GDPR compliance sections.
+
+#### 3.9.2 Terms of Service `/terms`
+
+Terms and conditions of use.
+
+#### 3.9.3 Refund Policy `/refunds`
+
+14-day money-back guarantee details.
+
+#### 3.9.4 Accessibility `/accessibility`
+
+WCAG compliance statement, known issues, contact for assistance.
+
+#### 3.9.5 Cookie Policy `/cookies`
+
+Cookie usage explanation, categories, management options.
+
+#### 3.9.6 Copyright & DMCA `/copyright`
+
+Copyright policy, DMCA takedown procedures.
+
+#### 3.9.7 Licensing `/licensing`
+
+Content licensing information.
+
+---
+
+### 3.10 Error Pages
+
+#### 3.10.1 Not Found `/404`
+
+**Template:** Custom (minimal)
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  [Header]                                                       │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│                         404                                     │
+│              text-6xl, Outfit 800, Teal 600                    │
+│                                                                 │
+│              "Lost in Space"                                    │
+│              text-2xl, Outfit 600                               │
+│                                                                 │
+│              The page you're looking for                        │
+│              doesn't exist or has moved.                        │
+│                                                                 │
+│              [Back to Homepage]  [Browse Products]             │
+│                                                                 │
+│              ─────────────────────────                         │
+│                                                                 │
+│              Popular destinations:                              │
+│              • Browse All Products                              │
+│              • Latest Articles                                  │
+│              • Contact Support                                  │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│  [Footer]                                                       │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+#### 3.10.2 Server Error `/500`
+
+**Template:** Custom (minimal)
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  [Minimal Header - Logo only]                                  │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│                         500                                     │
+│              text-6xl, Outfit 800, Error text                  │
+│                                                                 │
+│              "Something Went Wrong"                             │
+│                                                                 │
+│              We're experiencing technical difficulties.         │
+│              Please try again in a few minutes.                │
+│                                                                 │
+│              [Try Again]  [Go to Homepage]                     │
+│                                                                 │
+│              If this persists, contact                         │
+│              support@sfsupernova.com                           │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Note:** 500 page must be static HTML (no database/server dependencies)
 
 ---
 
@@ -3821,7 +5470,7 @@ For complex animated components, use `contain` to isolate repaints:
 *(Page list — exists)*
 
 ---
-
+**********************************************************************
 ### 9. Pages (Detail) *(currently numbered as Section 3)*
 
 #### 9.1 Public
