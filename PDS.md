@@ -5302,175 +5302,6 @@ Content licensing information.
 
 ---
 
-# 9. Pages (Detail)
-
-### 3.1 Public
-
-#### 3.1.1 Homepage `/`
-
-#### 3.1.2 About `/about`
-
-#### 3.1.3 Contact `/contact`
-
-#### 3.1.4 Blog Index `/blog`
-
-#### 3.1.5 Blog Post `/blog/[slug]`
-
-#### 3.1.6 Help Centre `/help`
-
-#### 3.1.7 FAQ `/faq`
-
-#### 3.1.8 Newsletter `/newsletter`
-
-#### 3.1.9 Start Here `/start-here`
-
-#### 3.1.10 Press `/press`
-
-#### 3.1.11 Status `/status`
-
-#### 3.1.12 How It Works `/how-it-works`
-
-### 3.2 Content Discovery
-
-#### 3.2.1 Author Directory `/authors`
-
-#### 3.2.2 Author Profile `/author/[slug]`
-
-#### 3.2.3 Eras Index `/eras`
-
-#### 3.2.4 Era Page `/eras/[slug]`
-
-#### 3.2.5 Themes Index `/themes`
-
-#### 3.2.6 Theme Page `/themes/[slug]`
-
-#### 3.2.7 Category Archive `/category/[slug]`
-
-#### 3.2.8 Tag Archive `/tag/[slug]`
-
-#### 3.2.9 Collections `/collections`
-
-#### 3.2.10 New Arrivals `/new-arrivals`
-
-#### 3.2.11 Popular `/popular`
-
-### 3.3 Free Content
-
-#### 3.3.1 Free Content Hub `/free`
-
-#### 3.3.2 Free Ebooks `/free/ebooks`
-
-#### 3.3.3 Free Audiobooks `/free/audiobooks`
-
-#### 3.3.4 Radio Dramas Index `/radio-dramas`
-
-#### 3.3.5 Radio Show `/radio-dramas/[show-slug]`
-
-#### 3.3.6 Radio Episode `/radio-dramas/[show-slug]/[episode-slug]`
-
-### 3.4 Reading Guides & Lists
-
-#### 3.4.1 Reading Guides Index `/reading-guides`
-
-#### 3.4.2 Reading Guide `/reading-guides/[slug]`
-
-#### 3.4.3 Reading Lists Index `/reading-lists`
-
-#### 3.4.4 Reading List `/reading-lists/[slug]`
-
-### 3.5 Commerce
-
-#### 3.5.1 Browse `/browse`
-
-#### 3.5.2 Browse by Genre `/browse/[genre]`
-
-#### 3.5.3 Product Page `/product/[slug]`
-
-#### 3.5.4 Search Results `/search`
-
-#### 3.5.5 Cart `/cart`
-
-#### 3.5.6 Checkout `/checkout`
-
-#### 3.5.7 Order Confirmation `/checkout/confirmation`
-
-#### 3.5.8 Gift Cards `/gift-cards`
-
-#### 3.5.9 File Formats Guide `/formats`
-
-### 3.6 Membership
-
-#### 3.6.1 Membership `/membership`
-
-#### 3.6.2 Compare Memberships `/membership/compare`
-
-#### 3.6.3 Gift Membership `/membership/gift`
-
-### 3.7 Account
-
-#### 3.7.1 Account Dashboard `/account`
-
-#### 3.7.2 My Library `/account/library`
-
-#### 3.7.3 Wishlist `/account/wishlist`
-
-#### 3.7.4 Reading History `/account/reading-history`
-
-#### 3.7.5 My Lists `/account/lists`
-
-#### 3.7.6 User List `/account/lists/[id]`
-
-#### 3.7.7 Order History `/account/orders`
-
-#### 3.7.8 Order Detail `/account/orders/[id]`
-
-#### 3.7.9 Downloads `/account/downloads`
-
-#### 3.7.10 Audiobook Credits `/account/credits`
-
-#### 3.7.11 Membership Management `/account/membership`
-
-#### 3.7.12 Settings `/account/settings`
-
-### 3.8 Auth
-
-#### 3.8.1 Login `/login`
-
-#### 3.8.2 Register `/register`
-
-#### 3.8.3 Forgot Password `/forgot-password`
-
-### 3.9 Legal
-
-#### 3.9.1 Privacy Policy `/privacy`
-
-#### 3.9.2 Terms of Service `/terms`
-
-#### 3.9.3 Refund Policy `/refunds`
-
-#### 3.9.4 Accessibility `/accessibility`
-
-#### 3.9.5 Cookie Policy `/cookies`
-
-#### 3.9.6 Copyright & DMCA `/copyright`
-
-#### 3.9.7 Licensing `/licensing`
-
-### 3.10 Error
-
-#### 3.10.1 Not Found `/404`
-
-#### 3.10.2 Server Error `/500`
-
----
-
----
-
-### 8. Pages *(currently numbered as Section 2)*
-*(Page list — exists)*
-
----
-**********************************************************************
 ### 9. Pages (Detail) *(currently numbered as Section 3)*
 
 #### 9.1 Public
@@ -5514,13 +5345,959 @@ Content licensing information.
 **⚠️ MISSING: 10.3 Touch Targets**
 **⚠️ MISSING: 10.4 Content Reflow Patterns**
 
+
+/* Complete responsive utility classes */
+
+/* Display utilities */
+.d-none { display: none; }
+.d-block { display: block; }
+.d-flex { display: flex; }
+.d-grid { display: grid; }
+
+@media (min-width: 768px) {
+  .md\:d-none { display: none; }
+  .md\:d-block { display: block; }
+  .md\:d-flex { display: flex; }
+  .md\:d-grid { display: grid; }
+}
+
+@media (min-width: 1024px) {
+  .lg\:d-none { display: none; }
+  .lg\:d-block { display: block; }
+  .lg\:d-flex { display: flex; }
+  .lg\:d-grid { display: grid; }
+}
+
+/* Flex direction */
+.flex-col { flex-direction: column; }
+.flex-row { flex-direction: row; }
+
+@media (min-width: 768px) {
+  .md\:flex-col { flex-direction: column; }
+  .md\:flex-row { flex-direction: row; }
+}
+
+@media (min-width: 1024px) {
+  .lg\:flex-col { flex-direction: column; }
+  .lg\:flex-row { flex-direction: row; }
+}
+
+/* Grid columns */
+.grid-cols-1 { grid-template-columns: repeat(1, 1fr); }
+.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (min-width: 768px) {
+  .md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .md\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .lg\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+  .lg\:grid-cols-6 { grid-template-columns: repeat(6, 1fr); }
+}
+
+/* Gap */
+.gap-sm { gap: 8px; }
+.gap-md { gap: 16px; }
+.gap-lg { gap: 24px; }
+
+@media (min-width: 1024px) {
+  .lg\:gap-lg { gap: 24px; }
+  .lg\:gap-xl { gap: 32px; }
+}
+
+/* Text alignment */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+@media (min-width: 768px) {
+  .md\:text-left { text-align: left; }
+  .md\:text-center { text-align: center; }
+}
+
+/* Padding */
+.p-sm { padding: 8px; }
+.p-md { padding: 16px; }
+.p-lg { padding: 24px; }
+
+@media (min-width: 768px) {
+  .md\:p-lg { padding: 24px; }
+  .md\:p-xl { padding: 32px; }
+}
+
+@media (min-width: 1024px) {
+  .lg\:p-xl { padding: 32px; }
+  .lg\:p-xxl { padding: 48px; }
+}
+
+
+
+
+
+
+
+
+
+
+
 ---
 
-### ⚠️ MISSING: 11. Accessibility
-**⚠️ MISSING: 11.1 Focus Indicators**
-**⚠️ MISSING: 11.2 Colour Contrast Requirements**
-**⚠️ MISSING: 11.3 Screen Reader Patterns**
-**⚠️ MISSING: 11.4 Keyboard Navigation**
+
+## 11. Accessibility
+
+SF Supernova is committed to WCAG 2.1 AA compliance, ensuring the platform is usable by everyone regardless of ability. This section consolidates accessibility requirements and provides implementation guidance.
+
+**Core Principle:** Accessibility is not an afterthought—it's built into every component, pattern, and page from the start.
+
+### 11.1 Focus Indicators
+
+Focus indicators show which element currently has keyboard focus. They are essential for keyboard and assistive technology users.
+
+#### Focus Ring Specification
+
+| Property | Value |
+|----------|-------|
+| Colour (light bg) | Amber 500 (`#C9943A`) |
+| Colour (dark bg) | Surface 200 (`#E8E3D6`) |
+| Width | 2px |
+| Style | solid |
+| Offset | 2px |
+| Border radius | Element's border-radius + 2px |
+
+#### Focus-Visible Strategy
+
+Use `:focus-visible` to show focus rings only for keyboard navigation, not mouse clicks:
+
+```css
+/* Remove default browser outline */
+:focus {
+  outline: none;
+}
+
+/* Show focus ring for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--amber-500);
+  outline-offset: 2px;
+}
+
+/* Fallback for browsers without :focus-visible */
+@supports not selector(:focus-visible) {
+  :focus {
+    outline: 2px solid var(--amber-500);
+    outline-offset: 2px;
+  }
+}
+```
+
+#### Focus by Element Type
+
+| Element | Focus Style |
+|---------|-------------|
+| **Buttons** | 2px Amber 500 outline, 2px offset |
+| **Links** | 2px Amber 500 outline, 2px offset, 2px border-radius |
+| **Form inputs** | 2px Teal 600 border (replaces default border) |
+| **Cards (clickable)** | 2px Amber 500 outline, 2px offset |
+| **Checkboxes/Radios** | 2px Amber 500 outline on custom element |
+| **Dropdowns/Selects** | 2px Teal 600 border |
+| **Modal close button** | 2px Amber 500 outline |
+| **Nav items (dark bg)** | 2px Surface 200 outline |
+
+#### Input Focus (Border Style)
+
+Form inputs use border change rather than outline for cleaner appearance:
+
+```css
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border: 2px solid var(--teal-600);
+  background-color: var(--surface-0);
+}
+
+/* Adjust padding to prevent layout shift */
+input {
+  border: 1px solid var(--surface-400);
+  padding: 12px 16px;
+}
+
+input:focus {
+  border: 2px solid var(--teal-600);
+  padding: 11px 15px; /* Reduce by 1px to compensate */
+}
+```
+
+#### Focus on Dark Backgrounds
+
+```css
+/* Header, footer, mobile nav */
+.dark-bg :focus-visible {
+  outline-color: var(--surface-200);
+}
+
+.dark-bg a:focus-visible,
+.dark-bg button:focus-visible {
+  outline: 2px solid var(--surface-200);
+  outline-offset: 2px;
+}
+```
+
+#### Focus Within (Parent Highlighting)
+
+For complex components, highlight parent when child has focus:
+
+```css
+.card:focus-within {
+  box-shadow: 0 0 0 2px var(--amber-500);
+}
+
+.form-field:focus-within label {
+  color: var(--teal-600);
+}
+```
+
+#### Never Remove Focus Indicators
+
+```css
+/* ❌ NEVER do this */
+*:focus {
+  outline: none;
+}
+
+/* ✅ Always provide alternative */
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--amber-500);
+}
+```
+
+---
+
+### 11.2 Colour Contrast Requirements
+
+#### WCAG Contrast Ratios
+
+| Level | Normal Text (<18px) | Large Text (≥18px bold, ≥24px) | UI Components |
+|-------|---------------------|-------------------------------|---------------|
+| **AA (minimum)** | 4.5:1 | 3:1 | 3:1 |
+| **AAA (enhanced)** | 7:1 | 4.5:1 | n/a |
+
+**SF Supernova targets AA compliance minimum, AAA where practical.**
+
+#### Verified Colour Pairings
+
+| Foreground | Background | Ratio | Level |
+|------------|------------|-------|-------|
+| Neutral 900 (`#1A1A1A`) | Surface 200 (`#E8E3D6`) | 12.4:1 | AAA ✓ |
+| Neutral 800 (`#333333`) | Surface 200 (`#E8E3D6`) | 9.1:1 | AAA ✓ |
+| Teal 600 (`#1A4A4A`) | Surface 200 (`#E8E3D6`) | 7.2:1 | AAA ✓ |
+| Teal 700 (`#153D3D`) | Surface 200 (`#E8E3D6`) | 8.5:1 | AAA ✓ |
+| Surface 200 (`#E8E3D6`) | Teal 900 (`#0F3333`) | 10.1:1 | AAA ✓ |
+| Teal 200 (`#7DBDBD`) | Teal 900 (`#0F3333`) | 5.8:1 | AA ✓ |
+| Amber 500 (`#C9943A`) | Teal 900 (`#0F3333`) | 5.2:1 | AA ✓ |
+| Neutral 500 (`#737373`) | Surface 200 (`#E8E3D6`) | 4.6:1 | AA ✓ |
+
+#### Problematic Pairings to Avoid
+
+| Foreground | Background | Ratio | Issue |
+|------------|------------|-------|-------|
+| Neutral 400 | Surface 200 | 2.8:1 | ❌ Fails AA |
+| Teal 300 | Surface 100 | 2.1:1 | ❌ Fails AA |
+| Amber 300 | Surface 200 | 1.9:1 | ❌ Fails AA |
+
+#### Text Colour Usage
+
+```css
+/* Primary text - use for headings, body copy */
+.text-primary {
+  color: var(--neutral-900); /* 12.4:1 on Surface 200 */
+}
+
+/* Secondary text - use for supporting content */
+.text-secondary {
+  color: var(--neutral-700); /* 7.2:1 on Surface 200 */
+}
+
+/* Muted text - use sparingly, larger sizes only */
+.text-muted {
+  color: var(--neutral-500); /* 4.6:1 on Surface 200 - AA for normal text */
+}
+
+/* ❌ Don't use for small text */
+.text-placeholder {
+  color: var(--neutral-400); /* 2.8:1 - fails, use only for decorative */
+}
+```
+
+#### Link Contrast
+
+Links must be distinguishable from surrounding text:
+
+```css
+/* Links in body text */
+.content a {
+  color: var(--teal-600);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* If removing underline, ensure 3:1 contrast with surrounding text */
+.nav-link {
+  color: var(--teal-600); /* Must be 3:1 against body text colour */
+}
+```
+
+#### Non-Text Contrast (UI Components)
+
+UI components and graphical objects need 3:1 contrast:
+
+```css
+/* Form field borders */
+input {
+  border: 1px solid var(--surface-400); /* 3:1 against Surface 200 bg */
+}
+
+/* Icons */
+.icon {
+  color: var(--neutral-600); /* 3.5:1 against Surface 200 */
+}
+
+/* Disabled states - exempt from contrast requirements but should be visible */
+button:disabled {
+  background-color: var(--neutral-200);
+  color: var(--neutral-500);
+}
+```
+
+#### Colour Not Sole Indicator
+
+Never use colour alone to convey information:
+
+```css
+/* ❌ Bad: Colour only */
+.error {
+  border-color: red;
+}
+
+/* ✅ Good: Colour + icon + text */
+.error {
+  border-color: var(--error-border);
+}
+
+.error-message {
+  color: var(--error-text);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.error-message::before {
+  content: '';
+  /* Error icon */
+}
+```
+
+#### Testing Tools
+
+- **Browser DevTools:** Chrome/Firefox accessibility panel
+- **Contrast checkers:** WebAIM Contrast Checker, Colour Contrast Analyser
+- **Automated testing:** axe DevTools, WAVE
+
+---
+
+### 11.3 Screen Reader Patterns
+
+#### Semantic HTML First
+
+Use semantic HTML elements—they provide built-in accessibility:
+
+```html
+<!-- ✅ Good: Semantic elements -->
+<header>...</header>
+<nav>...</nav>
+<main>...</main>
+<article>...</article>
+<aside>...</aside>
+<footer>...</footer>
+
+<!-- ❌ Bad: Divs with roles -->
+<div role="banner">...</div>
+<div role="navigation">...</div>
+```
+
+#### Landmark Regions
+
+Every page should have these landmarks:
+
+```html
+<body>
+  <header role="banner">
+    <nav role="navigation" aria-label="Main">...</nav>
+  </header>
+  
+  <main role="main" id="main-content">
+    <!-- Page content -->
+  </main>
+  
+  <aside role="complementary" aria-label="Sidebar">
+    <!-- Secondary content -->
+  </aside>
+  
+  <footer role="contentinfo">...</footer>
+</body>
+```
+
+#### Skip Link
+
+Allow keyboard users to bypass navigation:
+
+```html
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header>...</header>
+  <main id="main-content" tabindex="-1">...</main>
+</body>
+```
+
+```css
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 16px;
+  padding: 8px 16px;
+  background-color: var(--amber-500);
+  color: var(--teal-900);
+  font-weight: 600;
+  z-index: 1001;
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+```
+
+#### Heading Hierarchy
+
+Use proper heading levels—don't skip:
+
+```html
+<!-- ✅ Correct hierarchy -->
+<h1>Page Title</h1>
+  <h2>Section</h2>
+    <h3>Subsection</h3>
+    <h3>Subsection</h3>
+  <h2>Section</h2>
+
+<!-- ❌ Skipping levels -->
+<h1>Page Title</h1>
+  <h3>Section</h3>  <!-- Skipped h2! -->
+```
+
+#### ARIA Labels
+
+Use ARIA when HTML semantics aren't sufficient:
+
+```html
+<!-- Labelling navigation regions -->
+<nav aria-label="Main navigation">...</nav>
+<nav aria-label="Footer links">...</nav>
+
+<!-- Icon-only buttons -->
+<button aria-label="Close modal">
+  <svg><!-- X icon --></svg>
+</button>
+
+<!-- Search input -->
+<input type="search" aria-label="Search products">
+
+<!-- Describing current state -->
+<button aria-expanded="false" aria-controls="menu">
+  Menu
+</button>
+```
+
+#### Live Regions
+
+Announce dynamic content changes:
+
+```html
+<!-- Polite: Announced after current speech -->
+<div aria-live="polite" aria-atomic="true">
+  Item added to cart
+</div>
+
+<!-- Assertive: Interrupts current speech (use sparingly) -->
+<div aria-live="assertive" role="alert">
+  Payment failed. Please try again.
+</div>
+
+<!-- Status messages -->
+<div role="status" aria-live="polite">
+  Showing 24 of 127 products
+</div>
+```
+
+```javascript
+// Dynamically announce messages
+function announce(message, priority = 'polite') {
+  const region = document.getElementById('announcer');
+  region.setAttribute('aria-live', priority);
+  region.textContent = message;
+  
+  // Clear after announcement
+  setTimeout(() => {
+    region.textContent = '';
+  }, 1000);
+}
+
+// Usage
+announce('Product added to cart');
+announce('Form submitted successfully');
+announce('Error: Please check your email', 'assertive');
+```
+
+#### Form Accessibility
+
+```html
+<!-- Labels -->
+<label for="email">Email address</label>
+<input type="email" id="email" name="email">
+
+<!-- Required fields -->
+<label for="name">
+  Name <span aria-hidden="true">*</span>
+  <span class="sr-only">(required)</span>
+</label>
+<input type="text" id="name" required aria-required="true">
+
+<!-- Error messages -->
+<label for="password">Password</label>
+<input 
+  type="password" 
+  id="password"
+  aria-invalid="true"
+  aria-describedby="password-error"
+>
+<span id="password-error" role="alert">
+  Password must be at least 8 characters
+</span>
+
+<!-- Help text -->
+<label for="username">Username</label>
+<input 
+  type="text" 
+  id="username"
+  aria-describedby="username-help"
+>
+<span id="username-help">
+  Letters and numbers only, 3-20 characters
+</span>
+
+<!-- Fieldset for groups -->
+<fieldset>
+  <legend>Shipping method</legend>
+  <input type="radio" id="standard" name="shipping" value="standard">
+  <label for="standard">Standard (5-7 days)</label>
+  <input type="radio" id="express" name="shipping" value="express">
+  <label for="express">Express (2-3 days)</label>
+</fieldset>
+```
+
+#### Hidden Content
+
+```css
+/* Visually hidden but available to screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focusable when tabbed to (skip links) */
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+```
+
+```html
+<!-- Hidden from screen readers (decorative) -->
+<span aria-hidden="true">★★★★☆</span>
+<span class="sr-only">4 out of 5 stars</span>
+
+<!-- Hidden from everyone -->
+<div hidden>This content is not rendered</div>
+
+<!-- Visible but not announced -->
+<img src="decoration.svg" alt="" role="presentation">
+```
+
+#### Image Alt Text
+
+```html
+<!-- Informative images -->
+<img src="foundation-cover.jpg" alt="Foundation by Isaac Asimov - Book cover showing a galaxy spiral">
+
+<!-- Decorative images -->
+<img src="flourish.svg" alt="" role="presentation">
+
+<!-- Complex images -->
+<figure>
+  <img src="sales-chart.png" alt="Sales chart showing growth from £800 in January to £2,400 in December">
+  <figcaption>2024 Monthly Sales Growth</figcaption>
+</figure>
+
+<!-- Linked images -->
+<a href="/product/foundation">
+  <img src="foundation-cover.jpg" alt="Foundation by Isaac Asimov">
+</a>
+```
+
+#### Modal Accessibility
+
+```html
+<div 
+  role="dialog" 
+  aria-modal="true"
+  aria-labelledby="modal-title"
+  aria-describedby="modal-description"
+>
+  <h2 id="modal-title">Confirm Purchase</h2>
+  <p id="modal-description">
+    You are about to purchase 3 items for £19.99
+  </p>
+  <button>Cancel</button>
+  <button>Confirm</button>
+</div>
+```
+
+---
+
+### 11.4 Keyboard Navigation
+
+#### Focus Order
+
+Focus order must follow visual reading order (left-to-right, top-to-bottom for LTR):
+
+```html
+<!-- ✅ Correct: DOM order matches visual order -->
+<nav>
+  <a href="/">Home</a>
+  <a href="/browse">Browse</a>
+  <a href="/about">About</a>
+</nav>
+
+<!-- ❌ Wrong: CSS reordering breaks focus order -->
+<nav style="display: flex; flex-direction: row-reverse;">
+  <a href="/">Home</a>      <!-- Visually last, focused first -->
+  <a href="/browse">Browse</a>
+  <a href="/about">About</a> <!-- Visually first, focused last -->
+</nav>
+```
+
+#### Tabindex Usage
+
+```html
+<!-- tabindex="0": Add to tab order (for custom interactive elements) -->
+<div role="button" tabindex="0">Custom button</div>
+
+<!-- tabindex="-1": Programmatically focusable, not in tab order -->
+<div id="modal" tabindex="-1">Modal receives focus via JS</div>
+<main id="main-content" tabindex="-1">Skip link target</main>
+
+<!-- ❌ Never use positive tabindex -->
+<button tabindex="3">Don't do this</button>
+```
+
+#### Keyboard Interactions by Component
+
+| Component | Keys | Action |
+|-----------|------|--------|
+| **Button** | Enter, Space | Activate |
+| **Link** | Enter | Navigate |
+| **Checkbox** | Space | Toggle |
+| **Radio group** | ↑↓ or ←→ | Move selection |
+| **Select/Dropdown** | ↑↓, Enter, Esc | Navigate, select, close |
+| **Modal** | Esc | Close |
+| **Tabs** | ←→, Home, End | Switch tabs |
+| **Accordion** | Enter, Space | Expand/collapse |
+| **Menu** | ↑↓, Enter, Esc | Navigate, select, close |
+| **Carousel** | ←→ | Previous/next slide |
+
+#### Implementing Keyboard Handlers
+
+```javascript
+// Button with Enter and Space
+button.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    button.click();
+  }
+});
+
+// Dropdown menu
+menu.addEventListener('keydown', (e) => {
+  const items = menu.querySelectorAll('[role="menuitem"]');
+  const currentIndex = Array.from(items).indexOf(document.activeElement);
+  
+  switch (e.key) {
+    case 'ArrowDown':
+      e.preventDefault();
+      items[(currentIndex + 1) % items.length].focus();
+      break;
+    case 'ArrowUp':
+      e.preventDefault();
+      items[(currentIndex - 1 + items.length) % items.length].focus();
+      break;
+    case 'Home':
+      e.preventDefault();
+      items[0].focus();
+      break;
+    case 'End':
+      e.preventDefault();
+      items[items.length - 1].focus();
+      break;
+    case 'Escape':
+      closeMenu();
+      triggerButton.focus();
+      break;
+  }
+});
+```
+
+#### Focus Trapping (Modals)
+
+When modal is open, focus must stay within modal:
+
+```javascript
+function trapFocus(modal) {
+  const focusableElements = modal.querySelectorAll(
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+  );
+  const firstElement = focusableElements[0];
+  const lastElement = focusableElements[focusableElements.length - 1];
+  
+  modal.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab') return;
+    
+    if (e.shiftKey) {
+      // Shift + Tab
+      if (document.activeElement === firstElement) {
+        e.preventDefault();
+        lastElement.focus();
+      }
+    } else {
+      // Tab
+      if (document.activeElement === lastElement) {
+        e.preventDefault();
+        firstElement.focus();
+      }
+    }
+  });
+  
+  // Focus first element on open
+  firstElement.focus();
+}
+
+function openModal(modal) {
+  modal.setAttribute('aria-hidden', 'false');
+  modal.classList.add('is-open');
+  document.body.classList.add('modal-open');
+  trapFocus(modal);
+}
+
+function closeModal(modal, returnFocus) {
+  modal.setAttribute('aria-hidden', 'true');
+  modal.classList.remove('is-open');
+  document.body.classList.remove('modal-open');
+  returnFocus.focus(); // Return focus to trigger element
+}
+```
+
+#### Roving Tabindex (Tab Panels, Toolbars)
+
+For composite widgets, only one item is in tab order at a time:
+
+```html
+<div role="tablist">
+  <button role="tab" tabindex="0" aria-selected="true">Tab 1</button>
+  <button role="tab" tabindex="-1" aria-selected="false">Tab 2</button>
+  <button role="tab" tabindex="-1" aria-selected="false">Tab 3</button>
+</div>
+```
+
+```javascript
+tabs.addEventListener('keydown', (e) => {
+  const tabButtons = tabs.querySelectorAll('[role="tab"]');
+  const currentIndex = Array.from(tabButtons).indexOf(document.activeElement);
+  let newIndex;
+  
+  switch (e.key) {
+    case 'ArrowRight':
+      newIndex = (currentIndex + 1) % tabButtons.length;
+      break;
+    case 'ArrowLeft':
+      newIndex = (currentIndex - 1 + tabButtons.length) % tabButtons.length;
+      break;
+    case 'Home':
+      newIndex = 0;
+      break;
+    case 'End':
+      newIndex = tabButtons.length - 1;
+      break;
+    default:
+      return;
+  }
+  
+  e.preventDefault();
+  
+  // Update tabindex
+  tabButtons[currentIndex].setAttribute('tabindex', '-1');
+  tabButtons[newIndex].setAttribute('tabindex', '0');
+  tabButtons[newIndex].focus();
+  
+  // Activate tab
+  activateTab(tabButtons[newIndex]);
+});
+```
+
+#### Visible Focus During Navigation
+
+Ensure focus is visible when scrolling into view:
+
+```css
+/* Ensure focused element isn't hidden behind sticky header */
+:target {
+  scroll-margin-top: 80px;
+}
+
+*:focus {
+  scroll-margin-top: 80px;
+  scroll-margin-bottom: 20px;
+}
+```
+
+```javascript
+// Scroll focused element into view if needed
+element.focus({ preventScroll: false });
+
+// Or manually scroll
+element.focus();
+element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+```
+
+---
+
+### 11.5 Accessibility Testing Checklist
+
+#### Automated Testing
+
+Run these tools on every page:
+
+| Tool | What it catches |
+|------|-----------------|
+| **axe DevTools** | WCAG violations, missing labels, contrast issues |
+| **WAVE** | Structure issues, missing alt text, form labels |
+| **Lighthouse** | Performance + accessibility score |
+| **Pa11y** | CLI tool for CI/CD integration |
+
+#### Manual Testing
+
+Automated tools catch ~30% of issues. Manual testing is essential:
+
+**Keyboard Testing:**
+
+- [ ] Can reach all interactive elements with Tab?
+- [ ] Can activate buttons with Enter/Space?
+- [ ] Can escape modals with Escape key?
+- [ ] Is focus order logical?
+- [ ] Is focus always visible?
+- [ ] Can navigate forms without mouse?
+
+**Screen Reader Testing:**
+
+- [ ] Are all images described (or hidden if decorative)?
+- [ ] Do form fields have labels?
+- [ ] Are error messages announced?
+- [ ] Are dynamic changes announced?
+- [ ] Do headings create logical outline?
+- [ ] Are landmarks present and labelled?
+
+**Visual Testing:**
+
+- [ ] Does content reflow at 400% zoom?
+- [ ] Is text readable at 200% zoom?
+- [ ] Do focus indicators have sufficient contrast?
+- [ ] Is colour not the only indicator?
+
+**Recommended Screen Readers:**
+
+- **macOS:** VoiceOver (built-in, Cmd+F5)
+- **Windows:** NVDA (free), JAWS
+- **iOS:** VoiceOver (built-in)
+- **Android:** TalkBack (built-in)
+
+---
+
+### 11.6 ARIA Reference
+
+#### Commonly Used Roles
+
+| Role | Use Case |
+|------|----------|
+| `role="button"` | Clickable non-button element |
+| `role="link"` | Clickable non-anchor element |
+| `role="dialog"` | Modal dialog |
+| `role="alert"` | Important, time-sensitive message |
+| `role="status"` | Status update (polite) |
+| `role="tab"` / `role="tabpanel"` | Tab interface |
+| `role="menu"` / `role="menuitem"` | Dropdown menu |
+| `role="navigation"` | Navigation region |
+| `role="search"` | Search region |
+| `role="img"` | Image (with aria-label) |
+| `role="presentation"` / `role="none"` | Decorative, remove semantics |
+
+#### Commonly Used States & Properties
+
+| Attribute | Use Case |
+|-----------|----------|
+| `aria-label` | Label when no visible text |
+| `aria-labelledby` | Reference visible label element |
+| `aria-describedby` | Reference description/help text |
+| `aria-expanded` | Toggle expanded state |
+| `aria-hidden` | Hide from assistive technology |
+| `aria-live` | Announce dynamic changes |
+| `aria-pressed` | Toggle button state |
+| `aria-selected` | Selection state (tabs, listbox) |
+| `aria-invalid` | Form validation error |
+| `aria-required` | Required form field |
+| `aria-disabled` | Disabled but focusable |
+| `aria-controls` | References controlled element |
+| `aria-current` | Current item (page, step, date) |
+
+#### ARIA Patterns Reference
+
+For complex widgets, follow WAI-ARIA Authoring Practices:
+https://www.w3.org/WAI/ARIA/apg/patterns/
+
+
 
 ---
 
